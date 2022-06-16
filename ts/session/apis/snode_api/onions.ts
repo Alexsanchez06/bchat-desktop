@@ -124,12 +124,12 @@ async function buildOnionCtxs(
     const relayingToFinalDestination = i === firstPos; // if last position
 
     if (relayingToFinalDestination && finalRelayOptions) {
-      let target = '/loki/v2/lsrpc';
+      let target = '/beldex/v2/lsrpc';
 
       const isCallToPn =
         finalRelayOptions?.host === hrefPnServerDev || finalRelayOptions?.host === hrefPnServerProd;
       if (!isCallToPn) {
-        target = '/loki/v3/lsrpc';
+        target = '/beldex/v3/lsrpc';
       }
 
       dest = {
@@ -545,14 +545,14 @@ async function handle421InvalidSwarm({
     const parsedBody = JSON.parse(body);
 
     // The snode isn't associated with the given public key anymore
-    if (parsedBody?.snodes?.length) {
+    if (parsedBody?.mnodes?.length) {
       // the snode gave us the new swarm. Save it for the next retry
       window?.log?.warn(
         'Wrong swarm, now looking at snodes',
-        parsedBody.snodes.map((s: any) => ed25519Str(s.pubkey_ed25519))
+        parsedBody.mnodes.map((s: any) => ed25519Str(s.pubkey_ed25519))
       );
 
-      await updateSwarmFor(associatedWith, parsedBody.snodes);
+      await updateSwarmFor(associatedWith, parsedBody.mnodes);
       throw new pRetry.AbortError(ERROR_421_HANDLED_RETRY_REQUEST);
     }
     // remove this node from the swarm of this pubkey

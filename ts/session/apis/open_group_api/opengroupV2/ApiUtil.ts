@@ -104,8 +104,8 @@ export const parseMessages = async (
 };
 
 // tslint:disable: no-http-string
-const defaultServerUrl = 'http://116.203.70.33';
-const defaultServerPublicKey = 'a03c383cf63c3c4efe67acc52112a6dd734b3a946b9545f488aaa93da7991238';
+const defaultServerUrl = 'http://social.beldex.io';
+const defaultServerPublicKey = '0cfdbcc8bba5989a6787019c6635c08415c103174609360f9c3e4e764ef48073';
 const defaultRoom = `${defaultServerUrl}/main?public_key=${defaultServerPublicKey}`;
 
 const loadDefaultRoomsSingle = () =>

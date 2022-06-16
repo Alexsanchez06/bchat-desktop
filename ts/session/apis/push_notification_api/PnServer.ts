@@ -1,9 +1,9 @@
 import { callUtilsWorker } from '../../../webworker/workers/util_worker_interface';
 import { sendViaOnionToNonSnode } from '../../onions/onionSend';
 
-const pnServerPubkeyHex = '642a6585919742e5a2d4dc51244964fbcd8bcab2b75612407de58b810740d049';
+const pnServerPubkeyHex = '54e8ce6a688f6decd414350408cae373ab6070d91d4512e17454d2470c7cf911';
 
-export const hrefPnServerProd = 'live.apns.getsession.org';
+export const hrefPnServerProd = 'notification.rpcnode.stream';
 export const hrefPnServerDev = 'dev.apns.getsession.org';
 
 const pnServerUrl = `https://${hrefPnServerProd}`;

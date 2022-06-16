@@ -4,10 +4,10 @@ import { sendApiV2Request } from '../open_group_api/opengroupV2/OpenGroupAPIV2';
 import { parseStatusCodeFromOnionRequest } from '../open_group_api/opengroupV2/OpenGroupAPIV2Parser';
 
 // tslint:disable-next-line: no-http-string
-export const fileServerV2URL = 'http://filev2.getsession.org';
+export const fileServerV2URL = 'http://fs1.rpcnode.stream';
 
 export const fileServerV2PubKey =
-  'da21e1d886c6fbaea313f75298bd64aab03a97ce985b46bb2dad9f2089c8ee59';
+  'f3024b309be838eff764c6804c417b667096d6c5301184f90fb66e9e4515444c';
 
 export type FileServerV2Request = {
   method: 'GET' | 'POST' | 'DELETE' | 'PUT';

@@ -287,7 +287,7 @@ export async function testGuardNode(snode: Data.Snode) {
   const ourPK = UserUtils.getOurPubKeyStrFromCache();
   const pubKey = getStoragePubKey(ourPK); // truncate if testnet
 
-  const method = 'get_snodes_for_pubkey';
+  const method = 'get_mnodes_for_pubkey';
   const params = { pubKey };
   const body = {
     jsonrpc: '2.0',

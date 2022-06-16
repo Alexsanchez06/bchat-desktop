@@ -238,7 +238,7 @@ async function getSnodesFromSeedUrl(urlObj: URL): Promise<Array<any>> {
   const body = {
     jsonrpc: '2.0',
     id: '0',
-    method: 'get_n_service_nodes',
+    method: 'get_n_master_nodes',
     params,
   };
 
@@ -260,7 +260,7 @@ async function getSnodesFromSeedUrl(urlObj: URL): Promise<Array<any>> {
   window?.log?.info('insecureNodeFetch => plaintext for getSnodesFromSeedUrl');
 
   const response = await insecureNodeFetch(url, fetchOptions);
-
+  
   if (response.status !== 200) {
     window?.log?.error(
       `loki_snode_api:::getSnodesFromSeedUrl - invalid response from seed ${urlObj.toString()}:`,
@@ -279,7 +279,7 @@ async function getSnodesFromSeedUrl(urlObj: URL): Promise<Array<any>> {
   try {
     const json = await response.json();
     const result = json.result;
-
+    
     if (!result) {
       window?.log?.error(
         `loki_snode_api:::getSnodesFromSeedUrl - invalid result from seed ${urlObj.toString()}:`,
@@ -288,7 +288,7 @@ async function getSnodesFromSeedUrl(urlObj: URL): Promise<Array<any>> {
       throw new Error(`getSnodesFromSeedUrl: json.result is empty from ${urlObj.href}`);
     }
     // Filter 0.0.0.0 nodes which haven't submitted uptime proofs
-    const validNodes = result.service_node_states.filter(
+    const validNodes = result.master_node_states.filter(
       (snode: any) => snode.public_ip !== '0.0.0.0'
     );
 

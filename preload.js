@@ -240,9 +240,10 @@ window.getSeedNodeList = () =>
   window.sessionFeatureFlags.useTestNet
     ? ['http://public.loki.foundation:38157']
     : [
-        'https://storage.seed1.loki.network:4433/',
-        'https://storage.seed3.loki.network:4433/',
-        'https://public.loki.foundation:4433/',
+        // 'https://storage.seed1.loki.network:4433/',
+        // 'https://storage.seed3.loki.network:4433/',
+        // 'https://public.loki.foundation:4433/',
+        'http://3.109.123.6:29096'
       ];
 
 const { locale: localFromEnv } = config;

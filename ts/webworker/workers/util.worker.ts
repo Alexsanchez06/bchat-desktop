@@ -158,7 +158,7 @@ async function deriveSymmetricKey(x25519PublicKey: Uint8Array, x25519PrivateKey:
   assertArrayBufferView(x25519PrivateKey);
   const ephemeralSecret = sharedKey(x25519PrivateKey, x25519PublicKey);
 
-  const salt = bytesFromString('LOKI');
+  const salt = bytesFromString('BELDEX');
 
   const key = await crypto.subtle.importKey(
     'raw',

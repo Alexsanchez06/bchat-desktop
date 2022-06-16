@@ -81,7 +81,7 @@ async function requestSnodesForPubkeyWithTargetNodeRetryable(
   };
 
   const result = await snodeRpc({
-    method: 'get_snodes_for_pubkey',
+    method: 'get_mnodes_for_pubkey',
     params,
     targetNode,
     associatedWith: pubKey,
@@ -102,7 +102,7 @@ async function requestSnodesForPubkeyWithTargetNodeRetryable(
   try {
     const json = JSON.parse(result.body);
 
-    if (!json.snodes) {
+    if (!json.mnodes) {
       // we hit this when snode gives 500s
       window?.log?.warn(
         `SessionSnodeAPI::requestSnodesForPubkeyRetryable - sessionRpc on ${targetNode.ip}:${targetNode.port} returned falsish value for snodes`,
@@ -111,8 +111,8 @@ async function requestSnodesForPubkeyWithTargetNodeRetryable(
       throw new Error('Invalid json (empty)');
     }
 
-    const snodes = json.snodes.filter((tSnode: any) => tSnode.ip !== '0.0.0.0');
-    handleTimestampOffset('get_snodes_for_pubkey', json.t);
+    const snodes = json.mnodes.filter((tSnode: any) => tSnode.ip !== '0.0.0.0');
+    handleTimestampOffset('get_mnodes_for_pubkey', json.t);
     return snodes;
   } catch (e) {
     throw new Error('Invalid json');
@@ -203,7 +203,7 @@ export async function getSessionIDForOnsName(onsNameCase: string) {
   // we do this request with validationCount snodes
   const promises = range(0, validationCount).map(async () => {
     const targetNode = await getRandomSnode();
-    const result = await snodeRpc({ method: 'oxend_request', params, targetNode });
+    const result = await snodeRpc({ method: 'beldexd_request', params, targetNode });
     if (!result || result.status !== 200 || !result.body) {
       throw new Error('ONSresolve:Failed to resolve ONS');
     }
@@ -211,7 +211,7 @@ export async function getSessionIDForOnsName(onsNameCase: string) {
 
     try {
       parsedBody = JSON.parse(result.body);
-      handleTimestampOffset('ons_resolve', parsedBody.t);
+      handleTimestampOffset('bns_resolve', parsedBody.t);
     } catch (e) {
       window?.log?.warn('ONSresolve: failed to parse ons result body', result.body);
       throw new Error('ONSresolve: json ONS resovle');
@@ -371,7 +371,7 @@ export async function getSnodePoolFromSnodes() {
 // tslint:disable-next-line: function-name
 export async function TEST_getSnodePoolFromSnode(targetNode: Snode): Promise<Array<Snode>> {
   const params = {
-    endpoint: 'get_service_nodes',
+    endpoint: 'get_master_nodes',
     params: {
       active_only: true,
       fields: {
@@ -383,7 +383,7 @@ export async function TEST_getSnodePoolFromSnode(targetNode: Snode): Promise<Arr
     },
   };
   const result = await snodeRpc({
-    method: 'oxend_request',
+    method: 'beldexd_request',
     params,
     targetNode,
   });
@@ -393,14 +393,13 @@ export async function TEST_getSnodePoolFromSnode(targetNode: Snode): Promise<Arr
 
   try {
     const json = JSON.parse(result.body);
-
-    if (!json || !json.result || !json.result.service_node_states?.length) {
+    if (!json || !json.result || !json.result.master_node_states?.length) {
       window?.log?.error('getSnodePoolFromSnode - invalid result from snode', result.body);
       return [];
     }
 
     // Filter 0.0.0.0 nodes which haven't submitted uptime proofs
-    const snodes = json.result.service_node_states
+    const snodes = json.result.master_node_states
       .filter((snode: any) => snode.public_ip !== '0.0.0.0')
       .map((snode: any) => ({
         ip: snode.public_ip,
@@ -408,7 +407,7 @@ export async function TEST_getSnodePoolFromSnode(targetNode: Snode): Promise<Arr
         pubkey_x25519: snode.pubkey_x25519,
         pubkey_ed25519: snode.pubkey_ed25519,
       })) as Array<Snode>;
-    handleTimestampOffset('get_service_nodes', json.t);
+    handleTimestampOffset('get_master_nodes', json.t);
 
     // we the return list by the snode is already made of uniq snodes
     return _.compact(snodes);
