@@ -26,6 +26,9 @@ import { setupGlobalErrorHandler } from '../node/global_errors'; // checked - on
 
 import packageJson from '../../package.json'; // checked - only node
 
+// tslint:disable: no-console
+// import wallet from 'beldex-wallet-rpc';  //wallet integration
+// wallet.then(console.log);
 setupGlobalErrorHandler();
 import electronLocalshortcut from 'electron-localshortcut';
 

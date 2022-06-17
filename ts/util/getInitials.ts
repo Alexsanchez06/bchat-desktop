@@ -3,7 +3,7 @@ export function getInitials(name?: string): string {
     return '0';
   }
 
-  if (name.length > 2 && name.startsWith('05')) {
+  if (name.length > 2 && name.startsWith('bd')) {
     // Just the third char of the pubkey when the name is a pubkey
     return upperAndShorten(name[2]);
   }

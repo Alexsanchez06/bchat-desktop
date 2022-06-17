@@ -198,7 +198,7 @@ describe('ConfigurationMessage', () => {
 
     it('throw if the contact has not a valid pubkey', () => {
       const params = {
-        publicKey: '05',
+        publicKey: 'bd',
         displayName: 'contactDisplayName',
       };
 

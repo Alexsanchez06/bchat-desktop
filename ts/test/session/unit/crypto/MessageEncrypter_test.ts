@@ -108,7 +108,7 @@ describe('MessageEncrypter', () => {
     describe('ClosedGroup', () => {
       it('should return a CLOSED_GROUP_MESSAGE envelope type for ClosedGroup', async () => {
         const hexKeyPair = {
-          publicHex: `05${ourUserEd25516Keypair.pubKey}`,
+          publicHex: `bd${ourUserEd25516Keypair.pubKey}`,
           privateHex: '0123456789abcdef',
         };
 
