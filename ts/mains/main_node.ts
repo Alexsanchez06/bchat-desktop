@@ -25,10 +25,11 @@ import { setup as setupSpellChecker } from '../node/spell_check'; // checked - o
 import { setupGlobalErrorHandler } from '../node/global_errors'; // checked - only node
 
 import packageJson from '../../package.json'; // checked - only node
-
+import { startWalletRpc } from './wallet'
 // tslint:disable: no-console
 // import wallet from 'beldex-wallet-rpc';  //wallet integration
 // wallet.then(console.log);
+startWalletRpc();
 setupGlobalErrorHandler();
 import electronLocalshortcut from 'electron-localshortcut';
 

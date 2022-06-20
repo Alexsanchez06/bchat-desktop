@@ -13,6 +13,7 @@ import {
   registerSingleDevice,
   sessionGenerateKeyPair,
   signInByLinkingDevice,
+  // walletRPC,
 } from '../../util/accountManager';
 import { fromHex } from '../../session/utils/String';
 import { setSignInByLinking, setSignWithRecoveryPhrase, Storage } from '../../util/storage';
@@ -58,6 +59,14 @@ export async function signUp(signUpDetails: {
   }
 
   try {
+    // const restoreWallet = await walletRPC("restore_deterministic_wallet", {
+    //   name:displayName,
+    //   password:"",
+    //   seed: generatedRecoveryPhrase
+    //  });
+    //  console.log("restorewallet:",restoreWallet)
+    // console.log("restorewallet_address:", restoreWallet.result.address)
+    // window.WalletAddress = restoreWallet.result.address;
     await resetRegistration();
     await registerSingleDevice(generatedRecoveryPhrase, 'english', trimName);
     await createOrUpdateItem({

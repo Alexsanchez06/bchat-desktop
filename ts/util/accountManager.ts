@@ -16,6 +16,8 @@ import {
   Storage,
 } from './storage';
 import { Registration } from './registration';
+import { default as insecureNodeFetch } from 'node-fetch';
+import { HTTPError } from '../session/utils/errors';
 
 /**
  * Might throw
@@ -129,7 +131,53 @@ export async function generateMnemonic() {
   const seedSize = 16;
   const seed = (await getSodiumRenderer()).randombytes_buf(seedSize);
   const hex = toHex(seed);
+  const walletName = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 7);
+  const walletcreation = await walletRPC("create_wallet", {
+    name: walletName,
+    language: 'English',
+    password: ''
+  });
+  console.log("wallet_creation:",walletcreation)
+  let wallet: any;
+  await Promise.all([
+     walletRPC("get_address"),
+     walletRPC("query_key", { key_type: "mnemonic" }),
+    //  walletRPC("query_key", { key_type: "spend_key" }),
+    //  walletRPC("query_key", { key_type: "view_key" })
+  ]).then(data => {
+    wallet = {
+      address: data[0].result.address,
+      secret: {
+        mnemonic: data[1].result.key
+      }
+    }
+  });
+  window.WalletAddress = wallet.address;
+  console.log("window:",wallet)
+  console.log("mn_encode:",mn_encode(hex))
+  // return wallet;
   return mn_encode(hex);
+}
+
+export async function walletRPC(method: string, params = {}) {
+  const url = "http://localhost:22026/json_rpc";
+  const fetchOptions = {
+    method: "POST"
+    , "body": JSON.stringify({
+      "jsonrpc": "2.0",
+      "id": "0",
+      "method": method,
+      params
+    })
+    , "headers": {
+      'Authorization': 'Basic ' + btoa('test:test')
+    }
+  };
+  const response = await insecureNodeFetch(url, fetchOptions);
+  if (!response.ok) {
+    throw new HTTPError('wallet_rpc error', response);
+  }
+  return response.json();
 }
 
 async function createAccount(identityKeyPair: any) {
