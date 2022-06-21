@@ -877,3 +877,70 @@
 2022-06-21 10:03:00.839	  0x70000bff3000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'red' is shorter than its prefix length, 4
 2022-06-21 10:03:00.844	  0x70000bff3000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'res' is shorter than its prefix length, 4
 2022-06-21 10:03:00.844	  0x70000bff3000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'rey' is shorter than its prefix length, 4
+2022-06-21 10:16:55.698	     0x105d97600	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-06-21 10:16:55.698	     0x105d97600	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-06-21 10:16:55.698	     0x105d97600	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3560	Starting wallet RPC server
+2022-06-21 10:35:49.132	  0x7000052f3000	ERROR	wallet.wallet2	src/wallet/wallet2.h:1300	HTTP request failed: HTTP request failed: 
+2022-06-21 10:35:49.184	  0x7000052f3000	ERROR	wallet.wallet2	src/wallet/wallet2.cpp:3090	!r. THROW EXCEPTION: error::no_connection_to_daemon
+2022-06-21 10:35:49.215	  0x7000052f3000	ERROR	wallet.rpc	src/wallet/wallet_rpc_server.cpp:401	Exception while refreshing: No connection to daemon
+2022-06-21 11:16:19.411	     0x11529b600	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-06-21 11:16:19.411	     0x11529b600	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-06-21 11:16:19.412	     0x11529b600	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3560	Starting wallet RPC server
+2022-06-21 11:16:24.676	  0x700006e6e000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'asa' is shorter than its prefix length, 4
+2022-06-21 11:16:24.677	  0x700006e6e000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'ave' is shorter than its prefix length, 4
+2022-06-21 11:16:24.679	  0x700006e6e000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'boa' is shorter than its prefix length, 4
+2022-06-21 11:16:24.681	  0x700006e6e000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'cal' is shorter than its prefix length, 4
+2022-06-21 11:16:24.684	  0x700006e6e000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'dar' is shorter than its prefix length, 4
+2022-06-21 11:16:24.686	  0x700006e6e000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'don' is shorter than its prefix length, 4
+2022-06-21 11:16:24.687	  0x700006e6e000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'dos' is shorter than its prefix length, 4
+2022-06-21 11:16:24.689	  0x700006e6e000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'eco' is shorter than its prefix length, 4
+2022-06-21 11:16:24.690	  0x700006e6e000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'eje' is shorter than its prefix length, 4
+2022-06-21 11:16:24.692	  0x700006e6e000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'fax' is shorter than its prefix length, 4
+2022-06-21 11:16:24.692	  0x700006e6e000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'feo' is shorter than its prefix length, 4
+2022-06-21 11:16:24.696	  0x700006e6e000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'fin' is shorter than its prefix length, 4
+2022-06-21 11:16:24.697	  0x700006e6e000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'gen' is shorter than its prefix length, 4
+2022-06-21 11:16:24.700	  0x700006e6e000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'gol' is shorter than its prefix length, 4
+2022-06-21 11:16:24.701	  0x700006e6e000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'haz' is shorter than its prefix length, 4
+2022-06-21 11:16:24.703	  0x700006e6e000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'ira' is shorter than its prefix length, 4
+2022-06-21 11:16:24.706	  0x700006e6e000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'luz' is shorter than its prefix length, 4
+2022-06-21 11:16:24.707	  0x700006e6e000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'mar' is shorter than its prefix length, 4
+2022-06-21 11:16:24.709	  0x700006e6e000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'mes' is shorter than its prefix length, 4
+2022-06-21 11:16:24.709	  0x700006e6e000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'mil' is shorter than its prefix length, 4
+2022-06-21 11:16:24.713	  0x700006e6e000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'oca' is shorter than its prefix length, 4
+2022-06-21 11:16:24.714	  0x700006e6e000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'ojo' is shorter than its prefix length, 4
+2022-06-21 11:16:24.716	  0x700006e6e000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'ola' is shorter than its prefix length, 4
+2022-06-21 11:16:24.717	  0x700006e6e000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'oro' is shorter than its prefix length, 4
+2022-06-21 11:16:24.717	  0x700006e6e000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'oso' is shorter than its prefix length, 4
+2022-06-21 11:16:24.719	  0x700006e6e000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'pan' is shorter than its prefix length, 4
+2022-06-21 11:16:24.721	  0x700006e6e000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'pez' is shorter than its prefix length, 4
+2022-06-21 11:16:24.722	  0x700006e6e000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'pie' is shorter than its prefix length, 4
+2022-06-21 11:16:24.725	  0x700006e6e000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'red' is shorter than its prefix length, 4
+2022-06-21 11:16:24.739	  0x700006e6e000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'res' is shorter than its prefix length, 4
+2022-06-21 11:16:24.747	  0x700006e6e000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'rey' is shorter than its prefix length, 4
+2022-06-21 11:22:26.325	  0x7000052f3000	ERROR	wallet.wallet2	src/wallet/wallet2.h:1300	HTTP request failed: HTTP request failed: 
+2022-06-21 11:22:26.326	  0x7000052f3000	ERROR	wallet.wallet2	src/wallet/wallet2.cpp:3090	!r. THROW EXCEPTION: error::no_connection_to_daemon
+2022-06-21 11:22:26.326	  0x7000052f3000	ERROR	wallet.rpc	src/wallet/wallet_rpc_server.cpp:401	Exception while refreshing: No connection to daemon
+2022-06-21 11:22:26.329	  0x70000bff3000	ERROR	wallet.wallet2	src/wallet/wallet2.h:1300	HTTP request failed: HTTP request failed: 
+2022-06-21 11:22:26.329	  0x70000bff3000	ERROR	wallet.wallet2	src/wallet/wallet2.cpp:3090	!r. THROW EXCEPTION: error::no_connection_to_daemon
+2022-06-21 11:22:26.329	  0x70000bff3000	ERROR	wallet.rpc	src/wallet/wallet_rpc_server.cpp:401	Exception while refreshing: No connection to daemon
+2022-06-21 11:22:26.333	  0x700006e6e000	ERROR	wallet.wallet2	src/wallet/wallet2.h:1300	HTTP request failed: HTTP request failed: 
+2022-06-21 11:22:26.333	  0x700006e6e000	ERROR	wallet.wallet2	src/wallet/wallet2.cpp:3090	!r. THROW EXCEPTION: error::no_connection_to_daemon
+2022-06-21 11:22:26.333	  0x700006e6e000	ERROR	wallet.rpc	src/wallet/wallet_rpc_server.cpp:401	Exception while refreshing: No connection to daemon
+2022-06-21 11:32:09.079	  0x7000052f3000	ERROR	wallet.wallet2	src/wallet/wallet2.h:1300	HTTP request failed: HTTP request failed: 
+2022-06-21 11:32:09.079	  0x70000bff3000	ERROR	wallet.wallet2	src/wallet/wallet2.h:1300	HTTP request failed: HTTP request failed: 
+2022-06-21 11:32:09.079	  0x700006e6e000	ERROR	wallet.wallet2	src/wallet/wallet2.h:1300	HTTP request failed: HTTP request failed: 
+2022-06-21 11:32:09.180	  0x7000052f3000	ERROR	wallet.wallet2	src/wallet/wallet2.cpp:3090	!r. THROW EXCEPTION: error::no_connection_to_daemon
+2022-06-21 11:32:09.180	  0x7000052f3000	ERROR	wallet.rpc	src/wallet/wallet_rpc_server.cpp:401	Exception while refreshing: No connection to daemon
+2022-06-21 11:32:09.180	  0x700006e6e000	ERROR	wallet.wallet2	src/wallet/wallet2.cpp:3090	!r. THROW EXCEPTION: error::no_connection_to_daemon
+2022-06-21 11:32:09.180	  0x700006e6e000	ERROR	wallet.rpc	src/wallet/wallet_rpc_server.cpp:401	Exception while refreshing: No connection to daemon
+2022-06-21 11:32:09.180	  0x70000bff3000	ERROR	wallet.wallet2	src/wallet/wallet2.cpp:3090	!r. THROW EXCEPTION: error::no_connection_to_daemon
+2022-06-21 11:32:09.180	  0x70000bff3000	ERROR	wallet.rpc	src/wallet/wallet_rpc_server.cpp:401	Exception while refreshing: No connection to daemon
+2022-06-21 11:32:55.033	  0x7000052f3000	ERROR	wallet.wallet2	src/wallet/wallet2.h:1300	HTTP request failed: HTTP request failed: 
+2022-06-21 11:32:55.033	  0x70000bff3000	ERROR	wallet.wallet2	src/wallet/wallet2.h:1300	HTTP request failed: HTTP request failed: 
+2022-06-21 11:32:55.034	  0x700006e6e000	ERROR	wallet.wallet2	src/wallet/wallet2.h:1300	HTTP request failed: HTTP request failed: 
+2022-06-21 11:32:55.271	  0x7000052f3000	ERROR	wallet.wallet2	src/wallet/wallet2.cpp:3090	!r. THROW EXCEPTION: error::no_connection_to_daemon
+2022-06-21 11:32:55.271	  0x70000bff3000	ERROR	wallet.wallet2	src/wallet/wallet2.cpp:3090	!r. THROW EXCEPTION: error::no_connection_to_daemon
+2022-06-21 11:32:55.272	  0x700006e6e000	ERROR	wallet.wallet2	src/wallet/wallet2.cpp:3090	!r. THROW EXCEPTION: error::no_connection_to_daemon
+2022-06-21 11:32:55.310	  0x7000052f3000	ERROR	wallet.rpc	src/wallet/wallet_rpc_server.cpp:401	Exception while refreshing: No connection to daemon
+2022-06-21 11:32:55.313	  0x70000bff3000	ERROR	wallet.rpc	src/wallet/wallet_rpc_server.cpp:401	Exception while refreshing: No connection to daemon
+2022-06-21 11:32:55.314	  0x700006e6e000	ERROR	wallet.rpc	src/wallet/wallet_rpc_server.cpp:401	Exception while refreshing: No connection to daemon

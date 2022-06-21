@@ -19,6 +19,9 @@ import { Registration } from './registration';
 import { default as insecureNodeFetch } from 'node-fetch';
 import { HTTPError } from '../session/utils/errors';
 
+import path from 'path';
+import fs from "fs-extra";
+
 /**
  * Might throw
  */
@@ -155,6 +158,26 @@ export async function generateMnemonic() {
   });
   window.WalletAddress = wallet.address;
   console.log("window:",wallet)
+  await walletRPC("store").then(()=>{
+        let address_txt_path = path.join(
+          `${process.cwd()}/wallet`,
+          walletName + ".address.txt"
+    );
+        if (!fs.existsSync(address_txt_path)) {
+      fs.writeFile(address_txt_path, wallet.address, "utf8", () => {
+        console.log("created")
+      });
+        }
+  });
+  // this.saveWallet().then(() => {
+  //   let address_txt_path = path.join(
+  //     this.wallet_dir,
+  //     filename + ".address.txt"
+  //   );
+  //   if (!fs.existsSync(address_txt_path)) {
+  //     fs.writeFile(address_txt_path, wallet.info.address, "utf8", () => {
+  //       this.listWallets();
+  //     });
   return wallet;
    // console.log("mn_encode:",mn_encode(hex))
    // return mn_encode(hex);
