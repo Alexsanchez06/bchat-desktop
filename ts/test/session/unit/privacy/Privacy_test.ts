@@ -12,19 +12,19 @@ describe('Privacy', () => {
   describe('Redact sessionID', () => {
     it('redact sessionID', () => {
       expect(
-        redactAll('052d3096a72d2271bbba0d820729a3548749a2b3890c3b41ea08c4c2722616dd2b')
+        redactAll('bd2d3096a72d2271bbba0d820729a3548749a2b3890c3b41ea08c4c2722616dd2b')
       ).to.be.equal('[REDACTED]');
     });
 
     it('redact multiple sessionID', () => {
       expect(
         redactAll(
-          '052d3096a72d2271bbba0d820729a3548749a2b3890c3b41ea08c4c2722616dd2b 052d3096a72d2271bbba0d820729a3548749a2b3890c3b41ea08c4c2722616dd2c end'
+          'bd2d3096a72d2271bbba0d820729a3548749a2b3890c3b41ea08c4c2722616dd2b bd2d3096a72d2271bbba0d820729a3548749a2b3890c3b41ea08c4c2722616dd2c end'
         )
       ).to.be.equal('[REDACTED] [REDACTED] end');
     });
 
-    it('redact sessionID without the 05 prefix', () => {
+    it('redact sessionID without the bd prefix', () => {
       expect(
         redactAll(
           'start 2d3096a72d2271bbba0d820729a3548749a2b3890c3b41ea08c4c2722616dd2b middle 2d3096a72d2271bbba0d820729a3548749a2b3890c3b41ea08c4c2722616dd2c end'

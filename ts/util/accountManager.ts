@@ -32,7 +32,7 @@ export async function sessionGenerateKeyPair(
   const origPub = new Uint8Array(x25519PublicKey);
   const prependedX25519PublicKey = new Uint8Array(33);
   prependedX25519PublicKey.set(origPub, 1);
-  prependedX25519PublicKey[0] = 5;
+  prependedX25519PublicKey[0] = 189;
   const x25519SecretKey = sodium.crypto_sign_ed25519_sk_to_curve25519(ed25519KeyPair.privateKey);
 
   // prepend with 05 the public key
@@ -147,9 +147,9 @@ export async function generateMnemonic() {
     //  walletRPC("query_key", { key_type: "view_key" })
   ]).then(data => {
     wallet = {
-      address: data[0].result.address,
+      address: data[0]['result']['address'],
       secret: {
-        mnemonic: data[1].result.key
+        mnemonic: data[1]['result']['key']
       }
     }
   });

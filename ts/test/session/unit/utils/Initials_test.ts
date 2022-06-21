@@ -17,16 +17,16 @@ describe('getInitials', () => {
   });
 
   describe('name is a pubkey', () => {
-    it('initials: return the first char after 05 if it starts with 05 and has length >2 ', () => {
-      expect(getInitials('052')).to.be.equal('2', 'should have return 2');
+    it('initials: return the first char after bd if it starts with bd and has length >2 ', () => {
+      expect(getInitials('bd2')).to.be.equal('2', 'should have return 2');
     });
 
-    it('initials: return the first char after 05 capitalized if it starts with 05 and has length >2 ', () => {
-      expect(getInitials('05bcd')).to.be.equal('B', 'should have return B');
+    it('initials: return the first char after bd capitalized if it starts with bd and has length >2 ', () => {
+      expect(getInitials('bdbcd')).to.be.equal('B', 'should have return B');
     });
 
-    it('initials: return the first char after 05 if it starts with 05 and has length >2 ', () => {
-      expect(getInitials('059052052052052052052052')).to.be.equal('9', 'should have return 9');
+    it('initials: return the first char after bd if it starts with bd and has length >2 ', () => {
+      expect(getInitials('bd9052052052052052052052')).to.be.equal('9', 'should have return 9');
     });
   });
 
