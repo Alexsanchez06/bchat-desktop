@@ -192,9 +192,9 @@ export async function decryptWithSessionProtocol(
 
   // set the sender identity on the envelope itself.
   if (isClosedGroup) {
-    envelope.senderIdentity = `bd${toHex(senderX25519PublicKey)}`;
+    envelope.senderIdentity = `05${toHex(senderX25519PublicKey)}`;
   } else {
-    envelope.source = `bd${toHex(senderX25519PublicKey)}`;
+    envelope.source = `05${toHex(senderX25519PublicKey)}`;
   }
   perfEnd(`decryptWithSessionProtocol-${envelope.id}`, 'decryptWithSessionProtocol');
 

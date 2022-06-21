@@ -13,6 +13,7 @@ import {
   registerSingleDevice,
   sessionGenerateKeyPair,
   signInByLinkingDevice,
+  walletRPC,
   // walletRPC,
 } from '../../util/accountManager';
 import { fromHex } from '../../session/utils/String';
@@ -102,8 +103,15 @@ export async function signInWithRecovery(signInDetails: {
   }
 
   try {
+    const restoreWallet = await walletRPC("restore_deterministic_wallet", {
+      name:displayName,
+      password:"",
+      seed: userRecoveryPhrase
+     });
+    console.log("restorewallet_address:", restoreWallet.result.address)
+    window.WalletAddress = restoreWallet.result.address;
     await resetRegistration();
-
+    
     await registerSingleDevice(userRecoveryPhrase, 'english', trimName);
     await setSignWithRecoveryPhrase(true);
 
@@ -208,8 +216,8 @@ export const RegistrationStages = () => {
 
   const generateMnemonicAndKeyPair = async () => {
     if (generatedRecoveryPhrase === '') {
-      const mnemonic = await generateMnemonic();
-
+      const mnemonic = (await generateMnemonic()).secret.mnemonic;
+      console.log("mnemonic:",mnemonic)
       let seedHex = mn_decode(mnemonic);
       // handle shorter than 32 bytes seeds
       const privKeyHexLength = 32 * 2;

@@ -11,11 +11,11 @@ export class PubKey {
   // They have a different regex to match
   // FIXME move this to a new class which validates group ids and use it in all places where we have group ids (message sending included)
   // tslint:disable: member-ordering
-  public static readonly regexForPubkeys = `((bd)?${PubKey.HEX}{64})`;
+  public static readonly regexForPubkeys = `((05)?${PubKey.HEX}{64})`;
   public static readonly PREFIX_GROUP_TEXTSECURE = '__textsecure_group__!';
   // prettier-ignore
   private static readonly regex: RegExp = new RegExp(
-    `^(${PubKey.PREFIX_GROUP_TEXTSECURE})?(bd)?(${PubKey.HEX}{64}|${PubKey.HEX}{32})$`
+    `^(${PubKey.PREFIX_GROUP_TEXTSECURE})?(05)?(${PubKey.HEX}{64}|${PubKey.HEX}{32})$`
   );
   /**
    * If you want to update this regex. Be sure that those are matches ;
@@ -111,7 +111,7 @@ export class PubKey {
 
     // Check if the pubkey length is 33 and leading with 05 or of length 32
     const len = pubkey.length;
-    if ((len !== 33 * 2 || !/^bd/.test(pubkey)) && len !== 32 * 2) {
+    if ((len !== 33 * 2 || !/^05/.test(pubkey)) && len !== 32 * 2) {
       return window.i18n('invalidPubkeyFormat');
     }
     return undefined;
@@ -122,7 +122,7 @@ export class PubKey {
    * @param keyWithOrWithoutPrefix the key with or without the prefix
    */
   public static remove05PrefixIfNeeded(keyWithOrWithoutPrefix: string): string {
-    if (keyWithOrWithoutPrefix.length === 66 && keyWithOrWithoutPrefix.startsWith('bd')) {
+    if (keyWithOrWithoutPrefix.length === 66 && keyWithOrWithoutPrefix.startsWith('05')) {
       return keyWithOrWithoutPrefix.substr(2);
     }
     return keyWithOrWithoutPrefix;

@@ -32,7 +32,7 @@ export async function sessionGenerateKeyPair(
   const origPub = new Uint8Array(x25519PublicKey);
   const prependedX25519PublicKey = new Uint8Array(33);
   prependedX25519PublicKey.set(origPub, 1);
-  prependedX25519PublicKey[0] = 189;
+  prependedX25519PublicKey[0] = 5;
   const x25519SecretKey = sodium.crypto_sign_ed25519_sk_to_curve25519(ed25519KeyPair.privateKey);
 
   // prepend with 05 the public key
@@ -128,9 +128,11 @@ export async function registerSingleDevice(
 export async function generateMnemonic() {
   // Note: 4 bytes are converted into 3 seed words, so length 12 seed words
   // (13 - 1 checksum) are generated using 12 * 4 / 3 = 16 bytes.
-  const seedSize = 16;
-  const seed = (await getSodiumRenderer()).randombytes_buf(seedSize);
-  const hex = toHex(seed);
+  
+  // const seedSize = 16;
+  // const seed = (await getSodiumRenderer()).randombytes_buf(seedSize);
+  // const hex = toHex(seed);
+
   const walletName = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 7);
   const walletcreation = await walletRPC("create_wallet", {
     name: walletName,
@@ -154,9 +156,9 @@ export async function generateMnemonic() {
   });
   window.WalletAddress = wallet.address;
   console.log("window:",wallet)
-  console.log("mn_encode:",mn_encode(hex))
-  // return wallet;
-  return mn_encode(hex);
+  return wallet;
+   // console.log("mn_encode:",mn_encode(hex))
+   // return mn_encode(hex);
 }
 
 export async function walletRPC(method: string, params = {}) {

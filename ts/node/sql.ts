@@ -3127,7 +3127,7 @@ function getAllClosedGroupConversations(instance?: BetterSqlite3.Database) {
 }
 
 function remove05PrefixFromStringIfNeeded(str: string) {
-  if (str.length === 66 && str.startsWith('bd')) {
+  if (str.length === 66 && str.startsWith('05')) {
     return str.substr(2);
   }
   return str;
@@ -3592,7 +3592,7 @@ function fillWithTestData(numConvosToAdd: number, numMsgsToAdd: number) {
       members: [],
       profileName: `${activeAt}`,
       name: `${activeAt}`,
-      id: `bd${id}`,
+      id: `05${id}`,
       type: 'group',
     };
     convosIdsAdded.push(id);
