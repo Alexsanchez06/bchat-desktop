@@ -18,6 +18,8 @@ import {
 } from '../../util/accountManager';
 import { fromHex } from '../../session/utils/String';
 import { setSignInByLinking, setSignWithRecoveryPhrase, Storage } from '../../util/storage';
+import { default as insecureNodeFetch } from 'node-fetch';
+import { HTTPError } from '../../session/utils/errors';
 
 export const MAX_USERNAME_LENGTH = 26;
 // tslint:disable: use-simple-attributes
@@ -60,14 +62,6 @@ export async function signUp(signUpDetails: {
   }
 
   try {
-    // const restoreWallet = await walletRPC("restore_deterministic_wallet", {
-    //   name:displayName,
-    //   password:"",
-    //   seed: generatedRecoveryPhrase
-    //  });
-    //  console.log("restorewallet:",restoreWallet)
-    // console.log("restorewallet_address:", restoreWallet.result.address)
-    // window.WalletAddress = restoreWallet.result.address;
     await resetRegistration();
     await registerSingleDevice(generatedRecoveryPhrase, 'english', trimName);
     await createOrUpdateItem({
@@ -103,8 +97,19 @@ export async function signInWithRecovery(signInDetails: {
   }
 
   try {
+    const response = await insecureNodeFetch("http://explorer.beldex.io:19091/get_height", {
+      method: "POST"
+      , "body": JSON.stringify({})
+      });
+      if (!response.ok) {
+        throw new HTTPError('Loki_rpc error', response);
+      }
+     let cuurentHeight = await Promise.all([response.json()]).then(data => {
+         return data[0].height;
+     });
     const restoreWallet = await walletRPC("restore_deterministic_wallet", {
-      name:displayName,
+      restore_height:cuurentHeight,
+      filename:displayName,
       password:"",
       seed: userRecoveryPhrase
      });

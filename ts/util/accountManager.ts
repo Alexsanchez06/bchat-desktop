@@ -5,7 +5,7 @@ import { getOurPubKeyStrFromCache } from '../session/utils/User';
 import { trigger } from '../shims/events';
 
 import { actions as userActions } from '../state/ducks/user';
-import { mn_decode, mn_encode } from '../session/crypto/mnemonic';
+import { mn_decode } from '../session/crypto/mnemonic';
 import { ConversationTypeEnum } from '../models/conversation';
 import { SettingsKey } from '../data/settings-key';
 import {
@@ -134,12 +134,11 @@ export async function generateMnemonic() {
   // const hex = toHex(seed);
 
   const walletName = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 7);
-  const walletcreation = await walletRPC("create_wallet", {
+  await walletRPC("create_wallet", {
     name: walletName,
     language: 'English',
     password: ''
   });
-  console.log("wallet_creation:",walletcreation)
   let wallet: any;
   await Promise.all([
      walletRPC("get_address"),
