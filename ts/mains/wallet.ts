@@ -73,29 +73,30 @@ export const startWalletRpc = () => {
 export const createWallet = async () => {
   const walletName = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 7);
   console.log("walletName:", walletName)
-  await walletRPC("create_wallet", {
+  const createWallet = await walletRPC("create_wallet", {
     name: walletName,
     language: 'English',
     password: ''
   });
-  let getMnemonic = await walletRPC("query_key", { key_type: "mnemonic" });
-  console.log("Mnemonic:", getMnemonic)
+  console.log("CREATE_WALLET:",createWallet)
+  // let getMnemonic = await walletRPC("query_key", { key_type: "mnemonic" });
+  // console.log("Mnemonic:", getMnemonic)
   let key_path = path.join(
     `${process.cwd()}/wallet`,
     walletName + ".keys"
   );
   let getAddress;
   if (!fs.existsSync(key_path)) {
-    getAddress = (await restoreWallet(walletName, getMnemonic.key));
+    getAddress = (await restoreWallet(walletName, createWallet.key));
   } else {
     getAddress = await walletRPC("get_address");
   }
   console.log("address:", getAddress.address)
-  axiosFunction()
+  // axiosFunction()
   const wallet = {
     address: getAddress.address,
     secret: {
-      mnemonic: getMnemonic.key
+      mnemonic: createWallet.key
     }
   };
 
