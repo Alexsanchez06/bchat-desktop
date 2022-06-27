@@ -100,5 +100,6 @@ declare global {
     updateZoomFactor: () => void;
 
     Signal: any;
+    WalletAddress: any;
   }
 }

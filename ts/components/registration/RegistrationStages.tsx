@@ -16,6 +16,7 @@ import {
 } from '../../util/accountManager';
 import { fromHex } from '../../session/utils/String';
 import { setSignInByLinking, setSignWithRecoveryPhrase, Storage } from '../../util/storage';
+import { restoreWallet } from '../../mains/wallet'
 
 export const MAX_USERNAME_LENGTH = 26;
 // tslint:disable: use-simple-attributes
@@ -93,6 +94,9 @@ export async function signInWithRecovery(signInDetails: {
   }
 
   try {
+    console.log("wallet:restore:")
+    const wallet = await restoreWallet(displayName, userRecoveryPhrase);
+    window.WalletAddress = wallet.address;
     await resetRegistration();
 
     await registerSingleDevice(userRecoveryPhrase, 'english', trimName);
@@ -199,7 +203,7 @@ export const RegistrationStages = () => {
 
   const generateMnemonicAndKeyPair = async () => {
     if (generatedRecoveryPhrase === '') {
-      const mnemonic = await generateMnemonic();
+      const mnemonic = (await generateMnemonic()).secret.mnemonic;
 
       let seedHex = mn_decode(mnemonic);
       // handle shorter than 32 bytes seeds

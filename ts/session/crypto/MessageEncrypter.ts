@@ -80,14 +80,15 @@ export async function encryptUsingSessionProtocol(
   const userED25519PubKeyBytes = fromHexToArray(userED25519KeyPairHex.pubKey);
   const userED25519SecretKeyBytes = fromHexToArray(userED25519KeyPairHex.privKey);
 
-  const walletAddress="bxderw5DGtKYvorWmQnyDkKrdNTCbedAScykLa282LW4NTUFgm1cQHKZhgzgKDapw5YEETNL2xDLUBh8woTucHLM29L47p93G";
+  // const walletAddress="bxderw5DGtKYvorWmQnyDkKrdNTCbedAScykLa282LW4NTUFgm1cQHKZhgzgKDapw5YEETNL2xDLUBh8woTucHLM29L47p93G";
+  ;
+  const walletAddress = window.WalletAddress;
+  console.log("walletAddress", walletAddress);
 
-  console.log("walletAddress",walletAddress);
-  
   let utf8Encode = new TextEncoder();
-  
+
   const beldexWalletAddress = utf8Encode.encode(walletAddress);
-  const walletAddressConCatPlaintext= concatUInt8Array(beldexWalletAddress,plaintext);
+  const walletAddressConCatPlaintext = concatUInt8Array(beldexWalletAddress, plaintext);
 
 
   // merge all arrays into one
