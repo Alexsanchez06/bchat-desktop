@@ -11,7 +11,7 @@ import autoBind from 'auto-bind';
 import _ from 'lodash';
 import { MessageRequestsBanner } from './MessageRequestsBanner';
 
-import { SessionButton, SessionButtonColor, SessionButtonType } from '../basic/SessionButton';
+// import { SessionButton, SessionButtonColor, SessionButtonType } from '../basic/SessionButton';
 import { SessionSearchInput } from '../SessionSearchInput';
 import { RowRendererParamsType } from './LeftPane';
 import { OverlayOpenGroup } from './overlay/OverlayOpenGroup';
@@ -146,7 +146,7 @@ export class LeftPaneMessageSection extends React.Component<Props> {
 
     return (
       <div className="left-pane-contact-bottom-buttons">
-        <SessionButton
+        {/* <SessionButton
           // text={joinOpenGroup}
           icon={true}
           buttonType={SessionButtonType.SquareOutline}
@@ -168,7 +168,7 @@ export class LeftPaneMessageSection extends React.Component<Props> {
           onClick={() => {
             window.inboxStore?.dispatch(setOverlayMode('closed-group'));
           }}
-        />
+        /> */}
       </div>
     );
   }

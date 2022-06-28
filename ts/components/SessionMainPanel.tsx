@@ -20,7 +20,10 @@ export const SessionMainPanel = () => {
   }
   return (
     <div className="session-conversation">
+      <div className="session-conversation-doodle">
       <SmartSessionConversation />
+      </div>
+    
     </div>
   );
 };

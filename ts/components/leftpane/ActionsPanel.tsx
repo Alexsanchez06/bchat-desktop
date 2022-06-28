@@ -62,6 +62,8 @@ import { Storage } from '../../util/storage';
 import { SettingsKey } from '../../data/settings-key';
 
 
+// state/ducks/section.tsx
+
 const Section = (props: { type: SectionType }) => {
   const ourNumber = useSelector(getOurNumber);
   const unreadMessageCount = useSelector(getUnreadMessageCount);
@@ -72,6 +74,8 @@ const Section = (props: { type: SectionType }) => {
   const isSelected = focusedSection === props.type;
 
   const handleClick = () => {
+    console.log('type handleClick; ',type);
+    
     /* tslint:disable:no-void-expression */
     if (type === SectionType.Profile) {
       dispatch(editProfileModal({}));
@@ -90,13 +94,29 @@ const Section = (props: { type: SectionType }) => {
     } else if (type === SectionType.PathIndicator) {
       // Show Path Indicator Modal
       dispatch(onionPathModal({}));
-    } else {
+    } 
+    else if (type === SectionType.Opengroup) {
+      // Show Path Indicator Modal
+     
+      dispatch(showLeftPaneSection(1));
+      
+      dispatch(setOverlayMode('open-group'));
+      // dispatch(setOverlayMode(undefined))
+    } 
+    else if (type === SectionType.Closedgroup) {
+      // Show Path Indicator Modal
+      dispatch(showLeftPaneSection(1));
+      dispatch(setOverlayMode('closed-group'))
+    } 
+    else {
       // message section
       dispatch(clearSearch());
       dispatch(showLeftPaneSection(type));
       dispatch(setOverlayMode(undefined));
     }
   };
+
+  
 
   if (type === SectionType.Profile) {
     return (
@@ -115,7 +135,7 @@ const Section = (props: { type: SectionType }) => {
     case SectionType.Message:
       return (
         <SessionIconButton
-          iconSize="medium"
+          iconSize="large"
           dataTestId="message-section"
           iconType={'chatBubble'}
           iconColor={undefined}
@@ -127,7 +147,7 @@ const Section = (props: { type: SectionType }) => {
     case SectionType.Contact:
       return (
         <SessionIconButton
-          iconSize="medium"
+          iconSize="large"
           dataTestId="contact-section"
           iconType={'users'}
           iconColor={undefined}
@@ -139,7 +159,7 @@ const Section = (props: { type: SectionType }) => {
     case SectionType.Settings:
       return (
         <SessionIconButton
-          iconSize="medium"
+          iconSize="large"
           dataTestId="settings-section"
           iconType={'gear'}
           iconColor={undefined}
@@ -148,6 +168,30 @@ const Section = (props: { type: SectionType }) => {
           isSelected={isSelected}
         />
       );
+      case SectionType.Opengroup:
+        return (
+          <SessionIconButton
+            iconSize="large"
+            dataTestId="settings-section"
+            iconType={'opengroup'}
+            iconColor={undefined}
+            notificationCount={unreadToShow}
+            onClick={handleClick}
+            isSelected={isSelected}
+          />
+        );
+        case SectionType.Closedgroup:
+          return (
+            <SessionIconButton
+              iconSize="large"
+              dataTestId="settings-section"
+              iconType={'closedgroup'}
+              iconColor={undefined}
+              notificationCount={unreadToShow}
+              onClick={handleClick}
+              isSelected={isSelected}
+            />
+          );
     case SectionType.PathIndicator:
       return (
         <ActionPanelOnionStatusLight
@@ -179,6 +223,7 @@ const cleanUpMediasInterval = DURATION.MINUTES * 60;
 // * if there is a version on the fileserver more recent than our current, we fetch github to get the UpdateInfos and trigger an update as usual (asking user via dialog)
 const fetchReleaseFromFileServerInterval = 1000 * 60; // try to fetch the latest release from the fileserver every minute
 
+
 const setupTheme = () => {
   const theme = window.Events.getThemeSetting();
   window.setTheme(theme);
@@ -187,6 +232,8 @@ const setupTheme = () => {
   } else {
     switchHtmlToLightTheme();
   }
+
+  
   const newThemeObject = theme === 'dark' ? 'dark' : 'light';
   window?.inboxStore?.dispatch(applyTheme(newThemeObject));
 };
@@ -336,6 +383,7 @@ export const ActionsPanel = () => {
   // wait for cleanUpMediasInterval and then start cleaning up medias
   // this would be way easier to just be able to not trigger a call with the setInterval
   useEffect(() => {
+    switchHtmlToDarkTheme()
     const timeout = setTimeout(() => setStartCleanUpMedia(true), cleanUpMediasInterval);
 
     return () => clearTimeout(timeout);
@@ -373,6 +421,7 @@ export const ActionsPanel = () => {
   }, DURATION.DAYS * 1);
 
   return (
+    
     <>
       <ModalContainer />
 
@@ -385,12 +434,19 @@ export const ActionsPanel = () => {
        
         {/* <Section type={SectionType.Contact} /> */}
         <div style={{color:"#fff"}}>
+        <Section type={SectionType.Closedgroup} />
+        </div>
+        <div style={{color:"#fff"}}>
+        <Section type={SectionType.Opengroup} />
+        </div>
+        
+        <div style={{color:"#fff"}}>
         <Section type={SectionType.Settings} />
         </div>
       
 
         <SessionToastContainer />
-
+    
         {/* <Section type={SectionType.PathIndicator} /> */}
         {/* <Section type={SectionType.Moon} /> */}
       </LeftPaneSectionContainer>

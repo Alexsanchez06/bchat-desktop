@@ -11,7 +11,7 @@ export class MessageView extends React.Component {
         <div className="conversation-header" />
         <div className="container">
           <div className="content session-full-logo">
-            <img
+            {/* <img
               src="images/session/brand.svg"
               className="session-brand-logo"
               alt="full-brand-logo"
@@ -20,7 +20,8 @@ export class MessageView extends React.Component {
               src="images/session/session-text.svg"
               className="session-text-logo"
               alt="full-brand-logo"
-            />
+            /> */}
+           <p  className="session-text">Much empty. Such wow.<br></br> Get some friends to BChat!</p>
           </div>
         </div>
       </div>

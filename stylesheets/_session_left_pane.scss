@@ -287,10 +287,20 @@ $session-compose-margin: 20px;
   align-items: center;
   margin: auto;
 
+  // for bchat style
+
   .session-brand-logo {
     height: 180px;
     filter: brightness(0) saturate(100%) invert(75%) sepia(84%) saturate(3272%) hue-rotate(103deg)
       brightness(106%) contrast(103%);
+  }
+  .session-text
+  {
+    font-family: poppin;
+    /* color: #fff; */
+    color: #4E4E5F;
+    font-size: 30px;
+    margin-top: 301px;
   }
 
   .session-text-logo {

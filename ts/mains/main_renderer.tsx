@@ -163,6 +163,10 @@ Storage.onready(async () => {
   }
 
   const themeSetting = window.Events.getThemeSetting();
+  console.log("themeSetting ",themeSetting);
+
+  
+  
   const newThemeSetting = mapOldThemeToNew(themeSetting);
   window.Events.setThemeSetting(newThemeSetting);
 

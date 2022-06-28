@@ -10,8 +10,11 @@ export enum SectionType {
   Message,
   Contact,
   Settings,
+  
   Moon,
   PathIndicator,
+  Opengroup,
+  Closedgroup
 }
 
 type FocusSectionActionType = {
@@ -35,6 +38,8 @@ type OverlayModeActionType = {
 };
 
 export function showLeftPaneSection(section: SectionType): FocusSectionActionType {
+  console.log("section",section);
+  
   return {
     type: FOCUS_SECTION,
     payload: section,
@@ -102,19 +107,28 @@ export const reducer = (
     type: string;
     payload: SectionActionTypes;
   }
-): SectionStateType => {
+): SectionStateType => {  
+  // console.log("type1234",type,"payload :",payload);
+  
   switch (type) {
+
     case FOCUS_SECTION:
       // if we change to something else than settings, reset the focused settings section
       const castedPayload = (payload as unknown) as SectionType;
+      //  console.log('castedPayload',castedPayload,SectionType.Settings,type);
 
       if (castedPayload !== SectionType.Settings) {
+        console.log('castedPayload',castedPayload,SectionType.Settings,type);
+
         return {
           ...state,
           focusedSection: castedPayload,
           focusedSettingsSection: undefined,
         };
       }
+
+     
+     
 
       // on click on the gear icon: show the appearance tab by default
       return {

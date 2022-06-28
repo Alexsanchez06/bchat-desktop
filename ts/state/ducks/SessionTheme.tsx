@@ -43,7 +43,7 @@ const darkScrollbarThumb = '#474646';
 const darkScrollbarTrack = '#1b1b1b';
 const darkFakeChatBubbleBg = '#212121';
 
-const darkInboxBackground = '#171717';
+const darkInboxBackground = '#1C1C26';
 const darkLeftPaneOverlayBg = darkInboxBackground;
 const darkConversationItemSelected = '#404040';
 const darkConversationItemHasUnread = '#2c2c2c';
