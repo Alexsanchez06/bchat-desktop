@@ -47,7 +47,7 @@ const InnerLeftPaneContactSection = () => {
   return <LeftPaneContactSection />;
 };
 
-const LeftPaneSection = () => {
+ const LeftPaneSection = () => {
   const focusedSection = useSelector(getFocusedSection);
 
   if (focusedSection === SectionType.Message) {
@@ -67,10 +67,11 @@ export const LeftPane = () => {
   return (
     <SessionTheme>
       <div className="module-left-pane-session">
-        <ActionsPanel />
+       
 
         <div className="module-left-pane">
           <LeftPaneSection />
+          <ActionsPanel />
         </div>
       </div>
     </SessionTheme>

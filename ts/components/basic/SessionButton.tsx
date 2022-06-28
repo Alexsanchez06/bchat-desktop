@@ -29,6 +29,8 @@ type Props = {
   onClick: any;
   children?: ReactNode;
   dataTestId?: string;
+  icon?: boolean;
+  style?:any;
 };
 
 export const SessionButton = (props: Props) => {
@@ -50,14 +52,25 @@ export const SessionButton = (props: Props) => {
   }
 
   return (
-    <div
-      className={classNames('session-button', ...buttonTypes, buttonColor, disabled && 'disabled')}
-      role="button"
+    <>   
+     {props.icon ? <div
+      style={props.style}
+     
       onClick={onClickFn}
       data-testid={dataTestId}
     >
       {props.children || text}
     </div>
+  : <div
+  className={classNames('session-button', ...buttonTypes, buttonColor, disabled && 'disabled')}
+  role="button"
+  onClick={onClickFn}
+  data-testid={dataTestId}
+>
+  {props.children || text}
+</div>}
+</>
+
   );
 };
 

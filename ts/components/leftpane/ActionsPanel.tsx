@@ -61,6 +61,7 @@ import { UserUtils } from '../../session/utils';
 import { Storage } from '../../util/storage';
 import { SettingsKey } from '../../data/settings-key';
 
+
 const Section = (props: { type: SectionType }) => {
   const ourNumber = useSelector(getOurNumber);
   const unreadMessageCount = useSelector(getUnreadMessageCount);
@@ -377,15 +378,21 @@ export const ActionsPanel = () => {
 
       <CallContainer />
       <LeftPaneSectionContainer data-testid="leftpane-section-container">
-        <Section type={SectionType.Profile} />
+        {/* <Section type={SectionType.Profile} /> */}
+        <div style={{color:"#fff"}}>
         <Section type={SectionType.Message} />
-        <Section type={SectionType.Contact} />
+        </div>
+       
+        {/* <Section type={SectionType.Contact} /> */}
+        <div style={{color:"#fff"}}>
         <Section type={SectionType.Settings} />
+        </div>
+      
 
         <SessionToastContainer />
 
-        <Section type={SectionType.PathIndicator} />
-        <Section type={SectionType.Moon} />
+        {/* <Section type={SectionType.PathIndicator} /> */}
+        {/* <Section type={SectionType.Moon} /> */}
       </LeftPaneSectionContainer>
     </>
   );

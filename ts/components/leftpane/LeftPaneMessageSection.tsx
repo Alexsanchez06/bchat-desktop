@@ -26,7 +26,7 @@ export interface Props {
   searchResults?: SearchResultsProps;
 
   messageRequestsEnabled?: boolean;
-  overlayMode: OverlayMode;
+  overlayMode: OverlayMode; 
 }
 
 export class LeftPaneMessageSection extends React.Component<Props> {
@@ -101,7 +101,8 @@ export class LeftPaneMessageSection extends React.Component<Props> {
             window.inboxStore?.dispatch(setOverlayMode('message'));
           }}
         />
-        {overlayMode ? this.renderClosableOverlay() : this.renderConversations()}
+        {overlayMode ? this.renderClosableOverlay() : null}
+        {this.renderConversations()}
       </div>
     );
   }
@@ -146,15 +147,22 @@ export class LeftPaneMessageSection extends React.Component<Props> {
     return (
       <div className="left-pane-contact-bottom-buttons">
         <SessionButton
-          text={joinOpenGroup}
+          // text={joinOpenGroup}
+          icon={true}
           buttonType={SessionButtonType.SquareOutline}
           buttonColor={SessionButtonColor.Green}
           onClick={() => {
             window.inboxStore?.dispatch(setOverlayMode('open-group'));
           }}
+          style={{background: "url(images/bchat/secret-group.svg) no-repeat ",backgroundSize: 'cover',height: "19px",color: "rgb(0, 0, 0)",width: "29px",margin:'30px 30px'}}
+          
+
         />
         <SessionButton
-          text={newClosedGroup}
+          icon={true}
+          style={{background: "url(images/bchat/socialgroup.svg) no-repeat ",backgroundSize: 'cover',height: "19px",color: "rgb(0, 0, 0)",width: "29px",margin:'30px 30px'}}
+
+          // text={newClosedGroup}
           buttonType={SessionButtonType.SquareOutline}
           buttonColor={SessionButtonColor.White}
           onClick={() => {
