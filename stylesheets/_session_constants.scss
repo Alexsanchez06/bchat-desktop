@@ -3,7 +3,7 @@
 // //////////////////////////////////////////////
 
 $session-font-default: 'Roboto';
-$session-font-accent: 'Loor';
+$session-font-accent: 'Poppins';
 $session-font-mono: 'SpaceMono';
 
 @font-face {
@@ -38,10 +38,16 @@ $session-font-mono: 'SpaceMono';
 // Accented font
 @font-face {
   font-family: $session-font-accent;
-  src: url('../fonts/Loor.ttf') format('truetype');
+  src: url('../fonts/Poppins-Bold.ttf') format('truetype');
   line-height: 1.4rem;
+  font-weight: bold;
 }
 
+@font-face {
+  font-family: $session-font-accent;
+  src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+  line-height: 1.4rem;
+}
 // //////////////////////////////////////////////
 // ////////////////// Colors ////////////////////
 // //////////////////////////////////////////////
@@ -102,7 +108,7 @@ $session-overlay-opacity: 0.3;
 // Sizing
 $session-font-xs: 11px;
 $session-font-sm: 13px;
-$session-font-md: 15px;
+$session-font-md: 14px;
 $session-font-lg: 18px;
 $session-font-xl: 24px;
 

@@ -73,19 +73,18 @@ textarea {
 
 .session-button {
   @mixin transparent-background($textAndBorderColor) {
-    background-color: Transparent;
+    background-color: #403E4B;
     background-repeat: no-repeat;
     overflow: hidden;
     outline: none;
     color: $textAndBorderColor;
-    border: 2px solid $textAndBorderColor;
   }
 
   width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 700;
+  font-weight: 100;
   user-select: none;
   white-space: nowrap;
   cursor: pointer;
@@ -196,7 +195,7 @@ textarea {
     padding: 0px $session-margin-lg;
     font-size: $session-font-md;
     font-family: $session-font-accent;
-    border-radius: 500px;
+    border-radius: 13px;
 
     &:not(.disabled):hover {
       color: var(--color-text);

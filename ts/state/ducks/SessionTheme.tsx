@@ -3,10 +3,10 @@ import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 
 const white = '#ffffff';
-const black = '#000000';
+const black = '#1C1C26';
 const warning = '#e7b100';
 const destructive = '#ff453a';
-const accentLightTheme = '#00e97b';
+const accentLightTheme = '#128B17';
 const accentDarkTheme = '#00f782';
 const borderLightThemeColor = '#f1f1f1';
 const borderDarkThemeColor = '#ffffff0F';
@@ -30,7 +30,7 @@ const darkColorRecoveryPhraseBannerBg = '#1f1f1f';
 const darkColorPillDivider = '#353535';
 const darkColorLastSeenIndicator = accentDarkTheme;
 const darkColorQuoteBottomBarBg = '#404040';
-const darkColorCellBackground = '#1b1b1b';
+const darkColorCellBackground = '#1C1C26';
 const darkColorReceivedMessageBg = '#2d2d2d';
 const darkColorReceivedMessageText = white;
 
@@ -40,14 +40,14 @@ const darkFilterSessionText = 'none';
 const darkUnreadBorder = `4px solid ${accentDarkTheme}`;
 
 const darkScrollbarThumb = '#474646';
-const darkScrollbarTrack = '#1b1b1b';
+const darkScrollbarTrack = '#1C1C26';
 const darkFakeChatBubbleBg = '#212121';
 
 const darkInboxBackground = '#171717';
 const darkLeftPaneOverlayBg = darkInboxBackground;
 const darkConversationItemSelected = '#404040';
 const darkConversationItemHasUnread = '#2c2c2c';
-const darkConversationList = '#1b1b1b';
+const darkConversationList = '#1C1C26';
 
 const darkTextHighlight = `${white}88`;
 const darkForegroundPrimary = white;
@@ -199,7 +199,7 @@ const lightConversationList = '#f9f9f9';
 const lightTextHighlight = `${black}88`;
 const lightForegroundPrimary = white;
 const lightBackgroundPrimary = '#272726';
-const lightButtonGreen = '#272726';
+const lightButtonGreen = '#FFFFFF';
 const lightModalBackground = '#fcfcfc';
 
 const lightMessageRequestBannerBackground = lightColorQuoteBottomBarBg;
