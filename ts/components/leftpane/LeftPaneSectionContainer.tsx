@@ -1,15 +1,16 @@
 import styled from 'styled-components';
 
 export const LeftPaneSectionContainer = styled.div`
-  width: 80px;
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction:row;
   align-items: center;
   border-right: var(--border-session);
   overflow-y: auto;
+  background-color:#128B17;
 
   .session-icon-button {
-    padding: 30px 20px;
+    padding: 30px 34px;
   }
 
   .module-avatar {

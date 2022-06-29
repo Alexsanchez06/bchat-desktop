@@ -12,6 +12,9 @@ import { LeftPaneContactSection } from './LeftPaneContactSection';
 import { LeftPaneMessageSection } from './LeftPaneMessageSection';
 import { LeftPaneSettingSection } from './LeftPaneSettingSection';
 
+// for test
+
+
 // from https://github.com/bvaughn/react-virtualized/blob/fb3484ed5dcc41bffae8eab029126c0fb8f7abc0/source/List/types.js#L5
 export type RowRendererParamsType = {
   index: number;
@@ -30,7 +33,7 @@ const InnerLeftPaneMessageSection = () => {
   const lists = showSearch ? undefined : useSelector(getLeftPaneLists);
   const messageRequestsEnabled = useSelector(getHideMessageRequestBanner);
   const overlayMode = useSelector(getOverlayMode);
-
+  
   return (
     // tslint:disable-next-line: use-simple-attributes
     <LeftPaneMessageSection
@@ -47,7 +50,7 @@ const InnerLeftPaneContactSection = () => {
   return <LeftPaneContactSection />;
 };
 
-const LeftPaneSection = () => {
+ const LeftPaneSection = () => {
   const focusedSection = useSelector(getFocusedSection);
 
   if (focusedSection === SectionType.Message) {
@@ -64,13 +67,16 @@ const LeftPaneSection = () => {
 };
 
 export const LeftPane = () => {
+ 
   return (
     <SessionTheme>
       <div className="module-left-pane-session">
-        <ActionsPanel />
+       
 
         <div className="module-left-pane">
           <LeftPaneSection />
+          <ActionsPanel />
+          
         </div>
       </div>
     </SessionTheme>
