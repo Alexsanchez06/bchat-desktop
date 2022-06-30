@@ -7,7 +7,7 @@ const black = '#000000';
 const warning = '#e7b100';
 const destructive = '#ff453a';
 const accentLightTheme = '#00e97b';
-const accentDarkTheme = '#00f782';
+const accentDarkTheme = '#128B17';
 const borderLightThemeColor = '#f1f1f1';
 const borderDarkThemeColor = '#ffffff0F';
 
@@ -60,6 +60,11 @@ const darkMessageRequestBannerBackground = darkConversationItemHasUnread;
 const darkMessageRequestBannerIconBackground = grey67;
 const darkMessageRequestBannerUnreadBackground = grey67;
 const darkMessageRequestBannerIcon = '#adadad';
+
+// for bchat
+const darkInboxBgColor="#353543";
+const darkHintMessage="#7B7B86";
+const darkTextAreaColor="#0BB70F";
 
 export const switchHtmlToDarkTheme = () => {
   document.documentElement.style.setProperty('--color-accent', darkColorAccent);
@@ -157,6 +162,22 @@ export const switchHtmlToDarkTheme = () => {
     '--color-request-banner-icon',
     darkMessageRequestBannerIcon
   );
+
+
+  document.documentElement.style.setProperty(
+    '--color-inboxBgColor',
+    darkInboxBgColor
+  );
+  document.documentElement.style.setProperty(
+    '--color-HintMessageText',
+    darkHintMessage
+  );
+  
+  document.documentElement.style.setProperty(
+    '--color-TextAreaColor',
+    darkTextAreaColor
+  );
+  
 };
 
 // LIGHT COLORS
@@ -206,6 +227,11 @@ const lightMessageRequestBannerBackground = lightColorQuoteBottomBarBg;
 const lightMessageRequestBannerIconBackground = '#585858';
 const lightMessageRequestBannerUnreadBackground = lightColorClickableHovered;
 const lightMessageRequestBannerIcon = white;
+
+// for bchat
+const lightInboxBgColor="white";
+const lightHintMessageText="black";
+const lightTextAreaColor="black";
 
 export const switchHtmlToLightTheme = () => {
   document.documentElement.style.setProperty('--color-accent', lightColorAccent);
@@ -373,6 +399,11 @@ export const SessionGlobalStyles = createGlobalStyle`
     --color-background-primary: ${lightBackgroundPrimary};
     --color-button-green: ${lightButtonGreen};
     --color-modal-background: ${lightModalBackground};
+
+    --color-inboxBgColor:${lightInboxBgColor};
+    --color-HintMessageText:${lightHintMessageText};
+    --color-TextAreaColor:${lightTextAreaColor};
+
 
 
   };

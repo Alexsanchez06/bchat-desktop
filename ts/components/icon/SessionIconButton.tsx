@@ -12,6 +12,7 @@ interface SProps extends SessionIconProps {
   margin?: string;
   dataTestId?: string;
   id?: string;
+  style?: any;
 }
 
 const SessionIconButtonInner = React.forwardRef<HTMLDivElement, SProps>((props, ref) => {
@@ -32,6 +33,7 @@ const SessionIconButtonInner = React.forwardRef<HTMLDivElement, SProps>((props, 
     margin,
     id,
     dataTestId,
+    style
   } = props;
   const clickHandler = (e: React.MouseEvent<HTMLDivElement>) => {
     if (props.onClick) {
@@ -43,11 +45,13 @@ const SessionIconButtonInner = React.forwardRef<HTMLDivElement, SProps>((props, 
   return (
     <div
       className={classNames('session-icon-button', iconSize, isSelected ? 'no-opacity' : '')}
+      // className={classNames('session-icon-button', iconSize,)}
+     
       role="button"
       ref={ref}
       id={id}
       onClick={clickHandler}
-      style={{ display: isHidden ? 'none' : 'flex', margin: margin ? margin : '' }}
+      style={{ display: isHidden ? 'none' : 'flex', margin: margin ? margin : '', }}
       data-testid={dataTestId}
     >
       <SessionIcon

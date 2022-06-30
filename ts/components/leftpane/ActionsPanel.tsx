@@ -64,17 +64,29 @@ import { SettingsKey } from '../../data/settings-key';
 
 // state/ducks/section.tsx
 
-const Section = (props: { type: SectionType }) => {
+// const Section = (props: { type: SectionType }) => {
+const Section = (props:any) => {
+
   const ourNumber = useSelector(getOurNumber);
   const unreadMessageCount = useSelector(getUnreadMessageCount);
   const dispatch = useDispatch();
-  const { type } = props;
+        const { type,opacity} = props;
 
   const focusedSection = useSelector(getFocusedSection);
-  const isSelected = focusedSection === props.type;
+  const isSelected =focusedSection  === props.type;
+       
+  // const isSelected = opacity ===props.type;
+
+  
+  
+ 
+  
+  
+  // const isSelected =type===;
+
 
   const handleClick = () => {
-    console.log('type handleClick; ',type);
+    console.log('type handleClick; ',type,focusedSection);
     
     /* tslint:disable:no-void-expression */
     if (type === SectionType.Profile) {
@@ -91,23 +103,26 @@ const Section = (props: { type: SectionType }) => {
 
       const newThemeObject = updatedTheme === 'dark' ? 'dark' : 'light';
       dispatch(applyTheme(newThemeObject));
-    } else if (type === SectionType.PathIndicator) {
+    } 
+    // else if (type === SectionType.PathIndicator) {
+    //   // Show Path Indicator Modal
+    //   dispatch(onionPathModal({}));
+    // } 
+    else if (type === SectionType.Closedgroup) {
       // Show Path Indicator Modal
-      dispatch(onionPathModal({}));
+      
+      dispatch(showLeftPaneSection(0));
+      dispatch(setOverlayMode('closed-group'))
     } 
     else if (type === SectionType.Opengroup) {
       // Show Path Indicator Modal
      
-      dispatch(showLeftPaneSection(1));
-      
+      dispatch(showLeftPaneSection(0));
+
       dispatch(setOverlayMode('open-group'));
       // dispatch(setOverlayMode(undefined))
     } 
-    else if (type === SectionType.Closedgroup) {
-      // Show Path Indicator Modal
-      dispatch(showLeftPaneSection(1));
-      dispatch(setOverlayMode('closed-group'))
-    } 
+   
     else {
       // message section
       dispatch(clearSearch());
@@ -115,6 +130,13 @@ const Section = (props: { type: SectionType }) => {
       dispatch(setOverlayMode(undefined));
     }
   };
+
+  // function indicator(params:any) {
+  //   setOpacity(params)
+  //   handleClick()
+
+  //   console.log('indicator',params);
+  // }
 
   
 
@@ -134,38 +156,42 @@ const Section = (props: { type: SectionType }) => {
   switch (type) {
     case SectionType.Message:
       return (
-        <SessionIconButton
-          iconSize="large"
-          dataTestId="message-section"
-          iconType={'chatBubble'}
-          iconColor={undefined}
-          notificationCount={unreadToShow}
-          onClick={handleClick}
-          isSelected={isSelected}
-        />
+        
+              <SessionIconButton
+                iconSize="large"
+                dataTestId="message-section"
+                iconType={'chatBubble'}
+                iconColor={undefined}
+                notificationCount={unreadToShow}
+                onClick={handleClick}
+                isSelected={opacity===0}
+               
+              />
+       
       );
-    case SectionType.Contact:
-      return (
-        <SessionIconButton
-          iconSize="large"
-          dataTestId="contact-section"
-          iconType={'users'}
-          iconColor={undefined}
-          notificationCount={unreadToShow}
-          onClick={handleClick}
-          isSelected={isSelected}
-        />
-      );
-    case SectionType.Settings:
+    // case SectionType.Contact:
+    //   return (
+    //     <SessionIconButton
+    //       iconSize="large"
+    //       dataTestId="contact-section"
+    //       iconType={'users'}
+    //       iconColor={undefined}
+    //       notificationCount={unreadToShow}
+    //       onClick={handleClick}
+    //       isSelected={type===}
+    //     />
+    //   );
+    case SectionType.Closedgroup:
       return (
         <SessionIconButton
           iconSize="large"
           dataTestId="settings-section"
-          iconType={'gear'}
+          iconType={'closedgroup'}
           iconColor={undefined}
           notificationCount={unreadToShow}
           onClick={handleClick}
-          isSelected={isSelected}
+          isSelected={opacity===1?true:false}
+
         />
       );
       case SectionType.Opengroup:
@@ -177,30 +203,31 @@ const Section = (props: { type: SectionType }) => {
             iconColor={undefined}
             notificationCount={unreadToShow}
             onClick={handleClick}
-            isSelected={isSelected}
+            // isSelected={opacity===0?true:false}
           />
         );
-        case SectionType.Closedgroup:
-          return (
-            <SessionIconButton
-              iconSize="large"
-              dataTestId="settings-section"
-              iconType={'closedgroup'}
-              iconColor={undefined}
-              notificationCount={unreadToShow}
-              onClick={handleClick}
-              isSelected={isSelected}
-            />
-          );
-    case SectionType.PathIndicator:
+       
+          case SectionType.Settings:
       return (
-        <ActionPanelOnionStatusLight
-          dataTestId="onion-status-section"
-          handleClick={handleClick}
-          isSelected={isSelected}
-          id={'onion-path-indicator-led-id'}
+        <SessionIconButton
+          iconSize="large"
+          dataTestId="settings-section"
+          iconType={'gear'}
+          iconColor={undefined}
+          notificationCount={unreadToShow}
+          onClick={handleClick}
+          // isSelected={opacity===3}
         />
       );
+    // case SectionType.PathIndicator:
+    //   return (
+    //     <ActionPanelOnionStatusLight
+    //       dataTestId="onion-status-section"
+    //       handleClick={handleClick}
+    //       isSelected={isSelected}
+    //       id={'onion-path-indicator-led-id'}
+    //     />
+    //   );
     default:
       return (
         <SessionIconButton
@@ -374,6 +401,10 @@ export const ActionsPanel = () => {
   const [startCleanUpMedia, setStartCleanUpMedia] = useState(false);
   const ourPrimaryConversation = useSelector(getOurPrimaryConversation);
 
+  const[opacity,setOpacity]=useState(0)
+  
+
+
   // this maxi useEffect is called only once: when the component is mounted.
   // For the action panel, it means this is called only one per app start/with a user loggedin
   useEffect(() => {
@@ -428,13 +459,13 @@ export const ActionsPanel = () => {
       <CallContainer />
       <LeftPaneSectionContainer data-testid="leftpane-section-container">
         {/* <Section type={SectionType.Profile} /> */}
-        <div style={{color:"#fff"}}>
-        <Section type={SectionType.Message} />
+        <div style={{color:"#fff"}} onClick={()=>setOpacity(0)} >
+        <Section type={SectionType.Message} opacity={opacity} />
         </div>
        
         {/* <Section type={SectionType.Contact} /> */}
-        <div style={{color:"#fff"}}>
-        <Section type={SectionType.Closedgroup} />
+        <div style={{color:"#fff"}}  onClick={()=>setOpacity(1)} >
+        <Section type={SectionType.Closedgroup}  />
         </div>
         <div style={{color:"#fff"}}>
         <Section type={SectionType.Opengroup} />

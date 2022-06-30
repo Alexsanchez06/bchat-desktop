@@ -6,15 +6,18 @@ export const IS_APP_FOCUSED = 'IS_APP_FOCUSED';
 export const OVERLAY_MODE = 'OVERLAY_MODE';
 
 export enum SectionType {
-  Profile,
   Message,
-  Contact,
+  Closedgroup,
+  Opengroup,
   Settings,
+  Profile,
   
+  Contact,
+
   Moon,
   PathIndicator,
-  Opengroup,
-  Closedgroup
+  
+ 
 }
 
 type FocusSectionActionType = {

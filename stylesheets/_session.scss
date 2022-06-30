@@ -253,14 +253,19 @@ textarea {
   position: relative;
   opacity: 0.4;
   transform: translateZ(0);
-
+ 
   &:hover {
     opacity: 1;
+    background-color: white;
+    color: #159B24;
+
   }
   transition: opacity $session-transition-duration;
 
   &.no-opacity {
     opacity: 1;
+    color: #159B24;
+    background: white;
   }
 }
 

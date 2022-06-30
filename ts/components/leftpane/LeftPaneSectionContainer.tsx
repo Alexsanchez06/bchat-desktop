@@ -10,7 +10,9 @@ export const LeftPaneSectionContainer = styled.div`
   background-color:#128B17;
 
   .session-icon-button {
-    padding: 30px 34px;
+      padding: 9px 9px;
+	    margin: 11px 25px;
+	    border-radius: 25px;
   }
 
   .module-avatar {
