@@ -5,6 +5,7 @@
 $session-font-default: 'Roboto';
 $session-font-accent: 'Loor';
 $session-font-mono: 'SpaceMono';
+$bchat-font-poppin-semibold:"poppin-semibold";
 
 @font-face {
   font-family: $session-font-mono;
@@ -39,6 +40,11 @@ $session-font-mono: 'SpaceMono';
 @font-face {
   font-family: $session-font-accent;
   src: url('../fonts/Loor.ttf') format('truetype');
+  line-height: 1.4rem;
+}
+@font-face {
+  font-family: $bchat-font-poppin-semibold;
+  src: url('../fonts/Poppins-SemiBold.ttf') format('truetype');
   line-height: 1.4rem;
 }
 
@@ -194,3 +200,16 @@ $session-transition-duration: 0.25s;
 // //////////////////////////////////////////////
 
 $composition-container-height: 60px;
+
+ //////////////////////////////////////////////
+// ///////////////// placeholder ////////////////////
+// //////////////////////////////////////////////
+
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}  
+}
+

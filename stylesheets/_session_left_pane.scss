@@ -81,6 +81,14 @@ $session-compose-margin: 20px;
   position: relative;
   height: 100vh;
   flex-shrink: 0;
+  background: var(--color-inbox-background);
+
+
+  @include placeholder {
+    
+    color: #7E7E8D;
+    
+}
 
   &-session {
     display: flex;
@@ -126,6 +134,7 @@ $session-compose-margin: 20px;
   &__subHeader
   {
     text-align: center;
+    font-family: $bchat-font-poppin-semibold;
   }
   &-overlay {
     background: var(--color-left-pane-overlay-background);
@@ -238,7 +247,8 @@ $session-compose-margin: 20px;
   flex-grow: 1;
   transition: none;
 
-  background: var(--color-conversation-list);
+  background: var(--color-inbox-background);
+  
 
   .left-pane-contact-bottom-buttons .session-button {
     vertical-align: middle;
@@ -291,6 +301,7 @@ $session-compose-margin: 20px;
 }
 
 .conversation.placeholder {
+
   margin: auto;
   .container {
     display: flex;
@@ -313,11 +324,12 @@ $session-compose-margin: 20px;
   }
   .session-text
   {
-    font-family: poppin;
+    font-family: $bchat-font-poppin-semibold;
     /* color: #fff; */
     color: #4E4E5F;
     font-size: 30px;
     margin-top: 301px;
+
   }
 
   .session-text-logo {

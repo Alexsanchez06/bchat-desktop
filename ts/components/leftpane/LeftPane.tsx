@@ -12,6 +12,9 @@ import { LeftPaneContactSection } from './LeftPaneContactSection';
 import { LeftPaneMessageSection } from './LeftPaneMessageSection';
 import { LeftPaneSettingSection } from './LeftPaneSettingSection';
 
+// import { OverlayOpenGroup } from './overlay/OverlayOpenGroup';
+
+
 // for test
 
 
@@ -53,9 +56,16 @@ const InnerLeftPaneContactSection = () => {
  const LeftPaneSection = () => {
   const focusedSection = useSelector(getFocusedSection);
 
+  
+
   if (focusedSection === SectionType.Message) {
     return <InnerLeftPaneMessageSection />;
   }
+  // if(focusedSection === SectionType.Opengroup)
+  // {
+  //   return <OverlayOpenGroup />
+  // }
+
 
   if (focusedSection === SectionType.Contact) {
     return <InnerLeftPaneContactSection />;
@@ -76,7 +86,7 @@ export const LeftPane = () => {
         <div className="module-left-pane">
           <LeftPaneSection />
           <ActionsPanel />
-          
+           
         </div>
       </div>
     </SessionTheme>

@@ -258,6 +258,7 @@ textarea {
     opacity: 1;
     background-color: white;
     color: #159B24;
+    border-radius: 6px;
 
   }
   transition: opacity $session-transition-duration;
@@ -300,6 +301,8 @@ textarea {
 
 .module-conversation-header__title {
   flex-direction: column;
+  text-align: right;
+  
 }
 .module-conversation-header__title-flex {
   flex-direction: row;

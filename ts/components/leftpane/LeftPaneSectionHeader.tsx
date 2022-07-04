@@ -11,16 +11,23 @@ import { SessionButton, SessionButtonType } from '../basic/SessionButton';
 import { SessionIcon, SessionIconButton } from '../icon';
 import { isSignWithRecoveryPhrase } from '../../util/storage';
 
+import { Avatar, AvatarSize } from '../avatar/Avatar';
+import { getOurNumber } from '../../state/selectors/user';
+import {  editProfileModal} from '../../state/ducks/modalDialog';
+
+
 const SectionTitle = styled.h1`
   padding: 0 var(--margins-sm);
   flex-grow: 1;
   color: var(--color-text);
+  font-family:$bchat-font-poppin-semibold;
 `;
 
 export const LeftPaneSectionHeader = (props: { buttonClicked?: any }) => {
-  const showRecoveryPhrasePrompt = useSelector(getShowRecoveryPhrasePrompt);
+  // const showRecoveryPhrasePrompt = useSelector(getShowRecoveryPhrasePrompt);
   const focusedSection = useSelector(getFocusedSection);
   const overlayMode = useSelector(getOverlayMode);
+  const bChatId=useSelector(getOurNumber)
   const dispatch = useDispatch();
 
   let label: string | undefined;
@@ -38,9 +45,13 @@ export const LeftPaneSectionHeader = (props: { buttonClicked?: any }) => {
       label = window.i18n('settingsHeader');
       break;
     case SectionType.Message:
+      
       label = isMessageRequestOverlay
         ? window.i18n('messageRequests')
-        : window.i18n('messagesHeader');
+        // : window.i18n('messagesHeader');
+        : "BChat";
+
+
       break;
     default:
   }
@@ -59,6 +70,13 @@ export const LeftPaneSectionHeader = (props: { buttonClicked?: any }) => {
             margin="0 0 var(--margins-xs) var(--margins-xs)"
           />
         )}
+         <Avatar
+        size={AvatarSize.M}
+      
+      onAvatarClick={()=>dispatch(editProfileModal({}))}
+        pubkey={bChatId}
+        dataTestId="leftpane-primary-avatar"
+      />
         <SectionTitle>{label}</SectionTitle>
         {isMessageSection && !isMessageRequestOverlay && (
           <SessionButton onClick={props.buttonClicked} dataTestId="new-conversation-button">
@@ -66,7 +84,7 @@ export const LeftPaneSectionHeader = (props: { buttonClicked?: any }) => {
           </SessionButton>
         )}
       </div>
-      {showRecoveryPhrasePrompt && <LeftPaneBanner />}
+      {/* {showRecoveryPhrasePrompt && <LeftPaneBanner />} */}
     </Flex>
   );
 };

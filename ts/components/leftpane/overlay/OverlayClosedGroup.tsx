@@ -68,7 +68,7 @@ export const OverlayClosedGroup = () => {
 
   return (
     <div className="module-left-pane-overlay">
-      <OverlayHeader title={title} subtitle={subtitle} />
+      <OverlayHeader title={title} subtitle={subtitle} hideExit={true}/>
       <div className="create-group-name-input">
         <SessionIdEditable
           editable={!noContactsForClosedGroup}
@@ -108,15 +108,19 @@ export const OverlayClosedGroup = () => {
       </div>
 
       <SpacerLG />
-
-      <SessionButton
+      <button 
+      className='nextButton'
+       onClick={onEnterPressed}
+      >{buttonText}</button>
+ 
+      {/* <SessionButton
         buttonColor={SessionButtonColor.Green}
         buttonType={SessionButtonType.BrandOutline}
         text={buttonText}
         disabled={noContactsForClosedGroup}
-        onClick={onEnterPressed}
+       
         dataTestId="next-button"
-      />
+      /> */}
     </div>
   );
 };

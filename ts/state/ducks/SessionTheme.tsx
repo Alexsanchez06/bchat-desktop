@@ -7,7 +7,7 @@ const black = '#000000';
 const warning = '#e7b100';
 const destructive = '#ff453a';
 const accentLightTheme = '#00e97b';
-const accentDarkTheme = '#128B17';
+const accentDarkTheme = '#2879FB';
 const borderLightThemeColor = '#f1f1f1';
 const borderDarkThemeColor = '#ffffff0F';
 
@@ -22,7 +22,7 @@ const darkColorTextAccent = accentDarkTheme;
 const darkColorSessionShadow = `0 0 4px 0 ${white}33`;
 const darkColorComposeViewBg = '#232323';
 const darkColorSentMessageBg = accentDarkTheme;
-const darkColorSentMessageText = black;
+const darkColorSentMessageText = white;
 const darkColorClickableHovered = '#414347';
 const darkColorSessionBorder = `1px solid ${borderDarkThemeColor}`;
 const darkColorSessionBorderColor = borderDarkThemeColor;
@@ -31,7 +31,7 @@ const darkColorPillDivider = '#353535';
 const darkColorLastSeenIndicator = accentDarkTheme;
 const darkColorQuoteBottomBarBg = '#404040';
 const darkColorCellBackground = '#1b1b1b';
-const darkColorReceivedMessageBg = '#2d2d2d';
+const darkColorReceivedMessageBg = '#34323F';
 const darkColorReceivedMessageText = white;
 
 const darkColorPillDividerText = '#a0a0a0';
@@ -65,6 +65,8 @@ const darkMessageRequestBannerIcon = '#adadad';
 const darkInboxBgColor="#353543";
 const darkHintMessage="#7B7B86";
 const darkTextAreaColor="#0BB70F";
+const darkComposeMsgBg="#2B2B38";
+const darkComposeMsgIconBG="#3f3c4b"
 
 export const switchHtmlToDarkTheme = () => {
   document.documentElement.style.setProperty('--color-accent', darkColorAccent);
@@ -177,6 +179,18 @@ export const switchHtmlToDarkTheme = () => {
     '--color-TextAreaColor',
     darkTextAreaColor
   );
+  document.documentElement.style.setProperty(
+    '--color-composeMsgBg',
+    darkComposeMsgBg
+  );
+  document.documentElement.style.setProperty(
+    '--color-composeMsgIconBG',
+    darkComposeMsgIconBG
+  );
+
+
+ 
+ 
   
 };
 
@@ -232,6 +246,8 @@ const lightMessageRequestBannerIcon = white;
 const lightInboxBgColor="white";
 const lightHintMessageText="black";
 const lightTextAreaColor="black";
+const lightComposeMsgBg="black";
+ const lightComposeMsgIconBG="white";
 
 export const switchHtmlToLightTheme = () => {
   document.documentElement.style.setProperty('--color-accent', lightColorAccent);
@@ -403,6 +419,8 @@ export const SessionGlobalStyles = createGlobalStyle`
     --color-inboxBgColor:${lightInboxBgColor};
     --color-HintMessageText:${lightHintMessageText};
     --color-TextAreaColor:${lightTextAreaColor};
+    --color-composeMsgBg:${lightComposeMsgBg};
+    --color-composeMsgIconBG:${lightComposeMsgIconBG}
 
 
 

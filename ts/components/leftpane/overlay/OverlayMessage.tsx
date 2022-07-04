@@ -105,7 +105,7 @@ const ourNumber = useSelector(getOurNumber);
       <p className="module-left-pane__subHeader">BChat ID</p>
       <SessionIdEditable
         // editable={!loading}
-        placeholder={ourNumber}
+        value={ourNumber}
         // onChange={setPubkeyOrOns}
         dataTestId="new-session-conversation"
       />

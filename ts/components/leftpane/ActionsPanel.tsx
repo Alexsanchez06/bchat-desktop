@@ -32,7 +32,7 @@ import { DURATION } from '../../session/constants';
 import { conversationChanged, conversationRemoved } from '../../state/ducks/conversations';
 import {
   editProfileModal,
-  onionPathModal,
+  // onionPathModal,
   updateConfirmModal,
 } from '../../state/ducks/modalDialog';
 import { uploadOurAvatar } from '../../interactions/conversationInteractions';
@@ -41,7 +41,7 @@ import { debounce, isEmpty, isString } from 'lodash';
 
 // tslint:disable-next-line: no-import-side-effect no-submodule-imports
 
-import { ActionPanelOnionStatusLight } from '../dialog/OnionStatusPathDialog';
+// import { ActionPanelOnionStatusLight } from '../dialog/OnionStatusPathDialog';
 import { switchHtmlToDarkTheme, switchHtmlToLightTheme } from '../../state/ducks/SessionTheme';
 import { loadDefaultRooms } from '../../session/apis/open_group_api/opengroupV2/ApiUtil';
 import { getOpenGroupManager } from '../../session/apis/open_group_api/opengroupV2/OpenGroupManagerV2';
