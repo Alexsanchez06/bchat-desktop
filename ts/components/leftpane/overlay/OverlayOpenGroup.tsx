@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 import { SessionJoinableRooms } from './SessionJoinableDefaultRooms';
 
-import { SessionButton, SessionButtonColor, SessionButtonType } from '../../basic/SessionButton';
+// import { SessionButton, SessionButtonColor, SessionButtonType } from '../../basic/SessionButton';
 import { SessionIdEditable } from '../../basic/SessionIdEditable';
 import { SessionSpinner } from '../../basic/SessionSpinner';
 import { OverlayHeader } from './OverlayHeader';

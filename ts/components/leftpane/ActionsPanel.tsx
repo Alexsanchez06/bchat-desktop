@@ -64,29 +64,19 @@ import { SettingsKey } from '../../data/settings-key';
 
 // state/ducks/section.tsx
 
-// const Section = (props: { type: SectionType }) => {
-const Section = (props:any) => {
+const Section = (props: { type: SectionType }) => {
+// const Section = (props:any) => {
 
   const ourNumber = useSelector(getOurNumber);
   const unreadMessageCount = useSelector(getUnreadMessageCount);
   const dispatch = useDispatch();
-        const { type,opacity} = props;
+        const { type} = props;
 
   const focusedSection = useSelector(getFocusedSection);
   const isSelected =focusedSection  === props.type;
-       
-  // const isSelected = opacity ===props.type;
-
   
-  
- 
-  
-  
-  // const isSelected =type===;
-
-
   const handleClick = () => {
-    console.log('type handleClick; ',type,focusedSection);
+  
     
     /* tslint:disable:no-void-expression */
     if (type === SectionType.Profile) {
@@ -111,13 +101,13 @@ const Section = (props:any) => {
     else if (type === SectionType.Closedgroup) {
       // Show Path Indicator Modal
       
-      dispatch(showLeftPaneSection(0));
+      dispatch(showLeftPaneSection(1));
       dispatch(setOverlayMode('closed-group'))
     } 
     else if (type === SectionType.Opengroup) {
       // Show Path Indicator Modal
      
-      dispatch(showLeftPaneSection(0));
+      dispatch(showLeftPaneSection(2));
 
       dispatch(setOverlayMode('open-group'));
       // dispatch(setOverlayMode(undefined))
@@ -164,7 +154,7 @@ const Section = (props:any) => {
                 iconColor={undefined}
                 notificationCount={unreadToShow}
                 onClick={handleClick}
-                isSelected={opacity===0}
+                isSelected={isSelected}
                
               />
        
@@ -190,7 +180,7 @@ const Section = (props:any) => {
           iconColor={undefined}
           notificationCount={unreadToShow}
           onClick={handleClick}
-          isSelected={opacity===1?true:false}
+          isSelected={isSelected}
 
         />
       );
@@ -203,7 +193,7 @@ const Section = (props:any) => {
             iconColor={undefined}
             notificationCount={unreadToShow}
             onClick={handleClick}
-            // isSelected={opacity===0?true:false}
+            isSelected={isSelected}
           />
         );
        
@@ -216,7 +206,7 @@ const Section = (props:any) => {
           iconColor={undefined}
           notificationCount={unreadToShow}
           onClick={handleClick}
-          // isSelected={opacity===3}
+          isSelected={isSelected}
         />
       );
     // case SectionType.PathIndicator:
@@ -401,10 +391,6 @@ export const ActionsPanel = () => {
   const [startCleanUpMedia, setStartCleanUpMedia] = useState(false);
   const ourPrimaryConversation = useSelector(getOurPrimaryConversation);
 
-  const[opacity,setOpacity]=useState(0)
-  
-
-
   // this maxi useEffect is called only once: when the component is mounted.
   // For the action panel, it means this is called only one per app start/with a user loggedin
   useEffect(() => {
@@ -459,12 +445,12 @@ export const ActionsPanel = () => {
       <CallContainer />
       <LeftPaneSectionContainer data-testid="leftpane-section-container">
         {/* <Section type={SectionType.Profile} /> */}
-        <div style={{color:"#fff"}} onClick={()=>setOpacity(0)} >
-        <Section type={SectionType.Message} opacity={opacity} />
+        <div style={{color:"#fff"}}  >
+        <Section type={SectionType.Message}  />
         </div>
        
         {/* <Section type={SectionType.Contact} /> */}
-        <div style={{color:"#fff"}}  onClick={()=>setOpacity(1)} >
+        <div style={{color:"#fff"}}   >
         <Section type={SectionType.Closedgroup}  />
         </div>
         <div style={{color:"#fff"}}>

@@ -51,7 +51,7 @@ const SessionIconButtonInner = React.forwardRef<HTMLDivElement, SProps>((props, 
       ref={ref}
       id={id}
       onClick={clickHandler}
-      style={{ display: isHidden ? 'none' : 'flex', margin: margin ? margin : '', }}
+      style={{ display: isHidden ? 'none' : 'flex', margin: margin ? margin : '',alignItems:"center" }}
       data-testid={dataTestId}
     >
       <SessionIcon
