@@ -12,7 +12,9 @@ export type UserLoggedInType = {
 
 export const newUser = async (window: Page, userName: string): Promise<UserLoggedInType> => {
   // Create User
-  await clickOnMatchingText(window, 'Create Session ID');
+  // await clickOnMatchingText(window, 'Create Session ID');
+  await clickOnMatchingText(window, 'Create Account');
+
   // Wait for animation for finish creating ID
   await window.waitForTimeout(1500);
   //Save session ID to a variable

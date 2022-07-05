@@ -21,7 +21,7 @@ import {
   AddStagedAttachmentButton,
   SendMessageButton,
   StartRecordingButton,
-  ToggleEmojiButton,
+  // ToggleEmojiButton,
 } from './CompositionButtons';
 import { AttachmentType } from '../../../types/Attachment';
 import { connect } from 'react-redux';
@@ -356,7 +356,9 @@ class CompositionBoxInner extends React.Component<Props, State> {
 
     return (
       <>
-        {typingEnabled && <AddStagedAttachmentButton onClick={this.onChooseAttachment} />}
+        {typingEnabled && <AddStagedAttachmentButton 
+        // onClick={this.onChooseAttachment}
+         />}
 
         <input
           className="hidden"
@@ -367,7 +369,7 @@ class CompositionBoxInner extends React.Component<Props, State> {
           onChange={this.onChoseAttachment}
         />
 
-        {typingEnabled && <StartRecordingButton onClick={this.onLoadVoiceNoteView} />}
+       
 
         <div
           className="send-message-input"
@@ -379,11 +381,12 @@ class CompositionBoxInner extends React.Component<Props, State> {
           data-testid="message-input"
         >
           {this.renderTextArea()}
-        </div>
+        {typingEnabled && <StartRecordingButton onClick={this.onLoadVoiceNoteView} />}
 
-        {typingEnabled && (
+        </div>
+        {/* {typingEnabled && (
           <ToggleEmojiButton ref={this.emojiPanelButton} onClick={this.toggleEmojiPanel} />
-        )}
+        )} */}
         <SendMessageButton onClick={this.onSendMessage} />
 
         {typingEnabled && (
@@ -392,6 +395,7 @@ class CompositionBoxInner extends React.Component<Props, State> {
               <SessionEmojiPanel onEmojiClicked={this.onEmojiClick} show={showEmojiPanel} />
             )}
           </div>
+          
         )}
       </>
     );

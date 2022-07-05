@@ -141,8 +141,8 @@ export class LeftPaneMessageSection extends React.Component<Props> {
   }
 
   private renderBottomButtons(): JSX.Element {
-    const joinOpenGroup = window.i18n('joinOpenGroup');
-    const newClosedGroup = window.i18n('newClosedGroup');
+    // const joinOpenGroup = window.i18n('joinOpenGroup');
+    // const newClosedGroup = window.i18n('newClosedGroup');
 
     return (
       <div className="left-pane-contact-bottom-buttons">

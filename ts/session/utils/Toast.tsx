@@ -7,6 +7,7 @@ import { SectionType, showLeftPaneSection, showSettingsSection } from '../../sta
 
 // if you push a toast manually with toast...() be sure to set the type attribute of the SessionToast component
 export function pushToastError(id: string, title: string, description?: string) {
+  console.log("TOAST:ERROR",id,title,description)
   toast.error(
     <SessionToast title={title} description={description} type={SessionToastType.Error} />,
     { toastId: id, updateId: id }
@@ -14,6 +15,7 @@ export function pushToastError(id: string, title: string, description?: string) 
 }
 
 export function pushToastWarning(id: string, title: string, description?: string) {
+  console.log("TOAST:WARN",id,title,description)
   toast.warning(
     <SessionToast title={title} description={description} type={SessionToastType.Warning} />,
     { toastId: id, updateId: id }

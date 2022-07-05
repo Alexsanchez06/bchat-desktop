@@ -29,7 +29,9 @@ $onionPathLineColor: rgba(#7a7a7a, 0.6);
 
 input,
 textarea {
-  caret-color: var(--color-text) !important;
+  // caret-color: var(--color-text) !important;
+  caret-color: white !important;
+
 }
 
 * {
@@ -78,6 +80,7 @@ textarea {
     overflow: hidden;
     outline: none;
     color: $textAndBorderColor;
+    font-family: $bchat-font-poppin-regular
   }
 
   width: auto;
@@ -117,8 +120,10 @@ textarea {
     }
 
     &.green {
-      background-color: var(--color-accent-button);
+      // background-color: var(--color-accent-button);
+      background-color: #128B17;
       color: var(--color-text-opposite);
+      font-family: "poppin-regular";
     }
 
     &.white {
@@ -190,11 +195,11 @@ textarea {
 
   &.brand {
     min-width: 165px;
-    height: 45px;
+    height: 47px;
     align-items: center;
     padding: 0px $session-margin-lg;
     font-size: $session-font-md;
-    font-family: $session-font-accent;
+    font-family: $session-font-poppins-bold;
     border-radius: 13px;
 
     &:not(.disabled):hover {
@@ -248,18 +253,32 @@ textarea {
 
 .session-icon-button {
   cursor: pointer;
-  display: inline-block;
+  display: flex;
   position: relative;
-  opacity: 0.4;
-  transform: translateZ(0);
-
+  transform: translate(0px, 34px);
+  background-color: #128B17;
+  height: 35px;
+  width: 35px;
+  border-radius: 50px;
+  transition: opacity 0.25s;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+ 
   &:hover {
     opacity: 1;
+    background-color: #0d7510;
+    color: #159B24;
+    border-radius: 50px;
+
   }
   transition: opacity $session-transition-duration;
 
   &.no-opacity {
     opacity: 1;
+    color: #159B24;
+    background: white;
   }
 }
 
@@ -294,6 +313,8 @@ textarea {
 
 .module-conversation-header__title {
   flex-direction: column;
+  text-align: right;
+  
 }
 .module-conversation-header__title-flex {
   flex-direction: row;

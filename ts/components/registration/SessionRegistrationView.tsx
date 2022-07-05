@@ -1,8 +1,8 @@
 import React from 'react';
-import { AccentText } from './AccentText';
+// import { AccentText } from './AccentText';
 
 import { RegistrationStages } from './RegistrationStages';
-import { SessionIcon } from '../icon';
+// import { SessionIcon } from '../icon';
 import { SessionToastContainer } from '../SessionToastContainer';
 import { SessionTheme } from '../../state/ducks/SessionTheme';
 import { Flex } from '../basic/Flex';
@@ -48,7 +48,7 @@ export const SessionRegistrationView = () => {
               <SessionToastContainer />
               {/* <SessionIcon iconSize={150} iconType="brand" /> */}
 
-              <AccentText />
+              {/* <AccentText /> */}
               <RegistrationStages />
             </Flex>
           </Flex>

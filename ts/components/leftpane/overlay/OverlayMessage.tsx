@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 // tslint:disable: use-simple-attributes no-submodule-imports
 
-import { useDispatch } from 'react-redux';
-import { SessionButton, SessionButtonColor, SessionButtonType } from '../../basic/SessionButton';
+import { useDispatch ,useSelector} from 'react-redux';
+// import { SessionButton, SessionButtonColor, SessionButtonType } from '../../basic/SessionButton';
 import { SessionIdEditable } from '../../basic/SessionIdEditable';
 import { SessionSpinner } from '../../basic/SessionSpinner';
-import { OverlayHeader } from './OverlayHeader';
+// import { OverlayHeader } from './OverlayHeader';
 import { setOverlayMode } from '../../../state/ducks/section';
 import { PubKey } from '../../../session/types';
 import { ConversationTypeEnum } from '../../../models/conversation';
@@ -15,6 +15,8 @@ import { getConversationController } from '../../../session/conversations';
 import { ToastUtils } from '../../../session/utils';
 import { openConversationWithMessages } from '../../../state/ducks/conversations';
 import useKey from 'react-use/lib/useKey';
+
+import { getOurNumber } from '../../../state/selectors/user';
 
 export const OverlayMessage = () => {
   const dispatch = useDispatch();
@@ -26,12 +28,17 @@ export const OverlayMessage = () => {
   useKey('Escape', closeOverlay);
   const [pubkeyOrOns, setPubkeyOrOns] = useState('');
   const [loading, setLoading] = useState(false);
+const ourNumber = useSelector(getOurNumber);
 
-  const title = window.i18n('newSession');
+
+  // const title = window.i18n('newSession');
   const buttonText = window.i18n('next');
-  const descriptionLong = window.i18n('usersCanShareTheir...');
-  const subtitle = window.i18n('enterSessionIDOrONSName');
-  const placeholder = window.i18n('enterSessionIDOfRecipient');
+  // const descriptionLong = window.i18n('usersCanShareTheir...');
+  const descriptionLong = "Share your BChat ID with your friends. You can find your BChat ID below."
+
+  // const subtitle = window.i18n('enterSessionIDOrONSName');
+  // const placeholder = window.i18n('enterSessionIDOfRecipient');
+  const placeholder = "Enter BChat ID";
 
   async function handleMessageButtonClick() {
     if ((!pubkeyOrOns && !pubkeyOrOns.length) || !pubkeyOrOns.trim().length) {
@@ -82,8 +89,8 @@ export const OverlayMessage = () => {
 
   return (
     <div className="module-left-pane-overlay">
-      <OverlayHeader title={title} subtitle={subtitle} />
-
+      {/* <OverlayHeader  subtitle={"Enter the Bchat"} /> */}
+      <p className="module-left-pane__subHeader" >Enter BChat ID</p>
       <SessionIdEditable
         editable={!loading}
         placeholder={placeholder}
@@ -94,14 +101,23 @@ export const OverlayMessage = () => {
       <SessionSpinner loading={loading} />
 
       <div className="session-description-long">{descriptionLong}</div>
-      <SessionButton
+
+      <p className="module-left-pane__subHeader">BChat ID</p>
+      <SessionIdEditable
+        // editable={!loading}
+        value={ourNumber}
+        // onChange={setPubkeyOrOns}
+        dataTestId="new-session-conversation"
+      />
+
+     <button className='nextButton'  onClick={handleMessageButtonClick}>{buttonText}</button>
+      {/* <SessionButton
         buttonColor={SessionButtonColor.Green}
         buttonType={SessionButtonType.BrandOutline}
         text={buttonText}
         disabled={false}
         onClick={handleMessageButtonClick}
-        dataTestId="next-new-conversation-button"
-      />
+      /> */}
     </div>
   );
 };

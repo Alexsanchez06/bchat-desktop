@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 
-import { SessionButton, SessionButtonColor, SessionButtonType } from '../../basic/SessionButton';
+// import { SessionButton, SessionButtonColor, SessionButtonType } from '../../basic/SessionButton';
 import { SessionIdEditable } from '../../basic/SessionIdEditable';
 import { SessionSpinner } from '../../basic/SessionSpinner';
 import { MemberListItem } from '../../MemberListItem';
@@ -68,7 +68,7 @@ export const OverlayClosedGroup = () => {
 
   return (
     <div className="module-left-pane-overlay">
-      <OverlayHeader title={title} subtitle={subtitle} />
+      <OverlayHeader title={title} subtitle={subtitle} hideExit={true}/>
       <div className="create-group-name-input">
         <SessionIdEditable
           editable={!noContactsForClosedGroup}
@@ -108,15 +108,19 @@ export const OverlayClosedGroup = () => {
       </div>
 
       <SpacerLG />
-
-      <SessionButton
+      <button 
+      className='nextButton'
+       onClick={onEnterPressed}
+      >{buttonText}</button>
+ 
+      {/* <SessionButton
         buttonColor={SessionButtonColor.Green}
         buttonType={SessionButtonType.BrandOutline}
         text={buttonText}
         disabled={noContactsForClosedGroup}
-        onClick={onEnterPressed}
+       
         dataTestId="next-button"
-      />
+      /> */}
     </div>
   );
 };

@@ -69,6 +69,7 @@ export const SessionInput = (props: Props) => {
   const updateInputValue = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
     const val = e.target.value;
+    console.log("value:",e.target)
     setInputValue(val);
     if (onValueChanged) {
       onValueChanged(val);
@@ -108,7 +109,6 @@ export const SessionInput = (props: Props) => {
           }}
         />
       )}
-      <hr />
     </div>
   );
 };

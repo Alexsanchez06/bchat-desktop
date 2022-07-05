@@ -449,4 +449,13 @@ export type LocalizerKeys =
   | 'searchFor...'
   | 'joinedTheGroup'
   | 'editGroupName'
-  | 'reportIssue';
+  | 'reportIssue'
+  | 'copyToContinueRecovery'
+  | 'saveYourRecoveryPhrase'
+  | 'chatId'
+  | 'welcome'
+  | 'yourBchatName'
+  | 'beldexAddress'
+  | 'beldexAddressConnection'
+  | 'signIn'
+  | 'restore';

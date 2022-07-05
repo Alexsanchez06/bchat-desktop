@@ -3,8 +3,11 @@
 // //////////////////////////////////////////////
 
 $session-font-default: 'Roboto';
-$session-font-accent: 'Poppins';
+$session-font-poppins-bold: 'Poppins';
 $session-font-mono: 'SpaceMono';
+$bchat-font-poppin-semibold:"poppin-semibold";
+$bchat-font-poppin-medium:"poppin-medium";
+$bchat-font-poppin-regular:"poppin-regular";
 
 @font-face {
   font-family: $session-font-mono;
@@ -37,15 +40,26 @@ $session-font-mono: 'SpaceMono';
 
 // Accented font
 @font-face {
-  font-family: $session-font-accent;
+  font-family: $session-font-poppins-bold;
   src: url('../fonts/Poppins-Bold.ttf') format('truetype');
   line-height: 1.4rem;
   font-weight: bold;
 }
+@font-face {
+  font-family: $bchat-font-poppin-semibold;
+  src: url('../fonts/Poppins-SemiBold.ttf') format('truetype');
+  line-height: 1.4rem;
+}
 
 @font-face {
-  font-family: $session-font-accent;
+  font-family: $bchat-font-poppin-regular;
   src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+  line-height: 1.4rem;
+}
+
+@font-face {
+  font-family: $bchat-font-poppin-medium;
+  src: url('../fonts/Poppins-Medium.ttf') format('truetype');
   line-height: 1.4rem;
 }
 // //////////////////////////////////////////////
@@ -120,7 +134,7 @@ $session-font-h4: 16px;
 // Mixins
 @mixin fontAccentBold {
   font-weight: bold;
-  font-family: $session-font-accent;
+  font-family: $session-font-poppins-bold;
 }
 
 @mixin text-highlight($color) {
@@ -200,3 +214,16 @@ $session-transition-duration: 0.25s;
 // //////////////////////////////////////////////
 
 $composition-container-height: 60px;
+
+ //////////////////////////////////////////////
+// ///////////////// placeholder ////////////////////
+// //////////////////////////////////////////////
+
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}  
+}
+

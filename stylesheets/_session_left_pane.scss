@@ -81,11 +81,20 @@ $session-compose-margin: 20px;
   position: relative;
   height: 100vh;
   flex-shrink: 0;
+  background: var(--color-inbox-background);
+
+
+  @include placeholder {
+    
+    color: #7E7E8D;
+    
+}
 
   &-session {
     display: flex;
     height: 100vh;
   }
+  
 
   &__header {
     display: flex;
@@ -122,7 +131,11 @@ $session-compose-margin: 20px;
   &__list {
     height: -webkit-fill-available;
   }
-
+  &__subHeader
+  {
+    text-align: center;
+    font-family: $bchat-font-poppin-semibold;
+  }
   &-overlay {
     background: var(--color-left-pane-overlay-background);
 
@@ -132,7 +145,17 @@ $session-compose-margin: 20px;
     align-items: center;
     overflow-y: auto;
     overflow-x: hidden;
-
+   
+    .nextButton
+    {
+      width: 64%;
+    height: 42px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--color-button-green);
+    margin-top: 11%;
+     
+    }
     .session-icon .exit {
       padding: 13px;
     }
@@ -189,16 +212,19 @@ $session-compose-margin: 20px;
       line-height: $session-font-h3;
       margin: 0px 20px;
       font-family: $session-font-default;
+     color:var(--color-HintMessageText)
     }
 
     .session-id-editable {
       width: 90%;
-
+      background-color: var(--color-inboxBgColor);
       textarea::-webkit-inner-spin-button {
         margin: 0px 20px;
         width: -webkit-fill-available;
         flex-shrink: 0;
+       
       }
+     
     }
 
     .session-id-editable-disabled {
@@ -221,7 +247,8 @@ $session-compose-margin: 20px;
   flex-grow: 1;
   transition: none;
 
-  background: var(--color-conversation-list);
+  background: var(--color-inbox-background);
+  
 
   .left-pane-contact-bottom-buttons .session-button {
     vertical-align: middle;
@@ -274,6 +301,7 @@ $session-compose-margin: 20px;
 }
 
 .conversation.placeholder {
+
   margin: auto;
   .container {
     display: flex;
@@ -296,11 +324,12 @@ $session-compose-margin: 20px;
   }
   .session-text
   {
-    font-family: poppin;
+    font-family: $bchat-font-poppin-semibold;
     /* color: #fff; */
     color: #4E4E5F;
     font-size: 30px;
     margin-top: 301px;
+
   }
 
   .session-text-logo {

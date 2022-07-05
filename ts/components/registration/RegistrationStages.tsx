@@ -17,6 +17,8 @@ import {
 import { fromHex } from '../../session/utils/String';
 import { setSignInByLinking, setSignWithRecoveryPhrase, Storage } from '../../util/storage';
 import { restoreWallet } from '../../mains/wallet'
+import { AccentText } from './AccentText';
+import { TermsAndConditions } from './TermsAndConditions';
 
 export const MAX_USERNAME_LENGTH = 26;
 // tslint:disable: use-simple-attributes
@@ -195,6 +197,7 @@ export const RegistrationStages = () => {
   const [registrationPhase, setRegistrationPhase] = useState(RegistrationPhase.Start);
   const [signInMode, setSignInMode] = useState(SignInMode.Default);
   const [signUpMode, setSignUpMode] = useState(SignUpMode.Default);
+  const [accent, setAccent] = useState(true);
 
   useEffect(() => {
     void generateMnemonicAndKeyPair();
@@ -220,7 +223,7 @@ export const RegistrationStages = () => {
       setHexGeneratedPubKey(newHexPubKey); // our 'frontend' sessionID
     }
   };
-
+  console.log("assentext:",accent)
   return (
     <div className="session-registration-container">
       <RegistrationContext.Provider
@@ -234,11 +237,14 @@ export const RegistrationStages = () => {
           generatedRecoveryPhrase,
           hexGeneratedPubKey,
         }}
-      >
+      > 
+        {accent &&<AccentText/>}
         {(registrationPhase === RegistrationPhase.Start ||
-          registrationPhase === RegistrationPhase.SignUp) && <SignUpTab />}
+          registrationPhase === RegistrationPhase.SignUp) && <SignUpTab assent={(value:boolean)=>
+          setAccent(value)} />}
         {(registrationPhase === RegistrationPhase.Start ||
-          registrationPhase === RegistrationPhase.SignIn) && <SignInTab />}
+          registrationPhase === RegistrationPhase.SignIn) && <SignInTab  assent={(value:boolean)=>setAccent(value)}/>}
+        {accent && <TermsAndConditions/>}
       </RegistrationContext.Provider>
     </div>
   );

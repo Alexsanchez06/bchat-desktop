@@ -42,7 +42,7 @@ import { SessionButtonColor } from '../basic/SessionButton';
 import { MessageView } from '../MainViewController';
 import { ConversationHeaderWithDetails } from './ConversationHeader';
 import { MessageDetail } from './message/message-item/MessageDetail';
-import { SessionRightPanelWithDetails } from './SessionRightPanel';
+// import { SessionRightPanelWithDetails } from './SessionRightPanel';
 import {
   makeImageThumbnailBuffer,
   makeVideoScreenshot,
@@ -215,7 +215,7 @@ export class SessionConversation extends React.Component<Props, State> {
       messagesProps,
       showMessageDetails,
       selectedMessages,
-      isRightPanelShowing,
+      // isRightPanelShowing,
       lightBoxOptions,
     } = this.props;
 
@@ -228,16 +228,17 @@ export class SessionConversation extends React.Component<Props, State> {
 
     return (
       <SessionTheme>
+
         <div className="conversation-header">
           <ConversationHeaderWithDetails />
         </div>
-        <div
+         <div
           // if you change the classname, also update it on onKeyDown
           className={classNames('conversation-content', selectionMode && 'selection-mode')}
           tabIndex={0}
           onKeyDown={this.onKeyDown}
           role="navigation"
-        >
+         >
           <div className={classNames('conversation-info-panel', showMessageDetails && 'show')}>
             <MessageDetail />
           </div>
@@ -260,17 +261,20 @@ export class SessionConversation extends React.Component<Props, State> {
           </div>
 
           <ConversationRequestinfo />
+          
           <CompositionBox
             sendMessage={this.sendMessageFn}
             stagedAttachments={this.props.stagedAttachments}
             onChoseAttachments={this.onChoseAttachments}
           />
-        </div>
-        <div
+        
+        </div> 
+        {/* <div
           className={classNames('conversation-item__options-pane', isRightPanelShowing && 'show')}
         >
           <SessionRightPanelWithDetails />
-        </div>
+        </div> */}
+        
       </SessionTheme>
     );
   }

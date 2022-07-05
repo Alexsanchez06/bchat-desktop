@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 import { SessionJoinableRooms } from './SessionJoinableDefaultRooms';
 
-import { SessionButton, SessionButtonColor, SessionButtonType } from '../../basic/SessionButton';
+// import { SessionButton, SessionButtonColor, SessionButtonType } from '../../basic/SessionButton';
 import { SessionIdEditable } from '../../basic/SessionIdEditable';
 import { SessionSpinner } from '../../basic/SessionSpinner';
 import { OverlayHeader } from './OverlayHeader';
@@ -62,8 +62,10 @@ export const OverlayOpenGroup = () => {
 
   return (
     <div className="module-left-pane-overlay">
-      <OverlayHeader title={title} subtitle={subtitle} />
+      <OverlayHeader title={title} subtitle={subtitle}  hideExit={true}/>
 
+      
+      <div>{subtitle}</div>
       <div className="create-group-name-input">
         <SessionIdEditable
           editable={true}
@@ -78,12 +80,16 @@ export const OverlayOpenGroup = () => {
 
       <SessionSpinner loading={loading} />
       <SessionJoinableRooms onRoomClicked={closeOverlay} />
-      <SessionButton
+      <button 
+      className='nextButton'
+      onClick={onEnterPressed}
+      >{buttonText}</button>
+      {/* <SessionButton
         buttonColor={SessionButtonColor.Green}
         buttonType={SessionButtonType.BrandOutline}
         text={buttonText}
-        onClick={onEnterPressed}
-      />
+        
+      /> */}
     </div>
   );
 };
