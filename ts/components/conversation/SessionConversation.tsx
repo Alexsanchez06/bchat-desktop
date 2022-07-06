@@ -240,6 +240,10 @@ export class SessionConversation extends React.Component<Props, State> {
           role="navigation"
          >
           <div className={classNames('conversation-info-panel', showMessageDetails && 'show')}>
+          {/* <div className={classNames('conversation-info-panel',  'show')}> */}
+
+            
+
             <MessageDetail />
           </div>
           {lightBoxOptions?.media && this.renderLightBox(lightBoxOptions)}
@@ -269,11 +273,11 @@ export class SessionConversation extends React.Component<Props, State> {
           />
         
         </div> 
-        {/* <div
+        <div
           className={classNames('conversation-item__options-pane', isRightPanelShowing && 'show')}
         >
           <SessionRightPanelWithDetails />
-        </div> */}
+        </div>
         
       </SessionTheme>
     );

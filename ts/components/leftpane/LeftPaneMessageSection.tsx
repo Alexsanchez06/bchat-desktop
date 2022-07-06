@@ -102,7 +102,7 @@ export class LeftPaneMessageSection extends React.Component<Props> {
           }}
         />
         {overlayMode ? this.renderClosableOverlay() : null}
-        {this.renderConversations()}
+        {overlayMode ?null:this.renderConversations()}
       </div>
     );
   }

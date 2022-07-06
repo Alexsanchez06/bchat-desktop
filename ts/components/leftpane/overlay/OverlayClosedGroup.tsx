@@ -15,6 +15,8 @@ import { SpacerLG } from '../../basic/Text';
 import { MainViewController } from '../../MainViewController';
 import useKey from 'react-use/lib/useKey';
 
+
+
 export const OverlayClosedGroup = () => {
   const dispatch = useDispatch();
   const privateContactsPubkeys = useSelector(getPrivateContactsPubkeys);
@@ -22,6 +24,8 @@ export const OverlayClosedGroup = () => {
   const [groupName, setGroupName] = useState('');
   const [loading, setLoading] = useState(false);
   const [selectedMemberIds, setSelectedMemberIds] = useState<Array<string>>([]);
+
+ 
 
   function closeOverlay() {
     dispatch(setOverlayMode(undefined));
@@ -68,7 +72,9 @@ export const OverlayClosedGroup = () => {
 
   return (
     <div className="module-left-pane-overlay">
+
       <OverlayHeader title={title} subtitle={subtitle} hideExit={true}/>
+      
       <div className="create-group-name-input">
         <SessionIdEditable
           editable={!noContactsForClosedGroup}

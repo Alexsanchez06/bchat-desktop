@@ -10,9 +10,10 @@ const accentLightTheme = '#00e97b';
 const accentDarkTheme = '#2879FB';
 const borderLightThemeColor = '#f1f1f1';
 const borderDarkThemeColor = '#ffffff0F';
+const baseColor="#128B17";
 
 // DARK COLORS
-const darkColorAccent = accentDarkTheme;
+const darkColorAccent = baseColor;
 const darkColorAccentButton = accentDarkTheme;
 const darkColorText = white;
 const darkColorTextOpposite = black;
@@ -52,7 +53,7 @@ const darkConversationList = '#1C1C26';
 const darkTextHighlight = `${white}88`;
 const darkForegroundPrimary = white;
 const darkBackgroundPrimary = '#474646';
-const darkButtonGreen = accentDarkTheme;
+const darkButtonGreen =baseColor;
 const darkModalBackground = '#101011';
 
 const grey67 = '#434343';
