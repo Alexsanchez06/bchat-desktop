@@ -54,6 +54,8 @@ import { ConversationMessageRequestButtons } from './ConversationRequestButtons'
 import { ConversationRequestinfo } from './ConversationRequestInfo';
 import { getCurrentRecoveryPhrase } from '../../util/storage';
 import loadImage from 'blueimp-load-image';
+import { SessionRightPanelWithDetails } from './SessionRightPanel';
+import { isRightPanelShowing } from '../../state/selectors/conversations';
 // tslint:disable: jsx-curly-spacing
 
 interface State {
@@ -215,7 +217,7 @@ export class SessionConversation extends React.Component<Props, State> {
       messagesProps,
       showMessageDetails,
       selectedMessages,
-      // isRightPanelShowing,
+      isRightPanelShowing,
       lightBoxOptions,
     } = this.props;
 

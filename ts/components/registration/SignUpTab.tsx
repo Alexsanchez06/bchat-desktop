@@ -10,6 +10,7 @@ import { SignInMode } from './SignInTab';
 // import { TermsAndConditions } from './TermsAndConditions';
 import {DisplayIdAndAddress ,ShowRecoveryPhase} from "./ShowIdAndAddress";
 // import { DisplaySeed } from './DisplaySeed';
+const { clipboard } = require('electron')
 
 export enum SignUpMode {
   Default,
@@ -49,25 +50,23 @@ const SignUpDefault = (props: { createSessionID: () => void }) => {
 };
 
 export const GoBackMainMenuButton = (props:any) => {
-  console.log("goback:",props.assent)
-  console.log("goback:",props.assent? true :false)
   const { setRegistrationPhase, setSignInMode, setSignUpMode } = useContext(RegistrationContext);
   return (
     <SessionIconButton
       iconSize="huge"
-      iconType="arrow"
+      iconType="chevron"
+      iconRotation={90}
       iconPadding="5px"
       onClick={() => {
         setRegistrationPhase(RegistrationPhase.Start);
         setSignInMode(SignInMode.Default);
         setSignUpMode(SignUpMode.Default);
-        props.assent? props.assent() :'';
-        props.seedScreen? props.seedScreen() :'';
+        props.assent? props.assent() :'';  
+        props.goBack? props.goBack():'';
       }}
     />
   );
 };
-
 // const SignUpSessionIDShown = (props: { continueSignUp: () => void }) => {
 //   return (
 //     <div className="session-registration__content">
@@ -95,7 +94,7 @@ export const SignUpTab = (props:any) => {
   } = useContext(RegistrationContext);
   const [displayName, setDisplayName] = useState('');
   const [displayNameError, setDisplayNameError] = useState<undefined | string>('');
-  const [displayScreenHide,setDisplayScreenHide]=useState(true);
+  const [displayNameScreen,setDisplayNameScreen]=useState(true);
   const [displayAddressScreen,setAddressScreen] = useState(true);
 
   useEffect(() => {
@@ -146,13 +145,21 @@ export const SignUpTab = (props:any) => {
     </div>
     </div>
   }
-  if(displayScreenHide)
+ const clickGoBack = () => {
+  console.log("goback")
+    setDisplayName('')
+    setDisplayNameScreen(true);
+    setAddressScreen(true);
+
+  }
+
+  if(displayNameScreen)
   {
     return (
     <div className="session-registration__content" style={{width: '325px',color:'#353543'}}>
       <Flex flexDirection="row" container={true} alignItems="center">
         {/* <GoBackMainMenuButton assent={()=>props.assent(true)} /> */}
-        <div style={{ position: 'relative', color: 'white', top: '-35px',left:"0px" }}>
+        <div style={{ position: 'relative', color: 'white', top: '0px',left:"0px" }}>
         <GoBackMainMenuButton assent={()=>props.assent(true)} />
       </div>
         <Flex className="session-registration__welcome-session" padding="20px">
@@ -173,44 +180,42 @@ export const SignUpTab = (props:any) => {
         stealAutoFocus={true}
       />
       <SessionButton
-        onClick={()=> {setDisplayScreenHide(false)
+        onClick={()=> {setDisplayNameScreen(false)
           // ,setShowRecoveryphase(true)
         }}
         buttonType={SessionButtonType.Brand}
         buttonColor={SessionButtonColor.Green}
         text={window.i18n('getStarted')}
-        disabled={!enableCompleteSignUp}
+        // disabled={!enableCompleteSignUp}
       />
     </div>
     );
   }
+  const handlePaste = () => {
+    clipboard.writeText(generatedRecoveryPhrase,'clipboard');
+  };
   if(displayAddressScreen){
     console.log("displayAddressScreen:",displayAddressScreen)
    return (
     <>
         {!window.WalletAddress && <LoaderGif /> } 
-       <DisplayIdAndAddress nextFunc={()=>{setAddressScreen(false)}} pubKey={hexGeneratedPubKey} walletAddress={window.WalletAddress} />
+        {/* <div style={{ position: 'relative', color: 'white', top: '34px',paddingLeft:"187px" }}>
+        <GoBackMainMenuButton assent={()=>{props.assent(true);clickGoBack()}} />
+        </div> */}
+       <DisplayIdAndAddress nextFunc={()=>{setAddressScreen(false)}} pubKey={hexGeneratedPubKey} walletAddress={window.WalletAddress} assentAndGoBack={()=>{props.assent(true);clickGoBack()}} />
     </>
   );
   }
-  console.log("displayAddressScreen123:",displayAddressScreen,props)
-  // console.log("generatedRecoveryPhrase:",window.WalletAddress)
-  // console.log("generatedRecoveryPhrase:",generatedRecoveryPhrase)
- 
-  // if(showRecoveryphase)
-  // {
-  //   console.log("showRecoveryphase:",showRecoveryphase,window.WalletAddress)
-  //   return (
-  //     <>
-  //         {!window.WalletAddress && <LoaderGif /> } 
-
-  //        <DisplayIdAndAddress nextFunc={()=>setShowRecoveryphase(false)} pubKey={hexGeneratedPubKey} walletAddress={window.WalletAddress} />
-  //     </>
-  //   );
-  // }
   return (
+    
   <>
-  <ShowRecoveryPhase mnemonic={generatedRecoveryPhrase} nextFunc={signUpWithDetails} enableCompleteSignUp={enableCompleteSignUp}></ShowRecoveryPhase>
+    <ShowRecoveryPhase
+     assentAndGoBack={()=>{props.assent(true);clickGoBack()}}
+     mnemonic={generatedRecoveryPhrase}  
+     nextFunc={signUpWithDetails} 
+     enableCompleteSignUp={enableCompleteSignUp}
+     copySeed = {handlePaste}
+     ></ShowRecoveryPhase>
   </>
   
 )

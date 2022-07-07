@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { SessionButton, SessionButtonColor, SessionButtonType } from '../basic/SessionButton';
+import { Icons } from './DisplaySeed';
+import { GoBackMainMenuButton } from './SignUpTab';
 
 
 export const DisplayIdAndAddress= (props:any) => (
@@ -9,6 +11,9 @@ export const DisplayIdAndAddress= (props:any) => (
         margin: '0 auto',
         textAlign:"center"
       }}  >
+        <div style={{ position: 'relative', color: 'white', top: '32px',width:'30px',height:"30px" }}>
+        <GoBackMainMenuButton assent={()=>{props.assentAndGoBack()}} />
+        </div>
       <h1 className={"session-head"} 
         style={{
         color:"white"
@@ -90,22 +95,30 @@ export const DisplayIdAndAddress= (props:any) => (
 
 );
 
-export const ShowRecoveryPhase= (props:any) => (
+export const ShowRecoveryPhase= (props:any) => {
+  const [seedCopied,setSeedCopied] = useState(false);
+  console.log("setSeedCopied:",seedCopied)
+  return(
       <div className={"session-id-And-Address-container"}
         style={{
         width: "50%",
         margin: '0 auto',
         textAlign:"center"
-      }}  >
-      <h1 
-      className={"session-head"} 
+      }}>
+      <div style={{ position: 'relative', color: 'white', top: '34px',width:'30px',height:"30px"}}>
+        <GoBackMainMenuButton assent={()=>{props.assentAndGoBack()}} />
+      </div>
+        <h1 
+        className={"session-head"} 
         style={{
         color:"white"
         }}>{window.i18n('recoveryPhrase')}</h1>
         <h5 style={{color:"white",fontFamily:"poppin-regular"}}><span style={{color:"#F23333"}}>Note :</span> {window.i18n('saveYourRecoveryPhrase')}
         <br/><span style={{fontFamily:"poppin-semibold"}}>{window.i18n('copyToContinueRecovery')}</span></h5>
-      <div className='id-And-Address-Sub-container'
-       style={{
+        <div className='id-And-Address-Sub-container'>
+
+        
+        {/* style={{
         padding:"5px 20px",
         backgroundColor:"#353543"
         ,borderRadius: "12px"
@@ -115,25 +128,62 @@ export const ShowRecoveryPhase= (props:any) => (
         justifyContent: "center",
         fontSize: "12px",
         color: "#0BB70F",
-        alignItems: "center"
-        }}>
-        <div style={{
+        alignItems: "center" */}
+        {/* }} */}
+        {/* <div style={{
           justifyContent: "center",
           display: "flex",
           alignItems: "center",
           fontSize: "12px",
           color: "#0BB70F",
           fontFamily:"poppin-medium"
+          }}> */}
+            {/* <p>{props.mnemonic}</p> */}
+            {/* <textarea 
+                rows={4} 
+                cols={60} 
+                name="text"
+                 onPaste={handlePaste} 
+                 value={props.mnemonic} 
+                 placeholder={"Enter your recovery seed to restore your account" } */}
+                 {/* onChange={(e)=>props.assignRecoveryPhase(e.target.value)}  */}
+               {/* ></textarea> */}
+
+        <div style={{
+          // backgroundColor: "#353543",
+          // width: "100%",
+          // minHeight: '60px',
+          // borderRadius: "13px",
+          // textAlign: "center",
+          // color: "#0BB70F"
+
+          padding:"5px 20px",
+        backgroundColor:"#353543"
+        ,borderRadius: "12px"
+        ,margin: "10px 0 25px",
+        display: "flex",
+        width: "100%",
+        height:"100px",
+        justifyContent: "center",
+        fontSize: "12px",
+        color: "#0BB70F",
+        alignItems: "center"
           }}>
-            <p>{props.mnemonic}</p>
-        </div>
-      </div>
-      <SessionButton
+          {/* <input type='text' placeholder='Enter your recovery seed to restore your account'  style={{width:"100%",height:"100%",outline:'ˀne',border:"none",wordWrap: "break-word"}}  /> */}
+          <textarea rows={4} cols={60} name="text" value={props.mnemonic} placeholder="Enter your recovery seed to restore your account" style={{outline:'none',border:"none",resize:"none",textAlign: "center"}}></textarea>
+
+      </div> </div>
+        {/* </div> */}
+
+        <div>
+          {<Icons icon={"copy_icon"} iconfunc={()=>{props.copySeed(props.mnemonic),setSeedCopied(true)}}/> }
+        </div >            
+       <SessionButton 
         onClick={props.nextFunc}
         buttonType={SessionButtonType.Brand}
         buttonColor={SessionButtonColor.Green}
         text={window.i18n('continue')}
-        disabled={!props.enableCompleteSignUp}
-      />
+        disabled={!seedCopied}/>
       </div>
-);
+  );
+}

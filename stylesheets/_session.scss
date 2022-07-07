@@ -253,22 +253,14 @@ textarea {
 
 .session-icon-button {
   cursor: pointer;
-  display: flex;
+  display: inline-block;
   position: relative;
-  transform: translate(0px, 34px);
-  background-color: #128B17;
-  height: 35px;
-  width: 35px;
-  border-radius: 50px;
-  transition: opacity 0.25s;
-  text-align: center;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
+  transform: translateZ(0);
+  opacity: 0.4;
  
   &:hover {
     opacity: 1;
-    background-color: #0d7510;
+    background-color: white ;
     color: #159B24;
     border-radius: 50px;
 

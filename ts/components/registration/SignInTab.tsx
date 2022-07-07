@@ -17,7 +17,8 @@ import { GoBackMainMenuButton } from './SignUpTab';
 // import { TermsAndConditions } from './TermsAndConditions';
 import { SessionInput } from '../basic/SessionInput';
 import { DisplaySeed } from './DisplaySeed';
-import { SessionIconButton } from '../icon/SessionIconButton';
+// import { SessionIconButton } from '../icon/SessionIconButton';
+const { clipboard } = require('electron')
 
 export enum SignInMode {
   Default,
@@ -145,22 +146,22 @@ export const SignInTab = (props:any) => {
     }
   };
 
+  const clickGoBack = () => {
+    setScreenName(false)
+  
+    }
+
   async function assignSeed()
   {
-    try {
-      const text = await window.navigator.clipboard.readText();
-      console.log('Pasted content: ', text);
-    } catch (err) {
-      console.error('Failed to read clipboard contents: ', err);
-    }  
-    // setRecoveryPhrase(seed);
+   const recoverySeed = clipboard.readText();
+   setRecoveryPhrase(recoverySeed);  
   }
 
   if (signInMode !== SignInMode.Default && !screenName) {
 
     return <>
       <div 
-      style={{ position: 'relative', color: 'white', top: '0px',left:"0px" }}>
+      style={{ position: 'relative', color: 'white', top: '33px',left:"8px",width:"30px",height:"30px" }}>
         <GoBackMainMenuButton assent={()=>props.assent(true)} />
       </div>
       <DisplaySeed
@@ -191,24 +192,30 @@ export const SignInTab = (props:any) => {
   // console.log("ssed:",seedInputScreen)
   
   return (
+    
     <div className="session-registration__content">
 
       {screenName && (
 
         <>
 
-          <div>
-            <SessionIconButton
+          {/* <div style={{color:'white'}}>
+            <SessionIconButton style={{top:"33px"}}
               iconSize="huge"
-              iconType="arrow"
+              iconType="chevron"
+              iconRotation={90}
               iconPadding="5px"
-              iconColor='#fff'
               onClick={() => {
                 setScreenName(false),
                   props.onShow()
               }}
             />
-
+          </div> */}
+          <div style={{ position: 'relative', color: 'white', top: '33px',width:"30px",height:"30px" }}>
+          <GoBackMainMenuButton assent={()=>{
+            props.assent(true);
+            clickGoBack()}}
+             />
           </div>
           <div style={{
             color: "white",
