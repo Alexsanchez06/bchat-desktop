@@ -3,11 +3,15 @@ import { SessionButton, SessionButtonColor, SessionButtonType } from '../basic/S
 
 export const Icons = (props:any)=>
 <div onClick={()=>props.iconfunc()} style={{background:`url(images/bchat/${props.icon}.svg) no-repeat`,
-     width: "30px",
-    height: "48px",
+     width: "40px",
+    height: "40px",
     position: 'absolute',
-    top: (props.icon=='paste')?'327px':"380px",
-    right: (props.icon=='paste')?'106px':'126px',
+    backgroundColor:"#353543",
+    backgroundSize:"16px",
+    borderRadius:"35px",
+    backgroundPosition:"center",
+    top: (props.icon=='paste')?'327px':"365px",
+    right: (props.icon=='paste')?'106px':'135px',
     cursor:'pointer'  
 }}></div>
 
