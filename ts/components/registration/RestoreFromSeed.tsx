@@ -10,7 +10,6 @@
 //   handlePressEnter: () => any;
 //   stealAutoFocus?: boolean;
 // }) => {
-//    console.log("props:final:",props)
 //   return (
 //     // tslint:disable-next-line: use-simple-attributes
 //     <SessionInput

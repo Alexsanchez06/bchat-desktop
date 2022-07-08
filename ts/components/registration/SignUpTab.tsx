@@ -195,13 +195,9 @@ export const SignUpTab = (props:any) => {
     clipboard.writeText(generatedRecoveryPhrase,'clipboard');
   };
   if(displayAddressScreen){
-    console.log("displayAddressScreen:",displayAddressScreen)
    return (
     <>
         {!window.WalletAddress && <LoaderGif /> } 
-        {/* <div style={{ position: 'relative', color: 'white', top: '34px',paddingLeft:"187px" }}>
-        <GoBackMainMenuButton assent={()=>{props.assent(true);clickGoBack()}} />
-        </div> */}
        <DisplayIdAndAddress nextFunc={()=>{setAddressScreen(false)}} pubKey={hexGeneratedPubKey} walletAddress={window.WalletAddress} assentAndGoBack={()=>{props.assent(true);clickGoBack()}} />
     </>
   );

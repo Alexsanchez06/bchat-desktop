@@ -97,7 +97,6 @@ export const DisplayIdAndAddress= (props:any) => (
 
 export const ShowRecoveryPhase= (props:any) => {
   const [seedCopied,setSeedCopied] = useState(false);
-  console.log("setSeedCopied:",seedCopied)
   return(
       <div className={"session-id-And-Address-container"}
         style={{

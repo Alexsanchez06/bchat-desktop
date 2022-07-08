@@ -223,7 +223,6 @@ export const RegistrationStages = () => {
       setHexGeneratedPubKey(newHexPubKey); // our 'frontend' sessionID
     }
   };
-  console.log("assentext:",accent)
   return (
     <div className="session-registration-container">
       <RegistrationContext.Provider

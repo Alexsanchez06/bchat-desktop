@@ -10,7 +10,7 @@ export const Icons = (props:any)=>
     backgroundSize:"16px",
     borderRadius:"35px",
     backgroundPosition:"center",
-    top: (props.icon=='paste')?'327px':"365px",
+    top: (props.icon=='paste')?'327px':"365px",  //377
     right: (props.icon=='paste')?'106px':'135px',
     cursor:'pointer'  
 }}></div>
@@ -21,7 +21,7 @@ export const ClearIcon = (props:any)=>(
           width: "10px",
          height: "10px",
          position: 'absolute',
-         top:"290px",
+         top:"290px",        //350
          right:'180px',
          cursor:'pointer',
          backgroundSize:'cover'

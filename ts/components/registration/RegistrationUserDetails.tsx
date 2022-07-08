@@ -60,7 +60,6 @@ export interface Props {
 }
 
 export const RegistrationUserDetails = (props: Props) => {
-  console.log("props:",props)
   if (props.showSeedField && (props.recoveryPhrase === undefined || !props.onSeedChanged)) {
     throw new Error('if show seed is true, we need callback + value');
   }
