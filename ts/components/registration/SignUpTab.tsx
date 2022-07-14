@@ -139,8 +139,7 @@ export const SignUpTab = (props:any) => {
     });
   };
   const LoaderGif = () => {
-    return<div style={{background: '#101010ad',position: "absolute",width: "60%",height: "100%",top: "0px",right: "0px",display: 'flex',
-    alignItems: "center"}} className="session-registration-loadingGif">
+    return<div  className="session-registration-loadingGif">
     <div  style={{background:"url(images/bchat/Load_animation.gif) no-repeat",width: "151px",height: "128px",margin: "0 auto"}}>
     </div>
     </div>
@@ -156,13 +155,13 @@ export const SignUpTab = (props:any) => {
   if(displayNameScreen)
   {
     return (
-    <div className="session-registration__content" style={{width: '325px',color:'#353543'}}>
+    <div className="session-registration__content" style={{width: '325px'}}>
       <Flex flexDirection="row" container={true} alignItems="center">
-        {/* <GoBackMainMenuButton assent={()=>props.assent(true)} /> */}
-        <div style={{ position: 'relative', color: 'white', top: '0px',left:"0px" }}>
+        <div className='session-registration-goback-icon'>
+        {/* style={{ position: 'relative', color: 'white', top: '0px',left:"0px" }} */}
         <GoBackMainMenuButton assent={()=>props.assent(true)} />
       </div>
-        <Flex className="session-registration__welcome-session" padding="20px">
+        <Flex className="session-registration__welcome-session">
           {window.i18n('welcomeToYourSession')}
         </Flex>
       </Flex>

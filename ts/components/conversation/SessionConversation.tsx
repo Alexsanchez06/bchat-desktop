@@ -55,7 +55,7 @@ import { ConversationRequestinfo } from './ConversationRequestInfo';
 import { getCurrentRecoveryPhrase } from '../../util/storage';
 import loadImage from 'blueimp-load-image';
 import { SessionRightPanelWithDetails } from './SessionRightPanel';
-import { isRightPanelShowing } from '../../state/selectors/conversations';
+// import { isRightPanelShowing } from '../../state/selectors/conversations';
 // tslint:disable: jsx-curly-spacing
 
 interface State {

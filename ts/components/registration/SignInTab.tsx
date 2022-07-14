@@ -160,8 +160,7 @@ export const SignInTab = (props:any) => {
   if (signInMode !== SignInMode.Default && !screenName) {
 
     return <>
-      <div 
-      style={{ position: 'relative', color: 'white', top: '33px',left:"8px",width:"30px",height:"30px" }}>
+      <div className='session-registration__backbutton'> 
         <GoBackMainMenuButton assent={()=>props.assent(true)} />
       </div>
       <DisplaySeed
@@ -172,13 +171,10 @@ export const SignInTab = (props:any) => {
       onNext={() => setScreenName(true)} 
       recoveryPhrase={recoveryPhrase} 
       />
-
     </>
 
   }
-  
-  // console.log("see:",seedInputScreen)
-  // console.log("seed:",signInMode ,SignInMode.Default,SignInMode.UsingRecoveryPhrase)
+
   // if(signInMode == SignInMode.UsingRecoveryPhrase){
   //  return( <div className="session-registration__content">
 
@@ -189,7 +185,6 @@ export const SignInTab = (props:any) => {
   //   </div>
   //  )
   // }
-  // console.log("ssed:",seedInputScreen)
   
   return (
     
@@ -211,20 +206,13 @@ export const SignInTab = (props:any) => {
               }}
             />
           </div> */}
-          <div style={{ position: 'relative', color: 'white', top: '33px',width:"30px",height:"30px" }}>
+          <div className='session-registration__backbutton'>
           <GoBackMainMenuButton assent={()=>{
             props.assent(true);
             clickGoBack()}}
              />
           </div>
-          <div style={{
-            color: "white",
-            fontFamily:"poppins",
-            fontWeight: "600",
-            fontSize: "24px",
-            textAlign: 'center',
-            paddingBottom: "30px"
-          }}>Restore from Seed</div>
+          <div className='session-registration-header'>Restore from Seed</div>
           {/* user Name */}
           <SessionInput
             autoFocus={true}
@@ -243,8 +231,10 @@ export const SignInTab = (props:any) => {
           />
           {/* block height */}
           <div>
-            <hr style={{'width': '75%','color': '#353543','marginTop':"37px"}}></hr>
-            <p style={{ color: "#82828D",paddingTop:"10px",fontSize:"13px" }}>If you dont know the restore blockheight, you can skip it.</p>
+            <hr className='session-registration-hr'></hr>
+            <p className='session-restore-seed-textbox-message'
+            //  style={{ color: "#82828D",paddingTop:"10px",fontSize:"13px" }}
+             >If you dont know the restore blockheight, you can skip it.</p>
 
             <SessionInput
               autoFocus={true}
@@ -261,11 +251,13 @@ export const SignInTab = (props:any) => {
 
           </div>
 
-          <div style={{
-              color: 'white',
-              marginTop: "40px",
-              textAlign: 'center'
-            }}>
+          <div className='session-restore-seed-or'
+          //  style={{
+          //     color: 'white',
+          //     marginTop: "40px",
+          //     textAlign: 'center'
+          //   }}
+            >
               OR
             </div>
 
@@ -273,7 +265,9 @@ export const SignInTab = (props:any) => {
 
           <div style={{marginBottom:"56px"}} >
             
-            <p style={{ color: "#82828D" ,fontSize:"13px"}}>If you dont know the restore Date, you can skip it.</p>
+            <p className='session-restore-seed-textbox-message'
+            // style={{ color: "#82828D" ,fontSize:"13px"}}
+            >If you dont know the restore Date, you can skip it.</p>
 
             <SessionInput
               autoFocus={true}
@@ -339,10 +333,7 @@ export const SignInTab = (props:any) => {
       />
 
       {loading && (
-        <Flex
-          container={true}
-          justifyContent="center"
-          alignItems="center"
+        <Flex container={true} justifyContent="center" alignItems="center"
           style={{
             position: 'absolute',
             top: 0,
