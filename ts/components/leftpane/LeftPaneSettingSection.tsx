@@ -15,28 +15,37 @@ import { SessionButton, SessionButtonColor, SessionButtonType } from '../basic/S
 import { SessionIcon } from '../icon';
 import { SessionSettingCategory } from '../settings/SessionSettings';
 import { resetConversationExternal } from '../../state/ducks/conversations';
+// import { SessionIconType } from '../icon';
+
 
 const getCategories = () => {
   return [
     {
       id: SessionSettingCategory.Appearance,
       title: window.i18n('appearanceSettingsTitle'),
+      // icon:SessionSettingCategory.Appearance,
+      
     },
     {
       id: SessionSettingCategory.Privacy,
       title: window.i18n('privacySettingsTitle'),
+      // icon:"privacy"
     },
     {
       id: SessionSettingCategory.Blocked,
       title: window.i18n('blockedSettingsTitle'),
+      // icon:"blockedContact"
     },
     {
       id: SessionSettingCategory.Notifications,
       title: window.i18n('notificationsSettingsTitle'),
+      // icon:"notification"
+     
     },
     {
       id: SessionSettingCategory.MessageRequests,
       title: window.i18n('openMessageRequestInbox'),
+      // icon:"request"
     },
   ];
 };
@@ -45,7 +54,7 @@ const LeftPaneSettingsCategoryRow = (props: {
   item: { id: SessionSettingCategory; title: string };
 }) => {
   const { item } = props;
-  const { id, title } = item;
+  const { id, title, } = item;
   const dispatch = useDispatch();
   const focusedSettingsSection = useSelector(getFocusedSettingsSection);
 
@@ -71,10 +80,14 @@ const LeftPaneSettingsCategoryRow = (props: {
           dispatch(showSettingsSection(id));
         }
       }}
+      style={{marginTop:'15px'}}
     >
       <div>
-        <strong>{title}</strong>
+       <i className="left-pane-setting-category-list-item-icons" style={{backgroundImage:"url(images/bchat/appearance.svg)"}}></i>
+     
+        <span  className="left-pane-setting-category-list-item-span">{title}</span>
       </div>
+
 
       <div>
         {id === focusedSettingsSection && (

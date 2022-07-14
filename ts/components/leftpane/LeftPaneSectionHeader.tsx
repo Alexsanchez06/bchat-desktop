@@ -15,6 +15,9 @@ import { Avatar, AvatarSize } from '../avatar/Avatar';
 import { getOurNumber } from '../../state/selectors/user';
 import {  editProfileModal} from '../../state/ducks/modalDialog';
 
+import { switchHtmlToDarkTheme, switchHtmlToLightTheme } from '../../state/ducks/SessionTheme';
+
+
 
 const SectionTitle = styled.h1`
   padding: 0 var(--margins-sm);
@@ -56,9 +59,59 @@ export const LeftPaneSectionHeader = (props: { buttonClicked?: any }) => {
     default:
   }
 
+  function handleClick()
+  {
+    const themeFromSettings = window.Events.getThemeSetting();
+      const updatedTheme = themeFromSettings === 'dark' ? 'light' : 'dark';
+      window.setTheme(updatedTheme);
+      if (updatedTheme === 'dark') {
+        switchHtmlToDarkTheme();
+      } else {
+        switchHtmlToLightTheme();
+      }
+  }
+
+  function verifyScreens() {
+    if (SectionType.Settings!==focusedSection) {
+      return  <Avatar
+        size={AvatarSize.M}
+      
+      onAvatarClick={()=>dispatch(editProfileModal({}))}
+        pubkey={bChatId}
+        dataTestId="leftpane-primary-avatar"
+      />
+
+    }
+    else{
+      return <div style={{marginLeft:"20px",color:"white"}}>
+         <SessionIcon  
+         iconType={"gear"}
+         iconColor={"#fff"}
+         iconSize={"large"}
+         />
+     </div>
+       
+    }
+    
+  }
+
+function moon ()
+{
+  if (SectionType.Settings ===focusedSection) {
+    return<SessionIconButton
+  iconSize="large"
+  iconType={'moon'}
+  dataTestId="theme-section"
+  iconColor={undefined}
+  onClick={handleClick}
+ 
+/>
+  }
+}
+
   return (
     <Flex flexDirection="column">
-      <div className="module-left-pane__header">
+      <div className="module-left-pane__header"> 
         {showBackButton && (
           <SessionIconButton
             onClick={() => {
@@ -70,14 +123,12 @@ export const LeftPaneSectionHeader = (props: { buttonClicked?: any }) => {
             margin="0 0 var(--margins-xs) var(--margins-xs)"
           />
         )}
-         <Avatar
-        size={AvatarSize.M}
-      
-      onAvatarClick={()=>dispatch(editProfileModal({}))}
-        pubkey={bChatId}
-        dataTestId="leftpane-primary-avatar"
-      />
+       
+        {verifyScreens()}
+       
         <SectionTitle>{label}</SectionTitle>
+
+          {moon()}
         {isMessageSection && !isMessageRequestOverlay && (
           <SessionButton onClick={props.buttonClicked} dataTestId="new-conversation-button">
             <SessionIcon iconType="plus" iconSize="small" iconColor="white" />
