@@ -187,33 +187,16 @@ export const SignInTab = (props:any) => {
   // }
   
   return (
-    
     <div className="session-registration__content">
-
       {screenName && (
-
         <>
-
-          {/* <div style={{color:'white'}}>
-            <SessionIconButton style={{top:"33px"}}
-              iconSize="huge"
-              iconType="chevron"
-              iconRotation={90}
-              iconPadding="5px"
-              onClick={() => {
-                setScreenName(false),
-                  props.onShow()
-              }}
-            />
-          </div> */}
           <div className='session-registration__backbutton'>
           <GoBackMainMenuButton assent={()=>{
             props.assent(true);
             clickGoBack()}}
-             />
+          />
           </div>
           <div className='session-registration-header'>Restore from Seed</div>
-          {/* user Name */}
           <SessionInput
             autoFocus={true}
             label={window.i18n('displayName')}
@@ -229,50 +212,28 @@ export const SignInTab = (props:any) => {
             onEnterPressed={props.handlePressEnter}
             inputDataTestId="display-name-input"
           />
-          {/* block height */}
           <div>
             <hr className='session-registration-hr'></hr>
-            <p className='session-restore-seed-textbox-message'
-            //  style={{ color: "#82828D",paddingTop:"10px",fontSize:"13px" }}
-             >If you dont know the restore blockheight, you can skip it.</p>
-
+            <p className='session-restore-seed-textbox-message'>If you dont know the restore blockheight, you can skip it.</p>
             <SessionInput
               autoFocus={true}
-              // label={window.i18n('displayName')}
-
               type="text"
               placeholder={'Restore from Blockheight'}
               value={blockheight}
-              maxLength={MAX_USERNAME_LENGTH}
+              maxLength={10}
               onValueChanged={(e) => setBlockheight(e)}
               onEnterPressed={props.handlePressEnter}
               inputDataTestId="display-name-input"
             />
 
           </div>
-
-          <div className='session-restore-seed-or'
-          //  style={{
-          //     color: 'white',
-          //     marginTop: "40px",
-          //     textAlign: 'center'
-          //   }}
-            >
-              OR
-            </div>
-
-          {/* restore from date */}
-
+          <div className='session-restore-seed-or'> OR </div>
           <div style={{marginBottom:"56px"}} >
-            
-            <p className='session-restore-seed-textbox-message'
-            // style={{ color: "#82828D" ,fontSize:"13px"}}
-            >If you dont know the restore Date, you can skip it.</p>
+            <p className='session-restore-seed-textbox-message'>If you dont know the restore Date, you can skip it.</p>
 
             <SessionInput
               autoFocus={true}
-              // label={window.i18n('displayName')}
-              type="text"
+              type="date"
               placeholder={'Restore from Date'}
               value={restoreDate}
               maxLength={MAX_USERNAME_LENGTH}
@@ -280,7 +241,6 @@ export const SignInTab = (props:any) => {
               onEnterPressed={props.handlePressEnter}
               inputDataTestId="display-name-input"
             />
-
           </div>
 
           <SignInContinueButton
@@ -288,26 +248,6 @@ export const SignInTab = (props:any) => {
             handleContinueYourSessionClick={continueYourSession}
             disabled={!activateContinueButton}
           />
-          {/* <RegistrationUserDetails
-            showDisplayNameField={showDisplayNameField}
-            showSeedField={true}
-            displayName={displayName}
-            handlePressEnter={continueYourSession}
-            onDisplayNameChanged={(name: string) => {
-              const sanitizedName = sanitizeSessionUsername(name);
-              const trimName = sanitizedName.trim();
-              setDisplayName(sanitizedName);
-              setDisplayNameError(!trimName ? window.i18n('displayNameEmpty') : undefined);
-            }}
-            onSeedChanged={(seed: string) => {
-              setRecoveryPhrase(seed);
-              setRecoveryPhraseError(!seed ? window.i18n('recoveryPhraseEmpty') : undefined);
-            }}
-            recoveryPhrase={recoveryPhrase}
-            stealAutoFocus={true}
-          /> 
- */}
-
         </>
       )}
 
@@ -329,9 +269,7 @@ export const SignInTab = (props:any) => {
           setDisplayName('');
           setIsLoading(false);
         }}
-
       />
-
       {loading && (
         <Flex container={true} justifyContent="center" alignItems="center"
           style={{
@@ -347,9 +285,6 @@ export const SignInTab = (props:any) => {
           <SessionSpinner loading={true} />
         </Flex>
       )}
-
-      {/* {showTermsAndConditions && <TermsAndConditions />} */}
     </div>
   );
- 
 };

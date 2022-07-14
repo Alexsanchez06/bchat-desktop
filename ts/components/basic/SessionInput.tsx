@@ -65,7 +65,7 @@ export const SessionInput = (props: Props) => {
   const [forceShow, setForceShow] = useState(false);
 
   const correctType = forceShow ? 'text' : type;
-
+ console.log("correctType:",correctType)
   const updateInputValue = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
     const val = e.target.value;
