@@ -127,8 +127,7 @@ export const SignInTab = (props:any) => {
   const displayNameOK = (isRecovery && !displayNameError && !!displayName) || isLinking;
 
   // Seed is mandatory no matter which mode
-  const seedOK = recoveryPhrase && !recoveryPhraseError;
-
+  const seedOK = (blockheight && !recoveryPhraseError)||(restoreDate && !recoveryPhraseError);
   const activateContinueButton = seedOK && displayNameOK && !loading;
 
   const continueYourSession = async () => {
@@ -221,7 +220,12 @@ export const SignInTab = (props:any) => {
               placeholder={'Restore from Blockheight'}
               value={blockheight}
               maxLength={10}
-              onValueChanged={(e) => setBlockheight(e)}
+              onValueChanged={(e) => {
+                let checkHeight = /^[\d ]*$/.test(e);
+              if(!checkHeight)
+                return;
+              setBlockheight(e); 
+          }}
               onEnterPressed={props.handlePressEnter}
               inputDataTestId="display-name-input"
             />
