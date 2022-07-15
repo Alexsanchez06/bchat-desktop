@@ -3,7 +3,7 @@ import { icons, SessionIconSize, SessionIconType } from '../icon';
 import styled, { css, keyframes } from 'styled-components';
 
 export type SessionIconProps = {
-  iconType: SessionIconType;
+  iconType:SessionIconType;
   iconSize: SessionIconSize | number;
   iconColor?: string;
   iconRotation?: number;

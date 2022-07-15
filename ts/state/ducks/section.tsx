@@ -41,8 +41,7 @@ type OverlayModeActionType = {
 };
 
 export function showLeftPaneSection(section: SectionType): FocusSectionActionType {
-  console.log("section",section);
-  
+
   return {
     type: FOCUS_SECTION,
     payload: section,

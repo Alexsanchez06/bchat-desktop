@@ -17,7 +17,7 @@
     "util-worker": {
       "source": "ts/webworker/workers/util.worker.ts",
       "distDir": "./ts/webworker/workers/",
-      "optimize" : true,
+      "optimize": true,
       "sourceMap": false,
       "context": "web-worker"
     }
@@ -102,12 +102,14 @@
     "react-contexify": "5.0.0",
     "react-dom": "^17.0.2",
     "react-draggable": "^4.4.4",
+    "react-dropdown": "^1.10.0",
     "react-h5-audio-player": "^3.2.0",
     "react-intersection-observer": "^8.30.3",
     "react-mentions": "^4.2.0",
     "react-portal": "^4.2.0",
     "react-qr-svg": "^2.2.1",
     "react-redux": "7.2.1",
+    "react-select": "^5.4.0",
     "react-toastify": "^6.0.9",
     "react-use": "^17.2.1",
     "react-virtualized": "9.22.3",
@@ -268,7 +270,11 @@
         "StartupWMClass": "Session"
       },
       "asarUnpack": "node_modules/spellchecker/vendor/hunspell_dictionaries",
-      "target": ["deb", "rpm", "freebsd"],
+      "target": [
+        "deb",
+        "rpm",
+        "freebsd"
+      ],
       "icon": "build/icon-linux.icns"
     },
     "asarUnpack": [

@@ -11,6 +11,7 @@ const accentDarkTheme = '#2879FB';
 const borderLightThemeColor = '#f1f1f1';
 const borderDarkThemeColor = '#ffffff0F';
 const baseColor="#128B17";
+const greyColor="#2D2D3B"
 
 // DARK COLORS
 const darkColorAccent = baseColor;
@@ -46,13 +47,13 @@ const darkFakeChatBubbleBg = '#212121';
 
 const darkInboxBackground = '#1C1C26';
 const darkLeftPaneOverlayBg = darkInboxBackground;
-const darkConversationItemSelected = '#404040';
+const darkConversationItemSelected = '#303041';
 const darkConversationItemHasUnread = '#2c2c2c';
 const darkConversationList = '#1C1C26';
 
 const darkTextHighlight = `${white}88`;
 const darkForegroundPrimary = white;
-const darkBackgroundPrimary = '#474646';
+const darkBackgroundPrimary = '#3A3A4E';
 const darkButtonGreen =baseColor;
 const darkModalBackground = '#101011';
 
@@ -68,6 +69,7 @@ const darkHintMessage="#7B7B86";
 const darkTextAreaColor="#0BB70F";
 const darkComposeMsgBg="#2B2B38";
 const darkComposeMsgIconBG="#3f3c4b"
+const darkSettingIndication=greyColor
 
 export const switchHtmlToDarkTheme = () => {
   document.documentElement.style.setProperty('--color-accent', darkColorAccent);
@@ -188,6 +190,11 @@ export const switchHtmlToDarkTheme = () => {
     '--color-composeMsgIconBG',
     darkComposeMsgIconBG
   );
+  document.documentElement.style.setProperty(
+    '--color-settingIndication',
+    darkSettingIndication
+  );
+
 
 
  
@@ -248,7 +255,8 @@ const lightInboxBgColor="white";
 const lightHintMessageText="black";
 const lightTextAreaColor="black";
 const lightComposeMsgBg="black";
- const lightComposeMsgIconBG="white";
+const lightComposeMsgIconBG="white";
+const lightSettingIndication="white"
 
 export const switchHtmlToLightTheme = () => {
   document.documentElement.style.setProperty('--color-accent', lightColorAccent);
@@ -351,6 +359,10 @@ export const switchHtmlToLightTheme = () => {
     '--color-request-banner-icon',
     lightMessageRequestBannerIcon
   );
+  document.documentElement.style.setProperty(
+    '--color-settingIndication',
+    lightSettingIndication
+  );
 };
 
 // default to light theme
@@ -422,6 +434,8 @@ export const SessionGlobalStyles = createGlobalStyle`
     --color-TextAreaColor:${lightTextAreaColor};
     --color-composeMsgBg:${lightComposeMsgBg};
     --color-composeMsgIconBG:${lightComposeMsgIconBG}
+    --color-settingIndication:${lightSettingIndication}
+
 
 
 

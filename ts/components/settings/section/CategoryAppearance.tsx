@@ -9,11 +9,13 @@ import { ToastUtils } from '../../../session/utils';
 import { updateConfirmModal } from '../../../state/ducks/modalDialog';
 import { toggleAudioAutoplay } from '../../../state/ducks/userConfig';
 import { getAudioAutoplay } from '../../../state/selectors/userConfig';
-import { isHideMenuBarSupported } from '../../../types/Settings';
+// import { isHideMenuBarSupported } from '../../../types/Settings';
 import { SessionButtonColor } from '../../basic/SessionButton';
 
 import { SessionSettingButtonItem, SessionToggleWithDescription } from '../SessionSettingListItem';
 import { ZoomingSessionSlider } from '../ZoomingSessionSlider';
+
+import { switchHtmlToDarkTheme, switchHtmlToLightTheme } from '../../../state/ducks/SessionTheme';
 
 async function toggleLinkPreviews() {
   const newValue = !window.getSettingValue(SettingsKey.settingsLinkPreview);
@@ -52,11 +54,14 @@ export const SettingsCategoryAppearance = (props: { hasPassword: boolean | null 
   const audioAutoPlay = useSelector(getAudioAutoplay);
 
   if (props.hasPassword !== null) {
-    const isHideMenuBarActive =
-      window.getSettingValue(SettingsKey.settingsMenuBar) === undefined
+    // const isHideMenuBarActive =
+    //   window.getSettingValue(SettingsKey.settingsMenuBar) === undefined
+    //     ? true
+    //     : window.getSettingValue(SettingsKey.settingsMenuBar);
+const isdark =
+           window.Events.getThemeSetting() === "dark"
         ? true
-        : window.getSettingValue(SettingsKey.settingsMenuBar);
-
+        : false;
     const isSpellCheckActive =
       window.getSettingValue(SettingsKey.settingsSpellCheck) === undefined
         ? true
@@ -65,9 +70,22 @@ export const SettingsCategoryAppearance = (props: { hasPassword: boolean | null 
     const isLinkPreviewsOn = Boolean(window.getSettingValue(SettingsKey.settingsLinkPreview));
     const isStartInTrayActive = Boolean(window.getSettingValue(SettingsKey.settingsStartInTray));
 
+    function handleClick()
+    {
+      const themeFromSettings = window.Events.getThemeSetting();
+        const updatedTheme = themeFromSettings === 'dark' ? 'light' : 'dark';
+        window.setTheme(updatedTheme);
+        if (updatedTheme === 'dark') {
+          switchHtmlToDarkTheme();
+        } else {
+          switchHtmlToLightTheme();
+        }
+    }
+
     return (
       <>
-        {isHideMenuBarSupported() && (
+       {/* this function used for hide the menubar */}
+        {/* {isHideMenuBarSupported() && (
           <SessionToggleWithDescription
             onClickToggle={() => {
               window.toggleMenuBar();
@@ -77,7 +95,21 @@ export const SettingsCategoryAppearance = (props: { hasPassword: boolean | null 
             description={window.i18n('hideMenuBarDescription')}
             active={isHideMenuBarActive}
           />
-        )}
+        )} */}
+
+        <SessionToggleWithDescription
+          onClickToggle={() => {
+            handleClick()
+            
+            forceUpdate();
+          }}
+          // title={window.i18n('spellCheckTitle')}
+          title={"Dark Mode"}
+
+          // description={window.i18n('spellCheckDescription')}
+          active={isdark}
+        />
+
         <SessionToggleWithDescription
           onClickToggle={() => {
             window.toggleSpellCheck();
@@ -115,27 +147,30 @@ export const SettingsCategoryAppearance = (props: { hasPassword: boolean | null 
           description={window.i18n('audioMessageAutoplayDescription')}
           active={audioAutoPlay}
         />
+        
 
         <ZoomingSessionSlider />
-        <SessionSettingButtonItem
+        {/* <SessionSettingButtonItem
           title={window.i18n('surveyTitle')}
           onClick={() => void shell.openExternal('https://getsession.org/survey')}
           buttonColor={SessionButtonColor.Primary}
           buttonText={window.i18n('goToOurSurvey')}
-        />
+        /> */}
         <SessionSettingButtonItem
           title={window.i18n('helpUsTranslateSession')}
           onClick={() => void shell.openExternal('https://crowdin.com/project/session-desktop/')}
           buttonColor={SessionButtonColor.Primary}
-          buttonText={window.i18n('translation')}
+          // buttonText={window.i18n('translation')}
+          buttonText={"Help us translate chat"}
+
         />
-        <SessionSettingButtonItem
+        {/* <SessionSettingButtonItem
           onClick={() => {
             ipcRenderer.send('show-debug-log');
           }}
           buttonColor={SessionButtonColor.Primary}
           buttonText={window.i18n('showDebugLog')}
-        />
+        /> */}
         {/* <SessionSettingButtonItem
           onClick={async () => {
             await fillWithTestData(100, 1000);

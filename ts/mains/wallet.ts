@@ -104,15 +104,16 @@ export const createWallet = async () => {
   //   }
   // };
 
+
   window.WalletAddress = getAddress.address;
-  // let address_txt_path = path.join(
-  //   `${process.cwd()}/wallet`,
-  //   walletName + ".address.txt"
-  // );
-  // if (!fs.existsSync(address_txt_path)) {
-  //   fs.writeFile(address_txt_path, wallet.address, "utf8", () => {
-  //   });
-  // }
+  let address_txt_path = path.join(
+    `${process.cwd()}/wallet`,
+    walletName + ".address.txt"
+  );
+  if (!fs.existsSync(address_txt_path)) {
+    fs.writeFile(address_txt_path, wallet.address, "utf8", () => {
+    });
+  }
   return wallet;
 }
 
@@ -135,7 +136,6 @@ export const walletRPC = async (method: string, params = {}) => {
     throw new HTTPError('wallet_rpc error', response);
   }
   let result = await response.json();
-  console.log("RESULT:",result)
   return result.result;
 }
 
