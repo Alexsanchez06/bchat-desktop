@@ -132,6 +132,7 @@ textarea {
     &.primary {
       background-color: var(--color-background-primary);
       color: white;
+      border-radius: 10px;
 
       .session-icon {
         fill: var(--color-foreground-primary);
@@ -920,9 +921,11 @@ label {
       
      
     }
+    
     .react-select-container
     {
-      
+      background-color: #128B17;
+
     }
    
   }

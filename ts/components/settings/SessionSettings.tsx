@@ -28,6 +28,11 @@ export enum SessionSettingCategory {
   Notifications = 'notifications',
   MessageRequests = 'messageRequests',
   Blocked = 'blocked',
+  RecoverySeed="recoverySeed",
+  RecoveryKey="recoveryKey",
+  // ViewMessageRequest="viewMessageRequest",
+  Hops="hops"
+
 }
 
 export interface SettingsViewProps {
@@ -43,14 +48,15 @@ interface State {
 }
 
 const SessionInfo = () => {
-  const openOxenWebsite = () => {
-    void shell.openExternal('https://oxen.io/');
+  const openBeldexWebsite = () => {
+    void shell.openExternal('https://www.beldex.io/');
   };
   return (
     <div className="session-settings__version-info">
       <span className="text-selectable">v{window.versionInfo.version}</span>
       <span>
-        <SessionIconButton iconSize="medium" iconType="oxen" onClick={openOxenWebsite} />
+        {/* <SessionIconButton iconSize="medium" iconType="oxen" onClick={openOxenWebsite} /> */}
+        <div role="button" onClick={openBeldexWebsite}>Bchat</div>
       </span>
       <span className="text-selectable">{window.versionInfo.commitHash}</span>
     </div>

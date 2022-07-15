@@ -58,7 +58,10 @@ export const SettingsCategoryAppearance = (props: { hasPassword: boolean | null 
     //   window.getSettingValue(SettingsKey.settingsMenuBar) === undefined
     //     ? true
     //     : window.getSettingValue(SettingsKey.settingsMenuBar);
-
+const isdark =
+           window.Events.getThemeSetting() === "dark"
+        ? true
+        : false;
     const isSpellCheckActive =
       window.getSettingValue(SettingsKey.settingsSpellCheck) === undefined
         ? true
@@ -104,7 +107,7 @@ export const SettingsCategoryAppearance = (props: { hasPassword: boolean | null 
           title={"Dark Mode"}
 
           // description={window.i18n('spellCheckDescription')}
-          active={isSpellCheckActive}
+          active={isdark}
         />
 
         <SessionToggleWithDescription
@@ -147,25 +150,27 @@ export const SettingsCategoryAppearance = (props: { hasPassword: boolean | null 
         
 
         <ZoomingSessionSlider />
-        <SessionSettingButtonItem
+        {/* <SessionSettingButtonItem
           title={window.i18n('surveyTitle')}
           onClick={() => void shell.openExternal('https://getsession.org/survey')}
           buttonColor={SessionButtonColor.Primary}
           buttonText={window.i18n('goToOurSurvey')}
-        />
+        /> */}
         <SessionSettingButtonItem
           title={window.i18n('helpUsTranslateSession')}
           onClick={() => void shell.openExternal('https://crowdin.com/project/session-desktop/')}
           buttonColor={SessionButtonColor.Primary}
-          buttonText={window.i18n('translation')}
+          // buttonText={window.i18n('translation')}
+          buttonText={"Help us translate chat"}
+
         />
-        <SessionSettingButtonItem
+        {/* <SessionSettingButtonItem
           onClick={() => {
             ipcRenderer.send('show-debug-log');
           }}
           buttonColor={SessionButtonColor.Primary}
           buttonText={window.i18n('showDebugLog')}
-        />
+        /> */}
         {/* <SessionSettingButtonItem
           onClick={async () => {
             await fillWithTestData(100, 1000);

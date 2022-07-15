@@ -53,7 +53,7 @@ const darkConversationList = '#1C1C26';
 
 const darkTextHighlight = `${white}88`;
 const darkForegroundPrimary = white;
-const darkBackgroundPrimary = '#474646';
+const darkBackgroundPrimary = '#3A3A4E';
 const darkButtonGreen =baseColor;
 const darkModalBackground = '#101011';
 

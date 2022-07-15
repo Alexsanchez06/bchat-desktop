@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 
+
 import { LeftPaneSectionHeader } from './LeftPaneSectionHeader';
 import { useDispatch, useSelector } from 'react-redux';
 import {
@@ -17,44 +18,60 @@ import { SessionSettingCategory } from '../settings/SessionSettings';
 import { resetConversationExternal } from '../../state/ducks/conversations';
 // import { SessionIconType } from '../icon';
 
+ import { ActionPanelOnionStatusLight } from '../dialog/OnionStatusPathDialog';
+ import {  onionPathModal,} from '../../state/ducks/modalDialog';
 
 const getCategories = () => {
   return [
     {
       id: SessionSettingCategory.Appearance,
       title: window.i18n('appearanceSettingsTitle'),
-      // icon:SessionSettingCategory.Appearance,
+      icon:"appearance.svg",
       
     },
     {
       id: SessionSettingCategory.Privacy,
       title: window.i18n('privacySettingsTitle'),
-      // icon:"privacy"
+      icon:"privacy.svg",
     },
     {
       id: SessionSettingCategory.Blocked,
       title: window.i18n('blockedSettingsTitle'),
-      // icon:"blockedContact"
+      icon:"blocked_contact.svg"
     },
     {
-      id: SessionSettingCategory.Notifications,
-      title: window.i18n('notificationsSettingsTitle'),
-      // icon:"notification"
+      id: SessionSettingCategory.RecoverySeed,
+      // title: window.i18n('blockedSettingsTitle'),
+      title: "Recovery Seed",
+      icon:"recovery_seed.svg"
+    },
+    {
+      id: SessionSettingCategory.RecoveryKey,
+      // title: window.i18n('notificationsSettingsTitle'),
+      title: "Recovery Key",
+      icon:"key.svg"
      
     },
     {
       id: SessionSettingCategory.MessageRequests,
-      title: window.i18n('openMessageRequestInbox'),
-      // icon:"request"
+      title:"View Message Request",
+      // title: window.i18n('openMessageRequestInbox'),
+      icon:"request.svg"
+    },
+    {
+      id: SessionSettingCategory.Hops,
+      // title: window.i18n('openMessageRequestInbox'),
+      title: "Hops",
+      icon:"Hops"
     },
   ];
 };
 
 const LeftPaneSettingsCategoryRow = (props: {
-  item: { id: SessionSettingCategory; title: string };
+  item: { id: SessionSettingCategory; title: string; icon:string };
 }) => {
   const { item } = props;
-  const { id, title, } = item;
+  const { id, title,icon} = item;
   const dispatch = useDispatch();
   const focusedSettingsSection = useSelector(getFocusedSettingsSection);
 
@@ -82,8 +99,18 @@ const LeftPaneSettingsCategoryRow = (props: {
       }}
       style={{marginTop:'15px'}}
     >
-      <div>
-       <i className="left-pane-setting-category-list-item-icons" style={{backgroundImage:"url(images/bchat/appearance.svg)"}}></i>
+      <div style={{display:"flex",}}>
+        {icon==="Hops"? <span style={{paddingRight:"10px"}}> <ActionPanelOnionStatusLight
+          dataTestId="onion-status-section"
+           handleClick={()=> dispatch(onionPathModal({}))}
+           isSelected={false}
+          
+           id={'onion-path-indicator-led-id'}
+         /></span>:
+         <i className="left-pane-setting-category-list-item-icons" style={{backgroundImage:`url(images/bchat/${icon})`}}></i>
+         }
+         
+       {/* <i className="left-pane-setting-category-list-item-icons" style={{backgroundImage:`url(images/bchat/${icon})`}}></i> */}
      
         <span  className="left-pane-setting-category-list-item-span">{title}</span>
       </div>
@@ -105,7 +132,7 @@ const LeftPaneSettingsCategories = () => {
     <div className="module-left-pane__list" key={0}>
       <div className="left-pane-setting-category-list">
         {categories.map(item => {
-          return <LeftPaneSettingsCategoryRow key={item.id} item={item} />;
+          return <LeftPaneSettingsCategoryRow key={item.id} item={item}   />;
         })}
       </div>
     </div>
