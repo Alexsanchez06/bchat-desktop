@@ -101,7 +101,9 @@ export const SettingsCategoryPrivacy = (props: {
             forceUpdate();
           }}
           title={window.i18n('readReceiptSettingTitle')}
-          description={window.i18n('readReceiptSettingDescription')}
+          // description={window.i18n('readReceiptSettingDescription')}
+          description={"See and share when messages have been read (enables read receipts in all chat)."}
+
           active={window.getSettingValue(SettingsKey.settingsReadReceipt)}
         />
         <SessionToggleWithDescription
@@ -111,7 +113,8 @@ export const SettingsCategoryPrivacy = (props: {
             forceUpdate();
           }}
           title={window.i18n('typingIndicatorsSettingTitle')}
-          description={window.i18n('typingIndicatorsSettingDescription')}
+          // description={window.i18n('typingIndicatorsSettingDescription')}
+          description={"See and share when messages are being typed (applies to all chat)."}
           active={Boolean(window.getSettingValue(SettingsKey.settingsTypingIndicator))}
         />
         <SessionToggleWithDescription
@@ -144,7 +147,9 @@ export const SettingsCategoryPrivacy = (props: {
         {!props.hasPassword && (
           <SessionSettingButtonItem
             title={window.i18n('setAccountPasswordTitle')}
-            description={window.i18n('setAccountPasswordDescription')}
+            // description={window.i18n('setAccountPasswordDescription')}
+            description={"Require password to unlock BChat’s screen. you can still receive message notifications while screen lock is enabled. BChat’s notification settings allow you to customize information that is displayed"}
+
             onClick={() => {
               displayPasswordModal('set', props.onPasswordUpdated);
             }}
@@ -167,7 +172,9 @@ export const SettingsCategoryPrivacy = (props: {
         {props.hasPassword && (
           <SessionSettingButtonItem
             title={window.i18n('removeAccountPasswordTitle')}
+            // description={window.i18n('removeAccountPasswordDescription')}
             description={window.i18n('removeAccountPasswordDescription')}
+
             onClick={() => {
               displayPasswordModal('remove', props.onPasswordUpdated);
             }}

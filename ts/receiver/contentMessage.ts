@@ -140,6 +140,9 @@ export async function decryptWithSessionProtocol(
   isClosedGroup?: boolean
 ): Promise<ArrayBuffer> {
   perfStart(`decryptWithSessionProtocol-${envelope.id}`);
+
+  console.log("ciphertextObj:",new TextDecoder().decode(ciphertextObj));
+  
   const recipientX25519PrivateKey = x25519KeyPair.privateKeyData;
   const hex = toHex(new Uint8Array(x25519KeyPair.publicKeyData));
 
@@ -202,6 +205,7 @@ export async function decryptWithSessionProtocol(
 
   //  sender wallet Address
   console.log("beldexFinalAddress",beldexFinalAddress);
+  console.log("beldexFinalAddressandplainText::",new TextDecoder().decode(plaintextWithMetadata.subarray(0, plainTextEnd)));
   
   localStorage.setItem("senderWalletAddress", beldexFinalAddress);
   const message = plaintextWithMetadata.subarray(97, plainTextEnd)

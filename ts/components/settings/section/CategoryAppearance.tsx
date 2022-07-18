@@ -135,7 +135,8 @@ const isdark =
             forceUpdate();
           }}
           title={window.i18n('startInTrayTitle')}
-          description={window.i18n('startInTrayDescription')}
+          // description={window.i18n('startInTrayDescription')}
+          description={"BChat continues running in the background when you close the window"}
           active={isStartInTrayActive}
         />
         <SessionToggleWithDescription
@@ -156,14 +157,17 @@ const isdark =
           buttonColor={SessionButtonColor.Primary}
           buttonText={window.i18n('goToOurSurvey')}
         /> */}
-        <SessionSettingButtonItem
+
+        {/* for message transtaled session site */}
+        
+        {/* <SessionSettingButtonItem
           title={window.i18n('helpUsTranslateSession')}
           onClick={() => void shell.openExternal('https://crowdin.com/project/session-desktop/')}
           buttonColor={SessionButtonColor.Primary}
           // buttonText={window.i18n('translation')}
           buttonText={"Help us translate chat"}
 
-        />
+        /> */}
         {/* <SessionSettingButtonItem
           onClick={() => {
             ipcRenderer.send('show-debug-log');
