@@ -17,6 +17,8 @@ import { GoBackMainMenuButton } from './SignUpTab';
 // import { TermsAndConditions } from './TermsAndConditions';
 import { SessionInput } from '../basic/SessionInput';
 import { DisplaySeed } from './DisplaySeed';
+import { mn_decode } from '../../session/crypto/mnemonic';
+import { ToastUtils } from '../../session/utils';
 // import { SessionIconButton } from '../icon/SessionIconButton';
 const { clipboard } = require('electron')
 
@@ -153,7 +155,18 @@ export const SignInTab = (props:any) => {
   async function assignSeed()
   {
    const recoverySeed = clipboard.readText();
-   setRecoveryPhrase(recoverySeed);  
+   setRecoveryPhrase(recoverySeed); 
+  }
+
+  const seedValidation = () => {
+    try{
+      mn_decode(recoveryPhrase, 'english');
+      setScreenName(true)    
+    }catch(e){
+    setScreenName(false)
+    ToastUtils.pushToastError('registrationError', `Error: ${e.message || 'Something went wrong'}`);
+    window?.log?.warn('exception during registration:', e);
+    }
   }
 
   if (signInMode !== SignInMode.Default && !screenName) {
@@ -166,8 +179,9 @@ export const SignInTab = (props:any) => {
       iconfunc={()=>assignSeed()}
       assignRecoveryPhase={(seed: string) => {
               setRecoveryPhrase(seed);
-              setRecoveryPhraseError(!seed ? window.i18n('recoveryPhraseEmpty') : undefined);}}  
-      onNext={() => setScreenName(true)} 
+              setRecoveryPhraseError(!seed ? window.i18n('recoveryPhraseEmpty') : undefined);
+            }}
+      onNext={() => {seedValidation()}} 
       recoveryPhrase={recoveryPhrase} 
       />
     </>

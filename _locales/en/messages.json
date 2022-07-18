@@ -328,6 +328,7 @@
   "linkDevice": "Link Device",
   "restoreUsingRecoveryPhrase": "Restore your account",
   "restore":"Restore",
+  "restoreFromSeed":"Restore from seed",
   "signIn":"Sign In",
   "or": "or",
   "ByUsingThisService...": "By using this service, you agree to our <a href=\"https://getsession.org/terms-of-service\">Terms of Service</a> and <a href=\"https://getsession.org/privacy-policy/\" target=\"_blank\">Privacy Policy</a>",

@@ -53,7 +53,6 @@ function mn_swap_endian_4byte(str: string) {
 }
 
 export function mn_decode(str: string, wordsetName: string = MN_DEFAULT_WORDSET): string {
-  console.log("mn:decode:",str,wordsetName)
   const wordset = mnWords[wordsetName];
   let out = '';
   const n = wordset.words.length;
@@ -114,7 +113,6 @@ export function mn_decode(str: string, wordsetName: string = MN_DEFAULT_WORDSET)
       );
     }
   }
-  console.log("out:",out)
   return out;
 }
 

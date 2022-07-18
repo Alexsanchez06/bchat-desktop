@@ -458,4 +458,5 @@ export type LocalizerKeys =
   | 'beldexAddress'
   | 'beldexAddressConnection'
   | 'signIn'
-  | 'restore';
+  | 'restore'
+  | 'restoreFromSeed';

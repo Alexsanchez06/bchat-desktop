@@ -9,6 +9,7 @@ import { RegistrationUserDetails } from './RegistrationUserDetails';
 import { SignInMode } from './SignInTab';
 // import { TermsAndConditions } from './TermsAndConditions';
 import {DisplayIdAndAddress ,ShowRecoveryPhase} from "./ShowIdAndAddress";
+import { ToastUtils } from '../../session/utils';
 // import { DisplaySeed } from './DisplaySeed';
 const { clipboard } = require('electron')
 
@@ -151,6 +152,14 @@ export const SignUpTab = (props:any) => {
     setAddressScreen(true);
 
   }
+  const verifyUserName = () => {
+   if (!displayName) {
+    window?.log?.warn('invalid trimmed name for registration');
+    ToastUtils.pushToastError('invalidDisplayName', window.i18n('displayNameEmpty'));
+   }else{
+    setDisplayNameScreen(false);
+   }
+  }
 
   if(displayNameScreen)
   {
@@ -169,7 +178,7 @@ export const SignUpTab = (props:any) => {
         showDisplayNameField={true}
         showSeedField={false}
         displayName={displayName}
-        handlePressEnter={signUpWithDetails}
+        handlePressEnter={()=>{verifyUserName()}}
         onDisplayNameChanged={(name: string) => {
           const sanitizedName = sanitizeSessionUsername(name);
           const trimName = sanitizedName.trim();
@@ -179,9 +188,7 @@ export const SignUpTab = (props:any) => {
         stealAutoFocus={true}
       />
       <SessionButton
-        onClick={()=> {setDisplayNameScreen(false)
-          // ,setShowRecoveryphase(true)
-        }}
+        onClick={()=> {verifyUserName()}}
         buttonType={SessionButtonType.Brand}
         buttonColor={SessionButtonColor.Green}
         text={window.i18n('getStarted')}
@@ -190,6 +197,7 @@ export const SignUpTab = (props:any) => {
     </div>
     );
   }
+  
   const handlePaste = () => {
     clipboard.writeText(generatedRecoveryPhrase,'clipboard');
   };

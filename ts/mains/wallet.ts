@@ -106,6 +106,7 @@ export const createWallet = async () => {
 
 
   window.WalletAddress = getAddress.address;
+  console.log("WINDOW.walletaddress:",window.WalletAddress)
   let address_txt_path = path.join(
     `${process.cwd()}/wallet`,
     walletName + ".address.txt"

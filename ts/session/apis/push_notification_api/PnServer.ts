@@ -6,7 +6,7 @@ const pnServerPubkeyHex = '54e8ce6a688f6decd414350408cae373ab6070d91d4512e17454d
 export const hrefPnServerProd = 'notification.rpcnode.stream';
 export const hrefPnServerDev = 'dev.apns.getsession.org';
 
-const pnServerUrl = `https://${hrefPnServerProd}`;
+const pnServerUrl = `http://${hrefPnServerProd}`;
 
 export async function notifyPnServer(wrappedEnvelope: ArrayBuffer, sentTo: string) {
   const options: ServerRequestOptionsType = {
@@ -52,6 +52,7 @@ const serverRequest = async (
 
   try {
     const onionResponse = await sendViaOnionToNonSnode(pnServerPubkeyHex, url, fetchOptions);
+    console.log("pn-server:",onionResponse)
     if (
       !onionResponse ||
       !onionResponse.result ||

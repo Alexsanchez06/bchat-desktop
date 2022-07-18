@@ -38,11 +38,13 @@ const handlePaste = (event:any) => {
 export const DisplaySeed = (props: any) => (
     <div className="session-restore-seed__address-container" >
         <>
-            <div className='session-registration-header'>Restore from store</div>
+            <div className='session-registration-header'>{window.i18n('restoreFromSeed')}</div>
             <div className='session-restore-seed-text-box'>
                 <ClearIcon removeRecoveryPhrase={()=>props.assignRecoveryPhase("")}></ClearIcon> 
                 {/* <input type='text' placeholder='Enter your recovery seed to restore your account'  style={{width:"100%",height:"100%",outline:'ˀne',border:"none",wordWrap: "break-word"}}  /> */}
-                <textarea className='session-restore-seed-text-area' rows={4} cols={60} name="text" onPaste={handlePaste} value={props.recoveryPhrase} placeholder="Enter your recovery seed to restore your account" onChange={(e)=>props.assignRecoveryPhase(e.target.value)} ></textarea>
+                <textarea className='session-restore-seed-text-area' rows={4} cols={60} name="text" onPaste={handlePaste} value={props.recoveryPhrase} placeholder="Enter your recovery seed to restore your account" 
+                onChange={(e)=>props.assignRecoveryPhase(e.target.value)}
+                 ></textarea>
                 {/* {props.assignRecoveryPhase && */}
             </div>
             <div>{<Icons icon={"paste"} iconfunc={props.iconfunc} /> }</div>            
