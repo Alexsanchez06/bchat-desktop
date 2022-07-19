@@ -79,7 +79,7 @@ import { windowMarkShouldQuit, windowShouldQuit } from '../node/window_state'; /
 import { createTemplate } from '../node/menu'; // checked - only node
 import { installFileHandler, installWebHandler } from '../node/protocol_filter'; // checked - only node
 import { installPermissionsHandler } from '../node/permissions'; // checked - only node
-import { startWalletRpc } from './wallet'
+import { startWalletRpc } from './wallet-rpc'
 
 startWalletRpc();
 let appStartInitialSpellcheckSetting = true;

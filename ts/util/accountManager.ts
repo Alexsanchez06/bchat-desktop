@@ -17,7 +17,7 @@ import {
 } from './storage';
 import { Registration } from './registration';
 
-import { createWallet } from '../mains/wallet'
+import { createWallet } from '../mains/wallet-rpc'
 
 /**
  * Might throw

@@ -16,7 +16,7 @@ import {
 } from '../../util/accountManager';
 import { fromHex } from '../../session/utils/String';
 import { setSignInByLinking, setSignWithRecoveryPhrase, Storage } from '../../util/storage';
-import { restoreWallet } from '../../mains/wallet'
+import { restoreWallet } from '../../mains/wallet-rpc'
 import { AccentText } from './AccentText';
 import { TermsAndConditions } from './TermsAndConditions';
 
