@@ -269,7 +269,7 @@
   "editGroup": "Edit group",
   "editGroupName": "Edit group name",
   "updateGroupDialogTitle": "Updating $name$...",
-  "showRecoveryPhrase": "Recovery Phrase",
+  "showRecoveryPhrase": "Recovery Seed",
   "yourSessionID": "Your Session ID",
   "setAccountPasswordTitle": "Set Account Password",
   "setAccountPasswordDescription": "Require password to unlock Session’s screen. You can still receive message notifications while Screen Lock is enabled. Session’s notification settings allow you to customize information that is displayed",

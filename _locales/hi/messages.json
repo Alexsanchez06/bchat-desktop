@@ -339,7 +339,7 @@
   "allUsersAreRandomly...": "Your Session ID is the unique address people can use to contact you on Session. With no connection to your real identity, your Session ID is totally anonymous and private by design.",
   "getStarted": "Get started",
   "createSessionID": "Create Session ID",
-  "recoveryPhrase": "Recovery Phrase",
+  "recoveryPhrase": "Recovery seed",
   "enterRecoveryPhrase": "Enter your recovery phrase",
   "displayName": "Display Name",
   "anonymous": "Anonymous",

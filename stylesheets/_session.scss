@@ -121,7 +121,7 @@ textarea {
 
     &.green {
       // background-color: var(--color-accent-button);
-      background-color: #128B17;
+      background-color:var(--color-button-green) ;
       color: var(--color-text-opposite);
       font-family: "poppin-regular";
     }
@@ -513,7 +513,18 @@ label {
     overflow-y: auto;
     width: 100%;
   }
-
+  &__box
+  {
+    background-color: var(--color-settingIndication);
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 172px auto;
+    justify-content: center;
+    border-radius: 15px;
+    padding: 0 6%;
+  }
   &__centered {
     display: flex;
     flex-direction: column;
@@ -521,11 +532,19 @@ label {
     // to allow new lines
     white-space: pre-wrap;
   }
+  &__description
+  {
+    font-family: $bchat-font-poppin-semibold;
+  }
+  
 
   &__button-group {
     display: flex;
-    justify-content: flex-end;
-
+    align-items: center;
+    justify-content: center;
+    background-color: #444455;
+    padding: 11px 25px;
+    border-radius: 7px;
     .session-button {
       margin: $session-margin-xs;
     }
@@ -539,15 +558,33 @@ label {
       }
     }
   }
+  &__button-group:hover
+  {
+    opacity: .6;
+  }
 
   &__text-highlight {
-    @include text-highlight($session-color-green);
+    // @include text-highlight($session-color-green);
+    font-family: $bchat-font-poppin-medium;
+    font-size:$session-font-md;
+    color: #00E506;
+  }
 
-    color: black;
+  &-recovery-key
+  {
+    background-color:var( --color-settingIndication);
+    padding: 27px;
+    border-radius: 10px;
+    margin-bottom: 2px;
 
-    font-family: monospace;
-    font-style: normal;
-    font-size: $session-font-xs;
+    &-title{
+      font-size: $session-font-h3;
+     font-family: $bchat-font-poppin-semibold;
+    }
+    &-description{
+      margin-top: $session-margin-xs;
+      font-family: $bchat-font-poppin-medium;
+    }
   }
 }
 
@@ -998,6 +1035,45 @@ label {
         font-family: $session-font-default;
       }
     }
+  }
+  &-recovery-seed
+  {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    text-align: center;
+    margin: 0 auto;
+    height: 81vh;
+    justify-content: center;
+     &-danger
+     {
+      width: 100px;
+      margin: 0 AUTO;
+     }
+     &-bold
+     {
+      font-family: $session-font-poppins-bold;
+      font-size:24px;
+      margin-bottom: 0px;
+     }
+     &-red
+     {
+      font-family: $bchat-font-poppin-medium;
+      color:red;
+      margin-bottom: 0px;
+     }
+    
+     &-note
+     {
+      font-family: $bchat-font-poppin-semibold;
+     }
+     &-button
+     {
+     width: 70%;
+     margin: 0 auto;
+
+     }
+
   }
 }
 

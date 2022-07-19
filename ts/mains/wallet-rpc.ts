@@ -137,6 +137,7 @@ export const walletRPC = async (method: string, params = {}) => {
     throw new HTTPError('wallet_rpc error', response);
   }
   let result = await response.json();
+  console.log("result:",result)
   return result.result;
 }
 

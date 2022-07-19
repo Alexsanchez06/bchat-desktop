@@ -12,6 +12,8 @@ import { SessionButton, SessionButtonColor } from '../basic/SessionButton';
 import { SessionWrapperModal } from '../SessionWrapperModal';
 import { getCurrentRecoveryPhrase } from '../../util/storage';
 
+import { SessionIcon } from '../icon';
+
 interface PasswordProps {
   setPasswordValid: (val: boolean) => any;
   passwordHash: string;
@@ -87,11 +89,11 @@ interface SeedProps {
 const Seed = (props: SeedProps) => {
   const { recoveryPhrase, onClickCopy } = props;
   const i18n = window.i18n;
-  const bgColor = '#FFFFFF';
-  const fgColor = '#1B1B1B';
+  // const bgColor = '#FFFFFF';
+  // const fgColor = '#1B1B1B';
   const dispatch = useDispatch();
 
-  const hexEncodedSeed = mn_decode(recoveryPhrase, 'english');
+  // const hexEncodedSeed = mn_decode(recoveryPhrase, 'english');
 
   const copyRecoveryPhrase = (recoveryPhraseToCopy: string) => {
     window.clipboard.writeText(recoveryPhraseToCopy);
@@ -100,12 +102,12 @@ const Seed = (props: SeedProps) => {
       onClickCopy();
     }
     dispatch(recoveryPhraseModal(null));
-  };
+  }; 
 
   return (
-    <>
-      <div className="session-modal__centered text-center">
-        <p className="session-modal__description">{i18n('recoveryPhraseSavePromptMain')}</p>
+    <div className="session-modal__box"> 
+      <div className="session-modal__centered text-center ">
+        <p className="session-modal__description">{i18n('recoveryPhrase')}</p>
         <SpacerXS />
 
         <i data-testid="recovery-phrase-seed-modal" className="session-modal__text-highlight">
@@ -114,26 +116,36 @@ const Seed = (props: SeedProps) => {
       </div>
       <SpacerLG />
       <div className="session-modal__button-group">
-        <SessionButton
+      
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 18.151 18.151">
+  <path id="copy_icon" d="M3.815,2A1.815,1.815,0,0,0,2,3.815V16.521H3.815V3.815H16.521V2Zm3.63,3.63A1.815,1.815,0,0,0,5.63,7.445V18.336a1.815,1.815,0,0,0,1.815,1.815H18.336a1.815,1.815,0,0,0,1.815-1.815V7.445A1.815,1.815,0,0,0,18.336,5.63Zm0,1.815H18.336V18.336H7.445Z" transform="translate(-2 -2)" fill="#fff"/>
+    </svg>
+    <div  role="button"   
+    style={{marginLeft:"5px"}}
+     onClick={() => {copyRecoveryPhrase(recoveryPhrase);}}
+     >
+      copy
+    </div>
+        {/* <SessionButton
           text={i18n('editMenuCopy')}
           buttonColor={SessionButtonColor.Green}
           onClick={() => {
             copyRecoveryPhrase(recoveryPhrase);
           }}
-        />
+        /> */}
       </div>
       <SpacerLG />
-      <div className="qr-image">
+      {/* <div className="qr-image">
         <QRCode value={hexEncodedSeed} bgColor={bgColor} fgColor={fgColor} level="L" />
-      </div>
-    </>
+      </div> */}
+    </div>
   );
 };
 
 interface ModalInnerProps {
   onClickOk?: () => any;
 }
-
+ 
 const SessionSeedModalInner = (props: ModalInnerProps) => {
   const { onClickOk } = props;
   const [loadingPassword, setLoadingPassword] = useState(true);
@@ -142,7 +154,7 @@ const SessionSeedModalInner = (props: ModalInnerProps) => {
   const [hasPassword, setHasPassword] = useState<null | boolean>(null);
   const [passwordValid, setPasswordValid] = useState(false);
   const [passwordHash, setPasswordHash] = useState('');
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   useEffect(() => {
     setTimeout(() => (document.getElementById('seed-input-password') as any)?.focus(), 100);
@@ -150,9 +162,9 @@ const SessionSeedModalInner = (props: ModalInnerProps) => {
     void getRecoveryPhrase();
   }, []);
 
-  const i18n = window.i18n;
+  // const i18n = window.i18n;
 
-  const onClose = () => dispatch(recoveryPhraseModal(null));
+  // const onClose = () => dispatch(recoveryPhraseModal(null));
 
   const checkHasPassword = async () => {
     if (!loadingPassword) {
@@ -179,19 +191,20 @@ const SessionSeedModalInner = (props: ModalInnerProps) => {
   return (
     <>
       {!loadingSeed && (
-        <SessionWrapperModal
-          title={i18n('showRecoveryPhrase')}
-          onClose={onClose}
-          showExitIcon={true}
-        >
+        // <SessionWrapperModal
+        //   title={i18n('showRecoveryPhrase')}
+        //   onClose={onClose}
+        //   showExitIcon={true}
+        // >
+        <>
           <SpacerSM />
 
           {hasPassword && !passwordValid ? (
             <Password passwordHash={passwordHash} setPasswordValid={setPasswordValid} />
           ) : (
             <Seed recoveryPhrase={recoveryPhrase} onClickCopy={onClickOk} />
-          )}
-        </SessionWrapperModal>
+          )}</>
+        // </SessionWrapperModal>
       )}
     </>
   );

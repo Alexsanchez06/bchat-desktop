@@ -313,6 +313,7 @@
       "settings_preload.js",
       "debug_log_preload.js",
       "password_preload.js",
+      "wallet.js",
       "images/**",
       "fonts/*",
       "sound/*",

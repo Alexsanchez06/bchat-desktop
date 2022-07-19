@@ -4,6 +4,7 @@ import { sendViaOnionToNonSnode } from '../../onions/onionSend';
 const pnServerPubkeyHex = '54e8ce6a688f6decd414350408cae373ab6070d91d4512e17454d2470c7cf911';
 
 export const hrefPnServerProd = 'notification.rpcnode.stream';
+
 export const hrefPnServerDev = 'dev.apns.getsession.org';
 
 const pnServerUrl = `http://${hrefPnServerProd}`;

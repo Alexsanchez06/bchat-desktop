@@ -5,9 +5,9 @@ import classNames from 'classnames';
 import { LeftPaneSectionHeader } from './LeftPaneSectionHeader';
 import { useDispatch, useSelector } from 'react-redux';
 import {
-  SectionType,
-  setOverlayMode,
-  showLeftPaneSection,
+  // SectionType,
+  // setOverlayMode,
+  // showLeftPaneSection,
   showSettingsSection,
 } from '../../state/ducks/section';
 import { getFocusedSettingsSection } from '../../state/selectors/section';
@@ -15,7 +15,7 @@ import { recoveryPhraseModal, updateDeleteAccountModal } from '../../state/ducks
 import { SessionButton, SessionButtonColor, SessionButtonType } from '../basic/SessionButton';
 import { SessionIcon } from '../icon';
 import { SessionSettingCategory } from '../settings/SessionSettings';
-import { resetConversationExternal } from '../../state/ducks/conversations';
+// import { resetConversationExternal } from '../../state/ducks/conversations';
 // import { SessionIconType } from '../icon';
 
  import { ActionPanelOnionStatusLight } from '../dialog/OnionStatusPathDialog';
@@ -75,7 +75,7 @@ const LeftPaneSettingsCategoryRow = (props: {
   const dispatch = useDispatch();
   const focusedSettingsSection = useSelector(getFocusedSettingsSection);
 
-  const isMessageRequestSetting = id === SessionSettingCategory.MessageRequests;
+  // const isMessageRequestSetting = id === SessionSettingCategory.MessageRequests;
 
   const dataTestId = `${title.toLowerCase()}-settings-menu-item`;
 
@@ -89,13 +89,13 @@ const LeftPaneSettingsCategoryRow = (props: {
       )}
       role="link"
       onClick={() => {
-        if (isMessageRequestSetting) {
-          dispatch(showLeftPaneSection(SectionType.Message));
-          dispatch(setOverlayMode('message-requests'));
-          dispatch(resetConversationExternal());
-        } else {
+        // if (isMessageRequestSetting) {
+        //   dispatch(showLeftPaneSection(SectionType.Message));
+        //   dispatch(setOverlayMode('message-requests'));
+        //   dispatch(resetConversationExternal());
+        // } else {
           dispatch(showSettingsSection(id));
-        }
+        // }
       }}
       style={{marginTop:'15px'}}
     >

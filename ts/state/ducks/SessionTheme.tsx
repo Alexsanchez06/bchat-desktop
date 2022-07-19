@@ -10,14 +10,14 @@ const accentLightTheme = '#00e97b';
 const accentDarkTheme = '#2879FB';
 const borderLightThemeColor = '#f1f1f1';
 const borderDarkThemeColor = '#ffffff0F';
-const baseColor="#128B17";
+const baseColor="#128D15";
 const greyColor="#2D2D3B"
 
 // DARK COLORS
 const darkColorAccent = baseColor;
 const darkColorAccentButton = accentDarkTheme;
 const darkColorText = white;
-const darkColorTextOpposite = black;
+const darkColorTextOpposite = white;
 
 const darkColorTextSubtle = `${white}99`;
 const darkColorTextAccent = accentDarkTheme;

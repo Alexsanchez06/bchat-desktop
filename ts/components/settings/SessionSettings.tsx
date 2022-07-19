@@ -2,7 +2,7 @@ import React from 'react';
 
 import { SettingsHeader } from './SessionSettingsHeader';
 import { shell } from 'electron';
-import { SessionIconButton } from '../icon';
+// import { SessionIconButton } from '../icon';
 import autoBind from 'auto-bind';
 import { SessionNotificationGroupSettings } from './SessionNotificationGroupSettings';
 // tslint:disable-next-line: no-submodule-imports
@@ -13,6 +13,13 @@ import { SessionButton, SessionButtonColor, SessionButtonType } from '../basic/S
 import { getPasswordHash } from '../../data/data';
 import { LocalizerKeys } from '../../types/LocalizerKeys';
 import { matchesHash } from '../../util/passwordUtils';
+
+//bchat
+
+import {SessionRecoverySeed} from "./SeesionRecoverySeed"
+import {SessionSettingRecoveryKey} from "./sessionSettingRecoveryKey"
+import {OverlayMessageRequest} from "../../components/leftpane/overlay/OverlayMessageRequest"
+
 
 export function getMediaPermissionsSettings() {
   return window.getSettingValue('media-permissions');
@@ -95,8 +102,10 @@ export const PasswordLock = ({
   );
 };
 
-export class SessionSettingsView extends React.Component<SettingsViewProps, State> {
+ export class SessionSettingsView extends React.Component<SettingsViewProps, State> {
+  
   public settingsViewRef: React.RefObject<HTMLDivElement>;
+
 
   public constructor(props: any) {
     super(props);
@@ -141,10 +150,24 @@ export class SessionSettingsView extends React.Component<SettingsViewProps, Stat
       return <BlockedUserSettings />;
     }
 
+    
+
     if (category === SessionSettingCategory.Appearance) {
       return <SettingsCategoryAppearance hasPassword={this.state.hasPassword} />;
     }
+    if (category === SessionSettingCategory.RecoverySeed) {
+      return <SessionRecoverySeed  />;
+    }
 
+    if (category === SessionSettingCategory.RecoveryKey) {
+      return <SessionSettingRecoveryKey  />;
+    }
+
+    if (category === SessionSettingCategory.MessageRequests) {
+      return <OverlayMessageRequest />;
+    }
+
+    
     if (category === SessionSettingCategory.Notifications) {
       return <SessionNotificationGroupSettings hasPassword={this.state.hasPassword} />;
     }
@@ -200,9 +223,17 @@ export class SessionSettingsView extends React.Component<SettingsViewProps, Stat
         ? 'appearanceSettingsTitle'
         : category === SessionSettingCategory.Blocked
         ? 'blockedSettingsTitle'
+        : category === SessionSettingCategory.RecoverySeed
+        ? 'recoveryPhrase'
+        : category === SessionSettingCategory.RecoveryKey
+        ? 'recoveryKey'
+        : category ===  SessionSettingCategory.MessageRequests
+        ? 'messageRequests'
         : category === SessionSettingCategory.Notifications
         ? 'notificationsSettingsTitle'
-        : 'privacySettingsTitle';
+        : 'privacySettingsTitle'
+        
+
 
     return (
       <div className="session-settings">
