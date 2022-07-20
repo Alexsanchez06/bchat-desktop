@@ -1,4 +1,4 @@
-import { ipcRenderer, shell } from 'electron';
+// import { ipcRenderer, shell } from 'electron';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 // tslint:disable-next-line: no-submodule-imports
@@ -12,7 +12,9 @@ import { getAudioAutoplay } from '../../../state/selectors/userConfig';
 // import { isHideMenuBarSupported } from '../../../types/Settings';
 import { SessionButtonColor } from '../../basic/SessionButton';
 
-import { SessionSettingButtonItem, SessionToggleWithDescription } from '../SessionSettingListItem';
+// import { SessionSettingButtonItem, SessionToggleWithDescription } from '../SessionSettingListItem';
+import {SessionToggleWithDescription } from '../SessionSettingListItem';
+
 import { ZoomingSessionSlider } from '../ZoomingSessionSlider';
 
 import { switchHtmlToDarkTheme, switchHtmlToLightTheme } from '../../../state/ducks/SessionTheme';

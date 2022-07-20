@@ -1184,8 +1184,11 @@ input {
 }
 
 .onion__description {
-  min-width: 400px;
-  width: 0;
+  width: 62%;
+    margin: 0 auto;
+    font-family: $bchat-font-poppin-semibold;
+    text-align: center;
+    font-size:$session-font-lg;
 }
 
 .onion__node-list {
@@ -1219,8 +1222,10 @@ input {
     position: relative;
   }
   .onion__node__country {
-    margin: $session-margin-sm;
+    margin: $session-margin-lg;
     min-width: 150px;
+    font-size:$session-font-lg;
+    font-family: $bchat-font-poppin-regular;
   }
 
   .onion__growing-icon {
@@ -1232,9 +1237,8 @@ input {
   .onion__vertical-line {
     background: $onionPathLineColor;
     position: absolute;
-    height: calc(100% - 2 * 15px);
-    margin: 15px calc(100% / 2 - 1px);
-
+    height: calc(100% - 2 * 28px);
+    margin: 27px calc(100% / 2 - 1px);
     width: 1px;
   }
 }

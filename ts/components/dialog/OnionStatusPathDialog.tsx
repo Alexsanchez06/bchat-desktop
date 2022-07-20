@@ -1,13 +1,15 @@
 import React from 'react';
 
-import { shell } from 'electron';
+// import { shell } from 'electron';
 
-import { useDispatch, useSelector } from 'react-redux';
+// import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
+
 
 import ip2country from 'ip2country';
 import countryLookup from 'country-code-lookup';
 import { Snode } from '../../data/data';
-import { onionPathModal } from '../../state/ducks/modalDialog';
+// import { onionPathModal } from '../../state/ducks/modalDialog';
 import {
   getFirstOnionPath,
   getFirstOnionPathLength,
@@ -19,7 +21,7 @@ import { Flex } from '../basic/Flex';
 import useHover from 'react-use/lib/useHover';
 import { SessionSpinner } from '../basic/SessionSpinner';
 import { SessionIcon, SessionIconButton } from '../icon';
-import { SessionWrapperModal } from '../SessionWrapperModal';
+// import { SessionWrapperModal } from '../SessionWrapperModal';
 
 export type StatusLightType = {
   glowStartDelay: number;
@@ -67,7 +69,11 @@ const OnionPathModalInner = () => {
 
   return (
     <>
-      <p className="onion__description">{window.i18n('onionPathIndicatorDescription')}</p>
+     <Flex container={true} flexDirection="column" alignItems="center" height="70vh" justifyContent='center'>
+      <p className="onion__description">
+        {/* {window.i18n('onionPathIndicatorDescription')} */}
+        Bchat hides your IP by bouncing your messages through several Service Nodes in Bchat's decentralized network. These are the countries your connection is currently being bounced through:
+        </p>
       <div className="onion__node-list">
         <Flex container={true}>
           <div className="onion__node-list-lights">
@@ -100,6 +106,7 @@ const OnionPathModalInner = () => {
           </Flex>
         </Flex>
       </div>
+      </Flex>
     </>
   );
 };
@@ -138,7 +145,7 @@ export const ModalStatusLight = (props: StatusLightType) => {
         glowDuration={glowDuration}
         glowStartDelay={glowStartDelay}
         iconType="circle"
-        iconSize={'tiny'}
+        iconSize={"medium"}
       />
     </div>
   );
@@ -188,10 +195,10 @@ export const ActionPanelOnionStatusLight = (props: {
 };
 
 export const OnionPathModal = () => {
-  const onConfirm = () => {
-    void shell.openExternal('https://getsession.org/faq/#onion-routing');
-  };
-  const dispatch = useDispatch();
+  // const onConfirm = () => {
+  //   void shell.openExternal('https://getsession.org/faq/#onion-routing');
+  // };
+  // const dispatch = useDispatch();
   return (
     // tslint:disable-next-line: use-simple-attributes
     // <SessionWrapperModal

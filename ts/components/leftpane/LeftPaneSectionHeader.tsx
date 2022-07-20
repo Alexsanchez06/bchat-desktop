@@ -15,7 +15,7 @@ import { Avatar, AvatarSize } from '../avatar/Avatar';
 import { getOurNumber } from '../../state/selectors/user';
 import {  editProfileModal} from '../../state/ducks/modalDialog';
 
-import { switchHtmlToDarkTheme, switchHtmlToLightTheme } from '../../state/ducks/SessionTheme';
+// import { switchHtmlToDarkTheme, switchHtmlToLightTheme } from '../../state/ducks/SessionTheme';
 
 
 
@@ -59,17 +59,17 @@ export const LeftPaneSectionHeader = (props: { buttonClicked?: any }) => {
     default:
   }
 
-  function handleClick()
-  {
-    const themeFromSettings = window.Events.getThemeSetting();
-      const updatedTheme = themeFromSettings === 'dark' ? 'light' : 'dark';
-      window.setTheme(updatedTheme);
-      if (updatedTheme === 'dark') {
-        switchHtmlToDarkTheme();
-      } else {
-        switchHtmlToLightTheme();
-      }
-  }
+  // function handleClick()
+  // {
+  //   const themeFromSettings = window.Events.getThemeSetting();
+  //     const updatedTheme = themeFromSettings === 'dark' ? 'light' : 'dark';
+  //     window.setTheme(updatedTheme);
+  //     if (updatedTheme === 'dark') {
+  //       switchHtmlToDarkTheme();
+  //     } else {
+  //       switchHtmlToLightTheme();
+  //     }
+  // }
 
   function verifyScreens() {
     if (SectionType.Settings!==focusedSection) {
@@ -95,19 +95,19 @@ export const LeftPaneSectionHeader = (props: { buttonClicked?: any }) => {
     
   }
 
-function moon ()
-{
-  if (SectionType.Settings ===focusedSection) {
-    return<SessionIconButton
-  iconSize="large"
-  iconType={'moon'}
-  dataTestId="theme-section"
-  iconColor={undefined}
-  onClick={handleClick}
+// function moon ()
+// {
+//   if (SectionType.Settings ===focusedSection) {
+//     return<SessionIconButton
+//   iconSize="large"
+//   iconType={'moon'}
+//   dataTestId="theme-section"
+//   iconColor={undefined}
+//   onClick={handleClick}
  
-/>
-  }
-}
+// />
+//   }
+// }
 
   return (
     <Flex flexDirection="column">
@@ -128,7 +128,7 @@ function moon ()
        
         <SectionTitle>{label}</SectionTitle>
 
-          {moon()}
+          {/* {moon()} */}
         {isMessageSection && !isMessageRequestOverlay && (
           <SessionButton onClick={props.buttonClicked} dataTestId="new-conversation-button">
             <SessionIcon iconType="plus" iconSize="small" iconColor="white" />

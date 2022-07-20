@@ -65,18 +65,18 @@ export const ZoomingSessionSlider = (props: { onSliderChange?: (value: number) =
   
      
     }),
-    container:(provided:any, state:any) => ({
+    container:(provided:any) => ({
       ...provided,
       backgroundColor:"transparent",
         }),
-    control:(provided:any, state:any) => ({
+    control:(provided:any) => ({
       ...provided,
       backgroundColor:"#3A3A4E",
       border:"none",
       outline:"none",
       width:"90px" 
     }),
-    indicatorSeparator:(provided:any, state:any) => ({
+    indicatorSeparator:(provided:any) => ({
       ...provided,
      display:"none"
     }),

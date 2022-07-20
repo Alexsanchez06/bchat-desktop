@@ -3,16 +3,18 @@ import React, { useEffect, useState } from 'react';
 import { ToastUtils } from '../../session/utils';
 import { matchesHash } from '../../util/passwordUtils';
 import { getPasswordHash } from '../../data/data';
-import { QRCode } from 'react-qr-svg';
-import { mn_decode } from '../../session/crypto/mnemonic';
+// import { QRCode } from 'react-qr-svg';
+// import { mn_decode } from '../../session/crypto/mnemonic';
 import { SpacerLG, SpacerSM, SpacerXS } from '../basic/Text';
 import { recoveryPhraseModal } from '../../state/ducks/modalDialog';
 import { useDispatch } from 'react-redux';
-import { SessionButton, SessionButtonColor } from '../basic/SessionButton';
-import { SessionWrapperModal } from '../SessionWrapperModal';
+// import { SessionButton, SessionButtonColor } from '../basic/SessionButton';
+import { SessionButton } from '../basic/SessionButton';
+
+// import { SessionWrapperModal } from '../SessionWrapperModal';
 import { getCurrentRecoveryPhrase } from '../../util/storage';
 
-import { SessionIcon } from '../icon';
+// import { SessionIcon } from '../icon';
 
 interface PasswordProps {
   setPasswordValid: (val: boolean) => any;

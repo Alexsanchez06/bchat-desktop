@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {  useState } from 'react';
 
 // import { SessionSeedModal } from '../dialog/SessionSeedModal';
 // import { useSelector } from 'react-redux';
@@ -7,24 +7,24 @@ import React, { useEffect, useState } from 'react';
 // } from '../../state/selectors/modal';
 
 import { SessionButton,SessionButtonColor, SessionButtonType } from '.././basic/SessionButton';
-import {walletRPC} from "../../mains/wallet-rpc"
+// import {walletRPC} from "../../mains/wallet-rpc"
 
 export const SessionSettingRecoveryKey=()=>
 {
     
     const[verify,setVerify]=useState(false)
-    const [keys,setKeys]=useState({})
+    // const [keys,setKeys]=useState({})
     // const recoveryPhraseModalState = useSelector(getRecoveryPhraseDialog);
 
-    async function getKeys()
-    {
-        console.log("spend_key");
+    // async function getKeys()
+    // {
+    //     console.log("spend_key");
         
-       let spend_key=await walletRPC("query_key", { key_type: "spend_key" });
-       let view_key=await walletRPC("query_key", { key_type: "view_key" });
-       console.log("spend_key :",spend_key ,"view_key::",view_key);
+    //    let spend_key=await walletRPC("query_key", { key_type: "spend_key" });
+    //    let view_key=await walletRPC("query_key", { key_type: "view_key" });
+    //    console.log("spend_key :",spend_key ,"view_key::",view_key);
        
-    }
+    // }
    
     let data=[
         {
