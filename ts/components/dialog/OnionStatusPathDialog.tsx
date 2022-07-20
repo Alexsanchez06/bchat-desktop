@@ -194,15 +194,15 @@ export const OnionPathModal = () => {
   const dispatch = useDispatch();
   return (
     // tslint:disable-next-line: use-simple-attributes
-    <SessionWrapperModal
-      title={window.i18n('onionPathIndicatorTitle')}
-      confirmText={window.i18n('learnMore')}
-      cancelText={window.i18n('cancel')}
-      onConfirm={onConfirm}
-      onClose={() => dispatch(onionPathModal(null))}
-      showExitIcon={true}
-    >
+    // <SessionWrapperModal
+    //   title={window.i18n('onionPathIndicatorTitle')}
+    //   confirmText={window.i18n('learnMore')}
+    //   cancelText={window.i18n('cancel')}
+    //   onConfirm={onConfirm}
+    //   onClose={() => dispatch(onionPathModal(null))}
+    //   showExitIcon={true}
+    // >
       <OnionPathModalInner />
-    </SessionWrapperModal>
+    // </SessionWrapperModal>
   );
 };

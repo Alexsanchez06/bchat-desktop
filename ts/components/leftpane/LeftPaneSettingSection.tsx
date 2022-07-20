@@ -20,6 +20,7 @@ import { SessionSettingCategory } from '../settings/SessionSettings';
 
  import { ActionPanelOnionStatusLight } from '../dialog/OnionStatusPathDialog';
  import {  onionPathModal,} from '../../state/ducks/modalDialog';
+ import {OnionPathModal} from "../../components/dialog/OnionStatusPathDialog";
 
 const getCategories = () => {
   return [
@@ -102,7 +103,8 @@ const LeftPaneSettingsCategoryRow = (props: {
       <div style={{display:"flex",}}>
         {icon==="Hops"? <span style={{paddingRight:"10px"}}> <ActionPanelOnionStatusLight
           dataTestId="onion-status-section"
-           handleClick={()=> dispatch(onionPathModal({}))}
+          //  handleClick={()=> dispatch(onionPathModal({}))}
+          handleClick={()=>{}}
            isSelected={false}
           
            id={'onion-path-indicator-led-id'}

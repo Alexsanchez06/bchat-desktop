@@ -440,6 +440,7 @@ export type LocalizerKeys =
   | 'removePasswordToastDescription'
   | 'recoveryPhrase'
   | 'recoveryKey'
+  | 'hops'
   | 'newMessages'
   | 'you'
   | 'pruneSettingTitle'

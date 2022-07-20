@@ -19,7 +19,7 @@ import { matchesHash } from '../../util/passwordUtils';
 import {SessionRecoverySeed} from "./SeesionRecoverySeed"
 import {SessionSettingRecoveryKey} from "./sessionSettingRecoveryKey"
 import {OverlayMessageRequest} from "../../components/leftpane/overlay/OverlayMessageRequest"
-
+import {SessionOnionPathScreen} from "./SessionOnionPathScreen"
 
 export function getMediaPermissionsSettings() {
   return window.getSettingValue('media-permissions');
@@ -167,7 +167,9 @@ export const PasswordLock = ({
       return <OverlayMessageRequest />;
     }
 
-    
+    if (category === SessionSettingCategory.Hops) {
+      return <SessionOnionPathScreen/>;
+    }    
     if (category === SessionSettingCategory.Notifications) {
       return <SessionNotificationGroupSettings hasPassword={this.state.hasPassword} />;
     }
@@ -225,10 +227,10 @@ export const PasswordLock = ({
         ? 'blockedSettingsTitle'
         : category === SessionSettingCategory.RecoverySeed
         ? 'recoveryPhrase'
-        : category === SessionSettingCategory.RecoveryKey
-        ? 'recoveryKey'
         : category ===  SessionSettingCategory.MessageRequests
         ? 'messageRequests'
+        : category === SessionSettingCategory.Hops
+        ? 'hops'
         : category === SessionSettingCategory.Notifications
         ? 'notificationsSettingsTitle'
         : 'privacySettingsTitle'
