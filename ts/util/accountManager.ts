@@ -17,7 +17,7 @@ import {
 } from './storage';
 import { Registration } from './registration';
 
-import { createWallet } from '../mains/wallet'
+// import { createWallet } from '../mains/wallet'
 
 /**
  * Might throw
@@ -128,11 +128,12 @@ export async function registerSingleDevice(
 export async function generateMnemonic() {
   // Note: 4 bytes are converted into 3 seed words, so length 12 seed words
   // (13 - 1 checksum) are generated using 12 * 4 / 3 = 16 bytes.
-  // const seedSize = 16;
-  // const seed = (await getSodiumRenderer()).randombytes_buf(seedSize);
-  // const hex = toHex(seed);
-  // return mn_encode(hex);
-  return createWallet();
+  const seedSize = 16;
+  const seed = (await getSodiumRenderer()).randombytes_buf(seedSize);
+  const hex = toHex(seed);
+  window.WalletAddress = "bxdis3VF318i2QDjvqwoG9GyfP4sVjTvwZyf1JGLNFyTJ8fbtBgzW6ieyKnpbMw5bU9dggbAiznaPGay96WAmx1Z2B32B86PE";
+  return mn_encode(hex);
+  // return createWallet();
 }
 
 async function createAccount(identityKeyPair: any) {

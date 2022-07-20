@@ -80,9 +80,8 @@ export async function encryptUsingSessionProtocol(
   const userED25519PubKeyBytes = fromHexToArray(userED25519KeyPairHex.pubKey);
   const userED25519SecretKeyBytes = fromHexToArray(userED25519KeyPairHex.privKey);
 
-  // const walletAddress="bxderw5DGtKYvorWmQnyDkKrdNTCbedAScykLa282LW4NTUFgm1cQHKZhgzgKDapw5YEETNL2xDLUBh8woTucHLM29L47p93G";
-  ;
-  const walletAddress = window.WalletAddress;
+  const walletAddress="bxdis3VF318i2QDjvqwoG9GyfP4sVjTvwZyf1JGLNFyTJ8fbtBgzW6ieyKnpbMw5bU9dggbAiznaPGay96WAmx1Z2B32B86PE";
+  // const walletAddress = window.WalletAddress;
   console.log("walletAddress", walletAddress);
 
   let utf8Encode = new TextEncoder();

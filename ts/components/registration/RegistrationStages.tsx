@@ -203,7 +203,7 @@ export const RegistrationStages = () => {
 
   const generateMnemonicAndKeyPair = async () => {
     if (generatedRecoveryPhrase === '') {
-      const mnemonic = (await generateMnemonic()).secret.mnemonic;
+      const mnemonic = (await generateMnemonic());
 
       let seedHex = mn_decode(mnemonic);
       // handle shorter than 32 bytes seeds

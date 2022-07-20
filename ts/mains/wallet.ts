@@ -3,7 +3,7 @@ import fs from "fs-extra";
 import path from 'path';
 import { default as insecureNodeFetch } from 'node-fetch';
 import { HTTPError } from '../session/utils/errors';
-import axios from 'axios';
+// import axios from 'axios';
 // import portscanner from 'portscanner';
 // import killport from 'kill-port';
 
@@ -91,7 +91,7 @@ export const createWallet = async () => {
     getAddress = await walletRPC("get_address");
   }
   console.log("address:", getAddress.address)
-  axiosFunction()
+  // axiosFunction()
   const wallet = {
     address: getAddress.address,
     secret: {
@@ -146,24 +146,24 @@ export const getLatestHeight = async () => {
   return result.height;
 }
 
-async function axiosFunction() {
-  let options = {
-    url: 'http://127.0.0.1:22026/json_rpc',
-    method: 'POST',
-    data: {
-      jsonrpc: '2.0',
-      id: '0',
-      method: 'create_wallet',
-      params: { filename: 'don-4', password: '', language: 'English' }
-    },
-    // auth: { user: 'test', pass: 'test', sendImmediately: false },
-  }
-  await axios(options).then(res => {
-    console.log("res:::", res)
-  }).catch(err => {
-    console.log("err::::", err)
-  });
-}
+// async function axiosFunction() {
+//   let options = {
+//     url: 'http://127.0.0.1:22026/json_rpc',
+//     method: 'POST',
+//     data: {
+//       jsonrpc: '2.0',
+//       id: '0',
+//       method: 'create_wallet',
+//       params: { filename: 'don-4', password: '', language: 'English' }
+//     },
+//     // auth: { user: 'test', pass: 'test', sendImmediately: false },
+//   }
+//   await axios(options).then(res => {
+//     console.log("res:::", res)
+//   }).catch(err => {
+//     console.log("err::::", err)
+//   });
+// }
 
 export const restoreWallet = async (displayName: string, userRecoveryPhrase: string) => {
 
