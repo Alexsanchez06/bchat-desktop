@@ -11,7 +11,7 @@ export const LeftPaneSectionContainer = styled.div`
 
   .session-icon-button {
       padding: 9px 9px;
-	    margin: 11px 25px;
+	    margin: 5px 25px;
 	    border-radius: 25px;
   }
 
