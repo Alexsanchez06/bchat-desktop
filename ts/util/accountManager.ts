@@ -17,7 +17,7 @@ import {
 } from './storage';
 import { Registration } from './registration';
 
-// import { createWallet } from '../mains/wallet'
+import { createWallet } from '../mains/wallet'
 
 /**
  * Might throw
@@ -131,9 +131,11 @@ export async function generateMnemonic() {
   const seedSize = 16;
   const seed = (await getSodiumRenderer()).randombytes_buf(seedSize);
   const hex = toHex(seed);
+  const createWalletSeed = await createWallet();
+  // console.log("create:",await (await createWallet()).secret.mnemonic)
   window.WalletAddress = "bxdis3VF318i2QDjvqwoG9GyfP4sVjTvwZyf1JGLNFyTJ8fbtBgzW6ieyKnpbMw5bU9dggbAiznaPGay96WAmx1Z2B32B86PE";
-  return mn_encode(hex);
-  // return createWallet();
+  // return mn_encode(hex);
+  return createWalletSeed.secret.mnemonic ;
 }
 
 async function createAccount(identityKeyPair: any) {
