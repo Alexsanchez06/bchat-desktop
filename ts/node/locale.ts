@@ -12,6 +12,7 @@ function normalizeLocaleName(locale: string) {
 }
 
 function getLocaleMessages(locale: string): LocaleMessagesType {
+  console.log(locale)
   // const onDiskLocale = locale.replace('-', '_');
 
   const targetFile = path.join(getAppRootPath(), '_locales', 'en', 'messages.json');

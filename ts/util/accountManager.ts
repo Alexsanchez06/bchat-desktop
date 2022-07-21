@@ -5,7 +5,7 @@ import { getOurPubKeyStrFromCache } from '../session/utils/User';
 import { trigger } from '../shims/events';
 
 import { actions as userActions } from '../state/ducks/user';
-import { mn_decode, mn_encode } from '../session/crypto/mnemonic';
+import { mn_decode } from '../session/crypto/mnemonic';
 import { ConversationTypeEnum } from '../models/conversation';
 import { SettingsKey } from '../data/settings-key';
 import {
@@ -17,7 +17,7 @@ import {
 } from './storage';
 import { Registration } from './registration';
 
-import { createWallet } from '../mains/wallet-rpc'
+// import { createWallet } from '../mains/wallet-rpc'
 
 /**
  * Might throw
@@ -125,16 +125,17 @@ export async function registerSingleDevice(
   await registrationDone(pubKeyString, profileName);
 }
 
-export async function generateMnemonic() {
+// export async function generateMnemonic() {
   // Note: 4 bytes are converted into 3 seed words, so length 12 seed words
   // (13 - 1 checksum) are generated using 12 * 4 / 3 = 16 bytes.
-  const seedSize = 16;
-  const seed = (await getSodiumRenderer()).randombytes_buf(seedSize);
-  const hex = toHex(seed);
+  // const seedSize = 16;
+  // const seed = (await getSodiumRenderer()).randombytes_buf(seedSize);
+  // const hex = toHex(seed);
   // localStorage.setItem("userAddress","bxdis3VF318i2QDjvqwoG9GyfP4sVjTvwZyf1JGLNFyTJ8fbtBgzW6ieyKnpbMw5bU9dggbAiznaPGay96WAmx1Z2B32B86PE");
   // return mn_encode(hex);
-  return createWallet();
-}
+//   let wallet:any = await createWallet();
+//   return wallet.secret.mnemonic;
+// }
 
 async function createAccount(identityKeyPair: any) {
   const sodium = await getSodiumRenderer();

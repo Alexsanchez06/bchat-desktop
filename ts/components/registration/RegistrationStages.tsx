@@ -9,14 +9,14 @@ import { PromiseUtils, StringUtils, ToastUtils } from '../../session/utils';
 import { TaskTimedOutError } from '../../session/utils/Promise';
 import { trigger } from '../../shims/events';
 import {
-  generateMnemonic,
+  // generateMnemonic,
   registerSingleDevice,
   sessionGenerateKeyPair,
   signInByLinkingDevice,
 } from '../../util/accountManager';
 import { fromHex } from '../../session/utils/String';
 import { setSignInByLinking, setSignWithRecoveryPhrase, Storage } from '../../util/storage';
-import { restoreWallet } from '../../mains/wallet-rpc'
+import { createWallet, restoreWallet } from '../../mains/wallet-rpc'
 import { AccentText } from './AccentText';
 import { TermsAndConditions } from './TermsAndConditions';
 
@@ -205,7 +205,8 @@ export const RegistrationStages = () => {
 
   const generateMnemonicAndKeyPair = async () => {
     if (generatedRecoveryPhrase === '') {
-      const mnemonic = (await generateMnemonic()).secret.mnemonic;
+      let wallet :any = await createWallet();
+       const mnemonic = wallet.secret.mnemonic;
 
       let seedHex = mn_decode(mnemonic);
       // handle shorter than 32 bytes seeds

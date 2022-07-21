@@ -8,6 +8,7 @@ import { HTTPError } from '../session/utils/errors';
 // import killport from 'kill-port';
 
 export const startWalletRpc = () => {
+  try{
   console.log("uuntu:", process.platform)
   const rpcExecutable =
     process.platform === "linux"
@@ -68,57 +69,66 @@ export const startWalletRpc = () => {
       window?.log?.warn("Failed to start wallet RPC");
     }
   });
+}catch(e){
+  window?.log?.warn('exception during wallet-rpc:', e);
+  }
 }
 
-export const createWallet = async () => {
-  const walletName = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 7);
-  console.log("walletName:", walletName)
-  const createWallet = await walletRPC("create_wallet", {
-    name: walletName,
-    language: 'English',
-    password: ''
-  });
-  console.log("CREATE_WALLET:",createWallet)
-  let key_path = path.join(
-    `${process.cwd()}/wallet`,
-    walletName + ".keys"
-  );
-  let getAddress;
-  if (!fs.existsSync(key_path)) {
-    getAddress = (await restoreWallet(walletName, createWallet.key));
-  } else {
-    getAddress = await walletRPC("get_address");
-  }
-  console.log("address:", getAddress.address)
-  // axiosFunction()
-  const wallet = {
-    address: getAddress.address,
-    secret: {
-      mnemonic:  createWallet.key
-    }
-  };
-  // const wallet = {
-  //   address: "bxdis3VF318i2QDjvqwoG9GyfP4sVjTvwZyf1JGLNFyTJ8fbtBgzW6ieyKnpbMw5bU9dggbAiznaPGay96WAmx1Z2B32B86PE",
-  //   secret: {
-  //     mnemonic: "bomb vessel zinger upgrade bite rudely judge below goldfish tanks keyboard idled eldest mobile scuba emit tolerant dexterity soprano nitrogen tail tutor arena bagpipe scuba"
-  //   }
-  // };
-
-
-  localStorage.setItem("userAddress",getAddress.address);
-  console.log("WINDOW.walletaddress:",localStorage.getItem("userAddress"))
-  let address_txt_path = path.join(
-    `${process.cwd()}/wallet`,
-    walletName + ".address.txt"
-  );
-  if (!fs.existsSync(address_txt_path)) {
-    fs.writeFile(address_txt_path, wallet.address, "utf8", () => {
+  export async function  createWallet() :Promise<any> {
+  try{
+    const walletName = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 7);
+    console.log("walletName:", walletName)
+    const createWallet = await walletRPC("create_wallet", {
+      name: walletName,
+      language: 'English',
+      password: ''
     });
+    console.log("CREATE_WALLET:",createWallet)
+    let key_path = path.join(
+      `${process.cwd()}/wallet`,
+      walletName + ".keys"
+    );
+    let getAddress;
+    if (!fs.existsSync(key_path)) {
+      getAddress = (await restoreWallet(walletName, createWallet.key));
+    } else {
+      getAddress = await walletRPC("get_address");
+    }
+    console.log("address:", getAddress.address)
+    // axiosFunction()
+    const wallet = {
+      address: getAddress.address,
+      secret: {
+        mnemonic:  createWallet.key
+      }
+    };
+    // const wallet = {
+    //   address: "bxdis3VF318i2QDjvqwoG9GyfP4sVjTvwZyf1JGLNFyTJ8fbtBgzW6ieyKnpbMw5bU9dggbAiznaPGay96WAmx1Z2B32B86PE",
+    //   secret: {
+    //     mnemonic: "bomb vessel zinger upgrade bite rudely judge below goldfish tanks keyboard idled eldest mobile scuba emit tolerant dexterity soprano nitrogen tail tutor arena bagpipe scuba"
+    //   }
+    // };
+  
+  
+    localStorage.setItem("userAddress",getAddress.address);
+    console.log("WINDOW.walletaddress:",localStorage.getItem("userAddress"))
+    let address_txt_path = path.join(
+      `${process.cwd()}/wallet`,
+      walletName + ".address.txt"
+    );
+    if (!fs.existsSync(address_txt_path)) {
+      fs.writeFile(address_txt_path, wallet.address, "utf8", () => {
+      });
+    }
+    return wallet;
+  
+ }catch(e){
+  window?.log?.warn('exception during wallet-rpc:', e);
   }
-  return wallet;
 }
 
 export const walletRPC = async (method: string, params = {}) => {
+  try{
   const url = "http://localhost:22026/json_rpc";
   const fetchOptions = {
     method: "POST"
@@ -139,9 +149,13 @@ export const walletRPC = async (method: string, params = {}) => {
   let result = await response.json();
   console.log("result:",result)
   return result.result;
+}catch(e){
+  window?.log?.warn('exception during wallet-rpc:', e);
+  }
 }
 
 export const getLatestHeight = async () => {
+  try{
   const response = await insecureNodeFetch("http://explorer.beldex.io:19091/get_height", {
     method: "POST"
     , "body": JSON.stringify({})
@@ -151,6 +165,9 @@ export const getLatestHeight = async () => {
   }
   let result = await response.json();
   return result.height;
+}catch(e){
+  window?.log?.warn('exception during wallet-rpc:', e);
+  }
 }
 
 // async function axiosFunction() {
@@ -173,6 +190,7 @@ export const getLatestHeight = async () => {
 // }
 
 export const restoreWallet = async (displayName: string, userRecoveryPhrase: string) => {
+  try{
 console.log("restore:",displayName,userRecoveryPhrase)
   console.log("height:", await getLatestHeight())
   console.log("display anme", displayName, userRecoveryPhrase)
@@ -188,5 +206,8 @@ console.log("restore:",displayName,userRecoveryPhrase)
   //   address:"bxdis3VF318i2QDjvqwoG9GyfP4sVjTvwZyf1JGLNFyTJ8fbtBgzW6ieyKnpbMw5bU9dggbAiznaPGay96WAmx1Z2B32B86PE"
   // }
   return restoreWallet;
+}catch(e){
+  window?.log?.warn('exception during wallet-rpc:', e);
+  }
 
 }
