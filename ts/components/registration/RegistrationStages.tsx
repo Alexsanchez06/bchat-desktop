@@ -97,7 +97,7 @@ export async function signInWithRecovery(signInDetails: {
 
   try {
     const wallet = await restoreWallet(displayName, userRecoveryPhrase);
-    window.WalletAddress = wallet.address;
+    localStorage.setItem("userAddress",wallet.address);
     await resetRegistration();
 
     await registerSingleDevice(userRecoveryPhrase, 'english', trimName);

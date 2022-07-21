@@ -204,8 +204,8 @@ export const SignUpTab = (props:any) => {
   if(displayAddressScreen){
    return (
     <>
-        {!window.WalletAddress && <LoaderGif /> } 
-       <DisplayIdAndAddress nextFunc={()=>{setAddressScreen(false)}} pubKey={hexGeneratedPubKey} walletAddress={window.WalletAddress} assentAndGoBack={()=>{props.assent(true);clickGoBack()}} />
+        {!localStorage.getItem("userAddress") && <LoaderGif /> } 
+       <DisplayIdAndAddress nextFunc={()=>{setAddressScreen(false)}} pubKey={hexGeneratedPubKey} walletAddress={localStorage.getItem("userAddress")} assentAndGoBack={()=>{props.assent(true);clickGoBack()}} />
     </>
   );
   }
