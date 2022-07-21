@@ -80,20 +80,21 @@ export async function encryptUsingSessionProtocol(
   const userED25519PubKeyBytes = fromHexToArray(userED25519KeyPairHex.pubKey);
   const userED25519SecretKeyBytes = fromHexToArray(userED25519KeyPairHex.privKey);
 
-  // const walletAddress="bxderw5DGtKYvorWmQnyDkKrdNTCbedAScykLa282LW4NTUFgm1cQHKZhgzgKDapw5YEETNL2xDLUBh8woTucHLM29L47p93G";
-  ;
-  const walletAddress = window.WalletAddress;
-  console.log("walletAddress", walletAddress);
+  const walletAddress="bxderw5DGtKYvorWmQnyDkKrdNTCbedAScykLa282LW4NTUFgm1cQHKZhgzgKDapw5YEETNL2xDLUBh8woTucHLM29L47p93G";
+  
+  // const walletAddress = window.WalletAddress;
+  console.log("walletAddress encrption ", walletAddress);
 
-  let utf8Encode = new TextEncoder();
+  // let utf8Encode = new TextEncoder();
 
-  const beldexWalletAddress = utf8Encode.encode(walletAddress);
-  const walletAddressConCatPlaintext = concatUInt8Array(beldexWalletAddress, plaintext);
+  // const beldexWalletAddress = utf8Encode.encode(walletAddress);
+  // const walletAddressConCatPlaintext = concatUInt8Array(beldexWalletAddress, plaintext);
+  
 
 
   // merge all arrays into one
   const verificationData = concatUInt8Array(
-    walletAddressConCatPlaintext,
+    plaintext,
     userED25519PubKeyBytes,
     recipientX25519PublicKey
   );
@@ -103,11 +104,13 @@ export async function encryptUsingSessionProtocol(
     throw new Error("Couldn't sign message");
   }
 
-  const plaintextWithMetadata = concatUInt8Array(walletAddressConCatPlaintext, userED25519PubKeyBytes, signature);
+  const plaintextWithMetadata = concatUInt8Array(plaintext, userED25519PubKeyBytes, signature);
 
   const ciphertext = sodium.crypto_box_seal(plaintextWithMetadata, recipientX25519PublicKey);
   if (!ciphertext) {
     throw new Error("Couldn't encrypt message.");
   }
+  console.log("ciphertext Message Encrption",ciphertext);
+  
   return ciphertext;
 }

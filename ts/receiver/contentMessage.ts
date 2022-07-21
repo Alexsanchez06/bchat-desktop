@@ -141,7 +141,7 @@ export async function decryptWithSessionProtocol(
 ): Promise<ArrayBuffer> {
   perfStart(`decryptWithSessionProtocol-${envelope.id}`);
 
-  console.log("ciphertextObj:",new TextDecoder().decode(ciphertextObj));
+  // console.log("ciphertextObj:",new TextDecoder().decode(ciphertextObj));
   
   const recipientX25519PrivateKey = x25519KeyPair.privateKeyData;
   const hex = toHex(new Uint8Array(x25519KeyPair.publicKeyData));
@@ -201,15 +201,17 @@ export async function decryptWithSessionProtocol(
   }
   perfEnd(`decryptWithSessionProtocol-${envelope.id}`, 'decryptWithSessionProtocol');
 
-  const beldexFinalAddress = new TextDecoder().decode(plaintext.subarray(0,97));
+  // const beldexFinalAddress = new TextDecoder().decode(plaintext.subarray(0,97));
 
   //  sender wallet Address
-  console.log("beldexFinalAddress",beldexFinalAddress);
-  console.log("beldexFinalAddressandplainText::",new TextDecoder().decode(plaintextWithMetadata.subarray(0, plainTextEnd)));
+  // console.log("beldexFinalAddress",beldexFinalAddress);
+  // console.log("beldexFinalAddressandplainText::",new TextDecoder().decode(plaintextWithMetadata.subarray(0, plainTextEnd)));
   
-  localStorage.setItem("senderWalletAddress", beldexFinalAddress);
-  const message = plaintextWithMetadata.subarray(97, plainTextEnd)
-   return message;
+  // localStorage.setItem("senderWalletAddress", beldexFinalAddress);
+  // const message = plaintextWithMetadata.subarray(97, plainTextEnd);
+  console.log("message::",plaintext);
+  
+   return plaintext;
 }
 
 export async function isBlocked(number: string) {
