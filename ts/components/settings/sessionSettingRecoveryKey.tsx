@@ -1,50 +1,32 @@
 import React, {  useState } from 'react';
-
-// import { SessionSeedModal } from '../dialog/SessionSeedModal';
-// import { useSelector } from 'react-redux';
-// import {
-//   getRecoveryPhraseDialog,
-// } from '../../state/selectors/modal';
-
 import { SessionButton,SessionButtonColor, SessionButtonType } from '.././basic/SessionButton';
-// import {walletRPC} from "../../mains/wallet-rpc"
 
 export const SessionSettingRecoveryKey=()=>
 {
     
-    const[verify,setVerify]=useState(false)
-    // const [keys,setKeys]=useState({})
-    // const recoveryPhraseModalState = useSelector(getRecoveryPhraseDialog);
+    const[verify,setVerify] = useState(false);
 
-    // async function getKeys()
-    // {
-    //     console.log("spend_key");
-        
-    //    let spend_key=await walletRPC("query_key", { key_type: "spend_key" });
-    //    let view_key=await walletRPC("query_key", { key_type: "view_key" });
-    //    console.log("spend_key :",spend_key ,"view_key::",view_key);
-       
-    // }
-   
+   let spendKey:any = localStorage.getItem("spend_key");
+   let viewKey :any= localStorage.getItem("view_key");
+    spendKey=JSON.parse(spendKey);
+    viewKey=JSON.parse(viewKey);
     let data=[
         {
             title:"View Key (public):",
-            key:"a8s7d6sa87d6sa87d6as86das8d6sa8da8asdaasd76as8dasd67as8d6as7d6a"
+            key:viewKey.pubkey
         },
         {
             title:"View Key (private):",
-            key:"a8s7d6sa87d6sa87d6as86das8d6sa8da8asdaasd76as8dasd67as8d6as7d6a"
+            key:viewKey.key
         },
         {
             title:"Spend Key (public):",
-            key:"a8s7d6sa87d6sa87d6as86das8d6sa8da8asdaasd76as8dasd67as8d6as7d6a"
+            key:spendKey.pubkey
         },
         {
             title:"Spend Key (private):",
-            key:"a8s7d6sa87d6sa87d6as86das8d6sa8da8asdaasd76as8dasd67as8d6as7d6a"
-        },
-
-    ]
+            key:spendKey.key
+        }]
 
     
     if(verify)
@@ -69,7 +51,7 @@ export const SessionSettingRecoveryKey=()=>
              <div className='session-settings-recovery-seed-button'>
              <SessionButton
               text={"Yes, I am Sure!"}
-              onClick={()=>setVerify(true)}
+              onClick={()=>{setVerify(true)}}
               buttonType={SessionButtonType.Brand}
               buttonColor={SessionButtonColor.Green}
             //   disabled={!caption}

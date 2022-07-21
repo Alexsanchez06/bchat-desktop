@@ -29,12 +29,7 @@ export const ZoomingSessionSlider = (props: { onSliderChange?: (value: number) =
   const zoomSize=options.filter((item)=>item.value===currentValueFromSettings)
   const [value,setValue]=useState(zoomSize)
 
-  // const handleSlider = (valueToForward: number) => {
-  const handleSlider = (valueToForward:any) => {
-   
-
-    // console.log("valueToForward",valueToForward.value);
-    
+  const handleSlider = (valueToForward:any) => {    
     props?.onSliderChange?.(valueToForward.value);
     window.setSettingValue('zoom-factor-setting', valueToForward.value);
     setValue(valueToForward)

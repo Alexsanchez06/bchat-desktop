@@ -3,7 +3,6 @@ import fs from "fs-extra";
 import path from 'path';
 import { default as insecureNodeFetch } from 'node-fetch';
 import { HTTPError } from '../session/utils/errors';
-// import axios from 'axios';
 // import portscanner from 'portscanner';
 // import killport from 'kill-port';
 
@@ -11,9 +10,7 @@ export const startWalletRpc = () => {
   try{
   console.log("uuntu:", process.platform)
   const rpcExecutable =
-    process.platform === "linux"
-      ? "beldex-wallet-rpc-ubuntu"
-      : "beldex-wallet-rpc-darwin";
+    process.platform === "linux" ? "beldex-wallet-rpc-ubuntu" : "beldex-wallet-rpc-darwin";
   console.log("rpcExecutable:", rpcExecutable)
   // eslint-disable-next-line no-undef
   let __ryo_bin = path.join(process.cwd(), "/bin").replace(/\\/g, "\\\\");
@@ -66,15 +63,15 @@ export const startWalletRpc = () => {
   wallet.stdout.on("close", (code: any) => {
     process.stderr.write(`Wallet: exited with code ${code} \n`);
     if (code === null) {
-      window?.log?.warn("Failed to start wallet RPC");
+      console.log("Failed to start wallet RPC");
     }
   });
 }catch(e){
-  window?.log?.warn('exception during wallet-rpc:', e);
+  console.log('exception during wallet-rpc:', e);
   }
 }
 
-  export async function  createWallet() :Promise<any> {
+  export async function  generateMnemonic() :Promise<any> {
   try{
     const walletName = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 7);
     console.log("walletName:", walletName)
@@ -94,36 +91,22 @@ export const startWalletRpc = () => {
     } else {
       getAddress = await walletRPC("get_address");
     }
-    console.log("address:", getAddress.address)
-    // axiosFunction()
-    const wallet = {
-      address: getAddress.address,
-      secret: {
-        mnemonic:  createWallet.key
-      }
-    };
-    // const wallet = {
-    //   address: "bxdis3VF318i2QDjvqwoG9GyfP4sVjTvwZyf1JGLNFyTJ8fbtBgzW6ieyKnpbMw5bU9dggbAiznaPGay96WAmx1Z2B32B86PE",
-    //   secret: {
-    //     mnemonic: "bomb vessel zinger upgrade bite rudely judge below goldfish tanks keyboard idled eldest mobile scuba emit tolerant dexterity soprano nitrogen tail tutor arena bagpipe scuba"
-    //   }
-    // };
-  
-  
+    let spend_key=await walletRPC("query_key", { key_type: "spend_key" });
+    let view_key=await walletRPC("query_key", { key_type: "view_key" });
+    localStorage.setItem("spend_key",JSON.stringify(spend_key));
+    localStorage.setItem("view_key",JSON.stringify(view_key));
     localStorage.setItem("userAddress",getAddress.address);
-    console.log("WINDOW.walletaddress:",localStorage.getItem("userAddress"))
     let address_txt_path = path.join(
       `${process.cwd()}/wallet`,
       walletName + ".address.txt"
     );
     if (!fs.existsSync(address_txt_path)) {
-      fs.writeFile(address_txt_path, wallet.address, "utf8", () => {
+      fs.writeFile(address_txt_path, getAddress.address, "utf8", () => {
       });
     }
-    return wallet;
-  
+    return createWallet.key;
  }catch(e){
-  window?.log?.warn('exception during wallet-rpc:', e);
+  console.log('exception during wallet-rpc:', e);
   }
 }
 
@@ -150,7 +133,7 @@ export const walletRPC = async (method: string, params = {}) => {
   console.log("result:",result)
   return result.result;
 }catch(e){
-  window?.log?.warn('exception during wallet-rpc:', e);
+  console.log('exception during wallet-rpc:', e);
   }
 }
 
@@ -166,28 +149,9 @@ export const getLatestHeight = async () => {
   let result = await response.json();
   return result.height;
 }catch(e){
-  window?.log?.warn('exception during wallet-rpc:', e);
+  console.log('exception during wallet-rpc:', e);
   }
 }
-
-// async function axiosFunction() {
-//   let options = {
-//     url: 'http://127.0.0.1:22026/json_rpc',
-//     method: 'POST',
-//     data: {
-//       jsonrpc: '2.0',
-//       id: '0',
-//       method: 'create_wallet',
-//       params: { filename: 'don-4', password: '', language: 'English' }
-//     },
-//     // auth: { user: 'test', pass: 'test', sendImmediately: false },
-//   }
-//   await axios(options).then(res => {
-//     console.log("res:::", res)
-//   }).catch(err => {
-//     console.log("err::::", err)
-//   });
-// }
 
 export const restoreWallet = async (displayName: string, userRecoveryPhrase: string) => {
   try{
@@ -200,14 +164,9 @@ console.log("restore:",displayName,userRecoveryPhrase)
     password: "",
     seed: userRecoveryPhrase
   });
-  console.log("restorewallet_address:", restoreWallet)
-  // let restoreWallet:any;
-  // restoreWallet ={
-  //   address:"bxdis3VF318i2QDjvqwoG9GyfP4sVjTvwZyf1JGLNFyTJ8fbtBgzW6ieyKnpbMw5bU9dggbAiznaPGay96WAmx1Z2B32B86PE"
-  // }
   return restoreWallet;
 }catch(e){
-  window?.log?.warn('exception during wallet-rpc:', e);
+  console.log('exception during wallet-rpc:', e);
   }
 
 }

@@ -17,8 +17,6 @@ import {
 } from './storage';
 import { Registration } from './registration';
 
-// import { createWallet } from '../mains/wallet-rpc'
-
 /**
  * Might throw
  */
@@ -133,8 +131,6 @@ export async function registerSingleDevice(
   // const hex = toHex(seed);
   // localStorage.setItem("userAddress","bxdis3VF318i2QDjvqwoG9GyfP4sVjTvwZyf1JGLNFyTJ8fbtBgzW6ieyKnpbMw5bU9dggbAiznaPGay96WAmx1Z2B32B86PE");
   // return mn_encode(hex);
-//   let wallet:any = await createWallet();
-//   return wallet.secret.mnemonic;
 // }
 
 async function createAccount(identityKeyPair: any) {

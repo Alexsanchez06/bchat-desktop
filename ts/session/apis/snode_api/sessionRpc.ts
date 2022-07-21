@@ -128,17 +128,12 @@ export async function snodeRpc(
       pubKey: getStoragePubKey(params.pubKey),
     };
   }
-
   const body = {
     jsonrpc: '2.0',
     id: '0',
     method,
     params,
   };
-
-  console.log("body",body,"url:",url);
-  
-
   const fetchOptions = {
     method: 'POST',
     body: JSON.stringify(body),
