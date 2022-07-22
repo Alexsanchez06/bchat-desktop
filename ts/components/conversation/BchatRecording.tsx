@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import moment from 'moment';
 
-import { SessionIconButton } from '../icon';
+import { BchatIconButton } from '../icon';
 import autoBind from 'auto-bind';
 import MicRecorder from 'mic-recorder-to-mp3';
 import styled from 'styled-components';
@@ -48,7 +48,7 @@ const StyledFlexWrapper = styled.div<StyledFlexWrapperProps>`
   }
 `;
 
-export class SessionRecording extends React.Component<Props, State> {
+export class BchatRecording extends React.Component<Props, State> {
   private recorder?: any;
   private audioBlobMp3?: Blob;
   private audioElement?: HTMLAudioElement | null;
@@ -124,21 +124,21 @@ export class SessionRecording extends React.Component<Props, State> {
         <div className="session-recording--actions">
           <StyledFlexWrapper marginHorizontal="5px">
             {isRecording && (
-              <SessionIconButton
-                iconType="stop"
+              <BchatIconButton
+              iconType="stop"
                 iconSize="medium"
                 iconColor={'#FF4538'}
                 onClick={actionPauseFn}
               />
             )}
             {actionPauseAudio && (
-              <SessionIconButton iconType="pause" iconSize="medium" onClick={actionPauseFn} />
+              <BchatIconButton iconType="pause" iconSize="medium" onClick={actionPauseFn} />
             )}
             {hasRecordingAndPaused && (
-              <SessionIconButton iconType="play" iconSize="medium" onClick={this.playAudio} />
+              <BchatIconButton iconType="play" iconSize="medium" onClick={this.playAudio} />
             )}
             {hasRecording && (
-              <SessionIconButton
+              <BchatIconButton
                 iconType="delete"
                 iconSize="medium"
                 onClick={this.onDeleteVoiceMessage}
@@ -146,7 +146,7 @@ export class SessionRecording extends React.Component<Props, State> {
             )}
           </StyledFlexWrapper>
 
-          {actionDefault && <SessionIconButton iconType="microphone" iconSize={'huge'} />}
+          {actionDefault && <BchatIconButton iconType="microphone" iconSize={'huge'} />}
         </div>
 
         {hasRecording && !isRecording ? (
@@ -169,7 +169,7 @@ export class SessionRecording extends React.Component<Props, State> {
               hasRecording && 'send-message-button---scale'
             )}
           >
-            <SessionIconButton
+            <BchatIconButton
               iconType="send"
               iconSize={'large'}
               iconRotation={90}

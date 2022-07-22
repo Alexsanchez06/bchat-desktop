@@ -12,9 +12,9 @@ import {
 } from '../../state/ducks/section';
 import { getFocusedSettingsSection } from '../../state/selectors/section';
 import { recoveryPhraseModal, updateDeleteAccountModal } from '../../state/ducks/modalDialog';
-import { SessionButton, SessionButtonColor, BchatButtonType } from '../basic/SessionButton';
-import { SessionIcon } from '../icon';
-import { SessionSettingCategory } from '../settings/SessionSettings';
+import { BchatButton, BchatButtonColor, BchatButtonType } from '../basic/BchatButton';
+import { BchatIcon } from '../icon';
+import { BchatSettingCategory } from '../settings/BchatSettings';
 // import { resetConversationExternal } from '../../state/ducks/conversations';
 // import { BchatIconType } from '../icon';
 
@@ -25,42 +25,42 @@ import { SessionSettingCategory } from '../settings/SessionSettings';
 const getCategories = () => {
   return [
     {
-      id: SessionSettingCategory.Appearance,
+      id: BchatSettingCategory.Appearance,
       title: window.i18n('appearanceSettingsTitle'),
       icon:"appearance.svg",
       
     },
     {
-      id: SessionSettingCategory.Privacy,
+      id: BchatSettingCategory.Privacy,
       title: window.i18n('privacySettingsTitle'),
       icon:"privacy.svg",
     },
     {
-      id: SessionSettingCategory.Blocked,
+      id: BchatSettingCategory.Blocked,
       title: window.i18n('blockedSettingsTitle'),
       icon:"blocked_contact.svg"
     },
     {
-      id: SessionSettingCategory.RecoverySeed,
+      id: BchatSettingCategory.RecoverySeed,
       // title: window.i18n('blockedSettingsTitle'),
       title: "Recovery Seed",
       icon:"recovery_seed.svg"
     },
     {
-      id: SessionSettingCategory.RecoveryKey,
+      id: BchatSettingCategory.RecoveryKey,
       // title: window.i18n('notificationsSettingsTitle'),
       title: "Recovery Key",
       icon:"key.svg"
      
     },
     {
-      id: SessionSettingCategory.MessageRequests,
+      id: BchatSettingCategory.MessageRequests,
       title:"View Message Request",
       // title: window.i18n('openMessageRequestInbox'),
       icon:"request.svg"
     },
     {
-      id: SessionSettingCategory.Hops,
+      id: BchatSettingCategory.Hops,
       // title: window.i18n('openMessageRequestInbox'),
       title: "Hops",
       icon:"Hops"
@@ -69,14 +69,14 @@ const getCategories = () => {
 };
 
 const LeftPaneSettingsCategoryRow = (props: {
-  item: { id: SessionSettingCategory; title: string; icon:string };
+  item: { id: BchatSettingCategory; title: string; icon:string };
 }) => {
   const { item } = props;
   const { id, title,icon} = item;
   const dispatch = useDispatch();
   const focusedSettingsSection = useSelector(getFocusedSettingsSection);
 
-  // const isMessageRequestSetting = id === SessionSettingCategory.MessageRequests;
+  // const isMessageRequestSetting = id === BchatSettingCategory.MessageRequests;
 
   const dataTestId = `${title.toLowerCase()}-settings-menu-item`;
 
@@ -120,7 +120,7 @@ const LeftPaneSettingsCategoryRow = (props: {
 
       <div>
         {id === focusedSettingsSection && (
-          <SessionIcon iconSize="medium" iconType="chevron" iconRotation={270} />
+          <BchatIcon iconSize="medium" iconType="chevron" iconRotation={270} />
         )}
       </div>
     </div>
@@ -149,19 +149,19 @@ const LeftPaneBottomButtons = () => {
 
   return (
     <div className="left-pane-setting-bottom-buttons" key={1}>
-      <SessionButton
+      <BchatButton
         text={dangerButtonText}
         buttonType={BchatButtonType.SquareOutline}
-        buttonColor={SessionButtonColor.Danger}
+        buttonColor={BchatButtonColor.Danger}
         onClick={() => {
           dispatch(updateDeleteAccountModal({}));
         }}
       />
 
-      <SessionButton
+      <BchatButton
         text={showRecoveryPhrase}
         buttonType={BchatButtonType.SquareOutline}
-        buttonColor={SessionButtonColor.White}
+        buttonColor={BchatButtonColor.White}
         onClick={() => {
           dispatch(recoveryPhraseModal({}));
         }}

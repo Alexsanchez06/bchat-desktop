@@ -8,8 +8,8 @@ import { CallManager } from '../../session/utils';
 import { callTimeoutMs } from '../../session/utils/calling/CallManager';
 import { getHasIncomingCall, getHasIncomingCallFrom } from '../../state/selectors/call';
 import { Avatar, AvatarSize } from '../avatar/Avatar';
-import { SessionButton, SessionButtonColor } from '../basic/SessionButton';
-import { SessionWrapperModal } from '../SessionWrapperModal';
+import { BchatButton, BchatButtonColor } from '../basic/BchatButton';
+import { BchatWrapperModal } from '../BchatWrapperModal';
 
 export const CallWindow = styled.div`
   position: absolute;
@@ -74,23 +74,23 @@ export const IncomingCallDialog = () => {
 
   if (hasIncomingCall) {
     return (
-      <SessionWrapperModal title={window.i18n('incomingCallFrom', [from || 'unknown'])}>
+      <BchatWrapperModal title={window.i18n('incomingCallFrom', [from || 'unknown'])}>
         <IncomingCallAvatarContainer>
           <Avatar size={AvatarSize.XL} pubkey={incomingCallFromPubkey} />
         </IncomingCallAvatarContainer>
         <div className="session-modal__button-group">
-          <SessionButton
+          <BchatButton
             text={window.i18n('decline')}
-            buttonColor={SessionButtonColor.Danger}
+            buttonColor={BchatButtonColor.Danger}
             onClick={handleDeclineIncomingCall}
           />
-          <SessionButton
+          <BchatButton
             text={window.i18n('accept')}
             onClick={handleAcceptIncomingCall}
-            buttonColor={SessionButtonColor.Green}
+            buttonColor={BchatButtonColor.Green}
           />
         </div>
-      </SessionWrapperModal>
+      </BchatWrapperModal>
     );
   }
   // display spinner while connecting

@@ -11,7 +11,7 @@ export enum BchatButtonType {
   Simple = 'simple',
 }
 
-export enum SessionButtonColor {
+export enum BchatButtonColor {
   Green = 'green',
   White = 'white',
   Primary = 'primary',
@@ -25,7 +25,7 @@ type Props = {
   text?: string;
   disabled?: boolean;
   buttonType: BchatButtonType;
-  buttonColor: SessionButtonColor;
+  buttonColor: BchatButtonColor;
   onClick: any;
   children?: ReactNode;
   dataTestId?: string;
@@ -33,7 +33,7 @@ type Props = {
   style?:any;
 };
 
-export const SessionButton = (props: Props) => {
+export const BchatButton = (props: Props) => {
   const { buttonType, dataTestId, buttonColor, text, disabled, onClick } = props;
 
   const clickHandler = (e: any) => {
@@ -74,9 +74,9 @@ export const SessionButton = (props: Props) => {
   );
 };
 
-SessionButton.defaultProps = {
+BchatButton.defaultProps = {
   disabled: false,
   buttonType: BchatButtonType.Default,
-  buttonColor: SessionButtonColor.Primary,
+  buttonColor: BchatButtonColor.Primary,
   onClick: null,
 } as Partial<Props>;

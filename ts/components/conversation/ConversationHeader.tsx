@@ -37,8 +37,8 @@ import {
   useExpireTimer,
   useIsKickedFromGroup,
 } from '../../hooks/useParamSelector';
-import { SessionButton, SessionButtonColor, BchatButtonType } from '../basic/SessionButton';
-import { SessionIconButton } from '../icon';
+import { BchatButton, BchatButtonColor, BchatButtonType } from '../basic/BchatButton';
+import { BchatIconButton } from '../icon';
 import { ConversationHeaderMenu } from '../menu/ConversationHeaderMenu';
 import { Flex } from '../basic/Flex';
 import { ExpirationTimerOptions } from '../../util/expiringMessages';
@@ -109,21 +109,21 @@ const SelectionOverlay = () => {
   return (
     <div className="message-selection-overlay">
       <div className="close-button">
-        <SessionIconButton iconType="exit" iconSize="medium" onClick={onCloseOverlay} />
+        <BchatIconButton iconType="exit" iconSize="medium" onClick={onCloseOverlay} />
       </div>
 
       <div className="button-group">
         {!isOnlyServerDeletable && (
-          <SessionButton
+          <BchatButton
             buttonType={BchatButtonType.Default}
-            buttonColor={SessionButtonColor.Danger}
+            buttonColor={BchatButtonColor.Danger}
             text={deleteMessageButtonText}
             onClick={onDeleteSelectedMessages}
           />
         )}
-        <SessionButton
+        <BchatButton
           buttonType={BchatButtonType.Default}
-          buttonColor={SessionButtonColor.Danger}
+          buttonColor={BchatButtonColor.Danger}
           text={deleteForEveryoneMessageButtonText}
           onClick={onDeleteSelectedMessagesForEveryone}
         />
@@ -148,7 +148,7 @@ const TripleDotsMenu = (props: { triggerId: string; showBackButton: boolean }) =
       }}
       data-testid="three-dots-conversation-options"
     >
-      <SessionIconButton iconType="ellipses" iconSize="medium" />
+      <BchatIconButton iconType="ellipses" iconSize="medium" />
     </div>
   );
 };
@@ -204,7 +204,7 @@ const BackButton = (props: { onGoBack: () => void; showBackButton: boolean }) =>
   }
 
   return (
-    <SessionIconButton
+    <BchatIconButton
       iconType="chevron"
       iconSize="large"
       iconRotation={90}
@@ -229,7 +229,7 @@ const CallButton = () => {
   }
 
   return (
-    <SessionIconButton
+    <BchatIconButton
       iconType="phone"
       iconSize="large"
       iconPadding="2px"

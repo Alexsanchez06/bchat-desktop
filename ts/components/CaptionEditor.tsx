@@ -6,8 +6,8 @@ import * as GoogleChrome from '../util/GoogleChrome';
 import { AttachmentType } from '../types/Attachment';
 
 import autoBind from 'auto-bind';
-import { SessionButton, SessionButtonColor, BchatButtonType } from './basic/SessionButton';
-import { SessionInput } from './basic/SessionInput';
+import { BchatButton, BchatButtonColor, BchatButtonType } from './basic/BchatButton';
+import { BchatInput } from './basic/BchatInput';
 
 interface Props {
   attachment: AttachmentType;
@@ -86,7 +86,7 @@ export class CaptionEditor extends React.Component<Props, State> {
         <div className="module-caption-editor__media-container">{this.renderObject()}</div>
         <div className="module-caption-editor__bottom-bar">
           <div className="module-caption-editor__input-container">
-            <SessionInput
+            <BchatInput
               type="text"
               autoFocus={true}
               maxLength={200}
@@ -97,11 +97,11 @@ export class CaptionEditor extends React.Component<Props, State> {
               onEnterPressed={this.onSave}
               value={caption}
             />
-            <SessionButton
+            <BchatButton
               text={window.i18n('save')}
               onClick={this.onSave}
               buttonType={BchatButtonType.Brand}
-              buttonColor={SessionButtonColor.Green}
+              buttonColor={BchatButtonColor.Green}
               disabled={!caption}
             />
           </div>

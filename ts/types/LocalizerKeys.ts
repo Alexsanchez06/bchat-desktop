@@ -294,7 +294,7 @@ export type LocalizerKeys =
   | 'youChangedTheTimer'
   | 'updatedTheGroup'
   | 'leaveGroup'
-  | 'continueYourSession'
+  | 'continueYourBchat'
   | 'invalidGroupNameTooShort'
   | 'notificationForConvo'
   | 'noNameOrMessage'

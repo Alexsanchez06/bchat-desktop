@@ -442,7 +442,7 @@ export const SessionGlobalStyles = createGlobalStyle`
   };
 `;
 
-export const SessionTheme = ({ children }: { children: any }) => (
+export const BchatTheme = ({ children }: { children: any }) => (
   <>
     <SessionGlobalStyles />
     {children}

@@ -7,8 +7,8 @@ import { SpacerLG, SpacerSM } from '../basic/Text';
 import autoBind from 'auto-bind';
 import { sessionPassword } from '../../state/ducks/modalDialog';
 import { LocalizerKeys } from '../../types/LocalizerKeys';
-import { SessionButton, SessionButtonColor } from '../basic/SessionButton';
-import { SessionWrapperModal } from '../SessionWrapperModal';
+import { BchatButton, BchatButtonColor } from '../basic/BchatButton';
+import { BchatWrapperModal } from '../BchatWrapperModal';
 import { matchesHash, validatePassword } from '../../util/passwordUtils';
 
 export type PasswordAction = 'set' | 'change' | 'remove';
@@ -60,7 +60,7 @@ export class SessionPasswordDialog extends React.Component<Props, State> {
         : [window.i18n('enterPassword'), window.i18n('confirmPassword')];
 
     const confirmButtonColor =
-      passwordAction === 'remove' ? SessionButtonColor.Danger : SessionButtonColor.Green;
+      passwordAction === 'remove' ? BchatButtonColor.Danger : BchatButtonColor.Green;
     // do this separately so typescript's compiler likes it
     const localizedKeyAction: LocalizerKeys =
       passwordAction === 'change'
@@ -70,7 +70,7 @@ export class SessionPasswordDialog extends React.Component<Props, State> {
         : 'setPassword';
 
     return (
-      <SessionWrapperModal title={window.i18n(localizedKeyAction)} onClose={this.closeDialog}>
+      <BchatWrapperModal title={window.i18n(localizedKeyAction)} onClose={this.closeDialog}>
         <SpacerSM />
 
         <div className="session-modal__input-group">
@@ -108,14 +108,14 @@ export class SessionPasswordDialog extends React.Component<Props, State> {
         {this.showError()}
 
         <div className="session-modal__button-group">
-          <SessionButton text={window.i18n('cancel')} onClick={this.closeDialog} />
-          <SessionButton
+          <BchatButton text={window.i18n('cancel')} onClick={this.closeDialog} />
+          <BchatButton
             text={window.i18n('ok')}
             buttonColor={confirmButtonColor}
             onClick={this.setPassword}
           />
         </div>
-      </SessionWrapperModal>
+      </BchatWrapperModal>
     );
   }
 

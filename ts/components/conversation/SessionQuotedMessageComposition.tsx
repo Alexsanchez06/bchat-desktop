@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { SessionIcon, SessionIconButton } from '../icon';
+import { BchatIcon, BchatIconButton } from '../icon';
 import styled from 'styled-components';
 import { useDispatch, useSelector } from 'react-redux';
 import { quoteMessage } from '../../state/ducks/conversations';
@@ -75,7 +75,7 @@ export const SessionQuotedMessageComposition = () => {
         margin={'var(--margins-xs)'}
       >
         <ReplyingTo>{window.i18n('replyingToMessage')}</ReplyingTo>
-        <SessionIconButton iconType="exit" iconSize="small" onClick={removeQuotedMessage} />
+        <BchatIconButton iconType="exit" iconSize="small" onClick={removeQuotedMessage} />
       </Flex>
       <QuotedMessageCompositionReply>
         <Flex container={true} justifyContent="space-between" margin={'var(--margins-xs)'}>
@@ -91,7 +91,7 @@ export const SessionQuotedMessageComposition = () => {
             />
           )}
 
-          {hasAudioAttachment && <SessionIcon iconType="microphone" iconSize="huge" />}
+          {hasAudioAttachment && <BchatIcon iconType="microphone" iconSize="huge" />}
         </Flex>
       </QuotedMessageCompositionReply>
     </QuotedMessageComposition>

@@ -21,7 +21,7 @@ function filter(text?: string) {
     .replace(/>/g, '&gt;');
 }
 
-export type SessionNotification = {
+export type BchatNotification = {
   conversationId: string;
   iconUrl: string;
   isExpiringMessage: boolean;
@@ -34,7 +34,7 @@ export type SessionNotification = {
 let isEnabled: boolean = false;
 let lastNotificationDisplayed: null | Notification = null;
 
-let currentNotifications: Array<SessionNotification> = [];
+let currentNotifications: Array<BchatNotification> = [];
 
 // Testing indicated that trying to create/destroy notifications too quickly
 //   resulted in notifications that stuck around forever, requiring the user
@@ -70,7 +70,7 @@ function disable() {
   isEnabled = false;
 }
 
-function addNotification(notif: SessionNotification) {
+function addNotification(notif: BchatNotification) {
   const alreadyThere = currentNotifications.find(
     n => n.conversationId === notif.conversationId && n.messageId === notif.messageId
   );

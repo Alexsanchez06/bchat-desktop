@@ -82,7 +82,7 @@ export type BchatIconType =
   | 'timer60'
   | 'videoCamera';
 
-export type SessionIconSize = 'tiny' | 'small' | 'medium' | 'large' | 'huge' | 'huge2' | 'max';
+export type BchatIconSize = 'tiny' | 'small' | 'medium' | 'large' | 'huge' | 'huge2' | 'max';
 
 export const icons = {
   addUser: {

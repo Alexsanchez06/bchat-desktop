@@ -1,11 +1,11 @@
 import React from 'react';
-import { SessionIconButton } from '../../icon';
+import { BchatIconButton } from '../../icon';
 
 export const AddStagedAttachmentButton = (
   // props: { onClick: () => void }
   ) => {
   return (
-    // <SessionIconButton
+    // <BchatIconButton
     //   iconType="attachment"
     //   backgroundColor={'var(--color-compose-view-button-background)'}
     //   iconSize={'huge2'}
@@ -24,7 +24,7 @@ export const AddStagedAttachmentButton = (
 
 export const StartRecordingButton = (props: { onClick: () => void }) => {
   return (
-    <SessionIconButton
+    <BchatIconButton
       iconType="microphone"
       iconSize={'huge2'}
       backgroundColor={'transparent'}
@@ -38,7 +38,7 @@ export const StartRecordingButton = (props: { onClick: () => void }) => {
 export const ToggleEmojiButton = React.forwardRef<HTMLDivElement, { onClick: () => void }>(
   (props, ref) => {
     return (
-      <SessionIconButton
+      <BchatIconButton
         iconType="emoji"
         ref={ref}
         backgroundColor="var(--color-compose-view-button-background)"
@@ -57,7 +57,7 @@ export const SendMessageButton = (props: { onClick: () => void }) => {
       <div className='sendBox' role="button" onClick={props.onClick}>
 
       </div>
-      {/* <SessionIconButton
+      {/* <BchatIconButton
         iconType="send"
         backgroundColor={'var(--color-compose-view-button-background)'}
         iconSize={'huge2'}

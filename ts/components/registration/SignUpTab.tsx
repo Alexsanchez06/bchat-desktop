@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { sanitizeSessionUsername } from '../../session/utils/String';
+import { sanitizeBchatUsername } from '../../session/utils/String';
 import { Flex } from '../basic/Flex';
-import { SessionButton, SessionButtonColor, BchatButtonType } from '../basic/SessionButton';
+import { BchatButton, BchatButtonColor, BchatButtonType } from '../basic/BchatButton';
 // import { BchatIdEditable } from '../basic/BchatIdEditable';
-import { SessionIconButton } from '../icon';
+import { BchatIconButton } from '../icon';
 import { RegistrationContext, RegistrationPhase, signUp } from './RegistrationStages';
 import { RegistrationUserDetails } from './RegistrationUserDetails';
 import { SignInMode } from './SignInTab';
@@ -22,10 +22,10 @@ export enum SignUpMode {
 
 const CreateSessionIdButton = ({ createSessionID }: { createSessionID: any }) => {
   return (
-    <SessionButton
+    <BchatButton
       onClick={createSessionID}
       buttonType={BchatButtonType.BrandOutline}
-      buttonColor={SessionButtonColor.Green}
+      buttonColor={BchatButtonColor.Green}
       text={window.i18n('createAccount')}
     />
   );
@@ -33,10 +33,10 @@ const CreateSessionIdButton = ({ createSessionID }: { createSessionID: any }) =>
 
 // const ContinueSignUpButton = ({ continueSignUp }: { continueSignUp: any }) => {
 //   return (
-//     <SessionButton
+//     <BchatButton
 //       onClick={continueSignUp}
 //       buttonType={BchatButtonType.Brand}
-//       buttonColor={SessionButtonColor.Green}
+//       buttonColor={BchatButtonColor.Green}
 //       text={window.i18n('continue')}
 //     />
 //   );
@@ -53,7 +53,7 @@ const SignUpDefault = (props: { createSessionID: () => void }) => {
 export const GoBackMainMenuButton = (props:any) => {
   const { setRegistrationPhase, setSignInMode, setSignUpMode } = useContext(RegistrationContext);
   return (
-    <SessionIconButton
+    <BchatIconButton
       iconSize="huge"
       iconType="chevron"
       iconRotation={90}
@@ -180,17 +180,17 @@ export const SignUpTab = (props:any) => {
         displayName={displayName}
         handlePressEnter={()=>{verifyUserName()}}
         onDisplayNameChanged={(name: string) => {
-          const sanitizedName = sanitizeSessionUsername(name);
+          const sanitizedName = sanitizeBchatUsername(name);
           const trimName = sanitizedName.trim();
           setDisplayName(sanitizedName);
           setDisplayNameError(!trimName ? window.i18n('displayNameEmpty') : undefined);
         }}
         stealAutoFocus={true}
       />
-      <SessionButton
+      <BchatButton
         onClick={()=> {verifyUserName()}}
         buttonType={BchatButtonType.Brand}
-        buttonColor={SessionButtonColor.Green}
+        buttonColor={BchatButtonColor.Green}
         text={window.i18n('getStarted')}
         // disabled={!enableCompleteSignUp}
       />

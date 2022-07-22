@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 // tslint:disable: use-simple-attributes no-submodule-imports
 
 import { useDispatch ,useSelector} from 'react-redux';
-// import { SessionButton, SessionButtonColor, BchatButtonType } from '../../basic/SessionButton';
+// import { BchatButton, BchatButtonColor, BchatButtonType } from '../../basic/BchatButton';
 import { BchatIdEditable } from '../../basic/BchatIdEditable';
 import { BchatSpinner } from '../../basic/BchatSpinner';
 // import { OverlayHeader } from './OverlayHeader';
@@ -111,8 +111,8 @@ const ourNumber = useSelector(getOurNumber);
       />
 
      <button className='nextButton'  onClick={handleMessageButtonClick}>{buttonText}</button>
-      {/* <SessionButton
-        buttonColor={SessionButtonColor.Green}
+      {/* <BchatButton
+        buttonColor={BchatButtonColor.Green}
         buttonType={BchatButtonType.BrandOutline}
         text={buttonText}
         disabled={false}

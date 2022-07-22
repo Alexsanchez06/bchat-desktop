@@ -42,7 +42,7 @@ import { debounce, isEmpty, isString } from 'lodash';
 // tslint:disable-next-line: no-import-side-effect no-submodule-imports
 
 // import { ActionPanelOnionStatusLight } from '../dialog/OnionStatusPathDialog';
-import { switchHtmlToDarkTheme, switchHtmlToLightTheme } from '../../state/ducks/SessionTheme';
+import { switchHtmlToDarkTheme, switchHtmlToLightTheme } from '../../state/ducks/BchatTheme';
 import { loadDefaultRooms } from '../../session/apis/open_group_api/opengroupV2/ApiUtil';
 import { getOpenGroupManager } from '../../session/apis/open_group_api/opengroupV2/OpenGroupManagerV2';
 import { getSwarmPollingInstance } from '../../session/apis/snode_api';
@@ -51,7 +51,7 @@ import { Avatar, AvatarSize } from '../avatar/Avatar';
 import { CallInFullScreenContainer } from '../calling/CallInFullScreenContainer';
 import { DraggableCallContainer } from '../calling/DraggableCallContainer';
 import { IncomingCallDialog } from '../calling/IncomingCallDialog';
-import { SessionIconButton } from '../icon';
+import { BchatIconButton } from '../icon';
 import { SessionToastContainer } from '../SessionToastContainer';
 import { LeftPaneSectionContainer } from './LeftPaneSectionContainer';
 import { getLatestDesktopReleaseFileToFsV2 } from '../../session/apis/file_server_api/FileServerApiV2';
@@ -147,7 +147,7 @@ const Section = (props: { type: SectionType }) => {
     case SectionType.Message:
       return (
         
-              <SessionIconButton
+              <BchatIconButton
                 iconSize="large"
                 dataTestId="message-section"
                 iconType={'chatBubble'}
@@ -161,7 +161,7 @@ const Section = (props: { type: SectionType }) => {
       );
     // case SectionType.Contact:
     //   return (
-    //     <SessionIconButton
+    //     <BchatIconButton
     //       iconSize="large"
     //       dataTestId="contact-section"
     //       iconType={'users'}
@@ -173,7 +173,7 @@ const Section = (props: { type: SectionType }) => {
     //   );
     case SectionType.Closedgroup:
       return (
-        <SessionIconButton
+        <BchatIconButton
           iconSize="large"
           dataTestId="settings-section"
           iconType={'closedgroup'}
@@ -186,7 +186,7 @@ const Section = (props: { type: SectionType }) => {
       );
       case SectionType.Opengroup:
         return (
-          <SessionIconButton
+          <BchatIconButton
             iconSize="large"
             dataTestId="settings-section"
             iconType={'opengroup'}
@@ -199,7 +199,7 @@ const Section = (props: { type: SectionType }) => {
        
           case SectionType.Settings:
       return (
-        <SessionIconButton
+        <BchatIconButton
           iconSize="large"
           dataTestId="settings-section"
           iconType={'gear'}
@@ -220,7 +220,7 @@ const Section = (props: { type: SectionType }) => {
     //   );
     default:
       return (
-        <SessionIconButton
+        <BchatIconButton
           iconSize="medium"
           iconType={'moon'}
           dataTestId="theme-section"

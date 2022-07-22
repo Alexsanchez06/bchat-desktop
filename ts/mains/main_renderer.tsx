@@ -13,7 +13,7 @@ import { isSignInByLinking, Storage } from '../util/storage';
 import * as Data from '../data/data';
 import Backbone from 'backbone';
 import { SessionRegistrationView } from '../components/registration/SessionRegistrationView';
-import { SessionInboxView } from '../components/SessionInboxView';
+import { BchatInboxView } from '../components/BchatInboxView';
 import { deleteAllLogs } from '../node/logs';
 import ReactDOM from 'react-dom';
 import React from 'react';
@@ -245,7 +245,7 @@ async function start() {
     getConversationController()
       .loadPromise()
       ?.then(() => {
-        ReactDOM.render(<SessionInboxView />, document.getElementById('root'));
+        ReactDOM.render(<BchatInboxView />, document.getElementById('root'));
       });
   }
 

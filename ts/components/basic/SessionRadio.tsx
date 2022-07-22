@@ -10,7 +10,7 @@ interface Props {
   onClick: (value: string) => any;
 }
 
-export const SessionRadio = (props: Props) => {
+export const BchatRadio = (props: Props) => {
   const { label, group, value, active, onClick } = props;
 
   function clickHandler(e: any) {

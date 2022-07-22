@@ -2,7 +2,7 @@ import { ipcRenderer } from 'electron';
 import React from 'react';
 import styled from 'styled-components';
 import { MessageDeliveryStatus } from '../../../../models/messageType';
-import { SessionIcon } from '../../../icon';
+import { BchatIcon } from '../../../icon';
 
 const MessageStatusSendingContainer = styled.div`
   display: inline-block;
@@ -16,7 +16,7 @@ const MessageStatusSending = ({ dataTestId }: { dataTestId?: string }) => {
   const iconColor = 'var(--color-text)';
   return (
     <MessageStatusSendingContainer data-testid={dataTestId} data-testtype="sending">
-      <SessionIcon rotateDuration={2} iconColor={iconColor} iconType="sending" iconSize="tiny" />
+      <BchatIcon rotateDuration={2} iconColor={iconColor} iconType="sending" iconSize="tiny" />
     </MessageStatusSendingContainer>
   );
 };
@@ -26,7 +26,7 @@ const MessageStatusSent = ({ dataTestId }: { dataTestId?: string }) => {
 
   return (
     <MessageStatusSendingContainer data-testid={dataTestId} data-testtype="sent">
-      <SessionIcon iconColor={iconColor} iconType="circleCheck" iconSize="tiny" />
+      <BchatIcon iconColor={iconColor} iconType="circleCheck" iconSize="tiny" />
     </MessageStatusSendingContainer>
   );
 };
@@ -36,7 +36,7 @@ const MessageStatusRead = ({ dataTestId }: { dataTestId?: string }) => {
 
   return (
     <MessageStatusSendingContainer data-testid={dataTestId} data-testtype="read">
-      <SessionIcon iconColor={iconColor} iconType="doubleCheckCircleFilled" iconSize="tiny" />
+      <BchatIcon iconColor={iconColor} iconType="doubleCheckCircleFilled" iconSize="tiny" />
     </MessageStatusSendingContainer>
   );
 };
@@ -53,7 +53,7 @@ const MessageStatusError = ({ dataTestId }: { dataTestId?: string }) => {
       onClick={showDebugLog}
       title={window.i18n('sendFailed')}
     >
-      <SessionIcon iconColor={'var(--color-destructive'} iconType="error" iconSize="tiny" />
+      <BchatIcon iconColor={'var(--color-destructive'} iconType="error" iconSize="tiny" />
     </MessageStatusSendingContainer>
   );
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch ,useSelector} from 'react-redux';
 import { setOverlayMode } from '../../../state/ducks/section';
 // import { SpacerMD } from '../../basic/Text';
-import { SessionIconButton } from '../../icon';
+import { BchatIconButton } from '../../icon';
 // for bchat
 import { Avatar, AvatarSize } from './../../avatar/Avatar';
 import { getOurNumber } from '../../../state/selectors/user';
@@ -32,7 +32,7 @@ export const OverlayHeader = ({ subtitle, title,hideExit }: { title: string; sub
     
      {hideExit ?"":
      <div className="exit">
-     <SessionIconButton
+     <BchatIconButton
        iconSize="small"
        iconType="chevron"
        iconRotation={90}

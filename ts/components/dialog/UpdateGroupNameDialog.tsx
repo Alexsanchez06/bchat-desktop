@@ -7,8 +7,8 @@ import { updateGroupNameModal } from '../../state/ducks/modalDialog';
 import autoBind from 'auto-bind';
 import { ConversationModel } from '../../models/conversation';
 import { getConversationController } from '../../session/conversations';
-import { SessionWrapperModal } from '../SessionWrapperModal';
-import { SessionButton, SessionButtonColor } from '../basic/SessionButton';
+import { BchatWrapperModal } from '../BchatWrapperModal';
+import { BchatButton, BchatButtonColor } from '../basic/BchatButton';
 import { initiateOpenGroupUpdate } from '../../session/group/open-group';
 import { initiateClosedGroupUpdate } from '../../session/group/closed-group';
 import { pickFileForAvatar } from '../../types/attachments/VisualAttachment';
@@ -91,7 +91,7 @@ export class UpdateGroupNameDialog extends React.Component<Props, State> {
       : true;
 
     return (
-      <SessionWrapperModal
+      <BchatWrapperModal
         title={titleText}
         // tslint:disable-next-line: no-void-expression
         onClose={() => this.closeDialog()}
@@ -124,15 +124,15 @@ export class UpdateGroupNameDialog extends React.Component<Props, State> {
         ) : null}
 
         <div className="session-modal__button-group">
-          <SessionButton text={cancelText} onClick={this.closeDialog} />
+          <BchatButton text={cancelText} onClick={this.closeDialog} />
 
-          <SessionButton
+          <BchatButton
             text={okText}
             onClick={this.onClickOK}
-            buttonColor={SessionButtonColor.Green}
+            buttonColor={BchatButtonColor.Green}
           />
         </div>
-      </SessionWrapperModal>
+      </BchatWrapperModal>
     );
   }
 

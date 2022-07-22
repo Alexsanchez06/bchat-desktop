@@ -11,8 +11,8 @@ import autoBind from 'auto-bind';
 import _ from 'lodash';
 import { MessageRequestsBanner } from './MessageRequestsBanner';
 
-// import { SessionButton, SessionButtonColor, BchatButtonType } from '../basic/SessionButton';
-import { SessionSearchInput } from '../SessionSearchInput';
+// import { BchatButton, BchatButtonColor, BchatButtonType } from '../basic/BchatButton';
+import { BchatSearchInput } from '../BchatSearchInput';
 import { RowRendererParamsType } from './LeftPane';
 import { OverlayOpenGroup } from './overlay/OverlayOpenGroup';
 import { OverlayMessageRequest } from './overlay/OverlayMessageRequest';
@@ -110,7 +110,7 @@ export class LeftPaneMessageSection extends React.Component<Props> {
   public renderConversations() {
     return (
       <div className="module-conversations-list-content">
-        <SessionSearchInput />
+        <BchatSearchInput />
         <MessageRequestsBanner
           handleOnClick={() => {
             window.inboxStore?.dispatch(setOverlayMode('message-requests'));
@@ -146,11 +146,11 @@ export class LeftPaneMessageSection extends React.Component<Props> {
 
     return (
       <div className="left-pane-contact-bottom-buttons">
-        {/* <SessionButton
+        {/* <BchatButton
           // text={joinOpenGroup}
           icon={true}
           buttonType={BchatButtonType.SquareOutline}
-          buttonColor={SessionButtonColor.Green}
+          buttonColor={BchatButtonColor.Green}
           onClick={() => {
             window.inboxStore?.dispatch(setOverlayMode('open-group'));
           }}
@@ -158,13 +158,13 @@ export class LeftPaneMessageSection extends React.Component<Props> {
           
 
         />
-        <SessionButton
+        <BchatButton
           icon={true}
           style={{background: "url(images/bchat/socialgroup.svg) no-repeat ",backgroundSize: 'cover',height: "19px",color: "rgb(0, 0, 0)",width: "29px",margin:'30px 30px'}}
 
           // text={newClosedGroup}
           buttonType={BchatButtonType.SquareOutline}
-          buttonColor={SessionButtonColor.White}
+          buttonColor={BchatButtonColor.White}
           onClick={() => {
             window.inboxStore?.dispatch(setOverlayMode('closed-group'));
           }}

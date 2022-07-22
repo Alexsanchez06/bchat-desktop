@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { SpacerLG } from '../basic/Text';
 import { getConversationController } from '../../session/conversations';
 import { adminLeaveClosedGroup } from '../../state/ducks/modalDialog';
-import { SessionButton, SessionButtonColor } from '../basic/SessionButton';
-import { SessionWrapperModal } from '../SessionWrapperModal';
+import { BchatButton, BchatButtonColor } from '../basic/BchatButton';
+import { BchatWrapperModal } from '../BchatWrapperModal';
 
 type Props = {
   conversationId: string;
@@ -32,14 +32,14 @@ export const AdminLeaveClosedGroupDialog = (props: Props) => {
   };
 
   return (
-    <SessionWrapperModal title={titleText} onClose={closeDialog}>
+    <BchatWrapperModal title={titleText} onClose={closeDialog}>
       <SpacerLG />
       <p>{warningAsAdmin}</p>
 
       <div className="session-modal__button-group">
-        <SessionButton text={cancelText} onClick={closeDialog} />
-        <SessionButton text={okText} onClick={onClickOK} buttonColor={SessionButtonColor.Danger} />
+        <BchatButton text={cancelText} onClick={closeDialog} />
+        <BchatButton text={okText} onClick={onClickOK} buttonColor={BchatButtonColor.Danger} />
       </div>
-    </SessionWrapperModal>
+    </BchatWrapperModal>
   );
 };

@@ -10,8 +10,8 @@ import {
   isMessageSelectionMode,
 } from '../../state/selectors/conversations';
 import { getAudioAutoplay } from '../../state/selectors/userConfig';
-import { SessionButton, SessionButtonColor, BchatButtonType } from '../basic/SessionButton';
-import { SessionIcon } from '../icon';
+import { BchatButton, BchatButtonColor, BchatButtonType } from '../basic/BchatButton';
+import { BchatIcon } from '../icon';
 
 export const AudioPlayerWithEncryptedFile = (props: {
   src: string;
@@ -101,22 +101,22 @@ export const AudioPlayerWithEncryptedFile = (props: {
       customControlsSection={[
         RHAP_UI.MAIN_CONTROLS,
         <div className="speedButton" key="togglePlaybackSpeed">
-          <SessionButton
+          <BchatButton
             text={`${playbackSpeed}x`}
             onClick={() => {
               setPlaybackSpeed(playbackSpeed === 1 ? 1.5 : 1);
             }}
             buttonType={BchatButtonType.Simple}
-            buttonColor={SessionButtonColor.None}
+            buttonColor={BchatButtonColor.None}
           />
         </div>,
       ]}
       customIcons={{
         play: (
-          <SessionIcon iconType="play" iconSize="small" iconColor={'var(--color-text-subtle)'} />
+          <BchatIcon iconType="play" iconSize="small" iconColor={'var(--color-text-subtle)'} />
         ),
         pause: (
-          <SessionIcon iconType="pause" iconSize="small" iconColor={'var(--color-text-subtle)'} />
+          <BchatIcon iconType="pause" iconSize="small" iconColor={'var(--color-text-subtle)'} />
         ),
       }}
     />

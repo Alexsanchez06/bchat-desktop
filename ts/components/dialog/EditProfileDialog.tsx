@@ -14,13 +14,13 @@ import { SpacerLG, SpacerMD } from '../basic/Text';
 import autoBind from 'auto-bind';
 import { editProfileModal } from '../../state/ducks/modalDialog';
 import { uploadOurAvatar } from '../../interactions/conversationInteractions';
-import { SessionButton, SessionButtonColor, BchatButtonType } from '../basic/SessionButton';
+import { BchatButton, BchatButtonColor, BchatButtonType } from '../basic/BchatButton';
 import { BchatSpinner } from '../basic/BchatSpinner';
-import { SessionIconButton } from '../icon';
+import { BchatIconButton } from '../icon';
 import { MAX_USERNAME_LENGTH } from '../registration/RegistrationStages';
-import { SessionWrapperModal } from '../SessionWrapperModal';
+import { BchatWrapperModal } from '../BchatWrapperModal';
 import { pickFileForAvatar } from '../../types/attachments/VisualAttachment';
-import { sanitizeSessionUsername } from '../../session/utils/String';
+import { sanitizeBchatUsername } from '../../session/utils/String';
 import { setLastProfileUpdateTimestamp } from '../../util/storage';
 
 interface State {
@@ -92,7 +92,7 @@ export class EditProfileDialog extends React.Component<{}, State> {
 
     return (
       <div className="edit-profile-dialog" data-testid="edit-profile-dialog">
-        <SessionWrapperModal
+        <BchatWrapperModal
           title={i18n('editProfileModalTitle')}
           onClose={this.closeDialog}
           headerIconButtons={backButton}
@@ -117,10 +117,10 @@ export class EditProfileDialog extends React.Component<{}, State> {
             <BchatSpinner loading={this.state.loading} />
 
             {viewDefault || viewQR ? (
-              <SessionButton
+              <BchatButton
                 text={window.i18n('editMenuCopy')}
                 buttonType={BchatButtonType.BrandOutline}
-                buttonColor={SessionButtonColor.Green}
+                buttonColor={BchatButtonColor.Green}
                 onClick={() => {
                   copySessionID(sessionID);
                 }}
@@ -128,10 +128,10 @@ export class EditProfileDialog extends React.Component<{}, State> {
               />
             ) : (
               !this.state.loading && (
-                <SessionButton
+                <BchatButton
                   text={window.i18n('save')}
                   buttonType={BchatButtonType.BrandOutline}
-                  buttonColor={SessionButtonColor.Green}
+                  buttonColor={BchatButtonColor.Green}
                   onClick={this.onClickOK}
                   disabled={this.state.loading}
                   dataTestId="save-button-profile-update"
@@ -141,7 +141,7 @@ export class EditProfileDialog extends React.Component<{}, State> {
 
             <SpacerLG />
           </div>
-        </SessionWrapperModal>
+        </BchatWrapperModal>
       </div>
     );
   }
@@ -165,7 +165,7 @@ export class EditProfileDialog extends React.Component<{}, State> {
               }}
               role="button"
             >
-              <SessionIconButton iconType="qr" iconSize="small" iconColor={'rgb(0, 0, 0)'} />
+              <BchatIconButton iconType="qr" iconSize="small" iconColor={'rgb(0, 0, 0)'} />
             </div>
           </div>
         </div>
@@ -192,7 +192,7 @@ export class EditProfileDialog extends React.Component<{}, State> {
 
         <div className="profile-name-uneditable">
           <p data-testid="your-profile-name">{name}</p>
-          <SessionIconButton
+          <BchatIconButton
             iconType="pencil"
             iconSize="medium"
             onClick={() => {
@@ -244,7 +244,7 @@ export class EditProfileDialog extends React.Component<{}, State> {
   }
 
   private onNameEdited(event: ChangeEvent<HTMLInputElement>) {
-    const newName = sanitizeSessionUsername(event.target.value);
+    const newName = sanitizeBchatUsername(event.target.value);
     this.setState({
       profileName: newName,
     });

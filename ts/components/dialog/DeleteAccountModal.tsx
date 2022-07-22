@@ -5,10 +5,10 @@ import { forceNetworkDeletion } from '../../session/apis/snode_api/SNodeAPI';
 import { forceSyncConfigurationNowIfNeeded } from '../../session/utils/syncUtils';
 import { updateConfirmModal, updateDeleteAccountModal } from '../../state/ducks/modalDialog';
 import { SpacerLG } from '../basic/Text';
-import { SessionButton, SessionButtonColor } from '../basic/SessionButton';
-import { SessionHtmlRenderer } from '../basic/SessionHTMLRenderer';
+import { BchatButton, BchatButtonColor } from '../basic/BchatButton';
+import { BchatHtmlRenderer } from '../basic/SessionHTMLRenderer';
 import { BchatSpinner } from '../basic/BchatSpinner';
-import { SessionWrapperModal } from '../SessionWrapperModal';
+import { BchatWrapperModal } from '../BchatWrapperModal';
 
 import * as Data from '../../data/data';
 import { deleteAllLogs } from '../../node/logs';
@@ -68,7 +68,7 @@ async function deleteEverythingAndNetworkData() {
         updateConfirmModal({
           title: window.i18n('dialogClearAllDataDeletionFailedTitle'),
           message: window.i18n('dialogClearAllDataDeletionFailedDesc'),
-          okTheme: SessionButtonColor.Danger,
+          okTheme: BchatButtonColor.Danger,
           okText: window.i18n('deviceOnly'),
           onClickOk: async () => {
             await deleteDbLocally();
@@ -95,7 +95,7 @@ async function deleteEverythingAndNetworkData() {
             potentiallyMaliciousSnodes.join(', '),
           ]),
           messageSub: window.i18n('dialogClearAllDataDeletionFailedTitleQuestion'),
-          okTheme: SessionButtonColor.Danger,
+          okTheme: BchatButtonColor.Danger,
           okText: window.i18n('deviceOnly'),
           onClickOk: async () => {
             await deleteDbLocally();
@@ -170,7 +170,7 @@ export const DeleteAccountModal = () => {
   }, []);
 
   return (
-    <SessionWrapperModal
+    <BchatWrapperModal
       title={window.i18n('clearAllData')}
       onClose={onClickCancelHandler}
       showExitIcon={true}
@@ -178,30 +178,30 @@ export const DeleteAccountModal = () => {
       <SpacerLG />
 
       <div className="session-modal__centered">
-        <SessionHtmlRenderer
+        <BchatHtmlRenderer
           tag="span"
           className="session-confirm-main-message"
           html={window.i18n('deleteAccountWarning')}
         />
-        <SessionHtmlRenderer
+        <BchatHtmlRenderer
           tag="span"
           className="session-confirm-main-message"
           html={window.i18n('dialogClearAllDataDeletionQuestion')}
         />
         <SpacerLG />
         <div className="session-modal__button-group">
-          <SessionButton
+          <BchatButton
             text={window.i18n('entireAccount')}
-            buttonColor={SessionButtonColor.Danger}
+            buttonColor={BchatButtonColor.Danger}
             onClick={() => {
               setDeleteEverythingWithNetwork(true);
             }}
             disabled={deleteEverythingWithNetwork || deleteDeviceOnly}
           />
 
-          <SessionButton
+          <BchatButton
             text={window.i18n('deviceOnly')}
-            buttonColor={SessionButtonColor.Primary}
+            buttonColor={BchatButtonColor.Primary}
             onClick={() => {
               setDeleteDeviceOnly(true);
             }}
@@ -211,7 +211,7 @@ export const DeleteAccountModal = () => {
         <SpacerLG />
 
         {deleteEverythingWithNetwork && (
-          <SessionHtmlRenderer
+          <BchatHtmlRenderer
             tag="span"
             className="session-confirm-main-message"
             html={window.i18n('areYouSureDeleteEntireAccount')}
@@ -219,7 +219,7 @@ export const DeleteAccountModal = () => {
         )}
 
         {deleteDeviceOnly && (
-          <SessionHtmlRenderer
+          <BchatHtmlRenderer
             tag="span"
             className="session-confirm-main-message"
             html={window.i18n('areYouSureDeleteDeviceOnly')}
@@ -229,9 +229,9 @@ export const DeleteAccountModal = () => {
 
         {(deleteDeviceOnly || deleteEverythingWithNetwork) && (
           <div className="session-modal__button-group">
-            <SessionButton
+            <BchatButton
               text={window.i18n('iAmSure')}
-              buttonColor={SessionButtonColor.Danger}
+              buttonColor={BchatButtonColor.Danger}
               onClick={() => {
                 if (deleteDeviceOnly) {
                   void onDeleteEverythingLocallyOnly();
@@ -242,9 +242,9 @@ export const DeleteAccountModal = () => {
               disabled={isLoading}
             />
 
-            <SessionButton
+            <BchatButton
               text={window.i18n('cancel')}
-              buttonColor={SessionButtonColor.Primary}
+              buttonColor={BchatButtonColor.Primary}
               onClick={() => {
                 dispatch(updateDeleteAccountModal(null));
               }}
@@ -255,6 +255,6 @@ export const DeleteAccountModal = () => {
 
         <BchatSpinner loading={isLoading} />
       </div>
-    </SessionWrapperModal>
+    </BchatWrapperModal>
   );
 };

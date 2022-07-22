@@ -7,9 +7,9 @@ import { BanType, updateBanOrUnbanUserModal } from '../../state/ducks/modalDialo
 import { SpacerSM } from '../basic/Text';
 import { getConversationController } from '../../session/conversations/ConversationController';
 import { ApiV2 } from '../../session/apis/open_group_api/opengroupV2';
-import { SessionWrapperModal } from '../SessionWrapperModal';
+import { BchatWrapperModal } from '../BchatWrapperModal';
 import { BchatSpinner } from '../basic/BchatSpinner';
-import { SessionButton, SessionButtonColor, BchatButtonType } from '../basic/SessionButton';
+import { BchatButton, BchatButtonColor, BchatButtonType } from '../basic/BchatButton';
 import { ConversationModel } from '../../models/conversation';
 import { useFocusMount } from '../../hooks/useFocusMount';
 import { useConversationPropsById } from '../../hooks/useParamSelector';
@@ -114,7 +114,7 @@ export const BanOrUnBanUserDialog = (props: {
   const buttonText = isBan ? i18n('banUser') : i18n('unbanUser');
 
   return (
-    <SessionWrapperModal
+    <BchatWrapperModal
       showExitIcon={true}
       title={title}
       onClose={() => {
@@ -133,9 +133,9 @@ export const BanOrUnBanUserDialog = (props: {
           value={wasGivenAPubkey ? inputTextToDisplay : inputBoxValue}
         />
         <Flex container={true}>
-          <SessionButton
+          <BchatButton
             buttonType={BchatButtonType.Square}
-            buttonColor={SessionButtonColor.Primary}
+            buttonColor={BchatButtonColor.Primary}
             onClick={banOrUnBanUser}
             text={buttonText}
             disabled={inProgress}
@@ -143,9 +143,9 @@ export const BanOrUnBanUserDialog = (props: {
           {isBan && (
             <>
               <SpacerSM />
-              <SessionButton
+              <BchatButton
                 buttonType={BchatButtonType.Square}
-                buttonColor={SessionButtonColor.Danger}
+                buttonColor={BchatButtonColor.Danger}
                 onClick={startBanAndDeleteAllSequence}
                 text={i18n('banUserAndDeleteAll')}
                 disabled={inProgress}
@@ -155,6 +155,6 @@ export const BanOrUnBanUserDialog = (props: {
         </Flex>
         <BchatSpinner loading={inProgress} />
       </Flex>
-    </SessionWrapperModal>
+    </BchatWrapperModal>
   );
 };

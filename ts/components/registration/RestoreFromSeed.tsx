@@ -1,6 +1,6 @@
 // import React,{useState} from 'react';
-// import { SessionButton, SessionButtonColor, BchatButtonType } from '../basic/SessionButton';
-// import { SessionInput } from '../basic/SessionInput';
+// import { BchatButton, BchatButtonColor, BchatButtonType } from '../basic/BchatButton';
+// import { BchatInput } from '../basic/BchatInput';
 
 // // const [seed,setSeed] = useState('');
 
@@ -12,7 +12,7 @@
 // }) => {
 //   return (
 //     // tslint:disable-next-line: use-simple-attributes
-//     <SessionInput
+//     <BchatInput
 //       label={window.i18n('recoveryPhrase')}
 //       type="password"
 //       value={props.recoveryPhrase}
@@ -83,10 +83,10 @@
 //         </div>
 //       </div>
 //         </div>
-//       <SessionButton
+//       <BchatButton
 //         onClick={props.nextScreen}
 //         buttonType={BchatButtonType.Brand}
-//         buttonColor={SessionButtonColor.Green}
+//         buttonColor={BchatButtonColor.Green}
 //         text={window.i18n('continue')}
 //         // disabled={!props.enableCompleteSignUp}
 //       />
@@ -95,7 +95,7 @@
 
 
 // import React from 'react';
-// import { SessionButton, SessionButtonColor, BchatButtonType } from '../basic/SessionButton';
+// import { BchatButton, BchatButtonColor, BchatButtonType } from '../basic/BchatButton';
 
 // const Icons=(props:any)=><div onClick={()=>props.iconfunc()} style={{background:`url(images/bchat/${props.icon}.svg) no-repeat`,
 //  width: "30px",
@@ -134,10 +134,10 @@
 //         </div>
         
 
-//         <SessionButton
+//         <BchatButton
 //             onClick={props.recoveryPhrase? props.onNext:null}
 //             buttonType={BchatButtonType.Brand}
-//             buttonColor={SessionButtonColor.Green}
+//             buttonColor={BchatButtonColor.Green}
 //             // text={window.i18n('getStarted')}
 //             text="Next"
 //         // disabled={!enableCompleteSignUp}

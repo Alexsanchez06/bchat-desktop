@@ -1,4 +1,4 @@
-import { SessionIconButton } from '../icon';
+import { BchatIconButton } from '../icon';
 import { animation, contextMenu, Item, Menu } from 'react-contexify';
 import { InputItem } from '../../session/utils/calling/CallManager';
 import { setFullScreenCall } from '../../state/ducks/call';
@@ -187,7 +187,7 @@ const ShowInFullScreenButton = ({ isFullScreen }: { isFullScreen: boolean }) => 
   };
 
   return (
-    <SessionIconButton
+    <BchatIconButton
       iconSize={60}
       iconPadding="20px"
       iconType="fullscreen"
@@ -211,7 +211,7 @@ export const HangUpButton = () => {
   };
 
   return (
-    <SessionIconButton
+    <BchatIconButton
       iconSize={60}
       iconPadding="20px"
       iconType="hangup"

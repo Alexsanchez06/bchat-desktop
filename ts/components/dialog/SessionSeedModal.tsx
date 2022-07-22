@@ -8,13 +8,12 @@ import { getPasswordHash } from '../../data/data';
 import { SpacerLG, SpacerSM, SpacerXS } from '../basic/Text';
 import { recoveryPhraseModal } from '../../state/ducks/modalDialog';
 import { useDispatch } from 'react-redux';
-// import { SessionButton, SessionButtonColor } from '../basic/SessionButton';
-import { SessionButton } from '../basic/SessionButton';
+import { BchatButton } from '../basic/BchatButton';
 
-// import { SessionWrapperModal } from '../SessionWrapperModal';
+// import { BchatWrapperModal } from '../SessionWrapperModal';
 import { getCurrentRecoveryPhrase } from '../../util/storage';
 
-// import { SessionIcon } from '../icon';
+// import { BchatIcon } from '../icon';
 
 interface PasswordProps {
   setPasswordValid: (val: boolean) => any;
@@ -76,8 +75,8 @@ const Password = (props: PasswordProps) => {
       <SpacerLG />
 
       <div className="session-modal__button-group">
-        <SessionButton text={i18n('cancel')} onClick={onClose} />
-        <SessionButton text={i18n('ok')} onClick={confirmPassword} />
+        <BchatButton text={i18n('cancel')} onClick={onClose} />
+        <BchatButton text={i18n('ok')} onClick={confirmPassword} />
       </div>
     </>
   );
@@ -128,9 +127,9 @@ const Seed = (props: SeedProps) => {
      >
       copy
     </div>
-        {/* <SessionButton
+        {/* <BchatButton
           text={i18n('editMenuCopy')}
-          buttonColor={SessionButtonColor.Green}
+          buttonColor={BchatButtonColor.Green}
           onClick={() => {
             copyRecoveryPhrase(recoveryPhrase);
           }}
@@ -193,7 +192,7 @@ const SessionSeedModalInner = (props: ModalInnerProps) => {
   return (
     <>
       {!loadingSeed && (
-        // <SessionWrapperModal
+        // <BchatWrapperModal
         //   title={i18n('showRecoveryPhrase')}
         //   onClose={onClose}
         //   showExitIcon={true}
@@ -206,7 +205,7 @@ const SessionSeedModalInner = (props: ModalInnerProps) => {
           ) : (
             <Seed recoveryPhrase={recoveryPhrase} onClickCopy={onClickOk} />
           )}</>
-        // </SessionWrapperModal>
+        // </BchatWrapperModal>
       )}
     </>
   );

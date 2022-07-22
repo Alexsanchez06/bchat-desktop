@@ -2,7 +2,7 @@ import { createSelector } from 'reselect';
 
 import { StateType } from '../reducer';
 import { OverlayMode, SectionStateType, SectionType } from '../ducks/section';
-import { SessionSettingCategory } from '../../components/settings/SessionSettings';
+import { BchatSettingCategory } from '../../components/settings/BchatSettings';
 
 export const getSection = (state: StateType): SectionStateType => state.section;
 
@@ -13,7 +13,7 @@ export const getFocusedSection = createSelector(
 
 export const getFocusedSettingsSection = createSelector(
   getSection,
-  (state: SectionStateType): SessionSettingCategory | undefined => state.focusedSettingsSection
+  (state: SectionStateType): BchatSettingCategory | undefined => state.focusedSettingsSection
 );
 
 export const getIsAppFocused = createSelector(

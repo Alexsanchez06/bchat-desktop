@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { SessionHtmlRenderer } from '../basic/SessionHTMLRenderer';
+import { BchatHtmlRenderer } from '../basic/SessionHTMLRenderer';
 import { updateConfirmModal } from '../../state/ducks/modalDialog';
 import { SpacerLG } from '../basic/Text';
-import { SessionButton, SessionButtonColor } from '../basic/SessionButton';
+import { BchatButton, BchatButtonColor } from '../basic/BchatButton';
 import { BchatSpinner } from '../basic/BchatSpinner';
-import { SessionIcon, SessionIconSize, BchatIconType } from '../icon';
-import { SessionWrapperModal } from '../SessionWrapperModal';
+import { BchatIcon, BchatIconSize, BchatIconType } from '../icon';
+import { BchatWrapperModal } from '../BchatWrapperModal';
 
 export interface SessionConfirmDialogProps {
   message?: string;
@@ -29,10 +29,10 @@ export interface SessionConfirmDialogProps {
   okText?: string;
   cancelText?: string;
   hideCancel?: boolean;
-  okTheme?: SessionButtonColor;
-  closeTheme?: SessionButtonColor;
+  okTheme?: BchatButtonColor;
+  closeTheme?: BchatButtonColor;
   sessionIcon?: BchatIconType;
-  iconSize?: SessionIconSize;
+  iconSize?: BchatIconSize;
   shouldShowConfirm?: boolean | undefined;
   showExitIcon?: boolean | undefined;
 }
@@ -42,8 +42,8 @@ export const SessionConfirm = (props: SessionConfirmDialogProps) => {
     title = '',
     message = '',
     messageSub = '',
-    okTheme = SessionButtonColor.Primary,
-    closeTheme = SessionButtonColor.Primary,
+    okTheme = BchatButtonColor.Primary,
+    closeTheme = BchatButtonColor.Primary,
     onClickOk,
     onClickClose,
     hideCancel = false,
@@ -100,7 +100,7 @@ export const SessionConfirm = (props: SessionConfirmDialogProps) => {
   };
 
   return (
-    <SessionWrapperModal
+    <BchatWrapperModal
       title={title}
       onClose={onClickClose}
       showExitIcon={showExitIcon}
@@ -111,13 +111,13 @@ export const SessionConfirm = (props: SessionConfirmDialogProps) => {
       <div className="session-modal__centered">
         {sessionIcon && iconSize && (
           <>
-            <SessionIcon iconType={sessionIcon} iconSize={iconSize} />
+            <BchatIcon iconType={sessionIcon} iconSize={iconSize} />
             <SpacerLG />
           </>
         )}
 
-        <SessionHtmlRenderer tag="span" className={messageSubText} html={message} />
-        <SessionHtmlRenderer
+        <BchatHtmlRenderer tag="span" className={messageSubText} html={message} />
+        <BchatHtmlRenderer
           tag="span"
           className="session-confirm-sub-message subtle"
           html={messageSub}
@@ -127,14 +127,14 @@ export const SessionConfirm = (props: SessionConfirmDialogProps) => {
       </div>
 
       <div className="session-modal__button-group">
-        <SessionButton
+        <BchatButton
           text={okText}
           buttonColor={okTheme}
           onClick={onClickOkHandler}
           dataTestId="session-confirm-ok-button"
         />
         {!hideCancel && (
-          <SessionButton
+          <BchatButton
             text={cancelText}
             buttonColor={closeTheme}
             onClick={onClickCancelHandler}
@@ -142,6 +142,6 @@ export const SessionConfirm = (props: SessionConfirmDialogProps) => {
           />
         )}
       </div>
-    </SessionWrapperModal>
+    </BchatWrapperModal>
   );
 };

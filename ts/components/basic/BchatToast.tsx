@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { Flex } from '../basic/Flex';
+import { Flex } from './Flex';
 import styled from 'styled-components';
 import { noop } from 'lodash';
-import { SessionIcon, BchatIconType } from '../icon';
+import { BchatIcon, BchatIconType } from '../icon';
 
-export enum SessionToastType {
+export enum BchatToastType {
   Info = 'info',
   Success = 'success',
   Warning = 'warning',
@@ -15,7 +15,7 @@ export enum SessionToastType {
 type Props = {
   title: string;
   id?: string;
-  type?: SessionToastType;
+  type?: BchatToastType;
   icon?: BchatIconType;
   description?: string;
   closeToast?: any;
@@ -54,16 +54,16 @@ export const SessionToast = (props: Props) => {
   let toastIcon = icon || undefined;
   if (!toastIcon) {
     switch (type) {
-      case SessionToastType.Info:
+      case BchatToastType.Info:
         toastIcon = 'info';
         break;
-      case SessionToastType.Success:
+      case BchatToastType.Success:
         toastIcon = 'check';
         break;
-      case SessionToastType.Error:
+      case BchatToastType.Error:
         toastIcon = 'error';
         break;
-      case SessionToastType.Warning:
+      case BchatToastType.Warning:
         toastIcon = 'warning';
         break;
       default:
@@ -80,7 +80,7 @@ export const SessionToast = (props: Props) => {
       data-testid="session-toast"
     >
       <IconDiv>
-        <SessionIcon iconType={toastIcon} iconSize={toastIconSize} />
+        <BchatIcon iconType={toastIcon} iconSize={toastIconSize} />
       </IconDiv>
       <Flex
         container={true}

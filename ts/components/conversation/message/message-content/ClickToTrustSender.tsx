@@ -4,8 +4,8 @@ import { getLastMessagesByConversation, getMessageById } from '../../../../data/
 import { getConversationController } from '../../../../session/conversations';
 import { AttachmentDownloads } from '../../../../session/utils';
 import { updateConfirmModal } from '../../../../state/ducks/modalDialog';
-import { SessionButtonColor } from '../../../basic/SessionButton';
-import { SessionIcon } from '../../../icon';
+import { BchatButtonColor } from '../../../basic/BchatButton';
+import { BchatIcon } from '../../../icon';
 
 const StyledTrustSenderUI = styled.div`
   padding-inline: var(--margins-sm);
@@ -38,7 +38,7 @@ export const ClickToTrustSender = (props: { messageId: string }) => {
         message: window.i18n('trustThisContactDialogDescription', [
           convo.getContactProfileNameOrShortenedPubKey(),
         ]),
-        okTheme: SessionButtonColor.Green,
+        okTheme: BchatButtonColor.Green,
         onClickOk: async () => {
           convo.set({ isTrustedForAttachmentDownload: true });
           await convo.commit();
@@ -106,7 +106,7 @@ export const ClickToTrustSender = (props: { messageId: string }) => {
 
   return (
     <StyledTrustSenderUI onClick={openConfirmationModal}>
-      <SessionIcon iconSize="small" iconType="gallery" />
+      <BchatIcon iconSize="small" iconType="gallery" />
       <ClickToDownload>{window.i18n('clickToTrustContact')}</ClickToDownload>
     </StyledTrustSenderUI>
   );

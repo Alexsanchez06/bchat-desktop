@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { clearSearch, search, updateSearchTerm } from '../state/ducks/search';
 import { getConversationsCount } from '../state/selectors/conversations';
 import { cleanSearchTerm } from '../util/cleanSearchTerm';
-import { SessionIconButton } from './icon';
+import { BchatIconButton } from './icon';
 
 const doTheSearch = (dispatch: Dispatch<any>, cleanedTerm: string) => {
   dispatch(search(cleanedTerm));
@@ -32,7 +32,7 @@ function updateSearch(dispatch: Dispatch<any>, searchTerm: string) {
 
   debouncedSearch(dispatch, searchTerm);
 }
-export const SessionSearchInput = () => {
+export const BchatSearchInput = () => {
   const [currentSearchTerm, setCurrentSearchTerm] = useState('');
   const dispatch = useDispatch();
 
@@ -45,7 +45,7 @@ export const SessionSearchInput = () => {
 
   return (
     <div className="session-search-input">
-      <SessionIconButton iconSize="medium" iconType="search" />
+      <BchatIconButton iconSize="medium" iconType="search" />
       <input
         value={currentSearchTerm}
         onChange={e => {
@@ -56,7 +56,7 @@ export const SessionSearchInput = () => {
         placeholder={window.i18n('searchFor...')}
       />
       {!!currentSearchTerm.length && (
-        <SessionIconButton
+        <BchatIconButton
           iconSize="tiny"
           iconType="exit"
           onClick={() => {

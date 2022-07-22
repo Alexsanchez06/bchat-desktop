@@ -7,8 +7,8 @@ import { recoveryPhraseModal } from '../../state/ducks/modalDialog';
 import { Flex } from '../basic/Flex';
 import { getFocusedSection, getOverlayMode } from '../../state/selectors/section';
 import { SectionType, setOverlayMode } from '../../state/ducks/section';
-import { SessionButton, BchatButtonType } from '../basic/SessionButton';
-import { SessionIcon, SessionIconButton } from '../icon';
+import { BchatButton, BchatButtonType } from '../basic/BchatButton';
+import { BchatIcon, BchatIconButton } from '../icon';
 import { isSignWithRecoveryPhrase } from '../../util/storage';
 
 import { Avatar, AvatarSize } from '../avatar/Avatar';
@@ -84,7 +84,7 @@ export const LeftPaneSectionHeader = (props: { buttonClicked?: any }) => {
     }
     else{
       return <div style={{marginLeft:"20px",color:"white"}}>
-         <SessionIcon  
+         <BchatIcon  
          iconType={"gear"}
          iconColor={"#fff"}
          iconSize={"large"}
@@ -98,7 +98,7 @@ export const LeftPaneSectionHeader = (props: { buttonClicked?: any }) => {
 // function moon ()
 // {
 //   if (SectionType.Settings ===focusedSection) {
-//     return<SessionIconButton
+//     return<BchatIconButton
 //   iconSize="large"
 //   iconType={'moon'}
 //   dataTestId="theme-section"
@@ -113,7 +113,7 @@ export const LeftPaneSectionHeader = (props: { buttonClicked?: any }) => {
     <Flex flexDirection="column">
       <div className="module-left-pane__header"> 
         {showBackButton && (
-          <SessionIconButton
+          <BchatIconButton
             onClick={() => {
               dispatch(setOverlayMode(undefined));
             }}
@@ -130,9 +130,9 @@ export const LeftPaneSectionHeader = (props: { buttonClicked?: any }) => {
 
           {/* {moon()} */}
         {isMessageSection && !isMessageRequestOverlay && (
-          <SessionButton onClick={props.buttonClicked} dataTestId="new-conversation-button">
-            <SessionIcon iconType="plus" iconSize="small" iconColor="white" />
-          </SessionButton>
+          <BchatButton onClick={props.buttonClicked} dataTestId="new-conversation-button">
+            <BchatIcon iconType="plus" iconSize="small" iconColor="white" />
+          </BchatButton>
         )}
       </div>
       {/* {showRecoveryPhrasePrompt && <LeftPaneBanner />} */}
@@ -151,7 +151,7 @@ const BannerInner = () => {
   return (
     <StyledBannerInner>
       <p>{window.i18n('recoveryPhraseRevealMessage')}</p>
-      <SessionButton
+      <BchatButton
         buttonType={BchatButtonType.Default}
         text={window.i18n('recoveryPhraseRevealButtonText')}
         onClick={showRecoveryPhraseModal}

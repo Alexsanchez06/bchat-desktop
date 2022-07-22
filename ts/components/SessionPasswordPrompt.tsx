@@ -1,10 +1,10 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import { SessionIcon } from './icon';
+import { BchatIcon } from './icon';
 import { withTheme } from 'styled-components';
 import autoBind from 'auto-bind';
-import { SessionButton, SessionButtonColor, BchatButtonType } from './basic/SessionButton';
+import { BchatButton, BchatButtonColor, BchatButtonType } from './basic/BchatButton';
 import { Constants } from '../session';
 import { BchatSpinner } from './basic/BchatSpinner';
 
@@ -70,9 +70,9 @@ class BchatPasswordPromptInner extends React.PureComponent<{}, State> {
       />
     );
     const infoIcon = this.state.clearDataView ? (
-      <SessionIcon iconType="warning" iconSize={35} iconColor="#ce0000" />
+      <BchatIcon iconType="warning" iconSize={35} iconColor="#ce0000" />
     ) : (
-      <SessionIcon iconType="lock" iconSize={35} iconColor={Constants.UI.COLORS.GREEN} />
+      <BchatIcon iconType="lock" iconSize={35} iconColor={Constants.UI.COLORS.GREEN} />
     );
     const errorSection = !this.state.clearDataView && (
       <div className="password-prompt-error-section">
@@ -163,18 +163,18 @@ class BchatPasswordPromptInner extends React.PureComponent<{}, State> {
       <div className={classNames(showResetElements && 'button-group')}>
         {showResetElements && (
           <>
-            <SessionButton
+            <BchatButton
               text="Reset Database"
               buttonType={BchatButtonType.BrandOutline}
-              buttonColor={SessionButtonColor.Danger}
+              buttonColor={BchatButtonColor.Danger}
               onClick={this.initClearDataView}
             />
           </>
         )}
-        <SessionButton
+        <BchatButton
           text={window.i18n('unlock')}
           buttonType={BchatButtonType.BrandOutline}
-          buttonColor={SessionButtonColor.Green}
+          buttonColor={BchatButtonColor.Green}
           onClick={this.initLogin}
         />
       </div>
@@ -184,19 +184,19 @@ class BchatPasswordPromptInner extends React.PureComponent<{}, State> {
   private renderClearDataViewButtons(): JSX.Element {
     return (
       <div className="button-group">
-        <SessionButton
+        <BchatButton
           text={window.i18n('cancel')}
           buttonType={BchatButtonType.Default}
-          buttonColor={SessionButtonColor.Primary}
+          buttonColor={BchatButtonColor.Primary}
           onClick={() => {
             this.setState({ clearDataView: false });
           }}
         />
 
-        <SessionButton
+        <BchatButton
           text={window.i18n('clearAllData')}
           buttonType={BchatButtonType.Default}
-          buttonColor={SessionButtonColor.Danger}
+          buttonColor={BchatButtonColor.Danger}
           onClick={window.clearLocalData}
         />
       </div>

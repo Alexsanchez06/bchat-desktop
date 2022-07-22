@@ -4,11 +4,11 @@ import { useAppIsFocused } from '../hooks/useAppFocused';
 import { getFocusedSettingsSection } from '../state/selectors/section';
 
 import { SmartBchatConversation } from '../state/smart/SessionConversation';
-import { SessionSettingsView } from './settings/SessionSettings';
+import { BchatSettingsView } from './settings/BchatSettings';
 
-const FilteredSettingsView = SessionSettingsView as any;
+const FilteredSettingsView = BchatSettingsView as any;
 
-export const SessionMainPanel = () => {
+export const BchatMainPanel = () => {
   const focusedSettingsSection = useSelector(getFocusedSettingsSection);
   const isSettingsView = focusedSettingsSection !== undefined;
 

@@ -12,7 +12,7 @@ import { PubKey } from '../../session/types';
 import { ToastUtils, UserUtils } from '../../session/utils';
 import { resetSelectedMessageIds } from '../../state/ducks/conversations';
 import { updateConfirmModal } from '../../state/ducks/modalDialog';
-import { SessionButtonColor } from '../../components/basic/SessionButton';
+import { BchatButtonColor } from '../../components/basic/BchatButton';
 
 /**
  * Deletes messages for everyone in a 1-1 or everyone in a closed group conversation.
@@ -346,7 +346,7 @@ export async function deleteMessagesByIdForEveryone(
         ? window.i18n('deleteMessagesQuestion', [messageCount.toString()])
         : window.i18n('deleteMessageQuestion'),
       okText: window.i18n('deleteForEveryone'),
-      okTheme: SessionButtonColor.Danger,
+      okTheme: BchatButtonColor.Danger,
       onClickOk: async () => {
         await doDeleteSelectedMessages({ selectedMessages, conversation, deleteForEveryone: true });
 
@@ -375,7 +375,7 @@ export async function deleteMessagesById(messageIds: Array<string>, conversation
         ? window.i18n('deleteMessagesQuestion', [messageCount.toString()])
         : window.i18n('deleteMessageQuestion'),
       okText: window.i18n('delete'),
-      okTheme: SessionButtonColor.Danger,
+      okTheme: BchatButtonColor.Danger,
       onClickOk: async () => {
         await doDeleteSelectedMessages({
           selectedMessages,

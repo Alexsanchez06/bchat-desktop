@@ -2,9 +2,9 @@ import React from 'react';
 // import { AccentText } from './AccentText';
 
 import { RegistrationStages } from './RegistrationStages';
-// import { SessionIcon } from '../icon';
+// import { BchatIcon } from '../icon';
 import { SessionToastContainer } from '../SessionToastContainer';
-import { SessionTheme } from '../../state/ducks/SessionTheme';
+import { BchatTheme } from '../../state/ducks/BchatTheme';
 import { Flex } from '../basic/Flex';
 import { setSignInByLinking } from '../../util/storage';
 
@@ -15,7 +15,7 @@ export const SessionRegistrationView = () => {
   return (
     <div className="session-fullscreen">
       <div className="session-full-screen-flow session-fullscreen">
-        <SessionTheme>
+        <BchatTheme>
           <div style={{background:"url(images/bchat/doodle_white.svg)",width:"100%",height:"100%"}}>
           <Flex
             flexDirection="row"
@@ -46,7 +46,7 @@ export const SessionRegistrationView = () => {
           >
             <Flex container={true} margin="auto" alignItems="center" flexDirection="column">
               <SessionToastContainer />
-              {/* <SessionIcon iconSize={150} iconType="brand" /> */}
+              {/* <BchatIcon iconSize={150} iconType="brand" /> */}
 
               {/* <AccentText /> */}
               <RegistrationStages />
@@ -54,7 +54,7 @@ export const SessionRegistrationView = () => {
           </Flex>
           </Flex>
           </div>
-        </SessionTheme>
+        </BchatTheme>
       </div>
     </div>
   );

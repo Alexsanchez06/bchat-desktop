@@ -2,7 +2,7 @@ import React from 'react';
 import { Slide, ToastContainer, ToastContainerProps } from 'react-toastify';
 import styled from 'styled-components';
 
-const SessionToastContainerPrivate = () => {
+const BchatToastContainerPrivate = () => {
   return (
     <WrappedToastContainer
       position="bottom-right"
@@ -30,7 +30,7 @@ const WrappedToastContainer = ({
 );
 
 // tslint:disable-next-line: no-default-export
-export const SessionToastContainer = styled(SessionToastContainerPrivate).attrs({
+export const SessionToastContainer = styled(BchatToastContainerPrivate).attrs({
   // custom props
 })`
   .Toastify__toast-container {

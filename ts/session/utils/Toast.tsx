@@ -1,15 +1,15 @@
 import React from 'react';
 import { toast } from 'react-toastify';
-import { SessionToast, SessionToastType } from '../../components/basic/SessionToast';
+import { SessionToast, BchatToastType } from '../../components/basic/BchatToast';
 import { BchatIconType } from '../../components/icon';
-import { SessionSettingCategory } from '../../components/settings/SessionSettings';
+import { BchatSettingCategory } from '../../components/settings/BchatSettings';
 import { SectionType, showLeftPaneSection, showSettingsSection } from '../../state/ducks/section';
 
 // if you push a toast manually with toast...() be sure to set the type attribute of the SessionToast component
 export function pushToastError(id: string, title: string, description?: string) {
   console.log("TOAST:ERROR",id,title,description)
   toast.error(
-    <SessionToast title={title} description={description} type={SessionToastType.Error} />,
+    <SessionToast title={title} description={description} type={BchatToastType.Error} />,
     { toastId: id, updateId: id }
   );
 }
@@ -17,7 +17,7 @@ export function pushToastError(id: string, title: string, description?: string) 
 export function pushToastWarning(id: string, title: string, description?: string) {
   console.log("TOAST:WARN",id,title,description)
   toast.warning(
-    <SessionToast title={title} description={description} type={SessionToastType.Warning} />,
+    <SessionToast title={title} description={description} type={BchatToastType.Warning} />,
     { toastId: id, updateId: id }
   );
 }
@@ -33,7 +33,7 @@ export function pushToastInfo(
     <SessionToast
       title={title}
       description={description}
-      type={SessionToastType.Info}
+      type={BchatToastType.Info}
       onToastClick={onToastClick}
     />,
     { toastId: id, updateId: id, delay }
@@ -50,7 +50,7 @@ export function pushToastSuccess(
     <SessionToast
       title={title}
       description={description}
-      type={SessionToastType.Success}
+      type={BchatToastType.Success}
       icon={icon}
     />,
     { toastId: id, updateId: id }
@@ -145,7 +145,7 @@ export function pushedMissedCall(conversationName: string) {
 
 const openPrivacySettings = () => {
   window.inboxStore?.dispatch(showLeftPaneSection(SectionType.Settings));
-  window.inboxStore?.dispatch(showSettingsSection(SessionSettingCategory.Privacy));
+  window.inboxStore?.dispatch(showSettingsSection(BchatSettingCategory.Privacy));
 };
 
 export function pushedMissedCallCauseOfPermission(conversationName: string) {
@@ -154,7 +154,7 @@ export function pushedMissedCallCauseOfPermission(conversationName: string) {
     <SessionToast
       title={window.i18n('callMissedTitle')}
       description={window.i18n('callMissedCausePermission', [conversationName])}
-      type={SessionToastType.Info}
+      type={BchatToastType.Info}
       onToastClick={openPrivacySettings}
     />,
     { toastId: id, updateId: id, autoClose: 10000 }
@@ -185,7 +185,7 @@ export function pushAudioPermissionNeeded() {
     window.i18n('audioPermissionNeeded'),
     () => {
       window.inboxStore?.dispatch(showLeftPaneSection(SectionType.Settings));
-      window.inboxStore?.dispatch(showSettingsSection(SessionSettingCategory.Privacy));
+      window.inboxStore?.dispatch(showSettingsSection(BchatSettingCategory.Privacy));
     }
   );
 }

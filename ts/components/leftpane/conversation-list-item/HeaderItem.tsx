@@ -13,7 +13,7 @@ import { SectionType } from '../../../state/ducks/section';
 import { isSearching } from '../../../state/selectors/search';
 import { getFocusedSection } from '../../../state/selectors/section';
 import { Timestamp } from '../../conversation/Timestamp';
-import { SessionIcon } from '../../icon';
+import { BchatIcon } from '../../icon';
 import { ContextConversationId } from './ConversationListItem';
 import { UserItem } from './UserItem';
 
@@ -30,11 +30,11 @@ const NotificationSettingIcon = (props: { isMessagesSection: boolean }) => {
       return null;
     case 'disabled':
       return (
-        <SessionIcon iconType="mute" iconColor={'var(--color-text-subtle)'} iconSize="small" />
+        <BchatIcon iconType="mute" iconColor={'var(--color-text-subtle)'} iconSize="small" />
       );
     case 'mentions_only':
       return (
-        <SessionIcon iconType="bell" iconColor={'var(--color-text-subtle)'} iconSize="small" />
+        <BchatIcon iconType="bell" iconColor={'var(--color-text-subtle)'} iconSize="small" />
       );
     default:
       return null;
@@ -70,7 +70,7 @@ const ListItemIcons = () => {
 
   const pinIcon =
     isMessagesSection && isPinned ? (
-      <SessionIcon iconType="pin" iconColor={'var(--color-text-subtle)'} iconSize="small" />
+      <BchatIcon iconType="pin" iconColor={'var(--color-text-subtle)'} iconSize="small" />
     ) : null;
   return (
     <StyledConversationListItemIconWrapper>

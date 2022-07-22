@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 
-// import { SessionButton, SessionButtonColor, BchatButtonType } from '../../basic/SessionButton';
+// import { BchatButton, BchatButtonColor, BchatButtonType } from '../../basic/BchatButton';
 import { BchatIdEditable } from '../../basic/BchatIdEditable';
 import { BchatSpinner } from '../../basic/BchatSpinner';
 import { MemberListItem } from '../../MemberListItem';
@@ -119,8 +119,8 @@ export const OverlayClosedGroup = () => {
        onClick={onEnterPressed}
       >{buttonText}</button>
  
-      {/* <SessionButton
-        buttonColor={SessionButtonColor.Green}
+      {/* <BchatButton
+        buttonColor={BchatButtonColor.Green}
         buttonType={BchatButtonType.BrandOutline}
         text={buttonText}
         disabled={noContactsForClosedGroup}

@@ -3,9 +3,9 @@ import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 import { getShowScrollButton } from '../state/selectors/conversations';
 
-import { SessionIconButton } from './icon';
+import { BchatIconButton } from './icon';
 
-const SessionScrollButtonDiv = styled.div`
+const BchatScrollButtonDiv = styled.div`
   position: fixed;
   z-index: 2;
   right: 60px;
@@ -16,14 +16,14 @@ export const BchatScrollButton = (props: { onClickScrollBottom: () => void }) =>
   const show = useSelector(getShowScrollButton);
 
   return (
-    <SessionScrollButtonDiv>
-      <SessionIconButton
+    <BchatScrollButtonDiv>
+      <BchatIconButton
         iconType="chevron"
         iconSize={'huge'}
         isHidden={!show}
         onClick={props.onClickScrollBottom}
         dataTestId="scroll-to-bottom-button"
       />
-    </SessionScrollButtonDiv>
+    </BchatScrollButtonDiv>
   );
 };

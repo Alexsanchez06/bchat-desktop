@@ -24,7 +24,7 @@ import { getMessageQueue } from '../..';
 import { MessageSender } from '../../sending';
 import { DURATION } from '../../constants';
 import { hasConversationOutgoingMessage } from '../../../data/data';
-import { getCallMediaPermissionsSettings } from '../../../components/settings/SessionSettings';
+import { getCallMediaPermissionsSettings } from '../../../components/settings/BchatSettings';
 import { PnServer } from '../../apis/push_notification_api';
 import { getNowWithNetworkOffset } from '../../apis/snode_api/SNodeAPI';
 import { approveConvoAndSendResponse } from '../../../interactions/conversationInteractions';
@@ -125,7 +125,7 @@ let isSettingRemoteAnswerPending = false;
 let lastOutgoingOfferTimestamp = -Infinity;
 
 /**
- * This array holds all of the ice servers Session can contact.
+ * This array holds all of the ice servers Bchat can contact.
  * They are all contacted at the same time, so before triggering the request, we get only a subset of those, randomly
  */
 const iceServersFullArray = [
@@ -820,7 +820,7 @@ export async function USER_acceptIncomingCallRequest(fromSender: string) {
       new RTCSessionDescription({ sdp: sdps[0], type: 'offer' })
     );
   } catch (e) {
-    window.log?.error(`Error setting RTC Session Description ${e}`);
+    window.log?.error(`Error setting RTC Bchat Description ${e}`);
   }
 
   const lastCandidatesFromSender = findLastMessageTypeFromSender(

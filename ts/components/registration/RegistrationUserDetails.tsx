@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import React from 'react';
-import { SessionInput } from '../basic/SessionInput';
+import { BchatInput } from '../basic/BchatInput';
 import { MAX_USERNAME_LENGTH } from './RegistrationStages';
 
 const DisplayNameInput = (props: {
@@ -11,7 +11,7 @@ const DisplayNameInput = (props: {
 }) => {
   return (
     // tslint:disable-next-line: use-simple-attributes
-    <SessionInput
+    <BchatInput
       autoFocus={props.stealAutoFocus || false}
       label={window.i18n('displayName')}
       type="text"
@@ -33,7 +33,7 @@ const RecoveryPhraseInput = (props: {
 }) => {
   return (
     // tslint:disable-next-line: use-simple-attributes
-    <SessionInput
+    <BchatInput
       label={window.i18n('recoveryPhrase')}
       type="password"
       value={props.recoveryPhrase}

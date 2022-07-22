@@ -16,7 +16,7 @@ const DEFAULT_JPEG_QUALITY = 0.85;
 
 import { BchatMessagesListContainer } from './BchatMessagesListContainer';
 
-import { SessionFileDropzone } from './SessionFileDropzone';
+import { BchatFileDropzone } from './BchatFileDropzone';
 
 import { InConversationCallContainer } from '../calling/InConversationCallContainer';
 import { SplitViewContainer } from '../SplitViewContainer';
@@ -33,16 +33,15 @@ import {
   updateMentionsMembers,
 } from '../../state/ducks/conversations';
 import { updateConfirmModal } from '../../state/ducks/modalDialog';
-import { SessionTheme } from '../../state/ducks/SessionTheme';
+import { BchatTheme } from '../../state/ducks/BchatTheme';
 import { addStagedAttachmentsInConversation } from '../../state/ducks/stagedAttachments';
 import { MIME } from '../../types';
 import { AttachmentTypeWithPath } from '../../types/Attachment';
 import { arrayBufferToObjectURL, AttachmentUtil, GoogleChrome } from '../../util';
-import { SessionButtonColor } from '../basic/SessionButton';
+import { BchatButtonColor } from '../basic/BchatButton';
 import { MessageView } from '../MainViewController';
 import { ConversationHeaderWithDetails } from './ConversationHeader';
 import { MessageDetail } from './message/message-item/MessageDetail';
-// import { SessionRightPanelWithDetails } from './SessionRightPanel';
 import {
   makeImageThumbnailBuffer,
   makeVideoScreenshot,
@@ -54,7 +53,7 @@ import { ConversationMessageRequestButtons } from './ConversationRequestButtons'
 import { ConversationRequestinfo } from './ConversationRequestInfo';
 import { getCurrentRecoveryPhrase } from '../../util/storage';
 import loadImage from 'blueimp-load-image';
-import { SessionRightPanelWithDetails } from './SessionRightPanel';
+import { BchatRightPanelWithDetails } from './SessionRightPanel';
 // import { isRightPanelShowing } from '../../state/selectors/conversations';
 // tslint:disable: jsx-curly-spacing
 
@@ -190,7 +189,7 @@ export class SessionConversation extends React.Component<Props, State> {
         updateConfirmModal({
           title: window.i18n('sendRecoveryPhraseTitle'),
           message: window.i18n('sendRecoveryPhraseMessage'),
-          okTheme: SessionButtonColor.Danger,
+          okTheme: BchatButtonColor.Danger,
           onClickOk: () => {
             void sendAndScroll();
           },
@@ -229,7 +228,7 @@ export class SessionConversation extends React.Component<Props, State> {
     const selectionMode = selectedMessages.length > 0;
 
     return (
-      <SessionTheme>
+      <BchatTheme>
 
         <div className="conversation-header">
           <ConversationHeaderWithDetails />
@@ -263,7 +262,7 @@ export class SessionConversation extends React.Component<Props, State> {
               disableTop={!this.props.hasOngoingCallWithFocusedConvo}
             />
 
-            {isDraggingFile && <SessionFileDropzone />}
+            {isDraggingFile && <BchatFileDropzone />}
           </div>
 
           <ConversationRequestinfo />
@@ -278,10 +277,10 @@ export class SessionConversation extends React.Component<Props, State> {
         <div
           className={classNames('conversation-item__options-pane', isRightPanelShowing && 'show')}
         >
-          <SessionRightPanelWithDetails />
+          <BchatRightPanelWithDetails />
         </div>
         
-      </SessionTheme>
+      </BchatTheme>
     );
   }
 

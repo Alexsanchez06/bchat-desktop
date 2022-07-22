@@ -5,9 +5,9 @@ import { ToastUtils, UserUtils } from '../../session/utils';
 import _ from 'lodash';
 import { SpacerLG, Text } from '../basic/Text';
 import { updateGroupMembersModal } from '../../state/ducks/modalDialog';
-import { SessionButton, SessionButtonColor } from '../basic/SessionButton';
+import { BchatButton, BchatButtonColor } from '../basic/BchatButton';
 import { MemberListItem } from '../MemberListItem';
-import { SessionWrapperModal } from '../SessionWrapperModal';
+import { BchatWrapperModal } from '../BchatWrapperModal';
 import { useDispatch } from 'react-redux';
 import { useConversationPropsById, useWeAreAdmin } from '../../hooks/useParamSelector';
 // tslint:disable-next-line: no-submodule-imports
@@ -224,7 +224,7 @@ export const UpdateGroupMembersDialog = (props: Props) => {
   const titleText = window.i18n('updateGroupDialogTitle', [convoProps.name || '']);
 
   return (
-    <SessionWrapperModal title={titleText} onClose={closeDialog}>
+    <BchatWrapperModal title={titleText} onClose={closeDialog}>
       <div className="group-member-list__selection">
         <ClassicMemberList
           convoId={conversationId}
@@ -239,11 +239,11 @@ export const UpdateGroupMembersDialog = (props: Props) => {
       <SpacerLG />
 
       <div className="session-modal__button-group">
-        <SessionButton text={cancelText} onClick={closeDialog} />
+        <BchatButton text={cancelText} onClick={closeDialog} />
         {weAreAdmin && (
-          <SessionButton text={okText} onClick={onClickOK} buttonColor={SessionButtonColor.Green} />
+          <BchatButton text={okText} onClick={onClickOK} buttonColor={BchatButtonColor.Green} />
         )}
       </div>
-    </SessionWrapperModal>
+    </BchatWrapperModal>
   );
 };

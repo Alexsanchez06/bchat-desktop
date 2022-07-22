@@ -1,4 +1,4 @@
-import { SessionSettingCategory } from '../../components/settings/SessionSettings';
+import { BchatSettingCategory } from '../../components/settings/BchatSettings';
 
 export const FOCUS_SECTION = 'FOCUS_SECTION';
 export const FOCUS_SETTINGS_SECTION = 'FOCUS_SETTINGS_SECTION';
@@ -27,7 +27,7 @@ type FocusSectionActionType = {
 
 type FocusSettingsSectionActionType = {
   type: 'FOCUS_SETTINGS_SECTION';
-  payload: SessionSettingCategory;
+  payload: BchatSettingCategory;
 };
 
 type IsAppFocusedActionType = {
@@ -72,7 +72,7 @@ export function setOverlayMode(overlayMode: OverlayMode): OverlayModeActionType 
 }
 
 export function showSettingsSection(
-  category: SessionSettingCategory
+  category: BchatSettingCategory
 ): FocusSettingsSectionActionType {
   return {
     type: FOCUS_SETTINGS_SECTION,
@@ -95,7 +95,7 @@ export const initialSectionState: SectionStateType = {
 
 export type SectionStateType = {
   focusedSection: SectionType;
-  focusedSettingsSection?: SessionSettingCategory;
+  focusedSettingsSection?: BchatSettingCategory;
   isAppFocused: boolean;
   overlayMode: OverlayMode;
 };
@@ -136,7 +136,7 @@ export const reducer = (
       return {
         ...state,
         focusedSection: payload,
-        focusedSettingsSection: SessionSettingCategory.Appearance,
+        focusedSettingsSection: BchatSettingCategory.Appearance,
       };
     case FOCUS_SETTINGS_SECTION:
       return {

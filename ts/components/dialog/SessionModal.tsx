@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
-import { SessionButtonColor, BchatButtonType } from '../basic/SessionButton';
-import { SessionIconButton, BchatIconType } from '../icon';
+import { BchatButtonColor, BchatButtonType } from '../basic/BchatButton';
+import { BchatIconButton, BchatIconType } from '../icon';
 
 interface Props {
   title: string;
@@ -17,7 +17,7 @@ interface Props {
   }>;
   headerButtons?: Array<{
     buttonType: BchatButtonType;
-    buttonColor: SessionButtonColor;
+    buttonColor: BchatButtonColor;
     text: string;
     onClick?: any;
   }>;
@@ -78,7 +78,7 @@ export class SessionModal extends React.PureComponent<Props, State> {
             <div className={classNames('session-modal__header', headerReverse && 'reverse')}>
               <div className="session-modal__header__close">
                 {showExitIcon ? (
-                  <SessionIconButton
+                  <BchatIconButton
                     iconType="exit"
                     iconSize="small"
                     onClick={this.close}
@@ -91,7 +91,7 @@ export class SessionModal extends React.PureComponent<Props, State> {
                 {headerIconButtons
                   ? headerIconButtons.map((iconItem: any) => {
                       return (
-                        <SessionIconButton
+                        <BchatIconButton
                           key={iconItem.iconType}
                           iconType={iconItem.iconType}
                           iconSize={'large'}

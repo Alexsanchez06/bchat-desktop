@@ -1,5 +1,5 @@
 import React from 'react';
-import { SessionButton, SessionButtonColor, BchatButtonType } from '../basic/SessionButton';
+import { BchatButton, BchatButtonColor, BchatButtonType } from '../basic/BchatButton';
 
 export const Icons = (props:any)=>
 <div onClick={()=>props.iconfunc()} style={{
@@ -53,10 +53,10 @@ export const DisplaySeed = (props: any) => (
         </>
         
 
-        <SessionButton
+        <BchatButton
             onClick={props.recoveryPhrase? props.onNext:null}
             buttonType={BchatButtonType.Brand}
-            buttonColor={SessionButtonColor.Green}
+            buttonColor={BchatButtonColor.Green}
             // text={window.i18n('getStarted')}
             text="Next"
         // disabled={!enableCompleteSignUp}

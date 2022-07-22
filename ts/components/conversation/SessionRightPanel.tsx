@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { SessionIconButton } from '../icon';
+import { BchatIconButton } from '../icon';
 import _ from 'lodash';
 // tslint:disable-next-line: no-submodule-imports
 import useInterval from 'react-use/lib/useInterval';
@@ -24,8 +24,8 @@ import { getSelectedConversation, isRightPanelShowing } from '../../state/select
 import { getTimerOptions } from '../../state/selectors/timerOptions';
 import { AttachmentTypeWithPath } from '../../types/Attachment';
 import { Avatar, AvatarSize } from '../avatar/Avatar';
-import { SessionButton, SessionButtonColor, BchatButtonType } from '../basic/SessionButton';
-import { SessionDropdown } from '../basic/SessionDropdown';
+import { BchatButton, BchatButtonColor, BchatButtonType } from '../basic/BchatButton';
+import { BchatDropdown } from '../basic/BchatDropdown';
 import { SpacerLG } from '../basic/Text';
 import { MediaItemType } from '../lightbox/LightboxGallery';
 import { MediaGallery } from './media-gallery/MediaGallery';
@@ -117,7 +117,7 @@ const HeaderItem = () => {
 
   return (
     <div className="group-settings-header">
-      <SessionIconButton
+      <BchatIconButton
         iconType="chevron"
         iconSize="medium"
         iconRotation={270}
@@ -129,7 +129,7 @@ const HeaderItem = () => {
       <Avatar size={AvatarSize.XL} pubkey={id} />
       <div className="invite-friends-container">
         {showInviteContacts && (
-          <SessionIconButton
+          <BchatIconButton
             iconType="addUser"
             iconSize="medium"
             onClick={() => {
@@ -147,7 +147,7 @@ const HeaderItem = () => {
 
 // tslint:disable: cyclomatic-complexity
 // tslint:disable: max-func-body-length
-export const SessionRightPanelWithDetails = () => {
+export const BchatRightPanelWithDetails = () => {
   const [documents, setDocuments] = useState<Array<MediaItemType>>([]);
   const [media, setMedia] = useState<Array<MediaItemType>>([]);
 
@@ -296,7 +296,7 @@ export const SessionRightPanelWithDetails = () => {
       )}
 
       {hasDisappearingMessages && (
-        <SessionDropdown
+        <BchatDropdown
           label={window.i18n('disappearingMessages')}
           options={disappearingMessagesOptions}
         />
@@ -305,9 +305,9 @@ export const SessionRightPanelWithDetails = () => {
       <MediaGallery documents={documents} media={media} />
       {isGroup && (
         // tslint:disable-next-line: use-simple-attributes
-        <SessionButton
+        <BchatButton
           text={leaveGroupString}
-          buttonColor={SessionButtonColor.Danger}
+          buttonColor={BchatButtonColor.Danger}
           disabled={isKickedFromGroup || left}
           buttonType={BchatButtonType.SquareOutline}
           onClick={deleteConvoAction}

@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import { PropsForGroupInvitation } from '../../../../state/ducks/conversations';
 import { acceptOpenGroupInvitation } from '../../../../interactions/messageInteractions';
-import { SessionIconButton } from '../../../icon';
+import { BchatIconButton } from '../../../icon';
 import { ReadableMessage } from './ReadableMessage';
 
 export const GroupInvitation = (props: PropsForGroupInvitation) => {
@@ -24,7 +24,7 @@ export const GroupInvitation = (props: PropsForGroupInvitation) => {
       <div className="group-invitation-container" id={`msg-${props.messageId}`}>
         <div className={classNames(classes)}>
           <div className="contents">
-            <SessionIconButton
+            <BchatIconButton
               iconType="plus"
               iconColor={'var(--color-accent)'}
               iconSize={'large'}

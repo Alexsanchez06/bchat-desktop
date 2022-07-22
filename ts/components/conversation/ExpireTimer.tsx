@@ -5,7 +5,7 @@ import { getTimerBucketIcon } from '../../util/timer';
 // tslint:disable-next-line: no-submodule-imports
 import useInterval from 'react-use/lib/useInterval';
 import styled from 'styled-components';
-import { SessionIcon } from '../icon/SessionIcon';
+import { BchatIcon } from '../icon/BchatIcon';
 
 type Props = {
   expirationLength: number;
@@ -66,7 +66,7 @@ export const ExpireTimer = (props: Props) => {
 
   return (
     <ExpireTimerBucket>
-      <SessionIcon iconType={bucket} iconSize="tiny" iconColor={expireTimerColor} />
+      <BchatIcon iconType={bucket} iconSize="tiny" iconColor={expireTimerColor} />
     </ExpireTimerBucket>
   );
 };

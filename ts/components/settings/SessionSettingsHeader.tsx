@@ -1,5 +1,5 @@
 import React from 'react';
-import { SettingsViewProps } from './SessionSettings';
+import { SettingsViewProps } from './BchatSettings';
 import { Avatar, AvatarSize } from '../avatar/Avatar';
 import { editProfileModal,} from '../../state/ducks/modalDialog';
 import { useDispatch ,useSelector} from 'react-redux';

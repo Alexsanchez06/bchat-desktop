@@ -1,13 +1,13 @@
 import React, { useEffect, useRef } from 'react';
 import classNames from 'classnames';
 
-import { SessionIconButton } from './icon/';
+import { BchatIconButton } from './icon';
 
 // tslint:disable-next-line: no-submodule-imports
 import useKey from 'react-use/lib/useKey';
-import { SessionButton } from './basic/SessionButton';
+import { BchatButton } from './basic/BchatButton';
 
-export type SessionWrapperModalType = {
+export type BchatWrapperModalType = {
   title?: string;
   showHeader?: boolean;
   onConfirm?: () => void;
@@ -22,7 +22,7 @@ export type SessionWrapperModalType = {
   additionalClassName?: string;
 };
 
-export const SessionWrapperModal = (props: SessionWrapperModalType) => {
+export const BchatWrapperModal = (props: BchatWrapperModalType) => {
   const {
     title,
     onConfirm,
@@ -81,7 +81,7 @@ export const SessionWrapperModal = (props: SessionWrapperModalType) => {
             <div className={classNames('session-modal__header', headerReverse && 'reverse')}>
               <div className="session-modal__header__close">
                 {showExitIcon ? (
-                  <SessionIconButton
+                  <BchatIconButton
                     iconType="exit"
                     iconSize="small"
                     onClick={props.onClose}
@@ -94,7 +94,7 @@ export const SessionWrapperModal = (props: SessionWrapperModalType) => {
                 {headerIconButtons
                   ? headerIconButtons.map((iconItem: any) => {
                       return (
-                        <SessionIconButton
+                        <BchatIconButton
                           key={iconItem.iconType}
                           iconType={iconItem.iconType}
                           iconSize={'large'}
@@ -114,14 +114,14 @@ export const SessionWrapperModal = (props: SessionWrapperModalType) => {
 
               <div className="session-modal__button-group">
                 {onClose && showClose ? (
-                  <SessionButton onClick={props.onClose}>
+                  <BchatButton onClick={props.onClose}>
                     {cancelText || window.i18n('close')}
-                  </SessionButton>
+                  </BchatButton>
                 ) : null}
                 {onConfirm ? (
-                  <SessionButton onClick={props.onConfirm}>
+                  <BchatButton onClick={props.onConfirm}>
                     {confirmText || window.i18n('ok')}
-                  </SessionButton>
+                  </BchatButton>
                 ) : null}
               </div>
             </div>

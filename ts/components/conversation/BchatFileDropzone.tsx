@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Flex } from '../basic/Flex';
-import { SessionIcon } from '../icon';
+import { BchatIcon } from '../icon';
 
 const DropZoneContainer = styled.div`
   display: inline-block;
@@ -24,12 +24,12 @@ const DropZoneWithBorder = styled.div`
   pointer-events: none;
 `;
 
-export const SessionFileDropzone = () => {
+export const BchatFileDropzone = () => {
   return (
     <DropZoneContainer>
       <DropZoneWithBorder>
         <Flex container={true} justifyContent="space-around" height="100%" alignItems="center">
-          <SessionIcon iconSize={'max'} iconType="circlePlus" />
+          <BchatIcon iconSize={'max'} iconType="circlePlus" />
         </Flex>
       </DropZoneWithBorder>
     </DropZoneContainer>

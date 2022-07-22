@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useSelector } from 'react-redux';
 import { SectionType } from '../../state/ducks/section';
-import { SessionTheme } from '../../state/ducks/SessionTheme';
+import { BchatTheme } from '../../state/ducks/BchatTheme';
 import { getLeftPaneLists } from '../../state/selectors/conversations';
 import { getSearchResults, isSearching } from '../../state/selectors/search';
 import { getFocusedSection, getOverlayMode } from '../../state/selectors/section';
@@ -86,7 +86,7 @@ const InnerLeftPaneMessageSection = () => {
 export const LeftPane = () => {
  
   return (
-    <SessionTheme>
+    <BchatTheme>
       <div className="module-left-pane-session">
        
 
@@ -96,6 +96,6 @@ export const LeftPane = () => {
            
         </div>
       </div>
-    </SessionTheme>
+    </BchatTheme>
   );
 };

@@ -1,21 +1,21 @@
 import React from 'react';
 import classNames from 'classnames';
-import { SessionIcon, BchatIconType } from '../icon';
+import { BchatIcon, BchatIconType } from '../icon';
 
-export enum SessionDropDownItemType {
+export enum BchatDropDownItemType {
   Default = 'default',
   Danger = 'danger',
 }
 
 type Props = {
   content: string;
-  type: SessionDropDownItemType;
+  type: BchatDropDownItemType;
   icon: BchatIconType | null;
   active: boolean;
   onClick: any;
 };
 
-export const SessionDropdownItem = (props: Props) => {
+export const BchatDropdownItem = (props: Props) => {
   const clickHandler = (e: any) => {
     if (props.onClick) {
       e.stopPropagation();
@@ -30,12 +30,12 @@ export const SessionDropdownItem = (props: Props) => {
       className={classNames(
         'session-dropdown__item',
         active ? 'active' : '',
-        type || SessionDropDownItemType.Default
+        type || BchatDropDownItemType.Default
       )}
       role="button"
       onClick={clickHandler}
     >
-      {icon ? <SessionIcon iconType={icon} iconSize="small" /> : ''}
+      {icon ? <BchatIcon iconType={icon} iconSize="small" /> : ''}
       <div className="item-content">{content}</div>
     </div>
   );

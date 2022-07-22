@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SessionButton, SessionButtonColor, BchatButtonType } from '../basic/SessionButton';
+import { BchatButton, BchatButtonColor, BchatButtonType } from '../basic/BchatButton';
 import { Icons } from './DisplaySeed';
 import { GoBackMainMenuButton } from './SignUpTab';
 
@@ -22,10 +22,10 @@ export const DisplayIdAndAddress= (props:any) => (
         </div>
         <p className='session-registration-welcome-screen-chat-content'>{window.i18n('beldexAddressConnection')}</p>
        </div>
-       <SessionButton
+       <BchatButton
         onClick={props.nextFunc}
         buttonType={BchatButtonType.Brand}
-        buttonColor={SessionButtonColor.Green}
+        buttonColor={BchatButtonColor.Green}
         text="Next"/>
      </div>
 
@@ -47,10 +47,10 @@ export const ShowRecoveryPhase= (props:any) => {
         <div>
           {<Icons icon={"copy_icon"} iconfunc={()=>{props.copySeed(props.mnemonic),setSeedCopied(true)}}/> }
         </div >            
-       <SessionButton 
+       <BchatButton 
         onClick={props.nextFunc}
         buttonType={BchatButtonType.Brand}
-        buttonColor={SessionButtonColor.Green}
+        buttonColor={BchatButtonColor.Green}
         text={window.i18n('continue')}
         disabled={!seedCopied}/>
       </div>

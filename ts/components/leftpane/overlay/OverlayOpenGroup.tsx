@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 import { SessionJoinableRooms } from './SessionJoinableDefaultRooms';
 
-// import { SessionButton, SessionButtonColor, BchatButtonType } from '../../basic/SessionButton';
+// import { BchatButton, BchatButtonColor, BchatButtonType } from '../../basic/BchatButton';
 import { BchatIdEditable } from '../../basic/BchatIdEditable';
 import { BchatSpinner } from '../../basic/BchatSpinner';
 import { OverlayHeader } from './OverlayHeader';
@@ -84,8 +84,8 @@ export const OverlayOpenGroup = () => {
       className='nextButton'
       onClick={onEnterPressed}
       >{buttonText}</button>
-      {/* <SessionButton
-        buttonColor={SessionButtonColor.Green}
+      {/* <BchatButton
+        buttonColor={BchatButtonColor.Green}
         buttonType={BchatButtonType.BrandOutline}
         text={buttonText}
         

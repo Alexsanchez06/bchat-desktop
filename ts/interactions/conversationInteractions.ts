@@ -39,8 +39,8 @@ import { IMAGE_JPEG } from '../types/MIME';
 import { FSv2 } from '../session/apis/file_server_api';
 import { fromHexToArray, toHex } from '../session/utils/String';
 import { forceSyncConfigurationNowIfNeeded } from '../session/utils/syncUtils';
-import { SessionButtonColor } from '../components/basic/SessionButton';
-import { getCallMediaPermissionsSettings } from '../components/settings/SessionSettings';
+import { BchatButtonColor } from '../components/basic/BchatButton';
+import { getCallMediaPermissionsSettings } from '../components/settings/BchatSettings';
 import { perfEnd, perfStart } from '../session/utils/Performance';
 import { processNewAttachment } from '../types/MessageAttachment';
 import { urlToBlob } from '../types/attachments/VisualAttachment';
@@ -349,7 +349,7 @@ export function deleteAllMessagesByConvoIdWithConfirmation(conversationId: strin
       title: window.i18n('deleteMessages'),
       message: window.i18n('deleteConversationConfirmation'),
       onClickOk,
-      okTheme: SessionButtonColor.Danger,
+      okTheme: BchatButtonColor.Danger,
       onClickClose,
     })
   );
@@ -506,7 +506,7 @@ export async function showLinkSharingConfirmationModalDialog(e: any) {
             !window.getSettingValue('link-preview-setting') && !alreadyDisplayedPopup,
           title: window.i18n('linkPreviewsTitle'),
           message: window.i18n('linkPreviewsConfirmMessage'),
-          okTheme: SessionButtonColor.Danger,
+          okTheme: BchatButtonColor.Danger,
           onClickOk: () => {
             window.setSettingValue('link-preview-setting', true);
           },

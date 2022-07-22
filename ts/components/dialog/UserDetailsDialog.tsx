@@ -10,10 +10,10 @@ import { ToastUtils } from '../../session/utils';
 import { openConversationWithMessages } from '../../state/ducks/conversations';
 import { updateUserDetailsModal } from '../../state/ducks/modalDialog';
 import { Avatar, AvatarSize } from '../avatar/Avatar';
-import { SessionButton, SessionButtonColor, BchatButtonType } from '../basic/SessionButton';
+import { BchatButton, BchatButtonColor, BchatButtonType } from '../basic/BchatButton';
 import { BchatIdEditable } from '../basic/BchatIdEditable';
 import { SpacerLG } from '../basic/Text';
-import { SessionWrapperModal } from '../SessionWrapperModal';
+import { BchatWrapperModal } from '../BchatWrapperModal';
 
 type Props = {
   conversationId: string;
@@ -53,7 +53,7 @@ export const UserDetailsDialog = (props: Props) => {
   );
 
   return (
-    <SessionWrapperModal title={props.userName} onClose={closeDialog} showExitIcon={true}>
+    <BchatWrapperModal title={props.userName} onClose={closeDialog} showExitIcon={true}>
       <div className="avatar-center">
         <div className="avatar-center-inner">
           <Avatar
@@ -70,22 +70,22 @@ export const UserDetailsDialog = (props: Props) => {
       <BchatIdEditable editable={false} text={convo.id} />
 
       <div className="session-modal__button-group__center">
-        <SessionButton
+        <BchatButton
           text={window.i18n('editMenuCopy')}
           buttonType={BchatButtonType.Default}
-          buttonColor={SessionButtonColor.Primary}
+          buttonColor={BchatButtonColor.Primary}
           onClick={() => {
             copyToClipboard(props.conversationId);
             ToastUtils.pushCopiedToClipBoard();
           }}
         />
-        <SessionButton
+        <BchatButton
           text={window.i18n('startConversation')}
           buttonType={BchatButtonType.Default}
-          buttonColor={SessionButtonColor.Green}
+          buttonColor={BchatButtonColor.Green}
           onClick={onClickStartConversation}
         />
       </div>
-    </SessionWrapperModal>
+    </BchatWrapperModal>
   );
 };

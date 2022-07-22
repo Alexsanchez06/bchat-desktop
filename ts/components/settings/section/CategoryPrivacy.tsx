@@ -7,7 +7,7 @@ import { CallManager, ToastUtils } from '../../../session/utils';
 import { sessionPassword, updateConfirmModal } from '../../../state/ducks/modalDialog';
 import { toggleMessageRequests } from '../../../state/ducks/userConfig';
 import { getHideMessageRequestBanner } from '../../../state/selectors/userConfig';
-import { SessionButtonColor } from '../../basic/SessionButton';
+import { BchatButtonColor } from '../../basic/BchatButton';
 import { PasswordAction } from '../../dialog/SessionPasswordDialog';
 
 import { SessionSettingButtonItem, SessionToggleWithDescription } from '../BchatSettingListItem';
@@ -18,7 +18,7 @@ const toggleCallMediaPermissions = async (triggerUIUpdate: () => void) => {
     window.inboxStore?.dispatch(
       updateConfirmModal({
         message: window.i18n('callMediaPermissionsDialogContent'),
-        okTheme: SessionButtonColor.Danger,
+        okTheme: BchatButtonColor.Danger,
         onClickOk: async () => {
           await window.toggleCallMediaPermissionsTo(true);
           triggerUIUpdate();
@@ -153,7 +153,7 @@ export const SettingsCategoryPrivacy = (props: {
             onClick={() => {
               displayPasswordModal('set', props.onPasswordUpdated);
             }}
-            buttonColor={SessionButtonColor.Primary}
+            buttonColor={BchatButtonColor.Primary}
             buttonText={window.i18n('setPassword')}
             dataTestId={'set-password-button'}
           />
@@ -165,7 +165,7 @@ export const SettingsCategoryPrivacy = (props: {
             onClick={() => {
               displayPasswordModal('change', props.onPasswordUpdated);
             }}
-            buttonColor={SessionButtonColor.Primary}
+            buttonColor={BchatButtonColor.Primary}
             buttonText={window.i18n('changePassword')}
           />
         )}
@@ -178,7 +178,7 @@ export const SettingsCategoryPrivacy = (props: {
             onClick={() => {
               displayPasswordModal('remove', props.onPasswordUpdated);
             }}
-            buttonColor={SessionButtonColor.Danger}
+            buttonColor={BchatButtonColor.Danger}
             buttonText={window.i18n('removePassword')}
           />
         )}

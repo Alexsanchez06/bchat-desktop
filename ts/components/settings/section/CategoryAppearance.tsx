@@ -10,14 +10,14 @@ import { updateConfirmModal } from '../../../state/ducks/modalDialog';
 import { toggleAudioAutoplay } from '../../../state/ducks/userConfig';
 import { getAudioAutoplay } from '../../../state/selectors/userConfig';
 // import { isHideMenuBarSupported } from '../../../types/Settings';
-import { SessionButtonColor } from '../../basic/SessionButton';
+import { BchatButtonColor } from '../../basic/BchatButton';
 
 // import { SessionSettingButtonItem, SessionToggleWithDescription } from '../SessionSettingListItem';
 import {SessionToggleWithDescription } from '../BchatSettingListItem';
 
 import { ZoomingSessionSlider } from '../ZoomingSessionSlider';
 
-import { switchHtmlToDarkTheme, switchHtmlToLightTheme } from '../../../state/ducks/SessionTheme';
+import { switchHtmlToDarkTheme, switchHtmlToLightTheme } from '../../../state/ducks/BchatTheme';
 
 async function toggleLinkPreviews() {
   const newValue = !window.getSettingValue(SettingsKey.settingsLinkPreview);
@@ -29,7 +29,7 @@ async function toggleLinkPreviews() {
       updateConfirmModal({
         title: window.i18n('linkPreviewsTitle'),
         message: window.i18n('linkPreviewsConfirmMessage'),
-        okTheme: SessionButtonColor.Danger,
+        okTheme: BchatButtonColor.Danger,
       })
     );
   }
@@ -156,7 +156,7 @@ const isdark =
         {/* <SessionSettingButtonItem
           title={window.i18n('surveyTitle')}
           onClick={() => void shell.openExternal('https://getsession.org/survey')}
-          buttonColor={SessionButtonColor.Primary}
+          buttonColor={BchatButtonColor.Primary}
           buttonText={window.i18n('goToOurSurvey')}
         /> */}
 
@@ -165,7 +165,7 @@ const isdark =
         {/* <SessionSettingButtonItem
           title={window.i18n('helpUsTranslateSession')}
           onClick={() => void shell.openExternal('https://crowdin.com/project/session-desktop/')}
-          buttonColor={SessionButtonColor.Primary}
+          buttonColor={BchatButtonColor.Primary}
           // buttonText={window.i18n('translation')}
           buttonText={"Help us translate chat"}
 
@@ -174,14 +174,14 @@ const isdark =
           onClick={() => {
             ipcRenderer.send('show-debug-log');
           }}
-          buttonColor={SessionButtonColor.Primary}
+          buttonColor={BchatButtonColor.Primary}
           buttonText={window.i18n('showDebugLog')}
         /> */}
         {/* <SessionSettingButtonItem
           onClick={async () => {
             await fillWithTestData(100, 1000);
           }}
-          buttonColor={SessionButtonColor.Primary}
+          buttonColor={BchatButtonColor.Primary}
           buttonText={'Spam fill DB using cached'}
         /> */}
       </>

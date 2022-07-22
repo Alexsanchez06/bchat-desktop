@@ -1,10 +1,10 @@
 import React from 'react';
 import classNames from 'classnames';
-import { SessionIcon, SessionIconProps } from '../icon';
+import { BchatIcon, BchatIconProps } from '.';
 import _ from 'lodash';
 import { BchatNotificationCount } from './BchatNotificationCount';
 
-interface SProps extends SessionIconProps {
+interface SProps extends BchatIconProps {
   onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
   notificationCount?: number;
   isSelected?: boolean;
@@ -15,7 +15,7 @@ interface SProps extends SessionIconProps {
   style?: any;
 }
 
-const SessionIconButtonInner = React.forwardRef<HTMLDivElement, SProps>((props, ref) => {
+const BchatIconButtonInner = React.forwardRef<HTMLDivElement, SProps>((props, ref) => {
   const {
     iconType,
     iconSize,
@@ -54,7 +54,7 @@ const SessionIconButtonInner = React.forwardRef<HTMLDivElement, SProps>((props, 
       style={{ display: isHidden ? 'none' : 'flex', margin: margin ? margin : '',alignItems:"center" }}
       data-testid={dataTestId}
     >
-      <SessionIcon
+      <BchatIcon
         iconType={iconType}
         iconSize={iconSize}
         iconColor={iconColor}
@@ -71,4 +71,4 @@ const SessionIconButtonInner = React.forwardRef<HTMLDivElement, SProps>((props, 
   );
 });
 
-export const SessionIconButton = React.memo(SessionIconButtonInner, _.isEqual);
+export const BchatIconButton = React.memo(BchatIconButtonInner, _.isEqual);

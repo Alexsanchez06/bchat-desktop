@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 
 import useUpdate from 'react-use/lib/useUpdate';
 import { BchatSettingsItemWrapper } from './BchatSettingListItem';
-// import { SessionIconButton } from '../icon';
+// import { BchatIconButton } from '../icon';
 
 // import Dropdown from 'react-dropdown';
 // import 'react-dropdown/style.css';

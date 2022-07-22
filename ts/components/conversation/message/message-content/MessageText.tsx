@@ -6,7 +6,7 @@ import {
   getMessageTextProps,
   isMessageSelectionMode,
 } from '../../../../state/selectors/conversations';
-import { SessionIcon } from '../../../icon';
+import { BchatIcon } from '../../../icon';
 import { MessageBody } from './MessageBody';
 
 type Props = {
@@ -46,7 +46,7 @@ export const MessageText = (props: Props) => {
         status === 'error' && direction === 'incoming' ? 'module-message__text--error' : null
       )}
     >
-      {isDeleted && <SessionIcon iconType="delete" iconSize="small" />}
+      {isDeleted && <BchatIcon iconType="delete" iconSize="small" />}
       <MessageBody
         text={contents || ''}
         disableLinks={multiSelectMode}

@@ -3,7 +3,7 @@ import { PropsForDataExtractionNotification } from '../../../../models/messageTy
 import { SignalService } from '../../../../protobuf';
 import { Flex } from '../../../basic/Flex';
 import { SpacerSM, Text } from '../../../basic/Text';
-import { SessionIcon } from '../../../icon';
+import { BchatIcon } from '../../../icon';
 import { ReadableMessage } from './ReadableMessage';
 
 export const DataExtractionNotification = (props: PropsForDataExtractionNotification) => {
@@ -31,7 +31,7 @@ export const DataExtractionNotification = (props: PropsForDataExtractionNotifica
         margin={'var(--margins-sm)'}
         id={`msg-${messageId}`}
       >
-        <SessionIcon iconType="upload" iconSize="small" iconRotation={180} />
+        <BchatIcon iconType="upload" iconSize="small" iconRotation={180} />
         <SpacerSM />
         <Text text={contentText} subtle={true} ellipsisOverflow={true} />
       </Flex>

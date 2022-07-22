@@ -1,5 +1,5 @@
 import React, {  useState } from 'react';
-import { SessionButton,SessionButtonColor, BchatButtonType } from '.././basic/SessionButton';
+import { BchatButton,BchatButtonColor, BchatButtonType } from '../basic/BchatButton';
 
 export const SessionSettingRecoveryKey=()=>
 {
@@ -49,11 +49,11 @@ export const SessionSettingRecoveryKey=()=>
              <p className="session-settings-recovery-seed-para">Never input your Key into any software or website other than the official beldex wallet or bchat directly from the play store, the beldex website or the beldex GitHub.</p>
              <p className="session-settings-recovery-seed-note">Are you sure you want to access your Key?</p>
              <div className='session-settings-recovery-seed-button'>
-             <SessionButton
+             <BchatButton
               text={"Yes, I am Sure!"}
               onClick={()=>{setVerify(true)}}
               buttonType={BchatButtonType.Brand}
-              buttonColor={SessionButtonColor.Green}
+              buttonColor={BchatButtonColor.Green}
             //   disabled={!caption}
             />
              </div>

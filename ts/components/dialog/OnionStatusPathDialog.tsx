@@ -20,8 +20,8 @@ import { Flex } from '../basic/Flex';
 // tslint:disable-next-line: no-submodule-imports
 import useHover from 'react-use/lib/useHover';
 import { BchatSpinner } from '../basic/BchatSpinner';
-import { SessionIcon, SessionIconButton } from '../icon';
-// import { SessionWrapperModal } from '../SessionWrapperModal';
+import { BchatIcon, BchatIconButton } from '../icon';
+// import { BchatWrapperModal } from '../SessionWrapperModal';
 
 export type StatusLightType = {
   glowStartDelay: number;
@@ -139,7 +139,7 @@ export const ModalStatusLight = (props: StatusLightType) => {
 
   return (
     <div className="onion__growing-icon">
-      <SessionIcon
+      <BchatIcon
         borderRadius={'50px'}
         iconColor={color}
         glowDuration={glowDuration}
@@ -179,7 +179,7 @@ export const ActionPanelOnionStatusLight = (props: {
   }
 
   return (
-    <SessionIconButton
+    <BchatIconButton
       iconSize={'small'}
       iconType="circle"
       iconColor={iconColor}
@@ -201,7 +201,7 @@ export const OnionPathModal = () => {
   // const dispatch = useDispatch();
   return (
     // tslint:disable-next-line: use-simple-attributes
-    // <SessionWrapperModal
+    // <BchatWrapperModal
     //   title={window.i18n('onionPathIndicatorTitle')}
     //   confirmText={window.i18n('learnMore')}
     //   cancelText={window.i18n('cancel')}
@@ -210,6 +210,6 @@ export const OnionPathModal = () => {
     //   showExitIcon={true}
     // >
       <OnionPathModalInner />
-    // </SessionWrapperModal>
+    // </BchatWrapperModal>
   );
 };

@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { unblockConvoById } from '../../interactions/conversationInteractions';
 import { getConversationController } from '../../session/conversations';
 import { getBlockedPubkeys } from '../../state/selectors/conversations';
-import { SessionButtonColor } from '../basic/SessionButton';
+import { BchatButtonColor } from '../basic/BchatButton';
 
 import { SessionSettingButtonItem, BchatSettingsItemWrapper } from './BchatSettingListItem';
 
@@ -33,7 +33,7 @@ export const BlockedUserSettings = () => {
     return (
       <SessionSettingButtonItem
         key={blockedEntry}
-        buttonColor={SessionButtonColor.Danger}
+        buttonColor={BchatButtonColor.Danger}
         buttonText={window.i18n('unblockUser')}
         title={title}
         onClick={async () => {

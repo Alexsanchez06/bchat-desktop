@@ -10,7 +10,7 @@ type Props = {
   show: boolean;
 };
 
-export const SessionEmojiPanel = (props: Props) => {
+export const BchatEmojiPanel = (props: Props) => {
   const { onEmojiClicked, show } = props;
   const darkMode = useSelector(getTheme) === 'dark';
 

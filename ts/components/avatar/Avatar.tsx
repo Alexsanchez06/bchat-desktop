@@ -11,7 +11,7 @@ import { AvatarPlaceHolder } from './AvatarPlaceHolder/AvatarPlaceHolder';
 import { ClosedGroupAvatar } from './AvatarPlaceHolder/ClosedGroupAvatar';
 import { useDisableDrag } from '../../hooks/useDisableDrag';
 import styled from 'styled-components';
-import { SessionIcon } from '../icon';
+import { BchatIcon } from '../icon';
 
 export enum AvatarSize {
   XS = 28,
@@ -60,7 +60,7 @@ const CrownWrapper = styled.div`
 export const CrownIcon = () => {
   return (
     <CrownWrapper>
-      <SessionIcon iconSize={'small'} iconType="crown" iconPadding="1px 0 0 0 " />
+      <BchatIcon iconSize={'small'} iconType="crown" iconPadding="1px 0 0 0 " />
     </CrownWrapper>
   );
 };

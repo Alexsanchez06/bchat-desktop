@@ -1,3 +1,3 @@
-export { icons, SessionIconSize, BchatIconType } from './Icons';
-export { SessionIcon, SessionIconProps } from './SessionIcon';
-export { SessionIconButton } from './SessionIconButton';
+export { icons, BchatIconSize, BchatIconType } from './Icons';
+export { BchatIcon, BchatIconProps } from './BchatIcon';
+export { BchatIconButton } from './BchatIconButton';

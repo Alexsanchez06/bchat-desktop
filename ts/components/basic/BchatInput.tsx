@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import classNames from 'classnames';
-import { SessionIconButton } from '../icon';
+import { BchatIconButton } from '../icon';
 
 type Props = {
   label?: string;
@@ -45,10 +45,10 @@ const ErrorItem = (props: { error: string | undefined }) => {
 };
 
 const ShowHideButton = (props: { toggleForceShow: () => void }) => {
-  return <SessionIconButton iconType="eye" iconSize="medium" onClick={props.toggleForceShow} />;
+  return <BchatIconButton iconType="eye" iconSize="medium" onClick={props.toggleForceShow} />;
 };
 
-export const SessionInput = (props: Props) => {
+export const BchatInput = (props: Props) => {
   const {
     autoFocus,
     placeholder,

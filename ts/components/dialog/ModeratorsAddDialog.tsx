@@ -6,9 +6,9 @@ import { ApiV2 } from '../../session/apis/open_group_api/opengroupV2';
 import { getConversationController } from '../../session/conversations';
 import { useDispatch } from 'react-redux';
 import { updateAddModeratorsModal } from '../../state/ducks/modalDialog';
-import { SessionButton, SessionButtonColor, BchatButtonType } from '../basic/SessionButton';
+import { BchatButton, BchatButtonColor, BchatButtonType } from '../basic/BchatButton';
 import { BchatSpinner } from '../basic/BchatSpinner';
-import { SessionWrapperModal } from '../SessionWrapperModal';
+import { BchatWrapperModal } from '../BchatWrapperModal';
 
 type Props = {
   conversationId: string;
@@ -70,7 +70,7 @@ export const AddModeratorsDialog = (props: Props) => {
   };
 
   return (
-    <SessionWrapperModal
+    <BchatWrapperModal
       showExitIcon={true}
       title={title}
       onClose={() => {
@@ -88,9 +88,9 @@ export const AddModeratorsDialog = (props: Props) => {
           disabled={addingInProgress}
           value={inputBoxValue}
         />
-        <SessionButton
+        <BchatButton
           buttonType={BchatButtonType.Brand}
-          buttonColor={SessionButtonColor.Primary}
+          buttonColor={BchatButtonColor.Primary}
           onClick={addAsModerator}
           text={i18n('add')}
           disabled={addingInProgress}
@@ -98,6 +98,6 @@ export const AddModeratorsDialog = (props: Props) => {
 
         <BchatSpinner loading={addingInProgress} />
       </Flex>
-    </SessionWrapperModal>
+    </BchatWrapperModal>
   );
 };

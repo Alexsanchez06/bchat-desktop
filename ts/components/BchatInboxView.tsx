@@ -23,7 +23,7 @@ import { TimerOptionsArray } from '../state/ducks/timerOptions';
 import { initialUserConfigState } from '../state/ducks/userConfig';
 import { StateType } from '../state/reducer';
 import { makeLookup } from '../util';
-import { SessionMainPanel } from './SessionMainPanel';
+import { BchatMainPanel } from './BchatMainPanel';
 import { createStore } from '../state/createStore';
 import { ExpirationTimerOptions } from '../util/expiringMessages';
 
@@ -43,7 +43,7 @@ type State = {
   isInitialLoadComplete: boolean;
 };
 
-export class SessionInboxView extends React.Component<any, State> {
+export class BchatInboxView extends React.Component<any, State> {
   private store: any;
 
   constructor(props: any) {
@@ -73,7 +73,7 @@ export class SessionInboxView extends React.Component<any, State> {
               <div className="network-status-container" />
               {this.renderLeftPane()}
             </div>
-            <SessionMainPanel />
+            <BchatMainPanel />
           </PersistGate>
         </Provider>
       </div>

@@ -6,7 +6,7 @@ import { Image } from '../../Image';
 import { MessageRenderingProps } from '../../../../models/messageType';
 import { useSelector } from 'react-redux';
 import { getMessagePreviewProps } from '../../../../state/selectors/conversations';
-import { SessionIcon } from '../../../icon';
+import { BchatIcon } from '../../../icon';
 import { MINIMUM_LINK_PREVIEW_IMAGE_WIDTH } from '../message-item/Message';
 
 export type MessagePreviewSelectorProps = Pick<MessageRenderingProps, 'attachments' | 'previews'>;
@@ -63,7 +63,7 @@ export const MessagePreview = (props: Props) => {
           <div className="module-message__link-preview__icon_container">
             <div className="module-message__link-preview__icon_container__inner">
               <div className="module-message__link-preview__icon-container__circle-background">
-                <SessionIcon iconType="link" iconSize="small" />
+                <BchatIcon iconType="link" iconSize="small" />
               </div>
             </div>
           </div>

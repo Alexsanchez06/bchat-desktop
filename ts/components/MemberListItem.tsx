@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import { Avatar, AvatarSize, CrownIcon } from './avatar/Avatar';
 import { Constants } from '../session';
-import { SessionIcon } from './icon';
+import { BchatIcon } from './icon';
 import { useConversationUsernameOrShorten } from '../hooks/useParamSelector';
 import styled from 'styled-components';
 
@@ -73,7 +73,7 @@ export const MemberListItem = (props: {
         <span className="session-member-item__name">{memberName}</span>
       </div>
       <span className={classNames('session-member-item__checkmark', isSelected && 'selected')}>
-        <SessionIcon iconType="check" iconSize="medium" iconColor={Constants.UI.COLORS.GREEN} />
+        <BchatIcon iconType="check" iconSize="medium" iconColor={Constants.UI.COLORS.GREEN} />
       </span>
     </div>
   );

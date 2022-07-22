@@ -1,13 +1,13 @@
 import React from 'react';
 import classNames from 'classnames';
-import { SessionButton, SessionButtonColor } from '../basic/SessionButton';
+import { BchatButton, BchatButtonColor } from '../basic/BchatButton';
 import { BchatToggle } from '../basic/BchatToggle';
 import { SessionConfirmDialogProps } from '../dialog/SessionConfirm';
 
 type ButtonSettingsProps = {
   title?: string;
   description?: string;
-  buttonColor: SessionButtonColor;
+  buttonColor: BchatButtonColor;
   buttonText: string;
   dataTestId?: string;
   onClick: () => void;
@@ -68,7 +68,7 @@ export const SessionSettingButtonItem = (props: ButtonSettingsProps) => {
 
   return (
     <BchatSettingsItemWrapper title={title} description={description} inline={true}>
-      <SessionButton
+      <BchatButton
         dataTestId={dataTestId}
         text={buttonText}
         buttonColor={buttonColor}

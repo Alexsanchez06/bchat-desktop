@@ -11,9 +11,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { updateInviteContactModal } from '../../state/ducks/modalDialog';
 // tslint:disable-next-line: no-submodule-imports
 import useKey from 'react-use/lib/useKey';
-import { SessionButton, SessionButtonColor } from '../basic/SessionButton';
+import { BchatButton, BchatButtonColor } from '../basic/BchatButton';
 import { MemberListItem } from '../MemberListItem';
-import { SessionWrapperModal } from '../SessionWrapperModal';
+import { BchatWrapperModal } from '../BchatWrapperModal';
 import { getPrivateContactsPubkeys } from '../../state/selectors/conversations';
 import { useConversationPropsById } from '../../hooks/useParamSelector';
 import { useSet } from '../../hooks/useSet';
@@ -152,7 +152,7 @@ const InviteContactsDialogInner = (props: Props) => {
   const hasContacts = validContactsForInvite.length > 0;
 
   return (
-    <SessionWrapperModal title={titleText} onClose={closeDialog}>
+    <BchatWrapperModal title={titleText} onClose={closeDialog}>
       <SpacerLG />
 
       <div className="contact-selection-list">
@@ -177,15 +177,15 @@ const InviteContactsDialogInner = (props: Props) => {
       <SpacerLG />
 
       <div className="session-modal__button-group">
-        <SessionButton text={cancelText} onClick={closeDialog} />
-        <SessionButton
+        <BchatButton text={cancelText} onClick={closeDialog} />
+        <BchatButton
           text={okText}
           disabled={!hasContacts}
           onClick={onClickOK}
-          buttonColor={SessionButtonColor.Green}
+          buttonColor={BchatButtonColor.Green}
         />
       </div>
-    </SessionWrapperModal>
+    </BchatWrapperModal>
   );
 };
 

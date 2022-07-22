@@ -6,8 +6,8 @@ import { ToastUtils } from '../../session/utils';
 import { Flex } from '../basic/Flex';
 import _ from 'lodash';
 import { updateRemoveModeratorsModal } from '../../state/ducks/modalDialog';
-import { SessionWrapperModal } from '../SessionWrapperModal';
-import { SessionButton, SessionButtonColor, BchatButtonType } from '../basic/SessionButton';
+import { BchatWrapperModal } from '../BchatWrapperModal';
+import { BchatButton, BchatButtonColor, BchatButtonType } from '../basic/BchatButton';
 import { BchatSpinner } from '../basic/BchatSpinner';
 import { MemberListItem } from '../MemberListItem';
 import { useDispatch } from 'react-redux';
@@ -85,7 +85,7 @@ export const RemoveModeratorsDialog = (props: Props) => {
 
   const title = `${i18n('removeModerators')}: ${convoProps.name}`;
   return (
-    <SessionWrapperModal title={title} onClose={closeDialog}>
+    <BchatWrapperModal title={title} onClose={closeDialog}>
       <Flex container={true} flexDirection="column" alignItems="center">
         {hasMods ? (
           <div className="contact-selection-list">
@@ -111,16 +111,16 @@ export const RemoveModeratorsDialog = (props: Props) => {
         <BchatSpinner loading={removingInProgress} />
 
         <div className="session-modal__button-group">
-          <SessionButton
+          <BchatButton
             buttonType={BchatButtonType.Brand}
-            buttonColor={SessionButtonColor.Green}
+            buttonColor={BchatButtonColor.Green}
             onClick={removeModsCall}
             disabled={removingInProgress}
             text={i18n('ok')}
           />
-          <SessionButton
+          <BchatButton
             buttonType={BchatButtonType.Brand}
-            buttonColor={SessionButtonColor.Primary}
+            buttonColor={BchatButtonColor.Primary}
             onClick={closeDialog}
             disabled={removingInProgress}
             text={i18n('cancel')}
@@ -129,6 +129,6 @@ export const RemoveModeratorsDialog = (props: Props) => {
 
         <BchatSpinner loading={removingInProgress} />
       </Flex>
-    </SessionWrapperModal>
+    </BchatWrapperModal>
   );
 };

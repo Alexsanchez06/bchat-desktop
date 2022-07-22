@@ -55,6 +55,6 @@ const forbiddenDisplayCharRegex = /\uFFD2*/g;
  * @param inputName the input to sanitize
  * @returns a sanitized string, untrimmed
  */
-export const sanitizeSessionUsername = (inputName: string) => {
+export const sanitizeBchatUsername = (inputName: string) => {
   return inputName.replace(forbiddenDisplayCharRegex, '');
 };

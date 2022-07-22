@@ -1065,7 +1065,7 @@ ipc.on('set-call-media-permissions', (event, value) => {
   event.sender.send('set-success-call-media-permissions', null);
 });
 
-// Session - Auto updating
+// Bchat - Auto updating
 ipc.on('get-auto-update-setting', event => {
   const configValue = userConfig.get('autoUpdate');
   // eslint-disable-next-line no-param-reassign

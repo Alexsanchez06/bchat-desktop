@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { SessionIcon, BchatIconType } from '../icon';
+import { BchatIcon, BchatIconType } from '../icon';
 
-import { SessionDropdownItem, SessionDropDownItemType } from './SessionDropdownItem';
+import { BchatDropdownItem, BchatDropDownItemType } from './BchatDropdownItem';
 
 // THIS IS DROPDOWN ACCORDIAN STYLE OPTIONS SELECTOR ELEMENT, NOT A CONTEXTMENU
 
@@ -13,13 +13,13 @@ type Props = {
     content: string;
     id?: string;
     icon?: BchatIconType | null;
-    type?: SessionDropDownItemType;
+    type?: BchatDropDownItemType;
     active?: boolean;
     onClick?: any;
   }>;
 };
 
-export const SessionDropdown = (props: Props) => {
+export const BchatDropdown = (props: Props) => {
   const { label, options } = props;
   const [expanded, setExpanded] = useState(!!props.expanded);
   const chevronOrientation = expanded ? 180 : 0;
@@ -34,14 +34,14 @@ export const SessionDropdown = (props: Props) => {
         role="button"
       >
         {label}
-        <SessionIcon iconType="chevron" iconSize="small" iconRotation={chevronOrientation} />
+        <BchatIcon iconType="chevron" iconSize="small" iconRotation={chevronOrientation} />
       </div>
 
       {expanded && (
         <div className="session-dropdown__list-container">
           {options.map((item: any) => {
             return (
-              <SessionDropdownItem
+              <BchatDropdownItem
                 key={item.content}
                 content={item.content}
                 icon={item.icon}

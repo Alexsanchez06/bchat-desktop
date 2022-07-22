@@ -52,7 +52,7 @@ import { getNumberOfPinnedConversations } from '../../state/selectors/conversati
 import { getFocusedSection } from '../../state/selectors/section';
 import { getTimerOptions } from '../../state/selectors/timerOptions';
 import { LocalizerKeys } from '../../types/LocalizerKeys';
-import { SessionButtonColor } from '../basic/SessionButton';
+import { BchatButtonColor } from '../basic/BchatButton';
 import { ContextConversationId } from '../leftpane/conversation-list-item/ConversationListItem';
 
 const maxNumberOfPinnedConversations = 5;
@@ -233,7 +233,7 @@ export const DeleteContactMenuItem = () => {
             ? window.i18n('deleteContactConfirmation')
             : window.i18n('leaveGroupConfirmation'),
           onClickClose,
-          okTheme: SessionButtonColor.Danger,
+          okTheme: BchatButtonColor.Danger,
           onClickOk: async () => {
             await getConversationController().deleteContact(convoId);
           },

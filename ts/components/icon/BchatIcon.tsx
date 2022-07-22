@@ -1,10 +1,10 @@
 import React from 'react';
-import { icons, SessionIconSize, BchatIconType } from '../icon';
+import { icons, BchatIconSize, BchatIconType } from '.';
 import styled, { css, keyframes } from 'styled-components';
 
-export type SessionIconProps = {
+export type BchatIconProps = {
   iconType:BchatIconType;
-  iconSize: SessionIconSize | number;
+  iconSize: BchatIconSize | number;
   iconColor?: string;
   iconRotation?: number;
   iconPadding?: string;
@@ -16,7 +16,7 @@ export type SessionIconProps = {
   backgroundColor?: string;
 };
 
-const getIconDimensionFromIconSize = (iconSize: SessionIconSize | number) => {
+const getIconDimensionFromIconSize = (iconSize: BchatIconSize | number) => {
   if (typeof iconSize === 'number') {
     return iconSize;
   } else {
@@ -175,7 +175,7 @@ const SessionSvg = (props: {
   );
 };
 
-export const SessionIcon = (props: SessionIconProps) => {
+export const BchatIcon = (props: BchatIconProps) => {
   const {
     iconType,
     iconColor,

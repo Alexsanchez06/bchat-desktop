@@ -149,7 +149,7 @@ describe('MessageEncrypter', () => {
   });
 
   // tslint:disable-next-line: max-func-body-length
-  describe('Session Protocol', () => {
+  describe('Bchat Protocol', () => {
     beforeEach(() => {
       Sinon.stub(UserUtils, 'getIdentityKeyPair').resolves(ourIdentityKeypair);
     });

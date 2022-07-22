@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import { SessionRadio } from './SessionRadio';
+import { BchatRadio } from './SessionRadio';
 
 interface Props {
   // tslint:disable: react-unused-props-and-state
@@ -10,7 +10,7 @@ interface Props {
   onClick: (selectedValue: string) => any;
 }
 
-export const SessionRadioGroup = (props: Props) => {
+export const BchatRadioGroup = (props: Props) => {
   const [activeItem, setActiveItem] = useState('');
   const { items, group, initialItem } = props;
 
@@ -25,7 +25,7 @@ export const SessionRadioGroup = (props: Props) => {
           const itemIsActive = item.value === activeItem;
 
           return (
-            <SessionRadio
+            <BchatRadio
               key={item.value}
               label={item.label}
               active={itemIsActive}

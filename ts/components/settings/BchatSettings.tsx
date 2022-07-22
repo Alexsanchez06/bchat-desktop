@@ -2,14 +2,14 @@ import React from 'react';
 
 import { SettingsHeader } from './SessionSettingsHeader';
 import { shell } from 'electron';
-// import { SessionIconButton } from '../icon';
+// import { BchatIconButton } from '../icon';
 import autoBind from 'auto-bind';
-import { SessionNotificationGroupSettings } from './SessionNotificationGroupSettings';
+import { BchatNotificationGroupSettings } from './BeldexNotificationGroupSettings';
 // tslint:disable-next-line: no-submodule-imports
 import { BlockedUserSettings } from './BlockedUserSettings';
 import { SettingsCategoryPrivacy } from './section/CategoryPrivacy';
 import { SettingsCategoryAppearance } from './section/CategoryAppearance';
-import { SessionButton, SessionButtonColor, BchatButtonType } from '../basic/SessionButton';
+import { BchatButton, BchatButtonColor, BchatButtonType } from '../basic/BchatButton';
 import { getPasswordHash } from '../../data/data';
 import { LocalizerKeys } from '../../types/LocalizerKeys';
 import { matchesHash } from '../../util/passwordUtils';
@@ -18,7 +18,7 @@ import { matchesHash } from '../../util/passwordUtils';
 
 import {SessionRecoverySeed} from "./SeesionRecoverySeed"
 // import {SessionSettingRecoveryKey} from "./sessionSettingRecoveryKey"
-import {OverlayMessageRequest} from "../../components/leftpane/overlay/OverlayMessageRequest"
+import {OverlayMessageRequest} from "../leftpane/overlay/OverlayMessageRequest"
 import {SessionOnionPathScreen} from "./SessionOnionPathScreen"
 
 export function getMediaPermissionsSettings() {
@@ -29,7 +29,7 @@ export function getCallMediaPermissionsSettings() {
   return window.getSettingValue('call-media-permissions');
 }
 
-export enum SessionSettingCategory {
+export enum BchatSettingCategory {
   Appearance = 'appearance',
   Privacy = 'privacy',
   Notifications = 'notifications',
@@ -43,7 +43,7 @@ export enum SessionSettingCategory {
 }
 
 export interface SettingsViewProps {
-  category: SessionSettingCategory;
+  category: BchatSettingCategory;
 }
 
 interface State {
@@ -54,7 +54,7 @@ interface State {
   shouldLockSettings: boolean | null;
 }
 
-const SessionInfo = () => {
+const BchatInfo = () => {
   const openBeldexWebsite = () => {
     void shell.openExternal('https://www.beldex.io/');
   };
@@ -62,7 +62,7 @@ const SessionInfo = () => {
     <div className="session-settings__version-info">
       <span className="text-selectable">v{window.versionInfo.version}</span>
       <span>
-        {/* <SessionIconButton iconSize="medium" iconType="oxen" onClick={openOxenWebsite} /> */}
+        {/* <BchatIconButton iconSize="medium" iconType="oxen" onClick={openOxenWebsite} /> */}
         <div role="button" onClick={openBeldexWebsite}>Bchat</div>
       </span>
       <span className="text-selectable">{window.versionInfo.commitHash}</span>
@@ -91,9 +91,9 @@ export const PasswordLock = ({
 
         {pwdLockError && <div className="session-label warning">{pwdLockError}</div>}
 
-        <SessionButton
+        <BchatButton
           buttonType={BchatButtonType.BrandOutline}
-          buttonColor={SessionButtonColor.Green}
+          buttonColor={BchatButtonColor.Green}
           text={window.i18n('ok')}
           onClick={validatePasswordLock}
         />
@@ -102,7 +102,7 @@ export const PasswordLock = ({
   );
 };
 
- export class SessionSettingsView extends React.Component<SettingsViewProps, State> {
+ export class BchatSettingsView extends React.Component<SettingsViewProps, State> {
   
   public settingsViewRef: React.RefObject<HTMLDivElement>;
 
@@ -145,36 +145,36 @@ export const PasswordLock = ({
     if (this.state.hasPassword === null) {
       return null;
     }
-    if (category === SessionSettingCategory.Blocked) {
+    if (category === BchatSettingCategory.Blocked) {
       // special case for blocked user
       return <BlockedUserSettings />;
     }
 
     
 
-    if (category === SessionSettingCategory.Appearance) {
+    if (category === BchatSettingCategory.Appearance) {
       return <SettingsCategoryAppearance hasPassword={this.state.hasPassword} />;
     }
-    if (category === SessionSettingCategory.RecoverySeed) {
+    if (category === BchatSettingCategory.RecoverySeed) {
       return <SessionRecoverySeed  />;
     }
 
-    // if (category === SessionSettingCategory.RecoveryKey) {
+    // if (category === BchatSettingCategory.RecoveryKey) {
     //   return <SessionSettingRecoveryKey  />;
     // }
 
-    if (category === SessionSettingCategory.MessageRequests) {
+    if (category === BchatSettingCategory.MessageRequests) {
       return <OverlayMessageRequest />;
     }
 
-    if (category === SessionSettingCategory.Hops) {
+    if (category === BchatSettingCategory.Hops) {
       return <SessionOnionPathScreen/>;
     }    
-    if (category === SessionSettingCategory.Notifications) {
-      return <SessionNotificationGroupSettings hasPassword={this.state.hasPassword} />;
+    if (category === BchatSettingCategory.Notifications) {
+      return <BchatNotificationGroupSettings hasPassword={this.state.hasPassword} />;
     }
 
-    if (category === SessionSettingCategory.Privacy) {
+    if (category === BchatSettingCategory.Privacy) {
       return (
         <SettingsCategoryPrivacy
           onPasswordUpdated={this.onPasswordUpdated}
@@ -221,17 +221,17 @@ export const PasswordLock = ({
     const { category } = this.props;
     const shouldRenderPasswordLock = this.state.shouldLockSettings && this.state.hasPassword;
     const categoryLocalized: LocalizerKeys =
-      category === SessionSettingCategory.Appearance
+      category === BchatSettingCategory.Appearance
         ? 'appearanceSettingsTitle'
-        : category === SessionSettingCategory.Blocked
+        : category === BchatSettingCategory.Blocked
         ? 'blockedSettingsTitle'
-        : category === SessionSettingCategory.RecoverySeed
+        : category === BchatSettingCategory.RecoverySeed
         ? 'recoveryPhrase'
-        : category ===  SessionSettingCategory.MessageRequests
+        : category ===  BchatSettingCategory.MessageRequests
         ? 'messageRequests'
-        : category === SessionSettingCategory.Hops
+        : category === BchatSettingCategory.Hops
         ? 'hops'
-        : category === SessionSettingCategory.Notifications
+        : category === BchatSettingCategory.Notifications
         ? 'notificationsSettingsTitle'
         : 'privacySettingsTitle'
         
@@ -252,7 +252,7 @@ export const PasswordLock = ({
               {this.renderSettingInCategory()}
             </div>
           )}
-          <SessionInfo />
+          <BchatInfo />
         </div>
       </div>
     );

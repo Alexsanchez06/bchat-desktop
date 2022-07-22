@@ -11,7 +11,7 @@ import { useEncryptedFileFetch } from '../../hooks/useEncryptedFileFetch';
 import { showLightBox } from '../../state/ducks/conversations';
 import { GoogleChrome } from '../../util';
 import { Flex } from '../basic/Flex';
-import { SessionIconButton, BchatIconType } from '../icon';
+import { BchatIconButton, BchatIconType } from '../icon';
 import * as MIME from '../../types/MIME';
 import { isUndefined } from 'lodash';
 
@@ -161,7 +161,7 @@ const IconButton = ({ onClick, type }: IconButtonProps) => {
   }
 
   return (
-    <SessionIconButton
+    <BchatIconButton
       iconType={iconType}
       iconSize={'huge'}
       iconRotation={iconRotation}

@@ -3,8 +3,8 @@ import _, { debounce, isEmpty } from 'lodash';
 
 import * as MIME from '../../../types/MIME';
 
-import { SessionEmojiPanel } from '../SessionEmojiPanel';
-import { SessionRecording } from '../SessionRecording';
+import { BchatEmojiPanel } from '../BchatEmojiPanel';
+import { BchatRecording } from '../BchatRecording';
 
 import {
   getPreview,
@@ -15,7 +15,7 @@ import { AbortController } from 'abort-controller';
 import { SessionQuotedMessageComposition } from '../SessionQuotedMessageComposition';
 import { Mention, MentionsInput, SuggestionDataItem } from 'react-mentions';
 import autoBind from 'auto-bind';
-import { getMediaPermissionsSettings } from '../../settings/SessionSettings';
+import { getMediaPermissionsSettings } from '../../settings/BchatSettings';
 import { getDraftForConversation, updateDraftForConversation } from '../SessionConversationDrafts';
 import {
   AddStagedAttachmentButton,
@@ -342,7 +342,7 @@ class CompositionBoxInner extends React.Component<Props, State> {
 
   private renderRecordingView() {
     return (
-      <SessionRecording
+      <BchatRecording
         sendVoiceMessage={this.sendVoiceMessage}
         onLoadVoiceNoteView={this.onLoadVoiceNoteView}
         onExitVoiceNoteView={this.onExitVoiceNoteView}
@@ -392,7 +392,7 @@ class CompositionBoxInner extends React.Component<Props, State> {
         {typingEnabled && (
           <div ref={this.emojiPanel} onKeyDown={this.onKeyDown} role="button">
             {showEmojiPanel && (
-              <SessionEmojiPanel onEmojiClicked={this.onEmojiClick} show={showEmojiPanel} />
+              <BchatEmojiPanel onEmojiClicked={this.onEmojiClick} show={showEmojiPanel} />
             )}
           </div>
           

@@ -5,8 +5,8 @@ import _ from 'lodash';
 import { SpacerLG } from '../basic/Text';
 import { useDispatch } from 'react-redux';
 import { changeNickNameModal } from '../../state/ducks/modalDialog';
-import { SessionButton, SessionButtonColor } from '../basic/SessionButton';
-import { SessionWrapperModal } from '../SessionWrapperModal';
+import { BchatButton, BchatButtonColor } from '../basic/BchatButton';
+import { BchatWrapperModal } from '../BchatWrapperModal';
 
 type Props = {
   conversationId: string;
@@ -48,7 +48,7 @@ export const SessionNicknameDialog = (props: Props) => {
   };
 
   return (
-    <SessionWrapperModal
+    <BchatWrapperModal
       title={window.i18n('changeNickname')}
       onClose={onClickClose}
       showExitIcon={false}
@@ -70,13 +70,13 @@ export const SessionNicknameDialog = (props: Props) => {
       />
 
       <div className="session-modal__button-group">
-        <SessionButton text={window.i18n('cancel')} onClick={onClickClose} />
-        <SessionButton
+        <BchatButton text={window.i18n('cancel')} onClick={onClickClose} />
+        <BchatButton
           text={window.i18n('ok')}
           onClick={saveNickname}
-          buttonColor={SessionButtonColor.Green}
+          buttonColor={BchatButtonColor.Green}
         />
       </div>
-    </SessionWrapperModal>
+    </BchatWrapperModal>
   );
 };

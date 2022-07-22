@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
-import { sanitizeSessionUsername } from '../../session/utils/String';
+import { sanitizeBchatUsername } from '../../session/utils/String';
 import { Flex } from '../basic/Flex';
-import { SessionButton, SessionButtonColor, BchatButtonType } from '../basic/SessionButton';
+import { BchatButton, BchatButtonColor, BchatButtonType } from '../basic/BchatButton';
 import { BchatSpinner } from '../basic/BchatSpinner';
 import { SpacerLG } from '../basic/Text';
 import {
@@ -15,11 +15,11 @@ import {
 // import { RestoreSeedInput } from './RestoreFromSeed';
 import { GoBackMainMenuButton } from './SignUpTab';
 // import { TermsAndConditions } from './TermsAndConditions';
-import { SessionInput } from '../basic/SessionInput';
+import { BchatInput } from '../basic/BchatInput';
 import { DisplaySeed } from './DisplaySeed';
 import { mn_decode } from '../../session/crypto/mnemonic';
 import { ToastUtils } from '../../session/utils';
-// import { SessionIconButton } from '../icon/SessionIconButton';
+// import { BchatIconButton } from '../icon/BchatIconButton';
 const { clipboard } = require('electron')
 
 export enum SignInMode {
@@ -32,10 +32,10 @@ export enum SignInMode {
 
 // const LinkDeviceButton = (props: { onLinkDeviceButtonClicked: () => any }) => {
 //   return (
-//     <SessionButton
+//     <BchatButton
 //       onClick={props.onLinkDeviceButtonClicked}
 //       buttonType={BchatButtonType.BrandOutline}
-//       buttonColor={SessionButtonColor.Green}
+//       buttonColor={BchatButtonColor.Green}
 //       text={window.i18n('linkDevice')}
 //       dataTestId="link-device"
 //     />
@@ -44,25 +44,25 @@ export enum SignInMode {
 
 const RestoreUsingRecoveryPhraseButton = (props: { onRecoveryButtonClicked: () => any }) => {
   return (
-    <SessionButton
+    <BchatButton
       onClick={props.onRecoveryButtonClicked}
       buttonType={BchatButtonType.BrandOutline}
-      buttonColor={SessionButtonColor.Green}
+      buttonColor={BchatButtonColor.Green}
       text={window.i18n('signIn')}
       dataTestId="restore-using-recovery"
     />
   );
 };
 
-const ContinueYourSessionButton = (props: {
-  handleContinueYourSessionClick: () => any;
+const ContinueYourBchatButton = (props: {
+  handleContinueYourBchatClick: () => any;
   disabled: boolean;
 }) => {
   return (
-    <SessionButton
-      onClick={props.handleContinueYourSessionClick}
+    <BchatButton
+      onClick={props.handleContinueYourBchatClick}
       buttonType={BchatButtonType.Brand}
-      buttonColor={SessionButtonColor.Green}
+      buttonColor={BchatButtonColor.Green}
       text={window.i18n('restore')}
       disabled={props.disabled}
       dataTestId="continue-session-button"
@@ -73,14 +73,14 @@ const ContinueYourSessionButton = (props: {
 const SignInContinueButton = (props: {
   signInMode: SignInMode;
   disabled: boolean;
-  handleContinueYourSessionClick: () => any;
+  handleContinueYourBchatClick: () => any;
 }) => {
   if (props.signInMode === SignInMode.Default) {
     return null;
   }
   return (
-    <ContinueYourSessionButton
-      handleContinueYourSessionClick={props.handleContinueYourSessionClick}
+    <ContinueYourBchatButton
+    handleContinueYourBchatClick={props.handleContinueYourBchatClick}
       disabled={props.disabled}
     />
   );
@@ -132,7 +132,7 @@ export const SignInTab = (props:any) => {
   const seedOK = (blockheight && !recoveryPhraseError)||(restoreDate && !recoveryPhraseError);
   const activateContinueButton = seedOK && displayNameOK && !loading;
 
-  const continueYourSession = async () => {
+  const continueYourBchat = async () => {
     if (isRecovery) {
       await signInWithRecovery({
         displayName,
@@ -210,7 +210,7 @@ export const SignInTab = (props:any) => {
           />
           </div>
           <div className='session-registration-header'>Restore from Seed</div>
-          <SessionInput
+          <BchatInput
             autoFocus={true}
             label={window.i18n('displayName')}
             type="text"
@@ -218,7 +218,7 @@ export const SignInTab = (props:any) => {
             value={props.displayName}
             maxLength={MAX_USERNAME_LENGTH}
             onValueChanged={(name: string) => {
-              const sanitizedName = sanitizeSessionUsername(name);
+              const sanitizedName = sanitizeBchatUsername(name);
               const trimName = sanitizedName.trim();
               setDisplayName(sanitizedName);
               setDisplayNameError(!trimName ? window.i18n('displayNameEmpty') : undefined);}}
@@ -228,7 +228,7 @@ export const SignInTab = (props:any) => {
           <div>
             <hr className='session-registration-hr'></hr>
             <p className='session-restore-seed-textbox-message'>If you dont know the restore blockheight, you can skip it.</p>
-            <SessionInput
+            <BchatInput
               autoFocus={true}
               type="text"
               placeholder={'Restore from Blockheight'}
@@ -249,7 +249,7 @@ export const SignInTab = (props:any) => {
           <div style={{marginBottom:"56px"}} >
             <p className='session-restore-seed-textbox-message'>If you dont know the restore Date, you can skip it.</p>
 
-            <SessionInput
+            <BchatInput
               autoFocus={true}
               type="date"
               placeholder={'Restore from Date'}
@@ -263,7 +263,7 @@ export const SignInTab = (props:any) => {
 
           <SignInContinueButton
             signInMode={signInMode}
-            handleContinueYourSessionClick={continueYourSession}
+            handleContinueYourBchatClick={continueYourBchat}
             disabled={!activateContinueButton}
           />
         </>
