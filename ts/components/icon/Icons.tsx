@@ -1,4 +1,4 @@
-export type SessionIconType =
+export type BchatIconType =
   | 'addUser'
   | 'attachment'
   | "appeareance"

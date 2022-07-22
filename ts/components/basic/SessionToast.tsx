@@ -3,7 +3,7 @@ import React from 'react';
 import { Flex } from '../basic/Flex';
 import styled from 'styled-components';
 import { noop } from 'lodash';
-import { SessionIcon, SessionIconType } from '../icon';
+import { SessionIcon, BchatIconType } from '../icon';
 
 export enum SessionToastType {
   Info = 'info',
@@ -16,7 +16,7 @@ type Props = {
   title: string;
   id?: string;
   type?: SessionToastType;
-  icon?: SessionIconType;
+  icon?: BchatIconType;
   description?: string;
   closeToast?: any;
   onToastClick?: () => void;

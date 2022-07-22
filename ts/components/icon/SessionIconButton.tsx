@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import { SessionIcon, SessionIconProps } from '../icon';
 import _ from 'lodash';
-import { SessionNotificationCount } from './SessionNotificationCount';
+import { BchatNotificationCount } from './BchatNotificationCount';
 
 interface SProps extends SessionIconProps {
   onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
@@ -66,7 +66,7 @@ const SessionIconButtonInner = React.forwardRef<HTMLDivElement, SProps>((props, 
         borderRadius={borderRadius}
         iconPadding={iconPadding}
       />
-      {Boolean(notificationCount) && <SessionNotificationCount count={notificationCount} />}
+      {Boolean(notificationCount) && <BchatNotificationCount count={notificationCount} />}
     </div>
   );
 });

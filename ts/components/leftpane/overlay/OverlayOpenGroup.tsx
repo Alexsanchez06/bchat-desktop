@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 
 import { SessionJoinableRooms } from './SessionJoinableDefaultRooms';
 
-// import { SessionButton, SessionButtonColor, SessionButtonType } from '../../basic/SessionButton';
-import { SessionIdEditable } from '../../basic/SessionIdEditable';
-import { SessionSpinner } from '../../basic/SessionSpinner';
+// import { SessionButton, SessionButtonColor, BchatButtonType } from '../../basic/SessionButton';
+import { BchatIdEditable } from '../../basic/BchatIdEditable';
+import { BchatSpinner } from '../../basic/BchatSpinner';
 import { OverlayHeader } from './OverlayHeader';
 import { useDispatch } from 'react-redux';
 import { setOverlayMode } from '../../../state/ducks/section';
@@ -67,7 +67,7 @@ export const OverlayOpenGroup = () => {
       
       <div>{subtitle}</div>
       <div className="create-group-name-input">
-        <SessionIdEditable
+        <BchatIdEditable
           editable={true}
           placeholder={placeholder}
           value={groupUrl}
@@ -78,7 +78,7 @@ export const OverlayOpenGroup = () => {
         />
       </div>
 
-      <SessionSpinner loading={loading} />
+      <BchatSpinner loading={loading} />
       <SessionJoinableRooms onRoomClicked={closeOverlay} />
       <button 
       className='nextButton'
@@ -86,7 +86,7 @@ export const OverlayOpenGroup = () => {
       >{buttonText}</button>
       {/* <SessionButton
         buttonColor={SessionButtonColor.Green}
-        buttonType={SessionButtonType.BrandOutline}
+        buttonType={BchatButtonType.BrandOutline}
         text={buttonText}
         
       /> */}

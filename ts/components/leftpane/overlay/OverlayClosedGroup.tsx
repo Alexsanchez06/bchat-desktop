@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 
-// import { SessionButton, SessionButtonColor, SessionButtonType } from '../../basic/SessionButton';
-import { SessionIdEditable } from '../../basic/SessionIdEditable';
-import { SessionSpinner } from '../../basic/SessionSpinner';
+// import { SessionButton, SessionButtonColor, BchatButtonType } from '../../basic/SessionButton';
+import { BchatIdEditable } from '../../basic/BchatIdEditable';
+import { BchatSpinner } from '../../basic/BchatSpinner';
 import { MemberListItem } from '../../MemberListItem';
 import { OverlayHeader } from './OverlayHeader';
 // tslint:disable: no-submodule-imports use-simple-attributes
@@ -76,7 +76,7 @@ export const OverlayClosedGroup = () => {
       <OverlayHeader title={title} subtitle={subtitle} hideExit={true}/>
       
       <div className="create-group-name-input">
-        <SessionIdEditable
+        <BchatIdEditable
           editable={!noContactsForClosedGroup}
           placeholder={placeholder}
           value={groupName}
@@ -88,7 +88,7 @@ export const OverlayClosedGroup = () => {
         />
       </div>
 
-      <SessionSpinner loading={loading} />
+      <BchatSpinner loading={loading} />
 
       <SpacerLG />
       <div className="group-member-list__container">
@@ -121,7 +121,7 @@ export const OverlayClosedGroup = () => {
  
       {/* <SessionButton
         buttonColor={SessionButtonColor.Green}
-        buttonType={SessionButtonType.BrandOutline}
+        buttonType={BchatButtonType.BrandOutline}
         text={buttonText}
         disabled={noContactsForClosedGroup}
        

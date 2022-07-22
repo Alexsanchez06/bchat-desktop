@@ -14,8 +14,8 @@ import { SpacerLG, SpacerMD } from '../basic/Text';
 import autoBind from 'auto-bind';
 import { editProfileModal } from '../../state/ducks/modalDialog';
 import { uploadOurAvatar } from '../../interactions/conversationInteractions';
-import { SessionButton, SessionButtonColor, SessionButtonType } from '../basic/SessionButton';
-import { SessionSpinner } from '../basic/SessionSpinner';
+import { SessionButton, SessionButtonColor, BchatButtonType } from '../basic/SessionButton';
+import { BchatSpinner } from '../basic/BchatSpinner';
 import { SessionIconButton } from '../icon';
 import { MAX_USERNAME_LENGTH } from '../registration/RegistrationStages';
 import { SessionWrapperModal } from '../SessionWrapperModal';
@@ -114,12 +114,12 @@ export class EditProfileDialog extends React.Component<{}, State> {
             </p>
 
             <SpacerLG />
-            <SessionSpinner loading={this.state.loading} />
+            <BchatSpinner loading={this.state.loading} />
 
             {viewDefault || viewQR ? (
               <SessionButton
                 text={window.i18n('editMenuCopy')}
-                buttonType={SessionButtonType.BrandOutline}
+                buttonType={BchatButtonType.BrandOutline}
                 buttonColor={SessionButtonColor.Green}
                 onClick={() => {
                   copySessionID(sessionID);
@@ -130,7 +130,7 @@ export class EditProfileDialog extends React.Component<{}, State> {
               !this.state.loading && (
                 <SessionButton
                   text={window.i18n('save')}
-                  buttonType={SessionButtonType.BrandOutline}
+                  buttonType={BchatButtonType.BrandOutline}
                   buttonColor={SessionButtonColor.Green}
                   onClick={this.onClickOK}
                   disabled={this.state.loading}

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 // tslint:disable-next-line: no-submodule-imports
 
 import useUpdate from 'react-use/lib/useUpdate';
-import { SessionSettingsItemWrapper } from './SessionSettingListItem';
+import { BchatSettingsItemWrapper } from './BchatSettingListItem';
 // import { SessionIconButton } from '../icon';
 
 // import Dropdown from 'react-dropdown';
@@ -82,7 +82,7 @@ export const ZoomingSessionSlider = (props: { onSliderChange?: (value: number) =
   }
   
   return (
-    <SessionSettingsItemWrapper title={window.i18n('zoomFactorSettingTitle')} inline={true}>
+    <BchatSettingsItemWrapper title={window.i18n('zoomFactorSettingTitle')} inline={true}>
       {/* <div className="slider-wrapper">
         <Slider
           dots={true}
@@ -110,6 +110,6 @@ export const ZoomingSessionSlider = (props: { onSliderChange?: (value: number) =
     </div>
     
    
-    </SessionSettingsItemWrapper>
+    </BchatSettingsItemWrapper>
   );
 };

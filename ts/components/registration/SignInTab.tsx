@@ -1,8 +1,8 @@
 import React, { useContext, useState } from 'react';
 import { sanitizeSessionUsername } from '../../session/utils/String';
 import { Flex } from '../basic/Flex';
-import { SessionButton, SessionButtonColor, SessionButtonType } from '../basic/SessionButton';
-import { SessionSpinner } from '../basic/SessionSpinner';
+import { SessionButton, SessionButtonColor, BchatButtonType } from '../basic/SessionButton';
+import { BchatSpinner } from '../basic/BchatSpinner';
 import { SpacerLG } from '../basic/Text';
 import {
   MAX_USERNAME_LENGTH,
@@ -34,7 +34,7 @@ export enum SignInMode {
 //   return (
 //     <SessionButton
 //       onClick={props.onLinkDeviceButtonClicked}
-//       buttonType={SessionButtonType.BrandOutline}
+//       buttonType={BchatButtonType.BrandOutline}
 //       buttonColor={SessionButtonColor.Green}
 //       text={window.i18n('linkDevice')}
 //       dataTestId="link-device"
@@ -46,7 +46,7 @@ const RestoreUsingRecoveryPhraseButton = (props: { onRecoveryButtonClicked: () =
   return (
     <SessionButton
       onClick={props.onRecoveryButtonClicked}
-      buttonType={SessionButtonType.BrandOutline}
+      buttonType={BchatButtonType.BrandOutline}
       buttonColor={SessionButtonColor.Green}
       text={window.i18n('signIn')}
       dataTestId="restore-using-recovery"
@@ -61,7 +61,7 @@ const ContinueYourSessionButton = (props: {
   return (
     <SessionButton
       onClick={props.handleContinueYourSessionClick}
-      buttonType={SessionButtonType.Brand}
+      buttonType={BchatButtonType.Brand}
       buttonColor={SessionButtonColor.Green}
       text={window.i18n('restore')}
       disabled={props.disabled}
@@ -300,7 +300,7 @@ export const SignInTab = (props:any) => {
             backgroundColor: '#00000088',
           }}
         >
-          <SessionSpinner loading={true} />
+          <BchatSpinner loading={true} />
         </Flex>
       )}
     </div>

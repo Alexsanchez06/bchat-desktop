@@ -1,5 +1,5 @@
 // import React,{useState} from 'react';
-// import { SessionButton, SessionButtonColor, SessionButtonType } from '../basic/SessionButton';
+// import { SessionButton, SessionButtonColor, BchatButtonType } from '../basic/SessionButton';
 // import { SessionInput } from '../basic/SessionInput';
 
 // // const [seed,setSeed] = useState('');
@@ -85,7 +85,7 @@
 //         </div>
 //       <SessionButton
 //         onClick={props.nextScreen}
-//         buttonType={SessionButtonType.Brand}
+//         buttonType={BchatButtonType.Brand}
 //         buttonColor={SessionButtonColor.Green}
 //         text={window.i18n('continue')}
 //         // disabled={!props.enableCompleteSignUp}
@@ -95,7 +95,7 @@
 
 
 // import React from 'react';
-// import { SessionButton, SessionButtonColor, SessionButtonType } from '../basic/SessionButton';
+// import { SessionButton, SessionButtonColor, BchatButtonType } from '../basic/SessionButton';
 
 // const Icons=(props:any)=><div onClick={()=>props.iconfunc()} style={{background:`url(images/bchat/${props.icon}.svg) no-repeat`,
 //  width: "30px",
@@ -136,7 +136,7 @@
 
 //         <SessionButton
 //             onClick={props.recoveryPhrase? props.onNext:null}
-//             buttonType={SessionButtonType.Brand}
+//             buttonType={BchatButtonType.Brand}
 //             buttonColor={SessionButtonColor.Green}
 //             // text={window.i18n('getStarted')}
 //             text="Next"

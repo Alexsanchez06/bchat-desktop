@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { SessionIcon, SessionIconType } from '../../../../icon';
+import { SessionIcon, BchatIconType } from '../../../../icon';
 
 const NotificationBubbleFlex = styled.div`
   display: flex;
@@ -29,7 +29,7 @@ const NotificationBubbleIconContainer = styled.div`
 
 export const NotificationBubble = (props: {
   notificationText: string;
-  iconType?: SessionIconType;
+  iconType?: BchatIconType;
   iconColor?: string;
 }) => {
   const { notificationText, iconType, iconColor } = props;

@@ -14,7 +14,7 @@ type Props = {
   dataTestId?: string;
 };
 
-export const SessionIdEditable = (props: Props) => {
+export const BchatIdEditable = (props: Props) => {
   const {
     placeholder,
     onPressEnter,

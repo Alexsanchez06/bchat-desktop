@@ -1,6 +1,6 @@
 import React from 'react';
 import { SessionRadioGroup } from '../basic/SessionRadioGroup';
-import { SessionSettingsItemWrapper } from './SessionSettingListItem';
+import { BchatSettingsItemWrapper } from './BchatSettingListItem';
 
 export const SessionNotificationGroupSettings = (props: { hasPassword: boolean | null }) => {
   if (props.hasPassword === null) {
@@ -28,7 +28,7 @@ export const SessionNotificationGroupSettings = (props: { hasPassword: boolean |
     },
   ];
   return (
-    <SessionSettingsItemWrapper title={window.i18n('notificationSettingsDialog')} inline={false}>
+    <BchatSettingsItemWrapper title={window.i18n('notificationSettingsDialog')} inline={false}>
       <SessionRadioGroup
         initialItem={initialItem}
         group={'notification-setting'}
@@ -37,6 +37,6 @@ export const SessionNotificationGroupSettings = (props: { hasPassword: boolean |
           window.setSettingValue('notification-setting', selectedRadioValue);
         }}
       />
-    </SessionSettingsItemWrapper>
+    </BchatSettingsItemWrapper>
   );
 };

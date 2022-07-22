@@ -9,7 +9,7 @@ import { SessionNotificationGroupSettings } from './SessionNotificationGroupSett
 import { BlockedUserSettings } from './BlockedUserSettings';
 import { SettingsCategoryPrivacy } from './section/CategoryPrivacy';
 import { SettingsCategoryAppearance } from './section/CategoryAppearance';
-import { SessionButton, SessionButtonColor, SessionButtonType } from '../basic/SessionButton';
+import { SessionButton, SessionButtonColor, BchatButtonType } from '../basic/SessionButton';
 import { getPasswordHash } from '../../data/data';
 import { LocalizerKeys } from '../../types/LocalizerKeys';
 import { matchesHash } from '../../util/passwordUtils';
@@ -17,7 +17,7 @@ import { matchesHash } from '../../util/passwordUtils';
 //bchat
 
 import {SessionRecoverySeed} from "./SeesionRecoverySeed"
-import {SessionSettingRecoveryKey} from "./sessionSettingRecoveryKey"
+// import {SessionSettingRecoveryKey} from "./sessionSettingRecoveryKey"
 import {OverlayMessageRequest} from "../../components/leftpane/overlay/OverlayMessageRequest"
 import {SessionOnionPathScreen} from "./SessionOnionPathScreen"
 
@@ -92,7 +92,7 @@ export const PasswordLock = ({
         {pwdLockError && <div className="session-label warning">{pwdLockError}</div>}
 
         <SessionButton
-          buttonType={SessionButtonType.BrandOutline}
+          buttonType={BchatButtonType.BrandOutline}
           buttonColor={SessionButtonColor.Green}
           text={window.i18n('ok')}
           onClick={validatePasswordLock}
@@ -159,9 +159,9 @@ export const PasswordLock = ({
       return <SessionRecoverySeed  />;
     }
 
-    if (category === SessionSettingCategory.RecoveryKey) {
-      return <SessionSettingRecoveryKey  />;
-    }
+    // if (category === SessionSettingCategory.RecoveryKey) {
+    //   return <SessionSettingRecoveryKey  />;
+    // }
 
     if (category === SessionSettingCategory.MessageRequests) {
       return <OverlayMessageRequest />;

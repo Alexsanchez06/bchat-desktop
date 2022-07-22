@@ -244,6 +244,7 @@ window.getSeedNodeList = () =>
         // 'https://storage.seed3.loki.network:4433/',
         // 'https://public.loki.foundation:4433/',
         'http://15.188.30.57:19095'
+        // "https://mainnet.beldex.io:29095"
       ];
 
 const { locale: localFromEnv } = config;

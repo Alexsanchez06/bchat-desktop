@@ -9,7 +9,7 @@ import {
 import { MessageDirection } from '../../models/messageType';
 import { getConversationController } from '../../session/conversations';
 import { getSelectedConversation } from '../../state/selectors/conversations';
-import { SessionButton, SessionButtonColor, SessionButtonType } from '../basic/SessionButton';
+import { SessionButton, SessionButtonColor, BchatButtonType } from '../basic/SessionButton';
 
 export const ConversationMessageRequestButtons = () => {
   const selectedConversation = useSelector(getSelectedConversation);
@@ -64,14 +64,14 @@ export const ConversationMessageRequestButtons = () => {
       <ConversationBannerRow>
         <SessionButton
           buttonColor={SessionButtonColor.Green}
-          buttonType={SessionButtonType.BrandOutline}
+          buttonType={BchatButtonType.BrandOutline}
           onClick={handleAcceptConversationRequest}
           text={window.i18n('accept')}
           dataTestId="accept-message-request"
         />
         <SessionButton
           buttonColor={SessionButtonColor.Danger}
-          buttonType={SessionButtonType.BrandOutline}
+          buttonType={BchatButtonType.BrandOutline}
           text={window.i18n('decline')}
           onClick={handleDeclineConversationRequest}
           dataTestId="decline-message-request"

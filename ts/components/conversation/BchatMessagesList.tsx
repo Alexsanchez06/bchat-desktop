@@ -24,7 +24,7 @@ import { GroupInvitation } from './message/message-item/GroupInvitation';
 import { Message } from './message/message-item/Message';
 import { CallNotification } from './message/message-item/notification-bubble/CallNotification';
 
-import { SessionLastSeenIndicator } from './SessionLastSeenIndicator';
+import { BchatLastSeenIndicator } from './BchatLastSeenIndicator';
 import { TimerNotification } from './TimerNotification';
 import { DataExtractionNotification } from './message/message-item/DataExtractionNotification';
 
@@ -32,7 +32,7 @@ function isNotTextboxEvent(e: KeyboardEvent) {
   return (e?.target as any)?.type === undefined;
 }
 
-export const SessionMessagesList = (props: {
+export const BchatMessagesList = (props: {
   scrollAfterLoadMore: (
     messageIdToScrollTo: string,
     type: 'load-more-top' | 'load-more-bottom'
@@ -89,7 +89,7 @@ export const SessionMessagesList = (props: {
       {messagesProps.map(messageProps => {
         const messageId = messageProps.message.props.messageId;
         const unreadIndicator = messageProps.showUnreadIndicator ? (
-          <SessionLastSeenIndicator key={`unread-indicator-${messageId}`} messageId={messageId} />
+          <BchatLastSeenIndicator key={`unread-indicator-${messageId}`} messageId={messageId} />
         ) : null;
 
         const dateBreak =

@@ -27,7 +27,7 @@ import { MessageAttachment } from './MessageAttachment';
 import { MessagePreview } from './MessagePreview';
 import { MessageQuote } from './MessageQuote';
 import { MessageText } from './MessageText';
-import { ScrollToLoadedMessageContext } from '../../SessionMessagesListContainer';
+import { ScrollToLoadedMessageContext } from '../../BchatMessagesListContainer';
 
 export type MessageContentSelectorProps = Pick<
   MessageRenderingProps,

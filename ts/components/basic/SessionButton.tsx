@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import classNames from 'classnames';
 
-export enum SessionButtonType {
+export enum BchatButtonType {
   Brand = 'brand',
   BrandOutline = 'brand-outline',
   Default = 'default',
@@ -24,7 +24,7 @@ export enum SessionButtonColor {
 type Props = {
   text?: string;
   disabled?: boolean;
-  buttonType: SessionButtonType;
+  buttonType: BchatButtonType;
   buttonColor: SessionButtonColor;
   onClick: any;
   children?: ReactNode;
@@ -76,7 +76,7 @@ export const SessionButton = (props: Props) => {
 
 SessionButton.defaultProps = {
   disabled: false,
-  buttonType: SessionButtonType.Default,
+  buttonType: BchatButtonType.Default,
   buttonColor: SessionButtonColor.Primary,
   onClick: null,
 } as Partial<Props>;

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SessionButton, SessionButtonColor, SessionButtonType } from '../basic/SessionButton';
+import { SessionButton, SessionButtonColor, BchatButtonType } from '../basic/SessionButton';
 import { Icons } from './DisplaySeed';
 import { GoBackMainMenuButton } from './SignUpTab';
 
@@ -24,7 +24,7 @@ export const DisplayIdAndAddress= (props:any) => (
        </div>
        <SessionButton
         onClick={props.nextFunc}
-        buttonType={SessionButtonType.Brand}
+        buttonType={BchatButtonType.Brand}
         buttonColor={SessionButtonColor.Green}
         text="Next"/>
      </div>
@@ -49,7 +49,7 @@ export const ShowRecoveryPhase= (props:any) => {
         </div >            
        <SessionButton 
         onClick={props.nextFunc}
-        buttonType={SessionButtonType.Brand}
+        buttonType={BchatButtonType.Brand}
         buttonColor={SessionButtonColor.Green}
         text={window.i18n('continue')}
         disabled={!seedCopied}/>

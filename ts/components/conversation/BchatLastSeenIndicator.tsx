@@ -2,7 +2,7 @@ import React, { useContext, useLayoutEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 import { getQuotedMessageToAnimate } from '../../state/selectors/conversations';
-import { ScrollToLoadedMessageContext } from './SessionMessagesListContainer';
+import { ScrollToLoadedMessageContext } from './BchatMessagesListContainer';
 
 const LastSeenBarContainer = styled.div`
   padding-bottom: 35px;
@@ -35,7 +35,7 @@ const LastSeenText = styled.div`
   color: var(--color-last-seen-indicator);
 `;
 
-export const SessionLastSeenIndicator = (props: { messageId: string }) => {
+export const BchatLastSeenIndicator = (props: { messageId: string }) => {
   // if this unread-indicator is not unique it's going to cause issues
   const [didScroll, setDidScroll] = useState(false);
   const quotedMessageToAnimate = useSelector(getQuotedMessageToAnimate);

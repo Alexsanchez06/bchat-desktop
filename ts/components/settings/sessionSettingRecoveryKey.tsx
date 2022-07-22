@@ -1,5 +1,5 @@
 import React, {  useState } from 'react';
-import { SessionButton,SessionButtonColor, SessionButtonType } from '.././basic/SessionButton';
+import { SessionButton,SessionButtonColor, BchatButtonType } from '.././basic/SessionButton';
 
 export const SessionSettingRecoveryKey=()=>
 {
@@ -52,7 +52,7 @@ export const SessionSettingRecoveryKey=()=>
              <SessionButton
               text={"Yes, I am Sure!"}
               onClick={()=>{setVerify(true)}}
-              buttonType={SessionButtonType.Brand}
+              buttonType={BchatButtonType.Brand}
               buttonColor={SessionButtonColor.Green}
             //   disabled={!caption}
             />

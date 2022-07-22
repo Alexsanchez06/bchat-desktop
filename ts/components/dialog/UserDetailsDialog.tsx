@@ -10,8 +10,8 @@ import { ToastUtils } from '../../session/utils';
 import { openConversationWithMessages } from '../../state/ducks/conversations';
 import { updateUserDetailsModal } from '../../state/ducks/modalDialog';
 import { Avatar, AvatarSize } from '../avatar/Avatar';
-import { SessionButton, SessionButtonColor, SessionButtonType } from '../basic/SessionButton';
-import { SessionIdEditable } from '../basic/SessionIdEditable';
+import { SessionButton, SessionButtonColor, BchatButtonType } from '../basic/SessionButton';
+import { BchatIdEditable } from '../basic/BchatIdEditable';
 import { SpacerLG } from '../basic/Text';
 import { SessionWrapperModal } from '../SessionWrapperModal';
 
@@ -67,12 +67,12 @@ export const UserDetailsDialog = (props: Props) => {
       </div>
 
       <SpacerLG />
-      <SessionIdEditable editable={false} text={convo.id} />
+      <BchatIdEditable editable={false} text={convo.id} />
 
       <div className="session-modal__button-group__center">
         <SessionButton
           text={window.i18n('editMenuCopy')}
-          buttonType={SessionButtonType.Default}
+          buttonType={BchatButtonType.Default}
           buttonColor={SessionButtonColor.Primary}
           onClick={() => {
             copyToClipboard(props.conversationId);
@@ -81,7 +81,7 @@ export const UserDetailsDialog = (props: Props) => {
         />
         <SessionButton
           text={window.i18n('startConversation')}
-          buttonType={SessionButtonType.Default}
+          buttonType={BchatButtonType.Default}
           buttonColor={SessionButtonColor.Green}
           onClick={onClickStartConversation}
         />

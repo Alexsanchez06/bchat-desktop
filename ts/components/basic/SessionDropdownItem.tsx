@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import { SessionIcon, SessionIconType } from '../icon';
+import { SessionIcon, BchatIconType } from '../icon';
 
 export enum SessionDropDownItemType {
   Default = 'default',
@@ -10,7 +10,7 @@ export enum SessionDropDownItemType {
 type Props = {
   content: string;
   type: SessionDropDownItemType;
-  icon: SessionIconType | null;
+  icon: BchatIconType | null;
   active: boolean;
   onClick: any;
 };

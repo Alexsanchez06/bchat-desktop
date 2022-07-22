@@ -21,7 +21,7 @@ import { DEVICE_DISABLED_DEVICE_ID } from '../../session/utils/calling/CallManag
 // tslint:disable-next-line: no-submodule-imports
 import useInterval from 'react-use/lib/useInterval';
 import moment from 'moment';
-import { SessionSpinner } from '../basic/SessionSpinner';
+import { BchatSpinner } from '../basic/BchatSpinner';
 
 const VideoContainer = styled.div`
   height: 100%;
@@ -131,7 +131,7 @@ const StyledSpinner = styled.div<{ fullWidth: boolean }>`
 export const VideoLoadingSpinner = (props: { fullWidth: boolean }) => {
   return (
     <StyledSpinner fullWidth={props.fullWidth}>
-      <SessionSpinner loading={true} />
+      <BchatSpinner loading={true} />
     </StyledSpinner>
   );
 };

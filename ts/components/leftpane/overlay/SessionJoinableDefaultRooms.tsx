@@ -12,7 +12,7 @@ import { StateType } from '../../../state/reducer';
 import { Avatar, AvatarSize } from '../../avatar/Avatar';
 import { Flex } from '../../basic/Flex';
 import { PillContainerHoverable, PillTooltipWrapper } from '../../basic/PillContainer';
-import { SessionSpinner } from '../../basic/SessionSpinner';
+import { BchatSpinner } from '../../basic/BchatSpinner';
 import { H3 } from '../../basic/Text';
 // tslint:disable: no-void-expression
 
@@ -127,7 +127,7 @@ export const SessionJoinableRooms = (props: { onRoomClicked: () => void }) => {
   }
 
   const componentToRender = joinableRooms.inProgress ? (
-    <SessionSpinner loading={true} />
+    <BchatSpinner loading={true} />
   ) : (
     joinableRooms.rooms.map(r => {
       return (

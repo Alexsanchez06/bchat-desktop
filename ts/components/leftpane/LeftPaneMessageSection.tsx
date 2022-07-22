@@ -11,7 +11,7 @@ import autoBind from 'auto-bind';
 import _ from 'lodash';
 import { MessageRequestsBanner } from './MessageRequestsBanner';
 
-// import { SessionButton, SessionButtonColor, SessionButtonType } from '../basic/SessionButton';
+// import { SessionButton, SessionButtonColor, BchatButtonType } from '../basic/SessionButton';
 import { SessionSearchInput } from '../SessionSearchInput';
 import { RowRendererParamsType } from './LeftPane';
 import { OverlayOpenGroup } from './overlay/OverlayOpenGroup';
@@ -149,7 +149,7 @@ export class LeftPaneMessageSection extends React.Component<Props> {
         {/* <SessionButton
           // text={joinOpenGroup}
           icon={true}
-          buttonType={SessionButtonType.SquareOutline}
+          buttonType={BchatButtonType.SquareOutline}
           buttonColor={SessionButtonColor.Green}
           onClick={() => {
             window.inboxStore?.dispatch(setOverlayMode('open-group'));
@@ -163,7 +163,7 @@ export class LeftPaneMessageSection extends React.Component<Props> {
           style={{background: "url(images/bchat/socialgroup.svg) no-repeat ",backgroundSize: 'cover',height: "19px",color: "rgb(0, 0, 0)",width: "29px",margin:'30px 30px'}}
 
           // text={newClosedGroup}
-          buttonType={SessionButtonType.SquareOutline}
+          buttonType={BchatButtonType.SquareOutline}
           buttonColor={SessionButtonColor.White}
           onClick={() => {
             window.inboxStore?.dispatch(setOverlayMode('closed-group'));

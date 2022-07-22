@@ -7,8 +7,8 @@ import { Flex } from '../basic/Flex';
 import _ from 'lodash';
 import { updateRemoveModeratorsModal } from '../../state/ducks/modalDialog';
 import { SessionWrapperModal } from '../SessionWrapperModal';
-import { SessionButton, SessionButtonColor, SessionButtonType } from '../basic/SessionButton';
-import { SessionSpinner } from '../basic/SessionSpinner';
+import { SessionButton, SessionButtonColor, BchatButtonType } from '../basic/SessionButton';
+import { BchatSpinner } from '../basic/BchatSpinner';
 import { MemberListItem } from '../MemberListItem';
 import { useDispatch } from 'react-redux';
 import { useConversationPropsById } from '../../hooks/useParamSelector';
@@ -108,18 +108,18 @@ export const RemoveModeratorsDialog = (props: Props) => {
         ) : (
           <p>{i18n('noModeratorsToRemove')}</p>
         )}
-        <SessionSpinner loading={removingInProgress} />
+        <BchatSpinner loading={removingInProgress} />
 
         <div className="session-modal__button-group">
           <SessionButton
-            buttonType={SessionButtonType.Brand}
+            buttonType={BchatButtonType.Brand}
             buttonColor={SessionButtonColor.Green}
             onClick={removeModsCall}
             disabled={removingInProgress}
             text={i18n('ok')}
           />
           <SessionButton
-            buttonType={SessionButtonType.Brand}
+            buttonType={BchatButtonType.Brand}
             buttonColor={SessionButtonColor.Primary}
             onClick={closeDialog}
             disabled={removingInProgress}
@@ -127,7 +127,7 @@ export const RemoveModeratorsDialog = (props: Props) => {
           />
         </div>
 
-        <SessionSpinner loading={removingInProgress} />
+        <BchatSpinner loading={removingInProgress} />
       </Flex>
     </SessionWrapperModal>
   );

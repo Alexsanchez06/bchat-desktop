@@ -13,7 +13,7 @@ import { getAudioAutoplay } from '../../../state/selectors/userConfig';
 import { SessionButtonColor } from '../../basic/SessionButton';
 
 // import { SessionSettingButtonItem, SessionToggleWithDescription } from '../SessionSettingListItem';
-import {SessionToggleWithDescription } from '../SessionSettingListItem';
+import {SessionToggleWithDescription } from '../BchatSettingListItem';
 
 import { ZoomingSessionSlider } from '../ZoomingSessionSlider';
 

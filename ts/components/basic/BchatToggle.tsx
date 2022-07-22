@@ -9,7 +9,7 @@ type Props = {
   confirmationDialogParams?: any | undefined;
 };
 
-export const SessionToggle = (props: Props) => {
+export const BchatToggle = (props: Props) => {
   const dispatch = useDispatch();
 
   const clickHandler = (event: any) => {

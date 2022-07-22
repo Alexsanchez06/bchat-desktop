@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 import { Image } from './Image';
 
-import { SessionSpinner } from '../basic/SessionSpinner';
+import { BchatSpinner } from '../basic/BchatSpinner';
 import { StagedLinkPreviewImage } from './composition/CompositionBox';
 import { isImage } from '../../types/MIME';
 import { fromArrayBufferToBase64 } from '../../session/utils/String';
@@ -39,7 +39,7 @@ export const StagedLinkPreview = (props: Props) => {
         isLoading ? 'module-staged-link-preview--is-loading' : null
       )}
     >
-      {isLoading ? <SessionSpinner loading={isLoading} /> : null}
+      {isLoading ? <BchatSpinner loading={isLoading} /> : null}
       {isLoaded && image && isContentTypeImage ? (
         <div className="module-staged-link-preview__icon-container">
           <Image

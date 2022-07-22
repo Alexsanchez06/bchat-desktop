@@ -2,7 +2,7 @@
 
 ## Automated
 
-Automatic building of session binaries is done using github actions. Windows and linux binaries will build right out of the box but there are some extra steps needed for Mac OS
+Automatic building of bchat binaries is done using github actions. Windows and linux binaries will build right out of the box but there are some extra steps needed for Mac OS
 
 ### Mac OS
 

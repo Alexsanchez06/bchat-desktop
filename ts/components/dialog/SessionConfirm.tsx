@@ -3,8 +3,8 @@ import { SessionHtmlRenderer } from '../basic/SessionHTMLRenderer';
 import { updateConfirmModal } from '../../state/ducks/modalDialog';
 import { SpacerLG } from '../basic/Text';
 import { SessionButton, SessionButtonColor } from '../basic/SessionButton';
-import { SessionSpinner } from '../basic/SessionSpinner';
-import { SessionIcon, SessionIconSize, SessionIconType } from '../icon';
+import { BchatSpinner } from '../basic/BchatSpinner';
+import { SessionIcon, SessionIconSize, BchatIconType } from '../icon';
 import { SessionWrapperModal } from '../SessionWrapperModal';
 
 export interface SessionConfirmDialogProps {
@@ -31,7 +31,7 @@ export interface SessionConfirmDialogProps {
   hideCancel?: boolean;
   okTheme?: SessionButtonColor;
   closeTheme?: SessionButtonColor;
-  sessionIcon?: SessionIconType;
+  sessionIcon?: BchatIconType;
   iconSize?: SessionIconSize;
   shouldShowConfirm?: boolean | undefined;
   showExitIcon?: boolean | undefined;
@@ -123,7 +123,7 @@ export const SessionConfirm = (props: SessionConfirmDialogProps) => {
           html={messageSub}
         />
 
-        <SessionSpinner loading={isLoading} />
+        <BchatSpinner loading={isLoading} />
       </div>
 
       <div className="session-modal__button-group">

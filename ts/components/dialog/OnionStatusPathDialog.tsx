@@ -19,7 +19,7 @@ import {
 import { Flex } from '../basic/Flex';
 // tslint:disable-next-line: no-submodule-imports
 import useHover from 'react-use/lib/useHover';
-import { SessionSpinner } from '../basic/SessionSpinner';
+import { BchatSpinner } from '../basic/BchatSpinner';
 import { SessionIcon, SessionIconButton } from '../icon';
 // import { SessionWrapperModal } from '../SessionWrapperModal';
 
@@ -54,7 +54,7 @@ const OnionPathModalInner = () => {
   // including the device and destination in calculation
   const glowDuration = onionPath.length + 2;
   if (!isOnline || !onionPath || onionPath.length === 0) {
-    return <SessionSpinner loading={true} />;
+    return <BchatSpinner loading={true} />;
   }
 
   const nodes = [

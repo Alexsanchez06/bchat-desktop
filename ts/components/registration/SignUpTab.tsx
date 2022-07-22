@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { sanitizeSessionUsername } from '../../session/utils/String';
 import { Flex } from '../basic/Flex';
-import { SessionButton, SessionButtonColor, SessionButtonType } from '../basic/SessionButton';
-// import { SessionIdEditable } from '../basic/SessionIdEditable';
+import { SessionButton, SessionButtonColor, BchatButtonType } from '../basic/SessionButton';
+// import { BchatIdEditable } from '../basic/BchatIdEditable';
 import { SessionIconButton } from '../icon';
 import { RegistrationContext, RegistrationPhase, signUp } from './RegistrationStages';
 import { RegistrationUserDetails } from './RegistrationUserDetails';
@@ -24,7 +24,7 @@ const CreateSessionIdButton = ({ createSessionID }: { createSessionID: any }) =>
   return (
     <SessionButton
       onClick={createSessionID}
-      buttonType={SessionButtonType.BrandOutline}
+      buttonType={BchatButtonType.BrandOutline}
       buttonColor={SessionButtonColor.Green}
       text={window.i18n('createAccount')}
     />
@@ -35,7 +35,7 @@ const CreateSessionIdButton = ({ createSessionID }: { createSessionID: any }) =>
 //   return (
 //     <SessionButton
 //       onClick={continueSignUp}
-//       buttonType={SessionButtonType.Brand}
+//       buttonType={BchatButtonType.Brand}
 //       buttonColor={SessionButtonColor.Green}
 //       text={window.i18n('continue')}
 //     />
@@ -78,7 +78,7 @@ export const GoBackMainMenuButton = (props:any) => {
 //           {window.i18n('yourUniqueSessionID')}
 //         </div>
 //       </Flex>
-//       <SessionIdEditable editable={false} placeholder={undefined} dataTestId="session-id-signup" />
+//       <BchatIdEditable editable={false} placeholder={undefined} dataTestId="session-id-signup" />
 //       <div className="session-description-long">{window.i18n('allUsersAreRandomly...')}</div>
 //       <ContinueSignUpButton continueSignUp={props.continueSignUp} />
 //     </div>
@@ -189,7 +189,7 @@ export const SignUpTab = (props:any) => {
       />
       <SessionButton
         onClick={()=> {verifyUserName()}}
-        buttonType={SessionButtonType.Brand}
+        buttonType={BchatButtonType.Brand}
         buttonColor={SessionButtonColor.Green}
         text={window.i18n('getStarted')}
         // disabled={!enableCompleteSignUp}

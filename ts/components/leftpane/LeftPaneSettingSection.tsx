@@ -12,11 +12,11 @@ import {
 } from '../../state/ducks/section';
 import { getFocusedSettingsSection } from '../../state/selectors/section';
 import { recoveryPhraseModal, updateDeleteAccountModal } from '../../state/ducks/modalDialog';
-import { SessionButton, SessionButtonColor, SessionButtonType } from '../basic/SessionButton';
+import { SessionButton, SessionButtonColor, BchatButtonType } from '../basic/SessionButton';
 import { SessionIcon } from '../icon';
 import { SessionSettingCategory } from '../settings/SessionSettings';
 // import { resetConversationExternal } from '../../state/ducks/conversations';
-// import { SessionIconType } from '../icon';
+// import { BchatIconType } from '../icon';
 
  import { ActionPanelOnionStatusLight } from '../dialog/OnionStatusPathDialog';
 //  import {  onionPathModal,} from '../../state/ducks/modalDialog';
@@ -151,7 +151,7 @@ const LeftPaneBottomButtons = () => {
     <div className="left-pane-setting-bottom-buttons" key={1}>
       <SessionButton
         text={dangerButtonText}
-        buttonType={SessionButtonType.SquareOutline}
+        buttonType={BchatButtonType.SquareOutline}
         buttonColor={SessionButtonColor.Danger}
         onClick={() => {
           dispatch(updateDeleteAccountModal({}));
@@ -160,7 +160,7 @@ const LeftPaneBottomButtons = () => {
 
       <SessionButton
         text={showRecoveryPhrase}
-        buttonType={SessionButtonType.SquareOutline}
+        buttonType={BchatButtonType.SquareOutline}
         buttonColor={SessionButtonColor.White}
         onClick={() => {
           dispatch(recoveryPhraseModal({}));

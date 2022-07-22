@@ -7,7 +7,7 @@ import { updateConfirmModal, updateDeleteAccountModal } from '../../state/ducks/
 import { SpacerLG } from '../basic/Text';
 import { SessionButton, SessionButtonColor } from '../basic/SessionButton';
 import { SessionHtmlRenderer } from '../basic/SessionHTMLRenderer';
-import { SessionSpinner } from '../basic/SessionSpinner';
+import { BchatSpinner } from '../basic/BchatSpinner';
 import { SessionWrapperModal } from '../SessionWrapperModal';
 
 import * as Data from '../../data/data';
@@ -253,7 +253,7 @@ export const DeleteAccountModal = () => {
           </div>
         )}
 
-        <SessionSpinner loading={isLoading} />
+        <BchatSpinner loading={isLoading} />
       </div>
     </SessionWrapperModal>
   );

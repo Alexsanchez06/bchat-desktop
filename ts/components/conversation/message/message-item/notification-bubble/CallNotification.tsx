@@ -8,13 +8,13 @@ import {
 } from '../../../../../state/ducks/conversations';
 import { getSelectedConversation } from '../../../../../state/selectors/conversations';
 import { LocalizerKeys } from '../../../../../types/LocalizerKeys';
-import { SessionIconType } from '../../../../icon';
+import { BchatIconType } from '../../../../icon';
 import { ReadableMessage } from '../ReadableMessage';
 import { NotificationBubble } from './NotificationBubble';
 
 type StyleType = Record<
   CallNotificationType,
-  { notificationTextKey: LocalizerKeys; iconType: SessionIconType; iconColor: string }
+  { notificationTextKey: LocalizerKeys; iconType: BchatIconType; iconColor: string }
 >;
 
 const style: StyleType = {

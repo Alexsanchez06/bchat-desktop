@@ -10,7 +10,7 @@ import { getHideMessageRequestBanner } from '../../../state/selectors/userConfig
 import { SessionButtonColor } from '../../basic/SessionButton';
 import { PasswordAction } from '../../dialog/SessionPasswordDialog';
 
-import { SessionSettingButtonItem, SessionToggleWithDescription } from '../SessionSettingListItem';
+import { SessionSettingButtonItem, SessionToggleWithDescription } from '../BchatSettingListItem';
 
 const toggleCallMediaPermissions = async (triggerUIUpdate: () => void) => {
   const currentValue = window.getCallMediaPermissions();

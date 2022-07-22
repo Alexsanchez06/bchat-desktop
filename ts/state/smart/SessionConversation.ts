@@ -43,4 +43,4 @@ const smart = connect(
     };
   }
 );
-export const SmartSessionConversation = smart(SessionConversation);
+export const SmartBchatConversation = smart(SessionConversation);

@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
-import { SessionButtonColor, SessionButtonType } from '../basic/SessionButton';
-import { SessionIconButton, SessionIconType } from '../icon';
+import { SessionButtonColor, BchatButtonType } from '../basic/SessionButton';
+import { SessionIconButton, BchatIconType } from '../icon';
 
 interface Props {
   title: string;
@@ -11,12 +11,12 @@ interface Props {
   headerReverse?: boolean;
   //Maximum of two icons or buttons in header
   headerIconButtons?: Array<{
-    iconType: SessionIconType;
+    iconType: BchatIconType;
     iconRotation: number;
     onClick?: any;
   }>;
   headerButtons?: Array<{
-    buttonType: SessionButtonType;
+    buttonType: BchatButtonType;
     buttonColor: SessionButtonColor;
     text: string;
     onClick?: any;

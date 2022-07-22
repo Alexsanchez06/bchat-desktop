@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 // tslint:disable: use-simple-attributes no-submodule-imports
 
 import { useDispatch ,useSelector} from 'react-redux';
-// import { SessionButton, SessionButtonColor, SessionButtonType } from '../../basic/SessionButton';
-import { SessionIdEditable } from '../../basic/SessionIdEditable';
-import { SessionSpinner } from '../../basic/SessionSpinner';
+// import { SessionButton, SessionButtonColor, BchatButtonType } from '../../basic/SessionButton';
+import { BchatIdEditable } from '../../basic/BchatIdEditable';
+import { BchatSpinner } from '../../basic/BchatSpinner';
 // import { OverlayHeader } from './OverlayHeader';
 import { setOverlayMode } from '../../../state/ducks/section';
 import { PubKey } from '../../../session/types';
@@ -91,19 +91,19 @@ const ourNumber = useSelector(getOurNumber);
     <div className="module-left-pane-overlay">
       {/* <OverlayHeader  subtitle={"Enter the Bchat"} /> */}
       <p className="module-left-pane__subHeader" >Enter BChat ID</p>
-      <SessionIdEditable
+      <BchatIdEditable
         editable={!loading}
         placeholder={placeholder}
         onChange={setPubkeyOrOns}
         dataTestId="new-session-conversation"
       />
 
-      <SessionSpinner loading={loading} />
+      <BchatSpinner loading={loading} />
 
       <div className="session-description-long">{descriptionLong}</div>
 
       <p className="module-left-pane__subHeader">BChat ID</p>
-      <SessionIdEditable
+      <BchatIdEditable
         // editable={!loading}
         value={ourNumber}
         // onChange={setPubkeyOrOns}
@@ -113,7 +113,7 @@ const ourNumber = useSelector(getOurNumber);
      <button className='nextButton'  onClick={handleMessageButtonClick}>{buttonText}</button>
       {/* <SessionButton
         buttonColor={SessionButtonColor.Green}
-        buttonType={SessionButtonType.BrandOutline}
+        buttonType={BchatButtonType.BrandOutline}
         text={buttonText}
         disabled={false}
         onClick={handleMessageButtonClick}

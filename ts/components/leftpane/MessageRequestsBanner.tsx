@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 import { getUnreadConversationRequests } from '../../state/selectors/conversations';
 import { getHideMessageRequestBanner } from '../../state/selectors/userConfig';
-import { SessionIcon, SessionIconSize, SessionIconType } from '../icon';
+import { SessionIcon, SessionIconSize, BchatIconType } from '../icon';
 import { MemoMessageRequestBannerContextMenu } from '../menu/MessageRequestBannerContextMenu';
 
 const StyledMessageRequestBanner = styled.div`
@@ -69,7 +69,7 @@ const StyledGridContainer = styled.div`
   background-color: var(--color-request-banner-icon-background);
 `;
 
-export const CirclularIcon = (props: { iconType: SessionIconType; iconSize: SessionIconSize }) => {
+export const CirclularIcon = (props: { iconType: BchatIconType; iconSize: SessionIconSize }) => {
   const { iconSize, iconType } = props;
 
   return (

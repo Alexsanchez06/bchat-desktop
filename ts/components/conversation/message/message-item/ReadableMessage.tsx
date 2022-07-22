@@ -22,7 +22,7 @@ import {
   getYoungestMessageId,
 } from '../../../../state/selectors/conversations';
 import { getIsAppFocused } from '../../../../state/selectors/section';
-import { ScrollToLoadedMessageContext } from '../../SessionMessagesListContainer';
+import { ScrollToLoadedMessageContext } from '../../BchatMessagesListContainer';
 
 type ReadableMessageProps = {
   children: React.ReactNode;

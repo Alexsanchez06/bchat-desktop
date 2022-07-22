@@ -14,7 +14,7 @@ import { perfEnd, perfStart } from '../../session/utils/Performance';
 
 const DEFAULT_JPEG_QUALITY = 0.85;
 
-import { SessionMessagesListContainer } from './SessionMessagesListContainer';
+import { BchatMessagesListContainer } from './BchatMessagesListContainer';
 
 import { SessionFileDropzone } from './SessionFileDropzone';
 
@@ -255,7 +255,7 @@ export class SessionConversation extends React.Component<Props, State> {
             <SplitViewContainer
               top={<InConversationCallContainer />}
               bottom={
-                <SessionMessagesListContainer
+                <BchatMessagesListContainer
                   messageContainerRef={this.messageContainerRef}
                   scrollToNow={this.scrollToNow}
                 />

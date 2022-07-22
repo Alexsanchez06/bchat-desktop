@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import { SessionButton, SessionButtonColor } from '../basic/SessionButton';
-import { SessionToggle } from '../basic/SessionToggle';
+import { BchatToggle } from '../basic/BchatToggle';
 import { SessionConfirmDialogProps } from '../dialog/SessionConfirm';
 
 type ButtonSettingsProps = {
@@ -29,7 +29,7 @@ const SessionSettingsContent = (props: { children: React.ReactNode }) => {
   return <div className="session-settings-item__content">{props.children}</div>;
 };
 
-export const SessionSettingsItemWrapper = (props: {
+export const BchatSettingsItemWrapper = (props: {
   inline: boolean;
   title?: string;
   description?: string;
@@ -53,13 +53,13 @@ export const SessionToggleWithDescription = (props: {
   const { title, description, active, onClickToggle, confirmationDialogParams } = props;
 
   return (
-    <SessionSettingsItemWrapper title={title} description={description} inline={true}>
-      <SessionToggle
+    <BchatSettingsItemWrapper title={title} description={description} inline={true}>
+      <BchatToggle
         active={active}
         onClick={onClickToggle}
         confirmationDialogParams={confirmationDialogParams}
       />
-    </SessionSettingsItemWrapper>
+    </BchatSettingsItemWrapper>
   );
 };
 
@@ -67,13 +67,13 @@ export const SessionSettingButtonItem = (props: ButtonSettingsProps) => {
   const { title, description, buttonColor, buttonText, dataTestId, onClick } = props;
 
   return (
-    <SessionSettingsItemWrapper title={title} description={description} inline={true}>
+    <BchatSettingsItemWrapper title={title} description={description} inline={true}>
       <SessionButton
         dataTestId={dataTestId}
         text={buttonText}
         buttonColor={buttonColor}
         onClick={onClick}
       />
-    </SessionSettingsItemWrapper>
+    </BchatSettingsItemWrapper>
   );
 };

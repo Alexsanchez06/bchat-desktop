@@ -11,7 +11,7 @@ import { useEncryptedFileFetch } from '../../hooks/useEncryptedFileFetch';
 import { showLightBox } from '../../state/ducks/conversations';
 import { GoogleChrome } from '../../util';
 import { Flex } from '../basic/Flex';
-import { SessionIconButton, SessionIconType } from '../icon';
+import { SessionIconButton, BchatIconType } from '../icon';
 import * as MIME from '../../types/MIME';
 import { isUndefined } from 'lodash';
 
@@ -140,7 +140,7 @@ const IconButton = ({ onClick, type }: IconButtonProps) => {
     onClick();
   };
   let iconRotation = 0;
-  let iconType: SessionIconType = 'chevron';
+  let iconType: BchatIconType = 'chevron';
   switch (type) {
     case 'next':
       iconRotation = 270;

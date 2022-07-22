@@ -6,7 +6,7 @@ import * as GoogleChrome from '../util/GoogleChrome';
 import { AttachmentType } from '../types/Attachment';
 
 import autoBind from 'auto-bind';
-import { SessionButton, SessionButtonColor, SessionButtonType } from './basic/SessionButton';
+import { SessionButton, SessionButtonColor, BchatButtonType } from './basic/SessionButton';
 import { SessionInput } from './basic/SessionInput';
 
 interface Props {
@@ -100,7 +100,7 @@ export class CaptionEditor extends React.Component<Props, State> {
             <SessionButton
               text={window.i18n('save')}
               onClick={this.onSave}
-              buttonType={SessionButtonType.Brand}
+              buttonType={BchatButtonType.Brand}
               buttonColor={SessionButtonColor.Green}
               disabled={!caption}
             />

@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { SessionScrollButton } from '../SessionScrollButton';
+import { BchatScrollButton } from '../BchatScrollButton';
 import { contextMenu } from 'react-contexify';
 
 import { connect } from 'react-redux';
 
-import { SessionMessagesList } from './SessionMessagesList';
+import { BchatMessagesList } from './BchatMessagesList';
 import autoBind from 'auto-bind';
 import { ConversationTypeEnum } from '../../models/conversation';
 import { getConversationController } from '../../session/conversations';
@@ -52,7 +52,7 @@ type Props = SessionMessageListProps & {
   scrollToNow: () => Promise<void>;
 };
 
-class SessionMessagesListContainerInner extends React.Component<Props> {
+class BchatMessagesListContainerInner extends React.Component<Props> {
   private timeoutResetQuotedScroll: NodeJS.Timeout | null = null;
 
   public constructor(props: Props) {
@@ -117,7 +117,7 @@ class SessionMessagesListContainerInner extends React.Component<Props> {
         />
 
         <ScrollToLoadedMessageContext.Provider value={this.scrollToLoadedMessage}>
-          <SessionMessagesList
+          <BchatMessagesList
             scrollAfterLoadMore={(
               messageIdToScrollTo: string,
               type: 'load-more-top' | 'load-more-bottom'
@@ -131,7 +131,7 @@ class SessionMessagesListContainerInner extends React.Component<Props> {
           />
         </ScrollToLoadedMessageContext.Provider>
 
-        <SessionScrollButton
+        <BchatScrollButton
           onClickScrollBottom={this.props.scrollToNow}
           key="scroll-down-button"
         />
@@ -296,4 +296,4 @@ const mapStateToProps = (state: StateType) => {
 
 const smart = connect(mapStateToProps);
 
-export const SessionMessagesListContainer = smart(SessionMessagesListContainerInner);
+export const BchatMessagesListContainer = smart(BchatMessagesListContainerInner);

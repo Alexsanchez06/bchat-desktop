@@ -1,7 +1,7 @@
 import React from 'react';
 import { toast } from 'react-toastify';
 import { SessionToast, SessionToastType } from '../../components/basic/SessionToast';
-import { SessionIconType } from '../../components/icon';
+import { BchatIconType } from '../../components/icon';
 import { SessionSettingCategory } from '../../components/settings/SessionSettings';
 import { SectionType, showLeftPaneSection, showSettingsSection } from '../../state/ducks/section';
 
@@ -44,7 +44,7 @@ export function pushToastSuccess(
   id: string,
   title: string,
   description?: string,
-  icon?: SessionIconType
+  icon?: BchatIconType
 ) {
   toast.success(
     <SessionToast

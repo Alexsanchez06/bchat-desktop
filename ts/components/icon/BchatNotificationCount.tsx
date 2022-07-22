@@ -42,7 +42,7 @@ const StyledCountSup = styled.div`
   margin-inline-start: 0.375em;
 `;
 
-export const SessionNotificationCount = (props: Props) => {
+export const BchatNotificationCount = (props: Props) => {
   const { count } = props;
   const overflow = Boolean(count && count > 9);
   const shouldRender = Boolean(count && count > 0);

@@ -12,7 +12,7 @@ const SessionScrollButtonDiv = styled.div`
   animation: fadein var(--default-duration);
 `;
 
-export const SessionScrollButton = (props: { onClickScrollBottom: () => void }) => {
+export const BchatScrollButton = (props: { onClickScrollBottom: () => void }) => {
   const show = useSelector(getShowScrollButton);
 
   return (

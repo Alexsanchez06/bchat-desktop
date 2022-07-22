@@ -6,7 +6,7 @@ import { escapeRegExp, isRegExp, isString } from 'lodash';
 import { getAppRootPath } from '../node/getRootPath';
 
 const APP_ROOT_PATH = getAppRootPath();
-const SESSION_ID_PATTERN = /\b((bd)?[0-9a-f]{64})\b/gi;
+const BCHAT_ID_PATTERN = /\b((bd)?[0-9a-f]{64})\b/gi;
 const SNODE_PATTERN = /(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)/g;
 const GROUP_ID_PATTERN = /(group\()([^)]+)(\))/g;
 const SERVER_URL_PATTERN = /https?:\/\/[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&//=]*)/g;
@@ -62,7 +62,7 @@ const redactSessionID = (text: string) => {
     throw new TypeError("'text' must be a string");
   }
 
-  return text.replaceAll(SESSION_ID_PATTERN, REDACTION_PLACEHOLDER);
+  return text.replaceAll(BCHAT_ID_PATTERN, REDACTION_PLACEHOLDER);
 };
 
 const redactSnodeIP = (text: string) => {

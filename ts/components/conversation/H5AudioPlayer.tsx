@@ -10,7 +10,7 @@ import {
   isMessageSelectionMode,
 } from '../../state/selectors/conversations';
 import { getAudioAutoplay } from '../../state/selectors/userConfig';
-import { SessionButton, SessionButtonColor, SessionButtonType } from '../basic/SessionButton';
+import { SessionButton, SessionButtonColor, BchatButtonType } from '../basic/SessionButton';
 import { SessionIcon } from '../icon';
 
 export const AudioPlayerWithEncryptedFile = (props: {
@@ -106,7 +106,7 @@ export const AudioPlayerWithEncryptedFile = (props: {
             onClick={() => {
               setPlaybackSpeed(playbackSpeed === 1 ? 1.5 : 1);
             }}
-            buttonType={SessionButtonType.Simple}
+            buttonType={BchatButtonType.Simple}
             buttonColor={SessionButtonColor.None}
           />
         </div>,

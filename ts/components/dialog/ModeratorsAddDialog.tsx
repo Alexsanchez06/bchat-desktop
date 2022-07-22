@@ -6,8 +6,8 @@ import { ApiV2 } from '../../session/apis/open_group_api/opengroupV2';
 import { getConversationController } from '../../session/conversations';
 import { useDispatch } from 'react-redux';
 import { updateAddModeratorsModal } from '../../state/ducks/modalDialog';
-import { SessionButton, SessionButtonColor, SessionButtonType } from '../basic/SessionButton';
-import { SessionSpinner } from '../basic/SessionSpinner';
+import { SessionButton, SessionButtonColor, BchatButtonType } from '../basic/SessionButton';
+import { BchatSpinner } from '../basic/BchatSpinner';
 import { SessionWrapperModal } from '../SessionWrapperModal';
 
 type Props = {
@@ -89,14 +89,14 @@ export const AddModeratorsDialog = (props: Props) => {
           value={inputBoxValue}
         />
         <SessionButton
-          buttonType={SessionButtonType.Brand}
+          buttonType={BchatButtonType.Brand}
           buttonColor={SessionButtonColor.Primary}
           onClick={addAsModerator}
           text={i18n('add')}
           disabled={addingInProgress}
         />
 
-        <SessionSpinner loading={addingInProgress} />
+        <BchatSpinner loading={addingInProgress} />
       </Flex>
     </SessionWrapperModal>
   );

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SessionIcon, SessionIconType } from '../icon';
+import { SessionIcon, BchatIconType } from '../icon';
 
 import { SessionDropdownItem, SessionDropDownItemType } from './SessionDropdownItem';
 
@@ -12,7 +12,7 @@ type Props = {
   options: Array<{
     content: string;
     id?: string;
-    icon?: SessionIconType | null;
+    icon?: BchatIconType | null;
     type?: SessionDropDownItemType;
     active?: boolean;
     onClick?: any;

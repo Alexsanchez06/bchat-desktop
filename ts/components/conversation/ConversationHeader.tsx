@@ -37,7 +37,7 @@ import {
   useExpireTimer,
   useIsKickedFromGroup,
 } from '../../hooks/useParamSelector';
-import { SessionButton, SessionButtonColor, SessionButtonType } from '../basic/SessionButton';
+import { SessionButton, SessionButtonColor, BchatButtonType } from '../basic/SessionButton';
 import { SessionIconButton } from '../icon';
 import { ConversationHeaderMenu } from '../menu/ConversationHeaderMenu';
 import { Flex } from '../basic/Flex';
@@ -115,14 +115,14 @@ const SelectionOverlay = () => {
       <div className="button-group">
         {!isOnlyServerDeletable && (
           <SessionButton
-            buttonType={SessionButtonType.Default}
+            buttonType={BchatButtonType.Default}
             buttonColor={SessionButtonColor.Danger}
             text={deleteMessageButtonText}
             onClick={onDeleteSelectedMessages}
           />
         )}
         <SessionButton
-          buttonType={SessionButtonType.Default}
+          buttonType={BchatButtonType.Default}
           buttonColor={SessionButtonColor.Danger}
           text={deleteForEveryoneMessageButtonText}
           onClick={onDeleteSelectedMessagesForEveryone}

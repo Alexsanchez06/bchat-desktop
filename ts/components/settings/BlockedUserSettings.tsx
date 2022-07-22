@@ -5,20 +5,20 @@ import { getConversationController } from '../../session/conversations';
 import { getBlockedPubkeys } from '../../state/selectors/conversations';
 import { SessionButtonColor } from '../basic/SessionButton';
 
-import { SessionSettingButtonItem, SessionSettingsItemWrapper } from './SessionSettingListItem';
+import { SessionSettingButtonItem, BchatSettingsItemWrapper } from './BchatSettingListItem';
 
 export const BlockedUserSettings = () => {
   const blockedNumbers = useSelector(getBlockedPubkeys);
 
   if (!blockedNumbers || blockedNumbers.length === 0) {
     return (
-      <SessionSettingsItemWrapper
+      <BchatSettingsItemWrapper
         inline={true}
         description={window.i18n('noBlockedContacts')}
         title={''}
       >
         {' '}
-      </SessionSettingsItemWrapper>
+      </BchatSettingsItemWrapper>
     );
   }
   const blockedEntries = blockedNumbers.map(blockedEntry => {

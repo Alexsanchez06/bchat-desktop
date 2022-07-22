@@ -4,7 +4,7 @@ type Props = {
   loading: boolean;
 };
 
-export const SessionSpinner = (props: Props) => {
+export const BchatSpinner = (props: Props) => {
   const { loading } = props;
 
   return loading ? (

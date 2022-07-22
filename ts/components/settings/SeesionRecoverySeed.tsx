@@ -6,7 +6,7 @@ import {
   getRecoveryPhraseDialog,
 } from '../../state/selectors/modal';
 
-import { SessionButton,SessionButtonColor, SessionButtonType } from '.././basic/SessionButton';
+import { SessionButton,SessionButtonColor, BchatButtonType } from '.././basic/SessionButton';
 
 export const SessionRecoverySeed=()=>
 {
@@ -29,7 +29,7 @@ export const SessionRecoverySeed=()=>
              <SessionButton
               text={"Yes, I am Sure!"}
               onClick={()=>setVerify(true)}
-              buttonType={SessionButtonType.Brand}
+              buttonType={BchatButtonType.Brand}
               buttonColor={SessionButtonColor.Green}
             //   disabled={!caption}
             />

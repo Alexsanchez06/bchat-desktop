@@ -4,9 +4,9 @@ import classNames from 'classnames';
 import { SessionIcon } from './icon';
 import { withTheme } from 'styled-components';
 import autoBind from 'auto-bind';
-import { SessionButton, SessionButtonColor, SessionButtonType } from './basic/SessionButton';
+import { SessionButton, SessionButtonColor, BchatButtonType } from './basic/SessionButton';
 import { Constants } from '../session';
-import { SessionSpinner } from './basic/SessionSpinner';
+import { BchatSpinner } from './basic/BchatSpinner';
 
 interface State {
   error: string;
@@ -17,7 +17,7 @@ interface State {
 
 export const MAX_LOGIN_TRIES = 3;
 
-class SessionPasswordPromptInner extends React.PureComponent<{}, State> {
+class BchatPasswordPromptInner extends React.PureComponent<{}, State> {
   private inputRef?: any;
 
   constructor(props: any) {
@@ -87,7 +87,7 @@ class SessionPasswordPromptInner extends React.PureComponent<{}, State> {
         )}
       </div>
     );
-    const spinner = this.state.loading ? <SessionSpinner loading={true} /> : null;
+    const spinner = this.state.loading ? <BchatSpinner loading={true} /> : null;
 
     return (
       <div className="password">
@@ -165,7 +165,7 @@ class SessionPasswordPromptInner extends React.PureComponent<{}, State> {
           <>
             <SessionButton
               text="Reset Database"
-              buttonType={SessionButtonType.BrandOutline}
+              buttonType={BchatButtonType.BrandOutline}
               buttonColor={SessionButtonColor.Danger}
               onClick={this.initClearDataView}
             />
@@ -173,7 +173,7 @@ class SessionPasswordPromptInner extends React.PureComponent<{}, State> {
         )}
         <SessionButton
           text={window.i18n('unlock')}
-          buttonType={SessionButtonType.BrandOutline}
+          buttonType={BchatButtonType.BrandOutline}
           buttonColor={SessionButtonColor.Green}
           onClick={this.initLogin}
         />
@@ -186,7 +186,7 @@ class SessionPasswordPromptInner extends React.PureComponent<{}, State> {
       <div className="button-group">
         <SessionButton
           text={window.i18n('cancel')}
-          buttonType={SessionButtonType.Default}
+          buttonType={BchatButtonType.Default}
           buttonColor={SessionButtonColor.Primary}
           onClick={() => {
             this.setState({ clearDataView: false });
@@ -195,7 +195,7 @@ class SessionPasswordPromptInner extends React.PureComponent<{}, State> {
 
         <SessionButton
           text={window.i18n('clearAllData')}
-          buttonType={SessionButtonType.Default}
+          buttonType={BchatButtonType.Default}
           buttonColor={SessionButtonColor.Danger}
           onClick={window.clearLocalData}
         />
@@ -204,4 +204,4 @@ class SessionPasswordPromptInner extends React.PureComponent<{}, State> {
   }
 }
 
-export const SessionPasswordPrompt = withTheme(SessionPasswordPromptInner);
+export const BchatPasswordPrompt = withTheme(BchatPasswordPromptInner);

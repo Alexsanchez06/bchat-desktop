@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { useAppIsFocused } from '../hooks/useAppFocused';
 import { getFocusedSettingsSection } from '../state/selectors/section';
 
-import { SmartSessionConversation } from '../state/smart/SessionConversation';
+import { SmartBchatConversation } from '../state/smart/SessionConversation';
 import { SessionSettingsView } from './settings/SessionSettings';
 
 const FilteredSettingsView = SessionSettingsView as any;
@@ -21,7 +21,7 @@ export const SessionMainPanel = () => {
   return (
     <div className="session-conversation">
       {/* <div className="session-conversation-doodle"> */}
-      <SmartSessionConversation />
+      <SmartBchatConversation />
       {/* </div> */}
     
     </div>
