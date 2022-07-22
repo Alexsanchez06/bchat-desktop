@@ -1,12 +1,12 @@
 import Backbone from 'backbone';
 import _ from 'lodash';
-import { getMessageQueue } from '../session';
-import { getConversationController } from '../session/conversations';
-import { ClosedGroupVisibleMessage } from '../session/messages/outgoing/visibleMessage/ClosedGroupVisibleMessage';
-import { PubKey } from '../session/types';
-import { UserUtils } from '../session/utils';
+import { getMessageQueue } from '../bchat';
+import { getConversationController } from '../bchat/conversations';
+import { ClosedGroupVisibleMessage } from '../bchat/messages/outgoing/visibleMessage/ClosedGroupVisibleMessage';
+import { PubKey } from '../bchat/types';
+import { UserUtils } from '../bchat/utils';
 import { BlockedNumberController } from '../util';
-import { leaveClosedGroup } from '../session/group/closed-group';
+import { leaveClosedGroup } from '../bchat/group/closed-group';
 import { SignalService } from '../protobuf';
 import { MessageModel } from './message';
 import { MessageAttributesOptionals, MessageDirection } from './messageType';
@@ -21,7 +21,7 @@ import {
   saveMessages,
   updateConversation,
 } from '../../ts/data/data';
-import { toHex } from '../session/utils/String';
+import { toHex } from '../bchat/utils/String';
 import {
   actions as conversationActions,
   conversationChanged,
@@ -30,26 +30,26 @@ import {
   MessageModelPropsWithoutConvoProps,
   ReduxConversationType,
 } from '../state/ducks/conversations';
-import { ExpirationTimerUpdateMessage } from '../session/messages/outgoing/controlMessage/ExpirationTimerUpdateMessage';
-import { TypingMessage } from '../session/messages/outgoing/controlMessage/TypingMessage';
+import { ExpirationTimerUpdateMessage } from '../bchat/messages/outgoing/controlMessage/ExpirationTimerUpdateMessage';
+import { TypingMessage } from '../bchat/messages/outgoing/controlMessage/TypingMessage';
 import {
   VisibleMessage,
   VisibleMessageParams,
-} from '../session/messages/outgoing/visibleMessage/VisibleMessage';
-import { GroupInvitationMessage } from '../session/messages/outgoing/visibleMessage/GroupInvitationMessage';
-import { ReadReceiptMessage } from '../session/messages/outgoing/controlMessage/receipt/ReadReceiptMessage';
-import { OpenGroupUtils } from '../session/apis/open_group_api/utils';
-import { OpenGroupVisibleMessage } from '../session/messages/outgoing/visibleMessage/OpenGroupVisibleMessage';
-import { OpenGroupRequestCommonType } from '../session/apis/open_group_api/opengroupV2/ApiUtil';
-import { getOpenGroupV2FromConversationId } from '../session/apis/open_group_api/utils/OpenGroupUtils';
-import { createTaskWithTimeout } from '../session/utils/TaskWithTimeout';
-import { perfEnd, perfStart } from '../session/utils/Performance';
+} from '../bchat/messages/outgoing/visibleMessage/VisibleMessage';
+import { GroupInvitationMessage } from '../bchat/messages/outgoing/visibleMessage/GroupInvitationMessage';
+import { ReadReceiptMessage } from '../bchat/messages/outgoing/controlMessage/receipt/ReadReceiptMessage';
+import { OpenGroupUtils } from '../bchat/apis/open_group_api/utils';
+import { OpenGroupVisibleMessage } from '../bchat/messages/outgoing/visibleMessage/OpenGroupVisibleMessage';
+import { OpenGroupRequestCommonType } from '../bchat/apis/open_group_api/opengroupV2/ApiUtil';
+import { getOpenGroupV2FromConversationId } from '../bchat/apis/open_group_api/utils/OpenGroupUtils';
+import { createTaskWithTimeout } from '../bchat/utils/TaskWithTimeout';
+import { perfEnd, perfStart } from '../bchat/utils/Performance';
 
-import { ed25519Str } from '../session/onions/onionPath';
-import { getDecryptedMediaUrl } from '../session/crypto/DecryptedAttachmentsManager';
+import { ed25519Str } from '../bchat/onions/onionPath';
+import { getDecryptedMediaUrl } from '../bchat/crypto/DecryptedAttachmentsManager';
 import { IMAGE_JPEG } from '../types/MIME';
-import { forceSyncConfigurationNowIfNeeded } from '../session/utils/syncUtils';
-import { getNowWithNetworkOffset } from '../session/apis/snode_api/SNodeAPI';
+import { forceSyncConfigurationNowIfNeeded } from '../bchat/utils/syncUtils';
+import { getNowWithNetworkOffset } from '../bchat/apis/snode_api/SNodeAPI';
 import { createLastMessageUpdate } from '../types/Conversation';
 import {
   ReplyingToMessageProps,
@@ -61,8 +61,8 @@ import {
   getAbsoluteAttachmentPath,
   loadAttachmentData,
 } from '../types/MessageAttachment';
-import { getOurPubKeyStrFromCache } from '../session/utils/User';
-import { MessageRequestResponse } from '../session/messages/outgoing/controlMessage/MessageRequestResponse';
+import { getOurPubKeyStrFromCache } from '../bchat/utils/User';
+import { MessageRequestResponse } from '../bchat/messages/outgoing/controlMessage/MessageRequestResponse';
 import { Notifications } from '../util/notifications';
 import { Storage } from '../util/storage';
 

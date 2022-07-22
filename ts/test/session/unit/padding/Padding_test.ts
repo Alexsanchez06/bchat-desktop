@@ -9,7 +9,7 @@ import {
   addMessagePadding,
   getUnpaddedAttachment,
   removeMessagePadding,
-} from '../../../../session/crypto/BufferPadding';
+} from '../../../../bchat/crypto/BufferPadding';
 chai.use(chaiAsPromised as any);
 chai.should();
 

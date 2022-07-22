@@ -1,8 +1,8 @@
 import { RenderTextCallbackType } from '../../types/Util';
 import classNames from 'classnames';
-import { PubKey } from '../../session/types';
-import { UserUtils } from '../../session/utils';
-import { getConversationController } from '../../session/conversations';
+import { PubKey } from '../../bchat/types';
+import { UserUtils } from '../../bchat/utils';
+import { getConversationController } from '../../bchat/conversations';
 import React from 'react';
 
 interface MentionProps {

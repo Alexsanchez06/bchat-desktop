@@ -2,12 +2,12 @@ import Backbone from 'backbone';
 // tslint:disable-next-line: match-default-export-name
 import filesize from 'filesize';
 import { SignalService } from '../../ts/protobuf';
-import { getMessageQueue, Utils } from '../../ts/session';
-import { getConversationController } from '../../ts/session/conversations';
-import { DataMessage } from '../../ts/session/messages/outgoing';
-import { ClosedGroupVisibleMessage } from '../session/messages/outgoing/visibleMessage/ClosedGroupVisibleMessage';
-import { PubKey } from '../../ts/session/types';
-import { UserUtils } from '../../ts/session/utils';
+import { getMessageQueue, Utils } from '../bchat';
+import { getConversationController } from '../bchat/conversations';
+import { DataMessage } from '../bchat/messages/outgoing';
+import { ClosedGroupVisibleMessage } from '../bchat/messages/outgoing/visibleMessage/ClosedGroupVisibleMessage';
+import { PubKey } from '../bchat/types';
+import { UserUtils } from '../bchat/utils';
 import {
   DataExtractionNotificationMsg,
   fillMessageAttributesWithDefaults,
@@ -39,17 +39,17 @@ import {
   PropsForGroupUpdateName,
   PropsForMessageWithoutConvoProps,
 } from '../state/ducks/conversations';
-import { VisibleMessage } from '../session/messages/outgoing/visibleMessage/VisibleMessage';
-import { buildSyncMessage } from '../session/utils/syncUtils';
+import { VisibleMessage } from '../bchat/messages/outgoing/visibleMessage/VisibleMessage';
+import { buildSyncMessage } from '../bchat/utils/syncUtils';
 import {
   uploadAttachmentsV2,
   uploadLinkPreviewsV2,
   uploadQuoteThumbnailsV2,
-} from '../session/utils/AttachmentsV2';
-import { OpenGroupVisibleMessage } from '../session/messages/outgoing/visibleMessage/OpenGroupVisibleMessage';
+} from '../bchat/utils/AttachmentsV2';
+import { OpenGroupVisibleMessage } from '../bchat/messages/outgoing/visibleMessage/OpenGroupVisibleMessage';
 import { getV2OpenGroupRoom } from '../data/opengroups';
-import { isUsFromCache } from '../session/utils/User';
-import { perfEnd, perfStart } from '../session/utils/Performance';
+import { isUsFromCache } from '../bchat/utils/User';
+import { perfEnd, perfStart } from '../bchat/utils/Performance';
 import { AttachmentTypeWithPath, isVoiceMessage } from '../types/Attachment';
 import _, { isEmpty } from 'lodash';
 import { SettingsKey } from '../data/settings-key';

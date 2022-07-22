@@ -2,8 +2,8 @@ import { expect } from 'chai';
 import { beforeEach } from 'mocha';
 
 import { SignalService } from '../../../../protobuf';
-import { Constants } from '../../../../session';
-import { GroupInvitationMessage } from '../../../../session/messages/outgoing/visibleMessage/GroupInvitationMessage';
+import { Constants } from '../../../../bchat';
+import { GroupInvitationMessage } from '../../../../bchat/messages/outgoing/visibleMessage/GroupInvitationMessage';
 
 describe('GroupInvitationMessage', () => {
   let message: GroupInvitationMessage;

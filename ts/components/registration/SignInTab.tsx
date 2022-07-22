@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { sanitizeBchatUsername } from '../../session/utils/String';
+import { sanitizeBchatUsername } from '../../bchat/utils/String';
 import { Flex } from '../basic/Flex';
 import { BchatButton, BchatButtonColor, BchatButtonType } from '../basic/BchatButton';
 import { BchatSpinner } from '../basic/BchatSpinner';
@@ -17,8 +17,8 @@ import { GoBackMainMenuButton } from './SignUpTab';
 // import { TermsAndConditions } from './TermsAndConditions';
 import { BchatInput } from '../basic/BchatInput';
 import { DisplaySeed } from './DisplaySeed';
-import { mn_decode } from '../../session/crypto/mnemonic';
-import { ToastUtils } from '../../session/utils';
+import { mn_decode } from '../../bchat/crypto/mnemonic';
+import { ToastUtils } from '../../bchat/utils';
 // import { BchatIconButton } from '../icon/BchatIconButton';
 const { clipboard } = require('electron')
 

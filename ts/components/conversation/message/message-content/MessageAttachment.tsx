@@ -28,7 +28,7 @@ import { saveAttachmentToDisk } from '../../../../util/attachmentsUtil';
 import { Spinner } from '../../../basic/Spinner';
 import { AudioPlayerWithEncryptedFile } from '../../H5AudioPlayer';
 import { ImageGrid } from '../../ImageGrid';
-import { LightBoxOptions } from '../../SessionConversation';
+import { LightBoxOptions } from '../../BchatConversation';
 import { ClickToTrustSender } from './ClickToTrustSender';
 
 export type MessageAttachmentSelectorProps = Pick<

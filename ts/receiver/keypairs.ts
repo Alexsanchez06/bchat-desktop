@@ -1,4 +1,4 @@
-import { fromHexToArray, toHex } from '../session/utils/String';
+import { fromHexToArray, toHex } from '../bchat/utils/String';
 
 export type HexKeyPair = {
   publicHex: string;

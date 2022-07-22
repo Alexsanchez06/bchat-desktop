@@ -3,9 +3,9 @@ import { useSelector } from 'react-redux';
 
 import styled from 'styled-components';
 import { useConversationUsername } from '../../hooks/useParamSelector';
-import { ed25519Str } from '../../session/onions/onionPath';
-import { CallManager } from '../../session/utils';
-import { callTimeoutMs } from '../../session/utils/calling/CallManager';
+import { ed25519Str } from '../../bchat/onions/onionPath';
+import { CallManager } from '../../bchat/utils';
+import { callTimeoutMs } from '../../bchat/utils/calling/CallManager';
 import { getHasIncomingCall, getHasIncomingCallFrom } from '../../state/selectors/call';
 import { Avatar, AvatarSize } from '../avatar/Avatar';
 import { BchatButton, BchatButtonColor } from '../basic/BchatButton';

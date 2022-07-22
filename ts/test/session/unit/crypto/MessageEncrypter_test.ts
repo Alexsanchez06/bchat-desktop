@@ -1,16 +1,16 @@
 import chai, { expect } from 'chai';
 import * as crypto from 'crypto';
 import Sinon, * as sinon from 'sinon';
-import { concatUInt8Array, getSodiumRenderer, MessageEncrypter } from '../../../../session/crypto';
+import { concatUInt8Array, getSodiumRenderer, MessageEncrypter } from '../../../../bchat/crypto';
 import { TestUtils } from '../../../test-utils';
 import { SignalService } from '../../../../protobuf';
 
-import { StringUtils, UserUtils } from '../../../../session/utils';
+import { StringUtils, UserUtils } from '../../../../bchat/utils';
 
 import chaiBytes from 'chai-bytes';
-import { PubKey } from '../../../../session/types';
-import { fromHex, toHex } from '../../../../session/utils/String';
-import { addMessagePadding } from '../../../../session/crypto/BufferPadding';
+import { PubKey } from '../../../../bchat/types';
+import { fromHex, toHex } from '../../../../bchat/utils/String';
+import { addMessagePadding } from '../../../../bchat/crypto/BufferPadding';
 
 chai.use(chaiBytes);
 
@@ -126,15 +126,15 @@ describe('MessageEncrypter', () => {
           .to.deep.equal(SignalService.Envelope.Type.CLOSED_GROUP_MESSAGE);
       });
 
-      it('should return a SESSION_MESSAGE envelope type for Fallback', async () => {
+      it('should return a BCHAT_MESSAGE envelope type for Fallback', async () => {
         const data = crypto.randomBytes(10);
 
         const result = await MessageEncrypter.encrypt(
           TestUtils.generateFakePubKey(),
           data,
-          SignalService.Envelope.Type.SESSION_MESSAGE
+          SignalService.Envelope.Type.BCHAT_MESSAGE
         );
-        chai.expect(result.envelopeType).to.deep.equal(SignalService.Envelope.Type.SESSION_MESSAGE);
+        chai.expect(result.envelopeType).to.deep.equal(SignalService.Envelope.Type.BCHAT_MESSAGE);
       });
 
       it('should throw an error for anything else than Fallback or ClosedGroup', () => {
@@ -164,7 +164,7 @@ describe('MessageEncrypter', () => {
       await MessageEncrypter.encrypt(
         TestUtils.generateFakePubKey(),
         data,
-        SignalService.Envelope.Type.SESSION_MESSAGE
+        SignalService.Envelope.Type.BCHAT_MESSAGE
       );
       chai.expect(spy.callCount).to.be.equal(1);
       const paddedData = addMessagePadding(data);

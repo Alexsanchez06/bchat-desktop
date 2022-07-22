@@ -3,7 +3,7 @@
 import chai from 'chai';
 import Sinon, * as sinon from 'sinon';
 
-import { PromiseUtils } from '../../../../session/utils';
+import { PromiseUtils } from '../../../../bchat/utils';
 
 // tslint:disable-next-line: no-require-imports no-var-requires
 import chaiAsPromised from 'chai-as-promised';
@@ -11,7 +11,7 @@ import {
   allowOnlyOneAtATime,
   hasAlreadyOneAtaTimeMatching,
   sleepFor,
-} from '../../../../session/utils/Promise';
+} from '../../../../bchat/utils/Promise';
 import { TestUtils } from '../../../test-utils';
 
 chai.use(chaiAsPromised as any);

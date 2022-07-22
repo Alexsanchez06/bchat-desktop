@@ -7,12 +7,12 @@ import { BchatIdEditable } from '../../basic/BchatIdEditable';
 import { BchatSpinner } from '../../basic/BchatSpinner';
 // import { OverlayHeader } from './OverlayHeader';
 import { setOverlayMode } from '../../../state/ducks/section';
-import { PubKey } from '../../../session/types';
+import { PubKey } from '../../../bchat/types';
 import { ConversationTypeEnum } from '../../../models/conversation';
-import { SNodeAPI } from '../../../session/apis/snode_api';
-import { onsNameRegex } from '../../../session/apis/snode_api/SNodeAPI';
-import { getConversationController } from '../../../session/conversations';
-import { ToastUtils } from '../../../session/utils';
+import { SNodeAPI } from '../../../bchat/apis/snode_api';
+import { onsNameRegex } from '../../../bchat/apis/snode_api/SNodeAPI';
+import { getConversationController } from '../../../bchat/conversations';
+import { ToastUtils } from '../../../bchat/utils';
 import { openConversationWithMessages } from '../../../state/ducks/conversations';
 import useKey from 'react-use/lib/useKey';
 

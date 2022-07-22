@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { SpacerLG } from '../basic/Text';
-import { getConversationController } from '../../session/conversations';
+import { getConversationController } from '../../bchat/conversations';
 import { adminLeaveClosedGroup } from '../../state/ducks/modalDialog';
 import { BchatButton, BchatButtonColor } from '../basic/BchatButton';
 import { BchatWrapperModal } from '../BchatWrapperModal';

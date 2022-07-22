@@ -7,7 +7,7 @@ import useInterval from 'react-use/lib/useInterval';
 import _ from 'lodash';
 import { removeMessage } from '../../../../data/data';
 import { MessageRenderingProps } from '../../../../models/messageType';
-import { getConversationController } from '../../../../session/conversations';
+import { getConversationController } from '../../../../bchat/conversations';
 import { messageExpired } from '../../../../state/ducks/conversations';
 import {
   getGenericReadableMessageSelectorProps,

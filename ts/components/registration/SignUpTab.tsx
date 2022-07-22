@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { sanitizeBchatUsername } from '../../session/utils/String';
+import { sanitizeBchatUsername } from '../../bchat/utils/String';
 import { Flex } from '../basic/Flex';
 import { BchatButton, BchatButtonColor, BchatButtonType } from '../basic/BchatButton';
 // import { BchatIdEditable } from '../basic/BchatIdEditable';
@@ -9,7 +9,7 @@ import { RegistrationUserDetails } from './RegistrationUserDetails';
 import { SignInMode } from './SignInTab';
 // import { TermsAndConditions } from './TermsAndConditions';
 import {DisplayIdAndAddress ,ShowRecoveryPhase} from "./ShowIdAndAddress";
-import { ToastUtils } from '../../session/utils';
+import { ToastUtils } from '../../bchat/utils';
 // import { DisplaySeed } from './DisplaySeed';
 const { clipboard } = require('electron')
 

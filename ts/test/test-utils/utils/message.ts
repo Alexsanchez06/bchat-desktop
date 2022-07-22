@@ -1,13 +1,13 @@
 import { v4 as uuid } from 'uuid';
 import { generateFakePubKey, generateFakePubKeys } from './pubkey';
-import { ClosedGroupVisibleMessage } from '../../../session/messages/outgoing/visibleMessage/ClosedGroupVisibleMessage';
+import { ClosedGroupVisibleMessage } from '../../../bchat/messages/outgoing/visibleMessage/ClosedGroupVisibleMessage';
 import { ConversationAttributes, ConversationTypeEnum } from '../../../models/conversation';
-import { VisibleMessage } from '../../../session/messages/outgoing/visibleMessage/VisibleMessage';
-import { openGroupPrefixRegex } from '../../../session/apis/open_group_api/utils/OpenGroupUtils';
-import { OpenGroupMessageV2 } from '../../../session/apis/open_group_api/opengroupV2/OpenGroupMessageV2';
+import { VisibleMessage } from '../../../bchat/messages/outgoing/visibleMessage/VisibleMessage';
+import { openGroupPrefixRegex } from '../../../bchat/apis/open_group_api/utils/OpenGroupUtils';
+import { OpenGroupMessageV2 } from '../../../bchat/apis/open_group_api/opengroupV2/OpenGroupMessageV2';
 import { TestUtils } from '..';
-import { OpenGroupRequestCommonType } from '../../../session/apis/open_group_api/opengroupV2/ApiUtil';
-import { OpenGroupVisibleMessage } from '../../../session/messages/outgoing/visibleMessage/OpenGroupVisibleMessage';
+import { OpenGroupRequestCommonType } from '../../../bchat/apis/open_group_api/opengroupV2/ApiUtil';
+import { OpenGroupVisibleMessage } from '../../../bchat/messages/outgoing/visibleMessage/OpenGroupVisibleMessage';
 import { MessageModel } from '../../../models/message';
 
 export function generateVisibleMessage({

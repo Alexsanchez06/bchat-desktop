@@ -3,11 +3,11 @@ import { removeFromCache } from './cache';
 import { EnvelopePlus } from './types';
 import { getEnvelopeId } from './common';
 
-import { PubKey } from '../session/types';
+import { PubKey } from '../bchat/types';
 import { handleMessageJob, toRegularMessage } from './queuedJob';
 import _ from 'lodash';
-import { StringUtils, UserUtils } from '../session/utils';
-import { getConversationController } from '../session/conversations';
+import { StringUtils, UserUtils } from '../bchat/utils';
+import { getConversationController } from '../bchat/conversations';
 import { handleClosedGroupControlMessage } from './closedGroups';
 import { getMessageBySenderAndSentAt } from '../../ts/data/data';
 import { ConversationModel, ConversationTypeEnum } from '../models/conversation';
@@ -17,7 +17,7 @@ import {
   createSwarmMessageSentFromUs,
 } from '../models/messageFactory';
 import { MessageModel } from '../models/message';
-import { isUsFromCache } from '../session/utils/User';
+import { isUsFromCache } from '../bchat/utils/User';
 import { appendFetchAvatarAndProfileJob } from './userProfileImageUpdates';
 import { toLogFormat } from '../types/attachments/Errors';
 

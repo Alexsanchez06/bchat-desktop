@@ -5,11 +5,11 @@ import { QRCode } from 'react-qr-svg';
 import { Avatar, AvatarSize } from '../avatar/Avatar';
 
 import { PillDivider } from '../basic/PillDivider';
-import { SyncUtils, ToastUtils, UserUtils } from '../../session/utils';
+import { SyncUtils, ToastUtils, UserUtils } from '../../bchat/utils';
 
 import { ConversationModel, ConversationTypeEnum } from '../../models/conversation';
 
-import { getConversationController } from '../../session/conversations';
+import { getConversationController } from '../../bchat/conversations';
 import { SpacerLG, SpacerMD } from '../basic/Text';
 import autoBind from 'auto-bind';
 import { editProfileModal } from '../../state/ducks/modalDialog';
@@ -20,7 +20,7 @@ import { BchatIconButton } from '../icon';
 import { MAX_USERNAME_LENGTH } from '../registration/RegistrationStages';
 import { BchatWrapperModal } from '../BchatWrapperModal';
 import { pickFileForAvatar } from '../../types/attachments/VisualAttachment';
-import { sanitizeBchatUsername } from '../../session/utils/String';
+import { sanitizeBchatUsername } from '../../bchat/utils/String';
 import { setLastProfileUpdateTimestamp } from '../../util/storage';
 
 interface State {

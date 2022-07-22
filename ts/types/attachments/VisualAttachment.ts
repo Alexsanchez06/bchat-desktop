@@ -6,11 +6,11 @@ import { toLogFormat } from './Errors';
 import {
   getDecryptedBlob,
   getDecryptedMediaUrl,
-} from '../../../ts/session/crypto/DecryptedAttachmentsManager';
+} from '../../bchat/crypto/DecryptedAttachmentsManager';
 import { blobToArrayBuffer, dataURLToBlob } from 'blob-util';
 import { autoScaleForAvatar, autoScaleForThumbnail } from '../../util/attachmentsUtil';
 import { GoogleChrome } from '../../util';
-import { ToastUtils } from '../../session/utils';
+import { ToastUtils } from '../../bchat/utils';
 
 export const THUMBNAIL_SIDE = 200;
 export const THUMBNAIL_CONTENT_TYPE = 'image/png';

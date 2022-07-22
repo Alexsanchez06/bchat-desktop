@@ -2,7 +2,7 @@ import _ from 'lodash';
 import { MessageCollection } from '../models/message';
 
 import * as Data from '../data/data';
-import { getConversationController } from '../session/conversations';
+import { getConversationController } from '../bchat/conversations';
 
 async function getTargetMessage(reader: string, messages: MessageCollection) {
   if (messages.length === 0) {

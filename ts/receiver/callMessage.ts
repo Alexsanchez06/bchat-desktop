@@ -1,10 +1,10 @@
 import _ from 'lodash';
 import { SignalService } from '../protobuf';
-import { TTL_DEFAULT } from '../session/constants';
-import { CallManager, UserUtils } from '../session/utils';
+import { TTL_DEFAULT } from '../bchat/constants';
+import { CallManager, UserUtils } from '../bchat/utils';
 import { removeFromCache } from './cache';
 import { EnvelopePlus } from './types';
-import { getNowWithNetworkOffset } from '../session/apis/snode_api/SNodeAPI';
+import { getNowWithNetworkOffset } from '../bchat/apis/snode_api/SNodeAPI';
 
 export async function handleCallMessage(
   envelope: EnvelopePlus,

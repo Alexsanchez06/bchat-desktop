@@ -2,7 +2,7 @@
 
 import chai from 'chai';
 import { v4 as uuid } from 'uuid';
-import { JobQueue } from '../../../../session/utils/JobQueue';
+import { JobQueue } from '../../../../bchat/utils/JobQueue';
 import { TestUtils } from '../../../test-utils';
 
 import chaiAsPromised from 'chai-as-promised';

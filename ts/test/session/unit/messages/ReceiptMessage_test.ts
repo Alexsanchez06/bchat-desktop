@@ -3,8 +3,8 @@ import { beforeEach } from 'mocha';
 
 import { SignalService } from '../../../../protobuf';
 import { toNumber } from 'lodash';
-import { Constants } from '../../../../session';
-import { ReadReceiptMessage } from '../../../../session/messages/outgoing/controlMessage/receipt/ReadReceiptMessage';
+import { Constants } from '../../../../bchat';
+import { ReadReceiptMessage } from '../../../../bchat/messages/outgoing/controlMessage/receipt/ReadReceiptMessage';
 
 describe('ReceiptMessage', () => {
   let readMessage: ReadReceiptMessage;

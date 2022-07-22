@@ -3,7 +3,7 @@ import React from 'react';
 
 import { RegistrationStages } from './RegistrationStages';
 // import { BchatIcon } from '../icon';
-import { SessionToastContainer } from '../SessionToastContainer';
+import { BchatToastContainer } from '../BchatToastContainer';
 import { BchatTheme } from '../../state/ducks/BchatTheme';
 import { Flex } from '../basic/Flex';
 import { setSignInByLinking } from '../../util/storage';
@@ -45,7 +45,7 @@ export const SessionRegistrationView = () => {
             width='60%'
           >
             <Flex container={true} margin="auto" alignItems="center" flexDirection="column">
-              <SessionToastContainer />
+              <BchatToastContainer />
               {/* <BchatIcon iconSize={150} iconType="brand" /> */}
 
               {/* <AccentText /> */}

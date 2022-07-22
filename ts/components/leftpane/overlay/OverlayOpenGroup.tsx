@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 // tslint:disable: no-submodule-imports use-simple-attributes
 
-import { SessionJoinableRooms } from './SessionJoinableDefaultRooms';
+import { BchatJoinableRooms } from './BchatJoinableDefaultRooms';
 
 // import { BchatButton, BchatButtonColor, BchatButtonType } from '../../basic/BchatButton';
 import { BchatIdEditable } from '../../basic/BchatIdEditable';
@@ -9,9 +9,9 @@ import { BchatSpinner } from '../../basic/BchatSpinner';
 import { OverlayHeader } from './OverlayHeader';
 import { useDispatch } from 'react-redux';
 import { setOverlayMode } from '../../../state/ducks/section';
-import { joinOpenGroupV2WithUIEvents } from '../../../session/apis/open_group_api/opengroupV2/JoinOpenGroupV2';
-import { openGroupV2CompleteURLRegex } from '../../../session/apis/open_group_api/utils/OpenGroupUtils';
-import { ToastUtils } from '../../../session/utils';
+import { joinOpenGroupV2WithUIEvents } from '../../../bchat/apis/open_group_api/opengroupV2/JoinOpenGroupV2';
+import { openGroupV2CompleteURLRegex } from '../../../bchat/apis/open_group_api/utils/OpenGroupUtils';
+import { ToastUtils } from '../../../bchat/utils';
 import useKey from 'react-use/lib/useKey';
 
 async function joinOpenGroup(serverUrl: string) {
@@ -79,7 +79,7 @@ export const OverlayOpenGroup = () => {
       </div>
 
       <BchatSpinner loading={loading} />
-      <SessionJoinableRooms onRoomClicked={closeOverlay} />
+      <BchatJoinableRooms onRoomClicked={closeOverlay} />
       <button 
       className='nextButton'
       onClick={onEnterPressed}

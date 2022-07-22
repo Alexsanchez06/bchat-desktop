@@ -1,15 +1,15 @@
 import { expect } from 'chai';
 import * as crypto from 'crypto';
 import Sinon, * as sinon from 'sinon';
-import { MessageSender } from '../../../../session/sending';
+import { MessageSender } from '../../../../bchat/sending';
 import { TestUtils } from '../../../test-utils';
-import { MessageEncrypter } from '../../../../session/crypto';
+import { MessageEncrypter } from '../../../../bchat/crypto';
 import { SignalService } from '../../../../protobuf';
-import { PubKey, RawMessage } from '../../../../session/types';
-import { MessageUtils, UserUtils } from '../../../../session/utils';
-import { ApiV2 } from '../../../../session/apis/open_group_api/opengroupV2';
+import { PubKey, RawMessage } from '../../../../bchat/types';
+import { MessageUtils, UserUtils } from '../../../../bchat/utils';
+import { ApiV2 } from '../../../../bchat/apis/open_group_api/opengroupV2';
 import * as Data from '../../../../../ts/data/data';
-import { SNodeAPI } from '../../../../session/apis/snode_api';
+import { SNodeAPI } from '../../../../bchat/apis/snode_api';
 import _ from 'lodash';
 
 describe('MessageSender', () => {
@@ -24,16 +24,16 @@ describe('MessageSender', () => {
   // tslint:disable-next-line: max-func-body-length
   describe('send', () => {
     const ourNumber = '0123456789abcdef';
-    let sessionMessageAPISendStub: sinon.SinonStub<any>;
+    let bchatMessageAPISendStub: sinon.SinonStub<any>;
     let encryptStub: sinon.SinonStub<[PubKey, Uint8Array, SignalService.Envelope.Type]>;
 
     beforeEach(() => {
-      sessionMessageAPISendStub = Sinon.stub(MessageSender, 'sendMessageToSnode').resolves();
+      bchatMessageAPISendStub = Sinon.stub(MessageSender, 'sendMessageToSnode').resolves();
 
       Sinon.stub(Data, 'getMessageById').resolves();
 
       encryptStub = Sinon.stub(MessageEncrypter, 'encrypt').resolves({
-        envelopeType: SignalService.Envelope.Type.SESSION_MESSAGE,
+        envelopeType: SignalService.Envelope.Type.BCHAT_MESSAGE,
         cipherText: crypto.randomBytes(10),
       });
 
@@ -54,34 +54,34 @@ describe('MessageSender', () => {
         encryptStub.throws(new Error('Failed to encrypt.'));
         const promise = MessageSender.send(rawMessage, 3, 10);
         await expect(promise).is.rejectedWith('Failed to encrypt.');
-        expect(sessionMessageAPISendStub.callCount).to.equal(0);
+        expect(bchatMessageAPISendStub.callCount).to.equal(0);
       });
 
       it('should only call lokiMessageAPI once if no errors occured', async () => {
         await MessageSender.send(rawMessage, 3, 10);
-        expect(sessionMessageAPISendStub.callCount).to.equal(1);
+        expect(bchatMessageAPISendStub.callCount).to.equal(1);
       });
 
       it('should only retry the specified amount of times before throwing', async () => {
         // const clock = sinon.useFakeTimers();
 
-        sessionMessageAPISendStub.throws(new Error('API error'));
+        bchatMessageAPISendStub.throws(new Error('API error'));
         const attempts = 2;
         const promise = MessageSender.send(rawMessage, attempts, 10);
         await expect(promise).is.rejectedWith('API error');
         // clock.restore();
-        expect(sessionMessageAPISendStub.callCount).to.equal(attempts);
+        expect(bchatMessageAPISendStub.callCount).to.equal(attempts);
       });
 
       it('should not throw error if successful send occurs within the retry limit', async () => {
-        sessionMessageAPISendStub.onFirstCall().throws(new Error('API error'));
+        bchatMessageAPISendStub.onFirstCall().throws(new Error('API error'));
         await MessageSender.send(rawMessage, 3, 10);
-        expect(sessionMessageAPISendStub.callCount).to.equal(2);
+        expect(bchatMessageAPISendStub.callCount).to.equal(2);
       });
     });
 
     describe('logic', () => {
-      let messageEncyrptReturnEnvelopeType = SignalService.Envelope.Type.SESSION_MESSAGE;
+      let messageEncyrptReturnEnvelopeType = SignalService.Envelope.Type.BCHAT_MESSAGE;
 
       beforeEach(() => {
         encryptStub.callsFake(async (_device, plainTextBuffer, _type) => ({
@@ -98,14 +98,14 @@ describe('MessageSender', () => {
 
         await MessageSender.send(rawMessage, 3, 10);
 
-        const args = sessionMessageAPISendStub.getCall(0).args;
+        const args = bchatMessageAPISendStub.getCall(0).args;
         expect(args[0]).to.equal(device.key);
         // expect(args[3]).to.equal(visibleMessage.timestamp); the timestamp is overwritten on sending by the network clock offset
         expect(args[2]).to.equal(visibleMessage.ttl());
       });
 
       it('should correctly build the envelope and override the timestamp', async () => {
-        messageEncyrptReturnEnvelopeType = SignalService.Envelope.Type.SESSION_MESSAGE;
+        messageEncyrptReturnEnvelopeType = SignalService.Envelope.Type.BCHAT_MESSAGE;
 
         // This test assumes the encryption stub returns the plainText passed into it.
         const device = TestUtils.generateFakePubKey();
@@ -116,7 +116,7 @@ describe('MessageSender', () => {
         Sinon.stub(SNodeAPI, 'getLatestTimestampOffset').returns(offset);
         await MessageSender.send(rawMessage, 3, 10);
 
-        const data = sessionMessageAPISendStub.getCall(0).args[1];
+        const data = bchatMessageAPISendStub.getCall(0).args[1];
         const webSocketMessage = SignalService.WebSocketMessage.decode(data);
         expect(webSocketMessage.request?.body).to.not.equal(
           undefined,
@@ -130,7 +130,7 @@ describe('MessageSender', () => {
         const envelope = SignalService.Envelope.decode(
           webSocketMessage.request?.body as Uint8Array
         );
-        expect(envelope.type).to.equal(SignalService.Envelope.Type.SESSION_MESSAGE);
+        expect(envelope.type).to.equal(SignalService.Envelope.Type.BCHAT_MESSAGE);
         expect(envelope.source).to.equal('');
 
         // the timestamp is overridden on sending with the network offset
@@ -148,9 +148,9 @@ describe('MessageSender', () => {
         expect(envelope.content).to.deep.equal(rawMessageExpected.plainTextBuffer);
       });
 
-      describe('SESSION_MESSAGE', () => {
+      describe('BCHAT_MESSAGE', () => {
         it('should set the envelope source to be empty', async () => {
-          messageEncyrptReturnEnvelopeType = SignalService.Envelope.Type.SESSION_MESSAGE;
+          messageEncyrptReturnEnvelopeType = SignalService.Envelope.Type.BCHAT_MESSAGE;
 
           // This test assumes the encryption stub returns the plainText passed into it.
           const device = TestUtils.generateFakePubKey();
@@ -159,7 +159,7 @@ describe('MessageSender', () => {
           const rawMessage = await MessageUtils.toRawMessage(device, visibleMessage);
           await MessageSender.send(rawMessage, 3, 10);
 
-          const data = sessionMessageAPISendStub.getCall(0).args[1];
+          const data = bchatMessageAPISendStub.getCall(0).args[1];
           const webSocketMessage = SignalService.WebSocketMessage.decode(data);
           expect(webSocketMessage.request?.body).to.not.equal(
             undefined,
@@ -173,10 +173,10 @@ describe('MessageSender', () => {
           const envelope = SignalService.Envelope.decode(
             webSocketMessage.request?.body as Uint8Array
           );
-          expect(envelope.type).to.equal(SignalService.Envelope.Type.SESSION_MESSAGE);
+          expect(envelope.type).to.equal(SignalService.Envelope.Type.BCHAT_MESSAGE);
           expect(envelope.source).to.equal(
             '',
-            'envelope source should be empty in SESSION_MESSAGE'
+            'envelope source should be empty in BCHAT_MESSAGE'
           );
         });
       });

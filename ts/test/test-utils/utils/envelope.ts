@@ -23,7 +23,7 @@ export function generateEnvelopePlus(sender: string): EnvelopePlus {
     receivedAt: Date.now(),
     timestamp: Date.now() - 2000,
     id: uuid(),
-    type: SignalService.Envelope.Type.SESSION_MESSAGE,
+    type: SignalService.Envelope.Type.BCHAT_MESSAGE,
     source: sender,
     senderIdentity: sender,
     content: new Uint8Array(),

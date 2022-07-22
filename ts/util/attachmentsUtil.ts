@@ -1,7 +1,7 @@
 import { SignalService } from '../protobuf';
 import loadImage, { CropOptions, LoadImageOptions } from 'blueimp-load-image';
-import { getDecryptedMediaUrl } from '../session/crypto/DecryptedAttachmentsManager';
-import { sendDataExtractionNotification } from '../session/messages/outgoing/controlMessage/DataExtractionNotificationMessage';
+import { getDecryptedMediaUrl } from '../bchat/crypto/DecryptedAttachmentsManager';
+import { sendDataExtractionNotification } from '../bchat/messages/outgoing/controlMessage/DataExtractionNotificationMessage';
 import { AttachmentType, save } from '../types/Attachment';
 import { StagedAttachmentType } from '../components/conversation/composition/CompositionBox';
 import { getAbsoluteAttachmentPath, processNewAttachment } from '../types/MessageAttachment';
@@ -10,8 +10,8 @@ import { IMAGE_GIF, IMAGE_JPEG, IMAGE_PNG, IMAGE_TIFF, IMAGE_UNKNOWN } from '../
 import { THUMBNAIL_SIDE } from '../types/attachments/VisualAttachment';
 
 import imageType from 'image-type';
-import { MAX_ATTACHMENT_FILESIZE_BYTES } from '../session/constants';
-import { perfEnd, perfStart } from '../session/utils/Performance';
+import { MAX_ATTACHMENT_FILESIZE_BYTES } from '../bchat/constants';
+import { perfEnd, perfStart } from '../bchat/utils/Performance';
 
 /**
  * The logic for sending attachments is as follow:

@@ -3,8 +3,8 @@ import chai from 'chai';
 import ByteBuffer from 'bytebuffer';
 
 // Can't import type as StringUtils.Encoding
-import { Encoding } from '../../../../session/utils/String';
-import { StringUtils } from '../../../../session/utils';
+import { Encoding } from '../../../../bchat/utils/String';
+import { StringUtils } from '../../../../bchat/utils';
 
 import chaiAsPromised from 'chai-as-promised';
 chai.use(chaiAsPromised as any);

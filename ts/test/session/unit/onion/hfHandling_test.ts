@@ -5,7 +5,7 @@ import {
   getHasSeenHF191,
   handleHardforkResult,
   resetHardForkCachedValues,
-} from '../../../../session/apis/snode_api/hfHandling';
+} from '../../../../bchat/apis/snode_api/hfHandling';
 import { TestUtils } from '../../../test-utils';
 
 // tslint:disable-next-line: max-func-body-length

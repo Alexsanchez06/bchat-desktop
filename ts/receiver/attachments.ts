@@ -2,15 +2,15 @@ import _ from 'lodash';
 
 import { MessageModel } from '../models/message';
 import { saveMessage } from '../../ts/data/data';
-import { AttachmentDownloads } from '../session/utils';
+import { AttachmentDownloads } from '../bchat/utils';
 import { ConversationModel } from '../models/conversation';
 import {
   downloadFileOpenGroupV2,
   downloadFileOpenGroupV2ByUrl,
-} from '../session/apis/open_group_api/opengroupV2/OpenGroupAPIV2';
-import { OpenGroupRequestCommonType } from '../session/apis/open_group_api/opengroupV2/ApiUtil';
-import { FSv2 } from '../session/apis/file_server_api';
-import { getUnpaddedAttachment } from '../session/crypto/BufferPadding';
+} from '../bchat/apis/open_group_api/opengroupV2/OpenGroupAPIV2';
+import { OpenGroupRequestCommonType } from '../bchat/apis/open_group_api/opengroupV2/ApiUtil';
+import { FSv2 } from '../bchat/apis/file_server_api';
+import { getUnpaddedAttachment } from '../bchat/crypto/BufferPadding';
 import { decryptAttachment } from '../util/crypto/attachmentsEncrypter';
 import { callUtilsWorker } from '../webworker/workers/util_worker_interface';
 

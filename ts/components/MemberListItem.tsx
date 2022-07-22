@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import { Avatar, AvatarSize, CrownIcon } from './avatar/Avatar';
-import { Constants } from '../session';
+import { Constants } from '../bchat';
 import { BchatIcon } from './icon';
 import { useConversationUsernameOrShorten } from '../hooks/useParamSelector';
 import styled from 'styled-components';

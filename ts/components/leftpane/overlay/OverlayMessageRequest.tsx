@@ -11,8 +11,8 @@ import { MemoConversationListItemWithDetails } from '../conversation-list-item/C
 import styled from 'styled-components';
 import { BchatButton, BchatButtonColor, BchatButtonType } from '../../basic/BchatButton';
 import { SectionType, setOverlayMode, showLeftPaneSection } from '../../../state/ducks/section';
-import { getConversationController } from '../../../session/conversations';
-import { forceSyncConfigurationNowIfNeeded } from '../../../session/utils/syncUtils';
+import { getConversationController } from '../../../bchat/conversations';
+import { forceSyncConfigurationNowIfNeeded } from '../../../bchat/utils/syncUtils';
 import { BlockedNumberController } from '../../../util';
 import useKey from 'react-use/lib/useKey';
 import {

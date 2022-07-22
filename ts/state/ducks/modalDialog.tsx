@@ -1,9 +1,9 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { SessionConfirmDialogProps } from '../../components/dialog/SessionConfirm';
-import { PasswordAction } from '../../components/dialog/SessionPasswordDialog';
+import { BchatConfirmDialogProps } from '../../components/dialog/BchatConfirm';
+import { PasswordAction } from '../../components/dialog/BchatPasswordDialog';
 export type BanType = 'ban' | 'unban';
 
-export type ConfirmModalState = SessionConfirmDialogProps | null;
+export type ConfirmModalState = BchatConfirmDialogProps | null;
 export type InviteContactModalState = { conversationId: string } | null;
 export type BanOrUnbanUserModalState = {
   conversationId: string;
@@ -21,7 +21,7 @@ export type OnionPathModalState = EditProfileModalState;
 export type RecoveryPhraseModalState = EditProfileModalState;
 export type DeleteAccountModalState = EditProfileModalState;
 
-export type SessionPasswordModalState = { passwordAction: PasswordAction; onOk: () => void } | null;
+export type BchatPasswordModalState = { passwordAction: PasswordAction; onOk: () => void } | null;
 
 export type UserDetailsModalState = {
   conversationId: string;
@@ -43,7 +43,7 @@ export type ModalState = {
   onionPathModal: OnionPathModalState;
   recoveryPhraseModal: RecoveryPhraseModalState;
   adminLeaveClosedGroup: AdminLeaveClosedGroupModalState;
-  sessionPasswordModal: SessionPasswordModalState;
+  bchatPasswordModal: BchatPasswordModalState;
   deleteAccountModal: DeleteAccountModalState;
 };
 
@@ -61,7 +61,7 @@ export const initialModalState: ModalState = {
   onionPathModal: null,
   recoveryPhraseModal: null,
   adminLeaveClosedGroup: null,
-  sessionPasswordModal: null,
+  bchatPasswordModal: null,
   deleteAccountModal: null,
 };
 
@@ -108,8 +108,8 @@ const ModalSlice = createSlice({
     adminLeaveClosedGroup(state, action: PayloadAction<AdminLeaveClosedGroupModalState | null>) {
       return { ...state, adminLeaveClosedGroup: action.payload };
     },
-    sessionPassword(state, action: PayloadAction<SessionPasswordModalState>) {
-      return { ...state, sessionPasswordModal: action.payload };
+    bchatPassword(state, action: PayloadAction<BchatPasswordModalState>) {
+      return { ...state, bchatPasswordModal: action.payload };
     },
     updateDeleteAccountModal(state, action: PayloadAction<DeleteAccountModalState>) {
       return { ...state, deleteAccountModal: action.payload };
@@ -131,7 +131,7 @@ export const {
   onionPathModal,
   recoveryPhraseModal,
   adminLeaveClosedGroup,
-  sessionPassword,
+  bchatPassword,
   updateDeleteAccountModal,
   updateBanOrUnbanUserModal,
 } = actions;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { SessionSeedModal } from '../dialog/SessionSeedModal';
+import { BchatSeedModal } from '../dialog/BchatSeedModal';
 import { useSelector } from 'react-redux';
 import {
   getRecoveryPhraseDialog,
@@ -15,7 +15,7 @@ export const SessionRecoverySeed=()=>
    
     if(verify)
     {
-        return <SessionSeedModal {...recoveryPhraseModalState} />
+        return <BchatSeedModal {...recoveryPhraseModalState} />
     }
 
     

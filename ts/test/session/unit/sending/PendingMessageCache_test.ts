@@ -2,9 +2,9 @@
 import { expect } from 'chai';
 import Sinon from 'sinon';
 import * as _ from 'lodash';
-import { MessageUtils } from '../../../../session/utils';
+import { MessageUtils } from '../../../../bchat/utils';
 import { TestUtils } from '../../../../test/test-utils';
-import { PendingMessageCache } from '../../../../session/sending/PendingMessageCache';
+import { PendingMessageCache } from '../../../../bchat/sending/PendingMessageCache';
 
 // Equivalent to Data.StorageItem
 interface StorageItem {

@@ -1,11 +1,11 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { unblockConvoById } from '../../interactions/conversationInteractions';
-import { getConversationController } from '../../session/conversations';
+import { getConversationController } from '../../bchat/conversations';
 import { getBlockedPubkeys } from '../../state/selectors/conversations';
 import { BchatButtonColor } from '../basic/BchatButton';
 
-import { SessionSettingButtonItem, BchatSettingsItemWrapper } from './BchatSettingListItem';
+import { BchatSettingButtonItem, BchatSettingsItemWrapper } from './BchatSettingListItem';
 
 export const BlockedUserSettings = () => {
   const blockedNumbers = useSelector(getBlockedPubkeys);
@@ -31,7 +31,7 @@ export const BlockedUserSettings = () => {
       title = window.i18n('anonymous');
     }
     return (
-      <SessionSettingButtonItem
+      <BchatSettingButtonItem
         key={blockedEntry}
         buttonColor={BchatButtonColor.Danger}
         buttonText={window.i18n('unblockUser')}

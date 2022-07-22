@@ -7,7 +7,7 @@ import {
   declineConversationWithConfirm,
 } from '../../interactions/conversationInteractions';
 import { MessageDirection } from '../../models/messageType';
-import { getConversationController } from '../../session/conversations';
+import { getConversationController } from '../../bchat/conversations';
 import { getSelectedConversation } from '../../state/selectors/conversations';
 import { BchatButton, BchatButtonColor, BchatButtonType } from '../basic/BchatButton';
 

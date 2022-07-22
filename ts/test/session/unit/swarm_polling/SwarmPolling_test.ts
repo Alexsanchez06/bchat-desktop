@@ -6,22 +6,22 @@ import { describe } from 'mocha';
 
 import chaiAsPromised from 'chai-as-promised';
 import { TestUtils } from '../../../test-utils';
-import { UserUtils } from '../../../../session/utils';
-import { getConversationController } from '../../../../session/conversations';
+import { UserUtils } from '../../../../bchat/utils';
+import { getConversationController } from '../../../../bchat/conversations';
 import * as Data from '../../../../../ts/data/data';
 import * as DataItem from '../../../../../ts/data/channelsItem';
-import { getSwarmPollingInstance, SNodeAPI, SnodePool } from '../../../../session/apis/snode_api';
-import { SwarmPolling } from '../../../../session/apis/snode_api/swarmPolling';
-import { SWARM_POLLING_TIMEOUT } from '../../../../session/constants';
+import { getSwarmPollingInstance, SNodeAPI, SnodePool } from '../../../../bchat/apis/snode_api';
+import { SwarmPolling } from '../../../../bchat/apis/snode_api/swarmPolling';
+import { SWARM_POLLING_TIMEOUT } from '../../../../bchat/constants';
 import {
   ConversationCollection,
   ConversationModel,
   ConversationTypeEnum,
 } from '../../../../models/conversation';
-import { PubKey } from '../../../../session/types';
+import { PubKey } from '../../../../bchat/types';
 import { generateFakeSnodes } from '../../../test-utils/utils';
-import { resetHardForkCachedValues } from '../../../../session/apis/snode_api/hfHandling';
-import { sleepFor } from '../../../../session/utils/Promise';
+import { resetHardForkCachedValues } from '../../../../bchat/apis/snode_api/hfHandling';
+import { sleepFor } from '../../../../bchat/utils/Promise';
 // tslint:disable: chai-vague-errors
 
 chai.use(chaiAsPromised as any);

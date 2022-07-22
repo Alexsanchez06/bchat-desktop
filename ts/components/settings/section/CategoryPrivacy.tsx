@@ -3,14 +3,14 @@ import { useDispatch, useSelector } from 'react-redux';
 // tslint:disable-next-line: no-submodule-imports
 import useUpdate from 'react-use/lib/useUpdate';
 import { SettingsKey } from '../../../data/settings-key';
-import { CallManager, ToastUtils } from '../../../session/utils';
-import { sessionPassword, updateConfirmModal } from '../../../state/ducks/modalDialog';
+import { CallManager, ToastUtils } from '../../../bchat/utils';
+import { bchatPassword, updateConfirmModal } from '../../../state/ducks/modalDialog';
 import { toggleMessageRequests } from '../../../state/ducks/userConfig';
 import { getHideMessageRequestBanner } from '../../../state/selectors/userConfig';
 import { BchatButtonColor } from '../../basic/BchatButton';
-import { PasswordAction } from '../../dialog/SessionPasswordDialog';
+import { PasswordAction } from '../../dialog/BchatPasswordDialog';
 
-import { SessionSettingButtonItem, SessionToggleWithDescription } from '../BchatSettingListItem';
+import { BchatSettingButtonItem, BchatToggleWithDescription } from '../BchatSettingListItem';
 
 const toggleCallMediaPermissions = async (triggerUIUpdate: () => void) => {
   const currentValue = window.getCallMediaPermissions();
@@ -41,7 +41,7 @@ function displayPasswordModal(
   onPasswordUpdated: (action: string) => void
 ) {
   window.inboxStore?.dispatch(
-    sessionPassword({
+    bchatPassword({
       passwordAction,
       onOk: () => {
         onPasswordUpdated(passwordAction);
@@ -75,7 +75,7 @@ export const SettingsCategoryPrivacy = (props: {
   if (props.hasPassword !== null) {
     return (
       <>
-        <SessionToggleWithDescription
+        <BchatToggleWithDescription
           onClickToggle={async () => {
             await window.toggleMediaPermissions();
             forceUpdate();
@@ -84,7 +84,7 @@ export const SettingsCategoryPrivacy = (props: {
           description={window.i18n('mediaPermissionsDescription')}
           active={Boolean(window.getSettingValue('media-permissions'))}
         />
-        <SessionToggleWithDescription
+        <BchatToggleWithDescription
           onClickToggle={async () => {
             await toggleCallMediaPermissions(forceUpdate);
             forceUpdate();
@@ -94,7 +94,7 @@ export const SettingsCategoryPrivacy = (props: {
           active={Boolean(window.getCallMediaPermissions())}
         />
 
-        <SessionToggleWithDescription
+        <BchatToggleWithDescription
           onClickToggle={() => {
             const old = Boolean(window.getSettingValue(SettingsKey.settingsReadReceipt));
             window.setSettingValue(SettingsKey.settingsReadReceipt, !old);
@@ -106,7 +106,7 @@ export const SettingsCategoryPrivacy = (props: {
 
           active={window.getSettingValue(SettingsKey.settingsReadReceipt)}
         />
-        <SessionToggleWithDescription
+        <BchatToggleWithDescription
           onClickToggle={() => {
             const old = Boolean(window.getSettingValue(SettingsKey.settingsTypingIndicator));
             window.setSettingValue(SettingsKey.settingsTypingIndicator, !old);
@@ -117,7 +117,7 @@ export const SettingsCategoryPrivacy = (props: {
           description={"See and share when messages are being typed (applies to all chat)."}
           active={Boolean(window.getSettingValue(SettingsKey.settingsTypingIndicator))}
         />
-        <SessionToggleWithDescription
+        <BchatToggleWithDescription
           onClickToggle={() => {
             const old = Boolean(window.getSettingValue(SettingsKey.settingsAutoUpdate));
             window.setSettingValue(SettingsKey.settingsAutoUpdate, !old);
@@ -127,7 +127,7 @@ export const SettingsCategoryPrivacy = (props: {
           description={window.i18n('autoUpdateSettingDescription')}
           active={Boolean(window.getSettingValue(SettingsKey.settingsAutoUpdate))}
         />
-        <SessionToggleWithDescription
+        <BchatToggleWithDescription
           onClickToggle={() => {
             dispatch(toggleMessageRequests());
           }}
@@ -135,7 +135,7 @@ export const SettingsCategoryPrivacy = (props: {
           description={window.i18n('hideRequestBannerDescription')}
           active={useSelector(getHideMessageRequestBanner)}
         />
-        <SessionToggleWithDescription
+        <BchatToggleWithDescription
           onClickToggle={async () => {
             await toggleOpengroupPruning();
             forceUpdate();
@@ -145,7 +145,7 @@ export const SettingsCategoryPrivacy = (props: {
           active={isOpengroupPruningEnabled}
         />
         {!props.hasPassword && (
-          <SessionSettingButtonItem
+          <BchatSettingButtonItem
             title={window.i18n('setAccountPasswordTitle')}
             // description={window.i18n('setAccountPasswordDescription')}
             description={"Require password to unlock BChat’s screen. you can still receive message notifications while screen lock is enabled. BChat’s notification settings allow you to customize information that is displayed"}
@@ -159,7 +159,7 @@ export const SettingsCategoryPrivacy = (props: {
           />
         )}
         {props.hasPassword && (
-          <SessionSettingButtonItem
+          <BchatSettingButtonItem
             title={window.i18n('changeAccountPasswordTitle')}
             description={window.i18n('changeAccountPasswordDescription')}
             onClick={() => {
@@ -170,7 +170,7 @@ export const SettingsCategoryPrivacy = (props: {
           />
         )}
         {props.hasPassword && (
-          <SessionSettingButtonItem
+          <BchatSettingButtonItem
             title={window.i18n('removeAccountPasswordTitle')}
             // description={window.i18n('removeAccountPasswordDescription')}
             description={window.i18n('removeAccountPasswordDescription')}

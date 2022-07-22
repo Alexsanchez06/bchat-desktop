@@ -3,7 +3,7 @@ import React, { useCallback, useContext, useLayoutEffect, useState } from 'react
 import { InView } from 'react-intersection-observer';
 import { useDispatch, useSelector } from 'react-redux';
 import { getMessageById } from '../../../../data/data';
-import { getConversationController } from '../../../../session/conversations';
+import { getConversationController } from '../../../../bchat/conversations';
 import {
   fetchBottomMessagesForConversation,
   fetchTopMessagesForConversation,

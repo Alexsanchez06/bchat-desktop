@@ -8,7 +8,7 @@ import {
   DEVICE_DISABLED_DEVICE_ID,
   InputItem,
   removeVideoEventsListener,
-} from '../session/utils/calling/CallManager';
+} from '../bchat/utils/calling/CallManager';
 import { getSelectedConversationKey } from '../state/selectors/conversations';
 import { getCallIsInFullScreen, getHasOngoingCallWithPubkey } from '../state/selectors/call';
 

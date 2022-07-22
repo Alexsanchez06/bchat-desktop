@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import { StorageItem } from '../node/storage_item';
-import { fromArrayBufferToBase64, fromBase64ToArrayBuffer } from '../session/utils/String';
+import { fromArrayBufferToBase64, fromBase64ToArrayBuffer } from '../bchat/utils/String';
 import { channels } from './channels';
 
 function keysToArrayBuffer(keys: any, data: any) {

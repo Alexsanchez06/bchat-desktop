@@ -30,9 +30,9 @@ import { MessageQuoteSelectorProps } from '../../components/conversation/message
 import { MessageStatusSelectorProps } from '../../components/conversation/message/message-content/MessageStatus';
 import { MessageTextSelectorProps } from '../../components/conversation/message/message-content/MessageText';
 import { GenericReadableMessageSelectorProps } from '../../components/conversation/message/message-item/GenericReadableMessage';
-import { LightBoxOptions } from '../../components/conversation/SessionConversation';
-import { getConversationController } from '../../session/conversations';
-import { UserUtils } from '../../session/utils';
+import { LightBoxOptions } from '../../components/conversation/BchatConversation';
+import { getConversationController } from '../../bchat/conversations';
+import { UserUtils } from '../../bchat/utils';
 import { Storage } from '../../util/storage';
 
 export const getConversations = (state: StateType): ConversationsStateType => state.conversations;

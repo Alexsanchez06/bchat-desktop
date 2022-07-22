@@ -3,8 +3,8 @@ import { expect } from 'chai';
 import { SignalService } from '../../../../protobuf';
 import Long from 'long';
 import { toNumber } from 'lodash';
-import { Constants } from '../../../../session';
-import { TypingMessage } from '../../../../session/messages/outgoing/controlMessage/TypingMessage';
+import { Constants } from '../../../../bchat';
+import { TypingMessage } from '../../../../bchat/messages/outgoing/controlMessage/TypingMessage';
 
 describe('TypingMessage', () => {
   it('has Action.STARTED if isTyping = true', () => {

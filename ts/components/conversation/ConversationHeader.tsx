@@ -185,7 +185,7 @@ const AvatarHeader = (props: {
       <Avatar
         size={AvatarSize.S}
         onAvatarClick={() => {
-          // do not allow right panel to appear if another button is shown on the SessionConversation
+          // do not allow right panel to appear if another button is shown on the BchatConversation
           if (onAvatarClick && !showBackButton) {
             onAvatarClick(pubkey);
           }

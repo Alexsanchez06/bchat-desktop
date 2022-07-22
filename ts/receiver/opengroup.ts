@@ -4,14 +4,14 @@ import {
   createPublicMessageSentFromUs,
 } from '../models/messageFactory';
 import { SignalService } from '../protobuf';
-import { OpenGroupRequestCommonType } from '../session/apis/open_group_api/opengroupV2/ApiUtil';
-import { OpenGroupMessageV2 } from '../session/apis/open_group_api/opengroupV2/OpenGroupMessageV2';
-import { getOpenGroupV2ConversationId } from '../session/apis/open_group_api/utils/OpenGroupUtils';
-import { getConversationController } from '../session/conversations';
-import { removeMessagePadding } from '../session/crypto/BufferPadding';
-import { UserUtils } from '../session/utils';
-import { perfEnd, perfStart } from '../session/utils/Performance';
-import { fromBase64ToArray } from '../session/utils/String';
+import { OpenGroupRequestCommonType } from '../bchat/apis/open_group_api/opengroupV2/ApiUtil';
+import { OpenGroupMessageV2 } from '../bchat/apis/open_group_api/opengroupV2/OpenGroupMessageV2';
+import { getOpenGroupV2ConversationId } from '../bchat/apis/open_group_api/utils/OpenGroupUtils';
+import { getConversationController } from '../bchat/conversations';
+import { removeMessagePadding } from '../bchat/crypto/BufferPadding';
+import { UserUtils } from '../bchat/utils';
+import { perfEnd, perfStart } from '../bchat/utils/Performance';
+import { fromBase64ToArray } from '../bchat/utils/String';
 import { handleMessageJob, toRegularMessage } from './queuedJob';
 
 export async function handleOpenGroupV2Message(

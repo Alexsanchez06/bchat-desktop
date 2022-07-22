@@ -2,7 +2,7 @@ import React, { useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import _ from 'lodash';
 import { MessageRenderingProps } from '../../../../models/messageType';
-import { PubKey } from '../../../../session/types';
+import { PubKey } from '../../../../bchat/types';
 import { openConversationToSpecificMessage } from '../../../../state/ducks/conversations';
 import {
   getMessageQuoteProps,
@@ -10,7 +10,7 @@ import {
   isMessageSelectionMode,
 } from '../../../../state/selectors/conversations';
 import { Quote } from './Quote';
-import { ToastUtils } from '../../../../session/utils';
+import { ToastUtils } from '../../../../bchat/utils';
 import { getMessagesBySentAt } from '../../../../data/data';
 import { MessageModel } from '../../../../models/message';
 

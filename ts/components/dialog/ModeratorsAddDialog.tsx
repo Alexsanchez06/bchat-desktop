@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { PubKey } from '../../session/types';
-import { ToastUtils } from '../../session/utils';
+import { PubKey } from '../../bchat/types';
+import { ToastUtils } from '../../bchat/utils';
 import { Flex } from '../basic/Flex';
-import { ApiV2 } from '../../session/apis/open_group_api/opengroupV2';
-import { getConversationController } from '../../session/conversations';
+import { ApiV2 } from '../../bchat/apis/open_group_api/opengroupV2';
+import { getConversationController } from '../../bchat/conversations';
 import { useDispatch } from 'react-redux';
 import { updateAddModeratorsModal } from '../../state/ducks/modalDialog';
 import { BchatButton, BchatButtonColor, BchatButtonType } from '../basic/BchatButton';

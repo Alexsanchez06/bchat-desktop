@@ -6,7 +6,7 @@ import { Image } from './Image';
 import { BchatSpinner } from '../basic/BchatSpinner';
 import { StagedLinkPreviewImage } from './composition/CompositionBox';
 import { isImage } from '../../types/MIME';
-import { fromArrayBufferToBase64 } from '../../session/utils/String';
+import { fromArrayBufferToBase64 } from '../../bchat/utils/String';
 
 type Props = {
   isLoaded: boolean;

@@ -6,7 +6,7 @@ import {
   useHasNickname,
   useIsMe,
 } from '../../../hooks/useParamSelector';
-import { PubKey } from '../../../session/types';
+import { PubKey } from '../../../bchat/types';
 import { isSearching } from '../../../state/selectors/search';
 import { ContactName } from '../../conversation/ContactName';
 import { ContextConversationId } from './ConversationListItem';

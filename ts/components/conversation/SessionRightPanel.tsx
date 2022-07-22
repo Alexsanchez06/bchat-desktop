@@ -18,7 +18,7 @@ import {
   showUpdateGroupMembersByConvoId,
   showUpdateGroupNameByConvoId,
 } from '../../interactions/conversationInteractions';
-import { Constants } from '../../session';
+import { Constants } from '../../bchat';
 import { closeRightPanel } from '../../state/ducks/conversations';
 import { getSelectedConversation, isRightPanelShowing } from '../../state/selectors/conversations';
 import { getTimerOptions } from '../../state/selectors/timerOptions';

@@ -1,11 +1,11 @@
-import { getConversationController } from '../session/conversations';
-import { getSodiumRenderer } from '../session/crypto';
-import { fromArrayBufferToBase64, fromHex, toHex } from '../session/utils/String';
-import { getOurPubKeyStrFromCache } from '../session/utils/User';
+import { getConversationController } from '../bchat/conversations';
+import { getSodiumRenderer } from '../bchat/crypto';
+import { fromArrayBufferToBase64, fromHex, toHex } from '../bchat/utils/String';
+import { getOurPubKeyStrFromCache } from '../bchat/utils/User';
 import { trigger } from '../shims/events';
 
 import { actions as userActions } from '../state/ducks/user';
-import { mn_decode } from '../session/crypto/mnemonic';
+import { mn_decode } from '../bchat/crypto/mnemonic';
 import { ConversationTypeEnum } from '../models/conversation';
 import { SettingsKey } from '../data/settings-key';
 import {

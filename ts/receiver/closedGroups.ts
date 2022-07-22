@@ -1,16 +1,16 @@
 import { SignalService } from '../protobuf';
 import { removeFromCache } from './cache';
 import { EnvelopePlus } from './types';
-import { PubKey } from '../session/types';
-import { toHex } from '../session/utils/String';
-import { getConversationController } from '../session/conversations';
-import * as ClosedGroup from '../session/group/closed-group';
+import { PubKey } from '../bchat/types';
+import { toHex } from '../bchat/utils/String';
+import { getConversationController } from '../bchat/conversations';
+import * as ClosedGroup from '../bchat/group/closed-group';
 import { BlockedNumberController } from '../util';
 import {
   generateClosedGroupPublicKey,
   generateCurve25519KeyPairWithoutPrefix,
-} from '../session/crypto';
-import { getMessageQueue } from '../session';
+} from '../bchat/crypto';
+import { getMessageQueue } from '../bchat';
 import { decryptWithSessionProtocol } from './contentMessage';
 import {
   addClosedGroupEncryptionKeyPair,
@@ -21,21 +21,21 @@ import {
 import {
   ClosedGroupNewMessage,
   ClosedGroupNewMessageParams,
-} from '../session/messages/outgoing/controlMessage/group/ClosedGroupNewMessage';
+} from '../bchat/messages/outgoing/controlMessage/group/ClosedGroupNewMessage';
 
 import { ECKeyPair, HexKeyPair } from './keypairs';
-import { UserUtils } from '../session/utils';
+import { UserUtils } from '../bchat/utils';
 import { ConversationModel, ConversationTypeEnum } from '../models/conversation';
 import _ from 'lodash';
-import { forceSyncConfigurationNowIfNeeded } from '../session/utils/syncUtils';
-import { ClosedGroupEncryptionPairReplyMessage } from '../session/messages/outgoing/controlMessage/group/ClosedGroupEncryptionPairReplyMessage';
+import { forceSyncConfigurationNowIfNeeded } from '../bchat/utils/syncUtils';
+import { ClosedGroupEncryptionPairReplyMessage } from '../bchat/messages/outgoing/controlMessage/group/ClosedGroupEncryptionPairReplyMessage';
 import { queueAllCachedFromSource } from './receiver';
 import { openConversationWithMessages } from '../state/ducks/conversations';
-import { getSwarmPollingInstance } from '../session/apis/snode_api';
+import { getSwarmPollingInstance } from '../bchat/apis/snode_api';
 import { MessageModel } from '../models/message';
 
 import { updateConfirmModal } from '../state/ducks/modalDialog';
-import { perfEnd, perfStart } from '../session/utils/Performance';
+import { perfEnd, perfStart } from '../bchat/utils/Performance';
 
 export const distributingClosedGroupEncryptionKeyPairs = new Map<string, ECKeyPair>();
 

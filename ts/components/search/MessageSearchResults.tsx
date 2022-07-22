@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { getOurPubKeyStrFromCache } from '../../session/utils/User';
+import { getOurPubKeyStrFromCache } from '../../bchat/utils/User';
 import { openConversationToSpecificMessage } from '../../state/ducks/conversations';
 import { ContactName } from '../conversation/ContactName';
 import { Avatar, AvatarSize } from '../avatar/Avatar';
@@ -9,7 +9,7 @@ import { MessageBodyHighlight } from '../basic/MessageBodyHighlight';
 import styled from 'styled-components';
 import { MessageAttributes } from '../../models/messageType';
 import { useConversationUsername, useIsPrivate } from '../../hooks/useParamSelector';
-import { UserUtils } from '../../session/utils';
+import { UserUtils } from '../../bchat/utils';
 
 export type MessageResultProps = MessageAttributes & { snippet: string };
 

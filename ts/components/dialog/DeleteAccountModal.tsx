@@ -1,8 +1,8 @@
 import React, { useCallback, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { ed25519Str } from '../../session/onions/onionPath';
-import { forceNetworkDeletion } from '../../session/apis/snode_api/SNodeAPI';
-import { forceSyncConfigurationNowIfNeeded } from '../../session/utils/syncUtils';
+import { ed25519Str } from '../../bchat/onions/onionPath';
+import { forceNetworkDeletion } from '../../bchat/apis/snode_api/SNodeAPI';
+import { forceSyncConfigurationNowIfNeeded } from '../../bchat/utils/syncUtils';
 import { updateConfirmModal, updateDeleteAccountModal } from '../../state/ducks/modalDialog';
 import { SpacerLG } from '../basic/Text';
 import { BchatButton, BchatButtonColor } from '../basic/BchatButton';

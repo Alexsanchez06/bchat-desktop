@@ -1,8 +1,8 @@
 import { BchatIconButton } from '../icon';
 import { animation, contextMenu, Item, Menu } from 'react-contexify';
-import { InputItem } from '../../session/utils/calling/CallManager';
+import { InputItem } from '../../bchat/utils/calling/CallManager';
 import { setFullScreenCall } from '../../state/ducks/call';
-import { CallManager, ToastUtils } from '../../session/utils';
+import { CallManager, ToastUtils } from '../../bchat/utils';
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getHasOngoingCallWithPubkey } from '../../state/selectors/call';

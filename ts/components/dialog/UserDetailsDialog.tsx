@@ -5,8 +5,8 @@ import useCopyToClipboard from 'react-use/lib/useCopyToClipboard';
 
 import useKey from 'react-use/lib/useKey';
 import { ConversationTypeEnum } from '../../models/conversation';
-import { getConversationController } from '../../session/conversations';
-import { ToastUtils } from '../../session/utils';
+import { getConversationController } from '../../bchat/conversations';
+import { ToastUtils } from '../../bchat/utils';
 import { openConversationWithMessages } from '../../state/ducks/conversations';
 import { updateUserDetailsModal } from '../../state/ducks/modalDialog';
 import { Avatar, AvatarSize } from '../avatar/Avatar';

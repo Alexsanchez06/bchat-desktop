@@ -3,13 +3,13 @@ import { expect } from 'chai';
 import { SignalService } from '../../../../protobuf';
 import { TextEncoder } from 'util';
 import { toNumber } from 'lodash';
-import { Constants } from '../../../../session';
+import { Constants } from '../../../../bchat';
 import {
   AttachmentPointerWithUrl,
   PreviewWithAttachmentUrl,
   Quote,
   VisibleMessage,
-} from '../../../../session/messages/outgoing/visibleMessage/VisibleMessage';
+} from '../../../../bchat/messages/outgoing/visibleMessage/VisibleMessage';
 
 describe('VisibleMessage', () => {
   it('can create empty message with just a timestamp', () => {

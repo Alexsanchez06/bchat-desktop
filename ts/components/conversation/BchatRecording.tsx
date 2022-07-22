@@ -6,9 +6,9 @@ import { BchatIconButton } from '../icon';
 import autoBind from 'auto-bind';
 import MicRecorder from 'mic-recorder-to-mp3';
 import styled from 'styled-components';
-import { Constants } from '../../session';
-import { ToastUtils } from '../../session/utils';
-import { MAX_ATTACHMENT_FILESIZE_BYTES } from '../../session/constants';
+import { Constants } from '../../bchat';
+import { ToastUtils } from '../../bchat/utils';
+import { MAX_ATTACHMENT_FILESIZE_BYTES } from '../../bchat/constants';
 
 interface Props {
   onExitVoiceNoteView: () => void;

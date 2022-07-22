@@ -11,9 +11,9 @@ import {
 import { MessageCollection, MessageModel } from '../models/message';
 import { MessageAttributes, MessageDirection } from '../models/messageType';
 import { HexKeyPair } from '../receiver/keypairs';
-import { getConversationController } from '../session/conversations';
-import { getSodiumRenderer } from '../session/crypto';
-import { PubKey } from '../session/types';
+import { getConversationController } from '../bchat/conversations';
+import { getSodiumRenderer } from '../bchat/crypto';
+import { PubKey } from '../bchat/types';
 import { ReduxConversationType } from '../state/ducks/conversations';
 import { MsgDuplicateSearchOpenGroup, UpdateLastHashType } from '../types/sqlSharedTypes';
 import { ExpirationTimerOptions } from '../util/expiringMessages';

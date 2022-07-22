@@ -6,17 +6,17 @@ import { describe } from 'mocha';
 import { randomBytes } from 'crypto';
 import * as Data from '../../../../../ts/data/data';
 
-import { GroupUtils, PromiseUtils, UserUtils } from '../../../../session/utils';
+import { GroupUtils, PromiseUtils, UserUtils } from '../../../../bchat/utils';
 import { TestUtils } from '../../../../test/test-utils';
-import { MessageQueue } from '../../../../session/sending/MessageQueue';
-import { ContentMessage } from '../../../../session/messages/outgoing';
-import { PubKey, RawMessage } from '../../../../session/types';
-import { MessageSender } from '../../../../session/sending';
+import { MessageQueue } from '../../../../bchat/sending/MessageQueue';
+import { ContentMessage } from '../../../../bchat/messages/outgoing';
+import { PubKey, RawMessage } from '../../../../bchat/types';
+import { MessageSender } from '../../../../bchat/sending';
 import { PendingMessageCacheStub } from '../../../test-utils/stubs';
-import { ClosedGroupMessage } from '../../../../session/messages/outgoing/controlMessage/group/ClosedGroupMessage';
+import { ClosedGroupMessage } from '../../../../bchat/messages/outgoing/controlMessage/group/ClosedGroupMessage';
 
 import chaiAsPromised from 'chai-as-promised';
-import { MessageSentHandler } from '../../../../session/sending/MessageSentHandler';
+import { MessageSentHandler } from '../../../../bchat/sending/MessageSentHandler';
 
 chai.use(chaiAsPromised as any);
 chai.should();

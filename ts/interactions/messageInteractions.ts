@@ -1,13 +1,13 @@
 import _ from 'lodash';
-import { ApiV2 } from '../session/apis/open_group_api/opengroupV2';
-import { joinOpenGroupV2WithUIEvents } from '../session/apis/open_group_api/opengroupV2/JoinOpenGroupV2';
+import { ApiV2 } from '../bchat/apis/open_group_api/opengroupV2';
+import { joinOpenGroupV2WithUIEvents } from '../bchat/apis/open_group_api/opengroupV2/JoinOpenGroupV2';
 import {
   isOpenGroupV2,
   openGroupV2CompleteURLRegex,
-} from '../session/apis/open_group_api/utils/OpenGroupUtils';
-import { getConversationController } from '../session/conversations';
-import { PubKey } from '../session/types';
-import { ToastUtils } from '../session/utils';
+} from '../bchat/apis/open_group_api/utils/OpenGroupUtils';
+import { getConversationController } from '../bchat/conversations';
+import { PubKey } from '../bchat/types';
+import { ToastUtils } from '../bchat/utils';
 
 import { updateBanOrUnbanUserModal, updateConfirmModal } from '../state/ducks/modalDialog';
 

@@ -12,7 +12,7 @@ import {
   getOnionPathDialog,
   getRecoveryPhraseDialog,
   getRemoveModeratorsModal,
-  getSessionPasswordDialog,
+  getBchatPasswordDialog,
   getUpdateGroupMembersModal,
   getUpdateGroupNameModal,
   getUserDetailsModal,
@@ -23,14 +23,14 @@ import { DeleteAccountModal } from './DeleteAccountModal';
 import { EditProfileDialog } from './EditProfileDialog';
 import { OnionPathModal } from './OnionStatusPathDialog';
 import { UserDetailsDialog } from './UserDetailsDialog';
-import { SessionConfirm } from './SessionConfirm';
-import { SessionPasswordDialog } from './SessionPasswordDialog';
-import { SessionSeedModal } from './SessionSeedModal';
+import { BchatConfirm } from './BchatConfirm';
+import { BchatPasswordDialog } from './BchatPasswordDialog';
+import { BchatSeedModal } from './BchatSeedModal';
 import { AddModeratorsDialog } from './ModeratorsAddDialog';
 import { RemoveModeratorsDialog } from './ModeratorsRemoveDialog';
 import { UpdateGroupMembersDialog } from './UpdateGroupMembersDialog';
 import { UpdateGroupNameDialog } from './UpdateGroupNameDialog';
-import { SessionNicknameDialog } from './SessionNicknameDialog';
+import { BchatNicknameDialog } from './BchatNicknameDialog';
 import { BanOrUnBanUserDialog } from './BanOrUnbanUserDialog';
 
 export const ModalContainer = () => {
@@ -46,7 +46,7 @@ export const ModalContainer = () => {
   const onionPathModalState = useSelector(getOnionPathDialog);
   const recoveryPhraseModalState = useSelector(getRecoveryPhraseDialog);
   const adminLeaveClosedGroupModalState = useSelector(getAdminLeaveClosedGroupDialog);
-  const sessionPasswordModalState = useSelector(getSessionPasswordDialog);
+  const bchatPasswordModalState = useSelector(getBchatPasswordDialog);
   const deleteAccountModalState = useSelector(getDeleteAccountModalState);
   const banOrUnbanUserModalState = useSelector(getBanOrUnbanUserModalState);
 
@@ -61,16 +61,16 @@ export const ModalContainer = () => {
       )}
       {updateGroupNameModalState && <UpdateGroupNameDialog {...updateGroupNameModalState} />}
       {userDetailsModalState && <UserDetailsDialog {...userDetailsModalState} />}
-      {changeNicknameModal && <SessionNicknameDialog {...changeNicknameModal} />}
+      {changeNicknameModal && <BchatNicknameDialog {...changeNicknameModal} />}
       {editProfileModalState && <EditProfileDialog {...editProfileModalState} />}
       {onionPathModalState && <OnionPathModal {...onionPathModalState} />}
-      {recoveryPhraseModalState && <SessionSeedModal {...recoveryPhraseModalState} />}
+      {recoveryPhraseModalState && <BchatSeedModal {...recoveryPhraseModalState} />}
       {adminLeaveClosedGroupModalState && (
         <AdminLeaveClosedGroupDialog {...adminLeaveClosedGroupModalState} />
       )}
-      {sessionPasswordModalState && <SessionPasswordDialog {...sessionPasswordModalState} />}
+      {bchatPasswordModalState && <BchatPasswordDialog {...bchatPasswordModalState} />}
       {deleteAccountModalState && <DeleteAccountModal {...deleteAccountModalState} />}
-      {confirmModalState && <SessionConfirm {...confirmModalState} />}
+      {confirmModalState && <BchatConfirm {...confirmModalState} />}
     </>
   );
 };

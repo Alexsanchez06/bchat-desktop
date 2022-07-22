@@ -4,12 +4,12 @@ import { ConversationTypeEnum } from '../models/conversation';
 import {
   joinOpenGroupV2WithUIEvents,
   parseOpenGroupV2,
-} from '../session/apis/open_group_api/opengroupV2/JoinOpenGroupV2';
-import { getOpenGroupV2ConversationId } from '../session/apis/open_group_api/utils/OpenGroupUtils';
+} from '../bchat/apis/open_group_api/opengroupV2/JoinOpenGroupV2';
+import { getOpenGroupV2ConversationId } from '../bchat/apis/open_group_api/utils/OpenGroupUtils';
 import { SignalService } from '../protobuf';
-import { getConversationController } from '../session/conversations';
-import { UserUtils } from '../session/utils';
-import { toHex } from '../session/utils/String';
+import { getConversationController } from '../bchat/conversations';
+import { UserUtils } from '../bchat/utils';
+import { toHex } from '../bchat/utils/String';
 import { configurationMessageReceived, trigger } from '../shims/events';
 import { BlockedNumberController } from '../util';
 import { removeFromCache } from './cache';

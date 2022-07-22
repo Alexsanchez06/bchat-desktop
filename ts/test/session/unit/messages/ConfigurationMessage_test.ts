@@ -1,12 +1,12 @@
 import { expect } from 'chai';
 import { ECKeyPair } from '../../../../receiver/keypairs';
-import { TTL_DEFAULT } from '../../../../session/constants';
+import { TTL_DEFAULT } from '../../../../bchat/constants';
 
 import {
   ConfigurationMessage,
   ConfigurationMessageClosedGroup,
   ConfigurationMessageContact,
-} from '../../../../session/messages/outgoing/controlMessage/ConfigurationMessage';
+} from '../../../../bchat/messages/outgoing/controlMessage/ConfigurationMessage';
 import { TestUtils } from '../../../test-utils';
 
 // tslint:disable-next-line: max-func-body-length

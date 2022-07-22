@@ -2,13 +2,13 @@ import {
   getCompleteUrlFromRoom,
   openGroupPrefixRegex,
   openGroupV2ConversationIdRegex,
-} from '../session/apis/open_group_api/utils/OpenGroupUtils';
+} from '../bchat/apis/open_group_api/utils/OpenGroupUtils';
 import { getV2OpenGroupRoom } from '../data/opengroups';
-import { CallManager, SyncUtils, ToastUtils, UserUtils } from '../session/utils';
+import { CallManager, SyncUtils, ToastUtils, UserUtils } from '../bchat/utils';
 import { ConversationNotificationSettingType, ConversationTypeEnum } from '../models/conversation';
 
 import _ from 'lodash';
-import { getConversationController } from '../session/conversations';
+import { getConversationController } from '../bchat/conversations';
 import { BlockedNumberController } from '../util/blockedNumberController';
 import {
   adminLeaveClosedGroup,
@@ -34,19 +34,19 @@ import {
   quoteMessage,
   resetConversationExternal,
 } from '../state/ducks/conversations';
-import { getDecryptedMediaUrl } from '../session/crypto/DecryptedAttachmentsManager';
+import { getDecryptedMediaUrl } from '../bchat/crypto/DecryptedAttachmentsManager';
 import { IMAGE_JPEG } from '../types/MIME';
-import { FSv2 } from '../session/apis/file_server_api';
-import { fromHexToArray, toHex } from '../session/utils/String';
-import { forceSyncConfigurationNowIfNeeded } from '../session/utils/syncUtils';
+import { FSv2 } from '../bchat/apis/file_server_api';
+import { fromHexToArray, toHex } from '../bchat/utils/String';
+import { forceSyncConfigurationNowIfNeeded } from '../bchat/utils/syncUtils';
 import { BchatButtonColor } from '../components/basic/BchatButton';
 import { getCallMediaPermissionsSettings } from '../components/settings/BchatSettings';
-import { perfEnd, perfStart } from '../session/utils/Performance';
+import { perfEnd, perfStart } from '../bchat/utils/Performance';
 import { processNewAttachment } from '../types/MessageAttachment';
 import { urlToBlob } from '../types/attachments/VisualAttachment';
 import { MIME } from '../types';
 import { setLastProfileUpdateTimestamp } from '../util/storage';
-import { getSodiumRenderer } from '../session/crypto';
+import { getSodiumRenderer } from '../bchat/crypto';
 import { encryptProfile } from '../util/crypto/profileEncrypter';
 
 export const getCompleteUrlForV2ConvoId = async (convoId: string) => {

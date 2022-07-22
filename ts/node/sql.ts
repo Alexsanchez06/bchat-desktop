@@ -20,7 +20,7 @@ import {
 } from 'lodash';
 import { redactAll } from '../util/privacy'; // checked - only node
 import { LocaleMessagesType } from './locale'; // checked - only node
-import { PubKey } from '../session/types/PubKey'; // checked - only node
+import { PubKey } from '../bchat/types/PubKey'; // checked - only node
 import { StorageItem } from './storage_item'; // checked - only node
 import { getAppRootPath } from './getRootPath';
 import { UpdateLastHashType } from '../types/sqlSharedTypes';

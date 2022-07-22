@@ -2,20 +2,20 @@
 
 import chai from 'chai';
 import { TestUtils } from '../../../test-utils';
-import { MessageUtils, UserUtils } from '../../../../session/utils';
-import { PubKey } from '../../../../session/types';
-import { ClosedGroupVisibleMessage } from '../../../../session/messages/outgoing/visibleMessage/ClosedGroupVisibleMessage';
-import { ConfigurationMessage } from '../../../../session/messages/outgoing/controlMessage/ConfigurationMessage';
+import { MessageUtils, UserUtils } from '../../../../bchat/utils';
+import { PubKey } from '../../../../bchat/types';
+import { ClosedGroupVisibleMessage } from '../../../../bchat/messages/outgoing/visibleMessage/ClosedGroupVisibleMessage';
+import { ConfigurationMessage } from '../../../../bchat/messages/outgoing/controlMessage/ConfigurationMessage';
 
 import chaiAsPromised from 'chai-as-promised';
 chai.use(chaiAsPromised as any);
-import { ClosedGroupEncryptionPairReplyMessage } from '../../../../session/messages/outgoing/controlMessage/group/ClosedGroupEncryptionPairReplyMessage';
+import { ClosedGroupEncryptionPairReplyMessage } from '../../../../bchat/messages/outgoing/controlMessage/group/ClosedGroupEncryptionPairReplyMessage';
 import { SignalService } from '../../../../protobuf';
-import { ClosedGroupAddedMembersMessage } from '../../../../session/messages/outgoing/controlMessage/group/ClosedGroupAddedMembersMessage';
-import { ClosedGroupEncryptionPairMessage } from '../../../../session/messages/outgoing/controlMessage/group/ClosedGroupEncryptionPairMessage';
-import { ClosedGroupNameChangeMessage } from '../../../../session/messages/outgoing/controlMessage/group/ClosedGroupNameChangeMessage';
-import { ClosedGroupNewMessage } from '../../../../session/messages/outgoing/controlMessage/group/ClosedGroupNewMessage';
-import { ClosedGroupRemovedMembersMessage } from '../../../../session/messages/outgoing/controlMessage/group/ClosedGroupRemovedMembersMessage';
+import { ClosedGroupAddedMembersMessage } from '../../../../bchat/messages/outgoing/controlMessage/group/ClosedGroupAddedMembersMessage';
+import { ClosedGroupEncryptionPairMessage } from '../../../../bchat/messages/outgoing/controlMessage/group/ClosedGroupEncryptionPairMessage';
+import { ClosedGroupNameChangeMessage } from '../../../../bchat/messages/outgoing/controlMessage/group/ClosedGroupNameChangeMessage';
+import { ClosedGroupNewMessage } from '../../../../bchat/messages/outgoing/controlMessage/group/ClosedGroupNewMessage';
+import { ClosedGroupRemovedMembersMessage } from '../../../../bchat/messages/outgoing/controlMessage/group/ClosedGroupRemovedMembersMessage';
 import Sinon from 'sinon';
 
 const { expect } = chai;
@@ -95,7 +95,7 @@ describe('Message Utils', () => {
       const message = TestUtils.generateVisibleMessage();
       const rawMessage = await MessageUtils.toRawMessage(device, message);
 
-      expect(rawMessage.encryption).to.equal(SignalService.Envelope.Type.SESSION_MESSAGE);
+      expect(rawMessage.encryption).to.equal(SignalService.Envelope.Type.BCHAT_MESSAGE);
     });
 
     it('passing ClosedGroupNewMessage returns Fallback', async () => {
@@ -112,7 +112,7 @@ describe('Message Utils', () => {
         expireTimer: 0,
       });
       const rawMessage = await MessageUtils.toRawMessage(device, msg);
-      expect(rawMessage.encryption).to.equal(SignalService.Envelope.Type.SESSION_MESSAGE);
+      expect(rawMessage.encryption).to.equal(SignalService.Envelope.Type.BCHAT_MESSAGE);
     });
 
     it('passing ClosedGroupNameChangeMessage returns ClosedGroup', async () => {
@@ -190,7 +190,7 @@ describe('Message Utils', () => {
         encryptedKeyPairs: fakeWrappers,
       });
       const rawMessage = await MessageUtils.toRawMessage(device, msg);
-      expect(rawMessage.encryption).to.equal(SignalService.Envelope.Type.SESSION_MESSAGE);
+      expect(rawMessage.encryption).to.equal(SignalService.Envelope.Type.BCHAT_MESSAGE);
     });
 
     it('passing a ConfigurationMessage returns Fallback', async () => {
@@ -204,7 +204,7 @@ describe('Message Utils', () => {
         contacts: [],
       });
       const rawMessage = await MessageUtils.toRawMessage(device, msg);
-      expect(rawMessage.encryption).to.equal(SignalService.Envelope.Type.SESSION_MESSAGE);
+      expect(rawMessage.encryption).to.equal(SignalService.Envelope.Type.BCHAT_MESSAGE);
     });
   });
 

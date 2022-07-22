@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { getConversationController } from '../../session/conversations';
-import { ToastUtils, UserUtils } from '../../session/utils';
+import { getConversationController } from '../../bchat/conversations';
+import { ToastUtils, UserUtils } from '../../bchat/utils';
 import { ConversationTypeEnum } from '../../models/conversation';
 import { getCompleteUrlForV2ConvoId } from '../../interactions/conversationInteractions';
 import _ from 'lodash';
-import { VALIDATION } from '../../session/constants';
+import { VALIDATION } from '../../bchat/constants';
 import { SpacerLG } from '../basic/Text';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateInviteContactModal } from '../../state/ducks/modalDialog';
@@ -17,7 +17,7 @@ import { BchatWrapperModal } from '../BchatWrapperModal';
 import { getPrivateContactsPubkeys } from '../../state/selectors/conversations';
 import { useConversationPropsById } from '../../hooks/useParamSelector';
 import { useSet } from '../../hooks/useSet';
-import { initiateClosedGroupUpdate } from '../../session/group/closed-group';
+import { initiateClosedGroupUpdate } from '../../bchat/group/closed-group';
 
 type Props = {
   conversationId: string;

@@ -6,11 +6,11 @@ import { SpacerMD } from '../basic/Text';
 import { updateGroupNameModal } from '../../state/ducks/modalDialog';
 import autoBind from 'auto-bind';
 import { ConversationModel } from '../../models/conversation';
-import { getConversationController } from '../../session/conversations';
+import { getConversationController } from '../../bchat/conversations';
 import { BchatWrapperModal } from '../BchatWrapperModal';
 import { BchatButton, BchatButtonColor } from '../basic/BchatButton';
-import { initiateOpenGroupUpdate } from '../../session/group/open-group';
-import { initiateClosedGroupUpdate } from '../../session/group/closed-group';
+import { initiateOpenGroupUpdate } from '../../bchat/group/open-group';
+import { initiateClosedGroupUpdate } from '../../bchat/group/closed-group';
 import { pickFileForAvatar } from '../../types/attachments/VisualAttachment';
 
 type Props = {

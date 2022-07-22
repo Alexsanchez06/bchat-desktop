@@ -3,8 +3,8 @@
 import { SignalService } from '../../../../protobuf';
 import chai from 'chai';
 
-import { ConfigurationMessage } from '../../../../session/messages/outgoing/controlMessage/ConfigurationMessage';
-import { UserUtils } from '../../../../session/utils';
+import { ConfigurationMessage } from '../../../../bchat/messages/outgoing/controlMessage/ConfigurationMessage';
+import { UserUtils } from '../../../../bchat/utils';
 import { TestUtils } from '../../../test-utils';
 
 import Sinon from 'sinon';

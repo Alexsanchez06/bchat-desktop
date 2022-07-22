@@ -10,7 +10,7 @@ import {
   // waitForMatchingText,
   // waitForTestIdWithText,
 } from './utils';
-import { sleepFor } from '../../session/utils/Promise';
+import { sleepFor } from '../../bchat/utils/Promise';
 
 test.beforeEach(cleanUpOtherTest);
 

@@ -5,8 +5,8 @@ import { LeftPane } from './leftpane/LeftPane';
 // tslint:disable-next-line: no-submodule-imports
 import { PersistGate } from 'redux-persist/integration/react';
 import { persistStore } from 'redux-persist';
-import { getConversationController } from '../session/conversations';
-import { UserUtils } from '../session/utils';
+import { getConversationController } from '../bchat/conversations';
+import { UserUtils } from '../bchat/utils';
 import { initialCallState } from '../state/ducks/call';
 import {
   getEmptyConversationState,

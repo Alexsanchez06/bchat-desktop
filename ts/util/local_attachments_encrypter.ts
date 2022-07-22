@@ -1,5 +1,5 @@
 import { isArrayBuffer } from 'lodash';
-import { fromHexToArray } from '../session/utils/String';
+import { fromHexToArray } from '../bchat/utils/String';
 import { callUtilsWorker } from '../webworker/workers/util_worker_interface';
 import { getItemById } from '../data/channelsItem';
 

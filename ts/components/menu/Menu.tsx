@@ -39,8 +39,8 @@ import {
   ConversationNotificationSetting,
   ConversationNotificationSettingType,
 } from '../../models/conversation';
-import { getConversationController } from '../../session/conversations';
-import { ToastUtils } from '../../session/utils';
+import { getConversationController } from '../../bchat/conversations';
+import { ToastUtils } from '../../bchat/utils';
 import {
   changeNickNameModal,
   updateConfirmModal,

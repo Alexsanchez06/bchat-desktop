@@ -3,8 +3,8 @@
 import { expect } from 'chai';
 import { BlockedNumberController } from '../../util/blockedNumberController';
 import { TestUtils } from '../test-utils';
-import { PubKey } from '../../session/types';
-import { UserUtils } from '../../session/utils';
+import { PubKey } from '../../bchat/types';
+import { UserUtils } from '../../bchat/utils';
 import Sinon from 'sinon';
 
 // tslint:disable-next-line: max-func-body-length

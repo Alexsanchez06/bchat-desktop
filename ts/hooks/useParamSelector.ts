@@ -1,8 +1,8 @@
 import _ from 'lodash';
 import { useSelector } from 'react-redux';
 import { ConversationModel } from '../models/conversation';
-import { PubKey } from '../session/types';
-import { UserUtils } from '../session/utils';
+import { PubKey } from '../bchat/types';
+import { UserUtils } from '../bchat/utils';
 import { StateType } from '../state/reducer';
 
 export function useAvatarPath(convoId: string | undefined) {

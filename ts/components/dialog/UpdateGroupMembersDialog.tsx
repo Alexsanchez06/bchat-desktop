@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ToastUtils, UserUtils } from '../../session/utils';
+import { ToastUtils, UserUtils } from '../../bchat/utils';
 
 import _ from 'lodash';
 import { SpacerLG, Text } from '../basic/Text';
@@ -13,8 +13,8 @@ import { useConversationPropsById, useWeAreAdmin } from '../../hooks/useParamSel
 // tslint:disable-next-line: no-submodule-imports
 import useKey from 'react-use/lib/useKey';
 import { useSet } from '../../hooks/useSet';
-import { getConversationController } from '../../session/conversations';
-import { initiateClosedGroupUpdate } from '../../session/group/closed-group';
+import { getConversationController } from '../../bchat/conversations';
+import { initiateClosedGroupUpdate } from '../../bchat/group/closed-group';
 
 type Props = {
   conversationId: string;

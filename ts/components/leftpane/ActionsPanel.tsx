@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { getConversationController } from '../../session/conversations';
-import { syncConfigurationIfNeeded } from '../../session/utils/syncUtils';
+import { getConversationController } from '../../bchat/conversations';
+import { syncConfigurationIfNeeded } from '../../bchat/utils/syncUtils';
 
 import {
   generateAttachmentKeyIfEmpty,
@@ -10,7 +10,7 @@ import {
   lastAvatarUploadTimestamp,
   removeConversation,
 } from '../../data/data';
-import { getMessageQueue } from '../../session/sending';
+import { getMessageQueue } from '../../bchat/sending';
 import { useDispatch, useSelector } from 'react-redux';
 // tslint:disable: no-submodule-imports
 import useInterval from 'react-use/lib/useInterval';
@@ -26,9 +26,9 @@ import { getFocusedSection } from '../../state/selectors/section';
 import { clearSearch } from '../../state/ducks/search';
 import { SectionType, setOverlayMode, showLeftPaneSection } from '../../state/ducks/section';
 
-import { cleanUpOldDecryptedMedias } from '../../session/crypto/DecryptedAttachmentsManager';
+import { cleanUpOldDecryptedMedias } from '../../bchat/crypto/DecryptedAttachmentsManager';
 
-import { DURATION } from '../../session/constants';
+import { DURATION } from '../../bchat/constants';
 import { conversationChanged, conversationRemoved } from '../../state/ducks/conversations';
 import {
   editProfileModal,
@@ -43,20 +43,20 @@ import { debounce, isEmpty, isString } from 'lodash';
 
 // import { ActionPanelOnionStatusLight } from '../dialog/OnionStatusPathDialog';
 import { switchHtmlToDarkTheme, switchHtmlToLightTheme } from '../../state/ducks/BchatTheme';
-import { loadDefaultRooms } from '../../session/apis/open_group_api/opengroupV2/ApiUtil';
-import { getOpenGroupManager } from '../../session/apis/open_group_api/opengroupV2/OpenGroupManagerV2';
-import { getSwarmPollingInstance } from '../../session/apis/snode_api';
-import { forceRefreshRandomSnodePool } from '../../session/apis/snode_api/snodePool';
+import { loadDefaultRooms } from '../../bchat/apis/open_group_api/opengroupV2/ApiUtil';
+import { getOpenGroupManager } from '../../bchat/apis/open_group_api/opengroupV2/OpenGroupManagerV2';
+import { getSwarmPollingInstance } from '../../bchat/apis/snode_api';
+import { forceRefreshRandomSnodePool } from '../../bchat/apis/snode_api/snodePool';
 import { Avatar, AvatarSize } from '../avatar/Avatar';
 import { CallInFullScreenContainer } from '../calling/CallInFullScreenContainer';
 import { DraggableCallContainer } from '../calling/DraggableCallContainer';
 import { IncomingCallDialog } from '../calling/IncomingCallDialog';
 import { BchatIconButton } from '../icon';
-import { SessionToastContainer } from '../SessionToastContainer';
+import { BchatToastContainer } from '../BchatToastContainer';
 import { LeftPaneSectionContainer } from './LeftPaneSectionContainer';
-import { getLatestDesktopReleaseFileToFsV2 } from '../../session/apis/file_server_api/FileServerApiV2';
+import { getLatestDesktopReleaseFileToFsV2 } from '../../bchat/apis/file_server_api/FileServerApiV2';
 import { ipcRenderer } from 'electron';
-import { UserUtils } from '../../session/utils';
+import { UserUtils } from '../../bchat/utils';
 
 import { Storage } from '../../util/storage';
 import { SettingsKey } from '../../data/settings-key';
@@ -462,7 +462,7 @@ export const ActionsPanel = () => {
         </div>
       
 
-        <SessionToastContainer />
+        <BchatToastContainer />
     
         {/* <Section type={SectionType.PathIndicator} /> */}
         {/* <Section type={SectionType.Moon} /> */}

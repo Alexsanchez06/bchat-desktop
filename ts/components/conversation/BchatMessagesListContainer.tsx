@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 import { BchatMessagesList } from './BchatMessagesList';
 import autoBind from 'auto-bind';
 import { ConversationTypeEnum } from '../../models/conversation';
-import { getConversationController } from '../../session/conversations';
+import { getConversationController } from '../../bchat/conversations';
 import {
   quotedMessageToAnimate,
   ReduxConversationType,
@@ -25,7 +25,7 @@ import {
 } from '../../state/selectors/conversations';
 import { TypingBubble } from './TypingBubble';
 
-export type SessionMessageListProps = {
+export type BchatMessageListProps = {
   messageContainerRef: React.RefObject<HTMLDivElement>;
 };
 
@@ -43,7 +43,7 @@ export const ScrollToLoadedMessageContext = React.createContext(
   (_loadedMessageIdToScrollTo: string, _reason: ScrollToLoadedReasons) => {}
 );
 
-type Props = SessionMessageListProps & {
+type Props = BchatMessageListProps & {
   conversationKey?: string;
   messagesProps: Array<SortedMessageModelProps>;
 

@@ -5,20 +5,20 @@ import Sinon, * as sinon from 'sinon';
 import { describe } from 'mocha';
 
 import { TestUtils } from '../../../test-utils';
-import * as SNodeAPI from '../../../../session/apis/snode_api';
+import * as SNodeAPI from '../../../../bchat/apis/snode_api';
 
 import chaiAsPromised from 'chai-as-promised';
-import { OnionPaths } from '../../../../session/onions/';
+import { OnionPaths } from '../../../../bchat/onions';
 import {
   NEXT_NODE_NOT_FOUND_PREFIX,
   OXEN_SERVER_ERROR,
   processOnionResponse,
-} from '../../../../session/apis/snode_api/onions';
+} from '../../../../bchat/apis/snode_api/onions';
 import AbortController from 'abort-controller';
 import * as Data from '../../../../../ts/data/data';
 import * as DataItem from '../../../../../ts/data/channelsItem';
-import { pathFailureCount } from '../../../../session/onions/onionPath';
-import { SeedNodeAPI } from '../../../../session/apis/seed_node_api';
+import { pathFailureCount } from '../../../../bchat/onions/onionPath';
+import { SeedNodeAPI } from '../../../../bchat/apis/seed_node_api';
 import { generateFakeSnodeWithEdKey } from '../../../test-utils/utils';
 
 chai.use(chaiAsPromised as any);

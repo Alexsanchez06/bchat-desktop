@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 import { getMessageCountByType } from '../../data/data';
 import { MessageDirection } from '../../models/messageType';
-import { getConversationController } from '../../session/conversations';
+import { getConversationController } from '../../bchat/conversations';
 import { getSelectedConversation } from '../../state/selectors/conversations';
 
 export const ConversationRequestinfo = () => {

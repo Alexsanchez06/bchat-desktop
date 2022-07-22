@@ -9,11 +9,11 @@ import { handleSwarmContentMessage, innerHandleSwarmContentMessage } from './con
 import _ from 'lodash';
 
 import { getEnvelopeId } from './common';
-import { StringUtils, UserUtils } from '../session/utils';
+import { StringUtils, UserUtils } from '../bchat/utils';
 import { SignalService } from '../protobuf';
 import { removeUnprocessed } from '../data/data';
-import { createTaskWithTimeout } from '../session/utils/TaskWithTimeout';
-import { perfEnd, perfStart } from '../session/utils/Performance';
+import { createTaskWithTimeout } from '../bchat/utils/TaskWithTimeout';
+import { perfEnd, perfStart } from '../bchat/utils/Performance';
 
 // TODO: check if some of these exports no longer needed
 

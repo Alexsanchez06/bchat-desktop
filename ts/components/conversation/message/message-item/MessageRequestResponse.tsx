@@ -1,7 +1,7 @@
 import React from 'react';
 import { useConversationUsername } from '../../../../hooks/useParamSelector';
 import { PropsForMessageRequestResponse } from '../../../../models/messageType';
-import { UserUtils } from '../../../../session/utils';
+import { UserUtils } from '../../../../bchat/utils';
 import { Flex } from '../../../basic/Flex';
 import { SpacerSM, Text } from '../../../basic/Text';
 import { ReadableMessage } from './ReadableMessage';

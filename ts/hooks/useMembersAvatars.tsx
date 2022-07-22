@@ -1,4 +1,4 @@
-import { UserUtils } from '../session/utils';
+import { UserUtils } from '../bchat/utils';
 import * as _ from 'lodash';
 import { useSelector } from 'react-redux';
 import { StateType } from '../state/reducer';

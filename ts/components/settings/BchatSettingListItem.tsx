@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import { BchatButton, BchatButtonColor } from '../basic/BchatButton';
 import { BchatToggle } from '../basic/BchatToggle';
-import { SessionConfirmDialogProps } from '../dialog/SessionConfirm';
+import { BchatConfirmDialogProps } from '../dialog/BchatConfirm';
 
 type ButtonSettingsProps = {
   title?: string;
@@ -25,7 +25,7 @@ const SettingsTitleAndDescription = (props: { title?: string; description?: stri
   );
 };
 
-const SessionSettingsContent = (props: { children: React.ReactNode }) => {
+const BchatSettingsContent = (props: { children: React.ReactNode }) => {
   return <div className="session-settings-item__content">{props.children}</div>;
 };
 
@@ -38,17 +38,17 @@ export const BchatSettingsItemWrapper = (props: {
   return (
     <div className={classNames('session-settings-item', props.inline && 'inline')}>
       <SettingsTitleAndDescription title={props.title} description={props.description} />
-      <SessionSettingsContent>{props.children}</SessionSettingsContent>
+      <BchatSettingsContent>{props.children}</BchatSettingsContent>
     </div>
   );
 };
 
-export const SessionToggleWithDescription = (props: {
+export const BchatToggleWithDescription = (props: {
   title?: string;
   description?: string;
   active: boolean;
   onClickToggle: () => void;
-  confirmationDialogParams?: SessionConfirmDialogProps;
+  confirmationDialogParams?: BchatConfirmDialogProps;
 }) => {
   const { title, description, active, onClickToggle, confirmationDialogParams } = props;
 
@@ -63,7 +63,7 @@ export const SessionToggleWithDescription = (props: {
   );
 };
 
-export const SessionSettingButtonItem = (props: ButtonSettingsProps) => {
+export const BchatSettingButtonItem = (props: ButtonSettingsProps) => {
   const { title, description, buttonColor, buttonText, dataTestId, onClick } = props;
 
   return (

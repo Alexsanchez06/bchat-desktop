@@ -1,6 +1,6 @@
 import * as DataItem from '../data/channelsItem';
-import { PubKey } from '../session/types';
-import { UserUtils } from '../session/utils';
+import { PubKey } from '../bchat/types';
+import { UserUtils } from '../bchat/utils';
 
 const BLOCKED_NUMBERS_ID = 'blocked';
 const BLOCKED_GROUPS_ID = 'blocked-groups';

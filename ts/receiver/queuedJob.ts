@@ -1,15 +1,15 @@
 import { queueAttachmentDownloads } from './attachments';
 
 import { Quote } from './types';
-import { PubKey } from '../session/types';
+import { PubKey } from '../bchat/types';
 import _ from 'lodash';
-import { getConversationController } from '../session/conversations';
+import { getConversationController } from '../bchat/conversations';
 import { ConversationModel, ConversationTypeEnum } from '../models/conversation';
 import { MessageModel, sliceQuoteText } from '../models/message';
 import { getMessageCountByType, getMessagesBySentAt } from '../../ts/data/data';
 
 import { SignalService } from '../protobuf';
-import { UserUtils } from '../session/utils';
+import { UserUtils } from '../bchat/utils';
 import { showMessageRequestBanner } from '../state/ducks/userConfig';
 import { MessageDirection } from '../models/messageType';
 import { LinkPreviews } from '../util/linkPreviews';

@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { ToastUtils } from '../session/utils';
+import { ToastUtils } from '../bchat/utils';
 import { createClosedGroup as createClosedGroupV2 } from '../receiver/closedGroups';
-import { VALIDATION } from '../session/constants';
+import { VALIDATION } from '../bchat/constants';
 
 export class MessageView extends React.Component {
   public render() {

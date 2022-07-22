@@ -4,16 +4,16 @@ import _ from 'lodash';
 
 import { downloadAttachment } from './attachments';
 
-import { allowOnlyOneAtATime, hasAlreadyOneAtaTimeMatching } from '../session/utils/Promise';
-import { toHex } from '../session/utils/String';
+import { allowOnlyOneAtATime, hasAlreadyOneAtaTimeMatching } from '../bchat/utils/Promise';
+import { toHex } from '../bchat/utils/String';
 import { processNewAttachment } from '../types/MessageAttachment';
 import { MIME } from '../types';
 import { autoScaleForIncomingAvatar } from '../util/attachmentsUtil';
 import { decryptProfile } from '../util/crypto/profileEncrypter';
 import { ConversationModel, ConversationTypeEnum } from '../models/conversation';
 import { SignalService } from '../protobuf';
-import { getConversationController } from '../session/conversations';
-import { UserUtils } from '../session/utils';
+import { getConversationController } from '../bchat/conversations';
+import { UserUtils } from '../bchat/utils';
 
 const queue = new Queue({
   concurrent: 1,

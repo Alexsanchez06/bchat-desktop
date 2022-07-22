@@ -6,14 +6,14 @@ import _ from 'lodash';
 import { describe } from 'mocha';
 
 import { TestUtils } from '../../../test-utils';
-import { Onions, SnodePool } from '../../../../session/apis/snode_api';
+import { Onions, SnodePool } from '../../../../bchat/apis/snode_api';
 import * as Data from '../../../../data/data';
 
 import chaiAsPromised from 'chai-as-promised';
-import * as OnionPaths from '../../../../session/onions/onionPath';
+import * as OnionPaths from '../../../../bchat/onions/onionPath';
 import { generateFakeSnodes, generateFakeSnodeWithEdKey } from '../../../test-utils/utils';
-import { SeedNodeAPI } from '../../../../session/apis/seed_node_api';
-import { SnodeFromSeed } from '../../../../session/apis/seed_node_api/SeedNodeAPI';
+import { SeedNodeAPI } from '../../../../bchat/apis/seed_node_api';
+import { SnodeFromSeed } from '../../../../bchat/apis/seed_node_api/SeedNodeAPI';
 chai.use(chaiAsPromised as any);
 chai.should();
 

@@ -3,7 +3,7 @@
 import chai from 'chai';
 import { describe } from 'mocha';
 import Sinon from 'sinon';
-import { filterDuplicatesFromDbAndIncoming } from '../../../../../session/apis/open_group_api/opengroupV2/SogsFilterDuplicate';
+import { filterDuplicatesFromDbAndIncoming } from '../../../../../bchat/apis/open_group_api/opengroupV2/SogsFilterDuplicate';
 import { TestUtils } from '../../../../test-utils';
 
 const { expect } = chai;

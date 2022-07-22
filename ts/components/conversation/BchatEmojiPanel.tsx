@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import { Picker } from 'emoji-mart';
-import { Constants } from '../../session';
+import { Constants } from '../../bchat';
 import { useSelector } from 'react-redux';
 import { getTheme } from '../../state/selectors/theme';
 

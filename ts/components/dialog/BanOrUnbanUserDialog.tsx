@@ -1,12 +1,12 @@
 import React, { useRef, useState } from 'react';
-import { PubKey } from '../../session/types';
-import { ToastUtils } from '../../session/utils';
+import { PubKey } from '../../bchat/types';
+import { ToastUtils } from '../../bchat/utils';
 import { Flex } from '../basic/Flex';
 import { useDispatch } from 'react-redux';
 import { BanType, updateBanOrUnbanUserModal } from '../../state/ducks/modalDialog';
 import { SpacerSM } from '../basic/Text';
-import { getConversationController } from '../../session/conversations/ConversationController';
-import { ApiV2 } from '../../session/apis/open_group_api/opengroupV2';
+import { getConversationController } from '../../bchat/conversations/ConversationController';
+import { ApiV2 } from '../../bchat/apis/open_group_api/opengroupV2';
 import { BchatWrapperModal } from '../BchatWrapperModal';
 import { BchatSpinner } from '../basic/BchatSpinner';
 import { BchatButton, BchatButtonColor, BchatButtonType } from '../basic/BchatButton';

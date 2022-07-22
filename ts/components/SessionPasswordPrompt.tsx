@@ -5,7 +5,7 @@ import { BchatIcon } from './icon';
 import { withTheme } from 'styled-components';
 import autoBind from 'auto-bind';
 import { BchatButton, BchatButtonColor, BchatButtonType } from './basic/BchatButton';
-import { Constants } from '../session';
+import { Constants } from '../bchat';
 import { BchatSpinner } from './basic/BchatSpinner';
 
 interface State {

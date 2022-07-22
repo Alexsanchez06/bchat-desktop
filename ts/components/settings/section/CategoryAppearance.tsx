@@ -5,15 +5,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import useUpdate from 'react-use/lib/useUpdate';
 import { createOrUpdateItem, hasLinkPreviewPopupBeenDisplayed } from '../../../data/data';
 import { SettingsKey } from '../../../data/settings-key';
-import { ToastUtils } from '../../../session/utils';
+import { ToastUtils } from '../../../bchat/utils';
 import { updateConfirmModal } from '../../../state/ducks/modalDialog';
 import { toggleAudioAutoplay } from '../../../state/ducks/userConfig';
 import { getAudioAutoplay } from '../../../state/selectors/userConfig';
 // import { isHideMenuBarSupported } from '../../../types/Settings';
 import { BchatButtonColor } from '../../basic/BchatButton';
 
-// import { SessionSettingButtonItem, SessionToggleWithDescription } from '../SessionSettingListItem';
-import {SessionToggleWithDescription } from '../BchatSettingListItem';
+import {BchatToggleWithDescription } from '../BchatSettingListItem';
 
 import { ZoomingSessionSlider } from '../ZoomingSessionSlider';
 
@@ -88,7 +87,7 @@ const isdark =
       <>
        {/* this function used for hide the menubar */}
         {/* {isHideMenuBarSupported() && (
-          <SessionToggleWithDescription
+          <BchatToggleWithDescription
             onClickToggle={() => {
               window.toggleMenuBar();
               forceUpdate();
@@ -99,7 +98,7 @@ const isdark =
           />
         )} */}
 
-        <SessionToggleWithDescription
+        <BchatToggleWithDescription
           onClickToggle={() => {
             handleClick()
             
@@ -112,7 +111,7 @@ const isdark =
           active={isdark}
         />
 
-        <SessionToggleWithDescription
+        <BchatToggleWithDescription
           onClickToggle={() => {
             window.toggleSpellCheck();
             forceUpdate();
@@ -122,7 +121,7 @@ const isdark =
           active={isSpellCheckActive}
         />
 
-        <SessionToggleWithDescription
+        <BchatToggleWithDescription
           onClickToggle={async () => {
             await toggleLinkPreviews();
             forceUpdate();
@@ -131,7 +130,7 @@ const isdark =
           description={window.i18n('linkPreviewDescription')}
           active={isLinkPreviewsOn}
         />
-        <SessionToggleWithDescription
+        <BchatToggleWithDescription
           onClickToggle={async () => {
             await toggleStartInTray();
             forceUpdate();
@@ -141,7 +140,7 @@ const isdark =
           description={"BChat continues running in the background when you close the window"}
           active={isStartInTrayActive}
         />
-        <SessionToggleWithDescription
+        <BchatToggleWithDescription
           onClickToggle={() => {
             dispatch(toggleAudioAutoplay());
             forceUpdate();
@@ -153,7 +152,7 @@ const isdark =
         
 
         <ZoomingSessionSlider />
-        {/* <SessionSettingButtonItem
+        {/* <BchatSettingButtonItem
           title={window.i18n('surveyTitle')}
           onClick={() => void shell.openExternal('https://getsession.org/survey')}
           buttonColor={BchatButtonColor.Primary}
@@ -162,7 +161,7 @@ const isdark =
 
         {/* for message transtaled session site */}
         
-        {/* <SessionSettingButtonItem
+        {/* <BchatSettingButtonItem
           title={window.i18n('helpUsTranslateSession')}
           onClick={() => void shell.openExternal('https://crowdin.com/project/session-desktop/')}
           buttonColor={BchatButtonColor.Primary}
@@ -170,14 +169,14 @@ const isdark =
           buttonText={"Help us translate chat"}
 
         /> */}
-        {/* <SessionSettingButtonItem
+        {/* <BchatSettingButtonItem
           onClick={() => {
             ipcRenderer.send('show-debug-log');
           }}
           buttonColor={BchatButtonColor.Primary}
           buttonText={window.i18n('showDebugLog')}
         /> */}
-        {/* <SessionSettingButtonItem
+        {/* <BchatSettingButtonItem
           onClick={async () => {
             await fillWithTestData(100, 1000);
           }}

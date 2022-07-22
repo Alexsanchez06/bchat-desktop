@@ -44,7 +44,7 @@ const IconDiv = styled.div`
   padding-inline-end: var(--margins-xs);
 `;
 
-export const SessionToast = (props: Props) => {
+export const BchatToast = (props: Props) => {
   const { title, description, type, icon } = props;
 
   const toastDesc = description ? description : '';

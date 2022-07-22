@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { MessageRenderingProps } from '../../../../models/messageType';
-import { PubKey } from '../../../../session/types';
+import { PubKey } from '../../../../bchat/types';
 import {
   getMessageAuthorProps,
   isGroupConversation,

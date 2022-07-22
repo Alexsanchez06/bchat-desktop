@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 import { getFirstUnreadMessageWithMention } from '../../../data/data';
 import { useConversationPropsById, useIsPinned } from '../../../hooks/useParamSelector';
-import { UserUtils } from '../../../session/utils';
+import { UserUtils } from '../../../bchat/utils';
 import {
   openConversationToSpecificMessage,
   openConversationWithMessages,

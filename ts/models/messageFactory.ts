@@ -1,4 +1,4 @@
-import { UserUtils } from '../session/utils';
+import { UserUtils } from '../bchat/utils';
 import { MessageModel } from './message';
 import { MessageAttributesOptionals, MessageModelType } from './messageType';
 

@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 import React, { useRef, useState } from 'react';
 
 import styled from 'styled-components';
-import { CallManager, UserUtils } from '../../session/utils';
+import { CallManager, UserUtils } from '../../bchat/utils';
 import {
   getCallIsInFullScreen,
   getCallWithFocusedConvoIsOffering,
@@ -17,7 +17,7 @@ import { Avatar, AvatarSize } from '../avatar/Avatar';
 import { useVideoCallEventsListener } from '../../hooks/useVideoEventListener';
 import { useModuloWithTripleDots } from '../../hooks/useModuloWithTripleDots';
 import { CallWindowControls } from './CallButtons';
-import { DEVICE_DISABLED_DEVICE_ID } from '../../session/utils/calling/CallManager';
+import { DEVICE_DISABLED_DEVICE_ID } from '../../bchat/utils/calling/CallManager';
 // tslint:disable-next-line: no-submodule-imports
 import useInterval from 'react-use/lib/useInterval';
 import moment from 'moment';

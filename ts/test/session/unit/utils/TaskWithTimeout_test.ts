@@ -4,7 +4,7 @@ import chai from 'chai';
 
 // tslint:disable-next-line: no-require-imports no-var-requires
 import chaiAsPromised from 'chai-as-promised';
-import { createTaskWithTimeout } from '../../../../session/utils/TaskWithTimeout';
+import { createTaskWithTimeout } from '../../../../bchat/utils/TaskWithTimeout';
 chai.use(chaiAsPromised as any);
 chai.should();
 

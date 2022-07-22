@@ -1,5 +1,5 @@
 import { EnvelopePlus } from './types';
-import { StringUtils } from '../session/utils';
+import { StringUtils } from '../bchat/utils';
 import _ from 'lodash';
 import {
   getAllUnprocessed,

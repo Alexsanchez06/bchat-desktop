@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { getConversationController } from '../../session/conversations';
+import { getConversationController } from '../../bchat/conversations';
 import {
   getFirstUnreadMessageIdInConversation,
   getLastMessageIdInConversation,
@@ -20,7 +20,7 @@ import {
 import { omit } from 'lodash';
 import { ReplyingToMessageProps } from '../../components/conversation/composition/CompositionBox';
 import { QuotedAttachmentType } from '../../components/conversation/message/message-content/Quote';
-import { LightBoxOptions } from '../../components/conversation/SessionConversation';
+import { LightBoxOptions } from '../../components/conversation/BchatConversation';
 
 export type CallNotificationType = 'missed-call' | 'started-call' | 'answered-a-call';
 export type PropsForCallNotification = {

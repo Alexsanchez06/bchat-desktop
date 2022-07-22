@@ -14,7 +14,7 @@ import {
   OnionPathModalState,
   RecoveryPhraseModalState,
   RemoveModeratorsModalState,
-  SessionPasswordModalState,
+  BchatPasswordModalState,
   UpdateGroupMembersModalState,
   UpdateGroupNameModalState,
   UserDetailsModalState,
@@ -89,9 +89,9 @@ export const getAdminLeaveClosedGroupDialog = createSelector(
   (state: ModalState): AdminLeaveClosedGroupModalState => state.adminLeaveClosedGroup
 );
 
-export const getSessionPasswordDialog = createSelector(
+export const getBchatPasswordDialog = createSelector(
   getModal,
-  (state: ModalState): SessionPasswordModalState => state.sessionPasswordModal
+  (state: ModalState): BchatPasswordModalState => state.bchatPasswordModal
 );
 
 export const getDeleteAccountModalState = createSelector(

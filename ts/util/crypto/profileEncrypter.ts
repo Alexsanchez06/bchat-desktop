@@ -1,4 +1,4 @@
-import { getSodiumRenderer } from '../../session/crypto';
+import { getSodiumRenderer } from '../../bchat/crypto';
 
 const PROFILE_IV_LENGTH = 12; // bytes
 const PROFILE_KEY_LENGTH = 32; // bytes

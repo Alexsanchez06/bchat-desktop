@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import { beforeEach } from 'mocha';
 import Sinon from 'sinon';
-import * as DecryptedAttachmentsManager from '../../../../session/crypto/DecryptedAttachmentsManager';
+import * as DecryptedAttachmentsManager from '../../../../bchat/crypto/DecryptedAttachmentsManager';
 import { TestUtils } from '../../../test-utils';
 // tslint:disable: chai-vague-errors no-unused-expression
 

@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { useAppIsFocused } from '../hooks/useAppFocused';
 import { getFocusedSettingsSection } from '../state/selectors/section';
 
-import { SmartBchatConversation } from '../state/smart/SessionConversation';
+import { SmartBchatConversation } from '../state/smart/BchatConversation';
 import { BchatSettingsView } from './settings/BchatSettings';
 
 const FilteredSettingsView = BchatSettingsView as any;

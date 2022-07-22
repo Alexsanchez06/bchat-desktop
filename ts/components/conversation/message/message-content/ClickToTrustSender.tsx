@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { getLastMessagesByConversation, getMessageById } from '../../../../data/data';
-import { getConversationController } from '../../../../session/conversations';
-import { AttachmentDownloads } from '../../../../session/utils';
+import { getConversationController } from '../../../../bchat/conversations';
+import { AttachmentDownloads } from '../../../../bchat/utils';
 import { updateConfirmModal } from '../../../../state/ducks/modalDialog';
 import { BchatButtonColor } from '../../../basic/BchatButton';
 import { BchatIcon } from '../../../icon';

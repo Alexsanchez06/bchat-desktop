@@ -9,10 +9,10 @@ import { BchatRecording } from '../BchatRecording';
 import {
   getPreview,
   LINK_PREVIEW_TIMEOUT,
-  SessionStagedLinkPreview,
-} from '../SessionStagedLinkPreview';
+  BchatStagedLinkPreview,
+} from '../BchatStagedLinkPreview';
 import { AbortController } from 'abort-controller';
-import { SessionQuotedMessageComposition } from '../SessionQuotedMessageComposition';
+import { BchatQuotedMessageComposition } from '../BchatQuotedMessageComposition';
 import { Mention, MentionsInput, SuggestionDataItem } from 'react-mentions';
 import autoBind from 'auto-bind';
 import { getMediaPermissionsSettings } from '../../settings/BchatSettings';
@@ -26,8 +26,8 @@ import {
 import { AttachmentType } from '../../../types/Attachment';
 import { connect } from 'react-redux';
 import { showLinkSharingConfirmationModalDialog } from '../../../interactions/conversationInteractions';
-import { getConversationController } from '../../../session/conversations';
-import { ToastUtils } from '../../../session/utils';
+import { getConversationController } from '../../../bchat/conversations';
+import { ToastUtils } from '../../../bchat/utils';
 import { ReduxConversationType } from '../../../state/ducks/conversations';
 import { removeAllStagedAttachmentsInConversation } from '../../../state/ducks/stagedAttachments';
 import { StateType } from '../../../state/reducer';
@@ -263,7 +263,7 @@ class CompositionBoxInner extends React.Component<Props, State> {
 
     return (
       <Flex flexDirection="column">
-        <SessionQuotedMessageComposition />
+        <BchatQuotedMessageComposition />
         {this.renderStagedLinkPreview()}
         {this.renderAttachmentsStaged()}
         <div className="composition-container">
@@ -586,7 +586,7 @@ class CompositionBoxInner extends React.Component<Props, State> {
     const { isLoaded, title, domain, image } = this.state.stagedLinkPreview;
 
     return (
-      <SessionStagedLinkPreview
+      <BchatStagedLinkPreview
         isLoaded={isLoaded}
         title={title}
         domain={domain}

@@ -4,17 +4,17 @@ import { handleSwarmDataMessage } from './dataMessage';
 import { removeFromCache, updateCache } from './cache';
 import { SignalService } from '../protobuf';
 import _, * as Lodash from 'lodash';
-import { PubKey } from '../session/types';
+import { PubKey } from '../bchat/types';
 
 import { BlockedNumberController } from '../util/blockedNumberController';
-import { GroupUtils, UserUtils } from '../session/utils';
-import { fromHexToArray, toHex } from '../session/utils/String';
-import { concatUInt8Array, getSodiumRenderer } from '../session/crypto';
-import { getConversationController } from '../session/conversations';
+import { GroupUtils, UserUtils } from '../bchat/utils';
+import { fromHexToArray, toHex } from '../bchat/utils/String';
+import { concatUInt8Array, getSodiumRenderer } from '../bchat/crypto';
+import { getConversationController } from '../bchat/conversations';
 import { ECKeyPair } from './keypairs';
 import { handleConfigurationMessage } from './configMessage';
-import { removeMessagePadding } from '../session/crypto/BufferPadding';
-import { perfEnd, perfStart } from '../session/utils/Performance';
+import { removeMessagePadding } from '../bchat/crypto/BufferPadding';
+import { perfEnd, perfStart } from '../bchat/utils/Performance';
 import { getAllCachedECKeyPair } from './closedGroups';
 import { handleCallMessage } from './callMessage';
 import { SettingsKey } from '../data/settings-key';
@@ -257,10 +257,10 @@ async function doDecrypt(
   }
 
   switch (envelope.type) {
-    // Only SESSION_MESSAGE and CLOSED_GROUP_MESSAGE are supported
+    // Only BCHAT_MESSAGE and CLOSED_GROUP_MESSAGE are supported
     case SignalService.Envelope.Type.CLOSED_GROUP_MESSAGE:
       return decryptForClosedGroup(envelope, ciphertext);
-    case SignalService.Envelope.Type.SESSION_MESSAGE: {
+    case SignalService.Envelope.Type.BCHAT_MESSAGE: {
       return decryptUnidentifiedSender(envelope, ciphertext);
     }
     default:

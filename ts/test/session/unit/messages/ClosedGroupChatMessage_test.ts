@@ -2,11 +2,11 @@ import { expect } from 'chai';
 
 import { SignalService } from '../../../../protobuf';
 import { TestUtils } from '../../../test-utils';
-import { StringUtils } from '../../../../session/utils';
-import { PubKey } from '../../../../session/types';
-import { Constants } from '../../../../session';
-import { ClosedGroupVisibleMessage } from '../../../../session/messages/outgoing/visibleMessage/ClosedGroupVisibleMessage';
-import { VisibleMessage } from '../../../../session/messages/outgoing/visibleMessage/VisibleMessage';
+import { StringUtils } from '../../../../bchat/utils';
+import { PubKey } from '../../../../bchat/types';
+import { Constants } from '../../../../bchat';
+import { ClosedGroupVisibleMessage } from '../../../../bchat/messages/outgoing/visibleMessage/ClosedGroupVisibleMessage';
+import { VisibleMessage } from '../../../../bchat/messages/outgoing/visibleMessage/VisibleMessage';
 
 describe('ClosedGroupVisibleMessage', () => {
   let groupId: PubKey;

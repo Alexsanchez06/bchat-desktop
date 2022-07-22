@@ -3,8 +3,8 @@ import { useEffect, useRef, useState } from 'react';
 import {
   getAlreadyDecryptedMediaUrl,
   getDecryptedMediaUrl,
-} from '../session/crypto/DecryptedAttachmentsManager';
-import { perfEnd, perfStart } from '../session/utils/Performance';
+} from '../bchat/crypto/DecryptedAttachmentsManager';
+import { perfEnd, perfStart } from '../bchat/utils/Performance';
 
 export const useEncryptedFileFetch = (url: string, contentType: string, isAvatar: boolean) => {
   // tslint:disable-next-line: no-bitwise

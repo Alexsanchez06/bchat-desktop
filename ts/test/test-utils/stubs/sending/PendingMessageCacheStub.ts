@@ -1,5 +1,5 @@
-import { PendingMessageCache } from '../../../../session/sending';
-import { RawMessage } from '../../../../session/types';
+import { PendingMessageCache } from '../../../../bchat/sending';
+import { RawMessage } from '../../../../bchat/types';
 
 export class PendingMessageCacheStub extends PendingMessageCache {
   public dbData: Array<RawMessage>;

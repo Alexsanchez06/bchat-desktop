@@ -1,7 +1,7 @@
 import { _electron, Page, test } from '@playwright/test';
 import { newUser } from './setup/new_user';
 import { openAppAndWait } from './setup/open';
-import { sleepFor } from '../../session/utils/Promise';
+import { sleepFor } from '../../bchat/utils/Promise';
 import { cleanUpOtherTest, forceCloseAllWindows } from './setup/beforeEach';
 import { clickOnMatchingText, clickOnTestIdWithText, waitForTestIdWithText } from './utils';
 

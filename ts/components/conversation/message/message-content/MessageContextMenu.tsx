@@ -15,7 +15,7 @@ import {
   removeSenderFromModerator,
 } from '../../../../interactions/messageInteractions';
 import { MessageRenderingProps } from '../../../../models/messageType';
-import { pushUnblockToSend } from '../../../../session/utils/Toast';
+import { pushUnblockToSend } from '../../../../bchat/utils/Toast';
 import {
   showMessageDetailsView,
   toggleSelectedMessageId,

@@ -3,12 +3,12 @@ import { cleanSearchTerm } from '../../util/cleanSearchTerm';
 import { searchConversations, searchMessages } from '../../../ts/data/data';
 
 import { ReduxConversationType } from './conversations';
-import { PubKey } from '../../session/types';
+import { PubKey } from '../../bchat/types';
 import { ConversationTypeEnum } from '../../models/conversation';
 import _ from 'lodash';
-import { getConversationController } from '../../session/conversations';
+import { getConversationController } from '../../bchat/conversations';
 import { MessageResultProps } from '../../components/search/MessageSearchResults';
-import { UserUtils } from '../../session/utils';
+import { UserUtils } from '../../bchat/utils';
 
 // State
 

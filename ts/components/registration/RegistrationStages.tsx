@@ -2,18 +2,18 @@ import React, { createContext, useEffect, useState } from 'react';
 import { SignUpMode, SignUpTab } from './SignUpTab';
 import { SignInMode, SignInTab } from './SignInTab';
 import { createOrUpdateItem, removeAll } from '../../data/data';
-import { getSwarmPollingInstance } from '../../session/apis/snode_api';
-import { getConversationController } from '../../session/conversations';
-import { mn_decode } from '../../session/crypto/mnemonic';
-import { PromiseUtils, StringUtils, ToastUtils } from '../../session/utils';
-import { TaskTimedOutError } from '../../session/utils/Promise';
+import { getSwarmPollingInstance } from '../../bchat/apis/snode_api';
+import { getConversationController } from '../../bchat/conversations';
+import { mn_decode } from '../../bchat/crypto/mnemonic';
+import { PromiseUtils, StringUtils, ToastUtils } from '../../bchat/utils';
+import { TaskTimedOutError } from '../../bchat/utils/Promise';
 import { trigger } from '../../shims/events';
 import {
   registerSingleDevice,
   sessionGenerateKeyPair,
   signInByLinkingDevice,
 } from '../../util/accountManager';
-import { fromHex } from '../../session/utils/String';
+import { fromHex } from '../../bchat/utils/String';
 import { setSignInByLinking, setSignWithRecoveryPhrase, Storage } from '../../util/storage';
 import { generateMnemonic, restoreWallet } from '../../mains/wallet-rpc'
 import { AccentText } from './AccentText';

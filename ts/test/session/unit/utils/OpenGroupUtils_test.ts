@@ -7,7 +7,7 @@ import {
   getCompleteUrlFromRoom,
   getOpenGroupV2ConversationId,
   prefixify,
-} from '../../../../session/apis/open_group_api/utils/OpenGroupUtils';
+} from '../../../../bchat/apis/open_group_api/utils/OpenGroupUtils';
 chai.use(chaiAsPromised as any);
 
 // tslint:disable: no-http-string

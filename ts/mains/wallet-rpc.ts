@@ -2,7 +2,7 @@ import ChildProcess from "child_process";
 import fs from "fs-extra";
 import path from 'path';
 import { default as insecureNodeFetch } from 'node-fetch';
-import { HTTPError } from '../session/utils/errors';
+import { HTTPError } from '../bchat/utils/errors';
 // import portscanner from 'portscanner';
 // import killport from 'kill-port';
 
