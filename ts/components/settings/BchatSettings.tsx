@@ -164,7 +164,7 @@ export const PasswordLock = ({
     // }
 
     if (category === BchatSettingCategory.MessageRequests) {
-      return <OverlayMessageRequest />;
+      return <OverlayMessageRequest settings={"true"} />;
     }
 
     if (category === BchatSettingCategory.Hops) {

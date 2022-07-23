@@ -104,7 +104,8 @@ textarea {
     color: var(--color-foreground-primary);
 
     &:not(.disabled):hover {
-      background: var(--color-clickable-hovered);
+      // background: var(--color-clickable-hovered);
+      opacity: 0.6;
     }
 
     &.green,
@@ -1034,6 +1035,38 @@ label {
         letter-spacing: 5px;
         font-family: $session-font-default;
       }
+    }
+  }
+  &-messageRequest
+  {
+    &-list-item
+    {
+      display: flex;
+      flex-direction: row;
+      padding-inline-end: 16px;
+      padding: 10px 0;
+      padding-inline-start: 16px;
+      align-items: center;
+      background-color:var(--color-settingIndication);
+      margin-bottom: 2px;
+      border-radius: 10px;
+      
+    }
+    &-profileName
+    {
+      font-family: $bchat-font-poppin-semibold;
+      font-size: $session-font-lg;
+    }
+
+    &-acceptButton
+    {
+     background-color: #00A803;
+     color:white;
+     padding: 8px 25px;
+    border-radius: 8px;
+    font-family: $bchat-font-poppin-semibold;
+    margin-right: 20px;
+    cursor: pointer;
     }
   }
   &-recovery-seed

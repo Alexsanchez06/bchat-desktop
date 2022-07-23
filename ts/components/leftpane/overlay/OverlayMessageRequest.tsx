@@ -20,8 +20,9 @@ import {
   resetConversationExternal,
 } from '../../../state/ducks/conversations';
 import { updateConfirmModal } from '../../../state/ducks/modalDialog';
+import { MemoMessageRequestListSetting } from '../../settings/MessageRequestInSettings';
 
-export const OverlayMessageRequest = () => {
+export const OverlayMessageRequest = (props:any) => {
   useKey('Escape', closeOverlay);
   const dispatch = useDispatch();
   function closeOverlay() {
@@ -89,12 +90,22 @@ export const OverlayMessageRequest = () => {
       })
     );
   }
+  const VerifyScreen=()=>{
+    if(props.settings)
+    {
+     return <MessageRequestListForSetting />
+    }
+    else{
+      return  <MessageRequestList   />
+    }
+
+  }
 
   return (
     <div className="module-left-pane-overlay">
       {convoRequestCount ? (
         <>
-          <MessageRequestList />
+          <VerifyScreen />
           <SpacerLG />
           <BchatButton
             buttonColor={BchatButtonColor.Danger}
@@ -125,7 +136,6 @@ const MessageRequestListPlaceholder = styled.div`
 const MessageRequestListContainer = styled.div`
   width: 100%;
   overflow-y: auto;
-  border: var(--border-session);
   margin-bottom: auto;
 `;
 
@@ -140,6 +150,23 @@ const MessageRequestList = () => {
       {conversationRequests.map(conversation => {
         return (
           <MemoConversationListItemWithDetails
+            key={conversation.id}
+            isMessageRequest={true}
+            {...conversation}
+          />
+        );
+      })}
+    </MessageRequestListContainer>
+  );
+};
+
+const MessageRequestListForSetting = () => {
+  const conversationRequests = useSelector(getConversationRequests);
+  return (
+    <MessageRequestListContainer>
+      {conversationRequests.map(conversation => {
+        return (
+          <MemoMessageRequestListSetting
             key={conversation.id}
             isMessageRequest={true}
             {...conversation}

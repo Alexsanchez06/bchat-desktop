@@ -624,7 +624,7 @@
 // Module: Conversation List Item
 
 .module-conversation-list-item {
-  max-width: 380px;
+  // max-width: 380px;
   display: flex;
   flex-direction: row;
   padding-inline-end: 16px;
@@ -679,6 +679,10 @@
 
   .session-icon-button:first-child {
     margin-right: $session-margin-sm;
+  }
+
+  &-button-box{
+    width: 6%;
   }
 }
 

@@ -7,8 +7,10 @@ $session-compose-margin: 20px;
 }
 
 .module-conversation {
+
   // default conversation list item text color
   &__user__profile {
+
     &-number,
     &-name {
       font-weight: bold;
@@ -38,6 +40,8 @@ $session-compose-margin: 20px;
     &--has-unread {
       border-left: var(--border-unread);
       background: var(--color-conversation-item-has-unread);
+      margin-bottom:2px;
+      border-radius: 10px;
     }
 
     &__unread-count {
@@ -59,6 +63,7 @@ $session-compose-margin: 20px;
 
     &__message__text {
       color: $session-shade-17;
+
       &--has-unread {
         color: var(--color-text);
       }
@@ -85,16 +90,16 @@ $session-compose-margin: 20px;
 
 
   @include placeholder {
-    
+
     color: #7E7E8D;
-    
-}
+
+  }
 
   &-session {
     display: flex;
     height: 100vh;
   }
-  
+
 
   &__header {
     display: flex;
@@ -131,11 +136,12 @@ $session-compose-margin: 20px;
   &__list {
     height: -webkit-fill-available;
   }
-  &__subHeader
-  {
+
+  &__subHeader {
     text-align: center;
     font-family: $bchat-font-poppin-semibold;
   }
+
   &-overlay {
     background: var(--color-left-pane-overlay-background);
 
@@ -145,17 +151,17 @@ $session-compose-margin: 20px;
     align-items: center;
     overflow-y: auto;
     overflow-x: hidden;
-   
-    .nextButton
-    {
+
+    .nextButton {
       width: 64%;
-    height: 42px;
-    border: none;
-    border-radius: 10px;
-    background-color: var(--color-button-green);
-    margin-top: 11%;
-     
+      height: 42px;
+      border: none;
+      border-radius: 10px;
+      background-color: var(--color-button-green);
+      margin-top: 11%;
+
     }
+
     .session-icon .exit {
       padding: 13px;
     }
@@ -163,6 +169,7 @@ $session-compose-margin: 20px;
     h2 {
       margin-top: 0px;
     }
+
     h3,
     h2 {
       text-align: center;
@@ -212,19 +219,20 @@ $session-compose-margin: 20px;
       line-height: $session-font-h3;
       margin: 0px 20px;
       font-family: $session-font-default;
-     color:var(--color-HintMessageText)
+      color: var(--color-HintMessageText)
     }
 
     .session-id-editable {
       width: 90%;
       background-color: var(--color-inboxBgColor);
+
       textarea::-webkit-inner-spin-button {
         margin: 0px 20px;
         width: -webkit-fill-available;
         flex-shrink: 0;
-       
+
       }
-     
+
     }
 
     .session-id-editable-disabled {
@@ -248,7 +256,7 @@ $session-compose-margin: 20px;
   transition: none;
 
   background: var(--color-inbox-background);
-  
+
 
   .left-pane-contact-bottom-buttons .session-button {
     vertical-align: middle;
@@ -303,6 +311,7 @@ $session-compose-margin: 20px;
 .conversation.placeholder {
 
   margin: auto;
+
   .container {
     display: flex;
     height: 100%;
@@ -319,11 +328,10 @@ $session-compose-margin: 20px;
 
   .session-brand-logo {
     height: 180px;
-    filter: brightness(0) saturate(100%) invert(75%) sepia(84%) saturate(3272%) hue-rotate(103deg)
-      brightness(106%) contrast(103%);
+    filter: brightness(0) saturate(100%) invert(75%) sepia(84%) saturate(3272%) hue-rotate(103deg) brightness(106%) contrast(103%);
   }
-  .session-text
-  {
+
+  .session-text {
     font-family: $bchat-font-poppin-semibold;
     /* color: #fff; */
     color: #4E4E5F;
@@ -338,6 +346,7 @@ $session-compose-margin: 20px;
     filter: var(--filter-session-text);
 
     transition: 0s;
+
     .path {
       fill: red;
     }
@@ -361,6 +370,7 @@ $session-compose-margin: 20px;
 }
 
 .left-pane-contact {
+
   &-section,
   &-content {
     display: flex;
@@ -369,6 +379,7 @@ $session-compose-margin: 20px;
     flex: 1;
 
     .module-conversation-list-item {
+
       &__header__date,
       &__message {
         display: none;
@@ -398,7 +409,7 @@ $session-compose-margin: 20px;
     position: absolute;
     bottom: 0px;
     left: 184px;
- 
+
 
     .session-button {
       height: 57px;
@@ -407,14 +418,25 @@ $session-compose-margin: 20px;
 }
 
 .left-pane-setting {
-  
+
   &-bottom-buttons {
     @include bottom-buttons();
+    background-color: #2B2B38;
+    padding: 11px;
 
     .session-button {
       vertical-align: middle;
       white-space: normal;
       text-align: center;
+    }
+
+    &-clear-button {
+      border-radius: 9px;
+      background-color: #3D3D4D;
+      padding: 9px 116px;
+      margin: 0 auto;
+      color: red;
+      font-family: $bchat-font-poppin-semibold;
     }
   }
 
@@ -436,23 +458,23 @@ $session-compose-margin: 20px;
     padding: 0px 12px;
     flex-shrink: 0;
     cursor: pointer;
-    transition: $session-transition-duration !important;
+    transition: $session-transition-duration  !important;
 
-    &-icons
-    {
+    &-icons {
       width: 20px;
-     height: 20px;
-    display: inline-flex;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin-right: 10px;
-    margin-left: 10px;
+      height: 20px;
+      display: inline-flex;
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin-right: 10px;
+      margin-left: 10px;
     }
-    &-span
-    {
+
+    &-span {
       font-family: $bchat-font-poppin-medium;
     }
-    & > div {
+
+    &>div {
       display: block;
     }
 
@@ -476,7 +498,7 @@ $session-compose-margin: 20px;
       }
 
     }
-    
+
   }
 
   &-input-group {
@@ -503,6 +525,7 @@ $session-compose-margin: 20px;
         fill: $session-color-green;
       }
     }
+
     .session-button.square-outline.square.green,
     .session-button.square-outline.square.white {
       flex-grow: 1;
