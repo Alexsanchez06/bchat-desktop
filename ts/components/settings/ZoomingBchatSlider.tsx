@@ -23,7 +23,7 @@ const options = [
 ]
 
 
-export const ZoomingSessionSlider = (props: { onSliderChange?: (value: number) => void }) => {
+export const ZoomingBchatSlider = (props: { onSliderChange?: (value: number) => void }) => {
   const currentValueFromSettings = window.getSettingValue('zoom-factor-setting') || 100;
   const forceUpdate = useUpdate();
   const zoomSize=options.filter((item)=>item.value===currentValueFromSettings)

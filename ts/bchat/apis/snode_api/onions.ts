@@ -444,7 +444,7 @@ export async function processOnionResponse({
 
   if (!ciphertext) {
     window?.log?.warn(
-      '[path] sessionRpc::processingOnionResponse - Target node return empty ciphertext'
+      '[path] bchatRpc::processingOnionResponse - Target node return empty ciphertext'
     );
     throw new Error('Target node return empty ciphertext');
   }
@@ -458,16 +458,16 @@ export async function processOnionResponse({
     plaintext = decoded.plaintext;
     ciphertextBuffer = decoded.ciphertextBuffer;
   } catch (e) {
-    window?.log?.error('[path] sessionRpc::processingOnionResponse - decode error', e);
+    window?.log?.error('[path] bchatRpc::processingOnionResponse - decode error', e);
     if (symmetricKey) {
       window?.log?.error(
-        '[path] sessionRpc::processingOnionResponse - symmetricKey',
+        '[path] bchatRpc::processingOnionResponse - symmetricKey',
         toHex(symmetricKey)
       );
     }
     if (ciphertextBuffer) {
       window?.log?.error(
-        '[path] sessionRpc::processingOnionResponse - ciphertextBuffer',
+        '[path] bchatRpc::processingOnionResponse - ciphertextBuffer',
         toHex(ciphertextBuffer)
       );
     }
@@ -475,7 +475,7 @@ export async function processOnionResponse({
   }
 
   if (debug) {
-    window?.log?.debug('sessionRpc::processingOnionResponse - plaintext', plaintext);
+    window?.log?.debug('bchatRpc::processingOnionResponse - plaintext', plaintext);
   }
 
   try {
@@ -497,7 +497,7 @@ export async function processOnionResponse({
     return jsonRes as SnodeResponse;
   } catch (e) {
     window?.log?.error(
-      `[path] sessionRpc::processingOnionResponse - Rethrowing error ${e.message}'`
+      `[path] bchatRpc::processingOnionResponse - Rethrowing error ${e.message}'`
     );
     throw e;
   }

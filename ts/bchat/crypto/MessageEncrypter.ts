@@ -36,7 +36,7 @@ export async function encrypt(
 
   if (encryptForClosedGroup) {
     // window?.log?.info(
-    //   'Encrypting message with SessionProtocol and envelope type is CLOSED_GROUP_MESSAGE'
+    //   'Encrypting message with BchatProtocol and envelope type is CLOSED_GROUP_MESSAGE'
     // );
     const hexEncryptionKeyPair = await getLatestClosedGroupEncryptionKeyPair(device.key);
     if (!hexEncryptionKeyPair) {
@@ -45,7 +45,7 @@ export async function encrypt(
     }
     const hexPubFromECKeyPair = PubKey.cast(hexEncryptionKeyPair.publicHex);
 
-    const cipherTextClosedGroup = await MessageEncrypter.encryptUsingSessionProtocol(
+    const cipherTextClosedGroup = await MessageEncrypter.encryptUsingBchatProtocol(
       hexPubFromECKeyPair,
       plainText
     );
@@ -55,12 +55,12 @@ export async function encrypt(
       cipherText: cipherTextClosedGroup,
     };
   }
-  const cipherText = await MessageEncrypter.encryptUsingSessionProtocol(device, plainText);
+  const cipherText = await MessageEncrypter.encryptUsingBchatProtocol(device, plainText);
 
   return { envelopeType: BCHAT_MESSAGE, cipherText };
 }
 
-export async function encryptUsingSessionProtocol(
+export async function encryptUsingBchatProtocol(
   recipientHexEncodedX25519PublicKey: PubKey,
   plaintext: Uint8Array
 ): Promise<Uint8Array> {
@@ -74,7 +74,7 @@ export async function encryptUsingSessionProtocol(
   }
   const sodium = await getSodiumRenderer();
 
-  // window?.log?.info('encryptUsingSessionProtocol for ', recipientHexEncodedX25519PublicKey.key);
+  // window?.log?.info('encryptUsingBchatProtocol for ', recipientHexEncodedX25519PublicKey.key);
 
   const recipientX25519PublicKey = recipientHexEncodedX25519PublicKey.withoutPrefixToArray();
   const userED25519PubKeyBytes = fromHexToArray(userED25519KeyPairHex.pubKey);

@@ -14,7 +14,7 @@ import { BchatButtonColor } from '../../basic/BchatButton';
 
 import {BchatToggleWithDescription } from '../BchatSettingListItem';
 
-import { ZoomingSessionSlider } from '../ZoomingSessionSlider';
+import { ZoomingBchatSlider } from '../ZoomingBchatSlider';
 
 import { switchHtmlToDarkTheme, switchHtmlToLightTheme } from '../../../state/ducks/BchatTheme';
 
@@ -151,7 +151,7 @@ const isdark =
         />
         
 
-        <ZoomingSessionSlider />
+        <ZoomingBchatSlider />
         {/* <BchatSettingButtonItem
           title={window.i18n('surveyTitle')}
           onClick={() => void shell.openExternal('https://getsession.org/survey')}

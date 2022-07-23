@@ -65,17 +65,17 @@ const ourNumber = useSelector(getOurNumber);
       }
       setLoading(true);
       try {
-        const resolvedSessionID = await SNodeAPI.getSessionIDForOnsName(pubkeyorOnsTrimmed);
-        if (PubKey.validateWithError(resolvedSessionID)) {
+        const resolvedBchatID = await SNodeAPI.getBchatIDForOnsName(pubkeyorOnsTrimmed);
+        if (PubKey.validateWithError(resolvedBchatID)) {
           throw new Error('Got a resolved ONS but the returned entry is not a vlaid SessionID');
         }
         // this is a pubkey
         await getConversationController().getOrCreateAndWait(
-          resolvedSessionID,
+          resolvedBchatID,
           ConversationTypeEnum.PRIVATE
         );
 
-        await openConversationWithMessages({ conversationKey: resolvedSessionID, messageId: null });
+        await openConversationWithMessages({ conversationKey: resolvedBchatID, messageId: null });
 
         closeOverlay();
       } catch (e) {

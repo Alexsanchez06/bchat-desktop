@@ -31,33 +31,33 @@ test.skip('Group upkeep', async () => {
   // Send message from user A to Whale(TC1)
   await sendNewMessage(
     windowA,
-    testContactOne.sessionid,
+    testContactOne.bchatid,
     `Test user -> Whale (TC1): ${Date.now()}`
   );
   // Send message from Whale to user A
-  await sendNewMessage(windowB, testUser.sessionid, `Whale (TC1) -> Test user : ${Date.now()}`);
+  await sendNewMessage(windowB, testUser.bchatid, `Whale (TC1) -> Test user : ${Date.now()}`);
   // Send message from user A to Dragon(TC2)
   await sendNewMessage(
     windowA,
-    testContactTwo.sessionid,
+    testContactTwo.bchatid,
     `Test user -> Dragon (TC2): ${Date.now()}`
   );
   // Send message from Dragon to user A
-  await sendNewMessage(windowC, testUser.sessionid, `Dragon (TC2) -> Test user : ${Date.now()}`);
+  await sendNewMessage(windowC, testUser.bchatid, `Dragon (TC2) -> Test user : ${Date.now()}`);
   // Send message from user A to Fish(TC3)
   await sendNewMessage(
     windowA,
-    testContactThree.sessionid,
+    testContactThree.bchatid,
     `Test user -> Fish (TC3): ${Date.now()}`
   );
   // Send message from Fish to user A
-  await sendNewMessage(windowD, testUser.sessionid, `Fish (TC3) -> Test user : ${Date.now()}`);
+  await sendNewMessage(windowD, testUser.bchatid, `Fish (TC3) -> Test user : ${Date.now()}`);
   // Send message from user A to Gopher(TC4)
   await sendNewMessage(
     windowA,
-    testContactFour.sessionid,
+    testContactFour.bchatid,
     `Test user -> Gopher (TC4): ${Date.now()}`
   );
   // Send message from Gopher to user A
-  await sendNewMessage(windowE, testUser.sessionid, `Gopher (TC4) -> Test user : ${Date.now()}`);
+  await sendNewMessage(windowE, testUser.bchatid, `Gopher (TC4) -> Test user : ${Date.now()}`);
 });

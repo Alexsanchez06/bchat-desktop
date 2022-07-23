@@ -16,7 +16,7 @@ import { matchesHash } from '../../util/passwordUtils';
 
 //bchat
 
-import {SessionRecoverySeed} from "./SeesionRecoverySeed"
+import { BchatRecoverySeed } from "./BchatRecoverySeed"
 // import {SessionSettingRecoveryKey} from "./sessionSettingRecoveryKey"
 import {OverlayMessageRequest} from "../leftpane/overlay/OverlayMessageRequest"
 import {SessionOnionPathScreen} from "./SessionOnionPathScreen"
@@ -156,7 +156,7 @@ export const PasswordLock = ({
       return <SettingsCategoryAppearance hasPassword={this.state.hasPassword} />;
     }
     if (category === BchatSettingCategory.RecoverySeed) {
-      return <SessionRecoverySeed  />;
+      return <BchatRecoverySeed  />;
     }
 
     // if (category === BchatSettingCategory.RecoveryKey) {

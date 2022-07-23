@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import { BchatRadio } from './SessionRadio';
+import { BchatRadio } from './BchatRadio';
 
 interface Props {
   // tslint:disable: react-unused-props-and-state

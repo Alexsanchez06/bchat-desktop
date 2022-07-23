@@ -8,7 +8,7 @@ import {
 
 import { BchatButton,BchatButtonColor, BchatButtonType } from '../basic/BchatButton';
 
-export const SessionRecoverySeed=()=>
+export const BchatRecoverySeed = () =>
 {
     const[verify,setVerify]=useState(false)
     const recoveryPhraseModalState = useSelector(getRecoveryPhraseDialog);

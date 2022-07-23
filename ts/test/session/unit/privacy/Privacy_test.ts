@@ -9,14 +9,14 @@ import chaiAsPromised from 'chai-as-promised';
 import { redactAll } from '../../../../util/privacy';
 chai.use(chaiAsPromised as any);
 describe('Privacy', () => {
-  describe('Redact sessionID', () => {
-    it('redact sessionID', () => {
+  describe('Redact bchatID', () => {
+    it('redact bchatID', () => {
       expect(
         redactAll('052d3096a72d2271bbba0d820729a3548749a2b3890c3b41ea08c4c2722616dd2b')
       ).to.be.equal('[REDACTED]');
     });
 
-    it('redact multiple sessionID', () => {
+    it('redact multiple bchatID', () => {
       expect(
         redactAll(
           '052d3096a72d2271bbba0d820729a3548749a2b3890c3b41ea08c4c2722616dd2b 052d3096a72d2271bbba0d820729a3548749a2b3890c3b41ea08c4c2722616dd2c end'

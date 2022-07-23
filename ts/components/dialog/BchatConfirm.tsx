@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BchatHtmlRenderer } from '../basic/SessionHTMLRenderer';
+import { BchatHtmlRenderer } from '../basic/BchatHTMLRenderer';
 import { updateConfirmModal } from '../../state/ducks/modalDialog';
 import { SpacerLG } from '../basic/Text';
 import { BchatButton, BchatButtonColor } from '../basic/BchatButton';

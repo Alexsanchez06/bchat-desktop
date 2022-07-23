@@ -17,7 +17,7 @@ export const newUser = async (window: Page, userName: string): Promise<UserLogge
 
   // Wait for animation for finish creating ID
   await window.waitForTimeout(1500);
-  //Save session ID to a variable
+  //Save bchat ID to a variable
   const sessionid = await window.inputValue('[data-testid=session-id-signup]');
   await clickOnMatchingText(window, 'Continue');
   // Input username = testuser
@@ -75,7 +75,7 @@ export async function existingUser() {
   const recoveryPhraseTest =
     'pinched total ongoing sushi etched rest gone long oilfield incur code grunt code';
   const newUsername = 'new-username';
-  // const sessionIDTest = '05560802be231abc2fbaa860f09da4c2f20dafa4e5f560f77d61c5f587ef2c741f';
+  // const bchatIDTest = '05560802be231abc2fbaa860f09da4c2f20dafa4e5f560f77d61c5f587ef2c741f';
   // const contactOne = 'Fish';
   // const contactTwo = 'Dragon';
   // const contactThree = 'Whale';
@@ -87,6 +87,6 @@ export async function existingUser() {
   await typeIntoInput(windowA1, 'display-name-input', newUsername);
   await clickOnTestIdWithText(windowA1, 'continue-session-button');
   // await clickOnTestIdWithText(windowA1, 'leftpane-primary-avatar');
-  // const sessionIDTest = await waitForTestIdWithText(windowA1, 'your-session-id');
+  // const bchatIDTest = await waitForTestIdWithText(windowA1, 'your-bchat-id');
   return existingUser;
 }

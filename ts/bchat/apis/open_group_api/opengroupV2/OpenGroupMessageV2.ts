@@ -1,5 +1,5 @@
 import { sign } from 'curve25519-js';
-import { SessionKeyPair } from '../../../../receiver/keypairs';
+import { BchatKeyPair } from '../../../../receiver/keypairs';
 import { callUtilsWorker } from '../../../../webworker/workers/util_worker_interface';
 import { fromBase64ToArray } from '../../../utils/String';
 
@@ -53,7 +53,7 @@ export class OpenGroupMessageV2 {
       sender,
     });
   }
-  public async sign(ourKeyPair: SessionKeyPair | undefined): Promise<OpenGroupMessageV2> {
+  public async sign(ourKeyPair: BchatKeyPair | undefined): Promise<OpenGroupMessageV2> {
     if (!ourKeyPair) {
       window?.log?.warn("Couldn't find user X25519 key pair.");
       throw new Error("Couldn't sign message");

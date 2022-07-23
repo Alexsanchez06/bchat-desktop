@@ -6,7 +6,7 @@ import { fromHexToArray, toHex } from './String';
 import { getConversationController } from '../conversations';
 import { LokiProfile } from '../../types/Message';
 import { getNumber, Storage } from '../../util/storage';
-import { SessionKeyPair } from '../../receiver/keypairs';
+import { BchatKeyPair } from '../../receiver/keypairs';
 
 export type HexKeyPair = {
   pubKey: string;
@@ -48,12 +48,12 @@ export function getOurPubKeyFromCache(): PubKey {
   return PubKey.cast(ourNumber);
 }
 
-let cachedIdentityKeyPair: SessionKeyPair | undefined;
+let cachedIdentityKeyPair: BchatKeyPair | undefined;
 
 /**
  * This return the stored x25519 identity keypair for the current logged in user
  */
-export async function getIdentityKeyPair(): Promise<SessionKeyPair | undefined> {
+export async function getIdentityKeyPair(): Promise<BchatKeyPair | undefined> {
   if (cachedIdentityKeyPair) {
     return cachedIdentityKeyPair;
   }

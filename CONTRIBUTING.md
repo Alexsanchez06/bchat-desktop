@@ -57,13 +57,13 @@ Now, run these commands in your preferred terminal in a good directory for devel
 
 ```
 git clone https://github.com/oxen-io/session-desktop.git
-cd session-desktop
+cd bchat-desktop
 npm install --global yarn      # (only if you don’t already have `yarn`)
 yarn install --frozen-lockfile # Install and build dependencies (this will take a while)
 yarn grunt                     # Generate final JS and CSS assets
 yarn icon-gen                  # Generate full set of icons for Electron
 yarn test                      # A good idea to make sure tests run first
-yarn start                     # Start Session!
+yarn start                     # Start Bchat!
 ```
 
 You'll need to restart the application regularly to see your changes, as there

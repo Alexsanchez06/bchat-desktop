@@ -9,7 +9,7 @@ import { getLatestClosedGroupEncryptionKeyPair } from '../../data/data';
 import uuid from 'uuid';
 import { SignalService } from '../../protobuf';
 import { generateCurve25519KeyPairWithoutPrefix } from '../crypto';
-import { encryptUsingSessionProtocol } from '../crypto/MessageEncrypter';
+import { encryptUsingBchatProtocol } from '../crypto/MessageEncrypter';
 import { ECKeyPair } from '../../receiver/keypairs';
 import { UserUtils } from '../utils';
 import { ClosedGroupMemberLeftMessage } from '../messages/outgoing/controlMessage/group/ClosedGroupMemberLeftMessage';
@@ -521,7 +521,7 @@ export async function buildEncryptionKeyPairWrappers(
 
   const wrappers = await Promise.all(
     targetMembers.map(async pubkey => {
-      const ciphertext = await encryptUsingSessionProtocol(PubKey.cast(pubkey), plaintext);
+      const ciphertext = await encryptUsingBchatProtocol(PubKey.cast(pubkey), plaintext);
       return new SignalService.DataMessage.ClosedGroupControlMessage.KeyPairWrapper({
         encryptedKeyPair: ciphertext,
         publicKey: fromHexToArray(pubkey),

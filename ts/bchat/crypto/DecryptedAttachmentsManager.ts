@@ -66,7 +66,7 @@ export const getDecryptedMediaUrl = async (
   if (url.startsWith('blob:')) {
     return url;
   } else if (exports.getLocalAttachmentPath && url.startsWith(exports.getLocalAttachmentPath())) {
-    // this is a file encoded by session on our current attachments path.
+    // this is a file encoded by bchat on our current attachments path.
     // we consider the file is encrypted.
     // if it's not, the hook caller has to fallback to setting the img src as an url to the file instead and load it
     if (urlToDecryptedBlobMap.has(url)) {

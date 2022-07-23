@@ -1,5 +1,5 @@
 import React from 'react';
-import { BchatHtmlRenderer } from '../basic/SessionHTMLRenderer';
+import { BchatHtmlRenderer } from '../basic/BchatHTMLRenderer';
 
 export const TermsAndConditions = () => {
   let a =  "<a href=\"https://bchat.beldex.io/terms-and-conditions\">Terms of Service</a> ";

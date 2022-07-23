@@ -56,8 +56,8 @@ const _pathToRegExp = (filePath: string) => {
 };
 
 // Public API
-//      redactSessionID :: String -> String
-const redactSessionID = (text: string) => {
+//      redactBchatID :: String -> String
+const redactBchatID = (text: string) => {
   if (!isString(text)) {
     throw new TypeError("'text' must be a string");
   }
@@ -102,5 +102,5 @@ const isDev = (process.env.NODE_APP_INSTANCE || '').startsWith('devprod');
 
 //      redactAll :: String -> String
 export const redactAll = !isDev
-  ? compose(redactSensitivePaths, redactGroupIds, redactSessionID, redactSnodeIP, redactServerUrl)
+  ? compose(redactSensitivePaths, redactGroupIds, redactBchatID, redactSnodeIP, redactServerUrl)
   : (text: string) => text;

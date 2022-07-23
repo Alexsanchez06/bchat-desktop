@@ -10,7 +10,7 @@ import { ClosedGroupEncryptionPairMessage } from './ClosedGroupEncryptionPairMes
  *
  * This class is just used to let us send the encryption key par after we receivied a ENCRYPTION_KEYPAIR_REQUEST
  *  from a member of a group.
- * This reply must be sent to this user's pubkey, and so be encoded using sessionProtocol.
+ * This reply must be sent to this user's pubkey, and so be encoded using bchatProtocol.
  */
 export class ClosedGroupEncryptionPairReplyMessage extends ClosedGroupEncryptionPairMessage {
   public dataProto(): SignalService.DataMessage {

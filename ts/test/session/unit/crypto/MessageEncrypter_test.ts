@@ -160,7 +160,7 @@ describe('MessageEncrypter', () => {
 
     it('should pass the padded message body to encrypt', async () => {
       const data = crypto.randomBytes(10);
-      const spy = sinon.spy(MessageEncrypter, 'encryptUsingSessionProtocol');
+      const spy = sinon.spy(MessageEncrypter, 'encryptUsingBchatProtocol');
       await MessageEncrypter.encrypt(
         TestUtils.generateFakePubKey(),
         data,
@@ -189,7 +189,7 @@ describe('MessageEncrypter', () => {
       const recipientX25519PublicKey = new Uint8Array(
         StringUtils.fromHex(recipientX25519PublicKeyWithoutPrefix)
       );
-      await MessageEncrypter.encryptUsingSessionProtocol(recipient, plainTextBytes);
+      await MessageEncrypter.encryptUsingBchatProtocol(recipient, plainTextBytes);
       const [dataForSign, userED25519SecretKeyBytes] = cryptoSignDetachedSpy.args[0];
       const userEdPrivkeyBytes = new Uint8Array(StringUtils.fromHex(keypair!.privKey));
       expect(userED25519SecretKeyBytes).to.equalBytes(userEdPrivkeyBytes);
@@ -225,7 +225,7 @@ describe('MessageEncrypter', () => {
         recipientX25519PublicKeyHex
       );
       const recipientX25519PublicKey = new PubKey(recipientX25519PublicKeyWithoutPrefix);
-      const ciphertext = await MessageEncrypter.encryptUsingSessionProtocol(
+      const ciphertext = await MessageEncrypter.encryptUsingBchatProtocol(
         recipientX25519PublicKey,
         plainTextBytes
       );

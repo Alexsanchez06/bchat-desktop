@@ -1,6 +1,6 @@
 {
-  "name": "session-desktop",
-  "productName": "Session",
+  "name": "bchat-desktop",
+  "productName": "Bchat",
   "description": "Private messaging from your desktop",
   "version": "1.8.6",
   "license": "GPL-3.0",
@@ -243,8 +243,8 @@
       "entitlements": "build/entitlements.mac.plist",
       "entitlementsInherit": "build/entitlements.mac.plist",
       "extendInfo": {
-        "NSCameraUsageDescription": "Session requires camera access to record video.",
-        "NSMicrophoneUsageDescription": "Session requires microphone access to record audio."
+        "NSCameraUsageDescription": "Bchat requires camera access to record video.",
+        "NSMicrophoneUsageDescription": "Bchat requires microphone access to record audio."
       }
     },
     "dmg": {
@@ -267,7 +267,7 @@
     "linux": {
       "category": "Network",
       "desktop": {
-        "StartupWMClass": "Session"
+        "StartupWMClass": "Bchat"
       },
       "asarUnpack": "node_modules/spellchecker/vendor/hunspell_dictionaries",
       "target": [

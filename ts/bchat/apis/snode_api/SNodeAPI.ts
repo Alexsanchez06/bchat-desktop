@@ -1,4 +1,4 @@
-import { snodeRpc } from './sessionRpc';
+import { snodeRpc } from './bchatRpc';
 
 import {
   getRandomSnode,
@@ -88,7 +88,7 @@ async function requestSnodesForPubkeyWithTargetNodeRetryable(
   });
   if (!result) {
     window?.log?.warn(
-      `BchatSnodeAPI::requestSnodesForPubkeyWithTargetNodeRetryable - sessionRpc on ${targetNode.ip}:${targetNode.port} returned falsish value`,
+      `BchatSnodeAPI::requestSnodesForPubkeyWithTargetNodeRetryable - bchatRpc on ${targetNode.ip}:${targetNode.port} returned falsish value`,
       result
     );
     throw new Error('requestSnodesForPubkeyWithTargetNodeRetryable: Invalid result');
@@ -105,7 +105,7 @@ async function requestSnodesForPubkeyWithTargetNodeRetryable(
     if (!json.mnodes) {
       // we hit this when snode gives 500s
       window?.log?.warn(
-        `BchatSnodeAPI::requestSnodesForPubkeyRetryable - sessionRpc on ${targetNode.ip}:${targetNode.port} returned falsish value for snodes`,
+        `BchatSnodeAPI::requestSnodesForPubkeyRetryable - bchatRpc on ${targetNode.ip}:${targetNode.port} returned falsish value for snodes`,
         result
       );
       throw new Error('Invalid json (empty)');
@@ -184,7 +184,7 @@ export async function requestSnodesForPubkey(pubKey: string): Promise<Array<Snod
   }
 }
 
-export async function getSessionIDForOnsName(onsNameCase: string) {
+export async function getBchatIDForOnsName(onsNameCase: string) {
   const validationCount = 3;
 
   const onsNameLowerCase = onsNameCase.toLowerCase();
@@ -225,7 +225,7 @@ export async function getSessionIDForOnsName(onsNameCase: string) {
 
     const isArgon2Based = !Boolean(intermediate?.nonce);
     const ciphertext = fromHexToArray(hexEncodedCipherText);
-    let sessionIDAsData: Uint8Array;
+    let bchatIDAsData: Uint8Array;
     let nonce: Uint8Array;
     let key: Uint8Array;
 
@@ -251,12 +251,12 @@ export async function getSessionIDForOnsName(onsNameCase: string) {
         throw new Error('ONSresolve: Hashing failed');
       }
 
-      sessionIDAsData = sodium.crypto_secretbox_open_easy(ciphertext, nonce, key);
-      if (!sessionIDAsData) {
+      bchatIDAsData = sodium.crypto_secretbox_open_easy(ciphertext, nonce, key);
+      if (!bchatIDAsData) {
         throw new Error('ONSresolve: Decryption failed');
       }
 
-      return toHex(sessionIDAsData);
+      return toHex(bchatIDAsData);
     }
 
     // not argon2Based
@@ -276,7 +276,7 @@ export async function getSessionIDForOnsName(onsNameCase: string) {
       throw new Error('ONSresolve: Hashing failed');
     }
 
-    sessionIDAsData = sodium.crypto_aead_xchacha20poly1305_ietf_decrypt(
+    bchatIDAsData = sodium.crypto_aead_xchacha20poly1305_ietf_decrypt(
       null,
       ciphertext,
       null,
@@ -284,25 +284,25 @@ export async function getSessionIDForOnsName(onsNameCase: string) {
       key
     );
 
-    if (!sessionIDAsData) {
+    if (!bchatIDAsData) {
       throw new Error('ONSresolve: Decryption failed');
     }
 
-    return toHex(sessionIDAsData);
+    return toHex(bchatIDAsData);
   });
 
   try {
     // if one promise throws, we end un the catch case
-    const allResolvedSessionIds = await Promise.all(promises);
-    if (allResolvedSessionIds?.length !== validationCount) {
+    const allResolvedBchatIds = await Promise.all(promises);
+    if (allResolvedBchatIds?.length !== validationCount) {
       throw new Error('ONSresolve: Validation failed');
     }
 
-    // assert all the returned session ids are the same
-    if (_.uniq(allResolvedSessionIds).length !== 1) {
+    // assert all the returned bchat ids are the same
+    if (_.uniq(allResolvedBchatIds).length !== 1) {
       throw new Error('ONSresolve: Validation failed');
     }
-    return allResolvedSessionIds[0];
+    return allResolvedBchatIds[0];
   } catch (e) {
     window.log.warn('ONSresolve: error', e);
     throw e;
@@ -528,10 +528,10 @@ export async function retrieveNextMessages(
 
   if (!result) {
     window?.log?.warn(
-      `_retrieveNextMessages - sessionRpc could not talk to ${targetNode.ip}:${targetNode.port}`
+      `_retrieveNextMessages - bchatRpc could not talk to ${targetNode.ip}:${targetNode.port}`
     );
     throw new Error(
-      `_retrieveNextMessages - sessionRpc could not talk to ${targetNode.ip}:${targetNode.port}`
+      `_retrieveNextMessages - bchatRpc could not talk to ${targetNode.ip}:${targetNode.port}`
     );
   }
 

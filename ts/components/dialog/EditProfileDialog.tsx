@@ -33,6 +33,7 @@ interface State {
 }
 
 const QRView = ({ sessionID }: { sessionID: string }) => {
+  console.log("sessionID:QRView",sessionID)
   return (
     <div className="qr-image">
       <QRCode value={sessionID} bgColor="#FFFFFF" fgColor="#1B1B1B" level="L" />
@@ -76,7 +77,7 @@ export class EditProfileDialog extends React.Component<{}, State> {
     const viewQR = this.state.mode === 'qr';
 
     const sessionID = UserUtils.getOurPubKeyStrFromCache();
-
+    console.log("sessionID:"),sessionID
     const backButton =
       viewEdit || viewQR
         ? [
@@ -122,7 +123,7 @@ export class EditProfileDialog extends React.Component<{}, State> {
                 buttonType={BchatButtonType.BrandOutline}
                 buttonColor={BchatButtonColor.Green}
                 onClick={() => {
-                  copySessionID(sessionID);
+                  copyBchatID(sessionID);
                 }}
                 dataTestId="copy-button-profile-update"
               />
@@ -333,7 +334,7 @@ async function commitProfileEdits(newName: string, scaledAvatarUrl: string | nul
   await SyncUtils.forceSyncConfigurationNowIfNeeded(true);
 }
 
-function copySessionID(sessionID: string) {
+function copyBchatID(sessionID: string) {
   window.clipboard.writeText(sessionID);
   ToastUtils.pushCopiedToClipBoard();
 }

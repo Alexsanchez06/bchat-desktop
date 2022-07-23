@@ -25,7 +25,7 @@ export type JoinableRoomProps = {
   base64Data?: string;
 };
 
-const SessionJoinableRoomAvatar = (props: JoinableRoomProps) => {
+const BchatJoinableRoomAvatar = (props: JoinableRoomProps) => {
   const dispatch = useDispatch();
   useEffect(() => {
     let isCancelled = false;
@@ -88,11 +88,11 @@ const StyledRoomName = styled(Flex)`
   padding: 0 10px;
 `;
 
-const SessionJoinableRoomName = (props: JoinableRoomProps) => {
+const BchatJoinableRoomName = (props: JoinableRoomProps) => {
   return <StyledRoomName>{props.name}</StyledRoomName>;
 };
 
-const SessionJoinableRoomRow = (props: JoinableRoomProps) => {
+const BchatJoinableRoomRow = (props: JoinableRoomProps) => {
   return (
     <PillTooltipWrapper>
       <PillContainerHoverable
@@ -102,8 +102,8 @@ const SessionJoinableRoomRow = (props: JoinableRoomProps) => {
         margin="5px"
         padding="5px"
       >
-        <SessionJoinableRoomAvatar {...props} />
-        <SessionJoinableRoomName {...props} />
+        <BchatJoinableRoomAvatar {...props} />
+        <BchatJoinableRoomName {...props} />
       </PillContainerHoverable>
     </PillTooltipWrapper>
   );
@@ -131,7 +131,7 @@ export const BchatJoinableRooms = (props: { onRoomClicked: () => void }) => {
   ) : (
     joinableRooms.rooms.map(r => {
       return (
-        <SessionJoinableRoomRow
+        <BchatJoinableRoomRow
           key={r.id}
           completeUrl={r.completeUrl}
           name={r.name}

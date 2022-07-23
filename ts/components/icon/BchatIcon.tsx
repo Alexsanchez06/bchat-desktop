@@ -134,7 +134,7 @@ const Svg = React.memo(styled.svg<StyledSvgProps>`
 `);
 //tslint:enable no-unnecessary-callback-wrapper
 
-const SessionSvg = (props: {
+const BchatSvg = (props: {
   viewBox: string;
   path: string | Array<string>;
   width: string | number;
@@ -196,7 +196,7 @@ export const BchatIcon = (props: BchatIconProps) => {
   const ratio = iconDef?.ratio || 1;
 
   return (
-    <SessionSvg
+    <BchatSvg
       viewBox={iconDef.viewBox}
       path={iconDef.path}
       width={iconDimensions * ratio}

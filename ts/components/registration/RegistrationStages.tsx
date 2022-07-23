@@ -10,7 +10,7 @@ import { TaskTimedOutError } from '../../bchat/utils/Promise';
 import { trigger } from '../../shims/events';
 import {
   registerSingleDevice,
-  sessionGenerateKeyPair,
+  bchatGenerateKeyPair,
   signInByLinkingDevice,
 } from '../../util/accountManager';
 import { fromHex } from '../../bchat/utils/String';
@@ -213,7 +213,7 @@ export const RegistrationStages = () => {
         seedHex = seedHex.substring(0, privKeyHexLength);
       }
       const seed = fromHex(seedHex);
-      const keyPair = await sessionGenerateKeyPair(seed);
+      const keyPair = await bchatGenerateKeyPair(seed);
       const newHexPubKey = StringUtils.decode(keyPair.pubKey, 'hex');
 
       setGeneratedRecoveryPhrase(mnemonic);

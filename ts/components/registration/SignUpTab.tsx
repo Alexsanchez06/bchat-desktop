@@ -20,7 +20,7 @@ export enum SignUpMode {
   
 }
 
-const CreateSessionIdButton = ({ createSessionID }: { createSessionID: any }) => {
+const CreateBchatIdButton = ({ createSessionID }: { createSessionID: any }) => {
   return (
     <BchatButton
       onClick={createSessionID}
@@ -45,7 +45,7 @@ const CreateSessionIdButton = ({ createSessionID }: { createSessionID: any }) =>
 const SignUpDefault = (props: { createSessionID: () => void }) => {
   return (
     <div className="session-registration__content">
-      <CreateSessionIdButton createSessionID={props.createSessionID} />
+      <CreateBchatIdButton createSessionID={props.createSessionID} />
     </div>
   );
 };

@@ -6,7 +6,7 @@ import { forceSyncConfigurationNowIfNeeded } from '../../bchat/utils/syncUtils';
 import { updateConfirmModal, updateDeleteAccountModal } from '../../state/ducks/modalDialog';
 import { SpacerLG } from '../basic/Text';
 import { BchatButton, BchatButtonColor } from '../basic/BchatButton';
-import { BchatHtmlRenderer } from '../basic/SessionHTMLRenderer';
+import { BchatHtmlRenderer } from '../basic/BchatHTMLRenderer';
 import { BchatSpinner } from '../basic/BchatSpinner';
 import { BchatWrapperModal } from '../BchatWrapperModal';
 

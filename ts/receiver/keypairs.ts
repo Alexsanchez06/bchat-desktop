@@ -5,7 +5,7 @@ export type HexKeyPair = {
   privateHex: string;
 };
 
-export type SessionKeyPair = {
+export type BchatKeyPair = {
   pubKey: ArrayBuffer;
   privKey: ArrayBuffer;
 };
@@ -23,7 +23,7 @@ export class ECKeyPair {
     return new ECKeyPair(new Uint8Array(pub), new Uint8Array(priv));
   }
 
-  public static fromKeyPair(pair: SessionKeyPair) {
+  public static fromKeyPair(pair: BchatKeyPair) {
     return new ECKeyPair(new Uint8Array(pair.pubKey), new Uint8Array(pair.privKey));
   }
 

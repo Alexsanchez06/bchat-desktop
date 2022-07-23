@@ -20,7 +20,7 @@ import { Registration } from './registration';
 /**
  * Might throw
  */
-export async function sessionGenerateKeyPair(
+export async function bchatGenerateKeyPair(
   seed: ArrayBuffer
 ): Promise<{ pubKey: ArrayBufferLike; privKey: ArrayBufferLike }> {
   const sodium = await getSodiumRenderer();
@@ -52,12 +52,12 @@ const generateKeypair = async (mnemonic: string, mnemonicLanguage: string) => {
     seedHex = seedHex.substring(0, privKeyHexLength);
   }
   const seed = fromHex(seedHex);
-  return sessionGenerateKeyPair(seed);
+  return bchatGenerateKeyPair(seed);
 };
 
 /**
  * Sign in with a recovery phrase. We won't try to recover an existing profile name
- * @param mnemonic the mnemonic the user duly saved in a safe place. We will restore his sessionID based on this.
+ * @param mnemonic the mnemonic the user duly saved in a safe place. We will restore his bchatID based on this.
  * @param mnemonicLanguage 'english' only is supported
  * @param profileName the displayName to use for this user
  */
@@ -71,7 +71,7 @@ export async function signInWithRecovery(
 
 /**
  * Sign in with a recovery phrase but trying to recover display name and avatar from the first encountered configuration message.
- * @param mnemonic the mnemonic the user duly saved in a safe place. We will restore his sessionID based on this.
+ * @param mnemonic the mnemonic the user duly saved in a safe place. We will restore his bchatID based on this.
  * @param mnemonicLanguage 'english' only is supported
  */
 export async function signInByLinkingDevice(mnemonic: string, mnemonicLanguage: string) {
