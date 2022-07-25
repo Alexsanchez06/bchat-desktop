@@ -84,7 +84,7 @@ const ConversationListItem = (props: Props) => {
     style,
     mentionedUs,
     isMessageRequest,
-    walletAddress
+    // walletAddress
     
   } = props;
   console.log("props convertasion",props);
@@ -135,7 +135,7 @@ const ConversationListItem = (props: Props) => {
             <ConversationListItemHeaderItem />
             <MessageItem isMessageRequest={Boolean(isMessageRequest)} />
             <div style={{fontSize:'12px'}}>
-      {walletAddress}
+      {/* {walletAddress} */}
           </div>
           </div>
          

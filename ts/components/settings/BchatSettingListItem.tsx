@@ -3,6 +3,8 @@ import classNames from 'classnames';
 import { BchatButton, BchatButtonColor } from '../basic/BchatButton';
 import { BchatToggle } from '../basic/BchatToggle';
 import { BchatConfirmDialogProps } from '../dialog/BchatConfirm';
+import { Avatar, AvatarSize } from '../avatar/Avatar';
+
 
 type ButtonSettingsProps = {
   title?: string;
@@ -10,14 +12,26 @@ type ButtonSettingsProps = {
   buttonColor: BchatButtonColor;
   buttonText: string;
   dataTestId?: string;
+  bchatId?: string;
   onClick: () => void;
 };
 
-const SettingsTitleAndDescription = (props: { title?: string; description?: string }) => {
+const SettingsTitleAndDescription = (props: { title?: string; description?: string,bchatId?: string}) => {
   return (
     <div className="session-settings-item__info">
-      <div className="session-settings-item__title">{props.title}</div>
+       { props.bchatId ?
+       <div className='session-settings-item__dFlex'>
+       <Avatar 
+        size={AvatarSize.M}
+        // onAvatarClick={()=>dispatch(editProfileModal({}))}
+        pubkey={props.bchatId}
+        dataTestId="leftpane-primary-avatar"
+      />
+      <div className="session-settings-item__title" style={{marginLeft:"10px"}}>{props.title}</div>
 
+      </div>:<div className="session-settings-item__title" >{props.title}</div>
+      }
+      {/* <div className="session-settings-item__title">{props.title}</div> */}
       {props.description && (
         <div className="session-settings-item__description">{props.description}</div>
       )}
@@ -33,11 +47,13 @@ export const BchatSettingsItemWrapper = (props: {
   inline: boolean;
   title?: string;
   description?: string;
+  bchatId?: string;
   children: React.ReactNode;
 }) => {
   return (
     <div className={classNames('session-settings-item', props.inline && 'inline')}>
-      <SettingsTitleAndDescription title={props.title} description={props.description} />
+      
+      <SettingsTitleAndDescription title={props.title} description={props.description}  bchatId={props.bchatId}/>
       <BchatSettingsContent>{props.children}</BchatSettingsContent>
     </div>
   );
@@ -64,10 +80,10 @@ export const BchatToggleWithDescription = (props: {
 };
 
 export const BchatSettingButtonItem = (props: ButtonSettingsProps) => {
-  const { title, description, buttonColor, buttonText, dataTestId, onClick } = props;
+  const { title, description, buttonColor, buttonText, dataTestId,bchatId, onClick } = props;
 
   return (
-    <BchatSettingsItemWrapper title={title} description={description} inline={true}>
+    <BchatSettingsItemWrapper title={title} description={description} inline={true} bchatId={bchatId}>
       <BchatButton
         dataTestId={dataTestId}
         text={buttonText}

@@ -24,7 +24,6 @@ export const BlockedUserSettings = () => {
   const blockedEntries = blockedNumbers.map(blockedEntry => {
     const currentModel = getConversationController().get(blockedEntry);
     let title: string;
-
     if (currentModel) {
       title = currentModel.getProfileName() || currentModel.getName() || window.i18n('anonymous');
     } else {
@@ -35,6 +34,7 @@ export const BlockedUserSettings = () => {
         key={blockedEntry}
         buttonColor={BchatButtonColor.Danger}
         buttonText={window.i18n('unblockUser')}
+        bchatId={blockedEntry}
         title={title}
         onClick={async () => {
           await unblockConvoById(blockedEntry);

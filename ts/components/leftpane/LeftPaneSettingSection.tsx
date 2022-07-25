@@ -11,7 +11,9 @@ import {
   showSettingsSection,
 } from '../../state/ducks/section';
 import { getFocusedSettingsSection } from '../../state/selectors/section';
-import { recoveryPhraseModal, updateDeleteAccountModal } from '../../state/ducks/modalDialog';
+import {
+  //  recoveryPhraseModal,
+    updateDeleteAccountModal } from '../../state/ducks/modalDialog';
 import { BchatButton, BchatButtonColor, BchatButtonType } from '../basic/BchatButton';
 import { BchatIcon } from '../icon';
 import { BchatSettingCategory } from '../settings/BchatSettings';
@@ -46,13 +48,13 @@ const getCategories = () => {
       title: "Recovery Seed",
       icon:"recovery_seed.svg"
     },
-    {
-      id: BchatSettingCategory.RecoveryKey,
-      // title: window.i18n('notificationsSettingsTitle'),
-      title: "Recovery Key",
-      icon:"key.svg"
+    // {
+    //   id: BchatSettingCategory.RecoveryKey,
+    //   // title: window.i18n('notificationsSettingsTitle'),
+    //   title: "Recovery Key",
+    //   icon:"key.svg"
      
-    },
+    // },
     {
       id: BchatSettingCategory.MessageRequests,
       title:"View Message Request",
@@ -143,7 +145,7 @@ const LeftPaneSettingsCategories = () => {
 
 const LeftPaneBottomButtons = () => {
   const dangerButtonText = window.i18n('clearAllData');
-  const showRecoveryPhrase = window.i18n('showRecoveryPhrase');
+  // const showRecoveryPhrase = window.i18n('showRecoveryPhrase');
 
   const dispatch = useDispatch();
 
@@ -158,14 +160,14 @@ const LeftPaneBottomButtons = () => {
         }}
       />
 
-      <BchatButton
+      {/* <BchatButton
         text={showRecoveryPhrase}
         buttonType={BchatButtonType.SquareOutline}
         buttonColor={BchatButtonColor.White}
         onClick={() => {
           dispatch(recoveryPhraseModal({}));
         }}
-      />
+      /> */}
     </div>
   );
 };
@@ -176,6 +178,8 @@ export const LeftPaneSettingSection = () => {
       <LeftPaneSectionHeader />
       <div className="left-pane-setting-content">
         <LeftPaneSettingsCategories />
+        <span className="text-selectable" style={{color:"#797984",marginLeft:'20px'}}>Bchat v1.0</span>
+
         <LeftPaneBottomButtons />
       </div>
     </div>

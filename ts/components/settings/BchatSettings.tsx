@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { SettingsHeader } from './SessionSettingsHeader';
-import { shell } from 'electron';
+// import { shell } from 'electron';
 // import { BchatIconButton } from '../icon';
 import autoBind from 'auto-bind';
 import { BchatNotificationGroupSettings } from './BeldexNotificationGroupSettings';
@@ -54,21 +54,21 @@ interface State {
   shouldLockSettings: boolean | null;
 }
 
-const BchatInfo = () => {
-  const openBeldexWebsite = () => {
-    void shell.openExternal('https://www.beldex.io/');
-  };
-  return (
-    <div className="session-settings__version-info">
-      <span className="text-selectable">v{window.versionInfo.version}</span>
-      <span>
-        {/* <BchatIconButton iconSize="medium" iconType="oxen" onClick={openOxenWebsite} /> */}
-        <div role="button" onClick={openBeldexWebsite}>Bchat</div>
-      </span>
-      <span className="text-selectable">{window.versionInfo.commitHash}</span>
-    </div>
-  );
-};
+// const BchatInfo = () => {
+//   const openBeldexWebsite = () => {
+//     void shell.openExternal('https://www.beldex.io/');
+//   };
+//   return (
+//     <div className="session-settings__version-info">
+//       <span className="text-selectable">v{window.versionInfo.version}</span>
+//       <span>
+//         {/* <BchatIconButton iconSize="medium" iconType="oxen" onClick={openOxenWebsite} /> */}
+//         <div role="button" onClick={openBeldexWebsite}>Bchat</div>
+//       </span>
+//       <span className="text-selectable">{window.versionInfo.commitHash}</span>
+//     </div>
+//   );
+// };
 
 export const PasswordLock = ({
   pwdLockError,
@@ -252,7 +252,7 @@ export const PasswordLock = ({
               {this.renderSettingInCategory()}
             </div>
           )}
-          <BchatInfo />
+          {/* <BchatInfo /> */}
         </div>
       </div>
     );

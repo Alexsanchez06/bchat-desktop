@@ -49,7 +49,7 @@ export async function generateClosedGroupPublicKey() {
   const origPub = new Uint8Array(x25519PublicKey);
   const prependedX25519PublicKey = new Uint8Array(33);
   prependedX25519PublicKey.set(origPub, 1);
-  prependedX25519PublicKey[0] = 5;
+  prependedX25519PublicKey[0] = 189;
 
   return toHex(prependedX25519PublicKey);
 }

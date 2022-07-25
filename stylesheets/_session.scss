@@ -80,7 +80,8 @@ textarea {
     overflow: hidden;
     outline: none;
     color: $textAndBorderColor;
-    font-family: $bchat-font-poppin-regular
+    // font-family: $bchat-font-poppin-regular
+    font-family: $bchat-font-poppin-semibold;
   }
 
   width: auto;
@@ -215,15 +216,17 @@ textarea {
   &.square,
   &.default-outline,
   &.square-outline {
-    border-radius: 2px;
+    border-radius: 7px;
     height: 33px;
     padding: 0px 18px;
     font-size: $session-font-sm;
+    font-family: $bchat-font-poppin-semibold;
   }
 
   &.square,
   &.square-outline {
-    border-radius: 0px;
+    border-radius: 7px;
+    font-family: $bchat-font-poppin-semibold;
   }
 
   & > *:hover:not(svg) {
@@ -921,6 +924,12 @@ label {
 
     &__info {
       padding-inline-end: $session-margin-lg;
+    }
+
+    &__dFlex
+    {
+      display: flex;
+    align-items: center;
     }
 
     &__title {

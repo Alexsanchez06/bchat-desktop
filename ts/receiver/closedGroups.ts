@@ -908,6 +908,7 @@ async function sendLatestKeyPairToUsers(
 }
 
 export async function createClosedGroup(groupName: string, members: Array<string>) {
+
   const setOfMembers = new Set(members);
 
   const ourNumber = UserUtils.getOurPubKeyFromCache();
