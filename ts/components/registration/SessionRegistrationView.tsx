@@ -36,7 +36,7 @@ export const SessionRegistrationView = () => {
               style={{backgroundImage:"url(images/bchat/BChat_black_logo.gif)",width:400,height:370}} />
            </Flex>
           
-          <Flex
+           <Flex
             className="session-content"
             alignItems="center"
             flexDirection="column"

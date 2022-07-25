@@ -164,12 +164,12 @@ export const SignUpTab = (props:any) => {
   if(displayNameScreen)
   {
     return (
-    <div className="session-registration__content" style={{width: '325px'}}>
-      <Flex flexDirection="row" container={true} alignItems="center">
+    <div className="session-registration__content" style={{width: '130%',paddingTop:'0px'}}>
+      <Flex flexDirection="row" container={true} alignItems="center" padding="14px 0px">
         <div className='session-registration-goback-icon'>
         {/* style={{ position: 'relative', color: 'white', top: '0px',left:"0px" }} */}
         <GoBackMainMenuButton assent={()=>props.assent(true)} />
-      </div>
+        </div>
         <Flex className="session-registration__welcome-session">
           {window.i18n('welcomeToYourSession')}
         </Flex>

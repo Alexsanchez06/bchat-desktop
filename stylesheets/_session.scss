@@ -122,7 +122,8 @@ textarea {
 
     &.green {
       // background-color: var(--color-accent-button);
-      background-color:var(--color-button-green) ;
+      // background-color:var(--color-button-green) ;
+      background-color: $bchat-button-clor;
       color: var(--color-text-opposite);
       font-family: "poppin-regular";
     }
@@ -1060,7 +1061,7 @@ label {
 
     &-acceptButton
     {
-     background-color: #00A803;
+     background-color: $bchat-button-clor;
      color:white;
      padding: 8px 25px;
     border-radius: 8px;

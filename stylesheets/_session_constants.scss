@@ -131,6 +131,10 @@ $session-font-h2: 24px;
 $session-font-h3: 20px;
 $session-font-h4: 16px;
 
+// Button
+
+$bchat-button-clor: #00A803;
+
 // Mixins
 @mixin fontAccentBold {
   font-weight: bold;
