@@ -26,7 +26,8 @@ export const DisplayIdAndAddress= (props:any) => (
         onClick={props.nextFunc}
         buttonType={BchatButtonType.Brand}
         buttonColor={BchatButtonColor.Green}
-        text="Next"/>
+        text={window.i18n('next')}
+        />
      </div>
 
 );

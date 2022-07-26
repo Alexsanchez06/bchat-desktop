@@ -221,7 +221,8 @@ export const RegistrationStages = () => {
     }
   };
   return (
-    <div className="session-registration-container">
+    // <div className="session-registration-container">
+    <div>
       <RegistrationContext.Provider
         value={{
           registrationPhase,
@@ -242,6 +243,6 @@ export const RegistrationStages = () => {
           registrationPhase === RegistrationPhase.SignIn) && <SignInTab  assent={(value:boolean)=>setAccent(value)}/>}
         {accent && <TermsAndConditions/>}
       </RegistrationContext.Provider>
-    </div>
+     </div>
   );
 };

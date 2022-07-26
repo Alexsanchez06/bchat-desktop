@@ -148,8 +148,7 @@ export const SignInTab = (props:any) => {
   };
 
   const clickGoBack = () => {
-    setScreenName(false)
-  
+    setScreenName(false);
     }
 
   async function assignSeed()

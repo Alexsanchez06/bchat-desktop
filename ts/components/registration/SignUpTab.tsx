@@ -168,7 +168,7 @@ export const SignUpTab = (props:any) => {
       <Flex flexDirection="row" container={true} alignItems="center" padding="14px 0px">
         <div className='session-registration-goback-icon'>
         {/* style={{ position: 'relative', color: 'white', top: '0px',left:"0px" }} */}
-        <GoBackMainMenuButton assent={()=>props.assent(true)} />
+        <GoBackMainMenuButton assent={()=>{props.assent(true);clickGoBack()}} />
         </div>
         <Flex className="session-registration__welcome-session">
           {window.i18n('welcomeToYourSession')}
