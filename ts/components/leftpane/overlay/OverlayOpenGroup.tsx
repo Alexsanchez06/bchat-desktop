@@ -8,7 +8,7 @@ import { BchatIdEditable } from '../../basic/BchatIdEditable';
 import { BchatSpinner } from '../../basic/BchatSpinner';
 import { OverlayHeader } from './OverlayHeader';
 import { useDispatch } from 'react-redux';
-import { setOverlayMode } from '../../../state/ducks/section';
+import { setOverlayMode, showLeftPaneSection } from '../../../state/ducks/section';
 import { joinOpenGroupV2WithUIEvents } from '../../../bchat/apis/open_group_api/opengroupV2/JoinOpenGroupV2';
 import { openGroupV2CompleteURLRegex } from '../../../bchat/apis/open_group_api/utils/OpenGroupUtils';
 import { ToastUtils } from '../../../bchat/utils';
@@ -17,7 +17,7 @@ import useKey from 'react-use/lib/useKey';
 async function joinOpenGroup(serverUrl: string) {
   // guess if this is an open
   if (serverUrl.match(openGroupV2CompleteURLRegex)) {
-    const groupCreated = await joinOpenGroupV2WithUIEvents(serverUrl, true, false);
+    const groupCreated = await joinOpenGroupV2WithUIEvents(serverUrl, true, false);    
     return groupCreated;
   } else {
     ToastUtils.pushToastError('invalidOpenGroupUrl', window.i18n('invalidOpenGroupUrl'));
@@ -33,6 +33,8 @@ export const OverlayOpenGroup = () => {
 
   function closeOverlay() {
     dispatch(setOverlayMode(undefined));
+    dispatch(showLeftPaneSection(0));
+    
   }
 
   async function onEnterPressed() {
@@ -44,6 +46,8 @@ export const OverlayOpenGroup = () => {
       const groupCreated = await joinOpenGroup(groupUrl);
       if (groupCreated) {
         closeOverlay();
+        
+
       }
     } catch (e) {
       window.log.warn(e);

@@ -111,7 +111,6 @@ const BchatJoinableRoomRow = (props: JoinableRoomProps) => {
 
 export const BchatJoinableRooms = (props: { onRoomClicked: () => void }) => {
   const joinableRooms = useSelector((state: StateType) => state.defaultRooms);
-
   const onRoomClicked = useCallback(
     (loading: boolean) => {
       if (loading) {

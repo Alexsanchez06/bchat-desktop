@@ -87,7 +87,7 @@ const ConversationListItem = (props: Props) => {
     // walletAddress
     
   } = props;
-  console.log("props convertasion",props);
+ 
   
   const key = `conversation-item-${conversationId}`;
 

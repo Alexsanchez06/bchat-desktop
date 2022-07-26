@@ -1,4 +1,5 @@
 import { getV2OpenGroupRoomByRoomId, OpenGroupV2Room } from '../../../../data/opengroups';
+import { openConversationWithMessages } from '../../../../state/ducks/conversations';
 import { getConversationController } from '../../../conversations';
 import { PromiseUtils, ToastUtils } from '../../../utils';
 import { forceSyncConfigurationNowIfNeeded } from '../../../utils/syncUtils';
@@ -144,11 +145,14 @@ export async function joinOpenGroupV2WithUIEvents(
 
     const isConvoCreated = getConversationController().get(conversationID);
     if (isConvoCreated) {
+      await openConversationWithMessages({ conversationKey: conversationID, messageId: null });
       if (showToasts) {
         ToastUtils.pushToastSuccess(
           'connectToServerSuccess',
           window.i18n('connectToServerSuccess')
+
         );
+        
       }
       return true;
     } else {

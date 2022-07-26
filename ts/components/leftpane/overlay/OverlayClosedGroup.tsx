@@ -52,6 +52,8 @@ export const OverlayClosedGroup = () => {
     }
     setLoading(true);
     const groupCreated = await MainViewController.createClosedGroup(groupName, selectedMemberIds);
+    console.log('groupCreated ',groupCreated);
+    
     if (groupCreated) {
       closeOverlay();
       dispatch(showLeftPaneSection(0));

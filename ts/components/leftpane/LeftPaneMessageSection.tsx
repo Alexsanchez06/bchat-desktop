@@ -49,6 +49,7 @@ export class LeftPaneMessageSection extends React.Component<Props> {
       throw new Error('renderRow: conversations selector returned element containing falsy value.');
     }
 
+
     return <MemoConversationListItemWithDetails key={key} style={style} {...conversation} />;
   };
 
