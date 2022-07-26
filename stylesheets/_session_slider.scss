@@ -41,7 +41,7 @@
   margin: 0px 0px 0px -1px;
 }
 .rc-slider-handle {
-  transition: $session-transition-duration;
+  transition: $bchat-transition-duration;
   position: absolute;
   width: 6px;
   height: 25px;
@@ -57,20 +57,20 @@
   touch-action: pan-x;
 }
 .rc-slider-handle:focus {
-  border-color: $session-color-green;
-  box-shadow: 0 0 0 5px rgba($session-color-white, 0.2);
+  border-color: $bchat-color-green;
+  box-shadow: 0 0 0 5px rgba($bchat-color-white, 0.2);
   outline: none;
 }
 .rc-slider-handle-click-focused:focus {
-  border-color: rgba($session-color-white, 0.2);
+  border-color: rgba($bchat-color-white, 0.2);
   box-shadow: unset;
 }
 .rc-slider-handle:hover {
-  border-color: $session-color-green;
+  border-color: $bchat-color-green;
 }
 .rc-slider-handle:active {
-  border-color: $session-color-green;
-  box-shadow: 0 0 5px rgba($session-color-white, 0.2);
+  border-color: $bchat-color-green;
+  box-shadow: 0 0 5px rgba($bchat-color-white, 0.2);
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }

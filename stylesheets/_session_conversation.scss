@@ -20,15 +20,15 @@
 
 @keyframes pulseLight {
   0% {
-    box-shadow: 0px 0px 0px 0px $session-color-danger-alt;
+    box-shadow: 0px 0px 0px 0px $bchat-color-danger-alt;
   }
 
   50% {
-    box-shadow: 0px 0px 12px 0px rgba($session-color-danger-alt, 1);
+    box-shadow: 0px 0px 12px 0px rgba($bchat-color-danger-alt, 1);
   }
 
   100% {
-    box-shadow: 0px 0px 0px 0px rgba($session-color-danger-alt, 1);
+    box-shadow: 0px 0px 0px 0px rgba($bchat-color-danger-alt, 1);
   }
 }
 
@@ -64,7 +64,7 @@
     display: flex;
     left: 0px;
     right: 0px;
-    padding: 0px $session-margin-md;
+    padding: 0px $bchat-margin-md;
     align-items: center;
     justify-content: space-between;
     height: $main-view-header-height;
@@ -108,7 +108,7 @@
   // }
   .selection-mode {
     .messages-container > *:not(.message-selected) {
-      animation: toShadow $session-transition-duration;
+      animation: toShadow $bchat-transition-duration;
       opacity: 0.4;
     }
   }
@@ -162,21 +162,21 @@
   overflow-x: hidden;
   min-width: 370px;
   scrollbar-width: 4px;
-  padding: $session-margin-sm $session-margin-lg $session-margin-lg;
+  padding: $bchat-margin-sm $bchat-margin-lg $bchat-margin-lg;
 }
 
 .composition-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0px $session-margin-md;
+  padding: 0px $bchat-margin-md;
   min-height: min-content;
   background: var(--color-composeMsgBg);
   border-top: var(--border-session);
   z-index: 1;
 
   .session-icon-button {
-    margin-right: $session-margin-sm;
+    margin-right: $bchat-margin-sm;
 
     display: flex;
     justify-content: center;
@@ -186,11 +186,11 @@
     &:hover {
       opacity: 1;
       filter: brightness(0.9);
-      transition: $session-transition-duration;
+      transition: $bchat-transition-duration;
     }
 
     .send {
-      padding: $session-margin-xs;
+      padding: $bchat-margin-xs;
       border-radius: 50%;
       height: 30px;
       width: 30px;
@@ -239,10 +239,10 @@
     }
 
     textarea {
-      font-family: $session-font-default;
+      font-family: $bchat-font-default;
       min-height: $composition-container-height / 3;
       max-height: 3 * $composition-container-height;
-      margin-right: $session-margin-md;
+      margin-right: $bchat-margin-md;
       color: var(--color-text);
 
       background: transparent;
@@ -252,7 +252,7 @@
       outline: none;
       border: none;
       font-size: 14px;
-      line-height: $session-font-h2;
+      line-height: $bchat-font-h2;
       letter-spacing: 0.5px;
     }
 
@@ -260,9 +260,9 @@
       // Should have identical properties to the textarea above to line up perfectly.
       position: absolute;
       font-size: 14px;
-      font-family: $session-font-default;
+      font-family: $bchat-font-default;
       margin-left: 2px;
-      line-height: $session-font-h2;
+      line-height: $bchat-font-h2;
       letter-spacing: 0.5px;
       color: rgba(0, 0, 0, 0);
     }
@@ -273,12 +273,12 @@
   position: absolute;
   bottom: 68px;
   right: 0px;
-  padding: $session-margin-lg;
+  padding: $bchat-margin-lg;
 
   z-index: 5;
   opacity: 0;
   visibility: hidden;
-  transition: $session-transition-duration;
+  transition: $bchat-transition-duration;
 
   button:focus {
     outline: none;
@@ -290,19 +290,19 @@
   }
 
   & > section.emoji-mart {
-    font-family: $session-font-default;
-    font-size: $session-font-sm;
+    font-family: $bchat-font-default;
+    font-size: $bchat-font-sm;
     background-color: var(--color-cell-background);
     border: 1px solid var(--color-session-border);
     border-radius: 8px;
-    padding-bottom: $session-margin-sm;
+    padding-bottom: $bchat-margin-sm;
 
     .emoji-mart-category-label {
       top: -2px;
 
       span {
-        font-family: $session-font-default;
-        padding-top: $session-margin-sm;
+        font-family: $bchat-font-default;
+        padding-top: $bchat-margin-sm;
         background-color: var(--color-cell-background);
       }
     }
@@ -353,7 +353,7 @@
     font-size: 0px;
     height: 1px;
 
-    background-color: $session-color-green;
+    background-color: $bchat-color-green;
 
     &.fade {
       opacity: 0;
@@ -367,7 +367,7 @@
     padding: 8px;
     cursor: pointer;
 
-  animation: fadein $session-transition-duration;
+  animation: fadein $bchat-transition-duration;
 
   &---scale {
     animation: scaling 2s ease-in-out;
@@ -419,11 +419,11 @@
     border-radius: 50%;
 
     .session-button {
-      animation: fadein $session-transition-duration;
+      animation: fadein $bchat-transition-duration;
     }
 
     .session-icon-button {
-      animation: fadein $session-transition-duration;
+      animation: fadein $bchat-transition-duration;
       border-radius: 50%;
       width: $actions-element-size;
       height: $actions-element-size;
@@ -445,7 +445,7 @@
     canvas {
       position: absolute;
       width: 100%;
-      padding: 0px $session-margin-lg;
+      padding: 0px $bchat-margin-lg;
     }
   }
 
@@ -456,7 +456,7 @@
     left: 0;
     z-index: 2;
     right: 0;
-    bottom: $composition-container-height + $session-margin-md;
+    bottom: $composition-container-height + $bchat-margin-md;
 
     .session-button {
       display: flex;
@@ -464,7 +464,7 @@
       align-items: center;
       width: 173px;
       font-weight: 300;
-      font-family: $session-font-default;
+      font-family: $bchat-font-default;
 
       &.primary {
         cursor: default;
@@ -475,7 +475,7 @@
           border: 2px solid #161819;
         }
 
-        background-color: $session-shade-1-alt;
+        background-color: $bchat-shade-1-alt;
         border: 2px solid #161819;
       }
     }
@@ -484,13 +484,13 @@
   &--timer {
     display: inline-flex;
     align-items: center;
-    font-family: $session-font-default;
+    font-family: $bchat-font-default;
     font-weight: bold;
     font-size: 14px;
     flex-shrink: 0;
 
     &.playback-timer {
-      animation: fadein $session-transition-duration;
+      animation: fadein $bchat-transition-duration;
 
       @media (-webkit-min-device-pixel-ratio: 1.6) {
         margin-left: auto;
@@ -498,13 +498,13 @@
     }
 
     &-light {
-      height: $session-margin-sm;
-      width: $session-margin-sm;
+      height: $bchat-margin-sm;
+      width: $bchat-margin-sm;
       border-radius: 50%;
-      background-color: $session-color-danger-alt;
-      margin: 0 $session-margin-sm;
+      background-color: $bchat-color-danger-alt;
+      margin: 0 $bchat-margin-sm;
 
-      @include pulse-color($session-color-danger-alt, 1s, infinite);
+      @include pulse-color($bchat-color-danger-alt, 1s, infinite);
     }
   }
 }
@@ -533,7 +533,7 @@ $rhap_font-family: inherit !default;
   box-shadow: none;
 
   svg {
-    transition: fill $session-transition-duration;
+    transition: fill $bchat-transition-duration;
 
     &:hover path {
       fill: #ffffff;
@@ -606,7 +606,7 @@ $rhap_font-family: inherit !default;
   height: 15px;
   top: -5px;
   margin-left: -10px;
-  background: $session-color-green;
+  background: $bchat-color-green;
   box-shadow: none;
   box-shadow: rgba($rhap_theme-color, 0.5) 0 0 5px;
 }

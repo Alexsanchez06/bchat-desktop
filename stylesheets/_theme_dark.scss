@@ -129,7 +129,7 @@
   // Module: Message
 
   .module-message__error {
-    @include color-svg('../images/error.svg', $session-color-danger);
+    @include color-svg('../images/error.svg', $bchat-color-danger);
   }
 
   .module-message__img-border-overlay {
@@ -214,14 +214,14 @@
   // Module: Message Detail
 
   .module-message-detail__delete-button {
-    background-color: $session-color-danger;
+    background-color: $bchat-color-danger;
     color: $color-white;
     box-shadow: 0 0 10px -3px rgba(97, 97, 97, 0.7);
     border: solid 1px $color-light-35;
   }
 
   .module-message-detail__contact__error {
-    color: $session-color-danger;
+    color: $bchat-color-danger;
   }
 
   // Module: Media Gallery

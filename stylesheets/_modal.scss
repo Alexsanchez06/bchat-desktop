@@ -170,7 +170,7 @@
   }
 
   .qr-image {
-    transition: $session-transition-duration;
+    transition: $bchat-transition-duration;
     opacity: 10%;
     &:hover {
       opacity: 100%;
@@ -200,11 +200,11 @@
 
 .edit-profile-dialog {
   .session-modal__header__title {
-    font-size: $session-font-lg;
+    font-size: $bchat-font-lg;
   }
 
   .session-modal {
-    width: $session-modal-size-md;
+    width: $bchat-modal-size-md;
 
     &__header {
       height: 68.45px;
@@ -228,8 +228,8 @@
       height: 30px;
       width: 30px;
       border-radius: 50%;
-      background-color: $session-color-white;
-      transition: $session-transition-duration;
+      background-color: $bchat-color-white;
+      transition: $bchat-transition-duration;
 
       &:hover {
         filter: brightness(90%);
@@ -255,14 +255,14 @@
       user-select: text;
       text-align: center;
       word-break: break-all;
-      font-size: $session-font-md;
-      padding: 0px $session-margin-lg;
-      font-family: $session-font-default;
+      font-size: $bchat-font-md;
+      padding: 0px $bchat-margin-lg;
+      font-family: $bchat-font-default;
       font-weight: 100;
       color: var(--color-text);
 
-      font-size: $session-font-md;
-      padding: 0px $session-margin-sm;
+      font-size: $bchat-font-md;
+      padding: 0px $bchat-margin-sm;
     }
 
     .session-button {
@@ -273,13 +273,13 @@
   .profile-name {
     display: flex;
     justify-content: center;
-    margin-top: $session-margin-lg;
+    margin-top: $bchat-margin-lg;
 
     input {
       height: 38px;
       border-radius: 5px;
       text-align: center;
-      font-size: $session-font-md;
+      font-size: $bchat-font-md;
       background: var(--color-input-background);
       color: var(--color-text);
       border: var(--border-session);
@@ -291,8 +291,8 @@
       justify-content: center;
 
       p {
-        font-size: $session-font-md;
-        padding: 0px $session-margin-sm;
+        font-size: $bchat-font-md;
+        padding: 0px $bchat-margin-sm;
       }
 
       .session-icon-button {
@@ -304,11 +304,11 @@
 
 .onion-status-dialog {
   .session-modal__header__title {
-    font-size: $session-font-lg;
+    font-size: $bchat-font-lg;
   }
 
   .session-modal {
-    width: $session-modal-size-md;
+    width: $bchat-modal-size-md;
 
     &__header {
       height: 68.45px;
