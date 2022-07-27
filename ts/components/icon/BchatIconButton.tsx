@@ -44,8 +44,8 @@ const BchatIconButtonInner = React.forwardRef<HTMLDivElement, SProps>((props, re
 
   return (
     <div
-      className={classNames('session-icon-button', iconSize, isSelected ? 'no-opacity' : '')}
-      // className={classNames('session-icon-button', iconSize,)}
+      className={classNames('bchat-icon-button', iconSize, isSelected ? 'no-opacity' : '')}
+      // className={classNames('bchat-icon-button', iconSize,)}
      
       role="button"
       ref={ref}

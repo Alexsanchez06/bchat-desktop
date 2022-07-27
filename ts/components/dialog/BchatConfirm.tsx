@@ -108,7 +108,7 @@ export const BchatConfirm = (props: BchatConfirmDialogProps) => {
     >
       {!showHeader && <SpacerLG />}
 
-      <div className="session-modal__centered">
+      <div className="bchat-modal__centered">
         {sessionIcon && iconSize && (
           <>
             <BchatIcon iconType={sessionIcon} iconSize={iconSize} />
@@ -126,7 +126,7 @@ export const BchatConfirm = (props: BchatConfirmDialogProps) => {
         <BchatSpinner loading={isLoading} />
       </div>
 
-      <div className="session-modal__button-group">
+      <div className="bchat-modal__button-group">
         <BchatButton
           text={okText}
           buttonColor={okTheme}

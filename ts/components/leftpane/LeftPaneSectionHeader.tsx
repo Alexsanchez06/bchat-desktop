@@ -225,7 +225,7 @@ const StyledBannerInner = styled.div`
     margin-top: var(--margins-md);
   }
 
-  .session-button {
+  .bchat-button {
     margin-top: var(--margins-sm);
   }
 `;

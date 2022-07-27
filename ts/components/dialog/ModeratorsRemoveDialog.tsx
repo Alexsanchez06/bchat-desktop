@@ -110,7 +110,7 @@ export const RemoveModeratorsDialog = (props: Props) => {
         )}
         <BchatSpinner loading={removingInProgress} />
 
-        <div className="session-modal__button-group">
+        <div className="bchat-modal__button-group">
           <BchatButton
             buttonType={BchatButtonType.Brand}
             buttonColor={BchatButtonColor.Green}

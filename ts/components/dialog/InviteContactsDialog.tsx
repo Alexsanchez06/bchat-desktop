@@ -176,7 +176,7 @@ const InviteContactsDialogInner = (props: Props) => {
       </div>
       <SpacerLG />
 
-      <div className="session-modal__button-group">
+      <div className="bchat-modal__button-group">
         <BchatButton text={cancelText} onClick={closeDialog} />
         <BchatButton
           text={okText}

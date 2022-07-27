@@ -76,10 +76,10 @@ export const BchatWrapperModal = (props: BchatWrapperModalType) => {
       className={classNames('loki-dialog modal', additionalClassName ? additionalClassName : null)}
     >
       <div className="session-confirm-wrapper">
-        <div ref={modalRef} className="session-modal">
+        <div ref={modalRef} className="bchat-modal">
           {showHeader ? (
-            <div className={classNames('session-modal__header', headerReverse && 'reverse')}>
-              <div className="session-modal__header__close">
+            <div className={classNames('bchat-modal__header', headerReverse && 'reverse')}>
+              <div className="bchat-modal__header__close">
                 {showExitIcon ? (
                   <BchatIconButton
                     iconType="exit"
@@ -89,8 +89,8 @@ export const BchatWrapperModal = (props: BchatWrapperModalType) => {
                   />
                 ) : null}
               </div>
-              <div className="session-modal__header__title">{title}</div>
-              <div className="session-modal__header__icons">
+              <div className="bchat-modal__header__title">{title}</div>
+              <div className="bchat-modal__header__icons">
                 {headerIconButtons
                   ? headerIconButtons.map((iconItem: any) => {
                       return (
@@ -108,8 +108,8 @@ export const BchatWrapperModal = (props: BchatWrapperModalType) => {
             </div>
           ) : null}
 
-          <div className="session-modal__body">
-            <div className="session-modal__centered">
+          <div className="bchat-modal__body">
+            <div className="bchat-modal__centered">
               {props.children}
 
               {/* <div className="session-modal__button-group">

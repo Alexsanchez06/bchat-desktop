@@ -8,7 +8,7 @@ export const BchatSpinner = (props: Props) => {
   const { loading } = props;
 
   return loading ? (
-    <div className="session-loader" data-testid="loading-spinner">
+    <div className="bchat-loader" data-testid="loading-spinner">
       <div />
       <div />
       <div />

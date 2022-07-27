@@ -62,7 +62,7 @@ export const BchatButton = (props: Props) => {
       {props.children || text}
     </div>
   : <div
-  className={classNames('session-button', ...buttonTypes, buttonColor, disabled && 'disabled')}
+  className={classNames('bchat-button', ...buttonTypes, buttonColor, disabled && 'disabled')}
   role="button"
   onClick={onClickFn}
   data-testid={dataTestId}

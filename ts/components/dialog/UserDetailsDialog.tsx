@@ -69,7 +69,7 @@ export const UserDetailsDialog = (props: Props) => {
       <SpacerLG />
       <BchatIdEditable editable={false} text={convo.id} />
 
-      <div className="session-modal__button-group__center">
+      <div className="bchat-modal__button-group__center">
         <BchatButton
           text={window.i18n('editMenuCopy')}
           buttonType={BchatButtonType.Default}

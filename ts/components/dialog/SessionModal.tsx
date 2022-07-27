@@ -72,11 +72,11 @@ export class SessionModal extends React.PureComponent<Props, State> {
     const { isVisible } = this.state;
 
     return isVisible ? (
-      <div ref={node => (this.node = node)} className={'session-modal'}>
+      <div ref={node => (this.node = node)} className={'bchat-modal'}>
         {showHeader ? (
           <>
-            <div className={classNames('session-modal__header', headerReverse && 'reverse')}>
-              <div className="session-modal__header__close">
+            <div className={classNames('bchat-modal__header', headerReverse && 'reverse')}>
+              <div className="bchat-modal__header__close">
                 {showExitIcon ? (
                   <BchatIconButton
                     iconType="exit"
@@ -86,8 +86,8 @@ export class SessionModal extends React.PureComponent<Props, State> {
                   />
                 ) : null}
               </div>
-              <div className="session-modal__header__title">{title}</div>
-              <div className="session-modal__header__icons">
+              <div className="bchat-modal__header__title">{title}</div>
+              <div className="bchat-modal__header__icons">
                 {headerIconButtons
                   ? headerIconButtons.map((iconItem: any) => {
                       return (
@@ -106,7 +106,7 @@ export class SessionModal extends React.PureComponent<Props, State> {
           </>
         ) : null}
 
-        <div className="session-modal__body">{this.props.children}</div>
+        <div className="bchatl-modal__body">{this.props.children}</div>
       </div>
     ) : null;
   }

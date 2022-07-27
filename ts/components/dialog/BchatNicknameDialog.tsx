@@ -54,7 +54,7 @@ export const BchatNicknameDialog = (props: Props) => {
       showExitIcon={false}
       showHeader={true}
     >
-      <div className="session-modal__centered">
+      <div className="bchat-modal__centered">
         <span className="subtle">{window.i18n('changeNicknameMessage')}</span>
         <SpacerLG />
       </div>
@@ -69,7 +69,7 @@ export const BchatNicknameDialog = (props: Props) => {
         }}
       />
 
-      <div className="session-modal__button-group">
+      <div className="bchat-modal__button-group">
         <BchatButton text={window.i18n('cancel')} onClick={onClickClose} />
         <BchatButton
           text={window.i18n('ok')}

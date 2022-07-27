@@ -22,15 +22,15 @@ test('Create User', async () => {
   await sleepFor(100, true);
   //check username matches
   await waitForTestIdWithText(window, 'your-profile-name', userA.userName);
-  //check session id matches
+  //check bchat id matches
   await waitForTestIdWithText(window, 'your-session-id', userA.sessionid);
   // exit profile module
-  await window.click('.session-icon-button.small');
+  await window.click('.bchat-icon-button.small');
   // go to settings section
   await clickOnTestIdWithText(window, 'settings-section');
   // check recovery phrase matches
   await clickOnMatchingText(window, 'Recovery Phrase');
   await waitForTestIdWithText(window, 'recovery-phrase-seed-modal', userA.recoveryPhrase);
   // Exit profile module
-  await window.click('.session-icon-button.small');
+  await window.click('.bchat-icon-button.small');
 });

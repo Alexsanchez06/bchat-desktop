@@ -177,7 +177,7 @@ export const DeleteAccountModal = () => {
     >
       <SpacerLG />
 
-      <div className="session-modal__centered">
+      <div className="bchat-modal__centered">
         <BchatHtmlRenderer
           tag="span"
           className="session-confirm-main-message"
@@ -189,7 +189,7 @@ export const DeleteAccountModal = () => {
           html={window.i18n('dialogClearAllDataDeletionQuestion')}
         />
         <SpacerLG />
-        <div className="session-modal__button-group">
+        <div className="bchat-modal__button-group">
           <BchatButton
             text={window.i18n('entireAccount')}
             buttonColor={BchatButtonColor.Danger}
@@ -228,7 +228,7 @@ export const DeleteAccountModal = () => {
         <SpacerLG />
 
         {(deleteDeviceOnly || deleteEverythingWithNetwork) && (
-          <div className="session-modal__button-group">
+          <div className="bchat-modal__button-group">
             <BchatButton
               text={window.i18n('iAmSure')}
               buttonColor={BchatButtonColor.Danger}

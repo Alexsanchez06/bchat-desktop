@@ -238,7 +238,7 @@ export const UpdateGroupMembersDialog = (props: Props) => {
 
       <SpacerLG />
 
-      <div className="session-modal__button-group">
+      <div className="bchat-modal__button-group">
         <BchatButton text={cancelText} onClick={closeDialog} />
         {weAreAdmin && (
           <BchatButton text={okText} onClick={onClickOK} buttonColor={BchatButtonColor.Green} />

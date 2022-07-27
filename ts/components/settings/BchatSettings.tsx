@@ -89,7 +89,7 @@ export const PasswordLock = ({
           data-testid="password-lock-input"
         />
 
-        {pwdLockError && <div className="session-label warning">{pwdLockError}</div>}
+        {pwdLockError && <div className="bchat-label warning">{pwdLockError}</div>}
 
         <BchatButton
           buttonType={BchatButtonType.BrandOutline}

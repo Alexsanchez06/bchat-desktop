@@ -73,7 +73,7 @@ export class BchatPasswordDialog extends React.Component<Props, State> {
       <BchatWrapperModal title={window.i18n(localizedKeyAction)} onClose={this.closeDialog}>
         <SpacerSM />
 
-        <div className="session-modal__input-group">
+        <div className="bchat-modal__input-group">
           <input
             type="password"
             id="password-modal-input"
@@ -107,7 +107,7 @@ export class BchatPasswordDialog extends React.Component<Props, State> {
         <SpacerSM />
         {this.showError()}
 
-        <div className="session-modal__button-group">
+        <div className="bchat-modal__button-group">
           <BchatButton text={window.i18n('cancel')} onClick={this.closeDialog} />
           <BchatButton
             text={window.i18n('ok')}
@@ -136,7 +136,7 @@ export class BchatPasswordDialog extends React.Component<Props, State> {
       <>
         {message && (
           <>
-            <div className="session-label warning">{message}</div>
+            <div className="bchat-label warning">{message}</div>
             <SpacerLG />
           </>
         )}

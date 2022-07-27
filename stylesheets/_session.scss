@@ -23,7 +23,7 @@ $onionPathLineColor: rgba(#7a7a7a, 0.6);
   word-break: break-all;
 }
 
-.session-icon-button svg path {
+.bchat-icon-button svg path {
   transition: fill 0.3s ease;
 }
 
@@ -73,7 +73,7 @@ textarea {
   margin-inline-end: 5px;
 }
 
-.session-button {
+.bchat-button {
   @mixin transparent-background($textAndBorderColor) {
     background-color: #403E4B;
     background-repeat: no-repeat;
@@ -137,7 +137,7 @@ textarea {
       color: white;
       border-radius: 10px;
 
-      .session-icon {
+      .bchat-icon {
         fill: var(--color-foreground-primary);
       }
     }
@@ -234,7 +234,7 @@ textarea {
   }
 }
 
-.session-label {
+.bchat-label {
   color: $bchat-color-white;
   padding: $bchat-margin-sm;
   width: 100%;
@@ -257,7 +257,7 @@ textarea {
   }
 }
 
-.session-icon-button {
+.bchat-icon-button {
   cursor: pointer;
   display: inline-block;
   position: relative;
@@ -401,7 +401,7 @@ label {
   visibility: hidden;
 }
 
-.session-button div[role='button'] {
+.bchat-button div[role='button'] {
   cursor: pointer;
 }
 
@@ -433,7 +433,7 @@ label {
   }
 }
 
-.session-modal {
+.bchat-modal {
   animation: fadein $bchat-transition-duration;
   z-index: 150;
   min-width: 300px;
@@ -467,11 +467,11 @@ label {
     &.reverse {
       flex-direction: row-reverse;
 
-      .session-modal__header__close > div {
+      .bchat-modal__header__close > div {
         float: right;
       }
 
-      .session-modal__header__icons > div {
+      .bchat-modal__header__icons > div {
         float: left;
         padding-inline-start: 0px;
         padding-inline-end: 10px;
@@ -531,7 +531,7 @@ label {
     padding: 0 6%;
   }
   &__centered {
-    display: flex;
+    display: flex; 
     flex-direction: column;
     align-items: center;
     // to allow new lines
@@ -543,7 +543,7 @@ label {
   }
   
 
-  &__button-group {
+  &__button-group { 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -816,7 +816,7 @@ label {
   }
 }
 
-.session-loader {
+.bchat-loader {
   display: inline-block;
   position: relative;
   width: 80px;

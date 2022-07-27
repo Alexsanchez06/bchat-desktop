@@ -43,7 +43,7 @@ const StyledFlexWrapper = styled.div<StyledFlexWrapperProps>`
   flex-direction: row;
   align-items: center;
 
-  .session-button {
+  .bchat-button {
     margin: ${props => props.marginHorizontal};
   }
 `;

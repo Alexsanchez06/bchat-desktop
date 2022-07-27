@@ -36,7 +36,7 @@ export const AdminLeaveClosedGroupDialog = (props: Props) => {
       <SpacerLG />
       <p>{warningAsAdmin}</p>
 
-      <div className="session-modal__button-group">
+      <div className="bchat-modal__button-group">
         <BchatButton text={cancelText} onClick={closeDialog} />
         <BchatButton text={okText} onClick={onClickOK} buttonColor={BchatButtonColor.Danger} />
       </div>

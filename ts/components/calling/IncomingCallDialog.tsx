@@ -78,7 +78,7 @@ export const IncomingCallDialog = () => {
         <IncomingCallAvatarContainer>
           <Avatar size={AvatarSize.XL} pubkey={incomingCallFromPubkey} />
         </IncomingCallAvatarContainer>
-        <div className="session-modal__button-group">
+        <div className="bchat-modal__button-group">
           <BchatButton
             text={window.i18n('decline')}
             buttonColor={BchatButtonColor.Danger}

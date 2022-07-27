@@ -31,5 +31,5 @@ test('Change username', async () => {
   // verify name change
   expect(await window.innerText('[data-testid=your-profile-name]')).toBe('new username');
   // Exit profile module
-  await window.click('.session-icon-button.small');
+  await window.click('.bchat-icon-button.small');
 });

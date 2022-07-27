@@ -68,13 +68,13 @@ const Password = (props: PasswordProps) => {
       {error && (
         <>
           <SpacerXS />
-          <div className="session-label danger">{error}</div>
+          <div className="bchat-label danger">{error}</div>
         </>
       )}
 
       <SpacerLG />
 
-      <div className="session-modal__button-group">
+      <div className="bchat-modal__button-group">
         <BchatButton text={i18n('cancel')} onClick={onClose} />
         <BchatButton text={i18n('ok')} onClick={confirmPassword} />
       </div>
@@ -106,17 +106,17 @@ const Seed = (props: SeedProps) => {
   }; 
 
   return (
-    <div className="session-modal__box"> 
-      <div className="session-modal__centered text-center ">
-        <p className="session-modal__description">{i18n('recoveryPhrase')}</p>
+    <div className="bchat-modal__box"> 
+      <div className="bchat-modal__centered text-center ">
+        <p className="bchat-modal__description">{i18n('recoveryPhrase')}</p>
         <SpacerXS />
 
-        <i data-testid="recovery-phrase-seed-modal" className="session-modal__text-highlight">
+        <i data-testid="recovery-phrase-seed-modal" className="bchat-modal__text-highlight">
           {recoveryPhrase}
         </i>
       </div>
       <SpacerLG />
-      <div className="session-modal__button-group">
+      <div className="bchat-modal__button-group">
       
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 18.151 18.151">
   <path id="copy_icon" d="M3.815,2A1.815,1.815,0,0,0,2,3.815V16.521H3.815V3.815H16.521V2Zm3.63,3.63A1.815,1.815,0,0,0,5.63,7.445V18.336a1.815,1.815,0,0,0,1.815,1.815H18.336a1.815,1.815,0,0,0,1.815-1.815V7.445A1.815,1.815,0,0,0,18.336,5.63Zm0,1.815H18.336V18.336H7.445Z" transform="translate(-2 -2)" fill="#fff"/>

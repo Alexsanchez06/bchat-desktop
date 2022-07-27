@@ -32,9 +32,9 @@ export const SessionSettingRecoveryKey=()=>
     if(verify)
     {
        return <>
-       { data.map((item:any,key:any)=> (<div key={key} className='session-modal-recovery-key'>
-        <div className='session-modal-recovery-key-title'>{item.title}</div>
-        <div className='session-modal-recovery-key-describtion'>{item.key}</div>
+       { data.map((item:any,key:any)=> (<div key={key} className='bchat-modal-recovery-key'>
+        <div className='bchat-modal-recovery-key-title'>{item.title}</div>
+        <div className='bchat-modal-recovery-key-describtion'>{item.key}</div>
        </div>)
        
        )}

@@ -9,7 +9,7 @@ export const LeftPaneSectionContainer = styled.div`
   overflow-y: auto;
   background-color:#128B17; 
 
-  .session-icon-button {
+  .bchat-icon-button {
       padding: 9px 9px;
 	    margin: 5px 25px;
 	    border-radius: 25px;

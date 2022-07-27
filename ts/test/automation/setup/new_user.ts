@@ -27,7 +27,7 @@ export const newUser = async (window: Page, userName: string): Promise<UserLogge
   await clickOnMatchingText(window, 'Reveal Recovery Phrase');
   const recoveryPhrase = await window.innerText('[data-testid=recovery-phrase-seed-modal]');
 
-  await window.click('.session-icon-button.small');
+  await window.click('.bchat-icon-button.small');
   return { userName, sessionid, recoveryPhrase };
 };
 

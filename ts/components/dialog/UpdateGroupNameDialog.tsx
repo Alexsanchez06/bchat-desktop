@@ -123,7 +123,7 @@ export class UpdateGroupNameDialog extends React.Component<Props, State> {
           />
         ) : null}
 
-        <div className="session-modal__button-group">
+        <div className="bchat-modal__button-group">
           <BchatButton text={cancelText} onClick={this.closeDialog} />
 
           <BchatButton
