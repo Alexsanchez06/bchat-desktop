@@ -9,9 +9,9 @@
   align-items: center;
 
   &-header {
-    margin-top: $session-margin-lg;
-    margin-inline-start: $session-margin-sm;
-    margin-inline-end: $session-margin-sm;
+    margin-top: $bchat-margin-lg;
+    margin-inline-start: $bchat-margin-sm;
+    margin-inline-end: $bchat-margin-sm;
     width: -webkit-fill-available;
     display: flex;
     flex-direction: row;
@@ -27,7 +27,7 @@
   }
 
   .description {
-    margin: $session-margin-md 0;
+    margin: $bchat-margin-md 0;
     min-height: 4rem;
     width: inherit;
     color: var(--color-text);
@@ -49,8 +49,8 @@
     border-bottom: var(--border-session);
 
     width: -webkit-fill-available;
-    padding: 0 $session-margin-md;
-    transition: $session-transition-duration;
+    padding: 0 $bchat-margin-md;
+    transition: $bchat-transition-duration;
     cursor: pointer;
 
     &:hover {
@@ -121,7 +121,7 @@
       }
 
       &__content {
-        padding: $session-margin-xs;
+        padding: $bchat-margin-xs;
         margin-bottom: 1vh;
 
         .module-media-grid-item__image,

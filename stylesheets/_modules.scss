@@ -42,7 +42,7 @@
   display: inline-block;
   position: absolute;
   bottom: 4px;
-  @include color-svg('../images/error.svg', $session-color-danger);
+  @include color-svg('../images/error.svg', $bchat-color-danger);
 }
 
 .module-message__error--outgoing {
@@ -145,8 +145,8 @@
 
 .module-message__link-preview {
   cursor: pointer;
-  border-top-left-radius: $session_message-container-border-radius;
-  border-top-right-radius: $session_message-container-border-radius;
+  border-top-left-radius: $bchat_message-container-border-radius;
+  border-top-right-radius: $bchat_message-container-border-radius;
 }
 
 .module-message__link-preview__content {
@@ -231,8 +231,8 @@
 }
 .module-conversation__user,
 .module-message__author {
-  margin-top: $session-margin-sm;
-  margin-bottom: $session-margin-xs;
+  margin-top: $bchat-margin-sm;
+  margin-bottom: $bchat-margin-xs;
   font-size: 13px;
   font-weight: 300;
   line-height: 18px;
@@ -396,7 +396,7 @@
 .module-message-detail__delete-button {
   @include button-reset;
 
-  background-color: $session-color-danger;
+  background-color: $bchat-color-danger;
   color: $color-white;
   box-shadow: 0 0 10px -3px rgba(97, 97, 97, 0.7);
   border-radius: 5px;
@@ -424,7 +424,7 @@
 }
 
 .module-message-detail__contact__error {
-  color: $session-color-danger;
+  color: $bchat-color-danger;
   font-weight: 300;
 }
 
@@ -678,7 +678,7 @@
   overflow: hidden;
 
   .session-icon-button:first-child {
-    margin-right: $session-margin-sm;
+    margin-right: $bchat-margin-sm;
   }
 
   &-button-box{
@@ -1102,7 +1102,7 @@
   margin-top: 5px;
   text-align: center;
 
-  font-family: $session-font-default;
+  font-family: $bchat-font-default;
   font-size: 14px;
 
   overflow: hidden;
@@ -1210,7 +1210,7 @@
     width: 30vw;
     border-radius: 100px;
     #session-input-floating-label {
-      padding: $session-margin-sm;
+      padding: $bchat-margin-sm;
       color: black;
     }
 
@@ -1279,7 +1279,7 @@
   align-items: flex-start;
 
   min-height: 65px;
-  margin: $session-margin-xs;
+  margin: $bchat-margin-xs;
 }
 
 .module-staged-link-preview--is-loading {
@@ -1297,11 +1297,11 @@
 
 .module-staged-link-preview__icon-container {
   margin-inline-end: 8px;
-  padding: $session-margin-sm;
+  padding: $bchat-margin-sm;
 }
 .module-staged-link-preview__content {
   margin-inline-end: 20px;
-  padding: $session-margin-sm;
+  padding: $bchat-margin-sm;
 }
 .module-staged-link-preview__title {
   color: $color-gray-90;

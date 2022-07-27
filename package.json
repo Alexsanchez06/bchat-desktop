@@ -232,7 +232,7 @@
     },
     "mac": {
       "category": "public.app-category.social-networking",
-      "icon": "build/icon-mac.icns",
+      "icon": "build/bchat.icns",
       "target": [
         "dmg",
         "zip"
@@ -254,7 +254,7 @@
       "asarUnpack": "node_modules/spellchecker/vendor/hunspell_dictionaries",
       "publisherName": "Oxen Labs",
       "verifyUpdateCodeSignature": false,
-      "icon": "build/icon.ico",
+      "icon": "build/bchat.ico",
       "target": [
         "nsis"
       ]
@@ -275,7 +275,7 @@
         "rpm",
         "freebsd"
       ],
-      "icon": "build/icon-linux.icns"
+      "icon": "build/bchat.icns"
     },
     "asarUnpack": [
       "node_modules/better-sqlite3/build/Release/better_sqlite3.node",

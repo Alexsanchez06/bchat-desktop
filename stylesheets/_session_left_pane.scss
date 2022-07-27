@@ -21,7 +21,7 @@ $session-compose-margin: 20px;
   }
 
   &-list-item {
-    transition: $session-transition-duration;
+    transition: $bchat-transition-duration;
 
     &:hover {
       background: var(--color-clickable-hovered);
@@ -62,7 +62,7 @@ $session-compose-margin: 20px;
     }
 
     &__message__text {
-      color: $session-shade-17;
+      color: $bchat-shade-17;
 
       &--has-unread {
         color: var(--color-text);
@@ -82,7 +82,7 @@ $session-compose-margin: 20px;
 }
 
 .module-left-pane {
-  // width: $session-left-pane-width;
+  // width: $bchat-left-pane-width;
   position: relative;
   height: 100vh;
   flex-shrink: 0;
@@ -108,7 +108,7 @@ $session-compose-margin: 20px;
     align-items: center;
     height: $main-view-header-height;
     padding-inline-end: 7px;
-    transition: $session-transition-duration;
+    transition: $bchat-transition-duration;
 
     .session-button {
       margin-inline-start: auto;
@@ -116,7 +116,7 @@ $session-compose-margin: 20px;
     }
 
     &-buttons {
-      margin-bottom: $session-margin-sm;
+      margin-bottom: $bchat-margin-sm;
       display: inline-flex;
       width: 100%;
 
@@ -127,9 +127,9 @@ $session-compose-margin: 20px;
   }
 
   &__title {
-    padding-inline-end: $session-margin-sm;
-    padding-inline-start: $session-margin-sm;
-    transition: $session-transition-duration;
+    padding-inline-end: $bchat-margin-sm;
+    padding-inline-start: $bchat-margin-sm;
+    transition: $bchat-transition-duration;
     flex-grow: 1;
   }
 
@@ -195,7 +195,7 @@ $session-compose-margin: 20px;
     }
 
     .white-border {
-      width: $session-left-pane-width;
+      width: $bchat-left-pane-width;
       position: relative;
       height: 1px;
       opacity: 0.3;
@@ -215,10 +215,10 @@ $session-compose-margin: 20px;
     }
 
     .session-description-long {
-      font-size: $session-font-sm;
-      line-height: $session-font-h3;
+      font-size: $bchat-font-sm;
+      line-height: $bchat-font-h3;
       margin: 0px 20px;
-      font-family: $session-font-default;
+      font-family: $bchat-font-default;
       color: var(--color-HintMessageText)
     }
 
@@ -280,7 +280,7 @@ $session-compose-margin: 20px;
 }
 
 .session-search-input {
-  height: $session-search-input-height;
+  height: $bchat-search-input-height;
   width: 100%;
   margin-inline-end: 1px;
   margin-bottom: 10px;
@@ -296,8 +296,8 @@ $session-compose-margin: 20px;
     height: inherit;
     border: none;
     flex-grow: 1;
-    font-size: $session-font-sm;
-    font-family: $session-font-default;
+    font-size: $bchat-font-sm;
+    font-family: $bchat-font-default;
     text-overflow: ellipsis;
     background: none;
     color: var(--color-text);
@@ -458,7 +458,7 @@ $session-compose-margin: 20px;
     padding: 0px 12px;
     flex-shrink: 0;
     cursor: pointer;
-    transition: $session-transition-duration  !important;
+    transition: $bchat-transition-duration  !important;
 
     &-icons {
       width: 20px;
@@ -510,26 +510,26 @@ $session-compose-margin: 20px;
     justify-content: center;
     align-items: center;
 
-    height: $session-search-input-height;
-    width: $session-search-input-height;
+    height: $bchat-search-input-height;
+    width: $bchat-search-input-height;
 
     padding: 0px;
     margin: 0px;
 
     svg {
-      transition: $session-transition-duration;
+      transition: $bchat-transition-duration;
     }
 
     &:hover {
       svg {
-        fill: $session-color-green;
+        fill: $bchat-color-green;
       }
     }
 
     .session-button.square-outline.square.green,
     .session-button.square-outline.square.white {
       flex-grow: 1;
-      border: 1px solid $session-shade-8;
+      border: 1px solid $bchat-shade-8;
       height: 50px;
       // line-height: 50px;
     }
@@ -558,7 +558,7 @@ $session-compose-margin: 20px;
     color: var(--color-pill-divider-text);
     border: 1px solid var(--color-pill-divider);
 
-    font-family: $session-font-default;
-    font-size: $session-font-sm;
+    font-family: $bchat-font-default;
+    font-size: $bchat-font-sm;
   }
 }

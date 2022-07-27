@@ -36,7 +36,7 @@ const ourNumber = useSelector(getOurNumber);
   // const descriptionLong = window.i18n('usersCanShareTheir...');
   const descriptionLong = "Share your BChat ID with your friends. You can find your BChat ID below."
 
-  // const subtitle = window.i18n('enterSessionIDOrONSName');
+  // const subtitle = window.i18n('enterBchatIDOrONSName');
   // const placeholder = window.i18n('enterSessionIDOfRecipient');
   const placeholder = "Enter BChat ID";
 

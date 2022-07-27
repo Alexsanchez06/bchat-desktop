@@ -28,7 +28,7 @@
     }
     &-accent {
       &-text {
-        font-family: $session-font-poppins-bold;
+        font-family: $bchat-font-poppins-bold;
         .title {
           font-size: 31px;
           font-weight: bold;
@@ -102,7 +102,7 @@
     &__welcome-session {
       // color: var(--color-text);
       color: white;
-      font-family: $session-font-poppins-bold;
+      font-family: $bchat-font-poppins-bold;
       font-weight: bold;
       padding: 30px 50px !important;
       font-size: 20px;
@@ -136,7 +136,7 @@
       font-size: 24px;
       padding-bottom: 25px;
       font-weight: 600;
-      font-family: $session-font-poppins-bold;
+      font-family: $bchat-font-poppins-bold;
     }
     
     &-hr {
@@ -301,11 +301,11 @@
     height: 23px;
     // height: 46.5px;
     // width: 100px;
-    font-family: $session-font-poppins-bold;
+    font-family: $bchat-font-poppins-bold;
     color: var(--color-text);
 
     padding: 2px 0 2px 0;
-    transition: opacity $session-transition-duration;
+    transition: opacity $bchat-transition-duration;
     opacity: 1;
     position: relative;
 
@@ -379,7 +379,7 @@
 
     text-align: center;
     font-size: 12px;
-    font-family: $session-font-poppins-bold;
+    font-family: $bchat-font-poppins-bold;
     font-weight: normal;
 
     a {
@@ -391,7 +391,7 @@
       // @include session-color-subtle(var(--color-text));
       @include session-color-subtle(white);
 
-      // transition: $session-transition-duration;
+      // transition: $bchat-transition-duration;
 
       &:visited &:link {
         // @include session-color-subtle(var(--color-text));
@@ -443,7 +443,7 @@
       overflow-wrap: break-word;
       padding: 0px 5px 20px 5px;
       display: inline-block;
-      font-family: $session-font-mono;
+      font-family: $bchat-font-mono;
       user-select: all;
       overflow: hidden;
       resize: none;

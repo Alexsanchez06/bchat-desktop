@@ -2,37 +2,37 @@
 // /////////////////// Fonts ////////////////////
 // //////////////////////////////////////////////
 
-$session-font-default: 'Roboto';
-$session-font-poppins-bold: 'Poppins';
-$session-font-mono: 'SpaceMono';
+$bchat-font-default: 'Roboto';
+$bchat-font-poppins-bold: 'Poppins';
+$bchat-font-mono: 'SpaceMono';
 $bchat-font-poppin-semibold:"poppin-semibold";
 $bchat-font-poppin-medium:"poppin-medium";
 $bchat-font-poppin-regular:"poppin-regular";
 
 @font-face {
-  font-family: $session-font-mono;
+  font-family: $bchat-font-mono;
   src: url('../fonts/SpaceMono-Regular.ttf') format('truetype');
 }
 
-// Roboto is an open replacement for $session-font-default
+// Roboto is an open replacement for $bchat-font-default
 @font-face {
-  font-family: $session-font-default;
+  font-family: $bchat-font-default;
   src: url('../fonts/Roboto-Regular.ttf') format('truetype');
   font-weight: 300;
 }
 @font-face {
-  font-family: $session-font-default;
+  font-family: $bchat-font-default;
   src: url('../fonts/Roboto-Italic.ttf') format('truetype');
   font-style: italic;
   font-weight: 300;
 }
 @font-face {
-  font-family: $session-font-default;
+  font-family: $bchat-font-default;
   src: url('../fonts/Roboto-Bold.ttf') format('truetype');
   font-weight: 600;
 }
 @font-face {
-  font-family: $session-font-default;
+  font-family: $bchat-font-default;
   src: url('../fonts/Roboto-BoldItalic.ttf') format('truetype');
   font-weight: 600;
   font-style: italic;
@@ -40,7 +40,7 @@ $bchat-font-poppin-regular:"poppin-regular";
 
 // Accented font
 @font-face {
-  font-family: $session-font-poppins-bold;
+  font-family: $bchat-font-poppins-bold;
   src: url('../fonts/Poppins-Bold.ttf') format('truetype');
   line-height: 1.4rem;
   font-weight: bold;
@@ -67,69 +67,69 @@ $bchat-font-poppin-regular:"poppin-regular";
 // //////////////////////////////////////////////
 
 // Brand
-$session-color-green: #00B504;
+$bchat-color-green: #00B504;
 
 // Shades
-$session-shade-1: #0c0c0c;
-$session-shade-1-alt: #0f1011;
-$session-shade-2: #161616;
-$session-shade-3: #191818;
-$session-shade-4: #1b1b1b;
-$session-shade-5: #222325;
-$session-shade-6: #232323;
-$session-shade-6-alt: #2c2c2c;
-$session-shade-7: #2e2e2e;
-$session-shade-8: #2f2f2f;
-$session-shade-9: #313131;
-$session-shade-10: #3e3e3e;
-$session-shade-11: #3f3f3f;
-$session-shade-12: #3f4146;
-$session-shade-13: #474646;
-$session-shade-14: #535865;
-$session-shade-15: #5b6c72;
-$session-shade-16: #979797;
-$session-shade-17: #a0a0a0;
-$session-shade-18: #141414;
+$bchat-shade-1: #0c0c0c;
+$bchat-shade-1-alt: #0f1011;
+$bchat-shade-2: #161616;
+$bchat-shade-3: #191818;
+$bchat-shade-4: #1b1b1b;
+$bchat-shade-5: #222325;
+$bchat-shade-6: #232323;
+$bchat-shade-6-alt: #2c2c2c;
+$bchat-shade-7: #2e2e2e;
+$bchat-shade-8: #2f2f2f;
+$bchat-shade-9: #313131;
+$bchat-shade-10: #3e3e3e;
+$bchat-shade-11: #3f3f3f;
+$bchat-shade-12: #3f4146;
+$bchat-shade-13: #474646;
+$bchat-shade-14: #535865;
+$bchat-shade-15: #5b6c72;
+$bchat-shade-16: #979797;
+$bchat-shade-17: #a0a0a0;
+$bchat-shade-18: #141414;
 
-$session-opaque-dark-1: rgba(0, 0, 0, 0.25);
-$session-opaque-dark-2: rgba(0, 0, 0, 0.37);
-$session-opaque-dark-3: rgba(0, 0, 0, 0.5);
+$bchat-opaque-dark-1: rgba(0, 0, 0, 0.25);
+$bchat-opaque-dark-2: rgba(0, 0, 0, 0.37);
+$bchat-opaque-dark-3: rgba(0, 0, 0, 0.5);
 
-$session-color-white: #fff;
-$session-color-light-grey: #a0a0a0;
-$session-color-dark-grey: #353535;
-$session-color-black: #000;
+$bchat-color-white: #fff;
+$bchat-color-light-grey: #a0a0a0;
+$bchat-color-dark-grey: #353535;
+$bchat-color-black: #000;
 
 // Semantic Colors
-$session-color-info: $session-shade-11;
-$session-color-success: #35d388;
-$session-color-error: #edd422;
-$session-color-warning: $session-shade-17;
-$session-color-warning-alt: #ff9d00;
-$session-color-danger: #ff453a;
-$session-color-danger-alt: #ff4538;
-$session-color-primary: $session-shade-13;
-$session-color-secondary: $session-shade-6;
+$bchat-color-info: $bchat-shade-10;
+$bchat-color-success: #35d388;
+$bchat-color-error: #edd422;
+$bchat-color-warning: $bchat-shade-17;
+$bchat-color-warning-alt: #ff9d00;
+$bchat-color-danger: #ff453a;
+$bchat-color-danger-alt: #ff4538;
+$bchat-color-primary: $bchat-shade-13;
+$bchat-color-secondary: $bchat-shade-6;
 
 // Opacity and Shadow
-$session-shadow-opacity: 0.15;
-$session-overlay-opacity: 0.3;
+$bchat-shadow-opacity: 0.15;
+$bchat-overlay-opacity: 0.3;
 
 // //////////////////////////////////////////////
 // /////////////////// Text /////////////////////
 // //////////////////////////////////////////////
 
 // Sizing
-$session-font-xs: 11px;
-$session-font-sm: 13px;
-$session-font-md: 14px;
-$session-font-lg: 18px;
-$session-font-xl: 24px;
+$bchat-font-xs: 11px;
+$bchat-font-sm: 13px;
+$bchat-font-md: 14px;
+$bchat-font-lg: 18px;
+$bchat-font-xl: 24px;
 
-$session-font-h1: 30px;
-$session-font-h2: 24px;
-$session-font-h3: 20px;
-$session-font-h4: 16px;
+$bchat-font-h1: 30px;
+$bchat-font-h2: 24px;
+$bchat-font-h3: 20px;
+$bchat-font-h4: 16px;
 
 // Button
 
@@ -138,12 +138,12 @@ $bchat-button-color: #00A803;
 // Mixins
 @mixin fontAccentBold {
   font-weight: bold;
-  font-family: $session-font-poppins-bold;
+  font-family: $bchat-font-poppins-bold;
 }
 
 @mixin text-highlight($color) {
   background-color: $color;
-  padding: $session-margin-xs $session-margin-sm;
+  padding: $bchat-margin-xs $bchat-margin-sm;
   border-radius: 3px;
   display: inline-block;
 }
@@ -173,10 +173,10 @@ $bchat-button-color: #00A803;
   }
 }
 
-$session-subtle-factor: 0.6;
+$bchat-subtle-factor: 0.6;
 
 @function subtle($color) {
-  @return rgba($color, $session-subtle-factor);
+  @return rgba($color, $bchat-subtle-factor);
 }
 
 // //////////////////////////////////////////////
@@ -184,25 +184,25 @@ $session-subtle-factor: 0.6;
 // //////////////////////////////////////////////
 
 // Default Components
-$session-search-input-height: 34px;
+$bchat-search-input-height: 34px;
 $main-view-header-height: 63px;
-$session-left-pane-width: 300px;
+$bchat-left-pane-width: 300px;
 
 // Various Components
-$session-modal-size-sm: 220px;
-$session-modal-size-md: 400px;
-$session-modal-size-lg: 650px;
+$bchat-modal-size-sm: 220px;
+$bchat-modal-size-md: 400px;
+$bchat-modal-size-lg: 650px;
 
-$session_message-container-border-radius: 13px;
+$bchat_message-container-border-radius: 13px;
 
 // Spacing
-$session-margin-xs: 5px;
-$session-margin-sm: 10px;
-$session-margin-md: 15px;
-$session-margin-lg: 20px;
+$bchat-margin-xs: 5px;
+$bchat-margin-sm: 10px;
+$bchat-margin-md: 15px;
+$bchat-margin-lg: 20px;
 
 // Animations
-$session-transition-duration: 0.25s;
+$bchat-transition-duration: 0.25s;
 
 @keyframes fadein {
   from {
