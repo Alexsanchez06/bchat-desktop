@@ -74,7 +74,7 @@
       float: left;
     }
 
-    .session-button.default.danger {
+    .bchat-button.default.danger {
       display: flex;
     }
   }
@@ -88,11 +88,11 @@
   }
 }
 
-.session-conversation-Bg{
+.bchat-conversation-Bg{
   background-image: url('images/doodle_white.svg');
 }
 
-.session-conversation {
+.bchat-conversation {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -101,7 +101,7 @@
   background-image:url("../images/bchat/doodle_white.svg");
   
   
-  // .session-conversation-doodle
+  // .bchat-conversation-doodle
   // {
   //   background-color: beige;
   //  height: 100%;
@@ -175,7 +175,7 @@
   border-top: var(--border-session);
   z-index: 1;
 
-  .session-icon-button {
+  .bchat-icon-button {
     margin-right: $bchat-margin-sm;
 
     display: flex;
@@ -269,7 +269,7 @@
   }
 }
 
-.session-emoji-panel {
+.bchat-emoji-panel {
   position: absolute;
   bottom: 68px;
   right: 0px;
@@ -340,7 +340,7 @@
   }
 }
 
-.session-progress {
+.bchat-progress {
   position: relative;
   z-index: 100;
 
@@ -401,7 +401,7 @@
 }
 
 
-.session-recording {
+.bchat-recording {
   height: $composition-container-height;
   display: flex;
   justify-content: space-between;
@@ -418,11 +418,11 @@
     height: $actions-element-size;
     border-radius: 50%;
 
-    .session-button {
+    .bchat-button {
       animation: fadein $bchat-transition-duration;
     }
 
-    .session-icon-button {
+    .bchat-icon-button {
       animation: fadein $bchat-transition-duration;
       border-radius: 50%;
       width: $actions-element-size;
@@ -458,7 +458,7 @@
     right: 0;
     bottom: $composition-container-height + $bchat-margin-md;
 
-    .session-button {
+    .bchat-button {
       display: flex;
       justify-content: center;
       align-items: center;

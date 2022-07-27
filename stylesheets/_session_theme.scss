@@ -108,7 +108,7 @@
   }
 }
 
-.session-message-wrapper {
+.bchat-message-wrapper {
   letter-spacing: 0.03em;
   margin-top: 3px;
   display: flex;
@@ -135,12 +135,12 @@
   background: none;
 }
 
-@mixin session-h-title {
+@mixin bchat-h-title {
   @include fontAccentBold();
 }
 
 h1 {
-  @include session-h-title;
+  @include bchat-h-title;
   color: $bchat-shade-16;
   font-size: 25px;
   margin: 0;
@@ -151,7 +151,7 @@ h1 {
 }
 
 h2 {
-  @include session-h-title;
+  @include bchat-h-title;
   color: var(--color-text);
 
   font-size: 22px;
@@ -159,7 +159,7 @@ h2 {
 }
 
 h3 {
-  @include session-h-title;
+  @include bchat-h-title;
   color: var(--color-text);
 
   font-size: 18px;
@@ -167,7 +167,7 @@ h3 {
 }
 
 h4 {
-  @include session-h-title;
+  @include bchat-h-title;
   color: var(--color-text);
 
   font-size: 17px;

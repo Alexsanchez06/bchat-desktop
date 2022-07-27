@@ -1,4 +1,4 @@
-$session-compose-margin: 20px;
+$bchat-compose-margin: 20px;
 
 .gutter {
   width: 380px !important;
@@ -95,7 +95,7 @@ $session-compose-margin: 20px;
 
   }
 
-  &-session {
+  &-bchat {
     display: flex;
     height: 100vh;
   }
@@ -110,7 +110,7 @@ $session-compose-margin: 20px;
     padding-inline-end: 7px;
     transition: $bchat-transition-duration;
 
-    .session-button {
+    .bchat-button {
       margin-inline-start: auto;
       @include fontAccentBold();
     }
@@ -120,7 +120,7 @@ $session-compose-margin: 20px;
       display: inline-flex;
       width: 100%;
 
-      .session-button {
+      .bchat-button {
         flex: 1;
       }
     }
@@ -162,7 +162,7 @@ $session-compose-margin: 20px;
 
     }
 
-    .session-icon .exit {
+    .bchat-icon .exit {
       padding: 13px;
     }
 
@@ -209,12 +209,12 @@ $session-compose-margin: 20px;
       align-self: flex-start;
     }
 
-    .session-search-input {
+    .bchat-search-input {
       margin: 10px $session-compose-margin 0 $session-compose-margin;
       width: -webkit-fill-available;
     }
 
-    .session-description-long {
+    .bchat-description-long {
       font-size: $bchat-font-sm;
       line-height: $bchat-font-h3;
       margin: 0px 20px;
@@ -222,7 +222,7 @@ $session-compose-margin: 20px;
       color: var(--color-HintMessageText)
     }
 
-    .session-id-editable {
+    .bchat-id-editable {
       width: 90%;
       background-color: var(--color-inboxBgColor);
 
@@ -235,11 +235,11 @@ $session-compose-margin: 20px;
 
     }
 
-    .session-id-editable-disabled {
+    .bchat-id-editable-disabled {
       border: none;
     }
 
-    .session-button {
+    .bchat-button {
       width: fit-content;
       margin-top: 1rem;
       margin-bottom: 3rem;
@@ -258,14 +258,14 @@ $session-compose-margin: 20px;
   background: var(--color-inbox-background);
 
 
-  .left-pane-contact-bottom-buttons .session-button {
+  .left-pane-contact-bottom-buttons .bchat-button {
     vertical-align: middle;
     white-space: normal;
     text-align: center;
   }
 }
 
-.session-left-pane-section-content {
+.bchat-left-pane-section-content {
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -279,7 +279,7 @@ $session-compose-margin: 20px;
   overflow-y: auto;
 }
 
-.session-search-input {
+.bchat-search-input {
   height: $bchat-search-input-height;
   width: 100%;
   margin-inline-end: 1px;
@@ -287,7 +287,7 @@ $session-compose-margin: 20px;
   display: inline-flex;
   flex-shrink: 0;
 
-  .session-icon-button {
+  .bchat-icon-button {
     margin: auto 10px;
   }
 
@@ -318,7 +318,7 @@ $session-compose-margin: 20px;
   }
 }
 
-.session-full-logo {
+.bchat-full-logo {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -326,12 +326,12 @@ $session-compose-margin: 20px;
 
   // for bchat style
 
-  .session-brand-logo {
+  .bchat-brand-logo {
     height: 180px;
     filter: brightness(0) saturate(100%) invert(75%) sepia(84%) saturate(3272%) hue-rotate(103deg) brightness(106%) contrast(103%);
   }
 
-  .session-text {
+  .bchat-text {
     font-family: $bchat-font-poppin-semibold;
     /* color: #fff; */
     color: #4E4E5F;
@@ -340,7 +340,7 @@ $session-compose-margin: 20px;
 
   }
 
-  .session-text-logo {
+  .bchat-text-logo {
     margin-top: 10px;
     width: 250px;
     filter: var(--filter-session-text);
@@ -359,9 +359,9 @@ $session-compose-margin: 20px;
   width: 100%;
   background: none;
 
-  .session-button.square-outline.square.green,
-  .session-button.square-outline.square.white,
-  .session-button.square-outline.square.danger {
+  .bchat-button.square-outline.square.green,
+  .bchat-button.square-outline.square.white,
+  .bchat-button.square-outline.square.danger {
     flex-grow: 1;
     height: $composition-container-height;
 
@@ -388,7 +388,7 @@ $session-compose-margin: 20px;
       &__buttons {
         display: flex;
 
-        .session-button {
+        .bchat-button {
           font-size: 11px;
           padding: 6px;
           height: auto;
@@ -411,7 +411,7 @@ $session-compose-margin: 20px;
     left: 184px;
 
 
-    .session-button {
+    .bchat-button {
       height: 57px;
     }
   }
@@ -424,7 +424,7 @@ $session-compose-margin: 20px;
     background-color: #2B2B38;
     padding: 11px;
 
-    .session-button {
+    .bchat-button {
       vertical-align: middle;
       white-space: normal;
       text-align: center;
@@ -489,7 +489,7 @@ $session-compose-margin: 20px;
     &__buttons {
       display: flex;
 
-      .session-button {
+      .bchat-button {
         font-size: 11px;
         padding: 6px;
         height: auto;
@@ -505,7 +505,7 @@ $session-compose-margin: 20px;
     display: inline-flex;
   }
 
-  &-input-button .session-button.square {
+  &-input-button .bchat-button.square {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -526,8 +526,8 @@ $session-compose-margin: 20px;
       }
     }
 
-    .session-button.square-outline.square.green,
-    .session-button.square-outline.square.white {
+    .bchat-button.square-outline.square.green,
+    .bchat-button.square-outline.square.white {
       flex-grow: 1;
       border: 1px solid $bchat-shade-8;
       height: 50px;

@@ -1,4 +1,4 @@
-.session {
+.bchat {
   &-head {
     color: white;
   }
@@ -12,7 +12,7 @@
     background-color: #128B17;
   }
   &-content {
-    .session-button.brand-outline.brand.green:hover {
+    .bchat-button.brand-outline.brand.green:hover {
       // background-color: var(--color-accent);
       background-color: $bchat-button-color;
     }
@@ -76,7 +76,7 @@
       flex-direction: column;
       width: 500px;
 
-      .session-button {
+      .bchat-button {
         width: 100%;
       }
     }
@@ -99,7 +99,7 @@
       padding: 20px;
     }
 
-    &__welcome-session {
+    &__welcome-bchat {
       // color: var(--color-text);
       color: white;
       font-family: $bchat-font-poppins-bold;
@@ -112,7 +112,7 @@
       text-align: center;
     }
 
-    &__unique-session-id {
+    &__unique-bchat-id {
       @include registration-label-mixin;
       text-align: center;
     }
