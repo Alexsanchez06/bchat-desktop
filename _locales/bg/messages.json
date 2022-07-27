@@ -137,7 +137,7 @@
   "imageCaptionIconAlt": "Иконка, показывающая, что у этого изображения есть подпись",
   "addACaption": "Добавить субтитры...",
   "copy": "Копировать",
-  "copySessionID": "Copy BChat ID",
+  "copyBchatID": "Copy BChat ID",
   "copyOpenGroupURL": "Copy Group's URL",
   "save": "Сохранить",
   "saveLogToDesktop": "Save log to desktop",

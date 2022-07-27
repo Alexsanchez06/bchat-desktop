@@ -168,7 +168,7 @@ export type LocalizerKeys =
   | 'noGivenPassword'
   | 'closedGroupInviteOkText'
   | 'readReceiptSettingTitle'
-  | 'copySessionID'
+  | 'copyBchatID'
   | 'timerOption_0_seconds'
   | 'zoomFactorSettingTitle'
   | 'unableToCall'

@@ -137,7 +137,7 @@
   "imageCaptionIconAlt": "Ikoon näitamaks, et sellel pildil on seletus.",
   "addACaption": "Lisa pealkiri...",
   "copy": "Copy",
-  "copySessionID": "Copy BChat ID",
+  "copyBchatID": "Copy BChat ID",
   "copyOpenGroupURL": "Copy Group's URL",
   "save": "Salvesta",
   "saveLogToDesktop": "Save log to desktop",

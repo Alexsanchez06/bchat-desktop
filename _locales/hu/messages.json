@@ -137,7 +137,7 @@
   "imageCaptionIconAlt": "Ikon, amely azt jelzi, hogy a kép feliratot tartalmaz",
   "addACaption": "Felirat hozzáadása...",
   "copy": "Másolás",
-  "copySessionID": "Az ön BChat azonosítójának kimásolása",
+  "copyBchatID": "Az ön BChat azonosítójának kimásolása",
   "copyOpenGroupURL": "Csoport URL-jének másolása",
   "save": "Mentés",
   "saveLogToDesktop": "Save log to desktop",

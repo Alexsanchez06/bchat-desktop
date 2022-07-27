@@ -137,7 +137,7 @@
   "imageCaptionIconAlt": "Kuvake, joka näyttää, että tällä kuvalla on kuvateksti",
   "addACaption": "Lisää kuvateksti...",
   "copy": "Kopioi",
-  "copySessionID": "Kopioi BChat ID",
+  "copyBchatID": "Kopioi BChat ID",
   "copyOpenGroupURL": "Kopioi ryhmän URL -osoite",
   "save": "Tallenna",
   "saveLogToDesktop": "Tallenna loki työpöydälle",

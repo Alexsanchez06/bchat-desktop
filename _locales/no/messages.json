@@ -137,7 +137,7 @@
   "imageCaptionIconAlt": "Symbol som viser at dette bildet har en bildetekst",
   "addACaption": "Legg til bildetekst...",
   "copy": "Kopier",
-  "copySessionID": "Kopier BChat-ID",
+  "copyBchatID": "Kopier BChat-ID",
   "copyOpenGroupURL": "Kopier gruppens URL",
   "save": "Lagre",
   "saveLogToDesktop": "Save log to desktop",

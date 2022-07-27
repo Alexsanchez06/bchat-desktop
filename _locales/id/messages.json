@@ -137,7 +137,7 @@
   "imageCaptionIconAlt": "Ikon mengindikasikan jika gambar ini memiliki takarir",
   "addACaption": "Tambah keterangan...",
   "copy": "Salin",
-  "copySessionID": "Salin BChat ID",
+  "copyBchatID": "Salin BChat ID",
   "copyOpenGroupURL": "Salin URL grup",
   "save": "Simpan",
   "saveLogToDesktop": "Simpan log ke dekstop",

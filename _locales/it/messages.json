@@ -137,7 +137,7 @@
   "imageCaptionIconAlt": "Icona che mostra che questa immagine ha una didascalia",
   "addACaption": "Aggiungi una didascalia...",
   "copy": "Copia",
-  "copySessionID": "Copia BChat ID",
+  "copyBchatID": "Copia BChat ID",
   "copyOpenGroupURL": "Copia L'Url Del Gruppo",
   "save": "Salva",
   "saveLogToDesktop": "Salva log sul desktop",

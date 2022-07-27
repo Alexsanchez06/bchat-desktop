@@ -117,7 +117,7 @@
   "lightboxImageAlt": "Image sent in conversation",
   "imageCaptionIconAlt": "Icon showing that this image has a caption",
   "addACaption": "Add a caption...",
-  "copySessionID": "Copy BChat ID",
+  "copyBchatID": "Copy BChat ID",
   "copyOpenGroupURL": "Copy Group's URL",
   "save": "Save",
   "saveLogToDesktop": "Save log to desktop",

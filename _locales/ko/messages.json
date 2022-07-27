@@ -137,7 +137,7 @@
   "imageCaptionIconAlt": "Icon showing that this image has a caption",
   "addACaption": "Add a caption...",
   "copy": "복사",
-  "copySessionID": "BChat ID 복사",
+  "copyBchatID": "BChat ID 복사",
   "copyOpenGroupURL": "그룹 링크 복",
   "save": "저장",
   "saveLogToDesktop": "데스크탑에 저장",
