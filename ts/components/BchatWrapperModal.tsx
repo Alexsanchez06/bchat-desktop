@@ -112,7 +112,7 @@ export const BchatWrapperModal = (props: BchatWrapperModalType) => {
             <div className="bchat-modal__centered">
               {props.children}
 
-              {/* <div className="session-modal__button-group">
+              {/* <div className="bchat-modal__button-group">
                 {onClose && showClose ? (
                   <BchatButton onClick={props.onClose}>
                     {cancelText || window.i18n('close')}

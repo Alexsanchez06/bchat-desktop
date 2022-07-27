@@ -295,7 +295,7 @@ textarea {
   font-size: $bchat-font-md;
 
   &-text {
-    @include session-color-subtle(var(--color-text));
+    @include bchat-color-subtle(var(--color-text));
 
     font-weight: 400;
     font-size: $bchat-font-sm;
@@ -944,12 +944,12 @@ label {
       font-size: $bchat-font-sm;
       font-weight: 100;
       max-width: 700px;
-      @include session-color-subtle(var(--color-text));
+      @include bchat-color-subtle(var(--color-text));
     }
 
     &__content {
       label {
-        @include session-color-subtle(var(--color-text));
+        @include bchat-color-subtle(var(--color-text));
       }
     }
     &__selection {

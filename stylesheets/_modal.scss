@@ -26,7 +26,7 @@
   padding: 1.1em;
 }
 
-.session-modal {
+.bchat-modal {
   .contact-selection-list {
     width: 100%;
     min-width: 300px;
@@ -199,11 +199,11 @@
 }
 
 .edit-profile-dialog {
-  .session-modal__header__title {
+  .bchat-modal__header__title {
     font-size: $bchat-font-lg;
   }
 
-  .session-modal {
+  .bchat-modal {
     width: $bchat-modal-size-md;
 
     &__header {
@@ -235,13 +235,13 @@
         filter: brightness(90%);
       }
 
-      .session-icon-button {
+      .bchat-icon-button {
         opacity: 1;
       }
     }
   }
 
-  .session-id-section {
+  .bchat-id-section {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -265,7 +265,7 @@
       padding: 0px $bchat-margin-sm;
     }
 
-    .session-button {
+    .bchat-button {
       width: 148px;
     }
   }
@@ -295,7 +295,7 @@
         padding: 0px $bchat-margin-sm;
       }
 
-      .session-icon-button {
+      .bchat-icon-button {
         padding: 0px;
       }
     }
@@ -303,11 +303,11 @@
 }
 
 .onion-status-dialog {
-  .session-modal__header__title {
+  .bchat-modal__header__title {
     font-size: $bchat-font-lg;
   }
 
-  .session-modal {
+  .bchat-modal {
     width: $bchat-modal-size-md;
 
     &__header {
@@ -315,7 +315,7 @@
     }
   }
 
-  .session-modal__body {
+  .bchat-modal__body {
     display: flex;
     align-items: center;
     flex-direction: column;

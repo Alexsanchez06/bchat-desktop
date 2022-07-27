@@ -363,7 +363,7 @@
       bottom: 0px;
     }
 
-    .session-icon-button {
+    .bchat-icon-button {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
@@ -372,10 +372,10 @@
   }
 
   &-terms-conditions-agreement {
-    // padding-top: $session-margin-md;
+    // padding-top: $bchat-margin-md;
     padding-left: 12px;
-    // @include session-color-subtle(var((--color-text));
-    @include session-color-subtle(white);
+    // @include bchat-color-subtle(var((--color-text));
+    @include bchat-color-subtle(white);
 
     text-align: center;
     font-size: 12px;
@@ -388,14 +388,14 @@
       text-decoration: none;
       font-family: $bchat-font-poppin-regular;
       font-weight: normal;
-      // @include session-color-subtle(var(--color-text));
-      @include session-color-subtle(white);
+      // @include bchat-color-subtle(var(--color-text));
+      @include bchat-color-subtle(white);
 
       // transition: $bchat-transition-duration;
 
       &:visited &:link {
-        // @include session-color-subtle(var(--color-text));
-        @include session-color-subtle(white);
+        // @include bchat-color-subtle(var(--color-text));
+        @include bchat-color-subtle(white);
       }
 
       &:hover {
@@ -408,7 +408,7 @@
   &-description-long {
     padding-top: 0;
     padding-bottom: 20px;
-    @include session-color-subtle(var(--color-text));
+    @include bchat-color-subtle(var(--color-text));
 
     text-align: center;
     font-size: 12px;
@@ -453,7 +453,7 @@
 
 [contenteditable='true']:empty::before {
   content: attr(placeholder);
-  @include session-color-subtle(var(--color-text));
+  @include bchat-color-subtle(var(--color-text));
 
   font-size: 13px;
 }

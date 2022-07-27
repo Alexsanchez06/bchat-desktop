@@ -148,7 +148,7 @@ $bchat-button-color: #00A803;
   display: inline-block;
 }
 
-@mixin session-color-subtle($color) {
+@mixin bchat-color-subtle($color) {
   color: subtle($color);
 }
 

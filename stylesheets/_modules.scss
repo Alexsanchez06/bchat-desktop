@@ -677,7 +677,7 @@
   align-items: stretch;
   overflow: hidden;
 
-  .session-icon-button:first-child {
+  .bchat-icon-button:first-child {
     margin-right: $bchat-margin-sm;
   }
 
@@ -1129,7 +1129,7 @@
   flex-direction: column;
   height: 100%;
 
-  .session-button {
+  .bchat-button {
     margin-inline-start: 15px;
   }
 }
@@ -1203,18 +1203,18 @@
     color: rgba(black, 0.6);
   }
 
-  .session-input-with-label-container {
+  .bchat-input-with-label-container {
     background-color: #fcfcfc;
     color: black;
 
     width: 30vw;
     border-radius: 100px;
-    #session-input-floating-label {
+    #bchat-input-floating-label {
       padding: $bchat-margin-sm;
       color: black;
     }
 
-    label.session-input-with-label-container.filled {
+    label.bchat-input-with-label-container.filled {
       visibility: hidden;
     }
 
@@ -1223,7 +1223,7 @@
     }
   }
 
-  .session-button {
+  .bchat-button {
     height: 90%;
     padding: 10px;
   }
