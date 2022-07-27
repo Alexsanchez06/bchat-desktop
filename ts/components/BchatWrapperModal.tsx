@@ -5,7 +5,7 @@ import { BchatIconButton } from './icon';
 
 // tslint:disable-next-line: no-submodule-imports
 import useKey from 'react-use/lib/useKey';
-import { BchatButton } from './basic/BchatButton';
+// import { BchatButton } from './basic/BchatButton';
 
 export type BchatWrapperModalType = {
   title?: string;
@@ -25,12 +25,12 @@ export type BchatWrapperModalType = {
 export const BchatWrapperModal = (props: BchatWrapperModalType) => {
   const {
     title,
-    onConfirm,
-    onClose,
+    // onConfirm,
+    // onClose,
     showHeader = true,
-    showClose = false,
-    confirmText,
-    cancelText,
+    // showClose = false,
+    // confirmText,
+    // cancelText,
     showExitIcon,
     headerIconButtons,
     headerReverse,
@@ -112,7 +112,7 @@ export const BchatWrapperModal = (props: BchatWrapperModalType) => {
             <div className="session-modal__centered">
               {props.children}
 
-              <div className="session-modal__button-group">
+              {/* <div className="session-modal__button-group">
                 {onClose && showClose ? (
                   <BchatButton onClick={props.onClose}>
                     {cancelText || window.i18n('close')}
@@ -123,7 +123,7 @@ export const BchatWrapperModal = (props: BchatWrapperModalType) => {
                     {confirmText || window.i18n('ok')}
                   </BchatButton>
                 ) : null}
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
