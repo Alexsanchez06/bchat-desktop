@@ -210,7 +210,7 @@ $bchat-compose-margin: 20px;
     }
 
     .bchat-search-input {
-      margin: 10px $session-compose-margin 0 $session-compose-margin;
+      margin: 10px $bchat-compose-margin 0 $bchat-compose-margin;
       width: -webkit-fill-available;
     }
 
@@ -343,7 +343,7 @@ $bchat-compose-margin: 20px;
   .bchat-text-logo {
     margin-top: 10px;
     width: 250px;
-    filter: var(--filter-session-text);
+    filter: var(--filter-bchat-text);
 
     transition: 0s;
 

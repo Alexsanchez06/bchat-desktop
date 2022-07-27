@@ -19,7 +19,7 @@ const QuotedMessageCompositionReply = styled.div`
   background: var(--color-quote-bottom-bar-background);
   border-radius: var(--margins-sm);
   padding: var(--margins-xs);
-  box-shadow: var(--color-session-shadow);
+  box-shadow: var(--color-bchat-shadow);
   margin: var(--margins-xs);
 `;
 

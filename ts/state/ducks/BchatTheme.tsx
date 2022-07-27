@@ -21,13 +21,13 @@ const darkColorTextOpposite = white;
 
 const darkColorTextSubtle = `${white}99`;
 const darkColorTextAccent = accentDarkTheme;
-const darkColorSessionShadow = `0 0 4px 0 ${white}33`;
+const darkColorBchatShadow = `0 0 4px 0 ${white}33`;
 const darkColorComposeViewBg = '#232323';
 const darkColorSentMessageBg = accentDarkTheme;
 const darkColorSentMessageText = white;
 const darkColorClickableHovered = '#303041';
-const darkColorSessionBorder = `1px solid ${borderDarkThemeColor}`;
-const darkColorSessionBorderColor = borderDarkThemeColor;
+const darkColorBchatBorder = `1px solid ${borderDarkThemeColor}`;
+const darkColorBchatBorderColor = borderDarkThemeColor;
 const darkColorRecoveryPhraseBannerBg = '#1f1f1f';
 const darkColorPillDivider = '#353535';
 const darkColorLastSeenIndicator = accentDarkTheme;
@@ -38,7 +38,7 @@ const darkColorReceivedMessageText = white;
 
 const darkColorPillDividerText = '#a0a0a0';
 const darkInputBackground = darkColorCellBackground;
-const darkFilterSessionText = 'none';
+const darkFilterBchatText = 'none';
 const darkUnreadBorder = `4px solid ${accentDarkTheme}`;
 
 const darkScrollbarThumb = '#474646';
@@ -79,7 +79,7 @@ export const switchHtmlToDarkTheme = () => {
   document.documentElement.style.setProperty('--color-text-subtle', darkColorTextSubtle);
   document.documentElement.style.setProperty('--color-text-accent', darkColorTextAccent);
   document.documentElement.style.setProperty('--color-text-opposite', darkColorTextOpposite);
-  document.documentElement.style.setProperty('--color-session-shadow', darkColorSessionShadow);
+  document.documentElement.style.setProperty('--color-Bchat-shadow', darkColorBchatShadow);
   document.documentElement.style.setProperty(
     '--color-compose-view-button-background',
     darkColorComposeViewBg
@@ -93,8 +93,8 @@ export const switchHtmlToDarkTheme = () => {
     '--color-clickable-hovered',
     darkColorClickableHovered
   );
-  document.documentElement.style.setProperty('--color-session-border', darkColorSessionBorder);
-  document.documentElement.style.setProperty('--color-session-border', darkColorSessionBorderColor);
+  document.documentElement.style.setProperty('--color-bchat-border', darkColorBchatBorder);
+  document.documentElement.style.setProperty('--color-bchat-border', darkColorBchatBorderColor);
   document.documentElement.style.setProperty(
     '--color-recovery-phrase-banner-background',
     darkColorRecoveryPhraseBannerBg
@@ -120,7 +120,7 @@ export const switchHtmlToDarkTheme = () => {
   document.documentElement.style.setProperty('--color-pill-divider-text', darkColorPillDividerText);
   document.documentElement.style.setProperty('--color-input-background', darkInputBackground);
 
-  document.documentElement.style.setProperty('--filter-session-text', darkFilterSessionText);
+  document.documentElement.style.setProperty('--filter-bchat-text', darkFilterBchatText);
   document.documentElement.style.setProperty('--border-unread', darkUnreadBorder);
 
   document.documentElement.style.setProperty('--color-scroll-bar-thumb', darkScrollbarThumb);
@@ -149,7 +149,7 @@ export const switchHtmlToDarkTheme = () => {
   document.documentElement.style.setProperty('--color-background-primary', darkBackgroundPrimary);
   document.documentElement.style.setProperty('--color-button-green', darkButtonGreen);
   document.documentElement.style.setProperty('--color-modal-background', darkModalBackground);
-  document.documentElement.style.setProperty('--border-session', darkColorSessionBorder);
+  document.documentElement.style.setProperty('--border-bchat', darkColorBchatBorder);
 
   document.documentElement.style.setProperty(
     '--color-request-banner-background',
@@ -209,12 +209,12 @@ const lightColorText = black;
 const lightColorTextOpposite = white;
 const lightColorTextSubtle = `${black}99`;
 const lightColorTextAccent = accentLightTheme;
-const lightColorSessionShadow = `0 0 4px 0 ${black}5E`;
+const lightColorBchatShadow = `0 0 4px 0 ${black}5E`;
 const lightColorComposeViewBg = '#efefef';
 const lightColorSentMessageBg = accentLightTheme;
 const lightColorClickableHovered = '#dfdfdf';
-const lightColorSessionBorderColor = borderLightThemeColor;
-const lightColorSessionBorder = `1px solid ${lightColorSessionBorderColor}`;
+const lightColorBchatBorderColor = borderLightThemeColor;
+const lightColorBchatBorder = `1px solid ${lightColorBchatBorderColor}`;
 const lightColorRecoveryPhraseBannerBg = white;
 const lightColorPillDivider = `${black}1A`;
 const lightColorLastSeenIndicator = black;
@@ -226,7 +226,7 @@ const lightColorReceivedMessageText = black;
 const lightColorPillDividerText = '#555555';
 
 const lightInputBackground = '#efefef';
-const lightFilterSessionText = 'brightness(0) saturate(100%)';
+const lightFilterBchatText = 'brightness(0) saturate(100%)';
 const lightUnreadBorder = `4px solid ${accentLightTheme}`;
 
 const lightScrollbarThumb = '#474646';
@@ -267,7 +267,7 @@ export const switchHtmlToLightTheme = () => {
   document.documentElement.style.setProperty('--color-text-accent', lightColorTextAccent);
   document.documentElement.style.setProperty('--color-text-opposite', lightColorTextOpposite);
 
-  document.documentElement.style.setProperty('--color-session-shadow', lightColorSessionShadow);
+  document.documentElement.style.setProperty('--color-bchat-shadow', lightColorBchatShadow);
   document.documentElement.style.setProperty(
     '--color-compose-view-button-background',
     lightColorComposeViewBg
@@ -281,10 +281,10 @@ export const switchHtmlToLightTheme = () => {
     '--color-clickable-hovered',
     lightColorClickableHovered
   );
-  document.documentElement.style.setProperty('--color-session-border', lightColorSessionBorder);
+  document.documentElement.style.setProperty('--color-bchat-border', lightColorBchatBorder);
   document.documentElement.style.setProperty(
-    '--color-session-border',
-    lightColorSessionBorderColor
+    '--color-bchat-border',
+    lightColorBchatBorderColor
   );
   document.documentElement.style.setProperty(
     '--color-recovery-phrase-banner-background',
@@ -313,7 +313,7 @@ export const switchHtmlToLightTheme = () => {
     lightColorPillDividerText
   );
   document.documentElement.style.setProperty('--color-input-background', lightInputBackground);
-  document.documentElement.style.setProperty('--filter-session-text', lightFilterSessionText);
+  document.documentElement.style.setProperty('--filter-bchat-text', lightFilterBchatText);
   document.documentElement.style.setProperty('--border-unread', lightUnreadBorder);
 
   document.documentElement.style.setProperty('--color-scroll-bar-thumb', lightScrollbarThumb);
@@ -342,7 +342,7 @@ export const switchHtmlToLightTheme = () => {
   document.documentElement.style.setProperty('--color-background-primary', lightBackgroundPrimary);
   document.documentElement.style.setProperty('--color-button-green', lightButtonGreen);
   document.documentElement.style.setProperty('--color-modal-background', lightModalBackground);
-  document.documentElement.style.setProperty('--border-session', lightColorSessionBorder);
+  document.documentElement.style.setProperty('--border-bchat', lightColorBchatBorder);
   document.documentElement.style.setProperty(
     '--color-request-banner-background',
     lightMessageRequestBannerBackground
@@ -366,7 +366,7 @@ export const switchHtmlToLightTheme = () => {
 };
 
 // default to light theme
-export const SessionGlobalStyles = createGlobalStyle`
+export const BchatGlobalStyles = createGlobalStyle`
   html {
     /* FONTS */
     --font-default:  'Roboto';
@@ -385,10 +385,10 @@ export const SessionGlobalStyles = createGlobalStyle`
     /* ANIMATIONS */
     --default-duration: '0.25s';
     /* FILTERS */
-    --filter-session-text: ${lightFilterSessionText};
+    --filter-bchat-text: ${lightFilterBchatText};
     /* BORDERS */
     --border-unread: ${lightUnreadBorder};
-    --border-session:  ${lightColorSessionBorder};
+    --border-bchat:  ${lightColorBchatBorder};
 
     /* COLORS NOT CHANGING BETWEEN THEMES */
     --color-warning:  ${warning};
@@ -402,12 +402,12 @@ export const SessionGlobalStyles = createGlobalStyle`
     --color-text-accent:  ${lightColorTextAccent};
     --color-text-opposite:  ${lightColorTextOpposite};
 
-    --color-session-shadow: ${lightColorSessionShadow};
+    --color-bchat-shadow: ${lightColorBchatShadow};
     --color-compose-view-button-background: ${lightColorComposeViewBg};
     --color-sent-message-background:  ${lightColorSentMessageBg};
     --color-sent-message-text:  ${darkColorSentMessageText};
     --color-clickable-hovered: ${lightColorClickableHovered};
-    --color-session-border:  ${lightColorSessionBorderColor};
+    --color-bchat-border:  ${lightColorBchatBorderColor};
     --color-recovery-phrase-banner-background: ${lightColorRecoveryPhraseBannerBg};
     --color-pill-divider:  ${lightColorPillDivider};
     --color-last-seen-indicator: ${lightColorLastSeenIndicator};
@@ -444,7 +444,7 @@ export const SessionGlobalStyles = createGlobalStyle`
 
 export const BchatTheme = ({ children }: { children: any }) => (
   <>
-    <SessionGlobalStyles />
+    <BchatGlobalStyles />
     {children}
   </>
 );

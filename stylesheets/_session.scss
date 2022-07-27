@@ -444,7 +444,7 @@ label {
   background-color: var(--color-modal-background);
   color: var(--color-text);
   border: var(--border-session);
-  box-shadow: var(--color-session-shadow);
+  box-shadow: var(--color-bchat-shadow);
 
   overflow: hidden;
   display: flex;
@@ -1307,7 +1307,7 @@ input {
     border-radius: 50%;
     opacity: 1;
     background-color: var(--color-cell-background);
-    box-shadow: var(--color-session-shadow);
+    box-shadow: var(--color-bchat-shadow);
 
     svg path {
       transition: $bchat-transition-duration;

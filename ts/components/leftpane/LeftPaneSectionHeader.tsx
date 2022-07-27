@@ -188,7 +188,7 @@ const StyledProgressBarContainer = styled.div`
   width: 100%;
   height: 5px;
   flex-direction: row;
-  background: var(--color-session-border);
+  background: var(--color-bchat-border);
 `;
 
 const StyledProgressBarInner = styled.div`
