@@ -202,13 +202,13 @@ export const SignInTab = (props:any) => {
     <div className="session-registration__content">
       {screenName && (
         <>
-          <div className='session-registration__backbutton'>
+          <div className='session-registration__backbutton' style={{left:'52px'}}>
           <GoBackMainMenuButton assent={()=>{
             props.assent(true);
             clickGoBack()}}
           />
           </div>
-          <div className='session-registration-header'>Restore from Seed</div>
+          <div className='session-registration-header'>{window.i18n('restoreFromSeed')}</div>
           <BchatInput
             autoFocus={true}
             label={window.i18n('displayName')}
@@ -259,15 +259,15 @@ export const SignInTab = (props:any) => {
               inputDataTestId="display-name-input"
             />
           </div>
-
+          <div style={{width:'75%',marginLeft:'57px'}}>
           <SignInContinueButton
             signInMode={signInMode}
             handleContinueYourBchatClick={continueYourBchat}
             disabled={!activateContinueButton}
           />
+          </div>
         </>
       )}
-
       <SignInButtons
         signInMode={signInMode}
         onRecoveryButtonClicked={() => {

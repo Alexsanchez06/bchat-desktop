@@ -24,7 +24,7 @@ export const ClearIcon = (props:any)=>(
          height: "10px",
          position: 'relative',
          top:"8px",
-         marginLeft: '410px',
+         marginLeft: '425px',
          cursor:'pointer',
          backgroundSize:'cover'
          }}

@@ -74,13 +74,13 @@ export const ShowRecoveryPhase= (props:any) => {
   //     </div>
   // );
   return(
-     <div className='session-registration-welcome-screen-container' style={{width:'80%',marginLeft:'160px'}}>
+     <div className='session-registration-welcome-screen-container' style={{width:'80%',marginLeft:'85px'}}>
       <Flex  flexDirection="row" container={true} height="100%">
       <Flex 
         alignItems="center"
         flexDirection="row"
         height="100%"
-        width='60%'
+        width='86%'
         justifyContent="center"
         >
         <div className='session-registration-welcome-screen-goback'>

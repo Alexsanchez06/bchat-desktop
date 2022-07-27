@@ -164,8 +164,8 @@ export const SignUpTab = (props:any) => {
   if(displayNameScreen)
   {
     return (
-    <div className="session-registration__content" style={{width: '130%',paddingTop:'0px'}}>
-      <Flex flexDirection="row" container={true} alignItems="center" padding="14px 0px">
+    <div className="session-registration__content" style={{paddingTop:'0px'}}>
+      <Flex flexDirection="row" container={true} alignItems="center" padding="14px 0px" margin='0px 0px 0px 65px'>
         <div className='session-registration-goback-icon'>
         {/* style={{ position: 'relative', color: 'white', top: '0px',left:"0px" }} */}
         <GoBackMainMenuButton assent={()=>{props.assent(true);clickGoBack()}} />
@@ -187,6 +187,7 @@ export const SignUpTab = (props:any) => {
         }}
         stealAutoFocus={true}
       />
+      <div style={{width:'76%',marginLeft:'55px'}}>
       <BchatButton
         onClick={()=> {verifyUserName()}}
         buttonType={BchatButtonType.Brand}
@@ -194,6 +195,7 @@ export const SignUpTab = (props:any) => {
         text={window.i18n('getStarted')}
         // disabled={!enableCompleteSignUp}
       />
+      </div>
     </div>
     );
   }

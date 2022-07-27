@@ -221,8 +221,8 @@ export const RegistrationStages = () => {
     }
   };
   return (
-    // <div className="session-registration-container">
-    <div>
+    <div className="session-registration-container">
+    {/* <div> */}
       <RegistrationContext.Provider
         value={{
           registrationPhase,
