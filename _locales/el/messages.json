@@ -137,7 +137,7 @@
   "imageCaptionIconAlt": "Εικονίδιο που ενδεικνύει ότι αυτή η εικόνα έχει υπότιτλο",
   "addACaption": "Προσθήκη λεζάντας...",
   "copy": "Copy",
-  "copySessionID": "Copy BChat ID",
+  "copyBchatID": "Copy BChat ID",
   "copyOpenGroupURL": "Copy Group's URL",
   "save": "Αποθήκευση",
   "saveLogToDesktop": "Save log to desktop",

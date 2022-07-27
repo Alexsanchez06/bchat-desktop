@@ -137,7 +137,7 @@
   "imageCaptionIconAlt": "Icona que mostra que aquesta imatge té un títol",
   "addACaption": "Afegiu-hi un títol...",
   "copy": "Copiar",
-  "copySessionID": "Copia l'ID de BChat",
+  "copyBchatID": "Copia l'ID de BChat",
   "copyOpenGroupURL": "Copia l'URL del grup",
   "save": "Desa",
   "saveLogToDesktop": "Save log to desktop",

@@ -137,7 +137,7 @@
   "imageCaptionIconAlt": "Symbol, das auf eine Beschriftung des Bildes hinweist",
   "addACaption": "Beschriftung hinzufügen...",
   "copy": "Kopieren",
-  "copySessionID": "BChat-ID kopieren",
+  "copyBchatID": "BChat-ID kopieren",
   "copyOpenGroupURL": "Gruppen-URL kopieren",
   "save": "Speichern",
   "saveLogToDesktop": "Protokoll auf dem Desktop speichern",

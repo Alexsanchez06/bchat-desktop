@@ -137,7 +137,7 @@
   "imageCaptionIconAlt": "Ícone que mostra que esta imagem tem uma legenda",
   "addACaption": "Adicionar uma legenda...",
   "copy": "Copy",
-  "copySessionID": "Copy BChat ID",
+  "copyBchatID": "Copy BChat ID",
   "copyOpenGroupURL": "Copy Group's URL",
   "save": "Guardar",
   "saveLogToDesktop": "Save log to desktop",

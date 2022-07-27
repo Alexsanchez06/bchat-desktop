@@ -137,7 +137,7 @@
   "imageCaptionIconAlt": "Piktograma, rodanti, kad šis paveikslas turi paaiškinimą",
   "addACaption": "Pridėti paaiškinimą...",
   "copy": "Kopijuoti",
-  "copySessionID": "Kopijuoti BChat ID",
+  "copyBchatID": "Kopijuoti BChat ID",
   "copyOpenGroupURL": "Kopijuoti grupės URL",
   "save": "Įrašyti",
   "saveLogToDesktop": "Save log to desktop",

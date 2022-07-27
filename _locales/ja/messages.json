@@ -137,7 +137,7 @@
   "imageCaptionIconAlt": "この画像にキャプションがあることを示すアイコン",
   "addACaption": "キャプション追加...",
   "copy": "コピーする",
-  "copySessionID": "BChat ID をコピー",
+  "copyBchatID": "BChat ID をコピー",
   "copyOpenGroupURL": "グループのURLをコピー",
   "save": "保存",
   "saveLogToDesktop": "デスクトップにログを保存",

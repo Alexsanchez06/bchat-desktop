@@ -137,7 +137,7 @@
   "imageCaptionIconAlt": "显示这张图片有注释的图标",
   "addACaption": "添加注释...",
   "copy": "复制",
-  "copySessionID": "复制 BChat ID",
+  "copyBchatID": "复制 BChat ID",
   "copyOpenGroupURL": "复制群组链接",
   "save": "保存",
   "saveLogToDesktop": "保存日志到桌面",

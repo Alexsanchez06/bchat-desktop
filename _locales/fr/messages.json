@@ -137,7 +137,7 @@
   "imageCaptionIconAlt": "Icône qui indique que cette image a une légende",
   "addACaption": "Ajouter un légende…",
   "copy": "Copier",
-  "copySessionID": "Copier la BChat ID",
+  "copyBchatID": "Copier la BChat ID",
   "copyOpenGroupURL": "Copier l'URL de Group",
   "save": "Enregistrer",
   "saveLogToDesktop": "Enregistrer le journal sur le bureau de l'ordinateur",

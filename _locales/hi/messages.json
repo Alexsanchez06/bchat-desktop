@@ -137,7 +137,7 @@
   "imageCaptionIconAlt": "Icon showing that this image has a caption",
   "addACaption": "Add a caption...",
   "copy": "Copy",
-  "copySessionID": "Copy BChat ID",
+  "copyBchatID": "Copy BChat ID",
   "copyOpenGroupURL": "Copy Group's URL",
   "save": "संरक्षित करें",
   "saveLogToDesktop": "Save log to desktop",

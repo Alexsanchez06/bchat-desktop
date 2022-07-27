@@ -137,7 +137,7 @@
   "imageCaptionIconAlt": "Bu görüntünün başlığı olduğunu gösteren ikon",
   "addACaption": "Bir başlık ekleyin...",
   "copy": "Kopyala",
-  "copySessionID": "BChat Kimliğini Kopyala",
+  "copyBchatID": "BChat Kimliğini Kopyala",
   "copyOpenGroupURL": "Grubun URL'sini Kopyala",
   "save": "Kaydet",
   "saveLogToDesktop": "Günlüğü masaüstüne kaydet",

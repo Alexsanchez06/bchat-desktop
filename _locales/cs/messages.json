@@ -137,7 +137,7 @@
   "imageCaptionIconAlt": "Icon showing that this image has a caption",
   "addACaption": "Přidat titulek...",
   "copy": "Copy",
-  "copySessionID": "Copy BChat ID",
+  "copyBchatID": "Copy BChat ID",
   "copyOpenGroupURL": "Copy Group's URL",
   "save": "Uložit",
   "saveLogToDesktop": "Save log to desktop",
