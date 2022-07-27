@@ -75,7 +75,7 @@ export const GoBackMainMenuButton = (props:any) => {
 //         <GoBackMainMenuButton />
 
 //         <div className="bchat-registration__unique-bchat-id">
-//           {window.i18n('yourUniqueSessionID')}
+//           {window.i18n('yourUniqueBchatID')}
 //         </div>
 //       </Flex>
 //       <BchatIdEditable editable={false} placeholder={undefined} dataTestId="session-id-signup" />

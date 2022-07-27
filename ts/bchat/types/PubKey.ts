@@ -106,7 +106,7 @@ export class PubKey {
     // Check if it's hex
     const isHex = pubkey.replace(/[\s]*/g, '').match(/^[0-9a-fA-F]+$/);
     if (!isHex) {
-      return window.i18n('invalidSessionId');
+      return window.i18n('invalidBchatId');
     }
 
     // Check if the pubkey length is 33 and leading with 05 or of length 32
