@@ -327,8 +327,8 @@ $bchat-compose-margin: 20px;
   // for bchat style
 
   .bchat-brand-logo {
-    height: 180px;
-    filter: brightness(0) saturate(100%) invert(75%) sepia(84%) saturate(3272%) hue-rotate(103deg) brightness(106%) contrast(103%);
+    height: 200px;
+    // filter: brightness(0) saturate(100%) invert(75%) sepia(84%) saturate(3272%) hue-rotate(103deg) brightness(106%) contrast(103%);
   }
 
   .bchat-text {
@@ -341,7 +341,7 @@ $bchat-compose-margin: 20px;
   }
 
   .bchat-text-logo {
-    margin-top: 10px;
+    margin-top: 12px;
     width: 250px;
     filter: var(--filter-bchat-text);
 
