@@ -24,7 +24,7 @@ window.isDev = () => config.environment === 'development';
 window.getCommitHash = () => configAny.commitHash;
 window.getNodeVersion = () => configAny.node_version;
 
-window.sessionFeatureFlags = {
+window.bchatFeatureFlags = {
   useOnionRequests: true,
   useTestNet: Boolean(
     process.env.NODE_APP_INSTANCE && process.env.NODE_APP_INSTANCE.includes('testnet')
@@ -237,7 +237,7 @@ window.ReactDOM = require('react-dom');
 window.clipboard = clipboard;
 
 window.getSeedNodeList = () =>
-  window.sessionFeatureFlags.useTestNet
+  window.bchatFeatureFlags.useTestNet
     ? ['http://public.loki.foundation:38157']
     : [
         // 'https://storage.seed1.loki.network:4433/',

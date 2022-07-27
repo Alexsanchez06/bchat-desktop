@@ -45,9 +45,9 @@ export const BchatToggle = (props: Props) => {
   };
 
   return (
-    <div className="session-settings-item__selection">
+    <div className="bchat-settings-item__selection">
       <div
-        className={classNames('session-toggle', props.active ? 'active' : '')}
+        className={classNames('bchat-toggle', props.active ? 'active' : '')}
         role="button"
         onClick={clickHandler}
       >

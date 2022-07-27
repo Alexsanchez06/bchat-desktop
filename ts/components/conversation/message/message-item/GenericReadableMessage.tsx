@@ -159,10 +159,10 @@ export const GenericReadableMessage = (props: Props) => {
     <ReadableMessage
       messageId={messageId}
       className={classNames(
-        'session-message-wrapper',
+        'bchat-message-wrapper',
         selected && 'message-selected',
         isGroup && 'public-chat-message-wrapper',
-        isIncoming ? 'session-message-wrapper-incoming' : 'session-message-wrapper-outgoing'
+        isIncoming ? 'bchat-message-wrapper-incoming' : 'bchat-message-wrapper-outgoing'
       )}
       onContextMenu={handleContextMenu}
       receivedAt={receivedAt}

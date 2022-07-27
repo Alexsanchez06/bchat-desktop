@@ -180,12 +180,12 @@ export const DeleteAccountModal = () => {
       <div className="bchat-modal__centered">
         <BchatHtmlRenderer
           tag="span"
-          className="session-confirm-main-message"
+          className="bchat-confirm-main-message"
           html={window.i18n('deleteAccountWarning')}
         />
         <BchatHtmlRenderer
           tag="span"
-          className="session-confirm-main-message"
+          className="bchat-confirm-main-message"
           html={window.i18n('dialogClearAllDataDeletionQuestion')}
         />
         <SpacerLG />
@@ -213,7 +213,7 @@ export const DeleteAccountModal = () => {
         {deleteEverythingWithNetwork && (
           <BchatHtmlRenderer
             tag="span"
-            className="session-confirm-main-message"
+            className="bchat-confirm-main-message"
             html={window.i18n('areYouSureDeleteEntireAccount')}
           />
         )}
@@ -221,7 +221,7 @@ export const DeleteAccountModal = () => {
         {deleteDeviceOnly && (
           <BchatHtmlRenderer
             tag="span"
-            className="session-confirm-main-message"
+            className="bchat-confirm-main-message"
             html={window.i18n('areYouSureDeleteDeviceOnly')}
           />
         )}

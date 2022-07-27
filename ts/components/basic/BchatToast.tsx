@@ -77,7 +77,7 @@ export const BchatToast = (props: Props) => {
       container={true}
       alignItems="center"
       onClick={props?.onToastClick || noop}
-      data-testid="session-toast"
+      data-testid="bchat-toast"
     >
       <IconDiv>
         <BchatIcon iconType={toastIcon} iconSize={toastIconSize} />
@@ -86,7 +86,7 @@ export const BchatToast = (props: Props) => {
         container={true}
         justifyContent="flex-start"
         flexDirection="column"
-        className="session-toast"
+        className="bchat-toast"
       >
         <TitleDiv>{title}</TitleDiv>
         {toastDesc && <DescriptionDiv>{toastDesc}</DescriptionDiv>}

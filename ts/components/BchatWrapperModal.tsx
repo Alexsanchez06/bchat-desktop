@@ -75,7 +75,7 @@ export const BchatWrapperModal = (props: BchatWrapperModalType) => {
     <div
       className={classNames('loki-dialog modal', additionalClassName ? additionalClassName : null)}
     >
-      <div className="session-confirm-wrapper">
+      <div className="bchat-confirm-wrapper">
         <div ref={modalRef} className="bchat-modal">
           {showHeader ? (
             <div className={classNames('bchat-modal__header', headerReverse && 'reverse')}>

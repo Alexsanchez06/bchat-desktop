@@ -171,7 +171,7 @@ export const SignInTab = (props:any) => {
   if (signInMode !== SignInMode.Default && !screenName) {
 
     return <>
-      <div className='session-registration__backbutton'> 
+      <div className='bchat-registration__backbutton'> 
         <GoBackMainMenuButton assent={()=>props.assent(true)} />
       </div>
       <DisplaySeed
@@ -188,7 +188,7 @@ export const SignInTab = (props:any) => {
   }
 
   // if(signInMode == SignInMode.UsingRecoveryPhrase){
-  //  return( <div className="session-registration__content">
+  //  return( <div className="bchat-registration__content">
 
   //   <>
   //     <GoBackMainMenuButton />
@@ -199,16 +199,16 @@ export const SignInTab = (props:any) => {
   // }
   
   return (
-    <div className="session-registration__content">
+    <div className="bchat-registration__content">
       {screenName && (
         <>
-          <div className='session-registration__backbutton' style={{left:'52px'}}>
+          <div className='bchat-registration__backbutton' style={{left:'52px'}}>
           <GoBackMainMenuButton assent={()=>{
             props.assent(true);
             clickGoBack()}}
           />
           </div>
-          <div className='session-registration-header'>{window.i18n('restoreFromSeed')}</div>
+          <div className='bchat-registration-header'>{window.i18n('restoreFromSeed')}</div>
           <BchatInput
             autoFocus={true}
             label={window.i18n('displayName')}
@@ -225,8 +225,8 @@ export const SignInTab = (props:any) => {
             inputDataTestId="display-name-input"
           />
           <div>
-            <hr className='session-registration-hr'></hr>
-            <p className='session-restore-seed-textbox-message'>If you dont know the restore blockheight, you can skip it.</p>
+            <hr className='bchat-registration-hr'></hr>
+            <p className='bchat-restore-seed-textbox-message'>If you dont know the restore blockheight, you can skip it.</p>
             <BchatInput
               autoFocus={true}
               type="text"
@@ -244,9 +244,9 @@ export const SignInTab = (props:any) => {
             />
 
           </div>
-          <div className='session-restore-seed-or'> OR </div>
+          <div className='bchat-restore-seed-or'> OR </div>
           <div style={{marginBottom:"56px"}} >
-            <p className='session-restore-seed-textbox-message'>If you dont know the restore Date, you can skip it.</p>
+            <p className='bchat-restore-seed-textbox-message'>If you dont know the restore Date, you can skip it.</p>
 
             <BchatInput
               autoFocus={true}

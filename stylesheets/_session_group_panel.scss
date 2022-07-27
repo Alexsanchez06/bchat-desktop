@@ -4,7 +4,7 @@
   height: 100vh;
   width: -webkit-fill-available;
   background: var(--color-cell-background);
-  border-left: var(--border-session);
+  border-left: var(--border-bchat);
 
   align-items: center;
 
@@ -32,7 +32,7 @@
     width: inherit;
     color: var(--color-text);
     background: var(--color-cell-background);
-    border: var(--border-session);
+    border: var(--border-bchat);
 
     text-align: center;
     display: none;
@@ -45,8 +45,8 @@
     font-size: 0.8rem;
     color: var(--color-text);
     background: var(--color-cell-background);
-    border-top: var(--border-session);
-    border-bottom: var(--border-session);
+    border-top: var(--border-bchat);
+    border-bottom: var(--border-bchat);
 
     width: -webkit-fill-available;
     padding: 0 $bchat-margin-md;
@@ -72,7 +72,7 @@
     flex-shrink: 0;
     align-items: center;
     border: none;
-    border-top: var(--border-session);
+    border-top: var(--border-bchat);
   }
 
   .module-empty-state {

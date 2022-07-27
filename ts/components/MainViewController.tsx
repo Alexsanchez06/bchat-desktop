@@ -10,18 +10,18 @@ export class MessageView extends React.Component {
       <div className="conversation placeholder">
         <div className="conversation-header" />
         <div className="container">
-          <div className="content session-full-logo">
+          <div className="content bchat-full-logo">
             {/* <img
-              src="images/session/brand.svg"
-              className="session-brand-logo"
+              src="images/bchat/brand.svg"
+              className="bchat-brand-logo"
               alt="full-brand-logo"
             />
             <img
-              src="images/session/session-text.svg"
-              className="session-text-logo"
+              src="images/bchat/bchat-text.svg"
+              className="bchat-text-logo"
               alt="full-brand-logo"
             /> */}
-           <p  className="session-text">Much empty. Such wow.<br></br> Get some friends to BChat!</p>
+           <p  className="bchat-text">Much empty. Such wow.<br></br> Get some friends to BChat!</p>
           </div>
         </div>
       </div>

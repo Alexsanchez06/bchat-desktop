@@ -33,19 +33,19 @@
 // }
 
 // export const RestoreSeedInput = (props:any) => (
-//       <div className={"session-id-And-Address-container"}
+//       <div className={"bchat-id-And-Address-container"}
 //         style={{
 //         width: "50%",
 //         margin: '0 auto',
 //         textAlign:"center"
 //       }}  >
 //       <h1 
-//       className={"session-head"} 
+//       className={"bchat-head"} 
 //         style={{
 //         color:"white"
 //         }}>{window.i18n('recoveryPhrase')}</h1>
-//          <div className="session-registration__content">
-//          <div className='session-registration__entry-fields'>
+//          <div className="bchat-registration__content">
+//          <div className='bchat-registration__entry-fields'>
 //         <RecoveryPhraseInput
 //           recoveryPhrase={props.recoveryPhrase as string}
 //           handlePressEnter={props.handlePressEnter}
@@ -109,8 +109,8 @@
     
 
 // export const DisplaySeed = (props: any) => (
-//     <div className={"session-id-And-Address-container ,display-seed"}  style={{ width: "500px", margin: '0 auto' }}  >
-//         {/* <h1 className={"session-head"} style={{ textAlign: 'center', color: "white" }}></h1> */}
+//     <div className={"bchat-id-And-Address-container ,display-seed"}  style={{ width: "500px", margin: '0 auto' }}  >
+//         {/* <h1 className={"bchat-head"} style={{ textAlign: 'center', color: "white" }}></h1> */}
 //         <div className='id-And-Address-Sub-container' style={{ margin: "20px 0 65px" }}>
 //             <h6 style={{ textAlign: "center", color: "white", fontSize: '18px', margin: 0, padding: "7px 0 20px 0px",fontWeight:"bold" }}>Restore from  store</h6>
 //         {props.copyButton ? <Icons icon={"copy"} iconfunc={props.iconfunc}/>:<Icons icon={"paste"} iconfunc={props.iconfunc} /> }

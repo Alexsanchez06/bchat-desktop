@@ -25,9 +25,9 @@ export const BchatDropdown = (props: Props) => {
   const chevronOrientation = expanded ? 180 : 0;
 
   return (
-    <div className="session-dropdown">
+    <div className="bchat-dropdown">
       <div
-        className="session-dropdown__label"
+        className="bchat-dropdown__label"
         onClick={() => {
           setExpanded(!expanded);
         }}
@@ -38,7 +38,7 @@ export const BchatDropdown = (props: Props) => {
       </div>
 
       {expanded && (
-        <div className="session-dropdown__list-container">
+        <div className="bchat-dropdown__list-container">
           {options.map((item: any) => {
             return (
               <BchatDropdownItem

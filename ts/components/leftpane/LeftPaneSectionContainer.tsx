@@ -5,7 +5,7 @@ export const LeftPaneSectionContainer = styled.div`
   display: flex;
   flex-direction:row;
   align-items: center;
-  border-right: var(--border-session);
+  border-right: var(--border-bchat);
   overflow-y: auto;
   background-color:#128B17; 
 

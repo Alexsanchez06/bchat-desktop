@@ -105,10 +105,10 @@ export class EditProfileDialog extends React.Component<{}, State> {
           {viewDefault && this.renderDefaultView()}
           {viewEdit && this.renderEditView()}
 
-          <div className="session-id-section">
+          <div className="bchat-id-section">
             <PillDivider text={window.i18n('yourSessionID')} />
             <p
-              className={classNames('text-selectable', 'session-id-section-display')}
+              className={classNames('text-selectable', 'bchat-id-section-display')}
               data-testid="your-session-id"
             >
               {sessionID}

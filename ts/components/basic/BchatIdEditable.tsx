@@ -45,10 +45,10 @@ export const BchatIdEditable = (props: Props) => {
   }
 
   return (
-    <div className={classNames('session-id-editable', !editable && 'session-id-editable-disabled')}>
+    <div className={classNames('bchat-id-editable', !editable && 'bchat-id-editable-disabled')}>
       <textarea
         className={classNames(
-          isGroup ? 'group-id-editable-textarea' : 'session-id-editable-textarea'
+          isGroup ? 'group-id-editable-textarea' : 'bchat-id-editable-textarea'
         )}
         ref={inputRef}
         placeholder={placeholder}

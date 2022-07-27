@@ -120,8 +120,8 @@ export class BchatRecording extends React.Component<Props, State> {
     const actionPauseFn = isPlaying ? this.pauseAudio : this.stopRecordingStream;
 
     return (
-      <div role="main" className="session-recording" tabIndex={0} onKeyDown={this.onKeyDown}>
-        <div className="session-recording--actions">
+      <div role="main" className="bchat-recording" tabIndex={0} onKeyDown={this.onKeyDown}>
+        <div className="bchat-recording--actions">
           <StyledFlexWrapper marginHorizontal="5px">
             {isRecording && (
               <BchatIconButton
@@ -150,15 +150,15 @@ export class BchatRecording extends React.Component<Props, State> {
         </div>
 
         {hasRecording && !isRecording ? (
-          <div className={classNames('session-recording--timer', !isRecording && 'playback-timer')}>
+          <div className={classNames('bchat-recording--timer', !isRecording && 'playback-timer')}>
             {displayTimeString + remainingTimeString}
           </div>
         ) : null}
 
         {isRecording ? (
-          <div className={classNames('session-recording--timer')}>
+          <div className={classNames('bchat-recording--timer')}>
             {displayTimeString}
-            <div className="session-recording--timer-light" />
+            <div className="bchat-recording--timer-light" />
           </div>
         ) : null}
 

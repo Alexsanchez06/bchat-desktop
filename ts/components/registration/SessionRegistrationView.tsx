@@ -13,8 +13,8 @@ export const SessionRegistrationView = () => {
     void setSignInByLinking(false);
   }, []);
   return (
-    <div className="session-fullscreen">
-      <div className="session-full-screen-flow session-fullscreen">
+    <div className="bchat-fullscreen">
+      <div className="bchat-full-screen-flow bchat-fullscreen">
         <BchatTheme>
           <div style={{background:"url(images/bchat/doodle_white.svg)",width:"100%",height:"100%"}}>
           <Flex
@@ -24,7 +24,7 @@ export const SessionRegistrationView = () => {
             width='100%'
           >
             <Flex 
-            className="session-content-left"
+            className="bchat-content-left"
             alignItems="center"
             flexDirection="row"
             container={true}
@@ -32,12 +32,12 @@ export const SessionRegistrationView = () => {
             width='40%'
             justifyContent="center"
             >
-              <div className="session-content-logo" 
+              <div className="bchat-content-logo" 
               style={{backgroundImage:"url(images/bchat/BChat_black_logo.gif)",width:400,height:370}} />
            </Flex>
           
            <Flex
-            className="session-content"
+            className="bchat-content"
             alignItems="center"
             flexDirection="column"
             container={true}

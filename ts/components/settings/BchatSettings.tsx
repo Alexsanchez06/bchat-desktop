@@ -59,7 +59,7 @@ interface State {
 //     void shell.openExternal('https://www.beldex.io/');
 //   };
 //   return (
-//     <div className="session-settings__version-info">
+//     <div className="bchat-settings__version-info">
 //       <span className="text-selectable">v{window.versionInfo.version}</span>
 //       <span>
 //         {/* <BchatIconButton iconSize="medium" iconType="oxen" onClick={openOxenWebsite} /> */}
@@ -78,8 +78,8 @@ export const PasswordLock = ({
   validatePasswordLock: () => Promise<boolean>;
 }) => {
   return (
-    <div className="session-settings__password-lock">
-      <div className="session-settings__password-lock-box">
+    <div className="bchat-settings__password-lock">
+      <div className="bchat-settings__password-lock-box">
         <h3>{window.i18n('password')}</h3>
         <input
           type="password"
@@ -238,17 +238,17 @@ export const PasswordLock = ({
 
 
     return (
-      <div className="session-settings">
+      <div className="bchat-settings">
         <SettingsHeader category={category} categoryTitle={window.i18n(categoryLocalized)} />
 
-        <div className="session-settings-view">
+        <div className="bchat-settings-view">
           {shouldRenderPasswordLock ? (
             <PasswordLock
               pwdLockError={this.state.pwdLockError}
               validatePasswordLock={this.validatePasswordLock}
             />
           ) : (
-            <div ref={this.settingsViewRef} className="session-settings-list">
+            <div ref={this.settingsViewRef} className="bchat-settings-list">
               {this.renderSettingInCategory()}
             </div>
           )}

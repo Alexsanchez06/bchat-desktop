@@ -150,7 +150,7 @@ const MessageRequestListSetting = (props: Props) => {
         //   }}
           style={style}
           className={classNames(
-            'session-settings-messageRequest-list-item',
+            'bchat-settings-messageRequest-list-item',
             // unreadCount && unreadCount > 0 ? 'module-conversation-list-item--has-unread' : null,
             // unreadCount && unreadCount > 0 && mentionedUs
             //   ? 'module-conversation-list-item--mentioned-us'
@@ -162,14 +162,14 @@ const MessageRequestListSetting = (props: Props) => {
           <AvatarItem />
           <div className="module-conversation-list-item__content">
             <ConversationListItemHeaderItem />
-             <div className='session-settings-messageRequest-profileName' >{profileName}</div>
+             <div className='bchat-settings-messageRequest-profileName' >{profileName}</div>
             <MessageItem isMessageRequest={Boolean(isMessageRequest)} />
             {/* <div style={{fontSize:'12px'}}>
              {walletAddress}
           </div> */}
           </div>
           {/* <button style={{background:"green"}} onClick={handleAcceptConversationRequest}>{window.i18n('accept')}</button> */}
-          <div role="button" className='session-settings-messageRequest-acceptButton' onClick={handleAcceptConversationRequest}>
+          <div role="button" className='bchat-settings-messageRequest-acceptButton' onClick={handleAcceptConversationRequest}>
           {window.i18n('accept')}
           </div>
           

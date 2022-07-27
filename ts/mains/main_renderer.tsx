@@ -515,10 +515,10 @@ class TextScramble {
     return this.chars[Math.floor(Math.random() * this.chars.length)];
   }
 }
-window.Session = window.Session || {};
+window.bchat = window.bchat || {};
 
-window.Session.setNewSessionID = (sessionID: string) => {
-  const el = document.querySelector('.session-id-editable-textarea');
+window.bchat.setNewSessionID = (sessionID: string) => {
+  const el = document.querySelector('.bchat-id-editable-textarea');
   const fx = new TextScramble(el);
   if (el) {
     (el as any).value = sessionID;

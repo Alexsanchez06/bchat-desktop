@@ -44,7 +44,7 @@ const CreateBchatIdButton = ({ createSessionID }: { createSessionID: any }) => {
 
 const SignUpDefault = (props: { createSessionID: () => void }) => {
   return (
-    <div className="session-registration__content">
+    <div className="bchat-registration__content">
       <CreateBchatIdButton createSessionID={props.createSessionID} />
     </div>
   );
@@ -70,16 +70,16 @@ export const GoBackMainMenuButton = (props:any) => {
 };
 // const SignUpSessionIDShown = (props: { continueSignUp: () => void }) => {
 //   return (
-//     <div className="session-registration__content">
+//     <div className="bchat-registration__content">
 //       <Flex flexDirection="row" container={true} alignItems="center">
 //         <GoBackMainMenuButton />
 
-//         <div className="session-registration__unique-session-id">
+//         <div className="bchat-registration__unique-bchat-id">
 //           {window.i18n('yourUniqueSessionID')}
 //         </div>
 //       </Flex>
 //       <BchatIdEditable editable={false} placeholder={undefined} dataTestId="session-id-signup" />
-//       <div className="session-description-long">{window.i18n('allUsersAreRandomly...')}</div>
+//       <div className="bchat-description-long">{window.i18n('allUsersAreRandomly...')}</div>
 //       <ContinueSignUpButton continueSignUp={props.continueSignUp} />
 //     </div>
 //   );
@@ -100,7 +100,7 @@ export const SignUpTab = (props:any) => {
 
   useEffect(() => {
     if (signUpMode === SignUpMode.SessionIDShown) {
-      window.Session.setNewSessionID(hexGeneratedPubKey);
+      window.bchat.setNewSessionID(hexGeneratedPubKey);
     }
   }, [signUpMode]);
 
@@ -140,7 +140,7 @@ export const SignUpTab = (props:any) => {
     });
   };
   const LoaderGif = () => {
-    return<div  className="session-registration-loadingGif">
+    return<div  className="bchat-registration-loadingGif">
     <div  style={{background:"url(images/bchat/Load_animation.gif) no-repeat",width: "151px",height: "128px",margin: "0 auto"}}>
     </div>
     </div>
@@ -164,13 +164,13 @@ export const SignUpTab = (props:any) => {
   if(displayNameScreen)
   {
     return (
-    <div className="session-registration__content" style={{paddingTop:'0px'}}>
+    <div className="bchat-registration__content" style={{paddingTop:'0px'}}>
       <Flex flexDirection="row" container={true} alignItems="center" padding="14px 0px" margin='0px 0px 0px 65px'>
-        <div className='session-registration-goback-icon'>
+        <div className='bchat-registration-goback-icon'>
         {/* style={{ position: 'relative', color: 'white', top: '0px',left:"0px" }} */}
         <GoBackMainMenuButton assent={()=>{props.assent(true);clickGoBack()}} />
         </div>
-        <Flex className="session-registration__welcome-session">
+        <Flex className="bchat-registration__welcome-bchat">
           {window.i18n('welcomeToYourSession')}
         </Flex>
       </Flex>

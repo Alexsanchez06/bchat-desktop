@@ -21,11 +21,11 @@ type Props = {
 const LabelItem = (props: { inputValue: string; label?: string }) => {
   return (
     <label
-      htmlFor="session-input-floating-label"
+      htmlFor="bchat-input-floating-label"
       className={classNames(
         props.inputValue !== ''
-          ? 'session-input-with-label-container filled'
-          : 'session-input-with-label-container'
+          ? 'bchat-input-with-label-container filled'
+          : 'bchat-input-with-label-container'
       )}
     >
       {props.label}
@@ -36,8 +36,8 @@ const LabelItem = (props: { inputValue: string; label?: string }) => {
 const ErrorItem = (props: { error: string | undefined }) => {
   return (
     <label
-      htmlFor="session-input-floating-label"
-      className={classNames('session-input-with-label-container filled error')}
+      htmlFor="bchat-input-floating-label"
+      className={classNames('bchat-input-with-label-container filled error')}
     >
       {props.error}
     </label>
@@ -75,14 +75,14 @@ export const BchatInput = (props: Props) => {
   };
 
   return (
-    <div className="session-input-with-label-container">
+    <div className="bchat-input-with-label-container">
       {error ? (
         <ErrorItem error={props.error} />
       ) : (
         <LabelItem inputValue={inputValue} label={label} />
       )}
       <input
-        id="session-input-floating-label"
+        id="bchat-input-floating-label"
         type={correctType}
         placeholder={placeholder}
         value={value}
@@ -90,7 +90,7 @@ export const BchatInput = (props: Props) => {
         autoFocus={autoFocus}
         data-testid={inputDataTestId}
         onChange={updateInputValue}
-        className={classNames(enableShowHide ? 'session-input-floating-label-show-hide' : '')}
+        className={classNames(enableShowHide ? 'bchat-input-floating-label-show-hide' : '')}
         // just incase onChange isn't triggered
         onBlur={updateInputValue}
         onKeyPress={event => {

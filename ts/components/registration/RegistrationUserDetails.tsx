@@ -64,7 +64,7 @@ export const RegistrationUserDetails = (props: Props) => {
     throw new Error('if show seed is true, we need callback + value');
   }
   return (
-    <div className={classNames('session-registration__entry-fields')}>
+    <div className={classNames('bchat-registration__entry-fields')}>
       {props.showSeedField && (
         <RecoveryPhraseInput
           recoveryPhrase={props.recoveryPhrase as string}

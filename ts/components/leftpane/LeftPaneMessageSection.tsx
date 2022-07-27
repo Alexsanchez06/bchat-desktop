@@ -96,7 +96,7 @@ export class LeftPaneMessageSection extends React.Component<Props> {
     const { overlayMode } = this.props;
 
     return (
-      <div className="session-left-pane-section-content">
+      <div className="bchat-left-pane-section-content">
         <LeftPaneSectionHeader
           buttonClicked={() => {
             window.inboxStore?.dispatch(setOverlayMode('message'));

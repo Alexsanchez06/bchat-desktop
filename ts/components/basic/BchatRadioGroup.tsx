@@ -19,7 +19,7 @@ export const BchatRadioGroup = (props: Props) => {
   }, []);
 
   return (
-    <div className="session-radio-group">
+    <div className="bchat-radio-group">
       <fieldset id={group}>
         {items.map(item => {
           const itemIsActive = item.value === activeItem;

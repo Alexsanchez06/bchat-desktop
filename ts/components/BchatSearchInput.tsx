@@ -44,7 +44,7 @@ export const BchatSearchInput = () => {
   }
 
   return (
-    <div className="session-search-input">
+    <div className="bchat-search-input">
       <BchatIconButton iconSize="medium" iconType="search" />
       <input
         value={currentSearchTerm}

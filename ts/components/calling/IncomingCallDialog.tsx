@@ -21,7 +21,7 @@ export const CallWindow = styled.div`
   display: flex;
   flex-direction: column;
   background-color: var(--color-modal-background);
-  border: var(--session-border);
+  border: var(--bchat-border);
 `;
 
 const IncomingCallAvatarContainer = styled.div`

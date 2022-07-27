@@ -119,7 +119,7 @@ export const BchatConfirm = (props: BchatConfirmDialogProps) => {
         <BchatHtmlRenderer tag="span" className={messageSubText} html={message} />
         <BchatHtmlRenderer
           tag="span"
-          className="session-confirm-sub-message subtle"
+          className="bchat-confirm-sub-message subtle"
           html={messageSub}
         />
 

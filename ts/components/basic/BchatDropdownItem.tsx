@@ -28,7 +28,7 @@ export const BchatDropdownItem = (props: Props) => {
   return (
     <div
       className={classNames(
-        'session-dropdown__item',
+        'bchat-dropdown__item',
         active ? 'active' : '',
         type || BchatDropDownItemType.Default
       )}

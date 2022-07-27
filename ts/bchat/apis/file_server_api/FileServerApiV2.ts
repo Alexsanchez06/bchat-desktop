@@ -18,7 +18,7 @@ export type FileServerV2Request = {
 };
 
 const FILES_ENDPOINT = 'files';
-const RELEASE_VERSION_ENDPOINT = 'session_version';
+const RELEASE_VERSION_ENDPOINT = 'bchat_version';
 
 // Disable this if you don't want to use the file server v2 for sending
 // Receiving is always enabled if the attachments url matches a fsv2 url

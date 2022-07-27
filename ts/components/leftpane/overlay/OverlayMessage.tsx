@@ -100,7 +100,7 @@ const ourNumber = useSelector(getOurNumber);
 
       <BchatSpinner loading={loading} />
 
-      <div className="session-description-long">{descriptionLong}</div>
+      <div className="bchat-description-long">{descriptionLong}</div>
 
       <p className="module-left-pane__subHeader">BChat ID</p>
       <BchatIdEditable

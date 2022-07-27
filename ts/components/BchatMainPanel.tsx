@@ -19,8 +19,8 @@ export const BchatMainPanel = () => {
     return <FilteredSettingsView category={focusedSettingsSection} />;
   }
   return (
-    <div className="session-conversation">
-      {/* <div className="session-conversation-doodle"> */}
+    <div className="bchat-conversation">
+      {/* <div className="bchat-conversation-doodle"> */}
       <SmartBchatConversation />
       {/* </div> */}
     

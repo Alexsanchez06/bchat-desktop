@@ -188,7 +188,7 @@
   input {
     background-color: var(--color-input-background);
     color: var(--color-text);
-    border: var(--border-session);
+    border: var(--border-bchat);
   }
 }
 
@@ -282,7 +282,7 @@
       font-size: $bchat-font-md;
       background: var(--color-input-background);
       color: var(--color-text);
-      border: var(--border-session);
+      border: var(--border-bchat);
     }
 
     &-uneditable {

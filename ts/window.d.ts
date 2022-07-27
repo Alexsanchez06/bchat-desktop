@@ -21,8 +21,8 @@ declare global {
     CONSTANTS: any;
     Events: any;
     Lodash: any;
-    SessionSnodeAPI: any;
-    Session: any;
+    bchatSnodeAPI: any;
+    bchat: any;
     StubAppDotNetApi: any;
     StringView: any;
     StubMessageAPI: any;
@@ -35,11 +35,11 @@ declare global {
 
     i18n: LocalizerType;
     log: any;
-    sessionFeatureFlags: {
+    bchatFeatureFlags: {
       useOnionRequests: boolean;
       useTestNet: boolean;
     };
-    SessionSnodeAPI: SessionSnodeAPI;
+    bchatSnodeAPI: bchatSnodeAPI;
     onLogin: any;
     persistStore?: Persistor;
     restart: any;

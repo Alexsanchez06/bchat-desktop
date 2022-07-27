@@ -42,13 +42,13 @@ export const SessionSettingRecoveryKey=()=>
     }
 
     
-    return <div className='session-settings-recovery-seed'>
-             <img  src="images/bchat/warning.svg"   className="session-settings-recovery-seed-danger "/>
-             <p className="session-settings-recovery-seed-bold">IMPORTANT</p>
-             <p className="session-settings-recovery-seed-red">Never Give your Key to Anyone!</p>
-             <p className="session-settings-recovery-seed-para">Never input your Key into any software or website other than the official beldex wallet or bchat directly from the play store, the beldex website or the beldex GitHub.</p>
-             <p className="session-settings-recovery-seed-note">Are you sure you want to access your Key?</p>
-             <div className='session-settings-recovery-seed-button'>
+    return <div className='bchat-settings-recovery-seed'>
+             <img  src="images/bchat/warning.svg"   className="bchat-settings-recovery-seed-danger "/>
+             <p className="bchat-settings-recovery-seed-bold">IMPORTANT</p>
+             <p className="bchat-settings-recovery-seed-red">Never Give your Key to Anyone!</p>
+             <p className="bchat-settings-recovery-seed-para">Never input your Key into any software or website other than the official beldex wallet or bchat directly from the play store, the beldex website or the beldex GitHub.</p>
+             <p className="bchat-settings-recovery-seed-note">Are you sure you want to access your Key?</p>
+             <div className='bchat-settings-recovery-seed-button'>
              <BchatButton
               text={"Yes, I am Sure!"}
               onClick={()=>{setVerify(true)}}

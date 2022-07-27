@@ -213,7 +213,7 @@ export const StyledLeftPaneBanner = styled.div`
   background: var(--color-recovery-phrase-banner-background);
   display: flex;
   flex-direction: column;
-  border-bottom: var(--session-border);
+  border-bottom: var(--bchat-border);
 `;
 
 const StyledBannerInner = styled.div`

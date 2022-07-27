@@ -131,8 +131,8 @@
     outline: none;
     position: relative;
 
-    border-left: var(--border-session);
-    border-top: var(--border-session);
+    border-left: var(--border-bchat);
+    border-top: var(--border-bchat);
   }
 
   .conversation-info-panel {
@@ -172,7 +172,7 @@
   padding: 0px $bchat-margin-md;
   min-height: min-content;
   background: var(--color-composeMsgBg);
-  border-top: var(--border-session);
+  border-top: var(--border-bchat);
   z-index: 1;
 
   .bchat-icon-button {

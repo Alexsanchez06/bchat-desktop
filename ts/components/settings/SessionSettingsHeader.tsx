@@ -14,7 +14,7 @@ export const SettingsHeader = (props: Props) => {
   const dispatch = useDispatch();
   const ourNumber = useSelector(getOurNumber);
   return (
-    <div className="session-settings-header">
+    <div className="bchat-settings-header">
       <div style={{paddingLeft:'15px'}}>
       <Avatar
         size={AvatarSize.M}
@@ -23,7 +23,7 @@ export const SettingsHeader = (props: Props) => {
         dataTestId="leftpane-primary-avatar"
       />
       </div>
-      <div className="session-settings-header-title">{categoryTitle}</div>  
+      <div className="bchat-settings-header-title">{categoryTitle}</div>  
     </div>
   );
 };

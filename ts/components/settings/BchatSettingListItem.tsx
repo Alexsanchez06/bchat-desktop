@@ -18,29 +18,29 @@ type ButtonSettingsProps = {
 
 const SettingsTitleAndDescription = (props: { title?: string; description?: string,bchatId?: string}) => {
   return (
-    <div className="session-settings-item__info">
+    <div className="bchat-settings-item__info">
        { props.bchatId ?
-       <div className='session-settings-item__dFlex'>
+       <div className='bchat-settings-item__dFlex'>
        <Avatar 
         size={AvatarSize.M}
         // onAvatarClick={()=>dispatch(editProfileModal({}))}
         pubkey={props.bchatId}
         dataTestId="leftpane-primary-avatar"
       />
-      <div className="session-settings-item__title" style={{marginLeft:"10px"}}>{props.title}</div>
+      <div className="bchat-settings-item__title" style={{marginLeft:"10px"}}>{props.title}</div>
 
-      </div>:<div className="session-settings-item__title" >{props.title}</div>
+      </div>:<div className="bchat-settings-item__title" >{props.title}</div>
       }
-      {/* <div className="session-settings-item__title">{props.title}</div> */}
+      {/* <div className="bchat-settings-item__title">{props.title}</div> */}
       {props.description && (
-        <div className="session-settings-item__description">{props.description}</div>
+        <div className="bchat-settings-item__description">{props.description}</div>
       )}
     </div>
   );
 };
 
 const BchatSettingsContent = (props: { children: React.ReactNode }) => {
-  return <div className="session-settings-item__content">{props.children}</div>;
+  return <div className="bchat-settings-item__content">{props.children}</div>;
 };
 
 export const BchatSettingsItemWrapper = (props: {
@@ -51,7 +51,7 @@ export const BchatSettingsItemWrapper = (props: {
   children: React.ReactNode;
 }) => {
   return (
-    <div className={classNames('session-settings-item', props.inline && 'inline')}>
+    <div className={classNames('bchat-settings-item', props.inline && 'inline')}>
       
       <SettingsTitleAndDescription title={props.title} description={props.description}  bchatId={props.bchatId}/>
       <BchatSettingsContent>{props.children}</BchatSettingsContent>

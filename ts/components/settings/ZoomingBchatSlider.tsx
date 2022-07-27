@@ -97,7 +97,7 @@ export const ZoomingBchatSlider = (props: { onSliderChange?: (value: number) => 
           <p>{currentValueFromSettings}%</p>
         </div>
       </div> */}
-      <div className="session-settings-item__selection">
+      <div className="bchat-settings-item__selection">
       <Select
       styles={customStyles}
         options={options}

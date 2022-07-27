@@ -48,7 +48,7 @@ export const MemberListItem = (props: {
     // tslint:disable-next-line: use-simple-attributes
     <div
       className={classNames(
-        'session-member-item',
+        'bchat-member-item',
         isSelected && 'selected',
         isZombie && 'zombie',
         disableBg && 'compact'
@@ -66,13 +66,13 @@ export const MemberListItem = (props: {
       role="button"
       data-testid={dataTestId}
     >
-      <div className="session-member-item__info">
-        <span className="session-member-item__avatar">
+      <div className="bchat-member-item__info">
+        <span className="bchat-member-item__avatar">
           <AvatarItem memberPubkey={pubkey} isAdmin={isAdmin || false} />
         </span>
-        <span className="session-member-item__name">{memberName}</span>
+        <span className="bchat-member-item__name">{memberName}</span>
       </div>
-      <span className={classNames('session-member-item__checkmark', isSelected && 'selected')}>
+      <span className={classNames('bchat-member-item__checkmark', isSelected && 'selected')}>
         <BchatIcon iconType="check" iconSize="medium" iconColor={Constants.UI.COLORS.GREEN} />
       </span>
     </div>

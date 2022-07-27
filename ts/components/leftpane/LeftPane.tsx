@@ -87,7 +87,7 @@ export const LeftPane = () => {
  
   return (
     <BchatTheme>
-      <div className="module-left-pane-session">
+      <div className="module-left-pane-bchat">
        
 
         <div className="module-left-pane">

@@ -15,7 +15,7 @@ export const BchatEmojiPanel = (props: Props) => {
   const darkMode = useSelector(getTheme) === 'dark';
 
   return (
-    <div className={classNames('session-emoji-panel', show && 'show')}>
+    <div className={classNames('bchat-emoji-panel', show && 'show')}>
       <Picker
         backgroundImageFn={() => './images/emoji/emoji-sheet-twitter-32.png'}
         set={'twitter'}

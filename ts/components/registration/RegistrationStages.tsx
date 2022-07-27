@@ -217,11 +217,11 @@ export const RegistrationStages = () => {
       const newHexPubKey = StringUtils.decode(keyPair.pubKey, 'hex');
 
       setGeneratedRecoveryPhrase(mnemonic);
-      setHexGeneratedPubKey(newHexPubKey); // our 'frontend' sessionID
+      setHexGeneratedPubKey(newHexPubKey); // our 'frontend' bchatID
     }
   };
   return (
-    <div className="session-registration-container">
+    <div className="bchat-registration-container">
     {/* <div> */}
       <RegistrationContext.Provider
         value={{
