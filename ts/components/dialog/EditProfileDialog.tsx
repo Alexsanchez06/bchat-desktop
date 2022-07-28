@@ -32,11 +32,11 @@ interface State {
   loading: boolean;
 }
 
-const QRView = ({ sessionID }: { sessionID: string }) => {
-  console.log("sessionID:QRView",sessionID)
+const QRView = ({ bchatID }: { bchatID: string }) => {
+  
   return (
     <div className="qr-image">
-      <QRCode value={sessionID} bgColor="#FFFFFF" fgColor="#1B1B1B" level="L" />
+      <QRCode value={bchatID} bgColor="#FFFFFF" fgColor="#1B1B1B" level="L" />
     </div>
   );
 };
@@ -76,8 +76,8 @@ export class EditProfileDialog extends React.Component<{}, State> {
     const viewEdit = this.state.mode === 'edit';
     const viewQR = this.state.mode === 'qr';
 
-    const sessionID = UserUtils.getOurPubKeyStrFromCache();
-    console.log("sessionID:"),sessionID
+    const bchatID = UserUtils.getOurPubKeyStrFromCache();
+    console.log("bchatID:"),bchatID
     const backButton =
       viewEdit || viewQR
         ? [
@@ -101,7 +101,7 @@ export class EditProfileDialog extends React.Component<{}, State> {
         >
           <SpacerMD />
 
-          {viewQR && <QRView sessionID={sessionID} />}
+          {viewQR && <QRView bchatID={bchatID} />}
           {viewDefault && this.renderDefaultView()}
           {viewEdit && this.renderEditView()}
 
@@ -109,9 +109,9 @@ export class EditProfileDialog extends React.Component<{}, State> {
             <PillDivider text={window.i18n('yourBchatID')} />
             <p
               className={classNames('text-selectable', 'bchat-id-section-display')}
-              data-testid="your-session-id"
+              data-testid="your-bchat-id"
             >
-              {sessionID}
+              {bchatID}
             </p>
 
             <SpacerLG />
@@ -123,7 +123,7 @@ export class EditProfileDialog extends React.Component<{}, State> {
                 buttonType={BchatButtonType.BrandOutline}
                 buttonColor={BchatButtonColor.Green}
                 onClick={() => {
-                  copyBchatID(sessionID);
+                  copyBchatID(bchatID);
                 }}
                 dataTestId="copy-button-profile-update"
               />
@@ -334,7 +334,7 @@ async function commitProfileEdits(newName: string, scaledAvatarUrl: string | nul
   await SyncUtils.forceSyncConfigurationNowIfNeeded(true);
 }
 
-function copyBchatID(sessionID: string) {
-  window.clipboard.writeText(sessionID);
+function copyBchatID(bchatID: string) {
+  window.clipboard.writeText(bchatID);
   ToastUtils.pushCopiedToClipBoard();
 }

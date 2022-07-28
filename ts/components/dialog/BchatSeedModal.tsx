@@ -4,13 +4,13 @@ import { ToastUtils } from '../../bchat/utils';
 import { matchesHash } from '../../util/passwordUtils';
 import { getPasswordHash } from '../../data/data';
 // import { QRCode } from 'react-qr-svg';
-// import { mn_decode } from '../../session/crypto/mnemonic';
+// import { mn_decode } from '../../Bchat/crypto/mnemonic';
 import { SpacerLG, SpacerSM, SpacerXS } from '../basic/Text';
 import { recoveryPhraseModal } from '../../state/ducks/modalDialog';
 import { useDispatch } from 'react-redux';
 import { BchatButton } from '../basic/BchatButton';
 
-// import { BchatWrapperModal } from '../SessionWrapperModal';
+// import { BchatWrapperModal } from '../BchatWrapperModal';
 import { getCurrentRecoveryPhrase } from '../../util/storage';
 
 // import { BchatIcon } from '../icon';

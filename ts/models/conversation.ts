@@ -1468,7 +1468,7 @@ export class ConversationModel extends Backbone.Model<ConversationAttributes> {
 
   public async getNotificationIcon() {
     const avatarUrl = this.getAvatarPath();
-    const noIconUrl = 'images/session/session_icon_32.png';
+    const noIconUrl = 'images/bchat/session_icon_32.png';
     if (avatarUrl) {
       const decryptedAvatarUrl = await getDecryptedMediaUrl(avatarUrl, IMAGE_JPEG, true);
 
@@ -1755,7 +1755,7 @@ export class ConversationModel extends Backbone.Model<ConversationAttributes> {
     };
     const typingMessage = new TypingMessage(typingParams);
 
-    // send the message to a single recipient if this is a session chat
+    // send the message to a single recipient if this is a Bchat
     const device = new PubKey(recipientId);
     getMessageQueue()
       .sendToPubKey(device, typingMessage)

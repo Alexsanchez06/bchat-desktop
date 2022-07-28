@@ -24,7 +24,7 @@ if (!isProduction) {
 }
 
 if (storageProfile) {
-  const userData = path.join(app.getPath('appData'), `Session-${storageProfile}`);
+  const userData = path.join(app.getPath('appData'), `bchat-${storageProfile}`);
 
   app.setPath('userData', userData);
 }

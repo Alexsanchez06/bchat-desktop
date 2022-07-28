@@ -53,7 +53,7 @@ import { ConversationMessageRequestButtons } from './ConversationRequestButtons'
 import { ConversationRequestinfo } from './ConversationRequestInfo';
 import { getCurrentRecoveryPhrase } from '../../util/storage';
 import loadImage from 'blueimp-load-image';
-import { BchatRightPanelWithDetails } from './SessionRightPanel';
+import { BchatRightPanelWithDetails } from './BchatRightPanel';
 // import { isRightPanelShowing } from '../../state/selectors/conversations';
 // tslint:disable: jsx-curly-spacing
 

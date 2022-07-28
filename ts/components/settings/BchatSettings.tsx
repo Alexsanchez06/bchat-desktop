@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { SettingsHeader } from './SessionSettingsHeader';
+import { SettingsHeader } from './BchatSettingsHeader';
 // import { shell } from 'electron';
 // import { BchatIconButton } from '../icon';
 import autoBind from 'auto-bind';
@@ -17,9 +17,9 @@ import { matchesHash } from '../../util/passwordUtils';
 //bchat
 
 import { BchatRecoverySeed } from "./BchatRecoverySeed"
-// import {SessionSettingRecoveryKey} from "./sessionSettingRecoveryKey"
+// import {BchatSettingRecoveryKey} from "./BchatSettingRecoveryKey"
 import {OverlayMessageRequest} from "../leftpane/overlay/OverlayMessageRequest"
-import {SessionOnionPathScreen} from "./SessionOnionPathScreen"
+import {BchatOnionPathScreen} from "./BchatOnionPathScreen"
 
 export function getMediaPermissionsSettings() {
   return window.getSettingValue('media-permissions');
@@ -160,7 +160,7 @@ export const PasswordLock = ({
     }
 
     // if (category === BchatSettingCategory.RecoveryKey) {
-    //   return <SessionSettingRecoveryKey  />;
+    //   return <BchatSettingRecoveryKey  />;
     // }
 
     if (category === BchatSettingCategory.MessageRequests) {
@@ -168,7 +168,7 @@ export const PasswordLock = ({
     }
 
     if (category === BchatSettingCategory.Hops) {
-      return <SessionOnionPathScreen/>;
+      return <BchatOnionPathScreen/>;
     }    
     if (category === BchatSettingCategory.Notifications) {
       return <BchatNotificationGroupSettings hasPassword={this.state.hasPassword} />;

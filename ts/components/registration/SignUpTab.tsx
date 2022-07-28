@@ -15,15 +15,15 @@ const { clipboard } = require('electron')
 
 export enum SignUpMode {
   Default,
-  SessionIDShown,
+  BchatIDShown,
   EnterDetails,
   
 }
 
-const CreateBchatIdButton = ({ createSessionID }: { createSessionID: any }) => {
+const CreateBchatIdButton = ({ createBchatID }: { createBchatID: any }) => {
   return (
     <BchatButton
-      onClick={createSessionID}
+      onClick={createBchatID}
       buttonType={BchatButtonType.BrandOutline}
       buttonColor={BchatButtonColor.Green}
       text={window.i18n('createAccount')}
@@ -42,10 +42,10 @@ const CreateBchatIdButton = ({ createSessionID }: { createSessionID: any }) => {
 //   );
 // };
 
-const SignUpDefault = (props: { createSessionID: () => void }) => {
+const SignUpDefault = (props: { createBchatID: () => void }) => {
   return (
     <div className="bchat-registration__content">
-      <CreateBchatIdButton createSessionID={props.createSessionID} />
+      <CreateBchatIdButton createBchatID={props.createBchatID} />
     </div>
   );
 };
@@ -68,7 +68,7 @@ export const GoBackMainMenuButton = (props:any) => {
     />
   );
 };
-// const SignUpSessionIDShown = (props: { continueSignUp: () => void }) => {
+// const SignUpBchatIDShown = (props: { continueSignUp: () => void }) => {
 //   return (
 //     <div className="bchat-registration__content">
 //       <Flex flexDirection="row" container={true} alignItems="center">
@@ -78,7 +78,7 @@ export const GoBackMainMenuButton = (props:any) => {
 //           {window.i18n('yourUniqueBchatID')}
 //         </div>
 //       </Flex>
-//       <BchatIdEditable editable={false} placeholder={undefined} dataTestId="session-id-signup" />
+//       <BchatIdEditable editable={false} placeholder={undefined} dataTestId="bchat-id-signup" />
 //       <div className="bchat-description-long">{window.i18n('allUsersAreRandomly...')}</div>
 //       <ContinueSignUpButton continueSignUp={props.continueSignUp} />
 //     </div>
@@ -99,16 +99,16 @@ export const SignUpTab = (props:any) => {
   const [displayAddressScreen,setAddressScreen] = useState(true);
 
   useEffect(() => {
-    if (signUpMode === SignUpMode.SessionIDShown) {
-      window.bchat.setNewSessionID(hexGeneratedPubKey);
+    if (signUpMode === SignUpMode.BchatIDShown) {
+      window.bchat.setNewBchatID(hexGeneratedPubKey);
     }
   }, [signUpMode]);
 
   if (signUpMode === SignUpMode.Default) {
     return (
       <SignUpDefault
-        createSessionID={() => {
-          // setSignUpMode(SignUpMode.SessionIDShown);
+        createBchatID={() => {
+          // setSignUpMode(SignUpMode.BchatIDShown);
           setRegistrationPhase(RegistrationPhase.SignUp);
           setSignUpMode(SignUpMode.EnterDetails);
           props.assent(false)
@@ -117,9 +117,9 @@ export const SignUpTab = (props:any) => {
     );
   }
 
-  // if (signUpMode === SignUpMode.SessionIDShown) {
+  // if (signUpMode === SignUpMode.BchatIDShown) {
   //   return (
-  //     <SignUpSessionIDShown
+  //     <SignUpBchatIDShown
   //       continueSignUp={() => {
   //         setSignUpMode(SignUpMode.EnterDetails);
   //       }}

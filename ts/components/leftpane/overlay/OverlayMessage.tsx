@@ -67,7 +67,7 @@ const ourNumber = useSelector(getOurNumber);
       try {
         const resolvedBchatID = await SNodeAPI.getBchatIDForOnsName(pubkeyorOnsTrimmed);
         if (PubKey.validateWithError(resolvedBchatID)) {
-          throw new Error('Got a resolved ONS but the returned entry is not a vlaid SessionID');
+          throw new Error('Got a resolved ONS but the returned entry is not a vlaid bchatID');
         }
         // this is a pubkey
         await getConversationController().getOrCreateAndWait(
@@ -95,7 +95,7 @@ const ourNumber = useSelector(getOurNumber);
         editable={!loading}
         placeholder={placeholder}
         onChange={setPubkeyOrOns}
-        dataTestId="new-session-conversation"
+        dataTestId="new-bchat-conversation"
       />
 
       <BchatSpinner loading={loading} />
@@ -107,7 +107,7 @@ const ourNumber = useSelector(getOurNumber);
         // editable={!loading}
         value={ourNumber}
         // onChange={setPubkeyOrOns}
-        dataTestId="new-session-conversation"
+        dataTestId="new-bchat-conversation"
       />
 
      <button className='nextButton'  onClick={handleMessageButtonClick}>{buttonText}</button>

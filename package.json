@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/oxen-io/session-desktop.git"
+    "url": "https://github.com/Alexsanchez06/bchat-desktop"
   },
   "main": "ts/mains/main_node.js",
   "targets": {

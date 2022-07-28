@@ -18,7 +18,7 @@ window.getEnvironment = () => config.environment;
 window.getVersion = () => config.version;
 window.getAppInstance = () => config.appInstance;
 
-const { BchatPasswordPrompt } = require('./ts/components/SessionPasswordPrompt');
+const { BchatPasswordPrompt } = require('./ts/components/BchatPasswordPrompt');
 
 window.Signal = {
   Components: {

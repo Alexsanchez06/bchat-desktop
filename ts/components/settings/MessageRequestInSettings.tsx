@@ -23,9 +23,9 @@ import { MemoConversationListItemContextMenu } from '../menu/ConversationListIte
 import { ConversationListItemHeaderItem } from '../../components/leftpane/conversation-list-item/HeaderItem';
 import { MessageItem } from '../../components/leftpane/conversation-list-item/MessageItem';
 import _ from 'lodash';
-// import { SessionButton, SessionButtonColor,SessionButtonType } from '../basic/SessionButton';
+// import { BchatButton, BchatButtonColor,BchatButtonType } from '../basic/BchatButton';
 // import { getSelectedConversation } from '../../state/selectors/conversations';
-// import { getConversationController } from 'session/conversations';
+// import { getConversationController } from 'bchat/conversations';
 import {
     approveConvoAndSendResponse,
   } from '../../interactions/conversationInteractions';

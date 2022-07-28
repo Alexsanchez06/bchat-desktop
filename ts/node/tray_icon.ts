@@ -14,7 +14,7 @@ export function createTrayIcon(
 ) {
   // keep the duplicated part to allow for search and find
   const iconFile = process.platform === 'darwin' ? 'bchat_logo.png' : 'bchat_logo.png';
-  const iconNoNewMessages = path.join(getAppRootPath(), 'images', 'session', iconFile);
+  const iconNoNewMessages = path.join(getAppRootPath(), 'images', 'bchat', iconFile);
   tray = new Tray(iconNoNewMessages);
   trayAny = tray;
   trayAny.forceOnTop = (mainWindow: BrowserWindow) => {

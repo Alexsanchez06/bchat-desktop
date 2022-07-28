@@ -12,7 +12,7 @@ import { Registration } from '../util/registration';
 import { isSignInByLinking, Storage } from '../util/storage';
 import * as Data from '../data/data';
 import Backbone from 'backbone';
-import { SessionRegistrationView } from '../components/registration/SessionRegistrationView';
+import { BchatRegistrationView } from '../components/registration/BchatRegistrationView';
 import { BchatInboxView } from '../components/BchatInboxView';
 import { deleteAllLogs } from '../node/logs';
 import ReactDOM from 'react-dom';
@@ -250,7 +250,7 @@ async function start() {
   }
 
   function openStandAlone() {
-    ReactDOM.render(<SessionRegistrationView />, document.getElementById('root'));
+    ReactDOM.render(<BchatRegistrationView />, document.getElementById('root'));
   }
   ExpirationTimerOptions.initExpiringMessageListener();
 
@@ -517,11 +517,11 @@ class TextScramble {
 }
 window.bchat = window.bchat || {};
 
-window.bchat.setNewSessionID = (sessionID: string) => {
+window.bchat.setNewBchatID = (BchatID: string) => {
   const el = document.querySelector('.bchat-id-editable-textarea');
   const fx = new TextScramble(el);
   if (el) {
-    (el as any).value = sessionID;
+    (el as any).value = BchatID;
   }
-  void fx.setText(sessionID);
+  void fx.setText(BchatID);
 };

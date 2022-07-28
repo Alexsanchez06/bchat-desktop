@@ -31,7 +31,7 @@ export interface BchatConfirmDialogProps {
   hideCancel?: boolean;
   okTheme?: BchatButtonColor;
   closeTheme?: BchatButtonColor;
-  sessionIcon?: BchatIconType;
+  bchatIcon?: BchatIconType;
   iconSize?: BchatIconSize;
   shouldShowConfirm?: boolean | undefined;
   showExitIcon?: boolean | undefined;
@@ -47,7 +47,7 @@ export const BchatConfirm = (props: BchatConfirmDialogProps) => {
     onClickOk,
     onClickClose,
     hideCancel = false,
-    sessionIcon,
+    bchatIcon,
     iconSize,
     shouldShowConfirm,
     onClickCancel,
@@ -61,7 +61,7 @@ export const BchatConfirm = (props: BchatConfirmDialogProps) => {
   const cancelText = props.cancelText || window.i18n('cancel');
   const showHeader = !!props.title;
 
-  const messageSubText = messageSub ? 'session-confirm-main-message' : 'subtle';
+  const messageSubText = messageSub ? 'bchat-confirm-main-message' : 'subtle';
 
   const onClickOkHandler = async () => {
     if (onClickOk) {
@@ -109,9 +109,9 @@ export const BchatConfirm = (props: BchatConfirmDialogProps) => {
       {!showHeader && <SpacerLG />}
 
       <div className="bchat-modal__centered">
-        {sessionIcon && iconSize && (
+        {bchatIcon && iconSize && (
           <>
-            <BchatIcon iconType={sessionIcon} iconSize={iconSize} />
+            <BchatIcon iconType={bchatIcon} iconSize={iconSize} />
             <SpacerLG />
           </>
         )}
@@ -131,14 +131,14 @@ export const BchatConfirm = (props: BchatConfirmDialogProps) => {
           text={okText}
           buttonColor={okTheme}
           onClick={onClickOkHandler}
-          dataTestId="session-confirm-ok-button"
+          dataTestId="Bchat-confirm-ok-button"
         />
         {!hideCancel && (
           <BchatButton
             text={cancelText}
             buttonColor={closeTheme}
             onClick={onClickCancelHandler}
-            dataTestId="session-confirm-cancel-button"
+            dataTestId="Bchat-confirm-cancel-button"
           />
         )}
       </div>

@@ -21,7 +21,7 @@ import { Flex } from '../basic/Flex';
 import useHover from 'react-use/lib/useHover';
 import { BchatSpinner } from '../basic/BchatSpinner';
 import { BchatIcon, BchatIconButton } from '../icon';
-// import { BchatWrapperModal } from '../SessionWrapperModal';
+// import { BchatWrapperModal } from '../BchatWrapperModal';
 
 export type StatusLightType = {
   glowStartDelay: number;

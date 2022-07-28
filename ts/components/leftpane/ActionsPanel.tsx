@@ -255,7 +255,7 @@ const setupTheme = () => {
   window?.inboxStore?.dispatch(applyTheme(newThemeObject));
 };
 
-// Do this only if we created a new Session ID, or if we already received the initial configuration message
+// Do this only if we created a new Bchat ID, or if we already received the initial configuration message
 const triggerSyncIfNeeded = async () => {
   await getConversationController()
     .get(UserUtils.getOurPubKeyStrFromCache())
@@ -309,7 +309,7 @@ const doAppStartUp = () => {
 
   void setupTheme();
 
-  // keep that one to make sure our users upgrade to new sessionIDS
+  // keep that one to make sure our users upgrade to new bchatIDS
   void removeAllV1OpenGroups();
 
   // this generates the key to encrypt attachments locally

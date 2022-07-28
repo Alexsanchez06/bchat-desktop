@@ -65,7 +65,7 @@ const ContinueYourBchatButton = (props: {
       buttonColor={BchatButtonColor.Green}
       text={window.i18n('restore')}
       disabled={props.disabled}
-      dataTestId="continue-session-button"
+      dataTestId="continue-Bchat-button"
     />
   );
 };

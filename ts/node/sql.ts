@@ -450,13 +450,13 @@ function updateToSchemaVersion6(currentVersion: number, db: BetterSqlite3.Databa
     );
 
 
-    CREATE TABLE sessions(
+    CREATE TABLE bchats(
       id STRING PRIMARY KEY ASC,
       number STRING,
       json TEXT
     );
 
-    CREATE INDEX sessions_number ON sessions (
+    CREATE INDEX bchats_number ON bchats (
       number
     ) WHERE number IS NOT NULL;
 
@@ -530,20 +530,20 @@ function updateToSchemaVersion7(currentVersion: number, db: BetterSqlite3.Databa
     db.exec(`
       -- SQLite has been coercing our STRINGs into numbers, so we force it with TEXT
       -- We create a new table then copy the data into it, since we can't modify columns
-      DROP INDEX sessions_number;
-      ALTER TABLE sessions RENAME TO sessions_old;
+      DROP INDEX bchats_number;
+      ALTER TABLE bchats RENAME TO bchats_old;
 
-      CREATE TABLE sessions(
+      CREATE TABLE bchats(
         id TEXT PRIMARY KEY,
         number TEXT,
         json TEXT
       );
-      CREATE INDEX sessions_number ON sessions (
+      CREATE INDEX bchats_number ON bchats (
         number
       ) WHERE number IS NOT NULL;
-      INSERT INTO sessions(id, number, json)
-    SELECT "+" || id, number, json FROM sessions_old;
-      DROP TABLE sessions_old;
+      INSERT INTO bchats(id, number, json)
+    SELECT "+" || id, number, json FROM bchats_old;
+      DROP TABLE bchats_old;
     `);
 
     db.pragma('user_version = 7');
@@ -1098,7 +1098,7 @@ function updateToLokiSchemaVersion14(currentVersion: number, db: BetterSqlite3.D
   db.transaction(() => {
     db.exec(`
     DROP TABLE IF EXISTS servers;
-    DROP TABLE IF EXISTS sessions;
+    DROP TABLE IF EXISTS bchats;
     DROP TABLE IF EXISTS preKeys;
     DROP TABLE IF EXISTS contactPreKeys;
     DROP TABLE IF EXISTS contactSignedPreKeys;
@@ -1175,7 +1175,7 @@ function updateToLokiSchemaVersion17(currentVersion: number, db: BetterSqlite3.D
     // remove the moderators field. As it was only used for opengroups a long time ago and whatever is there is probably unused
     db.exec(`
       UPDATE ${CONVERSATIONS_TABLE} SET
-      json = json_remove(json, '$.moderators', '$.dataMessage', '$.accessKey', '$.profileSharing', '$.sessionRestoreSeen')
+      json = json_remove(json, '$.moderators', '$.dataMessage', '$.accessKey', '$.profileSharing', '$.bchatRestoreSeen')
     `);
     writeLokiSchemaVersion(targetVersion, db);
   })();
@@ -1489,7 +1489,7 @@ function _initializePaths(configDir: string) {
 
 function showFailedToStart() {
   const notification = new Notification({
-    title: 'Session failed to start',
+    title: 'bchat failed to start',
     body: 'Please start from terminal and open a github issue',
   });
   notification.show();
