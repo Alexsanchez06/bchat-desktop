@@ -6,19 +6,19 @@ const multisAvailable = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 export type UserLoggedInType = {
   userName: string;
-  sessionid: string;
+  bchatid: string;
   recoveryPhrase: string;
 };
 
 export const newUser = async (window: Page, userName: string): Promise<UserLoggedInType> => {
   // Create User
-  // await clickOnMatchingText(window, 'Create Session ID');
+  // await clickOnMatchingText(window, 'Create Bchat ID');
   await clickOnMatchingText(window, 'Create Account');
 
   // Wait for animation for finish creating ID
   await window.waitForTimeout(1500);
   //Save bchat ID to a variable
-  const sessionid = await window.inputValue('[data-testid=session-id-signup]');
+  const bchatid = await window.inputValue('[data-testid=bchat-id-signup]');
   await clickOnMatchingText(window, 'Continue');
   // Input username = testuser
   await typeIntoInput(window, 'display-name-input', userName);
@@ -28,7 +28,7 @@ export const newUser = async (window: Page, userName: string): Promise<UserLogge
   const recoveryPhrase = await window.innerText('[data-testid=recovery-phrase-seed-modal]');
 
   await window.click('.bchat-icon-button.small');
-  return { userName, sessionid, recoveryPhrase };
+  return { userName, bchatid, recoveryPhrase };
 };
 
 const openAppAndNewUser = async (multi: string): Promise<UserLoggedInType & { window: Page }> => {
@@ -53,7 +53,7 @@ export async function openAppsAndNewUsers(windowToCreate: number) {
 
   const windows = loggedInDetails.map(w => w.window);
   const users = loggedInDetails.map(w => {
-    return _.pick(w, ['sessionid', 'recoveryPhrase', 'userName']);
+    return _.pick(w, ['bchatid', 'recoveryPhrase', 'userName']);
   });
   return { windows, users };
 }

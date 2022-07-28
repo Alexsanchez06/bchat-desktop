@@ -45,7 +45,7 @@ test.describe('Password checks', () => {
     // Check toast notification
     await waitForTestIdWithText(
       window,
-      'session-toast',
+      'bchat-toast',
       'Your password has been set. Please keep it safe'
     );
     // Type password into input field
@@ -74,7 +74,7 @@ test.describe('Password checks', () => {
     // Check toast notification for 'changed password'
     await waitForTestIdWithText(
       window,
-      'session-toast',
+      'bchat-toast',
       'Your password has been changed. Please keep it safe.'
     );
   });

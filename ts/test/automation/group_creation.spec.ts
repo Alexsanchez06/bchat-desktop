@@ -25,11 +25,11 @@ test('Create group', async () => {
   const [windowA, windowB, windowC] = windows;
   const [userA, userB, userC] = users;
   // Add contacts
-  await sendNewMessage(windowA, userC.sessionid, `A -> C: ${Date.now()}`);
+  await sendNewMessage(windowA, userC.bchatid, `A -> C: ${Date.now()}`);
   await Promise.all([
-    sendNewMessage(windowA, userB.sessionid, `A -> B: ${Date.now()}`),
-    sendNewMessage(windowB, userA.sessionid, `B -> A: ${Date.now()}`),
-    sendNewMessage(windowC, userA.sessionid, `C -> A: ${Date.now()}`),
+    sendNewMessage(windowA, userB.bchatid, `A -> B: ${Date.now()}`),
+    sendNewMessage(windowB, userA.bchatid, `B -> A: ${Date.now()}`),
+    sendNewMessage(windowC, userA.bchatid, `C -> A: ${Date.now()}`),
   ]);
   // Click new closed group tab
   await clickOnMatchingText(windowA, 'New Closed Group');

@@ -18,7 +18,7 @@ test.describe('Message requests', () => {
     const [windowA, windowB] = windows;
     const [userA, userB] = users;
     // send a message to User B from User A
-    await sendNewMessage(windowA, userB.sessionid, `${testMessage}${Date.now()}`);
+    await sendNewMessage(windowA, userB.bchatid, `${testMessage}${Date.now()}`);
     // Check the message request banner appears and click on it
     await clickOnTestIdWithText(windowB, 'message-request-banner');
     // Select message request from User A
@@ -40,7 +40,7 @@ test.describe('Message requests', () => {
     const [windowA, windowB] = windows;
     const [userA, userB] = users;
     // send a message to User B from User A
-    await sendNewMessage(windowA, userB.sessionid, `${testMessage}${Date.now()}`);
+    await sendNewMessage(windowA, userB.bchatid, `${testMessage}${Date.now()}`);
     // Check the message request banner appears and click on it
     await clickOnTestIdWithText(windowB, 'message-request-banner');
     // Select message request from User A
@@ -48,9 +48,9 @@ test.describe('Message requests', () => {
     // Check that using the accept button has intended use
     await clickOnTestIdWithText(windowB, 'decline-message-request');
     // Confirm decline
-    await clickOnTestIdWithText(windowB, 'session-confirm-ok-button', 'Decline');
+    await clickOnTestIdWithText(windowB, 'bchat-confirm-ok-button', 'Decline');
     // Check config message of message request acceptance
-    await waitForTestIdWithText(windowB, 'session-toast', 'Blocked');
+    await waitForTestIdWithText(windowB, 'bchat-toast', 'Blocked');
     await waitForMatchingText(windowB, 'No pending message requests');
   });
 });

@@ -18,8 +18,8 @@ test('Block User', async () => {
   const [userA, userB] = users;
   // Create contact and send new message
 
-  await sendNewMessage(windowA, userB.sessionid, `A -> B: ${Date.now()}`);
-  await sendNewMessage(windowB, userA.sessionid, `B -> A: ${Date.now()}`);
+  await sendNewMessage(windowA, userB.bchatid, `A -> B: ${Date.now()}`);
+  await sendNewMessage(windowB, userA.bchatid, `B -> A: ${Date.now()}`);
   // Check to see if User B is a contact
   await clickOnTestIdWithText(windowA, 'contact-section');
   await waitForTestIdWithText(windowA, 'module-conversation__user__profile-name', userB.userName);
@@ -31,18 +31,18 @@ test('Block User', async () => {
   // Select block
   await clickOnMatchingText(windowA, 'Block');
   // Verify toast notification 'blocked'
-  await waitForTestIdWithText(windowA, 'session-toast', 'Blocked');
+  await waitForTestIdWithText(windowA, 'bchat-toast', 'Blocked');
   // Verify the user was moved to the blocked contact list
   // Click on settings tab
   await clickOnTestIdWithText(windowA, 'settings-section');
   // Navigate to blocked users tab'
   await clickOnMatchingText(windowA, 'Blocked contacts');
   // Check for user B's name
-  const blockedContact = windowA.locator('.session-settings-item__title');
+  const blockedContact = windowA.locator('.bchat-settings-item__title');
 
   await expect(blockedContact).toContainText(userB.userName);
   // Unblock user
   await clickOnMatchingText(windowA, 'Unblock');
   // Verify toast notification says unblocked
-  await waitForTestIdWithText(windowA, 'session-toast', 'Unblocked');
+  await waitForTestIdWithText(windowA, 'bchat-toast', 'Unblocked');
 });

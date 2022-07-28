@@ -29,8 +29,8 @@ test('Disappearing Messages', async () => {
   const [windowA, windowB] = windows;
   const [userA, userB] = users;
   // Create Contact
-  await sendNewMessage(windowA, userB.sessionid, sentMessage);
-  await sendNewMessage(windowB, userA.sessionid, sentReplyMessage);
+  await sendNewMessage(windowA, userB.bchatid, sentMessage);
+  await sendNewMessage(windowB, userA.bchatid, sentReplyMessage);
   await waitForReadableMessageWithText(windowA, 'Your message request has been accepted');
   // await waitForMatchingText(windowA, `You have accepted ${userA.userName}'s message request`);
   // await waitForMatchingText(windowB, 'Your message request has been accepted');

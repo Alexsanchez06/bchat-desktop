@@ -26,8 +26,8 @@ test('Delete account from swarm', async () => {
   const [userA, userB] = windowLoggedIn.users;
   // Create contact and send new message
   await Promise.all([
-    sendNewMessage(windowA, userB.sessionid, testMessage),
-    sendNewMessage(windowB, userA.sessionid, testReply),
+    sendNewMessage(windowA, userB.bchatid, testMessage),
+    sendNewMessage(windowB, userA.bchatid, testReply),
   ]);
   // Delete all data from device
   // Click on settings tab
@@ -51,7 +51,7 @@ test('Delete account from swarm', async () => {
   // Enter display name
   await typeIntoInput(restoringWindow, 'display-name-input', userA.userName);
   // Click continue
-  await clickOnTestIdWithText(restoringWindow, 'continue-session-button');
+  await clickOnTestIdWithText(restoringWindow, 'continue-bchat-button');
   // Check if message from user B is restored (we don't want it to be)
   const errorDesc = 'Test Message should not be found';
   try {

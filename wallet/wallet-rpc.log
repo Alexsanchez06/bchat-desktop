@@ -506,3 +506,15 @@
 2022-07-28 11:36:00.221	    7fabcf2fd680	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
 2022-07-28 11:36:00.221	    7fabcf2fd680	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
 2022-07-28 11:36:00.221	    7fabcf2fd680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3563	Starting wallet RPC server
+2022-07-28 12:00:15.217	    7fce0eea4680	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-07-28 12:00:15.217	    7fce0eea4680	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-07-28 12:00:15.217	    7fce0eea4680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3563	Starting wallet RPC server
+2022-07-28 12:32:09.749	    7fc89854c680	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-07-28 12:32:09.749	    7fc89854c680	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-07-28 12:32:09.749	    7fc89854c680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3563	Starting wallet RPC server
+2022-07-28 12:35:07.048	    7ff2b0af4680	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-07-28 12:35:07.048	    7ff2b0af4680	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-07-28 12:35:07.048	    7ff2b0af4680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3563	Starting wallet RPC server
+2022-07-28 12:44:15.802	    7fc1cf8d1680	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-07-28 12:44:15.802	    7fc1cf8d1680	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-07-28 12:44:15.803	    7fc1cf8d1680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3563	Starting wallet RPC server
