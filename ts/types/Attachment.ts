@@ -355,7 +355,7 @@ export const getSuggestedFilename = ({
   if (attachment.fileName?.length > 3) {
     return attachment.fileName;
   }
-  const prefix = 'session-attachment';
+  const prefix = 'bchat-attachment';
   const suffix = timestamp ? moment(timestamp).format('-YYYY-MM-DD-HHmmss') : '';
   const fileType = getFileExtension(attachment);
   const extension = fileType ? `.${fileType}` : '';

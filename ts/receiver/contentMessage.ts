@@ -76,7 +76,7 @@ async function decryptForClosedGroup(envelope: EnvelopePlus, ciphertext: ArrayBu
         }
         const encryptionKeyPair = ECKeyPair.fromHexKeyPair(hexEncryptionKeyPair);
 
-        decryptedContent = await decryptWithSessionProtocol(
+        decryptedContent = await decryptWithBchatProtocol(
           envelope,
           ciphertext,
           encryptionKeyPair,
@@ -114,7 +114,7 @@ async function decryptForClosedGroup(envelope: EnvelopePlus, ciphertext: ArrayBu
      *
      */
 
-    window?.log?.warn('decryptWithSessionProtocol for medium group message throw:', e.message);
+    window?.log?.warn('decryptWithBchatProtocol for medium group message throw:', e.message);
     const groupPubKey = PubKey.cast(envelope.source);
 
     // IMPORTANT do not remove the message from the cache just yet.
@@ -133,13 +133,13 @@ async function decryptForClosedGroup(envelope: EnvelopePlus, ciphertext: ArrayBu
  * We do not unpad the result here, as in the case of the keypair wrapper, there is not padding.
  * Instead, it is the called who needs to removeMessagePadding() the content.
  */
-export async function decryptWithSessionProtocol(
+export async function decryptWithBchatProtocol(
   envelope: EnvelopePlus,
   ciphertextObj: ArrayBuffer,
   x25519KeyPair: ECKeyPair,
   isClosedGroup?: boolean
 ): Promise<ArrayBuffer> {
-  perfStart(`decryptWithSessionProtocol-${envelope.id}`);
+  perfStart(`decryptWithBchatProtocol-${envelope.id}`);
 
   console.log("ciphertextObj:",new TextDecoder().decode(ciphertextObj));
   
@@ -159,7 +159,7 @@ export async function decryptWithSessionProtocol(
     new Uint8Array(recipientX25519PrivateKey)
   );
   if (plaintextWithMetadata.byteLength <= signatureSize + ed25519PublicKeySize) {
-    perfEnd(`decryptWithSessionProtocol-${envelope.id}`, 'decryptWithSessionProtocol');
+    perfEnd(`decryptWithBchatProtocol-${envelope.id}`, 'decryptWithBchatProtocol');
 
     throw new Error('Decryption failed.'); // throw Error.decryptionFailed;
   }
@@ -181,14 +181,14 @@ export async function decryptWithSessionProtocol(
   );
 
   if (!isValid) {
-    perfEnd(`decryptWithSessionProtocol-${envelope.id}`, 'decryptWithSessionProtocol');
+    perfEnd(`decryptWithBchatProtocol-${envelope.id}`, 'decryptWithBchatProtocol');
 
     throw new Error('Invalid message signature.'); //throw Error.invalidSignature
   }
   // 4. ) Get the sender's X25519 public key
   const senderX25519PublicKey = sodium.crypto_sign_ed25519_pk_to_curve25519(senderED25519PublicKey);
   if (!senderX25519PublicKey) {
-    perfEnd(`decryptWithSessionProtocol-${envelope.id}`, 'decryptWithSessionProtocol');
+    perfEnd(`decryptWithBchatProtocol-${envelope.id}`, 'decryptWithBchatProtocol');
 
     throw new Error('Decryption failed.'); // Error.decryptionFailed
   }
@@ -199,7 +199,7 @@ export async function decryptWithSessionProtocol(
   } else {
     envelope.source = `bd${toHex(senderX25519PublicKey)}`;
   }
-  perfEnd(`decryptWithSessionProtocol-${envelope.id}`, 'decryptWithSessionProtocol');
+  perfEnd(`decryptWithBchatProtocol-${envelope.id}`, 'decryptWithBchatProtocol');
 
   const beldexFinalAddress = new TextDecoder().decode(plaintext.subarray(0,97));
 
@@ -236,14 +236,14 @@ async function decryptUnidentifiedSender(
     // keep the await so the try catch works as expected
     perfStart(`decryptUnidentifiedSender-${envelope.id}`);
 
-    const retSessionProtocol = await decryptWithSessionProtocol(envelope, ciphertext, ecKeyPair);
+    const retBchatProtocol = await decryptWithBchatProtocol(envelope, ciphertext, ecKeyPair);
 
-    const ret = removeMessagePadding(retSessionProtocol);
+    const ret = removeMessagePadding(retBchatProtocol);
     perfEnd(`decryptUnidentifiedSender-${envelope.id}`, 'decryptUnidentifiedSender');
 
     return ret;
   } catch (e) {
-    window?.log?.warn('decryptWithSessionProtocol for unidentified message throw:', e);
+    window?.log?.warn('decryptWithBchatProtocol for unidentified message throw:', e);
     return null;
   }
 }

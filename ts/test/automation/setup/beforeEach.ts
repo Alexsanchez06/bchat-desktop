@@ -3,7 +3,7 @@ import { readdirSync, rmdirSync } from 'fs-extra';
 import { dirname, join } from 'path';
 import { MULTI_PREFIX, NODE_ENV, openElectronAppOnly } from './open';
 
-const getDirectoriesOfSessionDataPath = (source: string) =>
+const getDirectoriesOfBchatDataPath = (source: string) =>
   readdirSync(source, { withFileTypes: true })
     .filter(dirent => dirent.isDirectory())
     .map(dirent => dirent.name)
@@ -25,7 +25,7 @@ export const cleanUpOtherTest = async () => {
     throw new Error('parentFolderOfAllDataPath not found or invalid');
   }
 
-  const allAppDataPath = getDirectoriesOfSessionDataPath(parentFolderOfAllDataPath);
+  const allAppDataPath = getDirectoriesOfBchatDataPath(parentFolderOfAllDataPath);
   allAppDataPath.map(folder => {
     if (!appPath) {
       throw new Error('parentFolderOfAllDataPath unset');

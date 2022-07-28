@@ -85,7 +85,7 @@ export async function existingUser() {
   await clickOnTestIdWithText(windowA1, 'restore-using-recovery');
   await typeIntoInput(windowA1, 'recovery-phrase-input', recoveryPhraseTest);
   await typeIntoInput(windowA1, 'display-name-input', newUsername);
-  await clickOnTestIdWithText(windowA1, 'continue-session-button');
+  await clickOnTestIdWithText(windowA1, 'continue-bchat-button');
   // await clickOnTestIdWithText(windowA1, 'leftpane-primary-avatar');
   // const bchatIDTest = await waitForTestIdWithText(windowA1, 'your-bchat-id');
   return existingUser;

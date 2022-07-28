@@ -5,7 +5,7 @@ export async function recoverFromSeed(window: Page, userName: string, recoveryPh
   await clickOnTestIdWithText(window, 'restore-using-recovery');
   await typeIntoInput(window, 'recovery-phrase-input', recoveryPhrase);
   await typeIntoInput(window, 'display-name-input', userName);
-  await clickOnTestIdWithText(window, 'continue-session-button');
+  await clickOnTestIdWithText(window, 'continue-bchat-button');
 
   return { window };
 }

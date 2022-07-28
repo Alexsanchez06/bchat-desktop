@@ -11,7 +11,7 @@ import {
   generateCurve25519KeyPairWithoutPrefix,
 } from '../bchat/crypto';
 import { getMessageQueue } from '../bchat';
-import { decryptWithSessionProtocol } from './contentMessage';
+import { decryptWithBchatProtocol } from './contentMessage';
 import {
   addClosedGroupEncryptionKeyPair,
   getAllEncryptionKeyPairsForGroup,
@@ -295,7 +295,7 @@ export async function handleNewClosedGroup(
   await ClosedGroup.addUpdateMessage(
     convo,
     { newName: name, joiningMembers: members },
-    envelope.senderIdentity || envelope.source, // new group message are coming as session messages
+    envelope.senderIdentity || envelope.source, // new group message are coming as Bchat messages
     envelopeTimestamp
   );
 
@@ -424,7 +424,7 @@ async function handleClosedGroupEncryptionKeyPair(
   try {
     perfStart(`encryptionKeyPair-${envelope.id}`);
 
-    const buffer = await decryptWithSessionProtocol(
+    const buffer = await decryptWithBchatProtocol(
       envelope,
       ourWrapper.encryptedKeyPair,
       ECKeyPair.fromKeyPair(ourKeyPair)

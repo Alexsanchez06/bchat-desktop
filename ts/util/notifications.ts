@@ -164,7 +164,7 @@ function update() {
 
   switch (userSetting) {
     case SettingNames.COUNT:
-      title = 'Session';
+      title = 'Bchat';
 
       if (messagesNotificationCount > 0) {
         message = newMessageCountLabel;

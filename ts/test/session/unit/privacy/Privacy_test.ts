@@ -24,7 +24,7 @@ describe('Privacy', () => {
       ).to.be.equal('[REDACTED] [REDACTED] end');
     });
 
-    it('redact sessionID without the 05 prefix', () => {
+    it('redact bchatID without the 05 prefix', () => {
       expect(
         redactAll(
           'start 2d3096a72d2271bbba0d820729a3548749a2b3890c3b41ea08c4c2722616dd2b middle 2d3096a72d2271bbba0d820729a3548749a2b3890c3b41ea08c4c2722616dd2c end'

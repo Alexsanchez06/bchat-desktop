@@ -173,7 +173,7 @@ describe('Attachment', () => {
           timestamp,
           index: 3,
         });
-        const expected = 'session-attachment-1970-01-01-000000_003.mov';
+        const expected = 'bchat-attachment-1970-01-01-000000_003.mov';
         assert.strictEqual(actual, expected);
       });
 
