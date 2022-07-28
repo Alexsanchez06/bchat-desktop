@@ -171,7 +171,7 @@ export const SignUpTab = (props:any) => {
         <GoBackMainMenuButton assent={()=>{props.assent(true);clickGoBack()}} />
         </div>
         <Flex className="bchat-registration__welcome-bchat">
-          {window.i18n('welcomeToYourSession')}
+          {window.i18n('welcomeToYourBchat')}
         </Flex>
       </Flex>
       <RegistrationUserDetails

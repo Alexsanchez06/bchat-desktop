@@ -31,13 +31,13 @@ export const OverlayMessage = () => {
 const ourNumber = useSelector(getOurNumber);
 
 
-  // const title = window.i18n('newSession');
+  // const title = window.i18n('newBchat');
   const buttonText = window.i18n('next');
   // const descriptionLong = window.i18n('usersCanShareTheir...');
   const descriptionLong = "Share your BChat ID with your friends. You can find your BChat ID below."
 
   // const subtitle = window.i18n('enterBchatIDOrONSName');
-  // const placeholder = window.i18n('enterSessionIDOfRecipient');
+  // const placeholder = window.i18n('enterBchatIDOfRecipient');
   const placeholder = "Enter BChat ID";
 
   async function handleMessageButtonClick() {

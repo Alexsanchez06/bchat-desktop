@@ -162,7 +162,7 @@ const isdark =
         {/* for message transtaled session site */}
         
         {/* <BchatSettingButtonItem
-          title={window.i18n('helpUsTranslateSession')}
+          title={window.i18n('helpUsTranslateBchat')}
           onClick={() => void shell.openExternal('https://crowdin.com/project/session-desktop/')}
           buttonColor={BchatButtonColor.Primary}
           // buttonText={window.i18n('translation')}

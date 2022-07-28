@@ -82,7 +82,7 @@ export const AddModeratorsDialog = (props: Props) => {
         <input
           type="text"
           className="module-main-header__search__input"
-          placeholder={i18n('enterSessionID')}
+          placeholder={i18n('enterBchatID')}
           dir="auto"
           onChange={onPubkeyBoxChanges}
           disabled={addingInProgress}
