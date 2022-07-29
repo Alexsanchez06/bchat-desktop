@@ -103,7 +103,7 @@
   "video": "Vídeo",
   "photo": "Foto",
   "cannotUpdate": "Não foi possível atualizar",
-  "cannotUpdateDetail": "Falha ao atualizar o BChat Desktop, mas há uma nova versão disponível. Por favor, vá para https://getsession.org e instale a nova versão manualmente, depois, contate o suporte ou relate um bug sobre esse problema.",
+  "cannotUpdateDetail": "Falha ao atualizar o BChat Desktop, mas há uma nova versão disponível. Por favor, vá para https://bchat.beldex.io/ e instale a nova versão manualmente, depois, contate o suporte ou relate um bug sobre esse problema.",
   "ok": "OK",
   "cancel": "Cancelar",
   "close": "Fechar",

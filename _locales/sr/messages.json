@@ -103,7 +103,7 @@
   "video": "Video",
   "photo": "Fotografija",
   "cannotUpdate": "Nije moguće ažurirati",
-  "cannotUpdateDetail": "BChat Desktop nije uspeo da se ažurira, dostupna je nova verzija. Idite na https://getsession.org/ i ručno instalirajte novu verziju, a zatim kontaktirajte podršku ili prijavite grešku o ovom problemu.",
+  "cannotUpdateDetail": "BChat Desktop nije uspeo da se ažurira, dostupna je nova verzija. Idite na https://bchat.beldex.io/ i ručno instalirajte novu verziju, a zatim kontaktirajte podršku ili prijavite grešku o ovom problemu.",
   "ok": "У реду",
   "cancel": "Одустани",
   "close": "Zatvori",

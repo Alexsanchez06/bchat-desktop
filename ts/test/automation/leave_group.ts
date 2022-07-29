@@ -7,7 +7,7 @@ export const leaveGroup = async (window: Page) => {
   // Select Leave Group
   await clickOnMatchingText(window, 'Leave Group');
   // Confirm leave group
-  await clickOnTestIdWithText(window, 'session-confirm-ok-button', 'OK');
+  await clickOnTestIdWithText(window, 'bchat-confirm-ok-button', 'OK');
   // check config message
   await waitForTestIdWithText(window, 'readable-message', 'You have left the group.');
 };

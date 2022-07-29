@@ -1,14 +1,14 @@
-# Session Desktop
+# Bchat Desktop
 
 ## Summary
 
-Session integrates directly with [Oxen Service Nodes](https://docs.oxen.io/about-the-oxen-blockchain/oxen-service-nodes), which are a set of distributed, decentralized and Sybil resistant nodes. Service Nodes act as servers which store messages offline, and a set of nodes which allow for onion routing functionality obfuscating users IP Addresses. For a full understanding of how Session works, read the [Session Whitepaper](https://getsession.org/whitepaper).
+Bchat integrates directly with [Oxen Service Nodes](https://docs.oxen.io/about-the-oxen-blockchain/oxen-service-nodes), which are a set of distributed, decentralized and Sybil resistant nodes. Service Nodes act as servers which store messages offline, and a set of nodes which allow for onion routing functionality obfuscating users IP Addresses. For a full understanding of how Bchat works, read the [Bchat Whitepaper](https://getsession.org/whitepaper).
 <br/><br/>
-![DesktopSession](https://i.imgur.com/ZnHvYjo.jpg)
+![DesktopBchat](https://i.imgur.com/ZnHvYjo.jpg)
 
 ## Want to Contribute? Found a Bug or Have a feature request?
 
-Please search for any [existing issues](https://github.com/oxen-io/session-desktop/issues) that describe your bugs in order to avoid duplicate submissions. <br><br>Submissions can be made by making a pull request to our development branch. If you don't know where to start contributing, try reading the Github issues page for ideas.
+Please search for any [existing issues](https://github.com/oxen-io/Session-desktop/issues) that describe your bugs in order to avoid duplicate submissions. <br><br>Submissions can be made by making a pull request to our development branch. If you don't know where to start contributing, try reading the Github issues page for ideas.
 
 ## Build instruction
 
@@ -24,9 +24,9 @@ wget https://raw.githubusercontent.com/oxen-io/oxen-core/master/utils/gpg_keys/K
 gpg --import KeeJef.asc
 ```
 
-Get the signed hash for this release, the SESSION_VERSION needs to be updated for the release you want to verify
+Get the signed hash for this release, the BCHAT_VERSION needs to be updated for the release you want to verify
 ```
-export SESSION_VERSION=1.6.1
+export BCHAT_VERSION=1.6.1
 wget https://github.com/oxen-io/session-desktop/releases/download/v$SESSION_VERSION/signatures.asc
 ```
 

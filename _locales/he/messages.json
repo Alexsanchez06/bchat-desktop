@@ -103,7 +103,7 @@
   "video": "וידיאו",
   "photo": "תצלום",
   "cannotUpdate": "Cannot Update",
-  "cannotUpdateDetail": "BChat Desktop failed to update, but there is a new version available. Please go to https://getsession.org/ and install the new version manually, then either contact support or file a bug about this problem.",
+  "cannotUpdateDetail": "BChat Desktop failed to update, but there is a new version available. Please go to https://bchat.beldex.io/ and install the new version manually, then either contact support or file a bug about this problem.",
   "ok": "אישור",
   "cancel": "ביטול",
   "close": "Close",

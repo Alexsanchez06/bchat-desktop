@@ -103,7 +103,7 @@
   "video": "동영상",
   "photo": "사진",
   "cannotUpdate": "업데이트 불가능",
-  "cannotUpdateDetail": "BChat 데스크탑 업데이트에 실패하였으나, 새로운 버전으로 업데이트가 가능합니다. https://getsession.org/ 에 들어가셔서, 새로운 버전을 직접 다운로드받으신 뒤, 이 문제에 대하여 지원팀을 연락하거나 버그를 제보하십시오.",
+  "cannotUpdateDetail": "BChat 데스크탑 업데이트에 실패하였으나, 새로운 버전으로 업데이트가 가능합니다. https://bchat.beldex.io/ 에 들어가셔서, 새로운 버전을 직접 다운로드받으신 뒤, 이 문제에 대하여 지원팀을 연락하거나 버그를 제보하십시오.",
   "ok": "예",
   "cancel": "취소",
   "close": "닫기",

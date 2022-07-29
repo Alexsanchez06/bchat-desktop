@@ -103,7 +103,7 @@
   "video": "视频",
   "photo": "照片",
   "cannotUpdate": "无法更新",
-  "cannotUpdateDetail": "BChat桌面版更新失败，但仍有一个新版本可用。请访问 https://getsession.org/ 手动安装新版本，然后联系支持者或就此问题提交错误报告。",
+  "cannotUpdateDetail": "BChat桌面版更新失败，但仍有一个新版本可用。请访问 https://bchat.beldex.io/ 手动安装新版本，然后联系支持者或就此问题提交错误报告。",
   "ok": "好",
   "cancel": "取消",
   "close": "关闭",

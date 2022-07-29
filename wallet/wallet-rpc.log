@@ -518,3 +518,13 @@
 2022-07-28 12:44:15.802	    7fc1cf8d1680	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
 2022-07-28 12:44:15.802	    7fc1cf8d1680	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
 2022-07-28 12:44:15.803	    7fc1cf8d1680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3563	Starting wallet RPC server
+2022-07-28 13:36:33.712	    7fc6d02d4700	ERROR	wallet.wallet2	src/wallet/wallet2.h:1300	HTTP request failed: HTTP request failed: 
+2022-07-28 13:36:33.712	    7fc6d02d4700	ERROR	wallet.wallet2	src/wallet/wallet2.cpp:3090	!r. THROW EXCEPTION: error::no_connection_to_daemon
+2022-07-28 13:36:33.712	    7fc6d02d4700	ERROR	wallet.rpc	src/wallet/wallet_rpc_server.cpp:401	Exception while refreshing: No connection to daemon
+2022-07-28 13:36:53.725	    7fc6d02d4700	ERROR	wallet.wallet2	src/wallet/wallet2.h:1300	HTTP request failed: HTTP request failed: 
+2022-07-28 13:36:53.725	    7fc6d02d4700	ERROR	wallet.wallet2	src/wallet/wallet2.cpp:3090	!r. THROW EXCEPTION: error::no_connection_to_daemon
+2022-07-28 13:36:53.725	    7fc6d02d4700	ERROR	wallet.rpc	src/wallet/wallet_rpc_server.cpp:401	Exception while refreshing: No connection to daemon
+2022-07-29 04:49:33.556	    7fc6d02d4700	WARNING	wallet.wallet2	src/wallet/wallet2.cpp:2638	Blockchain sync progress: <98bc76682950b8a47b7541b7d6c95a66a73e5515b2e12385a748237154e4fc93>, height 1358000
+2022-07-29 05:32:10.759	    7fc6d02d4700	ERROR	wallet.wallet2	src/wallet/wallet2.h:1300	HTTP request failed: HTTP request failed: Recv failure: Connection reset by peer
+2022-07-29 05:32:10.759	    7fc6d02d4700	ERROR	wallet.wallet2	src/wallet/wallet2.cpp:3090	!r. THROW EXCEPTION: error::no_connection_to_daemon
+2022-07-29 05:32:10.760	    7fc6d02d4700	ERROR	wallet.rpc	src/wallet/wallet_rpc_server.cpp:401	Exception while refreshing: No connection to daemon

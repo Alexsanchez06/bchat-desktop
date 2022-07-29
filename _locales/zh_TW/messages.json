@@ -103,7 +103,7 @@
   "video": "影片",
   "photo": "照片",
   "cannotUpdate": "無法更新",
-  "cannotUpdateDetail": "BChat更新失敗，但仍有其他適用的新版本。請到https://getsession.org/上手動下載，然後聯繫客服支持或提交出錯版本歸檔。",
+  "cannotUpdateDetail": "BChat更新失敗，但仍有其他適用的新版本。請到https://bchat.beldex.io/上手動下載，然後聯繫客服支持或提交出錯版本歸檔。",
   "ok": "好",
   "cancel": "取消",
   "close": "關閉",

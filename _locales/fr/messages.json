@@ -103,7 +103,7 @@
   "video": "Vidéo",
   "photo": "Photo",
   "cannotUpdate": "Impossible de mettre à jour",
-  "cannotUpdateDetail": "La mise a jour de BChat a échouée. Une nouvelle version est disponible. Rendez-vous sur https://getsession.org/ pour installer la nouvelle version manuellement. Vous pouvez également contacter le support ou créer un ticket au sujet de ce problème.",
+  "cannotUpdateDetail": "La mise a jour de BChat a échouée. Une nouvelle version est disponible. Rendez-vous sur https://bchat.beldex.io/ pour installer la nouvelle version manuellement. Vous pouvez également contacter le support ou créer un ticket au sujet de ce problème.",
   "ok": "Valider",
   "cancel": "Annuler",
   "close": "Fermer",

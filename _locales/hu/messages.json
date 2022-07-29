@@ -103,7 +103,7 @@
   "video": "Videó",
   "photo": "Kép",
   "cannotUpdate": "A frissítés sikertelen",
-  "cannotUpdateDetail": "Nem sikerült a BChat Desktop automatikus frissitése, de egy újabb verzió elérhető. Legyen szíves manuálisan letölteni a https://getsession.org/ oldalról, és jelenteni a problémát.",
+  "cannotUpdateDetail": "Nem sikerült a BChat Desktop automatikus frissitése, de egy újabb verzió elérhető. Legyen szíves manuálisan letölteni a https://bchat.beldex.io/ oldalról, és jelenteni a problémát.",
   "ok": "OK",
   "cancel": "Mégsem",
   "close": "Bezár",
