@@ -23,7 +23,7 @@ if (environment === 'production') {
   process.env.HOSTNAME = '';
   process.env.ALLOW_CONFIG_MUTATIONS = '';
   process.env.SUPPRESS_NO_CONFIG_WARNING = '';
-
+  process.env.GITHUB_TOKEN = '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'
   // We could be running againt production but still be in dev mode, we need to handle that
   if (!electronIsDev) {
     process.env.NODE_APP_INSTANCE = '';
