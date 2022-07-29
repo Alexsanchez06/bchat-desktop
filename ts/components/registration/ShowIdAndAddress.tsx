@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { pushUserCopySuccess } from '../../bchat/utils/Toast';
 import { BchatButton, BchatButtonColor, BchatButtonType } from '../basic/BchatButton';
 import { Flex } from '../basic/Flex';
 import { GoBackMainMenuButton } from './SignUpTab';
@@ -104,7 +105,7 @@ export const ShowRecoveryPhase= (props:any) => {
             flexDirection="row"
             height="100%"
             width='10%'>
-          <Icons icon={"copy_icon"} iconfunc={()=>{props.copySeed(props.mnemonic),setSeedCopied(true)}}/>
+          <Icons icon={"copy_icon"} iconfunc={()=>{props.copySeed(props.mnemonic),setSeedCopied(true),pushUserCopySuccess()}}/>
         </Flex> 
       </Flex>
       </div>

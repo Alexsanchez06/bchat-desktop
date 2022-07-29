@@ -1,4 +1,5 @@
 import React from 'react';
+// import { pushUserCopySuccess } from '../../bchat/utils/Toast';
 import { BchatButton, BchatButtonColor, BchatButtonType } from '../basic/BchatButton';
 
 export const Icons = (props:any)=>
@@ -33,6 +34,7 @@ export const ClearIcon = (props:any)=>(
 
 const handlePaste = (event:any) => {
     console.log("EVENT_TEXT:",event.clipboardData.getData('text'));
+    // pushUserCopySuccess()
   };
 
 export const DisplaySeed = (props: any) => (

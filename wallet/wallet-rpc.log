@@ -528,3 +528,229 @@
 2022-07-29 05:32:10.759	    7fc6d02d4700	ERROR	wallet.wallet2	src/wallet/wallet2.h:1300	HTTP request failed: HTTP request failed: Recv failure: Connection reset by peer
 2022-07-29 05:32:10.759	    7fc6d02d4700	ERROR	wallet.wallet2	src/wallet/wallet2.cpp:3090	!r. THROW EXCEPTION: error::no_connection_to_daemon
 2022-07-29 05:32:10.760	    7fc6d02d4700	ERROR	wallet.rpc	src/wallet/wallet_rpc_server.cpp:401	Exception while refreshing: No connection to daemon
+2022-07-29 11:14:11.516	    7fb4566d9680	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-07-29 11:14:11.516	    7fb4566d9680	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-07-29 11:14:11.516	    7fb4566d9680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3563	Starting wallet RPC server
+2022-07-29 11:35:07.541	    7fdeb997a680	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-07-29 11:35:07.542	    7fdeb997a680	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-07-29 11:35:07.542	    7fdeb997a680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3563	Starting wallet RPC server
+2022-07-29 11:35:30.662	    7ff8bb53c680	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-07-29 11:35:30.662	    7ff8bb53c680	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-07-29 11:35:30.662	    7ff8bb53c680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3563	Starting wallet RPC server
+2022-07-29 11:35:32.853	    7f6965f56700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'asa' is shorter than its prefix length, 4
+2022-07-29 11:35:32.854	    7f6965f56700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'ave' is shorter than its prefix length, 4
+2022-07-29 11:35:32.855	    7f6965f56700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'boa' is shorter than its prefix length, 4
+2022-07-29 11:35:32.855	    7f6965f56700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'cal' is shorter than its prefix length, 4
+2022-07-29 11:35:32.856	    7f6965f56700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'dar' is shorter than its prefix length, 4
+2022-07-29 11:35:32.857	    7f6965f56700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'don' is shorter than its prefix length, 4
+2022-07-29 11:35:32.857	    7f6965f56700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'dos' is shorter than its prefix length, 4
+2022-07-29 11:35:32.857	    7f6965f56700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'eco' is shorter than its prefix length, 4
+2022-07-29 11:35:32.857	    7f6965f56700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'eje' is shorter than its prefix length, 4
+2022-07-29 11:35:32.858	    7f6965f56700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'fax' is shorter than its prefix length, 4
+2022-07-29 11:35:32.858	    7f6965f56700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'feo' is shorter than its prefix length, 4
+2022-07-29 11:35:32.858	    7f6965f56700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'fin' is shorter than its prefix length, 4
+2022-07-29 11:35:32.859	    7f6965f56700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'gen' is shorter than its prefix length, 4
+2022-07-29 11:35:32.859	    7f6965f56700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'gol' is shorter than its prefix length, 4
+2022-07-29 11:35:32.859	    7f6965f56700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'haz' is shorter than its prefix length, 4
+2022-07-29 11:35:32.860	    7f6965f56700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'ira' is shorter than its prefix length, 4
+2022-07-29 11:35:32.860	    7f6965f56700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'luz' is shorter than its prefix length, 4
+2022-07-29 11:35:32.861	    7f6965f56700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'mar' is shorter than its prefix length, 4
+2022-07-29 11:35:32.861	    7f6965f56700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'mes' is shorter than its prefix length, 4
+2022-07-29 11:35:32.861	    7f6965f56700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'mil' is shorter than its prefix length, 4
+2022-07-29 11:35:32.864	    7f6965f56700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'oca' is shorter than its prefix length, 4
+2022-07-29 11:35:32.865	    7f6965f56700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'ojo' is shorter than its prefix length, 4
+2022-07-29 11:35:32.865	    7f6965f56700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'ola' is shorter than its prefix length, 4
+2022-07-29 11:35:32.865	    7f6965f56700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'oro' is shorter than its prefix length, 4
+2022-07-29 11:35:32.865	    7f6965f56700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'oso' is shorter than its prefix length, 4
+2022-07-29 11:35:32.866	    7f6965f56700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'pan' is shorter than its prefix length, 4
+2022-07-29 11:35:32.866	    7f6965f56700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'pez' is shorter than its prefix length, 4
+2022-07-29 11:35:32.866	    7f6965f56700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'pie' is shorter than its prefix length, 4
+2022-07-29 11:35:32.867	    7f6965f56700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'red' is shorter than its prefix length, 4
+2022-07-29 11:35:32.867	    7f6965f56700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'res' is shorter than its prefix length, 4
+2022-07-29 11:35:32.868	    7f6965f56700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'rey' is shorter than its prefix length, 4
+2022-07-29 11:36:02.496	    7feb3d34c680	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-07-29 11:36:02.496	    7feb3d34c680	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-07-29 11:36:02.497	    7feb3d34c680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3563	Starting wallet RPC server
+2022-07-29 11:37:33.872	    7f833ec48680	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-07-29 11:37:33.872	    7f833ec48680	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-07-29 11:37:33.872	    7f833ec48680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3563	Starting wallet RPC server
+2022-07-29 11:37:36.051	    7ff8bb538700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'asa' is shorter than its prefix length, 4
+2022-07-29 11:37:36.051	    7ff8bb538700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'ave' is shorter than its prefix length, 4
+2022-07-29 11:37:36.052	    7ff8bb538700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'boa' is shorter than its prefix length, 4
+2022-07-29 11:37:36.052	    7ff8bb538700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'cal' is shorter than its prefix length, 4
+2022-07-29 11:37:36.053	    7ff8bb538700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'dar' is shorter than its prefix length, 4
+2022-07-29 11:37:36.053	    7ff8bb538700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'don' is shorter than its prefix length, 4
+2022-07-29 11:37:36.053	    7ff8bb538700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'dos' is shorter than its prefix length, 4
+2022-07-29 11:37:36.053	    7ff8bb538700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'eco' is shorter than its prefix length, 4
+2022-07-29 11:37:36.053	    7ff8bb538700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'eje' is shorter than its prefix length, 4
+2022-07-29 11:37:36.054	    7ff8bb538700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'fax' is shorter than its prefix length, 4
+2022-07-29 11:37:36.054	    7ff8bb538700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'feo' is shorter than its prefix length, 4
+2022-07-29 11:37:36.054	    7ff8bb538700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'fin' is shorter than its prefix length, 4
+2022-07-29 11:37:36.054	    7ff8bb538700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'gen' is shorter than its prefix length, 4
+2022-07-29 11:37:36.054	    7ff8bb538700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'gol' is shorter than its prefix length, 4
+2022-07-29 11:37:36.054	    7ff8bb538700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'haz' is shorter than its prefix length, 4
+2022-07-29 11:37:36.055	    7ff8bb538700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'ira' is shorter than its prefix length, 4
+2022-07-29 11:37:36.055	    7ff8bb538700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'luz' is shorter than its prefix length, 4
+2022-07-29 11:37:36.055	    7ff8bb538700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'mar' is shorter than its prefix length, 4
+2022-07-29 11:37:36.055	    7ff8bb538700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'mes' is shorter than its prefix length, 4
+2022-07-29 11:37:36.056	    7ff8bb538700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'mil' is shorter than its prefix length, 4
+2022-07-29 11:37:36.056	    7ff8bb538700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'oca' is shorter than its prefix length, 4
+2022-07-29 11:37:36.056	    7ff8bb538700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'ojo' is shorter than its prefix length, 4
+2022-07-29 11:37:36.056	    7ff8bb538700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'ola' is shorter than its prefix length, 4
+2022-07-29 11:37:36.056	    7ff8bb538700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'oro' is shorter than its prefix length, 4
+2022-07-29 11:37:36.056	    7ff8bb538700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'oso' is shorter than its prefix length, 4
+2022-07-29 11:37:36.057	    7ff8bb538700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'pan' is shorter than its prefix length, 4
+2022-07-29 11:37:36.057	    7ff8bb538700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'pez' is shorter than its prefix length, 4
+2022-07-29 11:37:36.057	    7ff8bb538700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'pie' is shorter than its prefix length, 4
+2022-07-29 11:37:36.057	    7ff8bb538700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'red' is shorter than its prefix length, 4
+2022-07-29 11:37:36.058	    7ff8bb538700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'res' is shorter than its prefix length, 4
+2022-07-29 11:37:36.058	    7ff8bb538700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'rey' is shorter than its prefix length, 4
+2022-07-29 12:09:25.179	    7fb57b1e6680	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-07-29 12:09:25.179	    7fb57b1e6680	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-07-29 12:09:25.179	    7fb57b1e6680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3563	Starting wallet RPC server
+2022-07-29 12:19:28.901	    7f893728a680	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-07-29 12:19:28.902	    7f893728a680	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-07-29 12:19:28.902	    7f893728a680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3563	Starting wallet RPC server
+2022-07-29 12:41:27.222	    7f11786ae680	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-07-29 12:41:27.222	    7f11786ae680	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-07-29 12:41:27.222	    7f11786ae680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3563	Starting wallet RPC server
+2022-07-29 12:43:08.375	    7f19ae252680	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-07-29 12:43:08.375	    7f19ae252680	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-07-29 12:43:08.375	    7f19ae252680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3563	Starting wallet RPC server
+2022-07-29 12:43:11.057	    7fb4566d5700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'asa' is shorter than its prefix length, 4
+2022-07-29 12:43:11.057	    7fb4566d5700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'ave' is shorter than its prefix length, 4
+2022-07-29 12:43:11.057	    7fb4566d5700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'boa' is shorter than its prefix length, 4
+2022-07-29 12:43:11.057	    7fb4566d5700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'cal' is shorter than its prefix length, 4
+2022-07-29 12:43:11.058	    7fb4566d5700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'dar' is shorter than its prefix length, 4
+2022-07-29 12:43:11.059	    7fb4566d5700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'don' is shorter than its prefix length, 4
+2022-07-29 12:43:11.059	    7fb4566d5700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'dos' is shorter than its prefix length, 4
+2022-07-29 12:43:11.059	    7fb4566d5700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'eco' is shorter than its prefix length, 4
+2022-07-29 12:43:11.059	    7fb4566d5700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'eje' is shorter than its prefix length, 4
+2022-07-29 12:43:11.059	    7fb4566d5700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'fax' is shorter than its prefix length, 4
+2022-07-29 12:43:11.060	    7fb4566d5700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'feo' is shorter than its prefix length, 4
+2022-07-29 12:43:11.060	    7fb4566d5700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'fin' is shorter than its prefix length, 4
+2022-07-29 12:43:11.060	    7fb4566d5700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'gen' is shorter than its prefix length, 4
+2022-07-29 12:43:11.060	    7fb4566d5700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'gol' is shorter than its prefix length, 4
+2022-07-29 12:43:11.060	    7fb4566d5700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'haz' is shorter than its prefix length, 4
+2022-07-29 12:43:11.060	    7fb4566d5700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'ira' is shorter than its prefix length, 4
+2022-07-29 12:43:11.060	    7fb4566d5700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'luz' is shorter than its prefix length, 4
+2022-07-29 12:43:11.061	    7fb4566d5700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'mar' is shorter than its prefix length, 4
+2022-07-29 12:43:11.061	    7fb4566d5700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'mes' is shorter than its prefix length, 4
+2022-07-29 12:43:11.061	    7fb4566d5700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'mil' is shorter than its prefix length, 4
+2022-07-29 12:43:11.061	    7fb4566d5700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'oca' is shorter than its prefix length, 4
+2022-07-29 12:43:11.061	    7fb4566d5700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'ojo' is shorter than its prefix length, 4
+2022-07-29 12:43:11.061	    7fb4566d5700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'ola' is shorter than its prefix length, 4
+2022-07-29 12:43:11.061	    7fb4566d5700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'oro' is shorter than its prefix length, 4
+2022-07-29 12:43:11.061	    7fb4566d5700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'oso' is shorter than its prefix length, 4
+2022-07-29 12:43:11.062	    7fb4566d5700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'pan' is shorter than its prefix length, 4
+2022-07-29 12:43:11.062	    7fb4566d5700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'pez' is shorter than its prefix length, 4
+2022-07-29 12:43:11.062	    7fb4566d5700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'pie' is shorter than its prefix length, 4
+2022-07-29 12:43:11.063	    7fb4566d5700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'red' is shorter than its prefix length, 4
+2022-07-29 12:43:11.063	    7fb4566d5700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'res' is shorter than its prefix length, 4
+2022-07-29 12:43:11.063	    7fb4566d5700	WARNING	default	src/mnemonics/language_base.h:197	Español word 'rey' is shorter than its prefix length, 4
+2022-07-29 12:55:45.789	    7fc6d02d8680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3559	Shutting down...
+2022-07-29 12:55:45.789	    7f6109b5c680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3559	Shutting down...
+2022-07-29 12:55:45.789	    7facfbc44680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3559	Shutting down...
+2022-07-29 12:55:45.790	    7fabcf2fd680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3559	Shutting down...
+2022-07-29 12:55:45.790	    7f11786ae680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3559	Shutting down...
+2022-07-29 12:55:45.790	    7fc1cf8d1680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3559	Shutting down...
+2022-07-29 12:55:45.792	    7fa95fe7b680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3559	Shutting down...
+2022-07-29 12:55:45.792	    7f6965f5a680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3559	Shutting down...
+2022-07-29 12:55:45.792	    7fce0eea4680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3559	Shutting down...
+2022-07-29 12:55:45.792	    7f5f6966d680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3559	Shutting down...
+2022-07-29 12:55:45.792	    7ff2b0af4680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3559	Shutting down...
+2022-07-29 12:55:45.792	    7fc89854c680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3559	Shutting down...
+2022-07-29 12:55:45.792	    7fdeb997a680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3559	Shutting down...
+2022-07-29 12:55:45.792	    7ff8bb53c680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3559	Shutting down...
+2022-07-29 12:55:45.792	    7feb3d34c680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3559	Shutting down...
+2022-07-29 12:55:45.792	    7f893728a680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3559	Shutting down...
+2022-07-29 12:55:45.792	    7f833ec48680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3559	Shutting down...
+2022-07-29 12:55:45.792	    7fb57b1e6680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3559	Shutting down...
+2022-07-29 12:55:45.792	    7f19ae252680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3559	Shutting down...
+2022-07-29 12:55:45.799	    7fb4566d9680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3559	Shutting down...
+2022-07-29 12:55:45.814	    7fc6d02d8680	INFO	global	src/wallet/wallet_rpc_server.cpp:412	Stopping wallet rpc server
+2022-07-29 12:55:45.815	    7fc1cf8d1680	INFO	global	src/wallet/wallet_rpc_server.cpp:412	Stopping wallet rpc server
+2022-07-29 12:55:45.815	    7f6965f5a680	INFO	global	src/wallet/wallet_rpc_server.cpp:412	Stopping wallet rpc server
+2022-07-29 12:55:45.815	    7fc89854c680	INFO	global	src/wallet/wallet_rpc_server.cpp:412	Stopping wallet rpc server
+2022-07-29 12:55:45.815	    7ff8bb53c680	INFO	global	src/wallet/wallet_rpc_server.cpp:412	Stopping wallet rpc server
+2022-07-29 12:55:45.815	    7f5f6966d680	INFO	global	src/wallet/wallet_rpc_server.cpp:412	Stopping wallet rpc server
+2022-07-29 12:55:45.815	    7facfbc44680	INFO	global	src/wallet/wallet_rpc_server.cpp:412	Stopping wallet rpc server
+2022-07-29 12:55:45.815	    7fce0eea4680	INFO	global	src/wallet/wallet_rpc_server.cpp:412	Stopping wallet rpc server
+2022-07-29 12:55:45.815	    7feb3d34c680	INFO	global	src/wallet/wallet_rpc_server.cpp:412	Stopping wallet rpc server
+2022-07-29 12:55:45.815	    7ff2b0af4680	INFO	global	src/wallet/wallet_rpc_server.cpp:412	Stopping wallet rpc server
+2022-07-29 12:55:45.818	    7f6109b5c680	INFO	global	src/wallet/wallet_rpc_server.cpp:412	Stopping wallet rpc server
+2022-07-29 12:55:45.818	    7f893728a680	INFO	global	src/wallet/wallet_rpc_server.cpp:412	Stopping wallet rpc server
+2022-07-29 12:55:45.818	    7fabcf2fd680	INFO	global	src/wallet/wallet_rpc_server.cpp:412	Stopping wallet rpc server
+2022-07-29 12:55:45.846	    7f833ec48680	INFO	global	src/wallet/wallet_rpc_server.cpp:412	Stopping wallet rpc server
+2022-07-29 12:55:45.849	    7fdeb997a680	INFO	global	src/wallet/wallet_rpc_server.cpp:412	Stopping wallet rpc server
+2022-07-29 12:55:45.854	    7f11786ae680	INFO	global	src/wallet/wallet_rpc_server.cpp:412	Stopping wallet rpc server
+2022-07-29 12:55:45.874	    7f833ec48680	INFO	global	src/wallet/wallet_rpc_server.cpp:424	Storing wallet...
+2022-07-29 12:55:45.874	    7f833ec48680	INFO	global	src/wallet/wallet_rpc_server.cpp:427	Wallet stopped.
+2022-07-29 12:55:45.874	    7f833ec48680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3573	Stopped wallet RPC server
+2022-07-29 12:55:45.901	    7fb57b1e6680	INFO	global	src/wallet/wallet_rpc_server.cpp:412	Stopping wallet rpc server
+2022-07-29 12:55:45.952	    7fa95fe7b680	INFO	global	src/wallet/wallet_rpc_server.cpp:412	Stopping wallet rpc server
+2022-07-29 12:55:45.954	    7fb4566d9680	INFO	global	src/wallet/wallet_rpc_server.cpp:412	Stopping wallet rpc server
+2022-07-29 12:55:45.981	    7f19ae252680	INFO	global	src/wallet/wallet_rpc_server.cpp:412	Stopping wallet rpc server
+2022-07-29 12:55:46.468	    7f6965f5a680	INFO	global	src/wallet/wallet_rpc_server.cpp:424	Storing wallet...
+2022-07-29 12:55:46.468	    7f6965f5a680	INFO	global	src/wallet/wallet_rpc_server.cpp:427	Wallet stopped.
+2022-07-29 12:55:46.468	    7f6965f5a680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3573	Stopped wallet RPC server
+2022-07-29 12:55:46.497	    7feb3d34c680	INFO	global	src/wallet/wallet_rpc_server.cpp:424	Storing wallet...
+2022-07-29 12:55:46.497	    7feb3d34c680	INFO	global	src/wallet/wallet_rpc_server.cpp:427	Wallet stopped.
+2022-07-29 12:55:46.497	    7feb3d34c680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3573	Stopped wallet RPC server
+2022-07-29 12:55:46.663	    7ff8bb53c680	INFO	global	src/wallet/wallet_rpc_server.cpp:424	Storing wallet...
+2022-07-29 12:55:46.663	    7ff8bb53c680	INFO	global	src/wallet/wallet_rpc_server.cpp:427	Wallet stopped.
+2022-07-29 12:55:46.663	    7ff8bb53c680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3573	Stopped wallet RPC server
+2022-07-29 12:55:46.948	    7fc6d02d8680	INFO	global	src/wallet/wallet_rpc_server.cpp:424	Storing wallet...
+2022-07-29 12:55:47.135	    7fc89854c680	INFO	global	src/wallet/wallet_rpc_server.cpp:424	Storing wallet...
+2022-07-29 12:55:47.135	    7fc89854c680	INFO	global	src/wallet/wallet_rpc_server.cpp:427	Wallet stopped.
+2022-07-29 12:55:47.135	    7fc89854c680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3573	Stopped wallet RPC server
+2022-07-29 12:55:47.222	    7f11786ae680	INFO	global	src/wallet/wallet_rpc_server.cpp:424	Storing wallet...
+2022-07-29 12:55:47.222	    7f11786ae680	INFO	global	src/wallet/wallet_rpc_server.cpp:427	Wallet stopped.
+2022-07-29 12:55:47.222	    7f11786ae680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3573	Stopped wallet RPC server
+2022-07-29 12:55:47.316	    7f5f6966d680	INFO	global	src/wallet/wallet_rpc_server.cpp:424	Storing wallet...
+2022-07-29 12:55:47.316	    7f5f6966d680	INFO	global	src/wallet/wallet_rpc_server.cpp:427	Wallet stopped.
+2022-07-29 12:55:47.316	    7f5f6966d680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3573	Stopped wallet RPC server
+2022-07-29 12:55:47.517	    7fb4566d9680	INFO	global	src/wallet/wallet_rpc_server.cpp:424	Storing wallet...
+2022-07-29 12:55:47.517	    7fb4566d9680	INFO	global	src/wallet/wallet_rpc_server.cpp:427	Wallet stopped.
+2022-07-29 12:55:47.517	    7fb4566d9680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3573	Stopped wallet RPC server
+2022-07-29 12:55:47.542	    7fdeb997a680	INFO	global	src/wallet/wallet_rpc_server.cpp:424	Storing wallet...
+2022-07-29 12:55:47.542	    7fdeb997a680	INFO	global	src/wallet/wallet_rpc_server.cpp:427	Wallet stopped.
+2022-07-29 12:55:47.542	    7fdeb997a680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3573	Stopped wallet RPC server
+2022-07-29 12:55:48.244	    7fa95fe7b680	INFO	global	src/wallet/wallet_rpc_server.cpp:424	Storing wallet...
+2022-07-29 12:55:48.244	    7fa95fe7b680	INFO	global	src/wallet/wallet_rpc_server.cpp:427	Wallet stopped.
+2022-07-29 12:55:48.244	    7fa95fe7b680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3573	Stopped wallet RPC server
+2022-07-29 12:55:48.376	    7f19ae252680	INFO	global	src/wallet/wallet_rpc_server.cpp:424	Storing wallet...
+2022-07-29 12:55:48.376	    7f19ae252680	INFO	global	src/wallet/wallet_rpc_server.cpp:427	Wallet stopped.
+2022-07-29 12:55:48.376	    7f19ae252680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3573	Stopped wallet RPC server
+2022-07-29 12:55:48.434	    7ff2b0af4680	INFO	global	src/wallet/wallet_rpc_server.cpp:424	Storing wallet...
+2022-07-29 12:55:48.434	    7ff2b0af4680	INFO	global	src/wallet/wallet_rpc_server.cpp:427	Wallet stopped.
+2022-07-29 12:55:48.434	    7ff2b0af4680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3573	Stopped wallet RPC server
+2022-07-29 12:55:48.523	    7f6109b5c680	INFO	global	src/wallet/wallet_rpc_server.cpp:424	Storing wallet...
+2022-07-29 12:55:48.523	    7f6109b5c680	INFO	global	src/wallet/wallet_rpc_server.cpp:427	Wallet stopped.
+2022-07-29 12:55:48.523	    7f6109b5c680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3573	Stopped wallet RPC server
+2022-07-29 12:55:48.602	    7fce0eea4680	INFO	global	src/wallet/wallet_rpc_server.cpp:424	Storing wallet...
+2022-07-29 12:55:48.602	    7fce0eea4680	INFO	global	src/wallet/wallet_rpc_server.cpp:427	Wallet stopped.
+2022-07-29 12:55:48.602	    7fce0eea4680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3573	Stopped wallet RPC server
+2022-07-29 12:55:48.775	    7fc6d02d8680	INFO	global	src/wallet/wallet_rpc_server.cpp:427	Wallet stopped.
+2022-07-29 12:55:48.775	    7fc6d02d8680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3573	Stopped wallet RPC server
+2022-07-29 12:55:48.903	    7f893728a680	INFO	global	src/wallet/wallet_rpc_server.cpp:424	Storing wallet...
+2022-07-29 12:55:48.903	    7f893728a680	INFO	global	src/wallet/wallet_rpc_server.cpp:427	Wallet stopped.
+2022-07-29 12:55:48.903	    7f893728a680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3573	Stopped wallet RPC server
+2022-07-29 12:55:49.180	    7fb57b1e6680	INFO	global	src/wallet/wallet_rpc_server.cpp:424	Storing wallet...
+2022-07-29 12:55:49.180	    7fb57b1e6680	INFO	global	src/wallet/wallet_rpc_server.cpp:427	Wallet stopped.
+2022-07-29 12:55:49.180	    7fb57b1e6680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3573	Stopped wallet RPC server
+2022-07-29 12:55:49.188	    7fc1cf8d1680	INFO	global	src/wallet/wallet_rpc_server.cpp:424	Storing wallet...
+2022-07-29 12:55:49.188	    7fc1cf8d1680	INFO	global	src/wallet/wallet_rpc_server.cpp:427	Wallet stopped.
+2022-07-29 12:55:49.188	    7fc1cf8d1680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3573	Stopped wallet RPC server
+2022-07-29 12:55:49.579	    7facfbc44680	INFO	global	src/wallet/wallet_rpc_server.cpp:424	Storing wallet...
+2022-07-29 12:55:49.579	    7facfbc44680	INFO	global	src/wallet/wallet_rpc_server.cpp:427	Wallet stopped.
+2022-07-29 12:55:49.579	    7facfbc44680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3573	Stopped wallet RPC server
+2022-07-29 12:55:49.607	    7fabcf2fd680	INFO	global	src/wallet/wallet_rpc_server.cpp:424	Storing wallet...
+2022-07-29 12:55:49.607	    7fabcf2fd680	INFO	global	src/wallet/wallet_rpc_server.cpp:427	Wallet stopped.
+2022-07-29 12:55:49.607	    7fabcf2fd680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3573	Stopped wallet RPC server
+2022-07-29 13:05:03.717	    7f3efffbe680	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-07-29 13:05:03.717	    7f3efffbe680	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-07-29 13:05:03.718	    7f3efffbe680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3563	Starting wallet RPC server
+2022-07-29 13:12:00.767	    7ff0285bc680	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-07-29 13:12:00.767	    7ff0285bc680	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-07-29 13:12:00.767	    7ff0285bc680	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3563	Starting wallet RPC server

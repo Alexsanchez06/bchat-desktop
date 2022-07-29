@@ -111,6 +111,8 @@ export function pushAlreadyMemberOpenGroup() {
   pushToastInfo('publicChatExists', window.i18n('publicChatExists'));
 }
 
+
+
 export function pushUserBanSuccess() {
   pushToastSuccess('userBanned', window.i18n('userBanned'));
 }
@@ -121,6 +123,11 @@ export function pushUserBanFailure() {
 
 export function pushUserUnbanSuccess() {
   pushToastSuccess('userUnbanned', window.i18n('userUnbanned'));
+}
+
+export function  pushUserCopySuccess()
+{
+  pushToastSuccess('copied', "Successfully,copied!");
 }
 
 export function pushUserUnbanFailure() {

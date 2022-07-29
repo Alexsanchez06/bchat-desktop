@@ -90,7 +90,7 @@
     "react-no-dangerous-html": [
       true,
       {
-        "file": "ts/components/bchat/SessionHTMLRenderer.tsx",
+        "file": "ts/components/bchat/BchatHTMLRenderer.tsx",
         "method": "<unknown>",
         "comment": "Usage has been approved by Maxim on 13 Dec 2019"
       }

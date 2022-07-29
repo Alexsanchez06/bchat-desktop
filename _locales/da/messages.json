@@ -103,7 +103,7 @@
   "video": "Video",
   "photo": "Billede",
   "cannotUpdate": "Kan ikke opdatere",
-  "cannotUpdateDetail": "BChat Desktop kunne ikke opdateres, men der er en ny version tilgængelig. Gå til https://getsession.org/ og installer den nye version manuelt, og derefter enten kontakte support eller indsende en fejl om dette problem.",
+  "cannotUpdateDetail": "BChat Desktop kunne ikke opdateres, men der er en ny version tilgængelig. Gå til https://bchat.beldex.io/ og installer den nye version manuelt, og derefter enten kontakte support eller indsende en fejl om dette problem.",
   "ok": "Ok",
   "cancel": "Afbryd",
   "close": "Luk",
