@@ -16,7 +16,7 @@ import { BchatQuotedMessageComposition } from '../BchatQuotedMessageComposition'
 import { Mention, MentionsInput, SuggestionDataItem } from 'react-mentions';
 import autoBind from 'auto-bind';
 import { getMediaPermissionsSettings } from '../../settings/BchatSettings';
-import { getDraftForConversation, updateDraftForConversation } from '../SessionConversationDrafts';
+import { getDraftForConversation, updateDraftForConversation } from '../BchatConversationDrafts';
 import {
   AddStagedAttachmentButton,
   SendMessageButton,
@@ -933,12 +933,12 @@ class CompositionBoxInner extends React.Component<Props, State> {
     });
     // { ...savedAudioFile, path: savedAudioFile.path },
     const audioAttachment: StagedAttachmentType = {
-      file: new File([], 'session-audio-message'), // this is just to emulate a file for the staged attachment type of that audio file
+      file: new File([], 'bchat-audio-message'), // this is just to emulate a file for the staged attachment type of that audio file
       contentType: MIME.AUDIO_MP3,
       size: savedAudioFile.size,
       fileSize: null,
       screenshot: null,
-      fileName: 'session-audio-message',
+      fileName: 'bchat-audio-message',
       thumbnail: null,
       url: '',
       isVoiceMessage: true,

@@ -510,7 +510,7 @@ function openReleaseNotes() {
 }
 
 function openSupportPage() {
-  void shell.openExternal('https://docs.oxen.io/products-built-on-oxen/session');
+  void shell.openExternal('https://github.com/Alexsanchez06/bchat-desktop');
 }
 
 let passwordWindow: BrowserWindow | null = null;

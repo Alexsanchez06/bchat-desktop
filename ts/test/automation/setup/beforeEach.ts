@@ -7,7 +7,7 @@ const getDirectoriesOfBchatDataPath = (source: string) =>
   readdirSync(source, { withFileTypes: true })
     .filter(dirent => dirent.isDirectory())
     .map(dirent => dirent.name)
-    .filter(n => n.startsWith(`Session-${NODE_ENV}-${MULTI_PREFIX}`));
+    .filter(n => n.startsWith(`Bchat-${NODE_ENV}-${MULTI_PREFIX}`));
 
 export const cleanUpOtherTest = async () => {
   const electronApp = await openElectronAppOnly('start');
