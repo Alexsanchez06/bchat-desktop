@@ -76,8 +76,10 @@
     "emoji-mart": "^2.11.2",
     "filesize": "3.6.1",
     "firstline": "1.2.1",
+    "fix-path": "^4.0.0",
     "fs-extra": "9.0.0",
-    "glob": "7.1.2",
+
+
     "image-type": "^4.1.0",
     "ip2country": "1.0.1",
     "jquery": "3.3.1",

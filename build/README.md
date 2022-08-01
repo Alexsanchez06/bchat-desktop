@@ -3,7 +3,7 @@ APP ICONS
 
 If you update the app icon, you also need to update all those file generated from it and based on https://www.electron.build/icons.html.
 
-The current source file is build/session_icon_source_1024px.png
+The current source file is build/bchat_icon_source_1024px.png
 
 -> macOS: use https://cloudconvert.com/png-to-icns to get .icns from the 1024px.png source file => save as bchat.icns
 -> windows: use https://cloudconvert.com/png-to-ico to get .ico from the 1024px.png source file => save as bchat.ico

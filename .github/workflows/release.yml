@@ -1,5 +1,5 @@
 # This script will build binaries and publish a draft on github release page with the the tag v[package-version]
-name: Session Draft Release
+name: Bchat Draft Release
 
 on:
   push:

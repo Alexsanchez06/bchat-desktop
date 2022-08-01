@@ -1,5 +1,5 @@
 # This script will run tests anytime a pull request is added
-name: Session Test
+name: Bchat Test
 
 on:
   pull_request:

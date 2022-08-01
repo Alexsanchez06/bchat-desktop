@@ -18,6 +18,8 @@ import { setSignInByLinking, setSignWithRecoveryPhrase, Storage } from '../../ut
 import { generateMnemonic, restoreWallet } from '../../mains/wallet-rpc'
 import { AccentText } from './AccentText';
 import { TermsAndConditions } from './TermsAndConditions';
+import { startWalletRpc } from '../../mains/wallet-rpc'
+
 
 export const MAX_USERNAME_LENGTH = 26;
 // tslint:disable: use-simple-attributes
@@ -204,6 +206,8 @@ export const RegistrationStages = () => {
 
   const generateMnemonicAndKeyPair = async () => {
     if (generatedRecoveryPhrase === '') {
+
+      await startWalletRpc();
       const mnemonic = await generateMnemonic();
       let seedHex = mn_decode(mnemonic);
       // handle shorter than 32 bytes seeds

@@ -1,13 +1,14 @@
 import ChildProcess from "child_process";
 import fs from "fs-extra";
 import path from 'path';
+// import fixPath from 'fix-path';
 import { default as insecureNodeFetch } from 'node-fetch';
 import { HTTPError } from '../bchat/utils/errors';
 // import portscanner from 'portscanner';
 // import killport from 'kill-port';
-
-export const startWalletRpc = () => {
+export const startWalletRpc = async() => {
   try{
+  //  await fixPath();
   console.log("uuntu:", process.platform)
   const rpcExecutable =
     process.platform === "linux" ? "beldex-wallet-rpc-ubuntu" : "beldex-wallet-rpc-darwin";
@@ -29,18 +30,27 @@ export const startWalletRpc = () => {
     )
     return;
   }
-  console.log("WAIT")
-  //   portscanner.checkPortStatus(22026, "127.0.0.1")
-  //           .catch((err) =>
-  //            console.log("catched:",err))
-  //           .then(status => {
-  //             console.log("status:",status);
+  // ChildProcess.execFile(
+  //   rpcPath,
+  //   [
+  //     // '--rpc-login','test:test',
+  //     '--disable-rpc-login',
+  //     '--rpc-bind-port', '22026',
+  //     '--daemon-address', 'explorer.beldex.io:19091',
+  //     '--rpc-bind-ip', '127.0.0.1',
+  //     '--log-level', '0',
+  //     '--wallet-dir', `${walletDir}`,
+  //     '--log-file', `${walletDir}/wallet-rpc.log`
+  //   ],
+  //   // { detached: true }
+  //   function(error: any, stdout: any, stderr: any){
+  //     console.log("stdout",stdout);
+  //     console.log("error",error);
+  //     console.log("stderr",stderr);
 
-  //             if (status === "closed") {
-  //             }});
-  //   console.log("STOP")   
-  //   console.log("walletpath:",rpcPath)       
-  let wallet = ChildProcess.spawn(
+  //   });
+
+  let wallet =  await ChildProcess.spawn(
     rpcPath,
     [
       // '--rpc-login','test:test',
@@ -52,8 +62,7 @@ export const startWalletRpc = () => {
       '--wallet-dir', `${walletDir}`,
       '--log-file', `${walletDir}/wallet-rpc.log`
     ],
-    { detached: true })
-
+    { detached: true });
   wallet.stdout.on("data", data => {
     process.stdout.write(`Wallet: ${data}`);
   })

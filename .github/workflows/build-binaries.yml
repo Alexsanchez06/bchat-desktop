@@ -1,5 +1,5 @@
-# This script will build session production binaries anytime a branch is updated
-name: Session Build Binaries
+# This script will build bchat production binaries anytime a branch is updated
+name: Bchat Build Binaries
 
 on:
   push:
