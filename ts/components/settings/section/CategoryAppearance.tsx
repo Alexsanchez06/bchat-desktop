@@ -153,16 +153,16 @@ console.log('dark is true ::',window.Events.getThemeSetting());
         <ZoomingBchatSlider />
         {/* <BchatSettingButtonItem
           title={window.i18n('surveyTitle')}
-          onClick={() => void shell.openExternal('https://getsession.org/survey')}
+          onClick={() => void shell.openExternal('https://bchat/survey')}
           buttonColor={BchatButtonColor.Primary}
           buttonText={window.i18n('goToOurSurvey')}
         /> */}
 
-        {/* for message transtaled session site */}
+        {/* for message transtaled bchat site */}
         
         {/* <BchatSettingButtonItem
           title={window.i18n('helpUsTranslateBchat')}
-          onClick={() => void shell.openExternal('https://crowdin.com/project/session-desktop/')}
+          onClick={() => void shell.openExternal('https://crowdin.com/project/bchat-desktop/')}
           buttonColor={BchatButtonColor.Primary}
           // buttonText={window.i18n('translation')}
           buttonText={"Help us translate chat"}

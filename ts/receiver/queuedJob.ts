@@ -47,7 +47,7 @@ async function copyFromQuotedMessage(
 
   const id = _.toNumber(quoteId);
 
-  // We always look for the quote by sentAt timestamp, for opengroups, closed groups and session chats
+  // We always look for the quote by sentAt timestamp, for opengroups, closed groups and BChat chats
   // this will return an array of sent message by id we have locally.
 
   const collection = await getMessagesBySentAt(id);

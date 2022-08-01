@@ -23,7 +23,7 @@ test('Create User', async () => {
   //check username matches
   await waitForTestIdWithText(window, 'your-profile-name', userA.userName);
   //check bchat id matches
-  await waitForTestIdWithText(window, 'your-session-id', userA.bchatid);
+  await waitForTestIdWithText(window, 'your-bchat-id', userA.bchatid);
   // exit profile module
   await window.click('.bchat-icon-button.small');
   // go to settings section

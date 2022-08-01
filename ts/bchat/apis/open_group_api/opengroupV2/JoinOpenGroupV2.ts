@@ -11,12 +11,6 @@ import {
 } from '../utils/OpenGroupUtils';
 import { getOpenGroupManager } from './OpenGroupManagerV2';
 
-// Inputs that should work:
-// https://sessionopengroup.co/main?public_key=658d29b91892a2389505596b135e76a53db6e11d613a51dbd3d0816adffb231c
-// http://sessionopengroup.co/main?public_key=658d29b91892a2389505596b135e76a53db6e11d613a51dbd3d0816adffb231c
-// sessionopengroup.co/main?public_key=658d29b91892a2389505596b135e76a53db6e11d613a51dbd3d0816adffb231c (does NOT go to HTTPS)
-// https://143.198.213.225:443/main?public_key=658d29b91892a2389505596b135e76a53db6e11d613a51dbd3d0816adffb231c
-// 143.198.213.255:80/main?public_key=658d29b91892a2389505596b135e76a53db6e11d613a51dbd3d0816adffb231c
 
 export function parseOpenGroupV2(urlWithPubkey: string): OpenGroupV2Room | undefined {
   const lowerCased = urlWithPubkey.trim().toLowerCase();

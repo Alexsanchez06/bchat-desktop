@@ -1026,7 +1026,7 @@ ipc.on('save-debug-log', (_event, logText) => {
   const osSpecificDesktopFolder = app.getPath('desktop');
   console.info(`Trying to save logs to log Desktop ${osSpecificDesktopFolder}`);
 
-  const outputPath = path.join(osSpecificDesktopFolder, `session_debug_${Date.now()}.log`);
+  const outputPath = path.join(osSpecificDesktopFolder, `bchat_debug_${Date.now()}.log`);
   // tslint:disable: non-literal-fs-path
   fs.writeFile(outputPath, logText, err => {
     if (err) {

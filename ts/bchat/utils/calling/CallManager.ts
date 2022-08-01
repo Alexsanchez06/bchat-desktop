@@ -130,40 +130,40 @@ let lastOutgoingOfferTimestamp = -Infinity;
  */
 const iceServersFullArray = [
   {
-    urls: 'turn:freyr.getsession.org',
-    username: 'session202111',
-    credential: '053c268164bc7bd7',
+    urls: 'turn:turn.call.beldex.io',
+    username: 'test',
+    credential: 'test@123',
   },
   {
-    urls: 'turn:fenrir.getsession.org',
-    username: 'session202111',
-    credential: '053c268164bc7bd7',
+    urls: 'turn:turn.call1.beldex.io',
+    username: 'test',
+    credential: 'test@123',
   },
   {
-    urls: 'turn:frigg.getsession.org',
-    username: 'session202111',
-    credential: '053c268164bc7bd7',
+    urls: 'turn:turn.call2.beldex.io',
+    username: 'test',
+    credential: 'test@123',
   },
   {
-    urls: 'turn:angus.getsession.org',
-    username: 'session202111',
-    credential: '053c268164bc7bd7',
+    urls: 'turn:turn.call3.beldex.io',
+    username: 'test',
+    credential: 'test@123',
   },
   {
-    urls: 'turn:hereford.getsession.org',
-    username: 'session202111',
-    credential: '053c268164bc7bd7',
+    urls: 'tturn:turn.call4.beldex.io',
+    username: 'test',
+    credential: 'test@123',
   },
   {
-    urls: 'turn:holstein.getsession.org',
-    username: 'session202111',
-    credential: '053c268164bc7bd7',
+    urls: 'turn:turn.call5.beldex.io',
+    username: 'test',
+    credential: 'test@123',
   },
-  {
-    urls: 'turn:brahman.getsession.org',
-    username: 'session202111',
-    credential: '053c268164bc7bd7',
-  },
+  // {
+  //   urls: 'turn:turn.call.beldex.io',
+  //   username: 'test',
+  //   credential: 'test@123',
+  // },
 ];
 
 const configuration: RTCConfiguration = {
