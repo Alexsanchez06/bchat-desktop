@@ -357,7 +357,7 @@ class CompositionBoxInner extends React.Component<Props, State> {
     return (
       <>
         {typingEnabled && <AddStagedAttachmentButton 
-        // onClick={this.onChooseAttachment}
+        onClick={this.onChooseAttachment}
          />}
 
         <input

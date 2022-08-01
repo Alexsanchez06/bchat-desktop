@@ -10,7 +10,7 @@ const accentLightTheme = '#00e97b';
 const accentDarkTheme = '#2879FB';
 const borderLightThemeColor = '#f1f1f1';
 const borderDarkThemeColor = '#ffffff0F';
-const baseColor="#128D15";
+const baseColor="#159B24";
 const greyColor="#2D2D3B"
 
 // DARK COLORS
