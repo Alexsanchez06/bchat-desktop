@@ -7,24 +7,27 @@ import { recoveryPhraseModal } from '../../state/ducks/modalDialog';
 import { Flex } from '../basic/Flex';
 import { getFocusedSection, getOverlayMode } from '../../state/selectors/section';
 import { SectionType, setOverlayMode } from '../../state/ducks/section';
-import { BchatButton, BchatButtonType } from '../basic/BchatButton';
+import { BchatButton, 
+  // BchatButtonColor,
+   BchatButtonType } from '../basic/BchatButton';
 import { BchatIcon, BchatIconButton } from '../icon';
 import { isSignWithRecoveryPhrase } from '../../util/storage';
 
 import { Avatar, AvatarSize } from '../avatar/Avatar';
 import { getOurNumber } from '../../state/selectors/user';
 import {  editProfileModal} from '../../state/ducks/modalDialog';
+import { ActionPanelOnionStatusLight } from '../dialog/OnionStatusPathDialog';
 
-// import { switchHtmlToDarkTheme, switchHtmlToLightTheme } from '../../state/ducks/BchatTheme';
+import { switchHtmlToDarkTheme, switchHtmlToLightTheme } from '../../state/ducks/BchatTheme';
 
 
 
-const SectionTitle = styled.h1`
-  padding: 0 var(--margins-sm);
-  flex-grow: 1;
-  color: var(--color-text);
-  font-family:$bchat-font-poppin-semibold;
-`;
+// const SectionTitle = styled.h1`
+//   padding: 0 var(--margins-sm);
+//   flex-grow: 1;
+//   color: var(--color-text);
+//   font-family:$bchat-font-poppin-semibold;
+// `;
 
 export const LeftPaneSectionHeader = (props: { buttonClicked?: any }) => {
   // const showRecoveryPhrasePrompt = useSelector(getShowRecoveryPhrasePrompt);
@@ -59,17 +62,17 @@ export const LeftPaneSectionHeader = (props: { buttonClicked?: any }) => {
     default:
   }
 
-  // function handleClick()
-  // {
-  //   const themeFromSettings = window.Events.getThemeSetting();
-  //     const updatedTheme = themeFromSettings === 'dark' ? 'light' : 'dark';
-  //     window.setTheme(updatedTheme);
-  //     if (updatedTheme === 'dark') {
-  //       switchHtmlToDarkTheme();
-  //     } else {
-  //       switchHtmlToLightTheme();
-  //     }
-  // }
+  function handleClick()
+  {
+    const themeFromSettings = window.Events.getThemeSetting();
+      const updatedTheme = themeFromSettings === 'dark' ? 'light' : 'dark';
+      window.setTheme(updatedTheme);
+      if (updatedTheme === 'dark') {
+        switchHtmlToDarkTheme();
+      } else {
+        switchHtmlToLightTheme();
+      }
+  }
 
   function verifyScreens() {
     if (SectionType.Settings!==focusedSection) {
@@ -95,19 +98,41 @@ export const LeftPaneSectionHeader = (props: { buttonClicked?: any }) => {
     
   }
 
-// function moon ()
-// {
-//   if (SectionType.Settings ===focusedSection) {
-//     return<BchatIconButton
-//   iconSize="large"
-//   iconType={'moon'}
-//   dataTestId="theme-section"
-//   iconColor={undefined}
-//   onClick={handleClick}
+  const IsOnline=()=>{
+    if (SectionType.Settings!==focusedSection) {
+      return <div style={{margin:"0 15px",width:'20px'}}> 
+      <ActionPanelOnionStatusLight isSelected={false} handleClick={function (): void {
+        throw new Error('Function not implemented.');
+      } } id={''}/>
+      </div>
+    }
+    else
+    {
+      return null
+    }
+  }
+
+   
+
+function Moon ()
+{
+  if (SectionType.Settings !==focusedSection) {
+    return <div style={{marginRight:"10px"}}>
+ <BchatIconButton
+  iconSize="large"
+  iconType={'moon'}
+  dataTestId="theme-section"
+  iconColor={undefined}
+  onClick={handleClick}
  
-// />
-//   }
-// }
+/>
+    </div>
+   
+  }
+  else{
+    return null;
+  }
+}
 
   return (
     <Flex flexDirection="column">
@@ -126,13 +151,21 @@ export const LeftPaneSectionHeader = (props: { buttonClicked?: any }) => {
        
         {verifyScreens()}
        
-        <SectionTitle>{label}</SectionTitle>
-
-          {/* {moon()} */}
+       <div className='module-left-pane__header__title'>
+       {label}
+       </div>
+        {/* <SectionTitle></SectionTitle>           */}
+          <IsOnline />
+          <Moon /> 
+         
         {isMessageSection && !isMessageRequestOverlay && (
-          <BchatButton onClick={props.buttonClicked} dataTestId="new-conversation-button">
+          <div onClick={props.buttonClicked} style={{cursor:"pointer"}}>
+            <img src={"images/bchat/addButton.svg"}  style={{width:"35px"}} />
+            
+          {/* <BchatButton onClick={props.buttonClicked} dataTestId="new-conversation-button"  buttonType={BchatButtonType.Default} buttonColor={BchatButtonColor.Green}>
             <BchatIcon iconType="plus" iconSize="small" iconColor="white" />
-          </BchatButton>
+          </BchatButton> */}
+          </div>
         )}
       </div>
       {/* {showRecoveryPhrasePrompt && <LeftPaneBanner />} */}

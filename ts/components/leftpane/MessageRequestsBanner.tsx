@@ -17,7 +17,7 @@ const StyledMessageRequestBanner = styled.div`
   padding: 8px 12px; // adjusting for unread border always being active
   align-items: center;
   cursor: pointer;
-
+  justify-content: space-between;
   background: var(--color-request-banner-background);
 
   transition: var(--bchat-transition-duration);

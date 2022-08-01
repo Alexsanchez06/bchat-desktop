@@ -369,30 +369,34 @@ export const ConversationHeaderWithDetails = () => {
           showBackButton={isMessageDetailOpened}
         />
 
-        <div className="module-conversation-header__title-container">
-          <div className="module-conversation-header__title-flex">
-            <TripleDotsMenu triggerId={triggerId} showBackButton={isMessageDetailOpened} />
-            <ConversationHeaderTitle />
-          </div>
-        </div>
-
+        <ConversationHeaderMenu triggerId={triggerId} />
+         
         {!isSelectionMode && (
           <Flex container={true} flexDirection="row" alignItems="center">
-            {!isKickedFromGroup && (
-              <ExpirationLength expirationSettingName={expirationSettingName} />
-            )}
-            <CallButton />
-            <AvatarHeader
+             <AvatarHeader
               onAvatarClick={() => {
                 dispatch(openRightPanel());
               }}
               pubkey={selectedConvoKey}
               showBackButton={isMessageDetailOpened}
             />
+           <ConversationHeaderTitle />
+
+            {!isKickedFromGroup && (
+              <ExpirationLength expirationSettingName={expirationSettingName} />
+            )}
+            <CallButton />
+           
           </Flex>
         )}
+         
+       
 
-        <ConversationHeaderMenu triggerId={triggerId} />
+        <div className="module-conversation-header__title-container">
+          <div className="module-conversation-header__title-flex">
+            <TripleDotsMenu triggerId={triggerId} showBackButton={isMessageDetailOpened} />
+          </div>
+        </div>
       </div>
 
       {isSelectionMode && <SelectionOverlay />}

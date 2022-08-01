@@ -21,6 +21,7 @@ import { Flex } from '../basic/Flex';
 import useHover from 'react-use/lib/useHover';
 import { BchatSpinner } from '../basic/BchatSpinner';
 import { BchatIcon, BchatIconButton } from '../icon';
+import styled from 'styled-components';
 // import { BchatWrapperModal } from '../BchatWrapperModal';
 
 export type StatusLightType = {
@@ -171,6 +172,7 @@ export const ActionPanelOnionStatusLight = (props: {
   const green = 'var(--color-accent)';
   const orange = 'var(--color-warning)';
 
+
   // start with red
   let iconColor = red;
   //if we are not online or the first path is not valid, we keep red as color
@@ -178,7 +180,14 @@ export const ActionPanelOnionStatusLight = (props: {
     iconColor = onionPathsCount >= 2 ? green : onionPathsCount >= 1 ? orange : red;
   }
 
+  const OuterCircle=styled.div`
+    border: 2px solid ${iconColor};
+    padding: 1px 1px;
+    border-radius: 17px;
+  `
+
   return (
+    <OuterCircle>
     <BchatIconButton
       iconSize={'small'}
       iconType="circle"
@@ -191,6 +200,7 @@ export const ActionPanelOnionStatusLight = (props: {
       dataTestId={dataTestId}
       id={id}
     />
+    </OuterCircle>
   );
 };
 

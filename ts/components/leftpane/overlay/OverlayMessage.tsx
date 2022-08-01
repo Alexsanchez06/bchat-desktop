@@ -90,6 +90,7 @@ const ourNumber = useSelector(getOurNumber);
   return (
     <div className="module-left-pane-overlay">
       {/* <OverlayHeader  subtitle={"Enter the Bchat"} /> */}
+      <p className='module-left-pane__chatHeader'>Start New Chat</p>
       <p className="module-left-pane__subHeader" >Enter BChat ID</p>
       <BchatIdEditable
         editable={!loading}

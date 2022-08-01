@@ -40,7 +40,7 @@ $bchat-compose-margin: 20px;
     &--has-unread {
       border-left: var(--border-unread);
       background: var(--color-conversation-item-has-unread);
-      margin-bottom:2px;
+      margin-bottom: 2px;
       border-radius: 10px;
     }
 
@@ -107,8 +107,17 @@ $bchat-compose-margin: 20px;
     justify-content: space-between;
     align-items: center;
     height: $main-view-header-height;
-    padding-inline-end: 7px;
+    // padding-inline-end: 7px;
+    padding: 0 10px;
     transition: $bchat-transition-duration;
+
+    &__title {
+      padding: 0 var(--margins-sm);
+      flex-grow: 1;
+      color: var(--color-text);
+      font-family: $bchat-font-poppin-semibold;
+      font-size: 22px;
+    }
 
     .bchat-button {
       margin-inline-start: auto;
@@ -136,7 +145,14 @@ $bchat-compose-margin: 20px;
   &__list {
     height: -webkit-fill-available;
   }
-
+&__chatHeader
+{
+    position: relative;
+    left: -92px;
+    font-family: $bchat-font-default;
+    font-size: 24px;
+    font-weight: bold;
+}
   &__subHeader {
     text-align: center;
     font-family: $bchat-font-poppin-semibold;
@@ -157,7 +173,7 @@ $bchat-compose-margin: 20px;
       height: 42px;
       border: none;
       border-radius: 10px;
-      background-color: var(--color-button-green);
+      background-image: linear-gradient(180deg, #00A803, #007E02);
       margin-top: 11%;
 
     }
@@ -335,14 +351,14 @@ $bchat-compose-margin: 20px;
     font-family: $bchat-font-poppin-semibold;
     /* color: #fff; */
     color: #4E4E5F;
-    font-size: 30px;
-    margin-top: 301px;
+    font-size: 24px;
+    
 
   }
 
   .bchat-text-logo {
     margin-top: 12px;
-    width: 250px;
+    width:500;
     filter: var(--filter-bchat-text);
 
     transition: 0s;

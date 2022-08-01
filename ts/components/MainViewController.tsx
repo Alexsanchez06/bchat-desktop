@@ -15,12 +15,12 @@ export class MessageView extends React.Component {
               src="images/bchat/brand.svg"
               className="bchat-brand-logo"
               alt="full-brand-logo"
-            />
+            />*/}
             <img
-              src="images/bchat/bchat-text.svg"
+              src="images/bchat/emptyMessage.svg"
               className="bchat-text-logo"
               alt="full-brand-logo"
-            /> */}
+            /> 
            <p  className="bchat-text">Much empty. Such wow.<br></br> Get some friends to BChat!</p>
           </div>
         </div>

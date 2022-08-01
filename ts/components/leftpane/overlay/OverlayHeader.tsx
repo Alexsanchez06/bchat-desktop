@@ -22,7 +22,8 @@ export const OverlayHeader = ({ subtitle, title,hideExit }: { title: string; sub
    flex-direction: row;
    padding: 10px 0 0 0;
    align-items: baseline;
-   font-family:$bchat-font-poppin-semibold
+   font-family:$bchat-font-poppin-semibold;
+   padding:10px 10px;
   `
 
   return (
