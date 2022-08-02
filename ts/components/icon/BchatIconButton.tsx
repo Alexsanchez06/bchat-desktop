@@ -15,7 +15,7 @@ interface SProps extends BchatIconProps {
   style?: any;
 }
 
-const BchatIconButtonInner = React.forwardRef<HTMLDivElement, SProps>((props, ref) => {
+const   BchatIconButtonInner = React.forwardRef<HTMLDivElement, SProps>((props, ref) => {
   const {
     iconType,
     iconSize,

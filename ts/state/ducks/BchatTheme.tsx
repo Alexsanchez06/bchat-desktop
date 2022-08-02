@@ -68,7 +68,7 @@ const darkInboxBgColor="#353543";
 const darkHintMessage="#7B7B86";
 const darkTextAreaColor="#0BB70F";
 const darkComposeMsgBg="#2B2B38";
-const darkComposeMsgIconBG="#3f3c4b"
+const darkComposeMsgIconBG="#2879FB"
 const darkSettingIndication=greyColor
 
 export const switchHtmlToDarkTheme = () => {

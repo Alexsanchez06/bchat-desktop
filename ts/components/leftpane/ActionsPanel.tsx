@@ -60,6 +60,7 @@ import { UserUtils } from '../../bchat/utils';
 
 import { Storage } from '../../util/storage';
 import { SettingsKey } from '../../data/settings-key';
+import classNames from 'classnames';
 
 
 // state/ducks/section.tsx
@@ -146,7 +147,7 @@ const Section = (props: { type: SectionType }) => {
   switch (type) {
     case SectionType.Message:
       return (
-        
+        <div className={classNames(isSelected ? 'isSelected-icon-box' : 'icon-box')}  >
               <BchatIconButton
                 iconSize="large"
                 dataTestId="message-section"
@@ -155,9 +156,8 @@ const Section = (props: { type: SectionType }) => {
                 notificationCount={unreadToShow}
                 onClick={handleClick}
                 isSelected={isSelected}
-               
               />
-       
+       </div>
       );
     // case SectionType.Contact:
     //   return (
@@ -173,6 +173,7 @@ const Section = (props: { type: SectionType }) => {
     //   );
     case SectionType.Closedgroup:
       return (
+        <div  className={classNames(isSelected ? 'isSelected-icon-box' : 'icon-box')}  >
         <BchatIconButton
           iconSize="large"
           dataTestId="settings-section"
@@ -181,11 +182,12 @@ const Section = (props: { type: SectionType }) => {
           notificationCount={unreadToShow}
           onClick={handleClick}
           isSelected={isSelected}
-
         />
+        </div>
       );
       case SectionType.Opengroup:
         return (
+          <div className={classNames(isSelected ? 'isSelected-icon-box' : 'icon-box')}  >
           <BchatIconButton
             iconSize="large"
             dataTestId="settings-section"
@@ -194,11 +196,14 @@ const Section = (props: { type: SectionType }) => {
             notificationCount={unreadToShow}
             onClick={handleClick}
             isSelected={isSelected}
+            
           />
+          </div>
         );
        
           case SectionType.Settings:
       return (
+        <div className={classNames(isSelected ? 'isSelected-icon-box' : 'icon-box')}  >
         <BchatIconButton
           iconSize="large"
           dataTestId="settings-section"
@@ -208,6 +213,7 @@ const Section = (props: { type: SectionType }) => {
           onClick={handleClick}
           isSelected={isSelected}
         />
+         </div>
       );
     // case SectionType.PathIndicator:
     //   return (
@@ -227,7 +233,7 @@ const Section = (props: { type: SectionType }) => {
           iconColor={undefined}
           notificationCount={unreadToShow}
           onClick={handleClick}
-          isSelected={isSelected}
+          
         />
       );
   }
@@ -445,21 +451,19 @@ export const ActionsPanel = () => {
       <CallContainer />
       <LeftPaneSectionContainer data-testid="leftpane-section-container">
         {/* <Section type={SectionType.Profile} /> */}
-        <div style={{color:"#fff"}}  >
+        
         <Section type={SectionType.Message}  />
-        </div>
+        
        
         {/* <Section type={SectionType.Contact} /> */}
-        <div style={{color:"#fff"}}   >
-        <Section type={SectionType.Closedgroup}  />
-        </div>
-        <div style={{color:"#fff"}}>
-        <Section type={SectionType.Opengroup} />
-        </div>
         
-        <div style={{color:"#fff"}}>
+        <Section type={SectionType.Closedgroup}  />
+        
+        <Section type={SectionType.Opengroup} />
+        
+        
         <Section type={SectionType.Settings} />
-        </div>
+        
       
 
         <BchatToastContainer />

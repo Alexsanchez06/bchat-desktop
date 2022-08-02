@@ -9,6 +9,7 @@ import styled from 'styled-components';
 import { Constants } from '../../bchat';
 import { ToastUtils } from '../../bchat/utils';
 import { MAX_ATTACHMENT_FILESIZE_BYTES } from '../../bchat/constants';
+import { SendMessageButton } from './composition/CompositionButtons';
 
 interface Props {
   onExitVoiceNoteView: () => void;
@@ -164,17 +165,18 @@ export class BchatRecording extends React.Component<Props, State> {
 
         {!isRecording && (
           <div
-            className={classNames(
+            className={classNames( 
               'send-message-button',
               hasRecording && 'send-message-button---scale'
             )}
           >
-            <BchatIconButton
+            <SendMessageButton   onClick={this.onSendVoiceMessage}/>
+            {/* <BchatIconButton
               iconType="send"
               iconSize={'large'}
-              iconRotation={90}
-              onClick={this.onSendVoiceMessage}
-            />
+              iconRotation={0}
+              
+            /> */}
           </div>
         )}
       </div>

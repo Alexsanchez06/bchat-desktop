@@ -265,18 +265,14 @@ textarea {
   color: white;
 
  
-  &:hover {
-    opacity: 1;
-    background-color: white;
+  &:hover {  
     color: #159B24;
-    border-radius: 50px;
     // padding: 5px;
 
   }
   transition: opacity $bchat-transition-duration;
 
   &.no-opacity {
-    opacity: 1;
     color: #159B24;
     background: white;
   }
@@ -313,7 +309,7 @@ textarea {
 
 .module-conversation-header__title {
   flex-direction: column;
-  text-align: right;
+  
   
 }
 .module-conversation-header__title-flex {

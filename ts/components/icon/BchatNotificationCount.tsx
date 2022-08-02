@@ -9,10 +9,10 @@ const StyledCountContainer = styled.div<{ shouldRender: boolean }>`
   position: absolute;
   width: 20px;
   height: 20px;
-  font-size: 20px;
-  top: var(--margins-lg);
-  left: var(--margins-sm);
-  padding: 3px;
+  font-size: 18px;
+  top: -10px;
+  left: 18px;
+  padding: 7px;
   opacity: 1;
   display: flex;
   align-items: center;

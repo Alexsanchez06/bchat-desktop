@@ -259,7 +259,7 @@ class CompositionBoxInner extends React.Component<Props, State> {
   }
 
   public render() {
-    const { showRecordingView } = this.state;
+    // const { showRecordingView } = this.state;
 
     return (
       <Flex flexDirection="column">
@@ -267,7 +267,8 @@ class CompositionBoxInner extends React.Component<Props, State> {
         {this.renderStagedLinkPreview()}
         {this.renderAttachmentsStaged()}
         <div className="composition-container">
-          {showRecordingView ? this.renderRecordingView() : this.renderCompositionView()}
+          {/* {showRecordingView ? this.renderRecordingView() : this.renderCompositionView()} */}
+          {this.renderCompositionView()}
         </div>
       </Flex>
     );
@@ -359,8 +360,8 @@ class CompositionBoxInner extends React.Component<Props, State> {
         {typingEnabled && <AddStagedAttachmentButton 
         onClick={this.onChooseAttachment}
          />}
-
-        <input
+      
+          <input
           className="hidden"
           placeholder="Attachment"
           multiple={true}
@@ -368,9 +369,8 @@ class CompositionBoxInner extends React.Component<Props, State> {
           type="file"
           onChange={this.onChoseAttachment}
         />
-
        
-
+       {this.state.showRecordingView ? this.renderRecordingView() :<>
         <div
           className="send-message-input"
           role="main"
@@ -397,6 +397,14 @@ class CompositionBoxInner extends React.Component<Props, State> {
           </div>
           
         )}
+       
+       </> 
+       
+       
+       }
+                
+
+        
       </>
     );
   }

@@ -199,7 +199,7 @@
  .attachment-box
  {
  background-color:var(--color-composeMsgIconBG);
- padding: 8px;
+ padding: 8px 13px;
  color: #85858F;
     border-radius: 10px;
     &-icon
@@ -209,10 +209,8 @@
       padding: 2px;
     }
     &:hover {
-      opacity: 1;
-      background-color: white;
-      color: #159B24;
-      border-radius: 6px;
+      opacity: 0.7;
+      
   
     }
 

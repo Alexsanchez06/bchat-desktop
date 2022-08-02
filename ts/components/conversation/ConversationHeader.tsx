@@ -148,7 +148,7 @@ const TripleDotsMenu = (props: { triggerId: string; showBackButton: boolean }) =
       }}
       data-testid="three-dots-conversation-options"
     >
-      <BchatIconButton iconType="ellipses" iconSize="medium" />
+      <BchatIconButton iconType="ellipses" iconSize="huge" />
     </div>
   );
 };
@@ -370,8 +370,8 @@ export const ConversationHeaderWithDetails = () => {
         />
 
         <ConversationHeaderMenu triggerId={triggerId} />
-         
-        {!isSelectionMode && (
+
+        <div style={{width:'100%'}}>        {!isSelectionMode && (
           <Flex container={true} flexDirection="row" alignItems="center">
              <AvatarHeader
               onAvatarClick={() => {
@@ -389,6 +389,8 @@ export const ConversationHeaderWithDetails = () => {
            
           </Flex>
         )}
+        </div> 
+
          
        
 

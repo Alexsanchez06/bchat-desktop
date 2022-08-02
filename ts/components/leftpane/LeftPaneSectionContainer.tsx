@@ -7,12 +7,20 @@ export const LeftPaneSectionContainer = styled.div`
   align-items: center;
   border-right: var(--border-bchat);
   overflow-y: auto;
-  background-color:#128B17; 
+  background-color:#128B17;
+  padding:6px 0; 
 
-  .bchat-icon-button {
-      padding: 9px 9px;
-	    margin: 5px 25px;
-	    border-radius: 25px;
+  .icon-box
+  {
+    padding: 10px;
+    margin: 3px 24px;
+    border-radius: 20px;
+  }
+  .isSelected-icon-box {
+    padding: 10px;
+    margin: 3px 24px;
+    border-radius: 20px;
+    background-color: white;
   }
 
   .module-avatar {
