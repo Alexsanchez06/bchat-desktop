@@ -4827,3 +4827,48 @@
 2022-08-03 13:26:42.459	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: spir
 2022-08-03 13:26:42.459	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: stra
 2022-08-03 13:26:42.460	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: thro
+2022-08-03 13:33:43.400	     0x10ea35600	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-08-03 13:33:43.400	     0x10ea35600	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-08-03 13:33:43.401	     0x10ea35600	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3563	Starting wallet RPC server
+2022-08-03 14:33:23.072	  0x70000dc8d000	ERROR	wallet.wallet2	src/wallet/wallet2.h:1300	HTTP request failed: HTTP request failed: 
+2022-08-03 14:33:23.208	  0x70000dc8d000	ERROR	wallet.wallet2	src/wallet/wallet2.cpp:3090	!r. THROW EXCEPTION: error::no_connection_to_daemon
+2022-08-03 14:33:23.209	  0x70000dc8d000	ERROR	wallet.rpc	src/wallet/wallet_rpc_server.cpp:401	Exception while refreshing: No connection to daemon
+2022-08-03 14:42:14.764	  0x70000dc8d000	ERROR	wallet.wallet2	src/wallet/wallet2.h:1300	HTTP request failed: HTTP request failed: Could not resolve host: explorer.beldex.io
+2022-08-03 14:42:14.765	  0x70000dc8d000	ERROR	wallet.wallet2	src/wallet/wallet2.cpp:3090	!r. THROW EXCEPTION: error::no_connection_to_daemon
+2022-08-03 14:42:14.765	  0x70000dc8d000	ERROR	wallet.rpc	src/wallet/wallet_rpc_server.cpp:401	Exception while refreshing: No connection to daemon
+2022-08-03 15:09:23.149	  0x70000dc8d000	ERROR	wallet.wallet2	src/wallet/wallet2.h:1300	HTTP request failed: HTTP request failed: 
+2022-08-03 15:09:23.207	  0x70000dc8d000	ERROR	wallet.wallet2	src/wallet/wallet2.cpp:3090	!r. THROW EXCEPTION: error::no_connection_to_daemon
+2022-08-03 15:09:23.224	  0x70000dc8d000	ERROR	wallet.rpc	src/wallet/wallet_rpc_server.cpp:401	Exception while refreshing: No connection to daemon
+2022-08-03 15:25:13.105	  0x70000dc8d000	ERROR	wallet.wallet2	src/wallet/wallet2.h:1300	HTTP request failed: HTTP request failed: 
+2022-08-03 15:25:13.219	  0x70000dc8d000	ERROR	wallet.wallet2	src/wallet/wallet2.cpp:3090	!r. THROW EXCEPTION: error::no_connection_to_daemon
+2022-08-03 15:25:13.219	  0x70000dc8d000	ERROR	wallet.rpc	src/wallet/wallet_rpc_server.cpp:401	Exception while refreshing: No connection to daemon
+2022-08-03 15:32:05.027	  0x70000dc8d000	ERROR	wallet.wallet2	src/wallet/wallet2.h:1300	HTTP request failed: HTTP request failed: 
+2022-08-03 15:32:05.027	  0x70000dc8d000	ERROR	wallet.wallet2	src/wallet/wallet2.cpp:3090	!r. THROW EXCEPTION: error::no_connection_to_daemon
+2022-08-03 15:32:05.027	  0x70000dc8d000	ERROR	wallet.rpc	src/wallet/wallet_rpc_server.cpp:401	Exception while refreshing: No connection to daemon
+2022-08-03 15:47:53.752	  0x70000dc8d000	ERROR	wallet.wallet2	src/wallet/wallet2.h:1300	HTTP request failed: HTTP request failed: Could not resolve host: explorer.beldex.io
+2022-08-03 15:47:53.752	  0x70000dc8d000	ERROR	wallet.wallet2	src/wallet/wallet2.cpp:3090	!r. THROW EXCEPTION: error::no_connection_to_daemon
+2022-08-03 15:47:53.752	  0x70000dc8d000	ERROR	wallet.rpc	src/wallet/wallet_rpc_server.cpp:401	Exception while refreshing: No connection to daemon
+2022-08-03 15:56:42.115	  0x70000dc8d000	ERROR	wallet.wallet2	src/wallet/wallet2.h:1300	HTTP request failed: HTTP request failed: Could not resolve host: explorer.beldex.io
+2022-08-03 15:56:42.115	  0x70000dc8d000	ERROR	wallet.wallet2	src/wallet/wallet2.cpp:3090	!r. THROW EXCEPTION: error::no_connection_to_daemon
+2022-08-03 15:56:42.115	  0x70000dc8d000	ERROR	wallet.rpc	src/wallet/wallet_rpc_server.cpp:401	Exception while refreshing: No connection to daemon
+2022-08-03 16:23:28.194	  0x70000dc8d000	ERROR	wallet.wallet2	src/wallet/wallet2.h:1300	HTTP request failed: HTTP request failed: 
+2022-08-03 16:23:28.213	  0x70000dc8d000	ERROR	wallet.wallet2	src/wallet/wallet2.cpp:3090	!r. THROW EXCEPTION: error::no_connection_to_daemon
+2022-08-03 16:23:28.213	  0x70000dc8d000	ERROR	wallet.rpc	src/wallet/wallet_rpc_server.cpp:401	Exception while refreshing: No connection to daemon
+2022-08-03 16:54:17.679	  0x70000dc8d000	ERROR	wallet.wallet2	src/wallet/wallet2.h:1300	HTTP request failed: HTTP request failed: Could not resolve host: explorer.beldex.io
+2022-08-03 16:54:17.679	  0x70000dc8d000	ERROR	wallet.wallet2	src/wallet/wallet2.cpp:3090	!r. THROW EXCEPTION: error::no_connection_to_daemon
+2022-08-03 16:54:17.679	  0x70000dc8d000	ERROR	wallet.rpc	src/wallet/wallet_rpc_server.cpp:401	Exception while refreshing: No connection to daemon
+2022-08-03 17:05:42.443	     0x117896600	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-08-03 17:05:42.444	     0x117896600	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-08-03 17:05:42.445	     0x117896600	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3563	Starting wallet RPC server
+2022-08-03 17:09:18.717	     0x1049e8600	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-08-03 17:09:18.718	     0x1049e8600	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-08-03 17:09:18.718	     0x1049e8600	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3563	Starting wallet RPC server
+2022-08-03 17:26:38.055	  0x70000dc8d000	ERROR	wallet.wallet2	src/wallet/wallet2.h:1300	HTTP request failed: HTTP request failed: 
+2022-08-03 17:26:38.220	  0x70000dc8d000	ERROR	wallet.wallet2	src/wallet/wallet2.cpp:3090	!r. THROW EXCEPTION: error::no_connection_to_daemon
+2022-08-03 17:26:38.221	  0x70000dc8d000	ERROR	wallet.rpc	src/wallet/wallet_rpc_server.cpp:401	Exception while refreshing: No connection to daemon
+2022-08-03 17:32:59.752	     0x10be03600	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-08-03 17:32:59.752	     0x10be03600	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-08-03 17:32:59.753	     0x10be03600	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3563	Starting wallet RPC server
+2022-08-03 18:15:42.728	  0x70000dc8d000	ERROR	wallet.wallet2	src/wallet/wallet2.h:1300	HTTP request failed: HTTP request failed: Could not resolve host: explorer.beldex.io
+2022-08-03 18:15:42.729	  0x70000dc8d000	ERROR	wallet.wallet2	src/wallet/wallet2.cpp:3090	!r. THROW EXCEPTION: error::no_connection_to_daemon
+2022-08-03 18:15:42.729	  0x70000dc8d000	ERROR	wallet.rpc	src/wallet/wallet_rpc_server.cpp:401	Exception while refreshing: No connection to daemon

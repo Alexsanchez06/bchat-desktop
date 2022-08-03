@@ -412,6 +412,7 @@ label {
 
 .Toastify__toast {
   background: var($toast-color-success);
+  font-family: $bchat-font-poppin-medium;
 
   // background: linear-gradient(--color-cell-background);
 
@@ -427,7 +428,7 @@ label {
     
   }
   @mixin set-toast-theme($color) {
-    border: 1x solid #919191;
+    border: 1x solid #919191 !important;
     background: $color;
     border-radius: 15px;
   }
