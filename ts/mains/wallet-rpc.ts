@@ -1,6 +1,6 @@
 import ChildProcess from "child_process";
 import fs from "fs-extra";
-import path from 'path';
+import path from 'upath';
 // import fixPath from 'fix-path';
 import { default as insecureNodeFetch } from 'node-fetch';
 import { HTTPError } from '../bchat/utils/errors';
@@ -13,23 +13,28 @@ export const startWalletRpc = async() => {
   const rpcExecutable =
     process.platform === "linux" ? "beldex-wallet-rpc-ubuntu" : "beldex-wallet-rpc-darwin";
   console.log("rpcExecutable:", rpcExecutable)
+  console.log("pathsss:", path.join(__dirname, '../../bin'))
+
   // eslint-disable-next-line no-undef
-  let __ryo_bin = path.join(process.cwd(), "/bin").replace(/\\/g, "\\\\");
+  // let __ryo_bin = path.join(process.cwd(), "/bin").replace(/\\/g, "\\\\");
+  let __ryo_bin = path.join(__dirname, '../../bin');
   console.log("__ryo:", __ryo_bin);
 
   const rpcPath = path.join(__ryo_bin, rpcExecutable);
+  console.log("rpcPath:",rpcPath)
+  // const walletDir = path.join(__dirname, '../../wallet')
   const walletDir = `${process.cwd()}/wallet`
   console.log("walletDir:", walletDir)
-  if (!fs.existsSync(walletDir)) {
-    fs.mkdirpSync(walletDir)
-  }
-  if (!fs.existsSync(rpcPath)) {
-    console.log("not exit")
-    new Error(
-      "Failed to find Beldex Wallet RPC. Please make sure your anti-virus has not removed it."
-    )
-    return;
-  }
+  // if (!fs.existsSync(walletDir)) {
+  //   fs.mkdirpSync(walletDir)
+  // }
+  // if (!fs.existsSync(rpcPath)) {
+  //   console.log("not exit")
+  //   new Error(
+  //     "Failed to find Beldex Wallet RPC. Please make sure your anti-virus has not removed it."
+  //   )
+  //   return;
+  // }
   // ChildProcess.execFile(
   //   rpcPath,
   //   [

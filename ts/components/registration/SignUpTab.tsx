@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { sanitizeBchatUsername } from '../../bchat/utils/String';
+import { fromHex, sanitizeBchatUsername } from '../../bchat/utils/String';
 import { Flex } from '../basic/Flex';
 import { BchatButton, BchatButtonColor, BchatButtonType } from '../basic/BchatButton';
 // import { BchatIdEditable } from '../basic/BchatIdEditable';
@@ -9,7 +9,10 @@ import { RegistrationUserDetails } from './RegistrationUserDetails';
 import { SignInMode } from './SignInTab';
 // import { TermsAndConditions } from './TermsAndConditions';
 import {DisplayIdAndAddress ,ShowRecoveryPhase} from "./ShowIdAndAddress";
-import { ToastUtils } from '../../bchat/utils';
+import { StringUtils, ToastUtils } from '../../bchat/utils';
+import { generateMnemonic } from '../../mains/wallet-rpc';
+import { mn_decode } from '../../bchat/crypto/mnemonic';
+import { bchatGenerateKeyPair } from '../../util/accountManager';
 // import { DisplaySeed } from './DisplaySeed';
 const { clipboard } = require('electron')
 
@@ -89,20 +92,45 @@ export const SignUpTab = (props:any) => {
   const {
     signUpMode,
     setRegistrationPhase,
-    generatedRecoveryPhrase,
-    hexGeneratedPubKey,
+    // generatedRecoveryPhrase,
+    // hexGeneratedPubKey,
     setSignUpMode,
   } = useContext(RegistrationContext);
   const [displayName, setDisplayName] = useState('');
   const [displayNameError, setDisplayNameError] = useState<undefined | string>('');
   const [displayNameScreen,setDisplayNameScreen]=useState(true);
   const [displayAddressScreen,setAddressScreen] = useState(true);
+  const [generatedRecoveryPhrase, setGeneratedRecoveryPhrase] = useState('');
+  const [hexGeneratedPubKey, setHexGeneratedPubKey] = useState('');
 
   useEffect(() => {
+    console.log("slksskl")
+  //  void generateMnemonicAndKeyPairCreate();
     if (signUpMode === SignUpMode.BchatIDShown) {
       window.bchat.setNewBchatID(hexGeneratedPubKey);
     }
   }, [signUpMode]);
+
+  const generateMnemonicAndKeyPairCreate = async () => {
+    if (generatedRecoveryPhrase === '') {
+
+      // await startWalletRpc();
+      const mnemonic = await generateMnemonic();
+      let seedHex = mn_decode(mnemonic);
+      // handle shorter than 32 bytes seeds
+      const privKeyHexLength = 32 * 2;
+      if (seedHex.length !== privKeyHexLength) {
+        seedHex = seedHex.concat('0'.repeat(32));
+        seedHex = seedHex.substring(0, privKeyHexLength);
+      }
+      const seed = fromHex(seedHex);
+      const keyPair = await bchatGenerateKeyPair(seed);
+      const newHexPubKey = StringUtils.decode(keyPair.pubKey, 'hex');
+
+      setGeneratedRecoveryPhrase(mnemonic);
+      setHexGeneratedPubKey(newHexPubKey); // our 'frontend' bchatID
+    }
+  };
 
   if (signUpMode === SignUpMode.Default) {
     return (
@@ -157,6 +185,7 @@ export const SignUpTab = (props:any) => {
     window?.log?.warn('invalid trimmed name for registration');
     ToastUtils.pushToastError('invalidDisplayName', window.i18n('displayNameEmpty'));
    }else{
+    void generateMnemonicAndKeyPairCreate();
     setDisplayNameScreen(false);
    }
   }
