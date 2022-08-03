@@ -4348,3 +4348,482 @@
 2022-08-03 10:07:33.668	  0x70000c4e3000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: spir
 2022-08-03 10:07:33.668	  0x70000c4e3000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: stra
 2022-08-03 10:07:33.668	  0x70000c4e3000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: thro
+2022-08-03 10:29:17.858	     0x112de3600	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-08-03 10:29:17.859	     0x112de3600	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-08-03 10:29:17.859	     0x112de3600	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3563	Starting wallet RPC server
+2022-08-03 10:52:59.279	     0x115d42600	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-08-03 10:52:59.280	     0x115d42600	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-08-03 10:52:59.283	     0x115d42600	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3563	Starting wallet RPC server
+2022-08-03 10:56:58.943	     0x115847600	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-08-03 10:56:58.943	     0x115847600	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-08-03 10:56:58.943	     0x115847600	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3563	Starting wallet RPC server
+2022-08-03 11:00:34.621	     0x10ea7a600	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-08-03 11:00:34.621	     0x10ea7a600	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-08-03 11:00:34.621	     0x10ea7a600	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3563	Starting wallet RPC server
+2022-08-03 11:12:53.123	     0x11469a600	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-08-03 11:12:53.123	     0x11469a600	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-08-03 11:12:53.124	     0x11469a600	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3563	Starting wallet RPC server
+2022-08-03 11:21:08.575	     0x109bec600	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-08-03 11:21:08.576	     0x109bec600	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-08-03 11:21:08.576	     0x109bec600	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3563	Starting wallet RPC server
+2022-08-03 11:27:08.434	     0x115a6a600	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-08-03 11:27:08.435	     0x115a6a600	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-08-03 11:27:08.435	     0x115a6a600	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3563	Starting wallet RPC server
+2022-08-03 11:34:21.236	     0x11b8c8600	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-08-03 11:34:21.236	     0x11b8c8600	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-08-03 11:34:21.236	     0x11b8c8600	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3563	Starting wallet RPC server
+2022-08-03 11:35:25.838	     0x118c4a600	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-08-03 11:35:25.838	     0x118c4a600	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-08-03 11:35:25.839	     0x118c4a600	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3563	Starting wallet RPC server
+2022-08-03 11:42:40.878	     0x10d5ef600	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-08-03 11:42:40.878	     0x10d5ef600	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-08-03 11:42:40.879	     0x10d5ef600	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3563	Starting wallet RPC server
+2022-08-03 11:59:28.154	     0x11cad6600	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-08-03 11:59:28.154	     0x11cad6600	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-08-03 11:59:28.154	     0x11cad6600	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3563	Starting wallet RPC server
+2022-08-03 12:11:34.971	     0x113d35600	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-08-03 12:11:34.972	     0x113d35600	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-08-03 12:11:34.973	     0x113d35600	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3563	Starting wallet RPC server
+2022-08-03 12:27:49.847	     0x11c938600	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-08-03 12:27:49.847	     0x11c938600	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-08-03 12:27:49.848	     0x11c938600	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3563	Starting wallet RPC server
+2022-08-03 12:53:44.213	     0x10c6ef600	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-08-03 12:53:44.213	     0x10c6ef600	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-08-03 12:53:44.214	     0x10c6ef600	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3563	Starting wallet RPC server
+2022-08-03 13:26:19.641	     0x115077600	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-08-03 13:26:19.641	     0x115077600	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-08-03 13:26:19.642	     0x115077600	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3563	Starting wallet RPC server
+2022-08-03 13:26:27.229	     0x113f7e600	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-08-03 13:26:27.229	     0x113f7e600	INFO	logging	contrib/epee/src/mlog.cpp:263	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,serialization:FATAL,logging:INFO,msgwriter:INFO
+2022-08-03 13:26:27.230	     0x113f7e600	WARNING	wallet.rpc	src/wallet/wallet_rpc_server.cpp:3563	Starting wallet RPC server
+2022-08-03 13:26:37.837	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'asa' is shorter than its prefix length, 4
+2022-08-03 13:26:37.839	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'ave' is shorter than its prefix length, 4
+2022-08-03 13:26:37.840	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'boa' is shorter than its prefix length, 4
+2022-08-03 13:26:37.841	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'cal' is shorter than its prefix length, 4
+2022-08-03 13:26:37.844	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'dar' is shorter than its prefix length, 4
+2022-08-03 13:26:37.845	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'don' is shorter than its prefix length, 4
+2022-08-03 13:26:37.845	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'dos' is shorter than its prefix length, 4
+2022-08-03 13:26:37.846	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'eco' is shorter than its prefix length, 4
+2022-08-03 13:26:37.846	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'eje' is shorter than its prefix length, 4
+2022-08-03 13:26:37.847	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'fax' is shorter than its prefix length, 4
+2022-08-03 13:26:37.847	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'feo' is shorter than its prefix length, 4
+2022-08-03 13:26:37.848	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'fin' is shorter than its prefix length, 4
+2022-08-03 13:26:37.849	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'gen' is shorter than its prefix length, 4
+2022-08-03 13:26:37.851	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'gol' is shorter than its prefix length, 4
+2022-08-03 13:26:37.851	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'haz' is shorter than its prefix length, 4
+2022-08-03 13:26:37.853	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'ira' is shorter than its prefix length, 4
+2022-08-03 13:26:37.854	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'luz' is shorter than its prefix length, 4
+2022-08-03 13:26:37.855	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'mar' is shorter than its prefix length, 4
+2022-08-03 13:26:37.855	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'mes' is shorter than its prefix length, 4
+2022-08-03 13:26:37.856	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'mil' is shorter than its prefix length, 4
+2022-08-03 13:26:37.961	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'oca' is shorter than its prefix length, 4
+2022-08-03 13:26:37.961	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'ojo' is shorter than its prefix length, 4
+2022-08-03 13:26:37.961	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'ola' is shorter than its prefix length, 4
+2022-08-03 13:26:37.963	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'oro' is shorter than its prefix length, 4
+2022-08-03 13:26:37.963	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'oso' is shorter than its prefix length, 4
+2022-08-03 13:26:37.963	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'pan' is shorter than its prefix length, 4
+2022-08-03 13:26:37.964	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'pez' is shorter than its prefix length, 4
+2022-08-03 13:26:37.965	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'pie' is shorter than its prefix length, 4
+2022-08-03 13:26:37.967	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'red' is shorter than its prefix length, 4
+2022-08-03 13:26:37.972	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'res' is shorter than its prefix length, 4
+2022-08-03 13:26:37.972	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	Español word 'rey' is shorter than its prefix length, 4
+2022-08-03 13:26:42.038	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'out' is shorter than its prefix length, 4
+2022-08-03 13:26:42.038	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'eye' is shorter than its prefix length, 4
+2022-08-03 13:26:42.040	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: thin
+2022-08-03 13:26:42.041	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'too' is shorter than its prefix length, 4
+2022-08-03 13:26:42.041	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'try' is shorter than its prefix length, 4
+2022-08-03 13:26:42.043	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'cry' is shorter than its prefix length, 4
+2022-08-03 13:26:42.043	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'end' is shorter than its prefix length, 4
+2022-08-03 13:26:42.045	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'off' is shorter than its prefix length, 4
+2022-08-03 13:26:42.045	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: some
+2022-08-03 13:26:42.047	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'ask' is shorter than its prefix length, 4
+2022-08-03 13:26:42.047	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: ever
+2022-08-03 13:26:42.049	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'got' is shorter than its prefix length, 4
+2022-08-03 13:26:42.049	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'yet' is shorter than its prefix length, 4
+2022-08-03 13:26:42.051	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'run' is shorter than its prefix length, 4
+2022-08-03 13:26:42.052	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'own' is shorter than its prefix length, 4
+2022-08-03 13:26:42.052	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'god' is shorter than its prefix length, 4
+2022-08-03 13:26:42.052	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'new' is shorter than its prefix length, 4
+2022-08-03 13:26:42.053	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'two' is shorter than its prefix length, 4
+2022-08-03 13:26:42.055	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'use' is shorter than its prefix length, 4
+2022-08-03 13:26:42.055	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: some
+2022-08-03 13:26:42.056	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'any' is shorter than its prefix length, 4
+2022-08-03 13:26:42.057	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'sky' is shorter than its prefix length, 4
+2022-08-03 13:26:42.058	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'put' is shorter than its prefix length, 4
+2022-08-03 13:26:42.058	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: happ
+2022-08-03 13:26:42.060	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: star
+2022-08-03 13:26:42.060	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'red' is shorter than its prefix length, 4
+2022-08-03 13:26:42.060	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: ever
+2022-08-03 13:26:42.063	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'air' is shorter than its prefix length, 4
+2022-08-03 13:26:42.063	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'lip' is shorter than its prefix length, 4
+2022-08-03 13:26:42.063	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'hit' is shorter than its prefix length, 4
+2022-08-03 13:26:42.064	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: real
+2022-08-03 13:26:42.066	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: brea
+2022-08-03 13:26:42.066	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: agai
+2022-08-03 13:26:42.066	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'fly' is shorter than its prefix length, 4
+2022-08-03 13:26:42.067	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: unde
+2022-08-03 13:26:42.068	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: some
+2022-08-03 13:26:42.130	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: real
+2022-08-03 13:26:42.131	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'guy' is shorter than its prefix length, 4
+2022-08-03 13:26:42.133	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'eat' is shorter than its prefix length, 4
+2022-08-03 13:26:42.134	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: brea
+2022-08-03 13:26:42.135	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: dark
+2022-08-03 13:26:42.137	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: alon
+2022-08-03 13:26:42.138	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: beau
+2022-08-03 13:26:42.139	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: hear
+2022-08-03 13:26:42.141	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'kid' is shorter than its prefix length, 4
+2022-08-03 13:26:42.157	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'dad' is shorter than its prefix length, 4
+2022-08-03 13:26:42.157	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'war' is shorter than its prefix length, 4
+2022-08-03 13:26:42.157	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'act' is shorter than its prefix length, 4
+2022-08-03 13:26:42.158	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: chan
+2022-08-03 13:26:42.160	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: chil
+2022-08-03 13:26:42.160	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'sea' is shorter than its prefix length, 4
+2022-08-03 13:26:42.160	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'lot' is shorter than its prefix length, 4
+2022-08-03 13:26:42.161	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'sad' is shorter than its prefix length, 4
+2022-08-03 13:26:42.163	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'mom' is shorter than its prefix length, 4
+2022-08-03 13:26:42.163	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'few' is shorter than its prefix length, 4
+2022-08-03 13:26:42.164	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: mean
+2022-08-03 13:26:42.165	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: real
+2022-08-03 13:26:42.165	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'bit' is shorter than its prefix length, 4
+2022-08-03 13:26:42.165	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: happ
+2022-08-03 13:26:42.165	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'men' is shorter than its prefix length, 4
+2022-08-03 13:26:42.166	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'age' is shorter than its prefix length, 4
+2022-08-03 13:26:42.167	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'ice' is shorter than its prefix length, 4
+2022-08-03 13:26:42.168	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: thro
+2022-08-03 13:26:42.169	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'leg' is shorter than its prefix length, 4
+2022-08-03 13:26:42.170	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: good
+2022-08-03 13:26:42.170	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: know
+2022-08-03 13:26:42.172	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: shou
+2022-08-03 13:26:42.172	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: pret
+2022-08-03 13:26:42.173	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'joy' is shorter than its prefix length, 4
+2022-08-03 13:26:42.175	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'dry' is shorter than its prefix length, 4
+2022-08-03 13:26:42.175	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: clea
+2022-08-03 13:26:42.175	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'son' is shorter than its prefix length, 4
+2022-08-03 13:26:42.176	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: sorr
+2022-08-03 13:26:42.176	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'hug' is shorter than its prefix length, 4
+2022-08-03 13:26:42.178	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'sat' is shorter than its prefix length, 4
+2022-08-03 13:26:42.178	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: fina
+2022-08-03 13:26:42.179	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: sile
+2022-08-03 13:26:42.179	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: ange
+2022-08-03 13:26:42.181	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: cont
+2022-08-03 13:26:42.181	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'dog' is shorter than its prefix length, 4
+2022-08-03 13:26:42.182	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: give
+2022-08-03 13:26:42.183	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: your
+2022-08-03 13:26:42.183	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'hey' is shorter than its prefix length, 4
+2022-08-03 13:26:42.183	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'pay' is shorter than its prefix length, 4
+2022-08-03 13:26:42.184	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: take
+2022-08-03 13:26:42.185	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: some
+2022-08-03 13:26:42.185	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: crea
+2022-08-03 13:26:42.187	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: forg
+2022-08-03 13:26:42.187	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'rip' is shorter than its prefix length, 4
+2022-08-03 13:26:42.188	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'job' is shorter than its prefix length, 4
+2022-08-03 13:26:42.190	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: laug
+2022-08-03 13:26:42.190	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: some
+2022-08-03 13:26:42.190	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: stor
+2022-08-03 13:26:42.191	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'beg' is shorter than its prefix length, 4
+2022-08-03 13:26:42.193	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: simp
+2022-08-03 13:26:42.193	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'win' is shorter than its prefix length, 4
+2022-08-03 13:26:42.193	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: flow
+2022-08-03 13:26:42.193	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: stre
+2022-08-03 13:26:42.196	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'gun' is shorter than its prefix length, 4
+2022-08-03 13:26:42.196	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: heav
+2022-08-03 13:26:42.197	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: ever
+2022-08-03 13:26:42.199	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: shou
+2022-08-03 13:26:42.199	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: stra
+2022-08-03 13:26:42.199	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: thro
+2022-08-03 13:26:42.201	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'ash' is shorter than its prefix length, 4
+2022-08-03 13:26:42.201	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: imag
+2022-08-03 13:26:42.202	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: warm
+2022-08-03 13:26:42.204	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: yell
+2022-08-03 13:26:42.204	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: frie
+2022-08-03 13:26:42.205	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: prob
+2022-08-03 13:26:42.205	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'six' is shorter than its prefix length, 4
+2022-08-03 13:26:42.206	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: nigh
+2022-08-03 13:26:42.207	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: thou
+2022-08-03 13:26:42.207	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: wors
+2022-08-03 13:26:42.209	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: bare
+2022-08-03 13:26:42.209	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: crea
+2022-08-03 13:26:42.211	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'art' is shorter than its prefix length, 4
+2022-08-03 13:26:42.211	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: pass
+2022-08-03 13:26:42.211	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: quic
+2022-08-03 13:26:42.225	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: brok
+2022-08-03 13:26:42.225	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'box' is shorter than its prefix length, 4
+2022-08-03 13:26:42.225	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: chil
+2022-08-03 13:26:42.225	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'tie' is shorter than its prefix length, 4
+2022-08-03 13:26:42.225	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: fore
+2022-08-03 13:26:42.225	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'pen' is shorter than its prefix length, 4
+2022-08-03 13:26:42.226	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: stre
+2022-08-03 13:26:42.226	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: comp
+2022-08-03 13:26:42.226	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: coun
+2022-08-03 13:26:42.226	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'wet' is shorter than its prefix length, 4
+2022-08-03 13:26:42.226	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: stre
+2022-08-03 13:26:42.231	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: forg
+2022-08-03 13:26:42.231	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: plan
+2022-08-03 13:26:42.231	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: both
+2022-08-03 13:26:42.231	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: bott
+2022-08-03 13:26:42.232	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'fix' is shorter than its prefix length, 4
+2022-08-03 13:26:42.232	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: forg
+2022-08-03 13:26:42.232	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: sure
+2022-08-03 13:26:42.232	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: teac
+2022-08-03 13:26:42.232	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: gent
+2022-08-03 13:26:42.232	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: writ
+2022-08-03 13:26:42.232	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: chai
+2022-08-03 13:26:42.232	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: them
+2022-08-03 13:26:42.234	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'cup' is shorter than its prefix length, 4
+2022-08-03 13:26:42.234	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: expe
+2022-08-03 13:26:42.234	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: free
+2022-08-03 13:26:42.234	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'pop' is shorter than its prefix length, 4
+2022-08-03 13:26:42.234	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: soft
+2022-08-03 13:26:42.234	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: stra
+2022-08-03 13:26:42.234	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'bar' is shorter than its prefix length, 4
+2022-08-03 13:26:42.234	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: love
+2022-08-03 13:26:42.237	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: clos
+2022-08-03 13:26:42.237	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: hand
+2022-08-03 13:26:42.237	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'key' is shorter than its prefix length, 4
+2022-08-03 13:26:42.239	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'won' is shorter than its prefix length, 4
+2022-08-03 13:26:42.239	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: dirt
+2022-08-03 13:26:42.239	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: pres
+2022-08-03 13:26:42.239	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: swea
+2022-08-03 13:26:42.239	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: ever
+2022-08-03 13:26:42.239	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: grow
+2022-08-03 13:26:42.239	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: know
+2022-08-03 13:26:42.239	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: numb
+2022-08-03 13:26:42.239	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: pres
+2022-08-03 13:26:42.239	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'buy' is shorter than its prefix length, 4
+2022-08-03 13:26:42.239	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'add' is shorter than its prefix length, 4
+2022-08-03 13:26:42.240	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: cont
+2022-08-03 13:26:42.240	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: dist
+2022-08-03 13:26:42.240	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: purp
+2022-08-03 13:26:42.240	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: thre
+2022-08-03 13:26:42.243	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: gras
+2022-08-03 13:26:42.243	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: inno
+2022-08-03 13:26:42.244	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: shad
+2022-08-03 13:26:42.244	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: some
+2022-08-03 13:26:42.244	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'toe' is shorter than its prefix length, 4
+2022-08-03 13:26:42.244	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: visi
+2022-08-03 13:26:42.244	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: cons
+2022-08-03 13:26:42.245	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'ink' is shorter than its prefix length, 4
+2022-08-03 13:26:42.337	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: sile
+2022-08-03 13:26:42.338	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: stre
+2022-08-03 13:26:42.338	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'bus' is shorter than its prefix length, 4
+2022-08-03 13:26:42.338	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'mix' is shorter than its prefix length, 4
+2022-08-03 13:26:42.339	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: pray
+2022-08-03 13:26:42.339	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: pres
+2022-08-03 13:26:42.340	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: trai
+2022-08-03 13:26:42.341	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'bag' is shorter than its prefix length, 4
+2022-08-03 13:26:42.341	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: expl
+2022-08-03 13:26:42.341	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: fami
+2022-08-03 13:26:42.343	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: refl
+2022-08-03 13:26:42.343	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: scen
+2022-08-03 13:26:42.343	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: self
+2022-08-03 13:26:42.343	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: wond
+2022-08-03 13:26:42.344	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: atte
+2022-08-03 13:26:42.345	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: birt
+2022-08-03 13:26:42.345	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: perf
+2022-08-03 13:26:42.347	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: cons
+2022-08-03 13:26:42.347	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'egg' is shorter than its prefix length, 4
+2022-08-03 13:26:42.347	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: eter
+2022-08-03 13:26:42.347	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: floo
+2022-08-03 13:26:42.347	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: scre
+2022-08-03 13:26:42.349	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: buil
+2022-08-03 13:26:42.349	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: desp
+2022-08-03 13:26:42.350	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: mess
+2022-08-03 13:26:42.351	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: stri
+2022-08-03 13:26:42.351	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: clea
+2022-08-03 13:26:42.352	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: imag
+2022-08-03 13:26:42.352	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: less
+2022-08-03 13:26:42.354	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: stro
+2022-08-03 13:26:42.354	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: bloo
+2022-08-03 13:26:42.355	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: foot
+2022-08-03 13:26:42.356	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'mud' is shorter than its prefix length, 4
+2022-08-03 13:26:42.356	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'nod' is shorter than its prefix length, 4
+2022-08-03 13:26:42.357	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: rela
+2022-08-03 13:26:42.357	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: sudd
+2022-08-03 13:26:42.357	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: admi
+2022-08-03 13:26:42.357	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: blin
+2022-08-03 13:26:42.358	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: brea
+2022-08-03 13:26:42.359	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: cons
+2022-08-03 13:26:42.360	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: cree
+2022-08-03 13:26:42.360	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: diff
+2022-08-03 13:26:42.360	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: empt
+2022-08-03 13:26:42.360	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: plan
+2022-08-03 13:26:42.362	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'rub' is shorter than its prefix length, 4
+2022-08-03 13:26:42.362	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: some
+2022-08-03 13:26:42.362	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: tigh
+2022-08-03 13:26:42.362	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: brea
+2022-08-03 13:26:42.363	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: dese
+2022-08-03 13:26:42.364	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: gran
+2022-08-03 13:26:42.364	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: plea
+2022-08-03 13:26:42.364	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: powe
+2022-08-03 13:26:42.366	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: thre
+2022-08-03 13:26:42.367	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'bee' is shorter than its prefix length, 4
+2022-08-03 13:26:42.368	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: blan
+2022-08-03 13:26:42.368	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: butt
+2022-08-03 13:26:42.368	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: care
+2022-08-03 13:26:42.368	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: comp
+2022-08-03 13:26:42.368	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: deep
+2022-08-03 13:26:42.368	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: drea
+2022-08-03 13:26:42.370	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: gott
+2022-08-03 13:26:42.370	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: gree
+2022-08-03 13:26:42.370	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: repl
+2022-08-03 13:26:42.371	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: spin
+2022-08-03 13:26:42.372	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: chil
+2022-08-03 13:26:42.373	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: coll
+2022-08-03 13:26:42.373	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: depr
+2022-08-03 13:26:42.373	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: even
+2022-08-03 13:26:42.373	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: grou
+2022-08-03 13:26:42.375	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: hone
+2022-08-03 13:26:42.376	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: nerv
+2022-08-03 13:26:42.376	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: pain
+2022-08-03 13:26:42.376	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: poet
+2022-08-03 13:26:42.376	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: prin
+2022-08-03 13:26:42.376	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: show
+2022-08-03 13:26:42.376	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: stai
+2022-08-03 13:26:42.376	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: stea
+2022-08-03 13:26:42.378	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: trea
+2022-08-03 13:26:42.378	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: chee
+2022-08-03 13:26:42.379	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: crim
+2022-08-03 13:26:42.379	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: exis
+2022-08-03 13:26:42.381	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'fog' is shorter than its prefix length, 4
+2022-08-03 13:26:42.381	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: foot
+2022-08-03 13:26:42.381	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'gay' is shorter than its prefix length, 4
+2022-08-03 13:26:42.381	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: illu
+2022-08-03 13:26:42.382	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: stud
+2022-08-03 13:26:42.382	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: supp
+2022-08-03 13:26:42.383	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: appr
+2022-08-03 13:26:42.384	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: coll
+2022-08-03 13:26:42.384	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: conf
+2022-08-03 13:26:42.384	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: crea
+2022-08-03 13:26:42.385	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: girl
+2022-08-03 13:26:42.386	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'hop' is shorter than its prefix length, 4
+2022-08-03 13:26:42.386	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: moon
+2022-08-03 13:26:42.386	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: peac
+2022-08-03 13:26:42.387	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'pig' is shorter than its prefix length, 4
+2022-08-03 13:26:42.388	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: scre
+2022-08-03 13:26:42.389	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: thro
+2022-08-03 13:26:42.390	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: thro
+2022-08-03 13:26:42.390	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'wow' is shorter than its prefix length, 4
+2022-08-03 13:26:42.391	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: cour
+2022-08-03 13:26:42.391	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'dim' is shorter than its prefix length, 4
+2022-08-03 13:26:42.391	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'hum' is shorter than its prefix length, 4
+2022-08-03 13:26:42.391	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'led' is shorter than its prefix length, 4
+2022-08-03 13:26:42.392	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: natu
+2022-08-03 13:26:42.392	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: near
+2022-08-03 13:26:42.393	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: need
+2022-08-03 13:26:42.393	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: peac
+2022-08-03 13:26:42.393	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: perf
+2022-08-03 13:26:42.395	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: shin
+2022-08-03 13:26:42.396	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: shoo
+2022-08-03 13:26:42.397	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'sob' is shorter than its prefix length, 4
+2022-08-03 13:26:42.397	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: stol
+2022-08-03 13:26:42.397	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'tap' is shorter than its prefix length, 4
+2022-08-03 13:26:42.398	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: boun
+2022-08-03 13:26:42.398	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: deci
+2022-08-03 13:26:42.399	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: desp
+2022-08-03 13:26:42.399	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'dig' is shorter than its prefix length, 4
+2022-08-03 13:26:42.400	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'dot' is shorter than its prefix length, 4
+2022-08-03 13:26:42.401	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: hear
+2022-08-03 13:26:42.401	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'odd' is shorter than its prefix length, 4
+2022-08-03 13:26:42.402	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: quie
+2022-08-03 13:26:42.403	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: sent
+2022-08-03 13:26:42.403	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: stra
+2022-08-03 13:26:42.404	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: unde
+2022-08-03 13:26:42.404	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: whis
+2022-08-03 13:26:42.404	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: anyw
+2022-08-03 13:26:42.405	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'bid' is shorter than its prefix length, 4
+2022-08-03 13:26:42.406	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: bloo
+2022-08-03 13:26:42.406	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: care
+2022-08-03 13:26:42.406	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: comp
+2022-08-03 13:26:42.408	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: desc
+2022-08-03 13:26:42.408	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: doub
+2022-08-03 13:26:42.408	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: drea
+2022-08-03 13:26:42.408	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: driv
+2022-08-03 13:26:42.408	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: even
+2022-08-03 13:26:42.410	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: gran
+2022-08-03 13:26:42.411	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: hung
+2022-08-03 13:26:42.411	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: show
+2022-08-03 13:26:42.413	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'shy' is shorter than its prefix length, 4
+2022-08-03 13:26:42.413	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: weak
+2022-08-03 13:26:42.415	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: wors
+2022-08-03 13:26:42.415	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: wort
+2022-08-03 13:26:42.415	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: afte
+2022-08-03 13:26:42.415	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: conc
+2022-08-03 13:26:42.416	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: draw
+2022-08-03 13:26:42.416	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'due' is shorter than its prefix length, 4
+2022-08-03 13:26:42.417	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: free
+2022-08-03 13:26:42.418	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: harm
+2022-08-03 13:26:42.418	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: hope
+2022-08-03 13:26:42.419	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: quit
+2022-08-03 13:26:42.421	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: resp
+2022-08-03 13:26:42.421	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: salt
+2022-08-03 13:26:42.422	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: shee
+2022-08-03 13:26:42.423	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: soci
+2022-08-03 13:26:42.424	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'aim' is shorter than its prefix length, 4
+2022-08-03 13:26:42.424	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: awak
+2022-08-03 13:26:42.426	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: beli
+2022-08-03 13:26:42.426	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: bran
+2022-08-03 13:26:42.426	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: chee
+2022-08-03 13:26:42.426	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: conf
+2022-08-03 13:26:42.428	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: conn
+2022-08-03 13:26:42.428	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: ever
+2022-08-03 13:26:42.428	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: expr
+2022-08-03 13:26:42.428	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'fan' is shorter than its prefix length, 4
+2022-08-03 13:26:42.428	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'fur' is shorter than its prefix length, 4
+2022-08-03 13:26:42.430	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: glor
+2022-08-03 13:26:42.430	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: igno
+2022-08-03 13:26:42.430	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'law' is shorter than its prefix length, 4
+2022-08-03 13:26:42.431	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: migh
+2022-08-03 13:26:42.432	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: pati
+2022-08-03 13:26:42.432	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: poss
+2022-08-03 13:26:42.433	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: stri
+2022-08-03 13:26:42.433	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: stri
+2022-08-03 13:26:42.433	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: suff
+2022-08-03 13:26:42.434	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'cap' is shorter than its prefix length, 4
+2022-08-03 13:26:42.435	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: cert
+2022-08-03 13:26:42.435	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: comp
+2022-08-03 13:26:42.436	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: crea
+2022-08-03 13:26:42.437	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: deli
+2022-08-03 13:26:42.437	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: drag
+2022-08-03 13:26:42.437	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: ever
+2022-08-03 13:26:42.437	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: fore
+2022-08-03 13:26:42.438	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: form
+2022-08-03 13:26:42.440	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: frig
+2022-08-03 13:26:42.440	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'gas' is shorter than its prefix length, 4
+2022-08-03 13:26:42.440	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: invi
+2022-08-03 13:26:42.441	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: poss
+2022-08-03 13:26:42.442	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'raw' is shorter than its prefix length, 4
+2022-08-03 13:26:42.442	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: scar
+2022-08-03 13:26:42.442	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: seve
+2022-08-03 13:26:42.443	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: slig
+2022-08-03 13:26:42.443	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'tea' is shorter than its prefix length, 4
+2022-08-03 13:26:42.445	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: terr
+2022-08-03 13:26:42.445	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: thre
+2022-08-03 13:26:42.445	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: tric
+2022-08-03 13:26:42.445	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'awe' is shorter than its prefix length, 4
+2022-08-03 13:26:42.447	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: char
+2022-08-03 13:26:42.447	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: chea
+2022-08-03 13:26:42.447	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: comm
+2022-08-03 13:26:42.447	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: comp
+2022-08-03 13:26:42.447	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: crea
+2022-08-03 13:26:42.448	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: defe
+2022-08-03 13:26:42.449	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: desp
+2022-08-03 13:26:42.449	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: dest
+2022-08-03 13:26:42.450	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'dew' is shorter than its prefix length, 4
+2022-08-03 13:26:42.450	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: dust
+2022-08-03 13:26:42.451	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: expl
+2022-08-03 13:26:42.451	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'foe' is shorter than its prefix length, 4
+2022-08-03 13:26:42.451	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: free
+2022-08-03 13:26:42.452	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: guil
+2022-08-03 13:26:42.454	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: heal
+2022-08-03 13:26:42.454	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: impo
+2022-08-03 13:26:42.454	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'jaw' is shorter than its prefix length, 4
+2022-08-03 13:26:42.454	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: king
+2022-08-03 13:26:42.457	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: mist
+2022-08-03 13:26:42.458	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'ode' is shorter than its prefix length, 4
+2022-08-03 13:26:42.458	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: path
+2022-08-03 13:26:42.458	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:197	EnglishOld word 'pie' is shorter than its prefix length, 4
+2022-08-03 13:26:42.458	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: reve
+2022-08-03 13:26:42.459	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: scra
+2022-08-03 13:26:42.459	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: spir
+2022-08-03 13:26:42.459	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: stra
+2022-08-03 13:26:42.460	  0x70000dc8d000	WARNING	default	src/mnemonics/language_base.h:213	Duplicate prefix in EnglishOld word list: thro

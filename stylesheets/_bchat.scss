@@ -402,26 +402,37 @@ label {
 }
 
 .Toastify__toast {
-  background: var(--color-cell-background);
+  background: var($toast-color-success);
+
+  // background: linear-gradient(--color-cell-background);
+
   color: var(--color-text);
 
   .Toastify__close-button {
-    color: subtle(var(--color-text));
+    color: white;
+    padding: 1px 5px 3px 6px;
+    background-color: #3F3C4B;
+    border-radius: 24px;
+    margin-top:11px;
+    margin-right: 8px;
+    
   }
   @mixin set-toast-theme($color) {
-    border-left: 4px solid $color;
+    border: 1x solid #919191;
+    background: $color;
+    border-radius: 15px;
   }
   &--success {
-    @include set-toast-theme($bchat-color-success);
+    @include set-toast-theme($toast-color-success);
   }
   &--info {
-    @include set-toast-theme($bchat-color-info);
+    @include set-toast-theme($toast-color-success);
   }
   &--warning {
-    @include set-toast-theme($bchat-color-warning-alt);
+    @include set-toast-theme($toast-color-error);
   }
   &--error {
-    @include set-toast-theme($bchat-color-error);
+    @include set-toast-theme($toast-color-error);
   }
 
   .Toastify__progress-bar {
