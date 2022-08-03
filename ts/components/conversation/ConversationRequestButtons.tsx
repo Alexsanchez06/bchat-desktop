@@ -61,20 +61,22 @@ export const ConversationMessageRequestButtons = () => {
 
   return (
     <ConversationRequestBanner>
+      Allow this person to chat with you?
       <ConversationBannerRow>
+        
+        <BchatButton
+          buttonColor={BchatButtonColor.Danger}
+          buttonType={BchatButtonType.Default}
+          text={window.i18n('blocked')}
+          onClick={handleDeclineConversationRequest}
+          dataTestId="decline-message-request"
+        />
         <BchatButton
           buttonColor={BchatButtonColor.Green}
-          buttonType={BchatButtonType.BrandOutline}
+          buttonType={BchatButtonType.Default}
           onClick={handleAcceptConversationRequest}
           text={window.i18n('accept')}
           dataTestId="accept-message-request"
-        />
-        <BchatButton
-          buttonColor={BchatButtonColor.Danger}
-          buttonType={BchatButtonType.BrandOutline}
-          text={window.i18n('decline')}
-          onClick={handleDeclineConversationRequest}
-          dataTestId="decline-message-request"
         />
       </ConversationBannerRow>
     </ConversationRequestBanner>
@@ -94,4 +96,9 @@ const ConversationRequestBanner = styled.div`
   justify-content: center;
   padding: var(--margins-lg);
   gap: var(--margins-lg);
+  font-size: 22px;
+  background: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  font-family: 'poppin-semibold';
+
 `;

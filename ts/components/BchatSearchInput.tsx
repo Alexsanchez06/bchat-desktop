@@ -54,6 +54,8 @@ export const BchatSearchInput = () => {
           updateSearch(dispatch, inputValue);
         }}
         placeholder={window.i18n('searchFor...')}
+        // placeholder={'Search people and groups'}
+
       />
       {!!currentSearchTerm.length && (
         <BchatIconButton

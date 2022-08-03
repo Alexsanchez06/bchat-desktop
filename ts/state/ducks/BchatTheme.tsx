@@ -32,7 +32,7 @@ const darkColorRecoveryPhraseBannerBg = '#1f1f1f';
 const darkColorPillDivider = '#353535';
 const darkColorLastSeenIndicator = accentDarkTheme;
 const darkColorQuoteBottomBarBg = '#404040';
-const darkColorCellBackground = '#1b1b1b';
+const darkColorCellBackground = '#252531';
 const darkColorReceivedMessageBg = '#34323F';
 const darkColorReceivedMessageText = white;
 
@@ -47,7 +47,7 @@ const darkFakeChatBubbleBg = '#212121';
 
 const darkInboxBackground = '#1C1C26';
 const darkLeftPaneOverlayBg = darkInboxBackground;
-const darkConversationItemSelected = '#303041';
+const darkConversationItemSelected = '#37374A';
 const darkConversationItemHasUnread = '#2c2c2c';
 const darkConversationList = '#1C1C26';
 
@@ -212,7 +212,7 @@ const lightColorTextAccent = accentLightTheme;
 const lightColorBchatShadow = `0 0 4px 0 ${black}5E`;
 const lightColorComposeViewBg = '#efefef';
 const lightColorSentMessageBg = accentLightTheme;
-const lightColorClickableHovered = '#dfdfdf';
+const lightColorClickableHovered = '#242431';
 const lightColorBchatBorderColor = borderLightThemeColor;
 const lightColorBchatBorder = `1px solid ${lightColorBchatBorderColor}`;
 const lightColorRecoveryPhraseBannerBg = white;

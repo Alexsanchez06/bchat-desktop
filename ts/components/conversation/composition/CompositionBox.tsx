@@ -340,6 +340,7 @@ class CompositionBoxInner extends React.Component<Props, State> {
       this.showEmojiPanel();
     }
   }
+  
 
   private renderRecordingView() {
     return (
@@ -357,11 +358,11 @@ class CompositionBoxInner extends React.Component<Props, State> {
 
     return (
       <>
-        {typingEnabled && <AddStagedAttachmentButton 
-        onClick={this.onChooseAttachment}
-         />}
-      
-          <input
+        {typingEnabled && <AddStagedAttachmentButton
+          onClick={this.onChooseAttachment}
+        />}
+
+        <input
           className="hidden"
           placeholder="Attachment"
           multiple={true}
@@ -369,8 +370,8 @@ class CompositionBoxInner extends React.Component<Props, State> {
           type="file"
           onChange={this.onChoseAttachment}
         />
-       
-       {this.state.showRecordingView ? this.renderRecordingView() :<>
+
+    {this.state.showRecordingView ? this.renderRecordingView() : <>
         <div
           className="send-message-input"
           role="main"
@@ -380,31 +381,28 @@ class CompositionBoxInner extends React.Component<Props, State> {
           }}
           data-testid="message-input"
         >
-          {this.renderTextArea()}
-        {typingEnabled && <StartRecordingButton onClick={this.onLoadVoiceNoteView} />}
-
+          
+            {this.renderTextArea()}
+           {typingEnabled && <StartRecordingButton onClick={this.onLoadVoiceNoteView} />}
+      
         </div>
         {/* {typingEnabled && (
           <ToggleEmojiButton ref={this.emojiPanelButton} onClick={this.toggleEmojiPanel} />
         )} */}
         <SendMessageButton onClick={this.onSendMessage} />
-
+      </>}
         {typingEnabled && (
           <div ref={this.emojiPanel} onKeyDown={this.onKeyDown} role="button">
             {showEmojiPanel && (
               <BchatEmojiPanel onEmojiClicked={this.onEmojiClick} show={showEmojiPanel} />
             )}
           </div>
-          
+
         )}
        
-       </> 
        
        
-       }
-                
 
-        
       </>
     );
   }

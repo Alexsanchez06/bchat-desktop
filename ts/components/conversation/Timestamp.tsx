@@ -20,6 +20,8 @@ const TimestampContainerNotListItem = styled.div`
   text-transform: uppercase;
   user-select: none;
   color: var(--color-text-subtle);
+  position: relative;
+  top: 24px;
 `;
 
 const TimestampContainerListItem = styled(TimestampContainerNotListItem)`

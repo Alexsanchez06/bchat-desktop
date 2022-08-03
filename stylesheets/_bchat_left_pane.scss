@@ -296,14 +296,15 @@ $bchat-compose-margin: 20px;
 }
 
 .bchat-search-input {
-  height: $bchat-search-input-height;
-  width: 100%;
-  margin-inline-end: 1px;
-  margin-bottom: 10px;
-  display: inline-flex;
-  flex-shrink: 0;
-
-  .bchat-icon-button {
+    height: 60px;
+    width: 100%;
+    margin-inline-end: 1px;
+    margin-bottom: 10px;
+    display: inline-flex;
+    flex-shrink: 0;
+    background: #262633;
+    padding: 0 21px;
+ .bchat-icon-button {
     margin: auto 10px;
   }
 
@@ -321,6 +322,10 @@ $bchat-compose-margin: 20px;
     &:focus {
       outline: none !important;
     }
+  }
+  ::placeholder {
+    font-family: $bchat-font-poppin-medium;
+    color:#BABABA
   }
 }
 

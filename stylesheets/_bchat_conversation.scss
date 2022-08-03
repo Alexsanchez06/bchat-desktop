@@ -88,7 +88,7 @@
   }
 }
 
-.bchat-conversation-Bg{
+.bchat-conversation-Bg {
   background-image: url('images/doodle_white.svg');
 }
 
@@ -98,16 +98,16 @@
   flex-direction: column;
   max-width: calc(100vw - 380px);
   // height: 90.1;
-  background-image:url("../images/bchat/doodle_white.svg");
-  
-  
+  background-image: url("../images/bchat/doodle_white.svg");
+
+
   // .bchat-conversation-doodle
   // {
   //   background-color: beige;
   //  height: 100%;
   // }
   .selection-mode {
-    .messages-container > *:not(.message-selected) {
+    .messages-container>*:not(.message-selected) {
       animation: toShadow $bchat-transition-duration;
       opacity: 0.4;
     }
@@ -196,25 +196,26 @@
       width: 30px;
     }
   }
- .attachment-box
- {
- background-color:var(--color-composeMsgIconBG);
- padding: 8px 13px;
- color: #85858F;
+
+  .attachment-box {
+    background-color: var(--color-composeMsgIconBG);
+    padding: 8px 13px;
+    color: #85858F;
     border-radius: 10px;
-    &-icon
-    {
+
+    &-icon {
       width: 25px;
       height: 25px;
       padding: 2px;
     }
+
     &:hover {
       opacity: 0.7;
-      
-  
+
+
     }
 
- }
+  }
 
 
   .send-message-input {
@@ -231,6 +232,7 @@
     margin: 7px 13px;
     border-radius: 10px;
     padding-left: 20px;
+
     ul {
       max-height: 70vh;
       overflow: auto;
@@ -287,7 +289,7 @@
     visibility: visible;
   }
 
-  & > section.emoji-mart {
+  &>section.emoji-mart {
     font-family: $bchat-font-default;
     font-size: $bchat-font-sm;
     background-color: var(--color-cell-background);
@@ -362,9 +364,14 @@
 .send-message-button {
   background-color: #159B24;
     border-radius: 10px;
-    padding: 8px;
+    /* padding: 8px; */
     cursor: pointer;
-
+    animation: fadein 0.25s;
+    width: 57px;
+    height: 53px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   animation: fadein $bchat-transition-duration;
 
   &---scale {
@@ -385,8 +392,7 @@
     }
   }
 
-  .sendBox
-  {
+  .sendBox {
     background-image: url(../images/bchat/send.svg);
     width: 25px;
     height: 30px;
@@ -394,13 +400,14 @@
     margin-left: 3px;
 
   }
-  
+
 
 }
 
 
 .bchat-recording {
   height: $composition-container-height;
+  // height: 38px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -408,6 +415,19 @@
   outline: none;
 
   $actions-element-size: 30px;
+
+  &-box {
+    padding: 10px;
+    display: flex;
+    width: 94%;
+    background-color: #3F3C4B;
+    margin-left: 13px;
+    height: 47px;
+    border-radius: 13px;
+    justify-content: space-between;
+}
+
+
 
   &--actions {
     display: flex;
@@ -496,13 +516,13 @@
     }
 
     &-light {
-      height: $bchat-margin-sm;
-      width: $bchat-margin-sm;
+      height: 15px;
+      width: 15px;
       border-radius: 50%;
-      background-color: $bchat-color-danger-alt;
+      background-color: $bchat-color-success;
       margin: 0 $bchat-margin-sm;
 
-      @include pulse-color($bchat-color-danger-alt, 1s, infinite);
+      @include pulse-color($bchat-color-success, 1s, infinite);
     }
   }
 }
