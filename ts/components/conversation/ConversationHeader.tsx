@@ -371,7 +371,8 @@ export const ConversationHeaderWithDetails = () => {
 
         <ConversationHeaderMenu triggerId={triggerId} />
 
-        <div style={{width:'100%'}}>        {!isSelectionMode && (
+        <div style={{width:'100%'}}>     
+           {/* {!isSelectionMode && ( */}
           <Flex container={true} flexDirection="row" alignItems="center">
              <AvatarHeader
               onAvatarClick={() => {
@@ -388,7 +389,7 @@ export const ConversationHeaderWithDetails = () => {
             <CallButton />
            
           </Flex>
-        )}
+        {/* )} */}
         </div> 
 
          

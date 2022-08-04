@@ -844,56 +844,58 @@ label {
   width: 80px;
   height: 80px;
   flex-shrink: 0;
+  background-image: url("image/bchat/Load_animation.gif");
 
-  div {
-    position: absolute;
-    top: 33px;
-    width: 13px;
-    height: 13px;
-    border-radius: 50%;
-    background: $bchat-color-green;
-    animation-timing-function: cubic-bezier(0, 1, 1, 0);
-  }
-  div:nth-child(1) {
-    left: 8px;
-    animation: bchat-loader1 0.6s infinite;
-  }
-  div:nth-child(2) {
-    left: 8px;
-    animation: bchat-loader2 0.6s infinite;
-  }
-  div:nth-child(3) {
-    left: 32px;
-    animation: bchat-loader2 0.6s infinite;
-  }
-  div:nth-child(4) {
-    left: 56px;
-    animation: bchat-loader3 0.6s infinite;
-  }
-  @keyframes bchat-loader1 {
-    0% {
-      transform: scale(0);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-  @keyframes bchat-loader3 {
-    0% {
-      transform: scale(1);
-    }
-    100% {
-      transform: scale(0);
-    }
-  }
-  @keyframes bchat-loader2 {
-    0% {
-      transform: translate(0, 0);
-    }
-    100% {
-      transform: translate(24px, 0);
-    }
-  }
+
+  // div {
+  //   position: absolute;
+  //   top: 33px;
+  //   width: 13px;
+  //   height: 13px;
+  //   border-radius: 50%;
+  //   background: $bchat-color-green;
+  //   animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  // }
+  // div:nth-child(1) {
+  //   left: 8px;
+  //   animation: bchat-loader1 0.6s infinite;
+  // }
+  // div:nth-child(2) {
+  //   left: 8px;
+  //   animation: bchat-loader2 0.6s infinite;
+  // }
+  // div:nth-child(3) {
+  //   left: 32px;
+  //   animation: bchat-loader2 0.6s infinite;
+  // }
+  // div:nth-child(4) {
+  //   left: 56px;
+  //   animation: bchat-loader3 0.6s infinite;
+  // }
+  // @keyframes bchat-loader1 {
+  //   0% {
+  //     transform: scale(0);
+  //   }
+  //   100% {
+  //     transform: scale(1);
+  //   }
+  // }
+  // @keyframes bchat-loader3 {
+  //   0% {
+  //     transform: scale(1);
+  //   }
+  //   100% {
+  //     transform: scale(0);
+  //   }
+  // }
+  // @keyframes bchat-loader2 {
+  //   0% {
+  //     transform: translate(0, 0);
+  //   }
+  //   100% {
+  //     transform: translate(24px, 0);
+  //   }
+  // }
 }
 
 .bchat-settings {
@@ -1349,7 +1351,8 @@ input {
     width: 100%;
     max-height: 400px;
     overflow-y: auto;
-    border: var(--border-bchat);
+    // border: var(--border-bchat);
+    border-bottom: var(--border-bchat);
   }
 
   &__selection {
@@ -1393,8 +1396,8 @@ input {
   cursor: pointer;
   flex-shrink: 0;
   font-family: $bchat-font-default;
-  padding: 0px $bchat-margin-sm;
-  height: 50px;
+  padding: 0px $bchat-margin-lg;
+  height: 60px;
   display: flex;
   justify-content: space-between;
   transition: $bchat-transition-duration;
@@ -1412,11 +1415,18 @@ input {
   }
 
   &__checkmark {
-    opacity: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin: auto 0;
+    padding: 2px;
+    // opacity: 0;
     transition: $bchat-transition-duration;
 
     &.selected {
       opacity: 1;
+      border: 2px solid green;
       svg {
         fill: var(--color-accent) !important;
       }
@@ -1428,11 +1438,14 @@ input {
     display: flex;
     align-items: center;
   }
+  
+
 
   &__name {
     font-weight: bold;
     margin-inline-start: $bchat-margin-md;
     margin-inline-end: $bchat-margin-md;
+    font-family: $bchat-font-poppin-medium;
   }
   &__pubkey {
     margin-inline-start: 5px;

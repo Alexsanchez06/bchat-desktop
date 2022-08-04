@@ -6,13 +6,14 @@ import { BchatJoinableRooms } from './BchatJoinableDefaultRooms';
 // import { BchatButton, BchatButtonColor, BchatButtonType } from '../../basic/BchatButton';
 import { BchatIdEditable } from '../../basic/BchatIdEditable';
 import { BchatSpinner } from '../../basic/BchatSpinner';
-import { OverlayHeader } from './OverlayHeader';
+// import { OverlayHeader } from './OverlayHeader';
 import { useDispatch } from 'react-redux';
 import { setOverlayMode, showLeftPaneSection } from '../../../state/ducks/section';
 import { joinOpenGroupV2WithUIEvents } from '../../../bchat/apis/open_group_api/opengroupV2/JoinOpenGroupV2';
 import { openGroupV2CompleteURLRegex } from '../../../bchat/apis/open_group_api/utils/OpenGroupUtils';
 import { ToastUtils } from '../../../bchat/utils';
 import useKey from 'react-use/lib/useKey';
+import { LeftPaneSectionHeader } from '../LeftPaneSectionHeader';
 
 async function joinOpenGroup(serverUrl: string) {
   // guess if this is an open
@@ -66,10 +67,15 @@ export const OverlayOpenGroup = () => {
 
   return (
     <div className="module-left-pane-overlay">
-      <OverlayHeader title={title} subtitle={subtitle}  hideExit={true}/>
+      <div className="module-left-pane-overlay">
+      {/* <OverlayHeader title={title} subtitle={subtitle}  hideExit={true}/> */}
+      <LeftPaneSectionHeader />
 
-      
-      <div>{subtitle}</div>
+      <div className='module-left-pane-overlay-closed--header'>{title}</div>
+      <div className='module-left-pane-overlay-closed--subHeader'>
+      {subtitle}
+      </div>
+    
       <div className="create-group-name-input">
         <BchatIdEditable
           editable={true}
@@ -81,19 +87,27 @@ export const OverlayOpenGroup = () => {
           onPressEnter={onEnterPressed}
         />
       </div>
+      <div className='module-left-pane-overlay-openhint-message'>
+      Social groups are similar to public groups. however, you need an invite link to join. Join a social group using the group's URL.
+      </div>
 
       <BchatSpinner loading={loading} />
       <BchatJoinableRooms onRoomClicked={closeOverlay} />
-      <button 
-      className='nextButton'
-      onClick={onEnterPressed}
-      >{buttonText}</button>
+      
       {/* <BchatButton
         buttonColor={BchatButtonColor.Green}
         buttonType={BchatButtonType.BrandOutline}
         text={buttonText}
         
       /> */}
+    </div>
+    <div className='buttonBox'>
+    <button 
+      className='nextButton'
+      onClick={onEnterPressed}
+      >{buttonText}</button>
+    </div>
+
     </div>
   );
 };

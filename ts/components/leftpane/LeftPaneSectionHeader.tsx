@@ -60,6 +60,7 @@ export const LeftPaneSectionHeader = (props: { buttonClicked?: any }) => {
 
       break;
     default:
+      label='BChat'
   }
 
   function handleClick()

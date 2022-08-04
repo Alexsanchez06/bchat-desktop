@@ -14,7 +14,7 @@ const AvatarItem = (props: { memberPubkey: string; isAdmin: boolean }) => {
   const { memberPubkey, isAdmin } = props;
   return (
     <AvatarContainer>
-      <Avatar size={AvatarSize.XS} pubkey={memberPubkey} />
+      <Avatar size={AvatarSize.M} pubkey={memberPubkey} />
       {isAdmin && <CrownIcon />}
     </AvatarContainer>
   );
@@ -59,7 +59,7 @@ export const MemberListItem = (props: {
       style={
         !disableBg
           ? {
-              backgroundColor: 'var(--color-cell-background)',
+              // backgroundColor: 'var(--color-cell-background)',
             }
           : {}
       }
@@ -72,8 +72,9 @@ export const MemberListItem = (props: {
         </span>
         <span className="bchat-member-item__name">{memberName}</span>
       </div>
-      <span className={classNames('bchat-member-item__checkmark', isSelected && 'selected')}>
-        <BchatIcon iconType="check" iconSize="medium" iconColor={Constants.UI.COLORS.GREEN} />
+      <span className={classNames('bchat-member-item__checkmark', isSelected && 'selected')}> 
+      
+        <BchatIcon iconType="circle" iconSize="medium" iconColor={isSelected?Constants.UI.COLORS.GREEN:"transparent"} />
       </span>
     </div>
   );

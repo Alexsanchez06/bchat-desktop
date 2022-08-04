@@ -26,9 +26,8 @@ const StyledPillContainerHoverable = styled.div<PillContainerProps>`
 `;
 
 const StyledPillInner = styled.div<PillContainerProps>`
-  background: green;
-  background: none;
-
+  
+  background: #343240;
   display: flex;
   flex-direction: 'row';
   flex-grow: 1;
@@ -38,12 +37,12 @@ const StyledPillInner = styled.div<PillContainerProps>`
   white-space: nowrap;
   text-overflow: ellipsis;
 
-  align-items: center;
+  align-items: center;  
   padding: ${props => props.padding || ''};
   margin: ${props => props.margin || ''};
-  border-radius: 300px;
+  border-radius: 7px;
   cursor: pointer;
-  border: 1px solid var(--color-pill-divider);
+  // border: 1px solid var(--color-pill-divider);
   transition: var(--default-duration);
   &:hover {
     background: var(--color-clickable-hovered);

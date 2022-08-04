@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { BchatIdEditable } from '../../basic/BchatIdEditable';
 import { BchatSpinner } from '../../basic/BchatSpinner';
 import { MemberListItem } from '../../MemberListItem';
-import { OverlayHeader } from './OverlayHeader';
+// import { OverlayHeader } from './OverlayHeader';
 // tslint:disable: no-submodule-imports use-simple-attributes
 
 import { setOverlayMode, showLeftPaneSection } from '../../../state/ducks/section';
@@ -14,6 +14,7 @@ import { getPrivateContactsPubkeys } from '../../../state/selectors/conversation
 import { SpacerLG } from '../../basic/Text';
 import { MainViewController } from '../../MainViewController';
 import useKey from 'react-use/lib/useKey';
+import { LeftPaneSectionHeader } from '../LeftPaneSectionHeader';
 
 
 
@@ -66,17 +67,25 @@ export const OverlayClosedGroup = () => {
   useKey('Escape', closeOverlay);
 
   const title = window.i18n('newClosedGroup');
-  const buttonText = window.i18n('done');
+  // const buttonText = window.i18n('done');
   const subtitle = window.i18n('createClosedGroupNamePrompt');
   const placeholder = window.i18n('createClosedGroupPlaceholder');
 
   const noContactsForClosedGroup = privateContactsPubkeys.length === 0;
 
   return (
-    <div className="module-left-pane-overlay">
+    <div className="module-left-pane-overlay" >
+      <div className="module-left-pane-overlay">
 
-      <OverlayHeader title={title} subtitle={subtitle} hideExit={true}/>
       
+
+      {/* <OverlayHeader title={title} subtitle={subtitle} hideExit={true}/> */}
+      <LeftPaneSectionHeader />
+      
+      <div className='module-left-pane-overlay-closed--header'>{title}</div>
+      <div className='module-left-pane-overlay-closed--subHeader'>
+      {subtitle}
+      </div>
       <div className="create-group-name-input">
         <BchatIdEditable
           editable={!noContactsForClosedGroup}
@@ -116,11 +125,7 @@ export const OverlayClosedGroup = () => {
       </div>
 
       <SpacerLG />
-      <button 
-      className='nextButton'
-       onClick={onEnterPressed}
-      >{buttonText}</button>
- 
+       
       {/* <BchatButton
         buttonColor={BchatButtonColor.Green}
         buttonType={BchatButtonType.BrandOutline}
@@ -129,6 +134,13 @@ export const OverlayClosedGroup = () => {
        
         dataTestId="next-button"
       /> */}
+    </div>
+    <div className='buttonBox'>
+    <button 
+      className='nextButton'
+       onClick={onEnterPressed}
+      >Create</button>
+    </div>
     </div>
   );
 };
