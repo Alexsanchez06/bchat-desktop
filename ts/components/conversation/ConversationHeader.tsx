@@ -108,10 +108,7 @@ const SelectionOverlay = () => {
 
   return (
     <div className="message-selection-overlay">
-      <div className="close-button">
-        <BchatIconButton iconType="exit" iconSize="medium" onClick={onCloseOverlay} />
-      </div>
-
+     
       <div className="button-group">
         {!isOnlyServerDeletable && (
           <BchatButton
@@ -123,11 +120,15 @@ const SelectionOverlay = () => {
         )}
         <BchatButton
           buttonType={BchatButtonType.Default}
-          buttonColor={BchatButtonColor.Danger}
+          buttonColor={BchatButtonColor.Red}
           text={deleteForEveryoneMessageButtonText}
           onClick={onDeleteSelectedMessagesForEveryone}
         />
       </div>
+      <div className="close-button">
+        <BchatIconButton iconType="exit" iconSize="medium" onClick={onCloseOverlay} />
+      </div>
+
     </div>
   );
 };

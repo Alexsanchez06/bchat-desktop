@@ -19,6 +19,7 @@ import { ExpireTimer } from '../../ExpireTimer';
 import { MessageAvatar } from '../message-content/MessageAvatar';
 import { MessageContentWithStatuses } from '../message-content/MessageContentWithStatus';
 import { ReadableMessage } from './ReadableMessage';
+import { BchatIcon } from '../../../icon/BchatIcon';
 
 export type GenericReadableMessageSelectorProps = Pick<
   MessageRenderingProps,
@@ -169,6 +170,9 @@ export const GenericReadableMessage = (props: Props) => {
       isUnread={!!isUnread}
       key={`readable-message-${messageId}`}
     >
+      <div className='checkedCircle'>
+      <BchatIcon iconType="check" iconColor={'rgba(17, 193, 25, 1)'} iconSize={15} />
+      </div>
       <MessageAvatar messageId={messageId} />
       {expirationLength && expirationTimestamp && (
         <ExpireTimer

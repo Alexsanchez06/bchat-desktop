@@ -64,6 +64,7 @@
     display: flex;
     left: 0px;
     right: 0px;
+    top: 66px;
     padding: 0px $bchat-margin-md;
     align-items: center;
     justify-content: space-between;
@@ -72,11 +73,21 @@
 
     .close-button {
       float: left;
+      padding-right: 10px;
     }
 
     .bchat-button.default.danger {
       display: flex;
+      border-radius: 22px;
     }
+    .bchat-button.default.red {
+      display: flex;
+      color: #ffffff;
+      background-color: red;
+      border-radius: 22px;
+
+    }
+    
   }
 
   .message-selection-overlay div[role='button'] {
@@ -85,6 +96,8 @@
 
   .message-selection-overlay .button-group {
     display: flex;
+    width: 97%;
+    justify-content: center;
   }
 }
 
@@ -110,6 +123,7 @@
     .messages-container>*:not(.message-selected) {
       animation: toShadow $bchat-transition-duration;
       opacity: 0.4;
+      
     }
   }
 }
