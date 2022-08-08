@@ -6,6 +6,7 @@ $bchat-font-default: 'Roboto';
 $bchat-font-poppins-bold: 'Poppins';
 $bchat-font-mono: 'SpaceMono';
 $bchat-font-poppin-semibold:"poppin-semibold";
+$bchat-font-poppin-light:"poppin-light";
 $bchat-font-poppin-medium:"poppin-medium";
 $bchat-font-poppin-regular:"poppin-regular";
 
@@ -48,6 +49,12 @@ $bchat-font-poppin-regular:"poppin-regular";
 @font-face {
   font-family: $bchat-font-poppin-semibold;
   src: url('../fonts/Poppins-SemiBold.ttf') format('truetype');
+  line-height: 1.4rem;
+}
+
+@font-face {
+  font-family: $bchat-font-poppin-light;
+  src: url('../fonts/Poppins-Light.ttf') format('truetype');
   line-height: 1.4rem;
 }
 

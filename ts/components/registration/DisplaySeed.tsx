@@ -7,7 +7,6 @@ export const Icons = (props:any)=>
     background:`url(images/bchat/${props.icon}.svg) no-repeat`,
      width: "40px",
     height: "40px",
-    position: 'relative',
     backgroundColor:"#353543",
     backgroundSize:"16px",
     borderRadius:"35px",

@@ -1,14 +1,14 @@
 import React from 'react';
 
-type Props = {
-  text: string;
-};
+// type Props = {
+//   text: string;
+// };
 
-export const PillDivider = (props: Props) => {
+export const PillDivider = () => {
   return (
     <div className="panel-text-divider">
       <div className="panel-text-divider-line" />
-      <span>{props.text}</span>
+      {/* <span>{props.text}</span> */}
       <div className="panel-text-divider-line" />
     </div>
   );

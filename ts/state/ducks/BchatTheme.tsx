@@ -70,8 +70,10 @@ const darkTextAreaColor="#0BB70F";
 const darkComposeMsgBg="#2B2B38";
 const darkComposeMsgIconBG="#2879FB"
 const darkSettingIndication=greyColor
+const darkProfileBgColor="#2A2A3B";
 
 export const switchHtmlToDarkTheme = () => {
+  document.documentElement.style.setProperty('--color-profile', darkProfileBgColor);
   document.documentElement.style.setProperty('--color-accent', darkColorAccent);
   document.documentElement.style.setProperty('--color-accent-button', darkColorAccentButton);
   document.documentElement.style.setProperty('--color-text', darkColorText);

@@ -454,11 +454,12 @@ label {
   animation: fadein $bchat-transition-duration;
   z-index: 150;
   min-width: 300px;
+  border-radius: 25px;
   box-sizing: border-box;
   max-height: 70vh;
   max-width: calc(min(70vw, 800px));
   font-family: $bchat-font-default;
-  background-color: var(--color-modal-background);
+  background-color: var(--color-profile);
   color: var(--color-text);
   border: var(--border-bchat);
   box-shadow: var(--color-bchat-shadow);
@@ -514,7 +515,7 @@ label {
   }
 
   &__body {
-    padding: 0px $bchat-margin-lg $bchat-margin-lg $bchat-margin-lg;
+    padding: 0px $bchat-margin-lg 0px $bchat-margin-lg;
     font-family: $bchat-font-default;
     line-height: $bchat-font-md;
     font-size: $bchat-font-md;
@@ -618,7 +619,9 @@ label {
 .bchat-confirm {
   &-wrapper {
     .bchat-modal__body .bchat-modal__centered {
-      margin: $bchat-margin-lg;
+      // margin: $bchat-margin-lg;
+      // margin-top: 30px;
+      // margin-bottom: 30px;
       text-align: center;
     }
   }
@@ -796,34 +799,37 @@ label {
   justify-content: center;
   position: absolute;
   cursor: pointer;
-  width: 80px;
-  height: 80px;
+  width: 85px;
+  height: 85px;
   border-radius: 100%;
   background-color: rgba($bchat-color-black, 0.72);
   opacity: 0;
   transition: $bchat-transition-duration;
 
-  &:after {
-    content: 'Edit';
-  }
+  // &:after {
+  //   content: 'Edit';
+  // }
 
-  &:hover {
-    opacity: 1;
-  }
+  // &:hover {
+  //   opacity: 1;
+  // }
 }
 
 .qr-image {
   display: flex;
   justify-content: center;
+  border-radius: 6px;
+  // margin-bottom: 45px;
+  width: 24%;
 
-  background: white;
-  padding: 0.5rem;
+  // background: white;
+  padding: 0.2rem;
   svg {
-    width: 135px;
-    height: 135px;
-    border-radius: 3px;
-    padding: $bchat-margin-xs;
-    background-color: $bchat-color-white;
+    width: 80px !important;
+    height: 80px !important;
+    // border-radius: 6px;
+    // padding: $bchat-margin-xs;
+    // background-color: $bchat-color-white;
   }
 }
 

@@ -1,6 +1,6 @@
 import ChildProcess from "child_process";
 import fs from "fs-extra";
-import path from 'upath';
+import path from 'path';
 // import fixPath from 'fix-path';
 import { default as insecureNodeFetch } from 'node-fetch';
 import { HTTPError } from '../bchat/utils/errors';
@@ -16,8 +16,8 @@ export const startWalletRpc = async() => {
   console.log("pathsss:", path.join(__dirname, '../../bin'))
 
   // eslint-disable-next-line no-undef
-  // let __ryo_bin = path.join(process.cwd(), "/bin").replace(/\\/g, "\\\\");
-  let __ryo_bin = path.join(__dirname, '../../bin');
+  let __ryo_bin = path.join(process.cwd(), "/bin").replace(/\\/g, "\\\\");
+  // let __ryo_bin = path.join(__dirname, '../../bin');
   console.log("__ryo:", __ryo_bin);
 
   const rpcPath = path.join(__ryo_bin, rpcExecutable);

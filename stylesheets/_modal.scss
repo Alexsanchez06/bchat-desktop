@@ -245,10 +245,11 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    width: 100%;
 
     .panel-text-divider {
-      margin-top: 35px;
-      margin-bottom: 35px;
+      margin-top: 10px;
+      margin-bottom: 15px;
     }
 
     &-display {
@@ -256,13 +257,35 @@
       text-align: center;
       word-break: break-all;
       font-size: $bchat-font-md;
-      padding: 0px $bchat-margin-lg;
+      // padding: 0px $bchat-margin-lg;
+      background-color: #3A3A4E;
+      border-radius: 10px;
+      padding: 10px 10px 10px 14px;
       font-family: $bchat-font-default;
       font-weight: 100;
-      color: var(--color-text);
+      color: #0BB70F;
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+      width: 100%;
+      min-height: 60px;
 
       font-size: $bchat-font-md;
-      padding: 0px $bchat-margin-sm;
+      // padding: 0px $bchat-margin-sm;
+    }
+
+    &-display-icon {
+      background:url('/images/bchat/copy_icon.svg');
+      background-repeat: no-repeat;
+      width: "40px";
+      height: "40px";
+      position: 'relative';
+      background-color:'#353543';
+      background-size:"16px";
+      border-radius:"30px";
+      background-position:"center";
+      cursor:'pointer';
     }
 
     .bchat-button {
@@ -273,7 +296,7 @@
   .profile-name {
     display: flex;
     justify-content: center;
-    margin-top: $bchat-margin-lg;
+    margin-top: $bchat-margin-sm;
 
     input {
       height: 38px;
@@ -289,10 +312,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      font-family: $bchat-font-poppin-semibold;
 
       p {
-        font-size: $bchat-font-md;
+        font-size: $bchat-font-h4;
         padding: 0px $bchat-margin-sm;
+        margin-left: 33px;
       }
 
       .bchat-icon-button {
