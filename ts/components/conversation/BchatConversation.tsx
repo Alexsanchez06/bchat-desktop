@@ -226,6 +226,8 @@ export class BchatConversation extends React.Component<Props, State> {
     }
 
     const selectionMode = selectedMessages.length > 0;
+    console.log('selectionMode selectionMode ::',selectionMode);
+    
 
     return (
       <BchatTheme>

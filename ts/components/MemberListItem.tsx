@@ -74,7 +74,8 @@ export const MemberListItem = (props: {
       </div>
       <span className={classNames('bchat-member-item__checkmark', isSelected && 'selected')}> 
       
-        <BchatIcon iconType="circle" iconSize="medium" iconColor={isSelected?Constants.UI.COLORS.GREEN:"transparent"} />
+
+       <BchatIcon iconType="circle" iconSize="medium" iconColor={Constants.UI.COLORS.GREEN} />
       </span>
     </div>
   );

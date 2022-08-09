@@ -8,7 +8,9 @@ import _ from 'lodash';
 import { removeMessage } from '../../../../data/data';
 import { MessageRenderingProps } from '../../../../models/messageType';
 import { getConversationController } from '../../../../bchat/conversations';
-import { messageExpired } from '../../../../state/ducks/conversations';
+import { messageExpired, 
+  toggleSelectedMessageId
+ } from '../../../../state/ducks/conversations';
 import {
   getGenericReadableMessageSelectorProps,
   getIsMessageSelected,
@@ -20,6 +22,7 @@ import { MessageAvatar } from '../message-content/MessageAvatar';
 import { MessageContentWithStatuses } from '../message-content/MessageContentWithStatus';
 import { ReadableMessage } from './ReadableMessage';
 import { BchatIcon } from '../../../icon/BchatIcon';
+// import styled from 'styled-components';
 
 export type GenericReadableMessageSelectorProps = Pick<
   MessageRenderingProps,
@@ -101,9 +104,13 @@ type Props = {
 // tslint:disable: use-simple-attributes
 
 export const GenericReadableMessage = (props: Props) => {
+  const dispatch = useDispatch();
+
   const msgProps = useSelector(state =>
     getGenericReadableMessageSelectorProps(state as any, props.messageId)
   );
+  const isSelectionMode = useSelector(isMessageSelectionMode);  
+
 
   const expiringProps: ExpiringProps = {
     convoId: msgProps?.convoId,
@@ -155,6 +162,15 @@ export const GenericReadableMessage = (props: Props) => {
   const selected = isMessageSelected || false;
   const isGroup = conversationType === 'group';
   const isIncoming = direction === 'incoming';
+  
+  const onSelect = useCallback((messageId) => {
+    console.log("onSelect",isSelectionMode,messageId);
+    
+    //  if(isSelectionMode)
+    //  {
+      dispatch(toggleSelectedMessageId(messageId));
+    //  }
+  }, [messageId]);
 
   return (
     <ReadableMessage
@@ -170,8 +186,11 @@ export const GenericReadableMessage = (props: Props) => {
       isUnread={!!isUnread}
       key={`readable-message-${messageId}`}
     >
-      <div className='checkedCircle'>
-      <BchatIcon iconType="check" iconColor={'rgba(17, 193, 25, 1)'} iconSize={15} />
+      
+      {/* <SelectionDiv onClick={()=>isSelectionMode&&onSelect(messageId)}> */}
+      <div className='message-box' onClick={()=>isSelectionMode&&onSelect(messageId)} >
+      <div className={classNames( isSelectionMode&&!selected&&'checkedCircle')} onClick={()=>onSelect(messageId)} >
+        {selected&&<div className='isSelected'><BchatIcon iconType="check" iconColor={'rgba(17, 193, 25, 1)'} iconSize={15} /></div>}
       </div>
       <MessageAvatar messageId={messageId} />
       {expirationLength && expirationTimestamp && (
@@ -194,6 +213,10 @@ export const GenericReadableMessage = (props: Props) => {
           expirationTimestamp={expirationTimestamp}
         />
       )}
+      {/* </SelectionDiv> */}
+      </div>
     </ReadableMessage>
   );
 };
+
+

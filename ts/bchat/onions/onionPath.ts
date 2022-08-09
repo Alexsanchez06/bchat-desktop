@@ -417,6 +417,8 @@ export async function getGuardNodeOrSelectNewOnes() {
   if (guardNodes.length === 0) {
     // Not cached, load from DB
     const guardNodesFromDb = await Data.getGuardNodes();
+    console.log('guardNodesFromDb ::',guardNodesFromDb);
+
 
     if (guardNodesFromDb.length === 0) {
       window?.log?.warn(
@@ -427,6 +429,8 @@ export async function getGuardNodeOrSelectNewOnes() {
       // We only store the nodes' keys, need to find full entries:
       const edKeys = guardNodesFromDb.map(x => x.ed25519PubKey);
       guardNodes = allNodes.filter(x => edKeys.indexOf(x.pubkey_ed25519) !== -1);
+      console.log('guardNodesguardNodes ::',guardNodes);
+      
       if (guardNodes.length < edKeys.length) {
         window?.log?.warn(
           `BchatSnodeAPI::getGuardNodeOrSelectNewOnes - could not find some guard nodes: ${guardNodes.length}/${edKeys.length} left`

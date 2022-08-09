@@ -343,7 +343,7 @@ export const ConversationHeaderSubtitle = (props: { text?: string | null }): JSX
 };
 
 export const ConversationHeaderWithDetails = () => {
-  const isSelectionMode = useSelector(isMessageSelectionMode);
+  const isSelectionMode = useSelector(isMessageSelectionMode);  
   const isMessageDetailOpened = useSelector(isMessageDetailView);
   const selectedConvoKey = useSelector(getSelectedConversationKey);
   const dispatch = useDispatch();

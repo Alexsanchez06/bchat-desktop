@@ -400,9 +400,6 @@ class CompositionBoxInner extends React.Component<Props, State> {
 
         )}
        
-       
-       
-
       </>
     );
   }

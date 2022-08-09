@@ -119,19 +119,37 @@
     animation: highlightedMessageAnimation 1s ease-in-out;
   }
 
-  &.message-selected {
-    background-color: rgba(40, 121, 251, .3);
-    .checkedCircle
-      {
-        width: 20px;
+  .message-box
+  {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 68px;
+
+  }
+  .checkedCircle,.isSelected{
+         width: 20px;
         height: 20px;
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 1px solid rgba(17, 193, 25, 1);
         border-radius: 20px;
-
+        margin-right: 10px;
+        
+  }
+  .checkedCircle
+      {
+        border: 1px solid white;
       }
+  &.message-selected {
+    background-color: rgba(40, 121, 251, .3);
+    
+    .isSelected{
+      
+      border: 1px solid rgba(17, 193, 25, 1);
+  
+    }
+
     .module-message {
       &__container {
         box-shadow: var(--color-bchat-shadow);

@@ -68,6 +68,8 @@ export const MessageContentWithStatuses = (props: Props) => {
     return null;
   }
   const { direction, isDeleted, hasAttachments, isTrustedForAttachmentDownload } = contentProps;
+  // console.log("isDeleted isDeleted::",isDeleted);
+  
   const isIncoming = direction === 'incoming';
 
   return (
