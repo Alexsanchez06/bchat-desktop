@@ -35,10 +35,11 @@
 .conversation-item__options-pane {
   position: absolute;
   height: 100%;
-  right: 0vw;
-
+  // right: 0vw;
+  top:67px;
+  left: 381px;
   transition: transform 0.3s ease-in-out;
-  transform: translateX(100%);
+  transform: translateX(-200%);
   will-change: transform;
   width: 25vw;
   z-index: 5;

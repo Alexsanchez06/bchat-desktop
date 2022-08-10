@@ -21,7 +21,7 @@ const TimestampContainerNotListItem = styled.div`
   user-select: none;
   color: var(--color-text-subtle);
   position: relative;
-  top: 24px;
+  
 `;
 
 const TimestampContainerListItem = styled(TimestampContainerNotListItem)`
@@ -57,7 +57,6 @@ export const Timestamp = (props: Props) => {
   }
 
   dateString = dateString.replace('minutes', 'mins').replace('minute', 'min');
-
   const title = moment(timestamp).format('llll');
   if (props.isConversationListItem) {
     return <TimestampContainerListItem title={title}>{dateString}</TimestampContainerListItem>;

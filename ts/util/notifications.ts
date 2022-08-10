@@ -177,6 +177,8 @@ function update() {
       title = newMessageCountLabel;
       // eslint-disable-next-line prefer-destructuring
       iconUrl = lastNotification.iconUrl;
+      
+      
       if (messagesNotificationCount === 1) {
         message = `${window.i18n('notificationFrom')} ${lastMessageTitle}`;
       } else {
@@ -207,6 +209,7 @@ function update() {
   }
 
   window.drawAttention();
+  console.log('iconUrl',iconUrl);
   lastNotificationDisplayed = new Notification(title || '', {
     body: window.platform === 'linux' ? filter(message) : message,
     icon: iconUrl,

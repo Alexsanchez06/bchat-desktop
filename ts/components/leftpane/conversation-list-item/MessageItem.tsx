@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 import { isEmpty } from 'lodash';
 import { useConversationPropsById, useIsPrivate } from '../../../hooks/useParamSelector';
 import { MessageBody } from '../../conversation/message/message-content/MessageBody';
-import { OutgoingMessageStatus } from '../../conversation/message/message-content/OutgoingMessageStatus';
+// import { OutgoingMessageStatus } from '../../conversation/message/message-content/OutgoingMessageStatus';
 import { TypingAnimation } from '../../conversation/TypingAnimation';
 import { ContextConversationId } from './ConversationListItem';
 import { useSelector } from 'react-redux';
@@ -57,7 +57,8 @@ export const MessageItem = (props: { isMessageRequest: boolean }) => {
         )}
       </div>
       {!isSearchingMode && lastMessage && lastMessage.status && !props.isMessageRequest ? (
-        <OutgoingMessageStatus status={lastMessage.status} />
+        // <OutgoingMessageStatus status={lastMessage.status} />
+        <></>
       ) : null}
     </div>
   );

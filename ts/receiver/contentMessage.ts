@@ -141,7 +141,7 @@ export async function decryptWithBchatProtocol(
 ): Promise<ArrayBuffer> {
   perfStart(`decryptWithBchatProtocol-${envelope.id}`);
 
-  console.log("ciphertextObj:",new TextDecoder().decode(ciphertextObj));
+  // console.log("ciphertextObj:",new TextDecoder().decode(ciphertextObj));
   
   const recipientX25519PrivateKey = x25519KeyPair.privateKeyData;
   const hex = toHex(new Uint8Array(x25519KeyPair.publicKeyData));

@@ -194,7 +194,7 @@ export async function getBchatIDForOnsName(onsNameCase: string) {
   const base64EncodedNameHash = fromUInt8ArrayToBase64(nameHash);
 
   const params = {
-    endpoint: 'ons_resolve',
+    endpoint: 'bns_resolve',
     params: {
       type: 0,
       name_hash: base64EncodedNameHash,

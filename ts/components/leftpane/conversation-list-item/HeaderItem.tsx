@@ -12,7 +12,7 @@ import {
 import { SectionType } from '../../../state/ducks/section';
 import { isSearching } from '../../../state/selectors/search';
 import { getFocusedSection } from '../../../state/selectors/section';
-import { Timestamp } from '../../conversation/Timestamp';
+// import { Timestamp } from '../../conversation/Timestamp';
 import { BchatIcon } from '../../icon';
 import { ContextConversationId } from './ConversationListItem';
 import { UserItem } from './UserItem';
@@ -149,7 +149,9 @@ export const ConversationListItemHeaderItem = () => {
   if (!convoProps) {
     return null;
   }
-  const { unreadCount, mentionedUs, activeAt } = convoProps;
+  const { unreadCount, mentionedUs,
+    //  activeAt
+     } = convoProps;
 
   let atSymbol = null;
   let unreadCountDiv = null;
@@ -171,6 +173,8 @@ export const ConversationListItemHeaderItem = () => {
         )}
       >
         <UserItem />
+      
+
       </div>
       <ListItemIcons />
 
@@ -184,7 +188,7 @@ export const ConversationListItemHeaderItem = () => {
             unreadCount > 0 ? 'module-conversation-list-item__header__date--has-unread' : null
           )}
         >
-          <Timestamp timestamp={activeAt} isConversationListItem={true} momentFromNow={true} />
+          {/* <Timestamp timestamp={activeAt} isConversationListItem={true} momentFromNow={true} /> */}
         </div>
       )}
     </div>

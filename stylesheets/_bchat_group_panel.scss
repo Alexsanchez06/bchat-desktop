@@ -1,9 +1,10 @@
 .group-settings {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 93vh;
   width: -webkit-fill-available;
-  background: var(--color-cell-background);
+  // background: var(--color-cell-background);
+  background: #181821;
   border-left: var(--border-bchat);
 
   align-items: center;
@@ -17,10 +18,49 @@
     flex-direction: row;
     flex-shrink: 0;
 
+    &-avatarBox
+    {
+      width: 86%;
+    text-align: center;
+    padding-left: 17%;
+
+    p{
+      font-family:$bchat-font-poppin-semibold;
+      font-size: 24px;
+      margin: 0;
+    }
+    }
+
+    &-chatIdBox
+    {
+      text-align: center;
+      p{
+        font-family:$bchat-font-poppin-medium;
+        font-size: 18px;
+        margin-top:30px;
+        margin-bottom: 0;
+      }
+      div{
+        width: 85%;
+        margin: 0 auto;
+        color: #159b24;
+      }
+    }
+    
+    &-closeBox
+    {
+      margin-left: 10px;
+    cursor: pointer;
+    width: 20%;
+    display: flex;
+    justify-content: end;
+    }
     .module-avatar {
       margin: auto;
     }
   }
+
+  
 
   h2 {
     word-break: break-word;
@@ -44,9 +84,12 @@
     min-height: 3rem;
     font-size: 0.8rem;
     color: var(--color-text);
-    background: var(--color-cell-background);
-    border-top: var(--border-bchat);
-    border-bottom: var(--border-bchat);
+    // background: var(--color-cell-background);
+    background: #181821;
+    // border-top: var(--border-bchat);
+    border-top:2px solid #262631;
+    border-bottom:2px solid #262631;
+    // border-bottom: var(--border-bchat);
 
     width: -webkit-fill-available;
     padding: 0 $bchat-margin-md;

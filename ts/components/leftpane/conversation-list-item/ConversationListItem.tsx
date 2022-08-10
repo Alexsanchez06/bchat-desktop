@@ -14,6 +14,7 @@ import { updateUserDetailsModal } from '../../../state/ducks/modalDialog';
 
 import {
   useAvatarPath,
+  useConversationPropsById,
   useConversationUsername,
   useIsPrivate,
 } from '../../../hooks/useParamSelector';
@@ -21,6 +22,7 @@ import { MemoConversationListItemContextMenu } from '../../menu/ConversationList
 import { ConversationListItemHeaderItem } from './HeaderItem';
 import { MessageItem } from './MessageItem';
 import _ from 'lodash';
+import { Timestamp } from '../../conversation/Timestamp';
 
 // tslint:disable-next-line: no-empty-interface
 export type ConversationListItemProps = Pick<
@@ -89,6 +91,22 @@ const ConversationListItem = (props: Props) => {
   } = props;
  
   
+  function useHeaderItemProps(conversationId: string) {
+    const convoProps = useConversationPropsById(conversationId);
+    if (!convoProps) {
+      return null;
+    }
+    return {
+      isPinned: !!convoProps.isPinned,
+      mentionedUs: convoProps.mentionedUs || false,
+      unreadCount: convoProps.unreadCount || 0,
+      activeAt: convoProps.activeAt,
+    };
+  }
+  const convoProps = useHeaderItemProps(conversationId);
+  // console.log('convoProps:',convoProps);
+  
+  const activeAt=convoProps?.activeAt;
   const key = `conversation-item-${conversationId}`;
 
   const triggerId = `${key}-ctxmenu`;
@@ -130,10 +148,21 @@ const ConversationListItem = (props: Props) => {
             isBlocked ? 'module-conversation-list-item--is-blocked' : null
           )}
         >
+          <div className='verticalLine'>
+            
+          </div>
           <AvatarItem />
           <div className="module-conversation-list-item__content">
             <ConversationListItemHeaderItem />
+            
+            <div className='module-conversation-list-item__content__messageBox' >
             <MessageItem isMessageRequest={Boolean(isMessageRequest)} />
+            <Timestamp timestamp={activeAt} isConversationListItem={true} momentFromNow={true} />
+
+            </div>
+            
+
+            
             <div style={{fontSize:'12px'}}>
       {/* {walletAddress} */}
           </div>
@@ -149,3 +178,5 @@ const ConversationListItem = (props: Props) => {
 };
 
 export const MemoConversationListItemWithDetails = React.memo(ConversationListItem, _.isEqual);
+
+

@@ -1468,7 +1468,9 @@ export class ConversationModel extends Backbone.Model<ConversationAttributes> {
 
   public async getNotificationIcon() {
     const avatarUrl = this.getAvatarPath();
-    const noIconUrl = 'images/bchat/bchat_icon_32.png';
+    // const noIconUrl = 'images/bchat/bchat_icon_32.png';
+    const noIconUrl = 'images/bchat/bchat_logo.png';
+    
     if (avatarUrl) {
       const decryptedAvatarUrl = await getDecryptedMediaUrl(avatarUrl, IMAGE_JPEG, true);
 

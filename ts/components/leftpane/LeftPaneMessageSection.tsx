@@ -79,7 +79,7 @@ export class LeftPaneMessageSection extends React.Component<Props> {
               conversations={conversations}
               height={height}
               rowCount={length}
-              rowHeight={64}
+              rowHeight={80}
               rowRenderer={this.renderRow}
               width={width}
               autoHeight={false}

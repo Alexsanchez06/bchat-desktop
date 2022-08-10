@@ -721,7 +721,8 @@ label {
     font-size: $bchat-font-sm;
 
     color: var(--color-text);
-    background: var(--color-cell-background);
+    background: #181821;
+    // background: var(--color-cell-background);
 
     &:hover {
       background: var(--color-clickable-hovered);

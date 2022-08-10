@@ -654,7 +654,7 @@ export const sendOnionRequestHandlingSnodeEject = async ({
     });
 
     response = result.response;
-    console.log("RESPONSE:",response)
+    // console.log("RESPONSE:",response)
     if (
       !_.isEmpty(finalRelayOptions) &&
       response.status === 502 &&
