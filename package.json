@@ -25,6 +25,7 @@
   "scripts": {
     "postinstall": "yarn patch-package && yarn electron-builder install-app-deps",
     "start-prod": "cross-env NODE_ENV=production NODE_APP_INSTANCE=devprod$MULTI electron .",
+    "start-dev": "cross-env NODE_ENV=development NODE_APP_INSTANCE=devprod$MULTI electron .",
     "grunt": "yarn clean-transpile  && grunt",
     "generate": "yarn grunt --force",
     "build-release": "run-script-os",
@@ -76,7 +77,6 @@
     "emoji-mart": "^2.11.2",
     "filesize": "3.6.1",
     "firstline": "1.2.1",
-    "fix-path": "^4.0.0",
     "fs-extra": "9.0.0",
     "image-type": "^4.1.0",
     "ip2country": "1.0.1",
@@ -123,7 +123,6 @@
     "sanitize.css": "^12.0.1",
     "semver": "5.4.1",
     "styled-components": "5.1.1",
-    "upath": "^2.0.1",
     "uuid": "3.3.2"
   },
   "devDependencies": {
@@ -215,7 +214,6 @@
     "ts-loader": "^9.2.8",
     "ts-mock-imports": "^1.3.0",
     "tslint": "5.19.0",
-    "upath": "^2.0.1",
     "tslint-microsoft-contrib": "6.0.0",
     "tslint-react": "3.6.0",
     "typescript": "^4.6.3"
@@ -223,15 +221,22 @@
   "engines": {
     "node": "16.13.0"
   },
+  "extraResources": [
+    "bin"
+  ],
   "build": {
     "appId": "com.loki-project.messenger-desktop",
     "afterSign": "build/notarize.js",
     "afterPack": "build/afterPackHook.js",
     "artifactName": "${name}-${os}-${arch}-${version}.${ext}",
-    "extraResources": {
-      "from": "./build/launcher-script.sh",
-      "to": "./launcher-script.sh"
-    },
+    "asar": false,
+    "extraResources": [
+      "bin",
+      {
+        "from": "./build/launcher-script.sh",
+        "to": "./launcher-script.sh"
+      }
+    ],
     "mac": {
       "category": "public.app-category.social-networking",
       "icon": "build/bchat.icns",
@@ -315,7 +320,6 @@
       "settings_preload.js",
       "debug_log_preload.js",
       "password_preload.js",
-      "wallet.js",
       "images/**",
       "fonts/*",
       "sound/*",
