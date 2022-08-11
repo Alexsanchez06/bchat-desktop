@@ -7,7 +7,8 @@ export const Icons = (props:any)=>
     background:`url(images/bchat/${props.icon}.svg) no-repeat`,
      width: "40px",
     height: "40px",
-    backgroundColor:"#353543",
+    position:"relative",
+    backgroundColor:"var(--color-inboxBgColor)",
     backgroundSize:"16px",
     borderRadius:"35px",
     backgroundPosition:"center",
@@ -42,7 +43,7 @@ export const DisplaySeed = (props: any) => (
             <div className='bchat-registration-header'>{window.i18n('restoreFromSeed')}</div>
             <div className='bchat-restore-seed-text-box'>
                 <ClearIcon removeRecoveryPhrase={()=>props.assignRecoveryPhase("")}></ClearIcon> 
-                <textarea className='bchat-restore-seed-text-area' rows={4} cols={60} name="text" onPaste={handlePaste} value={props.recoveryPhrase} placeholder="Enter your recovery seed to restore your account" 
+                <textarea className='bchat-restore-seed-text-area' rows={4} cols={33} name="text" onPaste={handlePaste} value={props.recoveryPhrase} placeholder="Enter your recovery seed to restore your account" 
                 onChange={(e)=>props.assignRecoveryPhase(e.target.value)}
                  ></textarea>
             </div>

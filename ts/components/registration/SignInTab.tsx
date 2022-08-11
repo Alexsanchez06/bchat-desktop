@@ -47,7 +47,7 @@ const RestoreUsingRecoveryPhraseButton = (props: { onRecoveryButtonClicked: () =
     <BchatButton
       onClick={props.onRecoveryButtonClicked}
       buttonType={BchatButtonType.BrandOutline}
-      buttonColor={BchatButtonColor.Green}
+      buttonColor={BchatButtonColor.White}
       text={window.i18n('signIn')}
       dataTestId="restore-using-recovery"
     />

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { createGlobalStyle } from 'styled-components';
 
-const white = '#ffffff';
+const white = '#F4F4F4';
 const black = '#1C1C26';
 const warning = '#e7b100';
 const destructive = '#ff453a';
@@ -11,7 +11,10 @@ const accentDarkTheme = '#2879FB';
 const borderLightThemeColor = '#f1f1f1';
 const borderDarkThemeColor = '#ffffff0F';
 const baseColor="#00A803";
-const greyColor="#2D2D3B"
+const greyColor="#2D2D3B";
+const lightGreyColor ="#646474";
+
+ 
 
 // DARK COLORS
 const darkColorAccent = baseColor;
@@ -64,24 +67,34 @@ const darkMessageRequestBannerUnreadBackground = grey67;
 const darkMessageRequestBannerIcon = '#adadad';
 
 // for bchat
+const darkColorBg="black"
 const darkInboxBgColor="#353543";
 const darkHintMessage="#7B7B86";
-const darkTextAreaColor="#0BB70F";
+const darkTextAreaColor="#0BB70F"; 
 const darkComposeMsgBg="#2B2B38";
 const darkComposeMsgIconBG="#2879FB"
 const darkSettingIndication=greyColor
 const darkProfileBgColor="#2A2A3B";
+const darkSinginTextColor='#128B17';
+const darkHintColor=lightGreyColor;
+const darkCopyIcon="#fff"
+
+
 
 export const switchHtmlToDarkTheme = () => {
+  document.documentElement.style.setProperty('--color-body-bg', darkColorBg);
   document.documentElement.style.setProperty('--color-profile', darkProfileBgColor);
   document.documentElement.style.setProperty('--color-accent', darkColorAccent);
   document.documentElement.style.setProperty('--color-accent-button', darkColorAccentButton);
-  document.documentElement.style.setProperty('--color-text', darkColorText);
+  document.documentElement.style.setProperty('--color-text', darkColorText); 
   document.documentElement.style.setProperty('--color-text-menu-highlighted', lightColorText);
   document.documentElement.style.setProperty('--color-text-subtle', darkColorTextSubtle);
   document.documentElement.style.setProperty('--color-text-accent', darkColorTextAccent);
   document.documentElement.style.setProperty('--color-text-opposite', darkColorTextOpposite);
+  document.documentElement.style.setProperty('--color-text-signIn', darkSinginTextColor);
   document.documentElement.style.setProperty('--color-Bchat-shadow', darkColorBchatShadow);
+  document.documentElement.style.setProperty('--color-Bchat-hint', darkHintColor);
+  document.documentElement.style.setProperty('--color-copyIcon', darkCopyIcon);
   document.documentElement.style.setProperty(
     '--color-compose-view-button-background',
     darkColorComposeViewBg
@@ -207,7 +220,7 @@ export const switchHtmlToDarkTheme = () => {
 // LIGHT COLORS
 const lightColorAccent = accentLightTheme;
 const lightColorAccentButton = black;
-const lightColorText = black;
+const lightColorText = '#222222';
 const lightColorTextOpposite = white;
 const lightColorTextSubtle = `${black}99`;
 const lightColorTextAccent = accentLightTheme;
@@ -253,14 +266,19 @@ const lightMessageRequestBannerUnreadBackground = lightColorClickableHovered;
 const lightMessageRequestBannerIcon = white;
 
 // for bchat
-const lightInboxBgColor="white";
+const lightColorBg=white; 
+const lightInboxBgColor="#FCFCFC";
 const lightHintMessageText="black";
 const lightTextAreaColor="black";
 const lightComposeMsgBg="black";
 const lightComposeMsgIconBG="white";
-const lightSettingIndication="white"
+const lightSettingIndication="white";
+const lightSinginTextColor='#128B17';
+const lightHintColor=lightGreyColor;
+const lightCopyIcon='#0BB70F';
 
 export const switchHtmlToLightTheme = () => {
+  document.documentElement.style.setProperty('--color-body-bg:', lightColorBg);
   document.documentElement.style.setProperty('--color-accent', lightColorAccent);
   document.documentElement.style.setProperty('--color-accent-button', lightColorAccentButton);
   document.documentElement.style.setProperty('--color-text', lightColorText);
@@ -268,8 +286,10 @@ export const switchHtmlToLightTheme = () => {
   document.documentElement.style.setProperty('--color-text-subtle', lightColorTextSubtle);
   document.documentElement.style.setProperty('--color-text-accent', lightColorTextAccent);
   document.documentElement.style.setProperty('--color-text-opposite', lightColorTextOpposite);
-
+  document.documentElement.style.setProperty('--color-text-signIn', lightSinginTextColor);
+  document.documentElement.style.setProperty('--color-Bchat-hint', lightHintColor);
   document.documentElement.style.setProperty('--color-bchat-shadow', lightColorBchatShadow);
+  document.documentElement.style.setProperty('--color-copyIcon', lightCopyIcon);
   document.documentElement.style.setProperty(
     '--color-compose-view-button-background',
     lightColorComposeViewBg
@@ -393,17 +413,19 @@ export const BchatGlobalStyles = createGlobalStyle`
     --border-bchat:  ${lightColorBchatBorder};
 
     /* COLORS NOT CHANGING BETWEEN THEMES */
+    --color-body-bg:${white};
     --color-warning:  ${warning};
     --color-destructive:  ${destructive};
     /* COLORS */
     --color-accent: ${lightColorAccent};
     --color-accent-button:  ${lightColorAccentButton};
-
+    
     --color-text:  ${lightColorText};
     --color-text-subtle:  ${lightColorTextSubtle};
     --color-text-accent:  ${lightColorTextAccent};
     --color-text-opposite:  ${lightColorTextOpposite};
-
+    --color-text-signIn:${lightSinginTextColor};
+    --color-Bchat-hint: ${lightGreyColor};
     --color-bchat-shadow: ${lightColorBchatShadow};
     --color-compose-view-button-background: ${lightColorComposeViewBg};
     --color-sent-message-background:  ${lightColorSentMessageBg};
@@ -435,8 +457,9 @@ export const BchatGlobalStyles = createGlobalStyle`
     --color-HintMessageText:${lightHintMessageText};
     --color-TextAreaColor:${lightTextAreaColor};
     --color-composeMsgBg:${lightComposeMsgBg};
-    --color-composeMsgIconBG:${lightComposeMsgIconBG}
-    --color-settingIndication:${lightSettingIndication}
+    --color-composeMsgIconBG:${lightComposeMsgIconBG};
+    --color-settingIndication:${lightSettingIndication};
+    --color-copyIcon:${lightCopyIcon}
 
 
 

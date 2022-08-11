@@ -35,10 +35,10 @@ export const DisplayIdAndAddress= (props:any) => (
 
 export const Icons = (props:any)=>
 <div onClick={()=>props.iconfunc()} style={{
-    background:`url(images/bchat/${props.icon}.svg) no-repeat`,
+    // background:`url(images/bchat/${props.icon}.svg) no-repeat`,
      width: "40px",
     height: "40px",
-    backgroundColor:"#353543",
+    backgroundColor:'var(--color-inboxBgColor)',
     backgroundSize:"16px",
     borderRadius:"35px",
     backgroundPosition:"center",
@@ -46,8 +46,16 @@ export const Icons = (props:any)=>
     // right: (props.icon=='paste')?'106px':'135px',
     cursor:'pointer',
     marginTop:'207px',
-    marginLeft:'50px'
-}}></div>
+    marginLeft:'50px',
+    color:'var(--color-copyIcon)',
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+}}>
+  <svg xmlns="http://www.w3.org/2000/svg" width="18.151" height="18.151" viewBox="0 0 18.151 18.151">
+  <path id="copy_icon" d="M3.815,2A1.815,1.815,0,0,0,2,3.815V16.521H3.815V3.815H16.521V2Zm3.63,3.63A1.815,1.815,0,0,0,5.63,7.445V18.336a1.815,1.815,0,0,0,1.815,1.815H18.336a1.815,1.815,0,0,0,1.815-1.815V7.445A1.815,1.815,0,0,0,18.336,5.63Zm0,1.815H18.336V18.336H7.445Z" transform="translate(-2 -2)" />
+</svg>
+</div>
 
 
 export const ShowRecoveryPhase= (props:any) => {
@@ -88,8 +96,8 @@ export const ShowRecoveryPhase= (props:any) => {
          <GoBackMainMenuButton assent={()=>{props.assentAndGoBack()}} />
          </div>
          <h1 className="bchat-head">{window.i18n('recoveryPhrase')}</h1>
-         <h5 style={{color:"white",fontFamily:"poppin-regular"}}><span style={{color:"#F23333"}}>Note :</span> {window.i18n('saveYourRecoveryPhrase')}
-         <br/><span style={{fontFamily:"poppin-semibold"}}>{window.i18n('copyToContinueRecovery')}</span></h5>
+         <h5 style={{color:"var(--color-Bchat-hint)",fontFamily:"poppin-regular"}}><span style={{color:"#F23333"}}>Note :</span> {window.i18n('saveYourRecoveryPhrase')}
+         <br/><span style={{fontFamily:"poppin-semibold",color:"var(--color-text)"}}>{window.i18n('copyToContinueRecovery')}</span></h5>
          <div className='bchat-registration-recovery-phrase'>
            <textarea className='bchat-registration-recovery-phrase-textarea' rows={4} cols={60} name="text" value={props.mnemonic} placeholder="Enter your recovery seed to restore your account" ></textarea>
           </div> 

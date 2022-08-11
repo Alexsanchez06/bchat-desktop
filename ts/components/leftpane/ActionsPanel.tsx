@@ -406,7 +406,7 @@ export const ActionsPanel = () => {
   // wait for cleanUpMediasInterval and then start cleaning up medias
   // this would be way easier to just be able to not trigger a call with the setInterval
   useEffect(() => {
-    switchHtmlToDarkTheme()
+    // switchHtmlToDarkTheme()
     const timeout = setTimeout(() => setStartCleanUpMedia(true), cleanUpMediasInterval);
 
     return () => clearTimeout(timeout);

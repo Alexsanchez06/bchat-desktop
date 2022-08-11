@@ -9,14 +9,16 @@ import { Flex } from '../basic/Flex';
 import { setSignInByLinking } from '../../util/storage';
 
 export const BchatRegistrationView = () => {
-  React.useEffect(() => {
+  React.useEffect(() => { 
     void setSignInByLinking(false);
   }, []);
+  console.log('window.Events.getThemeSetting()',window.Events.getThemeSetting());
+  
   return (
     <div className="bchat-fullscreen">
       <div className="bchat-full-screen-flow bchat-fullscreen">
         <BchatTheme>
-          <div style={{background:"url(images/bchat/doodle_white.svg)",width:"100%",height:"100%"}}>
+          <div style={{background:`url(images/bchat/${window.Events.getThemeSetting()==="light"?"doodle_dark":"doodle_white"}.svg)`,width:"100%",height:"100%"}}>
           <Flex
             flexDirection="row"
             container={true}
