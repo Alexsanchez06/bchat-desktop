@@ -15,8 +15,8 @@ import {
   processOnionResponse,
 } from '../../../../bchat/apis/snode_api/onions';
 import AbortController from 'abort-controller';
-import * as Data from '../../../../../ts/data/data';
-import * as DataItem from '../../../../../ts/data/channelsItem';
+import * as Data from '../../../../data/data';
+import * as DataItem from '../../../../data/channelsItem';
 import { pathFailureCount } from '../../../../bchat/onions/onionPath';
 import { SeedNodeAPI } from '../../../../bchat/apis/seed_node_api';
 import { generateFakeSnodeWithEdKey } from '../../../test-utils/utils';
@@ -135,7 +135,7 @@ describe('OnionPathsErrors', () => {
           response: getFakeResponseOnPath(),
           symmetricKey: new Uint8Array(),
           guardNode: guardSnode1,
-          abortSignal: abortController.signal,
+          // abortSignal: abortController.signal,
         });
         throw new Error('Error expected');
       } catch (e) {

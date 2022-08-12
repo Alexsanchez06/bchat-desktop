@@ -9,7 +9,7 @@ import { TestUtils } from '../../../test-utils';
 
 import Sinon from 'sinon';
 import * as cache from '../../../../receiver/cache';
-import * as data from '../../../../../ts/data/data';
+import * as data from '../../../../data/data';
 import { EnvelopePlus } from '../../../../receiver/types';
 
 import chaiAsPromised from 'chai-as-promised';

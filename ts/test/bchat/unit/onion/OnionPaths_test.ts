@@ -7,7 +7,7 @@ import { describe } from 'mocha';
 
 import { TestUtils } from '../../../test-utils';
 import * as SNodeAPI from '../../../../bchat/apis/snode_api';
-import * as Data from '../../../../../ts/data/data';
+import * as Data from '../../../../data/data';
 
 import chaiAsPromised from 'chai-as-promised';
 import * as OnionPaths from '../../../../bchat/onions/onionPath';

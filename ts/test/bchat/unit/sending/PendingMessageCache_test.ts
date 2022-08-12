@@ -3,7 +3,7 @@ import { expect } from 'chai';
 import Sinon from 'sinon';
 import * as _ from 'lodash';
 import { MessageUtils } from '../../../../bchat/utils';
-import { TestUtils } from '../../../../test/test-utils';
+import { TestUtils } from '../../../test-utils';
 import { PendingMessageCache } from '../../../../bchat/sending/PendingMessageCache';
 
 // Equivalent to Data.StorageItem

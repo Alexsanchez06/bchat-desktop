@@ -4,10 +4,10 @@ import chai from 'chai';
 import Sinon, * as sinon from 'sinon';
 import { describe } from 'mocha';
 import { randomBytes } from 'crypto';
-import * as Data from '../../../../../ts/data/data';
+import * as Data from '../../../../data/data';
 
 import { GroupUtils, PromiseUtils, UserUtils } from '../../../../bchat/utils';
-import { TestUtils } from '../../../../test/test-utils';
+import { TestUtils } from '../../../test-utils';
 import { MessageQueue } from '../../../../bchat/sending/MessageQueue';
 import { ContentMessage } from '../../../../bchat/messages/outgoing';
 import { PubKey, RawMessage } from '../../../../bchat/types';

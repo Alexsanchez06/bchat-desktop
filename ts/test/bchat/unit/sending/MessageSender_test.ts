@@ -8,7 +8,7 @@ import { SignalService } from '../../../../protobuf';
 import { PubKey, RawMessage } from '../../../../bchat/types';
 import { MessageUtils, UserUtils } from '../../../../bchat/utils';
 import { ApiV2 } from '../../../../bchat/apis/open_group_api/opengroupV2';
-import * as Data from '../../../../../ts/data/data';
+import * as Data from '../../../../data/data';
 import { SNodeAPI } from '../../../../bchat/apis/snode_api';
 import _ from 'lodash';
 
