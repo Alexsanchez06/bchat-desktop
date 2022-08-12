@@ -17,7 +17,7 @@ export class MessageView extends React.Component {
               alt="full-brand-logo"
             />*/}
             <img
-              src="images/bchat/emptyMessage.svg"
+              src={`images/bchat/${window.Events.getThemeSetting()==='dark'?'emptyMessage.svg':"emptyMessageWhite.svg"}`}
               className="bchat-text-logo"
               alt="full-brand-logo"
             /> 

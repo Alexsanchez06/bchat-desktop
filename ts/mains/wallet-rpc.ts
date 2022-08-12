@@ -8,7 +8,7 @@ import { HTTPError } from '../bchat/utils/errors';
 // import killport from 'kill-port';
 export const startWalletRpc = async() => {
   try{
-<<<<<<< Updated upstream
+
     // if (os.platform() === "win32") {
     //   configDir = "C:\\ProgramData\\beldex";
     //   legacyLokiConfigDir = "C:\\ProgramData\\beldex\\";
@@ -26,11 +26,11 @@ export const startWalletRpc = async() => {
   }else{
       walletDir = path.join(os.homedir(), "Beldex");
   }
-=======
+
   //  await fixPath();
   console.log("uuntu:", process.platform)
   console.log("product Mode::", process.env.NODE_ENV)
->>>>>>> Stashed changes
+
   const rpcExecutable =
     process.platform === "linux" ? "/beldex-wallet-rpc-ubuntu" : "/beldex-wallet-rpc-darwin";
   console.log("rpcExecutable:", rpcExecutable)

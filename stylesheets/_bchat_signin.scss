@@ -391,15 +391,13 @@
     @include bchat-color-subtle(var(--color-text));
     text-align: center;
     font-size: 12px;
-    font-family: $bchat-font-poppins-bold;
+    // font-family: $bchat-font-poppins-bold;
     font-weight: normal;
 
     a {
       white-space: nowrap;
-      font-weight: bold;
       text-decoration: none;
-      font-family: $bchat-font-poppin-regular;
-      font-weight: normal;
+      font-family: $bchat-font-poppins-bold;
       @include bchat-color-subtle(var(--color-text));
       // @include bchat-color-subtle(white);
 
